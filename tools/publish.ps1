@@ -23,9 +23,11 @@ try {
     if (-not $entry) { throw "zip lacks ${name}_$Version/info.json" }
     $info = (New-Object IO.StreamReader($entry.Open())).ReadToEnd() | ConvertFrom-Json
     $cfgs = @($z.Entries | Where-Object FullName -like "${name}_$Version/locale/ar/*.cfg").Count
+    $exe = @($z.Entries | Where-Object { $_.FullName -match '\.(exe|bat|cmd|ps1|psm1|sh|py)$' } | ForEach-Object FullName)
 } finally { $z.Dispose() }
 if ($info.name -ne $name -or $info.version -ne $Version) { throw "info.json says $($info.name) $($info.version)" }
 if ($cfgs -ne 6) { throw "expected 6 locale files, found $cfgs" }
+if ($exe) { throw "the portal rejects executable files in a mod: $($exe -join ', ')" }   # InvalidModUpload
 
 $mode = if ($Update) { 'new release' } else { 'first publish' }
 Write-Output "$mode : $name $Version  ($([math]::Round((Get-Item $zip).Length / 1KB)) KB, $cfgs locale files, factorio $($info.factorio_version))"

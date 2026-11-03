@@ -2,6 +2,23 @@
 
 تعريب كامل لـ Factorio 2.1 (+ Space Age) بحروف متصلة واتجاه قراءة صحيح، كمود `arabic-complete` + رقعة نصوص السيناريوهات.
 
+## للاعبين: أداة اللغة (مؤقتة حتى تصدر ترجمة عربية رسمية)
+
+**⬇ [تنزيل arabic-tools.zip](https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip)**
+
+نافذة فيها زر **العربية** وزر **English**، وتعرض إصدار اللعبة وإصدار المود: **«متطابقة»** أو زر **«إصلاح»**.
+
+1. ثبّت المود من داخل اللعبة: **Mods ← Install ←** ابحث عن `arabic-complete` **← Install**، ثم أغلق اللعبة.
+2. نزّل الملف أعلاه، ثم انقر عليه بالزر الأيمن ← **«استخراج الكل»**.
+3. افتح المجلد وانقر مرتين على **`Change-Language.cmd`**.
+   إن ظهرت «Windows protected your PC» فاضغط **«مزيد من المعلومات» ← «تشغيل على أي حال»**، ثم **«نعم»**.
+4. اختر **العربية** أو **English**، وإن ظهر **«إصلاح»** فاضغطه. ثم افتح اللعبة.
+
+الشرح الكامل: [`mod/README-AR.txt`](mod/README-AR.txt). الأداة ليست داخل المود لأن موقع المودات يمنع ملفات التشغيل
+داخل أي مود؛ نصوص الدروس المصلحة داخل المود، والأداة تأخذها منه.
+
+---
+
 > **السجل الكامل لكل ما بُني وقُرِّر واكتُشف:** [`docs/DEVLOG.md`](docs/DEVLOG.md)
 >
 > **تغيير اللغة (عربي ↔ إنجليزي) والتحديث التلقائي:** [`LANGUAGE.md`](LANGUAGE.md) — أو انقر مرتين على `Change-Language.cmd`
@@ -37,13 +54,15 @@ python -E -m tools.scenario_check           # المحرك يقرأ نص الس�
 > إلى نسخة خاصة لا تراها اللعبة (مُثبت). `tools/install.py` يرفض عمداً ويشير إلى `install.ps1`.
 
 ## النشر
-منشور على [mods.factorio.com/mod/arabic-complete](https://mods.factorio.com/mod/arabic-complete) (1.0.0، SHA1 مطابق لـ `dist`).
+منشور على [mods.factorio.com/mod/arabic-complete](https://mods.factorio.com/mod/arabic-complete). رقم المود = رقم اللعبة.
 ```powershell
-python -E -m tools.package 1.0.1                                   # zip + صورة + Crowdin + crowdin-diff.csv
+python -E -m tools.package 1.0.1                                   # zip + صورة + Crowdin + download/arabic-tools.zip
 pwsh -NoProfile -File tools\publish.ps1 -Version 1.0.1 -DryRun     # فحص محلي
 pwsh -NoProfile -File tools\publish.ps1 -Version 1.0.1 -Update     # إصدار جديد؛ يطلب المفتاح بإدخال مخفي
 ```
 قبل كل إصدار: ارفع `version` و أضف قسماً في `mod/changelog.txt` (يُفحص صيغته `tools.package`).
+الموقع يرفض أي ملف تنفيذي داخل المود (`InvalidModUpload`)؛ `tools.package` و`publish.ps1` يرفضانه قبل الرفع.
+إن تغيّر `download/arabic-tools.zip` فارفعه إلى GitHub (commit + push) مع الإصدار.
 
 ## الاسترجاع
 ```powershell
@@ -65,4 +84,4 @@ python -E -m tools.scenarios status         # إن ظهر 'other' فالتحدي
 ```
 
 ## حدود لا يحلّها مود
-محاذاة النص لليسار · البحث بالعربي داخل اللعبة · اسم اللغة في قائمة اللغات · نص الدردشة.
+محاذاة النص لليسار · البحث بالعربي داخل اللعبة · نص الدردشة. (اسم اللغة في القائمة ونصوص الدروس تصلحهما الأداة.)

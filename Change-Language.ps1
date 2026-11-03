@@ -25,7 +25,7 @@ if (-not $isAdmin -and -not $NoElevate -and -not $Snapshot -and -not $Check) {
     return
 }
 
-# الوحدة بجانب الملف (داخل المود: arabic-tools) أو في tools (داخل المشروع)
+# الوحدة بجانب الملف (مجلد arabic-tools المنزَّل من GitHub) أو في tools (داخل المشروع)
 $module = Join-Path $PSScriptRoot 'FactorioArabic.psm1'
 if (-not (Test-Path $module)) { $module = Join-Path $PSScriptRoot 'tools\FactorioArabic.psm1' }
 Import-Module $module -Force

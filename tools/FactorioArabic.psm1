@@ -3,7 +3,8 @@
 #
 # Two modes, detected from where this file sits:
 #   developer: <project>\tools\FactorioArabic.psm1  -> rebuilds the mod from source with Python (tools\autoupdate.py)
-#   player:    <mod>\arabic-tools\FactorioArabic.psm1 -> no Python; repairs from the files shipped in arabic-tools\
+#   player:    arabic-tools\FactorioArabic.psm1 (download/arabic-tools.zip from GitHub) -> no Python; repairs from the
+#              scenario-patch shipped inside the installed mod
 $script:UserAppData = $env:APPDATA
 $script:ToolsDir = $PSScriptRoot
 $script:Root = Split-Path $PSScriptRoot -Parent
@@ -143,10 +144,42 @@ function Invoke-FAPython([string[]]$PyArgs) {
     [pscustomobject]@{ Code = $code; Output = @($out) }
 }
 
+function Get-PatchDir {
+    # player mode: the patch ships inside the installed mod (<mod>\scenario-patch), so it always matches the mod version;
+    # the mod portal rejects scripts, so this tool itself comes from GitHub
+    $local = Join-Path $script:ToolsDir 'scenario-patch'
+    if (Test-Path $local) { return $local }
+    $mod = Get-ModInfo
+    if (-not $mod) { return $null }
+    if (Test-Path $mod.Path -PathType Container) {
+        $d = Join-Path $mod.Path 'scenario-patch'
+        if (Test-Path $d) { return $d }
+        return $null
+    }
+    $cache = Join-Path (Get-BackupRoot) ('patch-' + $mod.Version)   # zip from the mod portal: extract once per mod version
+    if (-not (Test-Path (Join-Path $cache 'complete.txt'))) {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        $z = [IO.Compression.ZipFile]::OpenRead($mod.Path)
+        try {
+            $n = 0
+            foreach ($e in $z.Entries) {
+                if ($e.FullName -notmatch '^[^/]+/scenario-patch/(.+\.cfg)$') { continue }
+                $dest = Join-Path $cache ($Matches[1] -replace '/', '\')
+                New-Item -ItemType Directory -Force (Split-Path $dest -Parent) | Out-Null
+                [IO.Compression.ZipFileExtensions]::ExtractToFile($e, $dest, $true)
+                $n++
+            }
+        } finally { $z.Dispose() }
+        if (-not $n) { return $null }   # an older release without the patch
+        [IO.File]::WriteAllText((Join-Path $cache 'complete.txt'), "$n")
+    }
+    $cache
+}
+
 function Get-PatchFiles {
-    # player mode: arabic-tools\scenario-patch\base\...\locale\<file>.cfg -> game data\base\...\locale\ar\<file>.cfg
-    $base = Join-Path $script:ToolsDir 'scenario-patch'
-    if (-not (Test-Path $base)) { return @() }
+    # scenario-patch\base\...\locale\<file>.cfg -> game data\base\...\locale\ar\<file>.cfg
+    $base = Get-PatchDir
+    if (-not $base) { return @() }
     $data = Join-Path (Get-FactorioDir) 'data'
     Get-ChildItem $base -Recurse -Filter '*.cfg' | ForEach-Object {
         $rel = $_.FullName.Substring($base.Length + 1)

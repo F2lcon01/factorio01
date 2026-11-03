@@ -1,11 +1,12 @@
 """Release packaging for mods.factorio.com and the Crowdin hand-off.
 python -E -m tools.package 1.0.0
-→ mod/thumbnail.png (if missing), dist/arabic-complete_<v>.zip, dist/arabic-crowdin_<v>.zip, reports/crowdin-diff.csv"""
+→ mod/thumbnail.png (if missing), dist/arabic-complete_<v>.zip, dist/arabic-crowdin_<v>.zip, reports/crowdin-diff.csv,
+  download/arabic-tools.zip (the language tool for GitHub; the mod portal rejects scripts inside a mod)"""
 import csv, re, sys, zipfile
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from tools.build import build
-from tools.bundle import add_tools
+from tools.bundle import add_scenario_patch, executables, tool_zip
 from tools.cfg import read_cfg
 from tools.paths import DIST, GAME_DATA, MODULES, REPORTS, ROOT, read_en
 from tools.textfx import from_visual, to_visual
@@ -78,9 +79,13 @@ def main(version):
     if errs:
         sys.exit('changelog invalid: ' + '; '.join(errs))
     mod = build(version)
-    print('tools:', add_tools(mod))   # temporary language tool for players, inside the mod
+    print('scenario patch:', add_scenario_patch(mod))   # data for the language tool, inside the mod
     crowdin = build(version, shape=False)
-    print('mod zip:', zip_dir(mod, DIST / f'{mod.name}.zip'))
+    mod_zip = zip_dir(mod, DIST / f'{mod.name}.zip')
+    if executables(mod_zip):
+        sys.exit(f'mod zip has executable files (the portal rejects them): {executables(mod_zip)}')
+    print('mod zip:', mod_zip)
+    print('tool zip:', tool_zip())                       # scripts, served from GitHub
     print('crowdin zip:', zip_dir(crowdin, DIST / f'{crowdin.name}.zip'))
     print('crowdin diff:', crowdin_diff(version))
 

@@ -8,7 +8,7 @@ Prints one JSON line for the caller and writes reports/auto-update.md.  python -
 import hashlib, json, sys, time
 from tools import scenarios
 from tools.build import build, game_version
-from tools.bundle import add_tools
+from tools.bundle import add_scenario_patch
 from tools.cfg import read_cfg, write_cfg
 from tools.corrections import apply as apply_corrections
 from tools.import_official import take_official
@@ -69,7 +69,7 @@ def main():
     res = sync()
     apply_corrections()        # decisions, term migrations, plural rule, digits also apply to newly taken text
     mod = build(version)
-    add_tools(mod)             # language tool + scenario patch inside the mod (also builds the scenario files)
+    add_scenario_patch(mod)    # scenario patch inside the mod (also builds the scenario files)
     report(version, res)
     print(json.dumps({'game_version': version, 'mod': mod.name, 'new': res['new'],
                       'auto_official': res['auto_official'], 'untranslated': len(res['untranslated']),

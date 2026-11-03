@@ -10,17 +10,20 @@
 
 ### أداة اللغة (مؤقتة حتى تصدر ترجمة عربية رسمية)
 
-داخل المود مجلد اسمه **`arabic-tools`**: نافذة بسيطة فيها زر **العربية** وزر **English**، وتفحص إصدار اللعبة
-وإصدار المود: تظهر **«متطابقة»** أو زر **«إصلاح»**. تصلح أيضاً اسم «العربية» في قائمة اللغات ونصوص الدروس
-والسيناريوهات (التي لا يصل إليها أي مود).
+نافذة بسيطة فيها زر **العربية** وزر **English**، وتعرض إصدار اللعبة وإصدار المود: **«متطابقة»** أو زر **«إصلاح»**.
+تصلح أيضاً اسم «العربية» في قائمة اللغات ونصوص الدروس والسيناريوهات (التي لا يصل إليها أي مود).
+الموقع لا يسمح بملفات تشغيل داخل المود، لذلك تُنزَّل الأداة من GitHub، وتأخذ نصوص الدروس من المود نفسه.
 
-1. أغلق اللعبة.
-2. اضغط **Windows + R** واكتب `%APPDATA%\Factorio\mods` ثم **Enter**.
-3. افتح ملف `arabic-complete_….zip` وانسخ المجلد **`arabic-tools`** إلى سطح المكتب.
-4. افتح المجلد وانقر مرتين على **`Change-Language.cmd`** ثم اضغط **«نعم»** لصلاحيات المسؤول.
-5. اختر **العربية** أو **English**، وإن ظهر **«إصلاح»** فاضغطه. ثم افتح اللعبة.
+**تنزيل الأداة:** [arabic-tools.zip](https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip)
 
-الشرح الكامل خطوة بخطوة في `arabic-tools/README-AR.txt`. تحفظ الأداة نسخة احتياطية قبل أي تغيير.
+1. ثبّت هذا المود من داخل اللعبة، ثم **أغلق اللعبة**.
+2. نزّل **arabic-tools.zip**، ثم انقر عليه بالزر الأيمن ← **«استخراج الكل»**.
+3. افتح المجلد وانقر مرتين على **`Change-Language.cmd`**. إن ظهرت «Windows protected your PC» فاضغط
+   **«مزيد من المعلومات» ← «تشغيل على أي حال»**، ثم **«نعم»** لصلاحيات المسؤول.
+4. اختر **العربية** أو **English**، وإن ظهر **«إصلاح»** فاضغطه. ثم افتح اللعبة.
+
+الشرح الكامل في ملف `README-AR.txt` داخل الأداة وداخل المود. تحفظ الأداة نسخة احتياطية قبل أي تغيير.
+الكود: [github.com/F2lcon01/factorio01](https://github.com/F2lcon01/factorio01)
 
 **حدود لا يستطيع أي مود تجاوزها:** النص محاذى لليسار؛ البحث بالعربي داخل اللعبة لا يطابق الأسماء.
 
@@ -36,7 +39,9 @@ A **complete** Arabic locale for Factorio 2.1 and **Space Age** — every string
 
 **Enable:** Settings → Interface → Language → العربية.
 
-**Limits no mod can lift:** text stays left-aligned; in-game search does not match Arabic input; scenario and tutorial texts live inside the scenario files and keep the official translation.
+**Arabic / English switcher (temporary, Windows):** shows the game and mod versions, "matching" or a one-click Fix, and patches the scenario/tutorial texts that no mod can reach. The portal does not allow scripts inside a mod, so the tool is downloaded from GitHub: [arabic-tools.zip](https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip); it reads the patched texts from this mod.
+
+**Limits no mod can lift:** text stays left-aligned; in-game search does not match Arabic input.
 
 Does not change game data (checksum 0). **Incompatible** with `zzz-arabic-shaper` (same purpose).
 

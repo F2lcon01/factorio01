@@ -187,13 +187,21 @@ pwsh -File tools\set_arabic.ps1 -Restore
 
 ### 10.1 فحص الإصدار وزر «إصلاح» والأداة داخل المود (2.1.24)
 
-**الهدف:** أداة مؤقتة للاعبين حتى تصدر ترجمة عربية رسمية، تُشحن داخل المود نفسه (`arabic-tools/`).
+**الهدف:** أداة مؤقتة للاعبين حتى تصدر ترجمة عربية رسمية.
+
+**قيد اكتُشف عند النشر:** الموقع رفض الحزمة بـ `InvalidModUpload`: «It is not permitted to distribute executable files
+with your mod» (exe, bat, ps1, sh, py). الحل: **فصل** الأداة عن المود، بلا تحايل بامتدادات غير مذكورة (`.psm1`/`.cmd`):
+- المود يحمل البيانات فقط: `scenario-patch/` و`README-AR.txt`.
+- السكربتات في `download/arabic-tools.zip` على GitHub (https://github.com/F2lcon01/factorio01)، ورابطها في الوصف.
+- الأداة تقرأ `scenario-patch` من **المود المثبّت** (مجلد، أو zip تستخرجه مرة لكل إصدار إلى
+  `arabic-tools-backup\patch-<v>`) فتبقى الرقعة مطابقة لإصدار المود حتى لو كانت الأداة أقدم.
+- حارس انحدار: `tools.package` و`publish.ps1` يرفضان أي ملف تنفيذي في zip المود (`tests/test_bundle.py`).
 
 | المكوّن | الوظيفة |
 |---|---|
 | `tools/FactorioArabic.psm1` | وضعان حسب المكان: **مطوّر** (يوجد `tools/autoupdate.py` بجانبه) أو **لاعب** (داخل `arabic-tools`، بلا Python). `Get-FAHealth` يعيد إصدار اللعبة وإصدار المود والمشكلات؛ `Invoke-FAFix` يعيد رموز النتيجة |
 | `Change-Language.ps1` | الواجهة: «إصدار اللعبة / إصدار المود» + «✓ متطابقة» أو «⚠ غير متطابقة» مع السبب وزر «إصلاح». بلا واجهة: `-Check` و`-Fix` |
-| `tools/bundle.py` | `add_tools(mod)`: ينسخ الأداة و`README-AR.txt` و`scenario-patch/` (ملفات الدروس المرقّعة) إلى `<mod>/arabic-tools/` |
+| `tools/bundle.py` | `add_scenario_patch(mod)`: `scenario-patch/` و`README-AR.txt` داخل المود؛ `tool_zip()`: `download/arabic-tools.zip` (ملفات في الجذر، بايتات ثابتة لنفس المحتوى)؛ `executables(zip)` |
 | `mod/README-AR.txt` | شرح للمبتدئين خطوة بخطوة (UTF-8 BOM + CRLF ليفتح صحيحاً في المفكرة) |
 | `mod/portal-description.md` | قسم «أداة اللغة (مؤقتة…)»؛ `publish.ps1` يرسل الوصف مع كل إصدار |
 
@@ -212,6 +220,7 @@ pwsh -File tools\set_arabic.ps1 -Restore
 | 1.0.0 zip فقط | لا يطابق | «متوافق، لا أحدث بعد» (البوابة على 1.0.0) |
 | بلا مود | غير مثبت | «غير مثبت: Mods ← Install» (كان يقول «تحديث» خطأً، صُحّح) |
 | مطوّر: 1.0.0 مثبت | لا يطابق | أُعيد البناء إلى 2.1.24 ← متطابقة ✓ (فحص المحرك english=0 unshaped=0) |
+| بعد الفصل: المود zip (كما يثبّته مدير المودات) + استرجاع 3 ملفات | الدروس | رُقّعت من داخل zip المود (23 ملفاً في الكاش)؛ مطابقة 23/23 |
 
 تحميل الحزمة الجديدة في اللعبة: `Checksum of arabic-complete: 0`، dump: ok=3434 exception=8.
 
