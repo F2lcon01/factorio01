@@ -16,6 +16,11 @@ def test_plural_already_following_rule_or_other_shapes_untouched():
     assert normalize(other) == other
 
 
+def test_eastern_digits_become_western():
+    from tools.corrections import normalize as fix
+    assert fix('وحدة الجودة ٣ و عشب ۲') == 'وحدة الجودة 3 و عشب 2'
+
+
 def test_plural_phrases_with_parameters_are_left_alone():
     s = '__plural_for_parameter__1__{1=المحطة معطلة|2=المحطتان معطلتان|rest=كل المحطات الـ __1__ معطلة}__.'
     assert normalize(s) == s

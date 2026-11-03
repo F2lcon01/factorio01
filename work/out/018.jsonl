@@ -1,0 +1,110 @@
+{"module": "space-age", "key": "space-location-description/shattered-planet", "ar": "بقايا غامضة لعالم سابق في أعماق الفضاء بين النجوم. تحمل أشلاؤه السابحة في الفضاء الذي كان يشغله موارد لفتح تقنيات قوية. لكن الوصول إليها لا يخلو من المخاطر..."}
+{"module": "space-age", "key": "space-location-description/solar-system-edge", "ar": "النهاية! أو بالأحرى بداية جديدة. بناء منصة فضاء قادرة على النجاة هذا البعد عن الأمان النسبي لموقع التحطم يثبت قدرتك على السفر إلى أي مكان آخر في أعماق الفضاء العظيمة بين النجوم. لتنجو منصة فضاء من هذه الرحلة، يجب أن تكون مكتفية ذاتياً على نحو خاص، وأن تملك الأدوات اللازمة لتحويل الكويكبات الكبيرة الخطرة على طول الطريق إلى موارد قابلة للاستخدام."}
+{"module": "space-age", "key": "space-location-description/vulcanus", "ar": "كوكب بركاني حار ببراكين جبلية وأنهار من الحمم وسهول من الرماد ونافورات حمض الكبريتيك. غني بالمعادن. لا يمكن عبور الحمم إلا بالسكك الحديدية المرتفعة."}
+{"module": "space-age", "key": "technology-description/advanced-asteroid-processing", "ar": "احصل على تشكيلة أوسع من الموارد من الكويكبات."}
+{"module": "space-age", "key": "technology-description/agricultural-science-pack", "ar": "تطبيقات زراعية أكثر تقدماً."}
+{"module": "space-age", "key": "technology-description/agriculture", "ar": "أساسيات الزراعة."}
+{"module": "space-age", "key": "technology-description/artificial-soil", "ar": "أنشئ تربة لزراعة المزيد من النباتات."}
+{"module": "space-age", "key": "technology-description/artillery-shell-damage", "ar": "يزيد ضرر المدفعية الثقيلة."}
+{"module": "space-age", "key": "technology-description/asteroid-productivity", "ar": "زيادة الناتج من تحطيم الكويكبات."}
+{"module": "space-age", "key": "technology-description/asteroid-reprocessing", "ar": "أعد معالجة الشوائب في الكويكبات للحصول على توازن أنسب من الموارد."}
+{"module": "space-age", "key": "technology-description/bacteria-cultivation", "ar": "كاثر البكتيريا بتغذيتها ببعض البيوفلكس."}
+{"module": "space-age", "key": "technology-description/battery-mk3-equipment", "ar": "تُركّب في الدرع لتخزين كميات هائلة من الطاقة لاستخدامها لاحقاً."}
+{"module": "space-age", "key": "technology-description/belt-capacity", "ar": "زيادة ارتفاع الكومات المتراصة من العناصر على أحزمة النقل."}
+{"module": "space-age", "key": "technology-description/big-mining-drill", "ar": "حفارة تعدين ضخمة أكبر وأقوى بمنطقة تنقيب أوسع. تسمح بتنقيب الخامات الأصلب، مثل الأجزاء الأصلب من رواسب التنجستن."}
+{"module": "space-age", "key": "technology-description/biochamber", "ar": "منشأة صنع للعمليات البيولوجية."}
+{"module": "space-age", "key": "technology-description/bioflux", "ar": "قد يكون لمزيج من النباتات المختلفة استخدامات كثيرة."}
+{"module": "space-age", "key": "technology-description/bioflux-processing", "ar": "استخدام البيوفلكس للحصول على المواد الكيميائية بطريقة بيولوجية."}
+{"module": "space-age", "key": "technology-description/biolab", "ar": "يبدو أن هناك طريقة لتحويل البيوض إلى شيء ما..."}
+{"module": "space-age", "key": "technology-description/biter-egg-handling", "ar": "الاستيلاء على عش باصق وإمداده بجرعات منتظمة من [item=bioflux] يسمح بحصاد بيوض البايترات، ولعل لها فائدة..."}
+{"module": "space-age", "key": "technology-description/calcite-processing", "ar": "استخدم الكالسيت للحصول على البخار والمياه والنفط الثقيل."}
+{"module": "space-age", "key": "technology-description/captive-biter-spawner", "ar": "فقّس البيوض إلى أعشاش أسيرة وضعها في أي مكان على نوفيس."}
+{"module": "space-age", "key": "technology-description/captivity", "ar": "كبسولة روبوت تُطلق من [item=rocket-launcher] تحقن جرعة من [item=bioflux] في العش فتأسره. مع جرعات منتظمة من [item=bioflux] يبقى العش أسيراً."}
+{"module": "space-age", "key": "technology-description/carbon-fiber", "ar": "بعض النباتات تنمّي أنابيب كربون نانوية طبيعياً، ويمكن غزلها أليافاً ونسجها قماشاً شديد المتانة."}
+{"module": "space-age", "key": "technology-description/cryogenic-plant", "ar": "منشأة صنع تتحمل درجات الحرارة المنخفضة جداً اللازمة للتبريد العميق."}
+{"module": "space-age", "key": "technology-description/cryogenic-science-pack", "ar": "تطبيقات تبريد أكثر تقدماً."}
+{"module": "space-age", "key": "technology-description/electric-weapons-damage", "ar": "يزيد ضرر الأشعة الكهربائية."}
+{"module": "space-age", "key": "technology-description/electromagnetic-plant", "ar": "منشأة صنع لاستخدامات أكثر تقدماً للمغناطيس والكهرباء."}
+{"module": "space-age", "key": "technology-description/electromagnetic-science-pack", "ar": "تطبيقات كهرومغناطيسية أكثر تقدماً."}
+{"module": "space-age", "key": "technology-description/fish-breeding", "ar": "حوّل السمك إلى المزيد من السمك."}
+{"module": "space-age", "key": "technology-description/foundation", "ar": "أساس إنشائي هندسي بدرع حراري وركائز لولبية عميقة. يمكن وضعه على الحمم والمحيط النفطي ومعظم المياه."}
+{"module": "space-age", "key": "technology-description/foundry", "ar": "يتيح صهراً أكثر تقدماً وتطورات أخرى في علم الفلزات."}
+{"module": "space-age", "key": "technology-description/fusion-reactor", "ar": "يتيح نظام البؤرة البلازمية الكثيفة توليد الطاقة مباشرة من تفاعل الاندماج دون الحاجة إلى محركات بخارية."}
+{"module": "space-age", "key": "technology-description/fusion-reactor-equipment", "ar": "يُركّب في الدرع لتزويد المعدات الأخرى بالطاقة."}
+{"module": "space-age", "key": "technology-description/health", "ar": "طعام صحي، جسم صحي."}
+{"module": "space-age", "key": "technology-description/heating-tower", "ar": "يولّد الحرارة من الوقود الكيميائي بكفاءة عالية جداً، ولا يتوقف عن الاحتراق عند بلوغ أقصى حرارة. ينقل الحرارة إلى أنابيب نقل الحرارة المتصلة به، ويمكن استخدامها للطاقة البخارية أو لمنع التجمد."}
+{"module": "space-age", "key": "technology-description/holmium-processing", "ar": "يتيح لك تحويل خام الهولميوم إلى صفيحة الهولميوم."}
+{"module": "space-age", "key": "technology-description/jellynut", "ar": "ينتج ساق الهلام ثمار جوز الهلام الهلامية. ازرع البذور في تربة جوز الهلام (باللون الأرجواني على الخريطة)."}
+{"module": "space-age", "key": "technology-description/landing-pad-unloading-bay", "ar": "يمكن للأذرع الآلية أخذ العناصر من حجرة التفريغ إذا كانت مربوطة بمنصة هبوط الحمولة."}
+{"module": "space-age", "key": "technology-description/laser-weapons-damage", "ar": "يزيد ضرر أشعة الليزر."}
+{"module": "space-age", "key": "technology-description/lightning-collector", "ar": "اجمع البرق من منطقة واسعة وولّد الطاقة بكفاءة أعلى."}
+{"module": "space-age", "key": "technology-description/lithium-processing", "ar": "الليثيوم أقل العناصر الصلبة كثافة، وهو شديد الاشتعال وصعب التخزين."}
+{"module": "space-age", "key": "technology-description/low-density-structure-productivity", "ar": "يزيد الإنتاجية لوصفات الهيكل منخفض الكثافة."}
+{"module": "space-age", "key": "technology-description/mech-armor", "ar": "كن والآلة شيئاً واحداً."}
+{"module": "space-age", "key": "technology-description/metallurgic-science-pack", "ar": "يتيح الدراسة لما بعد أساسيات علم الفلزات."}
+{"module": "space-age", "key": "technology-description/overgrowth-soil", "ar": "تربة أكثر قوة تسمح بزراعة النباتات في أي مكان من منطقتها الحيوية."}
+{"module": "space-age", "key": "technology-description/planet-discovery-aquilo", "ar": "أرض قاحلة متجمدة بمحيطات بلا قاع من الأمونيا السائلة لا يمكن ردمها. الجبال الجليدية غير المستقرة هي أقرب شيء إلى أرض صلبة، ويمكن توسيعها بمنصة جليدية عائمة. تتجمد المباني والأحزمة إن لم تُدفّأ بأنابيب نقل الحرارة المجاورة أو مبانٍ ساخنة أخرى، ولكن يجب وضعها على الخرسانة حتى لا يذوب الجليد تحتها."}
+{"module": "space-age", "key": "technology-description/planet-discovery-fulgora", "ar": "كوكب جاف تجتاحه الرياح، تضرب العواصف البرقية هضابه، وفيه محيطات نفطية يمكن عبورها بالسكك الحديدية المرتفعة.\\nيبدو أن فيه بعض الأطلال."}
+{"module": "space-age", "key": "technology-description/planet-discovery-gleba", "ar": "كوكب رطب كثير المستنقعات العميقة. يمكن للأراضي الرطبة أن تدعم الزراعة لكن البناء عليها صعب، ويمكن ردمها لكن الحجر نادر.\\nالتلال المتعرجة فيها حجر وأنسب للبناء، لكنها لا تدعم الزراعة."}
+{"module": "space-age", "key": "technology-description/planet-discovery-vulcanus", "ar": "كوكب بركاني حار ببراكين جبلية وأنهار من الحمم وسهول من الرماد ونافورات حمض الكبريتيك. غني بالمعادن. لا يمكن عبور الحمم إلا بالسكك الحديدية المرتفعة."}
+{"module": "space-age", "key": "technology-description/plastic-bar-productivity", "ar": "يزيد الإنتاجية لوصفات شريط البلاستيك."}
+{"module": "space-age", "key": "technology-description/processing-unit-productivity", "ar": "يزيد الإنتاجية لوصفة وحدة المعالجة."}
+{"module": "space-age", "key": "technology-description/promethium-science-pack", "ar": "تُستخدم لزيادة إنتاجية البحث، مما يسهّل بحث ترقيات أخرى تجعل الرحلات المستقبلية إلى الكوكب المحطم أسهل."}
+{"module": "space-age", "key": "technology-description/quantum-processor", "ar": "معالج يستغل عدة ظواهر كمومية لتطبيقات مختلفة."}
+{"module": "space-age", "key": "technology-description/rail-support-foundations", "ar": "يسمح ببناء السكك الحديدية المرتفعة أيضاً فوق الأجزاء العميقة من المحيط النفطي على [planet=fulgora]."}
+{"module": "space-age", "key": "technology-description/railgun", "ar": "مزيج يعمل بالكهرباء بين المدفع وبندقية القنص."}
+{"module": "space-age", "key": "technology-description/railgun-damage", "ar": "جعل قذائف مدفع السكك الحديدية أكثف وأمتن يزيد الضرر."}
+{"module": "space-age", "key": "technology-description/railgun-shooting-speed", "ar": "أنظمة التبريد المحسّنة تعني أن مدفع السكك الحديدية يمكنه الإطلاق بوتيرة أعلى."}
+{"module": "space-age", "key": "technology-description/research-productivity", "ar": "يزيد مقدار تقدم البحث لكل حزمة علوم مستهلكة."}
+{"module": "space-age", "key": "technology-description/rocket-fuel-productivity", "ar": "يزيد الإنتاجية لوصفات وقود صواريخ."}
+{"module": "space-age", "key": "technology-description/rocket-part-productivity", "ar": "يزيد الإنتاجية لصنع جزء من صاروخ."}
+{"module": "space-age", "key": "technology-description/rocket-silo", "ar": "تُستخدم لإطلاق العناصر واللاعبين إلى منصات الفضاء."}
+{"module": "space-age", "key": "technology-description/rocket-turret", "ar": "برج بعيد المدى يطلق الصواريخ."}
+{"module": "space-age", "key": "technology-description/scrap-recycling-productivity", "ar": "زيادة الناتج من إعادة تدوير الخردة."}
+{"module": "space-age", "key": "technology-description/space-platform", "ar": "عالج قطع الكويكبات إلى مواد مفيدة."}
+{"module": "space-age", "key": "technology-description/space-platform-thruster", "ar": "يتيح لمنصات الفضاء الانتقال إلى كواكب أخرى."}
+{"module": "space-age", "key": "technology-description/space-science-pack-space-age", "ar": "إنتاج [item=space-science-pack] على منصة الفضاء."}
+{"module": "space-age", "key": "technology-description/stack-inserter", "ar": "أذرع آلية كومية قادرة على وضع العناصر على أحزمة النقل في كومات متراصة، لكنها تنتظر امتلاء يدها قبل أن تتحرك."}
+{"module": "space-age", "key": "technology-description/steel-plate-productivity", "ar": "يزيد الإنتاجية لصفيحة فولاذية وسبك الفولاذ."}
+{"module": "space-age", "key": "technology-description/stellar-discovery-solar-system-edge", "ar": "النهاية! أو بالأحرى بداية جديدة. بناء منصة فضاء قادرة على النجاة هذا البعد عن الأمان النسبي لموقع التحطم يثبت قدرتك على السفر إلى أي مكان آخر في أعماق الفضاء العظيمة بين النجوم. لتنجو منصة فضاء من هذه الرحلة، يجب أن تكون مكتفية ذاتياً على نحو خاص، وأن تملك الأدوات اللازمة لتحويل الكويكبات الكبيرة الخطرة على طول الطريق إلى موارد قابلة للاستخدام."}
+{"module": "space-age", "key": "technology-description/tesla-weapons", "ar": "أسلحة تُحدث ضرراً كهربائياً وترتد بين الأعداء."}
+{"module": "space-age", "key": "technology-description/toolbelt-equipment", "ar": "تُركّب في الدرع لتوسيع مخزونك."}
+{"module": "space-age", "key": "technology-description/tree-seeding", "ar": "اجمع بذور الأشجار وازرعها على العشب أو الطين."}
+{"module": "space-age", "key": "technology-description/tungsten-carbide", "ar": "يتيح لك صنع كربيد التنجستن، وهو خزف صلب مقاوم للحرارة. يوجد خام التنجستن سهل الوصول في بعض صخور سطح فولكانوس."}
+{"module": "space-age", "key": "technology-description/tungsten-steel", "ar": "يتيح لك صنع صفائح فولاذ التنجستن."}
+{"module": "space-age", "key": "technology-description/turbo-transport-belt", "ar": "أحزمة نقل أسرع حتى."}
+{"module": "space-age", "key": "technology-description/yumako", "ar": "تنتج شجرة اليوماكو ثماراً لذيذة مغذية. ازرع البذور في تربة يوماكو (باللون الأصفر على الخريطة)."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/agriculture", "ar": "البذور المزروعة في التربة القابلة للزراعة تنمو أشجاراً يمكن حصادها. [entity=agricultural-tower] يجعل زراعة البذور آلية.\\nتنمو [entity=yumako-tree] على [tile=natural-yumako-soil]، وتنتج [item=yumako] التي تحتوي على [item=yumako-seed] لإعادة زراعة الشجرة.\\nيمكن توسيع المزرعة بردم [tile=wetland-yumako] المجاورة بـ [item=artificial-yumako-soil]. تظهر هذه المناطق باللون الأصفر على الخريطة.\\nينمو [entity=jellystem] على [tile=natural-jellynut-soil]، وينتج [item=jellynut] الذي يحتوي على [item=jellynut-seed] لإعادة زراعته.\\nيمكن توسيع المزرعة بردم [tile=wetland-jellynut] المجاورة بـ [item=artificial-jellynut-soil]. تظهر هذه المناطق باللون الأرجواني على الخريطة."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/aquilo-briefing", "ar": "[planet=aquilo] أرض قاحلة متجمدة بمحيطات من الأمونيا. وهو أبعد الكواكب، ويكاد استخدام [entity=solar-panel] فيه يكون مستحيلاً.\\n[entity=logistic-robot] و[entity=construction-robot] أضعف بكثير هنا.\\nالمورد المألوف الوحيد هنا هو [entity=crude-oil]، لذا ستعتمد القاعدة على اللوجستيات بين الكواكب. قد يجد اللاعب نفسه عالقاً دون دعم كافٍ من الكواكب الأخرى!\\nالسطح صغير جداً ويحتاج إلى توسيع. يمكن ردم المحيطات بـ [item=ice-platform] لتصبح قابلة للمشي. تُستخدم [item=concrete] أساساً للمباني وتحمي الجليد من الذوبان.\\nتحتاج الكيانات إلى التدفئة لتعمل باستخدام [entity=heating-tower] و[entity=heat-pipe]."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/asteroid-defense", "ar": "يمكن استخدام [entity=gun-turret] لتفتيت الكويكبات الأكبر إلى قطع كويكبات. يمكن أن يلتقطها [entity=asteroid-collector] لتُعالج على المنصة للحصول على الموارد. الكويكبات الأكبر تضر المنصة عند الاصطدام."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/fulgora-briefing", "ar": "[planet=fulgora] كوكب جاف قاحل بلا أثر للحياة، مع نشاط برقي خطر في دورات الليل المتكررة.\\n[entity=solar-panel] أقل فعالية بكثير، لكن يمكن جمع البرق بـ [entity=lightning-rod] وتخزينه في [entity=accumulator].\\nلا توجد موارد طبيعية في أي مكان على الكوكب. المتاح فقط بقايا على شكل [entity=scrap].\\nما ربما كان محيطات أصبح الآن مليئاً بـ [fluid=heavy-oil] الذي يمكن استخراجه بـ [entity=offshore-pump].\\nلا يمكن ردم [tile=oil-ocean-shallow] إلا في وقت متأخر، لكن يمكن عبوره بالسكك الحديدية المرتفعة. بناء [entity=rail-support] على الأجزاء العميقة من المحيط يتطلب بحثاً إضافياً."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/gleba-briefing", "ar": "[planet=gleba] كوكب رطب كثير المستنقعات بنباتات غريبة غنية يمكن زراعتها باستخدام [entity=agricultural-tower] ومعالجتها في [entity=biochamber].\\nلن تجد هناك [entity=iron-ore] أو [entity=copper-ore] أو [entity=crude-oil] أو [entity=coal] أو [entity=uranium-ore]، لكن النباتات توفر طرقاً بديلة لإنتاج العناصر المطلوبة.\\nتأتي معظم عناصر الزراعة مع تحدٍّ إضافي هو التلف بمرور الوقت. حتى [item=agricultural-science-pack] عمرها محدود ولا يمكن تخزينها.\\nالمخلوقات الكبيرة ذات الأرجل الخمس هي الكائنات الأصلية لهذا الكوكب. [entity=solar-panel] أضعف لكنه ما زال صالحاً للاستخدام."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/heating-mechanics", "ar": "يمكن لـ [entity=heating-tower] توليد الحرارة من الوقود، ولا يتوقف عن الاحتراق عند بلوغ أقصى حرارة.\\nيستخدم [entity=heat-pipe] لنقل الحرارة إلى الكيانات الأخرى.\\nيجب أن يلامس كل كيان مصدر حرارة حتى لا يتجمد.\\nالاستثناء هو أعمدة الكهرباء و[entity=solar-panel] و[entity=accumulator]."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/lava-processing", "ar": "يمكن ضخ [fluid=lava] بـ [entity=offshore-pump] ومعالجتها في [entity=foundry] إلى [item=stone] و[fluid=molten-iron] و[fluid=molten-copper].\\nيمكن التخلص من العناصر غير المرغوبة بنقلها مباشرة إلى [tile=lava]."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/lightning-mechanics", "ar": "يحمي [entity=lightning-rod] منطقة صغيرة من ضربات البرق ويحوّل طاقتها إلى الشبكة الكهربائية.\\nيولّد البرق كمية كبيرة من الطاقة لفترة قصيرة. وجود المزيد من [entity=accumulator] يتيح استغلالاً أفضل لكل ضربة برق.\\nيمكن استبداله لاحقاً بـ [entity=lightning-collector] الأكثر كفاءة."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/orbital-logistics", "ar": "يمكن لـ [entity=space-platform-hub] طلب عناصر من الشبكة اللوجستية لتوصلها الصواريخ. ويمكن الطلب التلقائي لمواد البناء الناقصة.\\nيمكن ضبط [entity=rocket-silo] لتلبية طلبات منصات الفضاء تلقائياً.\\nيمكن لـ [entity=cargo-landing-pad] طلب عناصر من منصة فضاء في مدار كوكبها، ما لم تكن تطلب العنصر نفسه على هذا الكوكب بالفعل.\\n__CONTROL__stack-transfer__ في واجهة مركز منصة الفضاء ينقل كومة واحدة يدوياً إلى الكوكب. ستظهر العناصر في [entity=cargo-pod-container] عند إحداثيات البداية."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/production-entity-list", "ar": "[entity=electric-mining-drill] حفار التنقيب الكهربائي \\n[entity=big-mining-drill] حفارة تعدين ضخمة \\n[entity=pumpjack] مضخة نفط \\n[entity=assembling-machine-2] جهاز التجميع 2 \\n[entity=assembling-machine-3] جهاز التجميع 3 \\n[entity=electric-furnace] فرن كهربائي \\n[entity=recycler] معيد التدوير \\n[entity=chemical-plant] مصنع الكيماويات \\n[entity=centrifuge] جهاز معالجة المواد المشعة \\n[entity=crusher] محطم \\n[entity=foundry] مسبك \\n[entity=agricultural-tower] برج زراعي \\n[entity=electromagnetic-plant] محطة كهرومغناطيسية \\n[entity=cryogenic-plant] محطة تبريد"}
+{"module": "space-age", "key": "tips-and-tricks-item-description/removing-trash-in-space", "ar": "يمكن استخدام [entity=inserter] للتخلص من العناصر غير المرغوبة بنقلها إلى فراغ الفضاء."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/space-platform", "ar": "تُبنى منصة الفضاء عن بُعد، وتوصل الصواريخ مواد البناء إليها. يمكن استخدامها لنقل اللاعبين والحمولات بين الكواكب.\\n\\n- تُستخدم [item=space-platform-starter-pack] لتأسيس المنصة، ثم تُوسّع باستخدام [item=space-platform-foundation].\\n- يلتقط [entity=asteroid-collector] الكويكبات من الفضاء للحصول على المواد.\\n- يُستخدم [entity=crusher] لتحطيم الكويكبات للحصول على الموارد."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/space-science", "ar": "في عصر الفضاء، لا يمكن إنتاج [item=space-science-pack] إلا على منصة الفضاء باستخدام قطع الكويكبات المعالجة."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/spoilables", "ar": "للعنصر ذي خاصية التلف [img=utility/tooltip_category_spoilable] عمر محدود. عند انتهاء الوقت يتلف العنصر ويتحول إلى عنصر آخر، مثل [item=spoilage].\\nالعنصر ذو الجودة الأعلى يبقى طازجاً مدة أطول."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/spoilables-research", "ar": "تقل قيمة [item=agricultural-science-pack] كلما زاد تلفها."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/spoilables-result", "ar": "تقدم تلف المكوّن يؤثر في تقدم تلف المنتج."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/vulcanus-briefing", "ar": "[planet=vulcanus] كوكب حار بلا [fluid=water]، ولن تجد فيه [entity=crude-oil] أو [entity=uranium-ore]، لكنه يحتوي على عدة [tooltip=موارد,tips-and-tricks-item-description.vulcanus-resources] جديدة.\\n[fluid=lava] مورد لانهائي من المعادن بديلاً عن رقع [item=stone] و[item=iron-ore] و[item=copper-ore]. لا توجد هذه بشكلها الخام إلا في [entity=big-volcanic-rock].\\n[entity=solar-panel] أكثر فعالية بكثير. البيئة معادية ببراكين جبلية وأنهار من الحمم وسهول من الرماد ونافورات حمض الكبريتيك.\\nلا يمكن ردم [tile=lava] إلا في وقت متأخر، لكن يمكن عبورها بالسكك الحديدية المرتفعة."}
+{"module": "space-age", "key": "tips-and-tricks-item-description/vulcanus-resources", "ar": "موارد فولكانوس:\\n[entity=sulfuric-acid-geyser] نافورة حمض الكبريتيك \\n[entity=calcite] الكالسيت \\n[entity=tungsten-ore] خام التنجستن"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/agriculture", "ar": "الزراعة"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/aquilo-briefing", "ar": "تقرير عن أكويلو"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/asteroid-defense", "ar": "الدفاع ضد الكويكبات"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/fulgora-briefing", "ar": "تقرير عن فولغورا"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/gleba-briefing", "ar": "تقرير عن غليبا"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/heating-mechanics", "ar": "آليات التدفئة"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/lava-processing", "ar": "معالجة الحمم"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/lightning-mechanics", "ar": "آليات البرق"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/orbital-logistics", "ar": "اللوجستيات المدارية"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/removing-trash-in-space", "ar": "التخلص من المهملات في الفضاء"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/space-platform", "ar": "منصة الفضاء"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/space-science", "ar": "علوم الفضاء"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/spoilables", "ar": "العناصر القابلة للتلف"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/spoilables-research", "ar": "العناصر القابلة للتلف والبحث"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/spoilables-result", "ar": "نسبة التلف في الإنتاج"}
+{"module": "space-age", "key": "tips-and-tricks-item-name/vulcanus-briefing", "ar": "تقرير عن فولكانوس"}

@@ -1,13 +1,32 @@
 """Apply reviewed manual decisions to src/ar, after import/glossary/terms/merge so a re-import never loses them:
 1. term_migrations.json [[old, new], ...] — a renamed term, replaced in every value (main + scenarios)
 2. corrections.json {"module:section/key": "arabic"} — single reviewed values
-3. tools.plurals — project plural rule
+3. tools.plurals — project plural rule; Western digits (٠-٩ / ۰-۹ → 0-9)
+4. programmable-speaker-note C4/C#4… → solfège (دو4 / دو#4…), the Arabic music convention
 python -E -m tools.corrections"""
-import json, sys
+import json, re, sys
 from tools.cfg import read_cfg, write_cfg
 from tools.lint import check_value
 from tools.paths import MODULES, ROOT, SRC, read_en
-from tools.plurals import normalize
+from tools.plurals import normalize as normalize_plurals
+
+DIGITS = str.maketrans('٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹', '01234567890123456789')
+SOLFEGE = {'C': 'دو', 'D': 'ري', 'E': 'مي', 'F': 'فا', 'G': 'صول', 'A': 'لا', 'B': 'سي'}
+NOTE_RE = re.compile(r'^([A-G])(#?)(\d)$')
+
+
+def normalize(text):
+    return normalize_plurals(text.translate(DIGITS))
+
+
+def note_names(module):
+    """programmable-speaker-note/C#4 = 'C#4' → 'دو#4'."""
+    out = {}
+    for k, e in read_en(module).items():
+        m = NOTE_RE.match(e)
+        if k.startswith('programmable-speaker-note/') and m:
+            out[k] = SOLFEGE[m.group(1)] + m.group(2) + m.group(3)
+    return out
 
 
 def migrate(text, pairs):
@@ -29,6 +48,7 @@ def apply():
     migrated = 0
     for m in MODULES:
         cur = read_cfg(SRC / f'{m}.cfg')
+        cur.update({k: v for k, v in note_names(m).items() if k in cur})
         cur.update(by_module.get(m, {}))
         new = {k: normalize(migrate(v, pairs)) for k, v in cur.items()}
         migrated += sum(new[k] != cur[k] for k in cur)

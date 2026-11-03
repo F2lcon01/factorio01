@@ -1,0 +1,120 @@
+achievement-description/visit-gleba=سافر إلى كوكب غليبا.
+achievement-description/visit-vulcanus=سافر إلى كوكب فولكانوس.
+achievement-description/we-need-bigger-guns=اقتل هادماً متوسطاً.
+achievement-description/work-around-the-clock=أنهِ اللعبة في أقل من 100 ساعة.
+achievement-name/crafting-with-quality=صناعة بجودة
+achievement-name/express-delivery=توصيل سريع
+achievement-name/fusion-power=طاقة الاندماج
+achievement-name/get-off-my-lawn=ابتعد عن حديقتي
+achievement-name/if-it-bleeds=ما دام ينزف، فيمكننا قتله
+achievement-name/it-stinks-and-they-do-like-it=رائحته كريهة وهم يحبونها
+achievement-name/look-at-my-shiny-rare-armor=انظر إلى درعي النادر اللامع
+achievement-name/make-it-better=اجعله أفضل
+achievement-name/my-modules-are-legendary=وحداتي أسطورية
+achievement-name/no-room-for-more=لا مكان للمزيد
+achievement-name/reach-for-the-stars=نحو النجوم
+achievement-name/research-with-agriculture=البحث بالزراعة
+achievement-name/research-with-cryogenics=البحث بالتبريد
+achievement-name/research-with-electromagnetics=البحث بالكهرومغناطيسية
+achievement-name/research-with-metallurgics=البحث بالفلزات
+achievement-name/research-with-promethium=البحث بالبروميثيوم
+achievement-name/rush-to-space=اندفاع إلى الفضاء
+achievement-name/second-star-to-the-right-and-straight-on-till-morning=النجمة الثانية إلى اليمين، ثم إلى الأمام حتى الصباح
+achievement-name/shattered-planet-1=في الطريق إلى الكوكب المحطم 1
+achievement-name/shattered-planet-2=في الطريق إلى الكوكب المحطم 2
+achievement-name/shattered-planet-3=في الطريق إلى الكوكب المحطم 3
+achievement-name/size-doesnt-matter=الحجم لا يهم
+achievement-name/todays-fish-is-trout-a-la-creme=سمكة اليوم: سلمون مرقط بالكريمة
+achievement-name/visit-aquilo=زيارة أكويلو
+achievement-name/visit-gleba=زيارة غليبا
+achievement-name/visit-vulcanus=زيارة فولكانوس
+achievement-name/we-need-bigger-guns=نحتاج أسلحة أكبر
+achievement-name/work-around-the-clock=عمل على مدار الساعة
+agricultural-tower-gui/input=المُدخل
+agricultural-tower-gui/modules=الوحدات
+agricultural-tower-gui/output=المُخرج
+agricultural-tower-gui/seeds=البذور
+agricultural-tower-gui/seeds-description=المُدخلات الممكنة
+airborne-pollutant-name-with-amount/spores=__1__ __plural_for_parameter__1__{1=بوغ|2=بوغان|rest=أبواغ}__
+description/collection-arm-count=عدد أذرع الجمع
+description/collection-arm-max-speed=أقصى سرعة لذراع الجمع
+description/collection-arm-usage=استخدام ذراع الجمع
+description/collector-arm-storage-size=سعة تخزين ذراع الجمع
+entity-description/asteroid-collector=يجمع قطع الكويكبات. يجب أن تفتّت الأبراجُ الكويكباتِ الأكبر إلى قطع.
+entity-description/cargo-bay=يزيد حجم مخزون المركز ومنصة الهبوط، ويضيف فتحة شحن إضافية.
+entity-description/cargo-pod=تُستخدم لنقل العناصر من منصة الفضاء إلى سطح الكوكب.\nتُطلق تلقائياً عند وصول منصة فضاء إلى المدار إذا كانت [entity=cargo-landing-pad] تطلب حمولة.\nيمكن إرسالها يدوياً بـ __CONTROL__stack-transfer__ على أيقونة العنصر في واجهة مركز منصة الفضاء.
+entity-description/cargo-pod-container=تظهر على سطح الكوكب ومعها الحمولة من منصة الفضاء، وتُدمَّر عند إفراغ الحمولة.\nعند بناء [entity=cargo-landing-pad] تتوقف كبسولات التوصيل عن الوصول إلى الإحداثيات الأولية، وتُسلَّم الحمولة إليها مباشرة.
+entity-description/landing-pad-unloading-bay=يسمح للأذرع الآلية بأخذ العناصر من المخزون المشترك عند ربطه بمنصة هبوط الحمولة.
+entity-description/turbo-underground-belt=يُستخدم لتمكين الحزام من عبور الكيانات أو التضاريس التي لا يمكن اجتيازها.
+entity-description/yumako-tree=شجرة من غليبا تنتج ثمار يوماكو المغذية.
+entity-name/demolisher-ash-cloud=سحابة رماد __1__
+entity-name/demolisher-ash-cloud-trail=أثر سحابة رماد __1__
+entity-name/demolisher-corpse=بقايا __1__
+entity-name/demolisher-expanding-ash-cloud=سحابة رماد __1__ المتسعة __2__
+entity-name/demolisher-fissure=شق __1__ المتفجر
+entity-name/demolisher-fissure-damage-explosion=ضرر انفجار شق __1__
+entity-name/demolisher-fissure-explosion=انفجار شق __1__
+entity-name/demolisher-fissure-scorchmark=أثر حرق شق __1__
+entity-name/demolisher-segment=قطعة __1__
+entity-name/demolisher-tail=ذيل __1__
+entity-name/demolisher-trail-lower=أثر __1__ السفلي
+entity-name/demolisher-trail-upper=أثر __1__ العلوي
+factoriopedia-description/fusion-generator=يستهلك البلازما من [entity=fusion-reactor] لتوليد الطاقة الكهربائية. إنتاج الطاقة ثابت، لكن يُستهلك قدر أقل من البلازما إذا كانت حرارتها أعلى. يُخرج مبرداً ساخناً بقدر البلازما المستهلكة، ويمكن تبريده في [entity=cryogenic-plant]. يمكن ربط مولدات الاندماج ببعضها لتتناقل البلازما.
+factoriopedia-description/fusion-reactor=يستخدم مبرد الفلوروكيتون مع خلايا طاقة الاندماج لإنتاج بلازما فائقة الحرارة. لا يمكن إخراجها إلا مباشرة إلى [entity=fusion-generator]. مكافأة الجوار مع مفاعلات الاندماج الأخرى ترفع حرارة البلازما كثيراً دون زيادة كمية المبرد المستخدم.
+fluid-description/fusion-plasma=أيونات فائقة الحرارة تتولد في [entity=fusion-reactor] ويستهلكها [entity=fusion-generator]. ليست سائلاً عادياً ولا يمكن نقلها في [entity=pipe]، بل تنتقل فقط عبر مفاعل الاندماج ومولد الاندماج.\nتحدد حرارة البلازما قيمة طاقتها.\nتمثل كمية البلازما أيضاً كمية المبرد المنتقل معها، ويُخرج مولد الاندماج المبرد الساخن عند استخدام البلازما للطاقة.
+fluid-description/thruster-fuel=وقود الدافع السائل
+gui-asteroid-collector/chunk-filter=مرشح قطع الكويكبات
+gui-asteroid-collector/chunk-filter-description=عند ضبطه، لا يلتقط جامع الكويكبات إلا هذه القطع.
+gui-map-editor-instructions/asteroid-chunks-only-buildable-on-platforms=لا يمكن بناء قطع الكويكبات إلا على منصات الفضاء.
+gui-rocket-silo/auto-launch-tooltip=يطلق الصاروخ تلقائياً لمنصات الفضاء.
+item-description/artificial-jellynut-soil=يجب وضعها فوق [tile=wetland-jellynut].
+item-description/artificial-yumako-soil=يجب وضعها فوق [tile=wetland-yumako].
+item-description/bioflux=مزيج مغذٍّ جداً من محاصيل غليبا. يمنح عند أكله دفعة من تجديد الصحة وسرعة الحركة معاً.
+item-description/capture-robot-rocket=يتشبث بـ [entity=biter-spawner] المستهدف ويأسره فيحوله إلى [entity=captive-biter-spawner].
+item-description/carbonic-asteroid-chunk=قطعة كويكب غنية بالكربون.
+item-description/foundation=أساس إنشائي هندسي بدرع حراري وركائز لولبية عميقة. يمكن وضعه على الحمم والمحيط النفطي ومعظم المياه.
+item-description/fusion-reactor-equipment=يوفر الطاقة لوحدات المعدات.
+item-description/ice-platform=منصة جليدية عائمة ثابتة للكواكب الباردة بما يكفي.
+item-description/jelly=يمنح عند أكله دفعة من سرعة الحركة.
+item-description/jellynut=محصول لزج قابل للزراعة. يمنح عند أكله دفعة من سرعة الحركة.
+item-description/jellynut-seed=يمكن زراعتها في تربة جوز الهلام.
+item-description/metallic-asteroid-chunk=قطعة كويكب غنية بالمعادن.
+item-description/overgrowth-jellynut-soil=تربة لـ [entity=jellystem] يمكن وضعها في أي مكان في المنطقة الحيوية الحمراء.
+item-description/overgrowth-yumako-soil=تربة لـ [entity=yumako-tree] يمكن وضعها في أي مكان في المنطقة الحيوية الخضراء.
+item-description/oxide-asteroid-chunk=قطعة كويكب غنية بالأكسجين.
+item-description/promethium-asteroid-chunk=قطعة كويكب لا توجد إلا عند الاقتراب من الكوكب المحطم.
+item-description/railgun-ammo=تُستخدم لتفتيت حتى أكبر الكويكبات.
+item-description/space-platform-foundation=يمكن وضعه في الفضاء لتوسيع منصات الفضاء الموجودة.
+item-description/space-platform-starter-pack=تحتوي على كل ما يلزم لإنشاء أساس منصة الفضاء.
+item-description/space-science-pack=تستخدمها المختبرات للبحث. يُحصل عليها بمعالجة الكويكبات في الفضاء.
+item-description/yumako=محصول مغذٍّ قابل للزراعة. يمنح عند أكله دفعة من تجديد الصحة.
+item-description/yumako-mash=يمنح عند أكله دفعة من تجديد الصحة.
+item-description/yumako-seed=يمكن زراعتها في تربة يوماكو.
+mod-description/space-age=السماء ليست الحد!
+modifier-description/belt-stack-size-bonus=سعة حزام النقل: +__1__
+modifier-description/rail-support-on-deep-oil-ocean=يسمح ببناء السكك الحديدية المرتفعة أيضاً فوق الأجزاء العميقة من المحيط النفطي.
+modifier-description/railgun-damage-bonus=ضرر مدفع السكك الحديدية: +__1__
+modifier-description/railgun-shooting-speed-bonus=سرعة إطلاق مدفع السكك الحديدية: +__1__
+modifier-description/tesla-damage-bonus=ضرر تسلا: +__1__
+noise-expression/aquilo_elevation=ارتفاع أكويلو
+noise-expression/fulgora_cliffiness=كثافة أجراف فولغورا
+noise-expression/fulgora_elevation=ارتفاع فولغورا
+noise-expression/gleba-plants=نباتات غليبا
+noise-expression/gleba_aux=المساعد لغليبا
+noise-expression/gleba_elevation=ارتفاع غليبا
+noise-expression/gleba_moisture=رطوبة غليبا
+noise-expression/gleba_temperature=درجة حرارة غليبا
+noise-expression/vulcanus_aux=المساعد لفولكانوس
+noise-expression/vulcanus_elevation=ارتفاع فولكانوس
+noise-expression/vulcanus_moisture=رطوبة فولكانوس
+noise-expression/vulcanus_temperature=درجة حرارة فولكانوس
+quality-tooltip/collection-area=تزداد منطقة الجمع في الجودات الأعلى.
+quality-tooltip/collection-arm-count=أذرع أكثر تجمع الكويكبات في الجودات الأعلى.
+quality-tooltip/collection-arm-max-speed=تتحرك أذرع الجامع أسرع في الجودات الأعلى.
+quality-tooltip/collector-arm-storage-size=تزداد سعة تخزين ذراع الجامع في الجودات الأعلى.
+quality-tooltip/storage-size=تزداد سعة التخزين في الجودات الأعلى.
+recipe-description/ammonia-rocket-fuel=استخدام مفيد للأمونيا.
+recipe-description/ammoniacal-solution-separation=يُحصل على [fluid=ammoniacal-solution] بواسطة [entity=offshore-pump] في محيطات [planet=aquilo].
+space-location-description/aquilo=أرض قاحلة متجمدة بمحيطات من الأمونيا السائلة وفتحات للفلور. تتجمد المباني والأحزمة إن لم تُدفّأ بأنابيب نقل الحرارة المجاورة أو مبانٍ ساخنة أخرى.
+space-location-description/fulgora=كوكب جاف تجتاحه الرياح، تضرب العواصف البرقية هضابه، وفيه محيطات نفطية يمكن عبورها بالسكك الحديدية المرتفعة.\nيبدو أن فيه بعض الأطلال.
+space-location-description/gleba=كوكب رطب كثير المستنقعات العميقة. يمكن للأراضي الرطبة أن تدعم الزراعة لكن البناء عليها صعب، ويمكن ردمها لكن الحجر نادر.\nالتلال المتعرجة فيها حجر وأنسب للبناء، لكنها لا تدعم الزراعة.

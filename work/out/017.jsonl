@@ -1,0 +1,120 @@
+{"module": "space-age", "key": "achievement-description/visit-gleba", "ar": "سافر إلى كوكب غليبا."}
+{"module": "space-age", "key": "achievement-description/visit-vulcanus", "ar": "سافر إلى كوكب فولكانوس."}
+{"module": "space-age", "key": "achievement-description/we-need-bigger-guns", "ar": "اقتل هادماً متوسطاً."}
+{"module": "space-age", "key": "achievement-description/work-around-the-clock", "ar": "أنهِ اللعبة في أقل من 100 ساعة."}
+{"module": "space-age", "key": "achievement-name/crafting-with-quality", "ar": "صناعة بجودة"}
+{"module": "space-age", "key": "achievement-name/express-delivery", "ar": "توصيل سريع"}
+{"module": "space-age", "key": "achievement-name/fusion-power", "ar": "طاقة الاندماج"}
+{"module": "space-age", "key": "achievement-name/get-off-my-lawn", "ar": "ابتعد عن حديقتي"}
+{"module": "space-age", "key": "achievement-name/if-it-bleeds", "ar": "ما دام ينزف، فيمكننا قتله"}
+{"module": "space-age", "key": "achievement-name/it-stinks-and-they-do-like-it", "ar": "رائحته كريهة وهم يحبونها"}
+{"module": "space-age", "key": "achievement-name/look-at-my-shiny-rare-armor", "ar": "انظر إلى درعي النادر اللامع"}
+{"module": "space-age", "key": "achievement-name/make-it-better", "ar": "اجعله أفضل"}
+{"module": "space-age", "key": "achievement-name/my-modules-are-legendary", "ar": "وحداتي أسطورية"}
+{"module": "space-age", "key": "achievement-name/no-room-for-more", "ar": "لا مكان للمزيد"}
+{"module": "space-age", "key": "achievement-name/reach-for-the-stars", "ar": "نحو النجوم"}
+{"module": "space-age", "key": "achievement-name/research-with-agriculture", "ar": "البحث بالزراعة"}
+{"module": "space-age", "key": "achievement-name/research-with-cryogenics", "ar": "البحث بالتبريد"}
+{"module": "space-age", "key": "achievement-name/research-with-electromagnetics", "ar": "البحث بالكهرومغناطيسية"}
+{"module": "space-age", "key": "achievement-name/research-with-metallurgics", "ar": "البحث بالفلزات"}
+{"module": "space-age", "key": "achievement-name/research-with-promethium", "ar": "البحث بالبروميثيوم"}
+{"module": "space-age", "key": "achievement-name/rush-to-space", "ar": "اندفاع إلى الفضاء"}
+{"module": "space-age", "key": "achievement-name/second-star-to-the-right-and-straight-on-till-morning", "ar": "النجمة الثانية إلى اليمين، ثم إلى الأمام حتى الصباح"}
+{"module": "space-age", "key": "achievement-name/shattered-planet-1", "ar": "في الطريق إلى الكوكب المحطم 1"}
+{"module": "space-age", "key": "achievement-name/shattered-planet-2", "ar": "في الطريق إلى الكوكب المحطم 2"}
+{"module": "space-age", "key": "achievement-name/shattered-planet-3", "ar": "في الطريق إلى الكوكب المحطم 3"}
+{"module": "space-age", "key": "achievement-name/size-doesnt-matter", "ar": "الحجم لا يهم"}
+{"module": "space-age", "key": "achievement-name/todays-fish-is-trout-a-la-creme", "ar": "سمكة اليوم: سلمون مرقط بالكريمة"}
+{"module": "space-age", "key": "achievement-name/visit-aquilo", "ar": "زيارة أكويلو"}
+{"module": "space-age", "key": "achievement-name/visit-gleba", "ar": "زيارة غليبا"}
+{"module": "space-age", "key": "achievement-name/visit-vulcanus", "ar": "زيارة فولكانوس"}
+{"module": "space-age", "key": "achievement-name/we-need-bigger-guns", "ar": "نحتاج أسلحة أكبر"}
+{"module": "space-age", "key": "achievement-name/work-around-the-clock", "ar": "عمل على مدار الساعة"}
+{"module": "space-age", "key": "agricultural-tower-gui/input", "ar": "المُدخل"}
+{"module": "space-age", "key": "agricultural-tower-gui/modules", "ar": "الوحدات"}
+{"module": "space-age", "key": "agricultural-tower-gui/output", "ar": "المُخرج"}
+{"module": "space-age", "key": "agricultural-tower-gui/seeds", "ar": "البذور"}
+{"module": "space-age", "key": "agricultural-tower-gui/seeds-description", "ar": "المُدخلات الممكنة"}
+{"module": "space-age", "key": "airborne-pollutant-name-with-amount/spores", "ar": "__1__ __plural_for_parameter__1__{1=بوغ|2=بوغان|rest=أبواغ}__"}
+{"module": "space-age", "key": "description/collection-arm-count", "ar": "عدد أذرع الجمع"}
+{"module": "space-age", "key": "description/collection-arm-max-speed", "ar": "أقصى سرعة لذراع الجمع"}
+{"module": "space-age", "key": "description/collection-arm-usage", "ar": "استخدام ذراع الجمع"}
+{"module": "space-age", "key": "description/collector-arm-storage-size", "ar": "سعة تخزين ذراع الجمع"}
+{"module": "space-age", "key": "entity-description/asteroid-collector", "ar": "يجمع قطع الكويكبات. يجب أن تفتّت الأبراجُ الكويكباتِ الأكبر إلى قطع."}
+{"module": "space-age", "key": "entity-description/cargo-bay", "ar": "يزيد حجم مخزون المركز ومنصة الهبوط، ويضيف فتحة شحن إضافية."}
+{"module": "space-age", "key": "entity-description/cargo-pod", "ar": "تُستخدم لنقل العناصر من منصة الفضاء إلى سطح الكوكب.\\nتُطلق تلقائياً عند وصول منصة فضاء إلى المدار إذا كانت [entity=cargo-landing-pad] تطلب حمولة.\\nيمكن إرسالها يدوياً بـ __CONTROL__stack-transfer__ على أيقونة العنصر في واجهة مركز منصة الفضاء."}
+{"module": "space-age", "key": "entity-description/cargo-pod-container", "ar": "تظهر على سطح الكوكب ومعها الحمولة من منصة الفضاء، وتُدمَّر عند إفراغ الحمولة.\\nعند بناء [entity=cargo-landing-pad] تتوقف كبسولات التوصيل عن الوصول إلى الإحداثيات الأولية، وتُسلَّم الحمولة إليها مباشرة."}
+{"module": "space-age", "key": "entity-description/landing-pad-unloading-bay", "ar": "يسمح للأذرع الآلية بأخذ العناصر من المخزون المشترك عند ربطه بمنصة هبوط الحمولة."}
+{"module": "space-age", "key": "entity-description/turbo-underground-belt", "ar": "يُستخدم لتمكين الحزام من عبور الكيانات أو التضاريس التي لا يمكن اجتيازها."}
+{"module": "space-age", "key": "entity-description/yumako-tree", "ar": "شجرة من غليبا تنتج ثمار يوماكو المغذية."}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud", "ar": "سحابة رماد __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud-trail", "ar": "أثر سحابة رماد __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-corpse", "ar": "بقايا __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-expanding-ash-cloud", "ar": "سحابة رماد __1__ المتسعة __2__"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure", "ar": "شق __1__ المتفجر"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-damage-explosion", "ar": "ضرر انفجار شق __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-explosion", "ar": "انفجار شق __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-scorchmark", "ar": "أثر حرق شق __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-segment", "ar": "قطعة __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-tail", "ar": "ذيل __1__"}
+{"module": "space-age", "key": "entity-name/demolisher-trail-lower", "ar": "أثر __1__ السفلي"}
+{"module": "space-age", "key": "entity-name/demolisher-trail-upper", "ar": "أثر __1__ العلوي"}
+{"module": "space-age", "key": "factoriopedia-description/fusion-generator", "ar": "يستهلك البلازما من [entity=fusion-reactor] لتوليد الطاقة الكهربائية. إنتاج الطاقة ثابت، لكن يُستهلك قدر أقل من البلازما إذا كانت حرارتها أعلى. يُخرج مبرداً ساخناً بقدر البلازما المستهلكة، ويمكن تبريده في [entity=cryogenic-plant]. يمكن ربط مولدات الاندماج ببعضها لتتناقل البلازما."}
+{"module": "space-age", "key": "factoriopedia-description/fusion-reactor", "ar": "يستخدم مبرد الفلوروكيتون مع خلايا طاقة الاندماج لإنتاج بلازما فائقة الحرارة. لا يمكن إخراجها إلا مباشرة إلى [entity=fusion-generator]. مكافأة الجوار مع مفاعلات الاندماج الأخرى ترفع حرارة البلازما كثيراً دون زيادة كمية المبرد المستخدم."}
+{"module": "space-age", "key": "fluid-description/fusion-plasma", "ar": "أيونات فائقة الحرارة تتولد في [entity=fusion-reactor] ويستهلكها [entity=fusion-generator]. ليست سائلاً عادياً ولا يمكن نقلها في [entity=pipe]، بل تنتقل فقط عبر مفاعل الاندماج ومولد الاندماج.\\nتحدد حرارة البلازما قيمة طاقتها.\\nتمثل كمية البلازما أيضاً كمية المبرد المنتقل معها، ويُخرج مولد الاندماج المبرد الساخن عند استخدام البلازما للطاقة."}
+{"module": "space-age", "key": "fluid-description/thruster-fuel", "ar": "وقود الدافع السائل"}
+{"module": "space-age", "key": "gui-asteroid-collector/chunk-filter", "ar": "مرشح قطع الكويكبات"}
+{"module": "space-age", "key": "gui-asteroid-collector/chunk-filter-description", "ar": "عند ضبطه، لا يلتقط جامع الكويكبات إلا هذه القطع."}
+{"module": "space-age", "key": "gui-map-editor-instructions/asteroid-chunks-only-buildable-on-platforms", "ar": "لا يمكن بناء قطع الكويكبات إلا على منصات الفضاء."}
+{"module": "space-age", "key": "gui-rocket-silo/auto-launch-tooltip", "ar": "يطلق الصاروخ تلقائياً لمنصات الفضاء."}
+{"module": "space-age", "key": "item-description/artificial-jellynut-soil", "ar": "يجب وضعها فوق [tile=wetland-jellynut]."}
+{"module": "space-age", "key": "item-description/artificial-yumako-soil", "ar": "يجب وضعها فوق [tile=wetland-yumako]."}
+{"module": "space-age", "key": "item-description/bioflux", "ar": "مزيج مغذٍّ جداً من محاصيل غليبا. يمنح عند أكله دفعة من تجديد الصحة وسرعة الحركة معاً."}
+{"module": "space-age", "key": "item-description/capture-robot-rocket", "ar": "يتشبث بـ [entity=biter-spawner] المستهدف ويأسره فيحوله إلى [entity=captive-biter-spawner]."}
+{"module": "space-age", "key": "item-description/carbonic-asteroid-chunk", "ar": "قطعة كويكب غنية بالكربون."}
+{"module": "space-age", "key": "item-description/foundation", "ar": "أساس إنشائي هندسي بدرع حراري وركائز لولبية عميقة. يمكن وضعه على الحمم والمحيط النفطي ومعظم المياه."}
+{"module": "space-age", "key": "item-description/fusion-reactor-equipment", "ar": "يوفر الطاقة لوحدات المعدات."}
+{"module": "space-age", "key": "item-description/ice-platform", "ar": "منصة جليدية عائمة ثابتة للكواكب الباردة بما يكفي."}
+{"module": "space-age", "key": "item-description/jelly", "ar": "يمنح عند أكله دفعة من سرعة الحركة."}
+{"module": "space-age", "key": "item-description/jellynut", "ar": "محصول لزج قابل للزراعة. يمنح عند أكله دفعة من سرعة الحركة."}
+{"module": "space-age", "key": "item-description/jellynut-seed", "ar": "يمكن زراعتها في تربة جوز الهلام."}
+{"module": "space-age", "key": "item-description/metallic-asteroid-chunk", "ar": "قطعة كويكب غنية بالمعادن."}
+{"module": "space-age", "key": "item-description/overgrowth-jellynut-soil", "ar": "تربة لـ [entity=jellystem] يمكن وضعها في أي مكان في المنطقة الحيوية الحمراء."}
+{"module": "space-age", "key": "item-description/overgrowth-yumako-soil", "ar": "تربة لـ [entity=yumako-tree] يمكن وضعها في أي مكان في المنطقة الحيوية الخضراء."}
+{"module": "space-age", "key": "item-description/oxide-asteroid-chunk", "ar": "قطعة كويكب غنية بالأكسجين."}
+{"module": "space-age", "key": "item-description/promethium-asteroid-chunk", "ar": "قطعة كويكب لا توجد إلا عند الاقتراب من الكوكب المحطم."}
+{"module": "space-age", "key": "item-description/railgun-ammo", "ar": "تُستخدم لتفتيت حتى أكبر الكويكبات."}
+{"module": "space-age", "key": "item-description/space-platform-foundation", "ar": "يمكن وضعه في الفضاء لتوسيع منصات الفضاء الموجودة."}
+{"module": "space-age", "key": "item-description/space-platform-starter-pack", "ar": "تحتوي على كل ما يلزم لإنشاء أساس منصة الفضاء."}
+{"module": "space-age", "key": "item-description/space-science-pack", "ar": "تستخدمها المختبرات للبحث. يُحصل عليها بمعالجة الكويكبات في الفضاء."}
+{"module": "space-age", "key": "item-description/yumako", "ar": "محصول مغذٍّ قابل للزراعة. يمنح عند أكله دفعة من تجديد الصحة."}
+{"module": "space-age", "key": "item-description/yumako-mash", "ar": "يمنح عند أكله دفعة من تجديد الصحة."}
+{"module": "space-age", "key": "item-description/yumako-seed", "ar": "يمكن زراعتها في تربة يوماكو."}
+{"module": "space-age", "key": "mod-description/space-age", "ar": "السماء ليست الحد!"}
+{"module": "space-age", "key": "modifier-description/belt-stack-size-bonus", "ar": "سعة حزام النقل: +__1__"}
+{"module": "space-age", "key": "modifier-description/rail-support-on-deep-oil-ocean", "ar": "يسمح ببناء السكك الحديدية المرتفعة أيضاً فوق الأجزاء العميقة من المحيط النفطي."}
+{"module": "space-age", "key": "modifier-description/railgun-damage-bonus", "ar": "ضرر مدفع السكك الحديدية: +__1__"}
+{"module": "space-age", "key": "modifier-description/railgun-shooting-speed-bonus", "ar": "سرعة إطلاق مدفع السكك الحديدية: +__1__"}
+{"module": "space-age", "key": "modifier-description/tesla-damage-bonus", "ar": "ضرر تسلا: +__1__"}
+{"module": "space-age", "key": "noise-expression/aquilo_elevation", "ar": "ارتفاع أكويلو"}
+{"module": "space-age", "key": "noise-expression/fulgora_cliffiness", "ar": "كثافة أجراف فولغورا"}
+{"module": "space-age", "key": "noise-expression/fulgora_elevation", "ar": "ارتفاع فولغورا"}
+{"module": "space-age", "key": "noise-expression/gleba-plants", "ar": "نباتات غليبا"}
+{"module": "space-age", "key": "noise-expression/gleba_aux", "ar": "المساعد لغليبا"}
+{"module": "space-age", "key": "noise-expression/gleba_elevation", "ar": "ارتفاع غليبا"}
+{"module": "space-age", "key": "noise-expression/gleba_moisture", "ar": "رطوبة غليبا"}
+{"module": "space-age", "key": "noise-expression/gleba_temperature", "ar": "درجة حرارة غليبا"}
+{"module": "space-age", "key": "noise-expression/vulcanus_aux", "ar": "المساعد لفولكانوس"}
+{"module": "space-age", "key": "noise-expression/vulcanus_elevation", "ar": "ارتفاع فولكانوس"}
+{"module": "space-age", "key": "noise-expression/vulcanus_moisture", "ar": "رطوبة فولكانوس"}
+{"module": "space-age", "key": "noise-expression/vulcanus_temperature", "ar": "درجة حرارة فولكانوس"}
+{"module": "space-age", "key": "quality-tooltip/collection-area", "ar": "تزداد منطقة الجمع في الجودات الأعلى."}
+{"module": "space-age", "key": "quality-tooltip/collection-arm-count", "ar": "أذرع أكثر تجمع الكويكبات في الجودات الأعلى."}
+{"module": "space-age", "key": "quality-tooltip/collection-arm-max-speed", "ar": "تتحرك أذرع الجامع أسرع في الجودات الأعلى."}
+{"module": "space-age", "key": "quality-tooltip/collector-arm-storage-size", "ar": "تزداد سعة تخزين ذراع الجامع في الجودات الأعلى."}
+{"module": "space-age", "key": "quality-tooltip/storage-size", "ar": "تزداد سعة التخزين في الجودات الأعلى."}
+{"module": "space-age", "key": "recipe-description/ammonia-rocket-fuel", "ar": "استخدام مفيد للأمونيا."}
+{"module": "space-age", "key": "recipe-description/ammoniacal-solution-separation", "ar": "يُحصل على [fluid=ammoniacal-solution] بواسطة [entity=offshore-pump] في محيطات [planet=aquilo]."}
+{"module": "space-age", "key": "space-location-description/aquilo", "ar": "أرض قاحلة متجمدة بمحيطات من الأمونيا السائلة وفتحات للفلور. تتجمد المباني والأحزمة إن لم تُدفّأ بأنابيب نقل الحرارة المجاورة أو مبانٍ ساخنة أخرى."}
+{"module": "space-age", "key": "space-location-description/fulgora", "ar": "كوكب جاف تجتاحه الرياح، تضرب العواصف البرقية هضابه، وفيه محيطات نفطية يمكن عبورها بالسكك الحديدية المرتفعة.\\nيبدو أن فيه بعض الأطلال."}
+{"module": "space-age", "key": "space-location-description/gleba", "ar": "كوكب رطب كثير المستنقعات العميقة. يمكن للأراضي الرطبة أن تدعم الزراعة لكن البناء عليها صعب، ويمكن ردمها لكن الحجر نادر.\\nالتلال المتعرجة فيها حجر وأنسب للبناء، لكنها لا تدعم الزراعة."}
