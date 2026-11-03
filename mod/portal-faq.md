@@ -29,12 +29,44 @@
 **ظهرت «Couldn't get Steam auth ticket» في قائمة المودات؟**
 ليست من هذا المود. أغلق Steam كلياً وأعد فتحه.
 
+**أين أبلغ عن خطأ في الترجمة؟**
+افتح بلاغاً على [GitHub](https://github.com/F2lcon01/factorio01/issues) واكتب فيه النص الإنجليزي والترجمة العربية
+التي تقترحها، أو استعمل تبويب **Discussion** في هذه الصفحة.
+
 ## FAQ (English)
 
-**Letters still look disconnected?** Make sure the mod is enabled and the language is set to العربية, then restart the game.
+**I enabled the mod but the letters are still disconnected.**
+Check that the mod is enabled in **Mods** and that **Settings → Interface → Language** is set to **العربية**, then
+restart the game.
 
-**The language name "العربية" in the language list is unreadable / tutorial texts are disconnected?** Those live in the game's own files that no mod can reach. Run the language tool (Windows) and press Fix.
+**The language name "العربية" in the language list is unreadable.**
+That name lives in the game's own files, which no mod can change. Run the language tool and press **Fix**.
 
-**Does a game update break the mod?** No; the game only disables it when the major.minor version changes. Steam may restore the original tutorial files after an update: run the tool again.
+**The tutorials and the freeplay intro still show disconnected letters.**
+Those texts live inside the scenario files, which no mod can reach either. The language tool patches them with the
+fixed texts shipped inside this mod, after backing up the originals.
 
-**Windows SmartScreen warning?** The tool is not code-signed. Choose "More info" → "Run anyway". Its source and SHA256 checksums are on [GitHub](https://github.com/F2lcon01/factorio01).
+**Will a game update break the mod?**
+No. The game only disables a mod when the first two version numbers change (for example 2.1 → 2.2). Steam may restore
+the original tutorial files after an update or a file verification: run the tool again and press **Fix** if it appears.
+
+**How do I switch back to English?**
+In the tool, press **English**. Or in the game: **Settings → Interface → Language → English**.
+
+**Windows warns me when I run the tool.**
+The tool is not code-signed. Choose **More info → Run anyway**. Its source code is open on
+[GitHub](https://github.com/F2lcon01/factorio01), and the [releases page](https://github.com/F2lcon01/factorio01/releases/latest)
+lists SHA256 checksums of every file (`SHA256SUMS.txt`).
+
+**Does it work on Linux or macOS?**
+The mod does. The language tool is for Windows only; on other systems choose العربية in the game settings.
+
+**Does it affect my save files?**
+No. The mod does not change game data (checksum 0), and the tool never touches save files.
+
+**"Couldn't get Steam auth ticket" appears in the mod list.**
+It does not come from this mod. Close Steam completely and open it again.
+
+**Where do I report a mistake in the translation?**
+Open an issue on [GitHub](https://github.com/F2lcon01/factorio01/issues) with the English text and the Arabic you
+expected, or use the **Discussion** tab here.

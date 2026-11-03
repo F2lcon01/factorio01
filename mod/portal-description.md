@@ -63,22 +63,77 @@
 
 ## English
 
-A **complete** Arabic locale for Factorio 2.1 and **Space Age** (7,600 strings), plus the tutorial and scenario texts (691 strings) through the language tool.
+A **complete** Arabic translation of Factorio 2.1 and the **Space Age** expansion: menus and settings, items and
+buildings, technologies, tips and tricks, achievements and planets. **7,600 strings**, plus the tutorial and scenario
+texts (691 strings) through the language tool. The first image at the top of this page compares the two.
 
-- **Connected letters, right-to-left reading order.** The engine has no Arabic shaping or bidi support, so this mod ships the text pre-shaped (Arabic presentation forms) and pre-ordered.
-- **Long descriptions are pre-wrapped** so they read top-to-bottom (the engine's own wrapping reverses line order for RTL text).
-- Fills **2,410** strings missing from the official Arabic translation and fixes **392** (broken tokens, reversed lines, inconsistent terms). Unified glossary of 1,055 terms; Arabic plural forms.
-- Checked inside the game engine: no English left, no unshaped text.
+### Why this mod?
 
-**Enable:** Settings → Interface → Language → العربية.
+Factorio's text engine has no Arabic shaping and no right-to-left (bidi) support. Arabic letters change shape depending
+on their neighbours, and the engine draws every letter in its isolated form, so the Arabic translation that ships with
+the game shows disconnected letters, and many of its strings are still in English. This mod gives the engine text that
+is already shaped and ordered, so it displays correctly.
 
-**Arabic / English switcher (temporary, Windows):** shows the game and mod versions, "matching" or a one-click Fix, and patches the scenario/tutorial texts that no mod can reach. The portal does not allow scripts inside a mod, so the tool is downloaded from GitHub: [arabic-tools.zip](https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip); it reads the patched texts from this mod.
+| | Arabic shipped with the game | With this mod |
+|---|:-:|:-:|
+| Letters | disconnected | **connected** |
+| Long descriptions | line order reversed | **top to bottom** |
+| Strings still in English | 2,410 | **0** |
+| Strings with broken tokens, reversed lines or inconsistent terms | 392 | **fixed** |
+| Tutorials and scenarios | disconnected | **fixed by the language tool** |
 
-**Compatibility:** Factorio 2.1; mod version = game version; does not change game data (checksum 0); expansions optional. **Incompatible** with `zzz-arabic-shaper` (same purpose).
+### How it works
+
+- **Pre-shaped text.** Every string is converted to Arabic presentation forms (the connected letter shapes) and
+  reversed line by line, so the engine's left-to-right drawing shows it in the right reading order.
+- **Pre-wrapped long descriptions.** The engine's own line wrapping reverses line order for this text, so long
+  descriptions are wrapped in advance, measured in pixels against the game's tooltip width, and read top to bottom.
+- **Checked inside the game engine** with the game's own locale dump: no English left, no unshaped text.
+
+### Installation
+
+1. In the game: **Mods → Install →** search for `arabic-complete` **→ Install**.
+2. **Settings → Interface → Language → العربية**.
+3. Recommended: the language tool below, which fixes the language name "العربية" in the language list and the
+   tutorial texts.
+
+### Language tool (temporary, until an official Arabic release)
+
+A small Windows window with an **العربية** button and an **English** button. It shows the game version and the mod
+version, then either **"matching"** or a **Fix** button. Fix repairs the language name in the language list and the
+tutorial/scenario texts (which no mod can reach), enables the mod if it is disabled, and tells you when a newer
+release of this mod exists. The mod portal does not allow scripts inside a mod, so the tool is downloaded from GitHub;
+it reads the patched tutorial texts from this mod, so they always match the installed mod version.
+
+**Download:** [arabic-tools.zip](https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip)
+(or from the [releases page](https://github.com/F2lcon01/factorio01/releases/latest), with SHA256 checksums)
+
+1. Install this mod, then **close the game**.
+2. Download **arabic-tools.zip**, right-click it → **Extract All**.
+3. Open the folder and double-click **`Change-Language.cmd`**. If "Windows protected your PC" appears, choose
+   **More info → Run anyway**, then **Yes** for administrator rights.
+4. Choose **العربية** or **English**; if **Fix** appears, press it. Then start the game.
+
+Run the tool again after every game update. It backs up every file before changing it.
+
+### What is translated
+
+- All six modules: `core`, `base`, `space-age`, `quality`, `elevated-rails` and `recycler`. The expansions are
+  optional: the mod works with the base game alone.
+- A unified glossary of 1,055 terms. Planets: نوفيس (Nauvis), فولكانوس (Vulcanus), فولغورا (Fulgora),
+  غليبا (Gleba), أكويلو (Aquilo).
+- Arabic plural forms (singular, dual, plural), and Western digits 0-9 throughout.
+
+### Compatibility
+
+- Factorio **2.1**; the mod version follows the game version.
+- Does not change game data (checksum 0).
+- **Incompatible** with `zzz-arabic-shaper` (same purpose).
 
 **Limits no mod can lift:** text stays left-aligned; in-game search does not match Arabic input; chat text.
 
-Source, releases and issues: [github.com/F2lcon01/factorio01](https://github.com/F2lcon01/factorio01).
+**Source, releases and bug reports:** [GitHub](https://github.com/F2lcon01/factorio01) ·
+[report an issue](https://github.com/F2lcon01/factorio01/issues). More answers in the **FAQ** tab.
 
 ---
 Factorio's original text © Wube Software. Builds on the community Arabic translation from Factorio's Crowdin project; this mod's processing and new/corrected strings are MIT-licensed.
