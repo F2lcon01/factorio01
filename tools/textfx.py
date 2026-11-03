@@ -15,6 +15,7 @@ INLINE_RE = re.compile(INLINE)
 LTR = r"[A-Za-z0-9](?:[A-Za-z0-9 .,:/%+\-_'×]*[A-Za-z0-9%])?"
 UNIT_RE = re.compile(f'{INLINE}|{LTR}|.', re.S)
 MIRROR = dict(zip('()[]{}<>«»', ')(][}{><»«'))
+ARABIC_RE = re.compile(r'[؀-ۿﭐ-﷿ﹰ-﻿]')  # logical or presentation forms
 _RESHAPER = arabic_reshaper.ArabicReshaper(configuration={'delete_harakat': True})
 
 
@@ -56,6 +57,9 @@ def to_visual(logical, *, shape=True, wrap=None, measure=_visible_len):
     text = wrap_logical(logical, wrap, measure) if wrap and measure(logical) > wrap else logical
     lines = []
     for line in text.split(NL):
+        if not ARABIC_RE.search(line):  # pure Latin/number/token line reads left-to-right (official files agree)
+            lines.append(line)
+            continue
         if shape:
             line = _RESHAPER.reshape(HARAKAT_RE.sub('', line))
         parts = FORMAT_SPLIT.split(line)

@@ -1,0 +1,35 @@
+743 terms; 34 conflicts
+  CONFLICT crude oil: نفط الخام | نفط خام
+  CONFLICT diagonal: قطري | قُطري
+  CONFLICT fire: نار | حريق
+  CONFLICT explosion: انفجار | إنفجار
+  CONFLICT uranium ore: خام يورانيوم | يورانيوم خام
+  CONFLICT flamethrower turret: برج قاذف اللهب | نافث لهب
+  CONFLICT artillery turret: برج المدفعية | مدفع ثقيل
+  CONFLICT solar panel: لوح الطاقة الشمسية | لوحة الطاقة الشمسية
+  CONFLICT simple entity with force: كيان بسيط مع القوة | كائن بسيط ينتمي لفريق
+  CONFLICT simple entity with owner: كيان بسيط مع المالك | كائن بسيط ينتمي للاعب
+  CONFLICT infinity chest: الصدر انفينيتي | صندوق تزويد غير محدود
+  CONFLICT electric mining drill: حفار التنقيب الكهربائي | حفار كهربي
+  CONFLICT automation science pack: حزمة العلوم الأتممة | حُزْمَة علوم الأتمتة
+  CONFLICT production science pack: حزمة العلوم العلمية | حزمة العلوم الإنتاجية
+  CONFLICT advanced circuit: الدوائر المتقدمة | دائرة متقدمة
+  CONFLICT cliff explosives: متفجرات لإزالة الأجراف | متفجرات إزالة الأجراف
+  CONFLICT flamethrower: قاذف اللهب | نافث اللهب
+  CONFLICT modular armor: درع الوحدات | درع مُدمَج
+  CONFLICT gun turret: برج الرشاش الآلي | برج البندقية
+  CONFLICT gate: بوابة | البوابة
+  CONFLICT defender: المُدافع | المدافع
+  CONFLICT distractor: لافته للانتباه | مشتتة
+  CONFLICT destroyer: المدمرة | المدمر
+  CONFLICT rocket silo: منصة إطلاق الصاروخ | منصة صاروخ
+  CONFLICT personal laser defense: دفاع الليزر للشخصية | الصاعق الكهربائي الشخصي
+  CONFLICT personal roboport: روبوت شخصي | منصة آلات معمارية محمولة
+  CONFLICT personal roboport mk2: روبوت شخصي مستوى 2 | روبوت شخصي MK2
+  CONFLICT advanced oil processing: تكرير النفط المتقدم | معالجة النفط المتقدمة
+  CONFLICT battery: البطارية | بطارية
+  CONFLICT bulk inserter: ذراع آلي كبير | حجم اكبر = كميات اكبر
+  CONFLICT kovarex enrichment process: عملية تخصيب كوفاريكس | طريقة كوفاركس لتخصيب اليورانيوم
+  CONFLICT nuclear fuel reprocessing: إعادة معالجة الوقود النووي | معالجة الوقود النووي المستهلك
+  CONFLICT landfill: مكب النفايات | مردم
+  CONFLICT big fulgoran ruin: خراب فلغوران الكبير | أطلال فلغوران الكبرى

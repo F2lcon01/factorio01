@@ -1,0 +1,17 @@
+core:control-keys/backspace
+core:control-keys/tab
+core:control-keys/capslock
+core:control-keys/print-screen
+core:control-keys/numpad-slash
+core:control-keys/numpad-star
+core:control-keys/numpad-minus
+core:control-keys/numpad-plus
+core:control-keys/numpad-enter
+core:control-keys/sysrq
+core:gui-multiplayer-lobby/game-visibility-steam
+core:gui-multiplayer-lobby/game-visibility-LAN
+core:gui-control-settings/controller-icons-xbox
+core:gui-control-settings/controller-icons-steamdeck
+core:gui-control-settings/controller-icons-ps
+core:gui-control-settings/controller-icons-joycon
+core:gui-interface-settings/nintendo-switch

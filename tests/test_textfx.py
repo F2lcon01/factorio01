@@ -3,6 +3,12 @@ from tools.paths import GAME_DATA
 from tools.textfx import NL, from_visual, to_visual, wrap_logical
 
 
+def test_lines_without_arabic_are_left_as_is():
+    assert to_visual('Numpad /') == 'Numpad /'
+    assert to_visual('__1__/__2__') == '__1__/__2__'
+    assert to_visual('Steam\\nنص', shape=False) == 'Steam\\nصن'
+
+
 def test_sentence_reversed_period_moves_left_digits_kept():
     assert to_visual('بناء 100 جهاز.', shape=False) == '.زاهج 100 ءانب'
 
