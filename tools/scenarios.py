@@ -5,7 +5,7 @@ import hashlib, json, shutil, sys, time
 from pathlib import Path
 from tools.build import visual_value
 from tools.cfg import read_cfg, write_cfg
-from tools.import_official import classify
+from tools.import_official import classify, take_official
 from tools.lint import check_value
 from tools.paths import DIST, GAME_DATA, ROOT, WORK
 
@@ -67,13 +67,22 @@ def add_translations(rows):
     return rejected
 
 
-def build():
-    for rel, en_path, _ in en_files():
-        src = read_cfg(SRC_SC / rel)
-        missing = set(read_cfg(en_path)) - set(src)
-        if missing:
+def build(allow_missing=False):
+    """allow_missing (after a game update): keys we have not translated yet are taken from the game's own Arabic
+    when valid, otherwise left out so the game falls back to English for them."""
+    for rel, en_path, ar_path in en_files():
+        en = read_cfg(en_path)
+        src = read_cfg(SRC_SC / rel) if (SRC_SC / rel).exists() else {}
+        missing = set(en) - set(src)
+        if missing and not allow_missing:
             raise SystemExit(f'{rel}: {len(missing)} keys untranslated, e.g. {sorted(missing)[:3]}')
-        write_cfg(OUT_SC / rel, {k: visual_value(k, v) for k, v in src.items()}, list(read_cfg(en_path)))
+        if missing:
+            official = read_cfg(ar_path) if ar_path.exists() else {}
+            for k in missing:
+                logical = take_official(en[k], official.get(k))
+                if logical is not None:
+                    src[k] = logical
+        write_cfg(OUT_SC / rel, {k: visual_value(k, v) for k, v in src.items() if k in en}, list(en))
 
 
 def apply():
@@ -144,5 +153,7 @@ if __name__ == '__main__':
         for r in rej:
             print('  REJECTED', r['file'], r['key'], r['errors'])
         sys.exit(1 if rej else 0)
+    elif cmd == 'build':
+        print(build(allow_missing='--allow-missing' in sys.argv))
     else:
-        print({'build': build, 'apply': apply, 'restore': restore, 'status': status}[cmd]())
+        print({'apply': apply, 'restore': restore, 'status': status}[cmd]())

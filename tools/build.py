@@ -3,8 +3,21 @@ import json, re, shutil, sys
 from pathlib import Path
 from tools.cfg import read_cfg, write_cfg
 from tools.metrics import line_px
-from tools.paths import DIST, MODULES, ROOT, SRC, read_en
+from tools.paths import DIST, GAME_DATA, MODULES, ROOT, SRC, read_en
 from tools.textfx import to_visual
+
+
+def game_version() -> str:
+    """Installed game version, e.g. '2.1.24' (data/base/info.json)."""
+    return json.loads((GAME_DATA / 'base' / 'info.json').read_text(encoding='utf-8'))['version']
+
+
+def compat(info: dict, version: str) -> dict:
+    """The game disables a mod whose factorio_version (major.minor) differs from its own: follow the game."""
+    major_minor = '.'.join(version.split('.')[:2])
+    info['factorio_version'] = major_minor
+    info['dependencies'] = [re.sub(r'>= \d+\.\d+\.\d+', f'>= {major_minor}.0', d) for d in info['dependencies']]
+    return info
 
 WRAP = 460  # tools.metrics.line_px units; calibrated in-game against tooltip_label (reports/spike.md)
 WRAP_KEY_RE = re.compile(r'description|tooltip|tips-and-tricks|story|^/')  # multi-line places; '/' = root keys
@@ -27,6 +40,7 @@ def build(version: str, shape: bool = True, out_root: Path = DIST) -> Path:
         write_cfg(loc / f'{m}.cfg', vis, list(read_en(m)))
     info = json.loads((ROOT / 'mod' / 'info.json').read_text(encoding='utf-8'))
     info['version'] = version
+    compat(info, game_version())
     if not shape:
         info['name'] = name
     (mod / 'info.json').write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')

@@ -16,6 +16,15 @@ def classify(en, vis, allow_latin=False):
     return logical, (errs[0] if errs else None)
 
 
+def take_official(en, vis, allow_latin=False):
+    """The game's own Arabic (visual order) → normal text, or None when missing or defective.
+    Our shaped files are refused too (presentation forms are forbidden in the source)."""
+    if vis is None:
+        return None
+    logical, reason = classify(en, vis, allow_latin)
+    return None if reason else logical
+
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     todo, snap, counts, allow = [], {}, {}, _allow()

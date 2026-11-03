@@ -3,3 +3,5 @@ __pycache__/
 dist/
 reports/screens/
 backups/
+reports/auto-update.log
+work/state.json
