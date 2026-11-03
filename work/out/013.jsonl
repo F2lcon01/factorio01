@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-selector/select-highest-quality", "ar": "أعلى جودة"}
+{"module": "core", "key": "gui-selector/select-lowest-quality", "ar": "أدنى جودة"}
+{"module": "core", "key": "gui-selector/select-max", "ar": "ترتيب تنازلي"}
+{"module": "core", "key": "gui-selector/select-min", "ar": "ترتيب تصاعدي"}
+{"module": "core", "key": "gui-selector/select-sort-description", "ar": "رتّب إشارات الإدخال حسب العدد تصاعدياً/تنازلياً قبل تطبيق الفهرس."}
+{"module": "core", "key": "gui-selector/stack-size", "ar": "حجم الكومة"}
+{"module": "core", "key": "gui-selector/stack-size-description", "ar": "يُخرج حجم الكومة لإشارات الإدخال."}
+{"module": "core", "key": "gui-selector/time", "ar": "الوقت"}
+{"module": "core", "key": "gui-selector/time-description", "ar": "يُخرج تكة اللعبة، ووقت اليوم بالتكات، وعدد التكات المنقضية من اليوم الحالي."}
+{"module": "core", "key": "gui-side-menu/alerts-config", "ar": "إعدادات التنبيهات"}
+{"module": "core", "key": "gui-side-menu/blueprint-library-locked", "ar": "مكتبة المخططات غير ذات صلة بعد."}
+{"module": "core", "key": "gui-side-menu/bonuses-locked", "ar": "لم تُفتح أي مكافآت بعد."}
+{"module": "core", "key": "gui-side-menu/factoriopedia", "ar": "موسوعة فاكتوريو (__ALT_CONTROL__1__open-factoriopedia__ عند التمرير فوق كائن)"}
+{"module": "core", "key": "gui-side-menu/logistic-networks", "ar": "الشبكات اللوجستية (__CONTROL__logistic-networks__)"}
+{"module": "core", "key": "gui-side-menu/logistic-networks-locked", "ar": "لا توجد شبكات لوجستية."}
+{"module": "core", "key": "gui-side-menu/map", "ar": "الخريطة (__CONTROL__toggle-map__)\\n__CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + عجلة الفأرة__CONTROL_STYLE_END__ للتكبير والتصغير."}
+{"module": "core", "key": "gui-side-menu/master-mute-muted", "ar": "مكتوم"}
+{"module": "core", "key": "gui-side-menu/master-mute-no-audio", "ar": "لا يوجد صوت"}
+{"module": "core", "key": "gui-side-menu/master-mute-unmuted", "ar": "غير مكتوم"}
+{"module": "core", "key": "gui-side-menu/players", "ar": "اللاعبون"}
+{"module": "core", "key": "gui-side-menu/space-platforms", "ar": "منصات الفضاء"}
+{"module": "core", "key": "gui-side-menu/space-platforms-locked", "ar": "منصات الفضاء غير متاحة بعد."}
+{"module": "core", "key": "gui-side-menu/trains-locked", "ar": "لا توجد قطارات بعد."}
+{"module": "core", "key": "gui-sound-settings-description/environment-sounds-volume", "ar": "أصوات الآلات والمركبات."}
+{"module": "core", "key": "gui-sound-settings-description/preferred-audio-driver", "ar": "إذا لم يتوفر مشغل الصوت المفضل، فستُجرّب المشغلات بترتيب ظهورها."}
+{"module": "core", "key": "gui-sound-settings-description/slider-enabled", "ar": "تفعيل/تعطيل (كتم) كل أصوات هذه الفئة."}
+{"module": "core", "key": "gui-sound-settings-description/wind-volume", "ar": "الأصوات المحيطة العامة الدائمة وشبه الدائمة."}
+{"module": "core", "key": "gui-sound-settings-description/world-ambient-volume", "ar": "الأصوات المحيطة المحلية للكيانات والتضاريس."}
+{"module": "core", "key": "gui-sound-settings/alerts-volume", "ar": "التنبيهات"}
+{"module": "core", "key": "gui-sound-settings/default-device", "ar": "الجهاز الافتراضي"}
+{"module": "core", "key": "gui-sound-settings/enemies-volume", "ar": "الأعداء"}
+{"module": "core", "key": "gui-sound-settings/environment-sounds-volume", "ar": "البيئة"}
+{"module": "core", "key": "gui-sound-settings/explosions-volume", "ar": "الانفجارات"}
+{"module": "core", "key": "gui-sound-settings/game-effects-volume", "ar": "مؤثرات اللعبة"}
+{"module": "core", "key": "gui-sound-settings/gui-effects-volume", "ar": "مؤثرات الواجهة"}
+{"module": "core", "key": "gui-sound-settings/master-volume", "ar": "الرئيسي"}
+{"module": "core", "key": "gui-sound-settings/music-volume", "ar": "الموسيقى"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver", "ar": "مشغل الصوت المفضل"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-alsa", "ar": "ALSA"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-core-audio", "ar": "Core Audio"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-default", "ar": "افتراضي"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-direct-sound", "ar": "DirectSound"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-overridden-by-env", "ar": "متغير البيئة SDL_AUDIODRIVER مضبوط على \"__1__\"، وهو يتجاوز هذا الإعداد."}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-pipe-wire", "ar": "PipeWire"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-pulse-audio", "ar": "PulseAudio"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-wasapi", "ar": "WASAPI"}
+{"module": "core", "key": "gui-sound-settings/preferred-output", "ar": "المُخرج المفضل"}
+{"module": "core", "key": "gui-sound-settings/simulation-volume", "ar": "المحاكاة"}
+{"module": "core", "key": "gui-sound-settings/title", "ar": "إعدادات الصوت"}
+{"module": "core", "key": "gui-sound-settings/walking-sound-volume", "ar": "المشي"}
+{"module": "core", "key": "gui-sound-settings/weapons-volume", "ar": "الأسلحة"}
+{"module": "core", "key": "gui-sound-settings/wind-volume", "ar": "الرياح"}
+{"module": "core", "key": "gui-sound-settings/world-ambient-volume", "ar": "الأصوات المحيطة"}
+{"module": "core", "key": "gui-space-locations/connections", "ar": "الاتصالات"}
+{"module": "core", "key": "gui-space-locations/contains", "ar": "يحتوي على"}
+{"module": "core", "key": "gui-space-locations/evolution-factor", "ar": "عامل التطور"}
+{"module": "core", "key": "gui-space-locations/overview", "ar": "نظرة عامة"}
+{"module": "core", "key": "gui-space-locations/planet-surface-not-generated", "ar": "لم يُولَّد سطح الكوكب"}
+{"module": "core", "key": "gui-space-locations/title", "ar": "خريطة الفضاء"}
+{"module": "core", "key": "gui-space-locations/view", "ar": "عرض"}
+{"module": "core", "key": "gui-space-platform/damage", "ar": "الضرر المتلقى"}
+{"module": "core", "key": "gui-space-platform/mass", "ar": "الكتلة"}
+{"module": "core", "key": "gui-space-platform/speed", "ar": "السرعة"}
+{"module": "core", "key": "gui-space-platform/thrust", "ar": "الدفع"}
+{"module": "core", "key": "gui-space-platforms/cancel-delete", "ar": "إلغاء الحذف"}
+{"module": "core", "key": "gui-space-platforms/cant-delete-platform", "ar": "لا يمكن حذف منصات الفضاء وعلى متنها ركاب."}
+{"module": "core", "key": "gui-space-platforms/confirm-deletion-with-undo", "ar": "هل أنت متأكد من حذف منصة الفضاء هذه؟\\nستتمكن من التراجع عن هذا الإجراء خلال __1__."}
+{"module": "core", "key": "gui-space-platforms/confirm-deletion-without-undo", "ar": "هل أنت متأكد من حذف منصة الفضاء هذه؟\\nلا يمكنك التراجع عن هذا الإجراء."}
+{"module": "core", "key": "gui-space-platforms/create", "ar": "إنشاء"}
+{"module": "core", "key": "gui-space-platforms/delete", "ar": "حذف منصة الفضاء"}
+{"module": "core", "key": "gui-space-platforms/delete-this-platform", "ar": "حذف منصة الفضاء هذه"}
+{"module": "core", "key": "gui-space-platforms/overview", "ar": "نظرة عامة"}
+{"module": "core", "key": "gui-space-platforms/space-platform-not-created-yet", "ar": "لم تُبنَ منصة الفضاء بعد. يجب أن يوصل صاروخ [color=green][item=space-platform-starter-pack] __ITEM__space-platform-starter-pack__[/color] أولاً."}
+{"module": "core", "key": "gui-space-platforms/space-platform-starter-pack-requested", "ar": "طُلبت حزمة البداية لهذه المنصة."}
+{"module": "core", "key": "gui-space-platforms/space-platform-waiting-for-deliver-of-starter-pack", "ar": "حزمة البداية لهذه المنصة في الطريق."}
+{"module": "core", "key": "gui-space-platforms/stopped-at", "ar": "متوقفة عند __1__"}
+{"module": "core", "key": "gui-space-platforms/title", "ar": "منصات الفضاء"}
+{"module": "core", "key": "gui-space-platforms/view", "ar": "عرض"}
+{"module": "core", "key": "gui-space/allow-providing-to-other-platforms", "ar": "تزويد المنصات الأخرى بالمواد"}
+{"module": "core", "key": "gui-space/allow-providing-to-other-platforms-tooltip", "ar": "السماح لهذه المنصة بتزويد المنصات الأخرى في المدار بالمواد."}
+{"module": "core", "key": "gui-space/construction-materials", "ar": "مواد البناء"}
+{"module": "core", "key": "gui-space/construction-materials-tooltip", "ar": "المواد المستخدمة للبناء على منصة الفضاء."}
+{"module": "core", "key": "gui-space/logistic-materials", "ar": "المواد اللوجستية"}
+{"module": "core", "key": "gui-space/logistic-materials-tooltip", "ar": "المواد المستخدمة للخدمات اللوجستية على منصة الفضاء."}
+{"module": "core", "key": "gui-space/not-requestable-to-hub", "ar": "لا يمكن توصيل __1__ إلى المركز."}
+{"module": "core", "key": "gui-space/open-electric-network", "ar": "إظهار الشبكة الكهربائية"}
+{"module": "core", "key": "gui-space/request-missing-construction-materials", "ar": "الطلب التلقائي لمواد البناء الناقصة."}
+{"module": "core", "key": "gui-starmap/choose-space-platform", "ar": "اختر منصة الفضاء"}
+{"module": "core", "key": "gui-surface-list/new-space-platform-button", "ar": "+ إضافة منصة فضاء"}
+{"module": "core", "key": "gui-tag-edit/last-user", "ar": "آخر مستخدم: __1__"}
+{"module": "core", "key": "gui-tag-edit/move-tooltip", "ar": "نقل هذه العلامة إلى موقع جديد"}
+{"module": "core", "key": "gui-technology-preview/editor-research-tooltip", "ar": "(محرر الخرائط) __CONTROL_LEFT_CLICK__ للبحث. __CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + __CONTROL_STYLE_END____CONTROL_LEFT_CLICK__ للبحث الفوري مع كل المتطلبات المسبقة."}
+{"module": "core", "key": "gui-technology-preview/enqueue-research", "ar": "إضافة البحث إلى قائمة الانتظار"}
+{"module": "core", "key": "gui-technology-preview/productivity-blocked", "ar": "الإنتاجية لا تنطبق."}
+{"module": "core", "key": "gui-technology-preview/productivity-blocked-description", "ar": "لن يستفيد البحث في هذه التقنية من مكافآت الإنتاجية التي تمنحها التقنيات الأخرى."}
+{"module": "core", "key": "gui-technology-preview/researched-by-action", "ar": "تُبحث هذه التقنية بتنفيذ إجراء تحدده التقنية."}
+{"module": "core", "key": "gui-technology-preview/researched-by-lab", "ar": "يُضبط البحث بواسطة مختبر"}
+{"module": "core", "key": "gui-technology-preview/unit-research-trigger-requirements", "ar": "تُبحث بواسطة"}
+{"module": "core", "key": "gui-technology-queue/cannot-move-backwards-already-at-back", "ar": "موجودة في الخلف بالفعل."}
+{"module": "core", "key": "gui-technology-queue/cannot-move-because-of-prerequisite", "ar": "لا يمكن النقل بسبب المتطلبات المسبقة."}
+{"module": "core", "key": "gui-technology-queue/cannot-move-invalid-index", "ar": "موضع غير صالح في قائمة الانتظار."}
+{"module": "core", "key": "gui-technology-queue/cannot-move-same-position", "ar": "موجودة في ذلك الموضع بالفعل."}
+{"module": "core", "key": "gui-technology-queue/move-backwards", "ar": "نقل للخلف"}
+{"module": "core", "key": "gui-technology-queue/move-forwards", "ar": "نقل للأمام"}
+{"module": "core", "key": "gui-technology/cannot-enqueue-trigger-technologies", "ar": "لا يمكن إضافة تقنيات الإجراءات إلى قائمة الانتظار."}
+{"module": "core", "key": "gui-technology/cannot-select-trigger-technologies", "ar": "لا يمكن اختيار تقنيات الإجراءات."}
+{"module": "core", "key": "gui-technology/show-only-essential", "ar": "إظهار التقنيات الأساسية فقط"}
+{"module": "core", "key": "gui-technology/technologies-omitted", "ar": "__1__ __plural_for_parameter__1__{1=تقنية أُخفيت|2=تقنيتان أُخفيتا|rest=تقنيات أُخفيت}__ من هذا العرض."}
+{"module": "core", "key": "gui-text-tags/contains-blueprints", "ar": "يحتوي على __1__ __plural_for_parameter__1__{1=مخطط|2=مخططان|rest=مخططات}__"}
+{"module": "core", "key": "gui-text-tags/following-text-asteroid-chunk", "ar": " [قطعة كويكب: __1__]"}
+{"module": "core", "key": "gui-text-tags/following-text-entity-with-quality", "ar": " [كيان: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-fluid-with-quality", "ar": " [سائل: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-item-with-quality", "ar": " [عنصر: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-planet", "ar": " [كوكب: __1__]"}
+{"module": "core", "key": "gui-text-tags/following-text-planet-with-quality", "ar": " [كوكب: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-quality", "ar": " [جودة: __1__]"}
+{"module": "core", "key": "gui-text-tags/following-text-quality-with-quality", "ar": " [جودة: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-recipe-with-quality", "ar": " [وصفة: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-shortcut", "ar": " [اختصار: __1__]"}
+{"module": "core", "key": "gui-text-tags/following-text-space-location", "ar": " [موقع فضائي: __1__]"}

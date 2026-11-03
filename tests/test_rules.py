@@ -16,6 +16,11 @@ def test_plural_already_following_rule_or_other_shapes_untouched():
     assert normalize(other) == other
 
 
+def test_plural_phrases_with_parameters_are_left_alone():
+    s = '__plural_for_parameter__1__{1=المحطة معطلة|2=المحطتان معطلتان|rest=كل المحطات الـ __1__ معطلة}__.'
+    assert normalize(s) == s
+
+
 def test_tooltip_tag_visible_text_may_be_translated_but_key_must_stay():
     en = 'See [tooltip=Provider chests,tips-and-tricks-item-description.storage-chest-list].'
     assert check_value(en, 'انظر [tooltip=صناديق المزود,tips-and-tricks-item-description.storage-chest-list].') == []

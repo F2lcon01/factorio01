@@ -16,3 +16,9 @@ core:gui-control-settings/controller-icons-ps
 core:gui-control-settings/controller-icons-joycon
 core:gui-interface-settings/nintendo-switch
 core:gui-graphics-settings/linux-preferred-video-driver-wayland
+core:gui-sound-settings/preferred-audio-driver-alsa
+core:gui-sound-settings/preferred-audio-driver-core-audio
+core:gui-sound-settings/preferred-audio-driver-direct-sound
+core:gui-sound-settings/preferred-audio-driver-pipe-wire
+core:gui-sound-settings/preferred-audio-driver-pulse-audio
+core:gui-sound-settings/preferred-audio-driver-wasapi

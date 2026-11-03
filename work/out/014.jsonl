@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-text-tags/following-text-space-location-with-quality", "ar": " [موقع فضائي: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-space-platform-no-name", "ar": " [منصة فضاء]"}
+{"module": "core", "key": "gui-text-tags/following-text-space-platform-with-name", "ar": " [منصة فضاء: __1__]"}
+{"module": "core", "key": "gui-text-tags/following-text-tip", "ar": " [نصيحة: __1__]"}
+{"module": "core", "key": "gui-text-tags/following-text-virtual-signal-with-quality", "ar": " [إشارة افتراضية: __1__ __2__]"}
+{"module": "core", "key": "gui-text-tags/following-text-wrong-tip-name", "ar": " [لا توجد نصيحة باسم __1__]"}
+{"module": "core", "key": "gui-text-tags/gps-invalid-platform", "ar": "حُددت منصة فضاء غير صالحة"}
+{"module": "core", "key": "gui-tips-and-tricks/cheat-mode", "ar": "فُعّل وضع الغش، لن تظهر نصائح جديدة في ملف الحفظ هذا."}
+{"module": "core", "key": "gui-tips-and-tricks/mark-as-unread", "ar": "تعليم كغير مقروء"}
+{"module": "core", "key": "gui-tips-and-tricks/new-tip", "ar": "نصيحة جديدة:"}
+{"module": "core", "key": "gui-tips-and-tricks/not-a-freeplay", "ar": "تظهر النصائح الجديدة فقط في سيناريوهات اللعب الحر أو الدروس التعليمية."}
+{"module": "core", "key": "gui-tips-and-tricks/nothing-selected", "ar": "لم تُحدد أي نصائح وحيل"}
+{"module": "core", "key": "gui-train-state/destination-full", "ar": "[img=utility/destination_full_icon] الوجهة ممتلئة __1__"}
+{"module": "core", "key": "gui-train-state/heading-to", "ar": "متجه إلى __1__ __REMARK_COLOR_BEGIN__[__2__ م]__REMARK_COLOR_END__"}
+{"module": "core", "key": "gui-train-state/manually-stopped", "ar": "[img=utility/warning_icon] متوقف يدوياً"}
+{"module": "core", "key": "gui-train-state/no-path-to", "ar": "[img=utility/no_path_icon] لا يوجد مسار إلى __1__"}
+{"module": "core", "key": "gui-train-state/no-valid-stops", "ar": "[img=utility/warning_icon] لا توجد محطات صالحة"}
+{"module": "core", "key": "gui-train-stop/no-trains-on-the-way", "ar": "لا توجد قطارات في الطريق إلى هذه المحطة."}
+{"module": "core", "key": "gui-train-stop/no-trains-with-this-stop", "ar": "لا توجد قطارات تتضمن هذه المحطة."}
+{"module": "core", "key": "gui-train-stop/train-stop-priority", "ar": "الأولوية"}
+{"module": "core", "key": "gui-train-stop/train-stop-priority-tooltip", "ar": "تُخدم محطة القطار ذات الأولوية الأعلى أولاً.\\n(0 هي الأدنى، و255 الأعلى)"}
+{"module": "core", "key": "gui-train-stop/trains-on-the-way", "ar": "القطارات في الطريق"}
+{"module": "core", "key": "gui-train-stop/trains-with-this-stop", "ar": "القطارات التي تتضمن هذه المحطة"}
+{"module": "core", "key": "gui-train-wait-condition-description/all-requests-satisfied", "ar": "كل الطلبات مستوفاة"}
+{"module": "core", "key": "gui-train-wait-condition-description/any-planet-import-zero", "ar": "أي استيراد كوكبي صفر"}
+{"module": "core", "key": "gui-train-wait-condition-description/any-request-not-satisfied", "ar": "أي طلب غير مستوفى"}
+{"module": "core", "key": "gui-train-wait-condition-description/any-request-zero", "ar": "أي طلب صفر"}
+{"module": "core", "key": "gui-train-wait-condition-description/at-station", "ar": "عند __1__"}
+{"module": "core", "key": "gui-train-wait-condition-description/damage-taken", "ar": "الضرر المتلقى"}
+{"module": "core", "key": "gui-train-wait-condition-description/destination-full-or-no-path", "ar": "الوجهة ممتلئة أو لا يوجد مسار"}
+{"module": "core", "key": "gui-train-wait-condition-description/empty-item-id", "ar": "[ ]"}
+{"module": "core", "key": "gui-train-wait-condition-description/fuel-full", "ar": "كل رؤوس القطار ممتلئة بالوقود"}
+{"module": "core", "key": "gui-train-wait-condition-description/fuel-item-count", "ar": "الوقود: __1__ __2__ __3__"}
+{"module": "core", "key": "gui-train-wait-condition-description/inactivity-condition", "ar": "__1__ __plural_for_parameter__1__{1=ثانية|2=ثانيتان|rest=ثوان}__ من الخمول"}
+{"module": "core", "key": "gui-train-wait-condition-description/not-at-station", "ar": "ليس عند __1__"}
+{"module": "core", "key": "gui-train-wait-condition-description/not-empty-condition", "ar": "توجد حمولة في المخزون"}
+{"module": "core", "key": "gui-train-wait-condition-description/request-not-satisfied", "ar": "طلب غير مستوفى: __1__"}
+{"module": "core", "key": "gui-train-wait-condition-description/request-satisfied", "ar": "طلب مستوفى: __1__"}
+{"module": "core", "key": "gui-train-wait-condition-description/specific-destination-full", "ar": "__1__ ممتلئة"}
+{"module": "core", "key": "gui-train-wait-condition-description/specific-destination-not-full", "ar": "__1__ غير ممتلئة"}
+{"module": "core", "key": "gui-train-wait-condition-description/time-condition", "ar": "مرّت __1__ __plural_for_parameter__1__{1=ثانية|2=ثانيتان|rest=ثوان}__"}
+{"module": "core", "key": "gui-train/add-all-requests-satisfied-condition", "ar": "كل الطلبات مستوفاة"}
+{"module": "core", "key": "gui-train/add-any-planet-import-zero-condition", "ar": "أي استيراد كوكبي صفر"}
+{"module": "core", "key": "gui-train/add-any-request-not-satisfied-condition", "ar": "أي طلب غير مستوفى"}
+{"module": "core", "key": "gui-train/add-any-request-zero-condition", "ar": "أي طلب صفر"}
+{"module": "core", "key": "gui-train/add-at-station-condition", "ar": "عند المحطة المحددة"}
+{"module": "core", "key": "gui-train/add-damage-taken-condition", "ar": "الضرر المتلقى"}
+{"module": "core", "key": "gui-train/add-destination-full-or-no-path-condition", "ar": "الوجهة ممتلئة أو لا يوجد مسار"}
+{"module": "core", "key": "gui-train/add-fly-condition", "ar": "+ إضافة شرط طيران"}
+{"module": "core", "key": "gui-train/add-fuel-full-condition", "ar": "وقود ممتلئ"}
+{"module": "core", "key": "gui-train/add-fuel-item-count-all-condition", "ar": "الوقود (كل رؤوس القطار)"}
+{"module": "core", "key": "gui-train/add-fuel-item-count-any-condition", "ar": "الوقود (أي رأس قطار)"}
+{"module": "core", "key": "gui-train/add-interrupt", "ar": "+ إضافة مقاطعة"}
+{"module": "core", "key": "gui-train/add-interrupt-condition", "ar": "+ إضافة شرط مقاطعة"}
+{"module": "core", "key": "gui-train/add-interrupt-station", "ar": "+ إضافة محطة مقاطعة"}
+{"module": "core", "key": "gui-train/add-not-at-station-condition", "ar": "ليس عند المحطة المحددة"}
+{"module": "core", "key": "gui-train/add-not-empty-condition", "ar": "توجد حمولة"}
+{"module": "core", "key": "gui-train/add-request-not-satisfied-condition", "ar": "طلب غير مستوفى"}
+{"module": "core", "key": "gui-train/add-request-satisfied-condition", "ar": "طلب مستوفى"}
+{"module": "core", "key": "gui-train/add-specific-destination-full-condition", "ar": "المحطة ممتلئة"}
+{"module": "core", "key": "gui-train/add-specific-destination-not-full-condition", "ar": "المحطة غير ممتلئة"}
+{"module": "core", "key": "gui-train/add-station-title", "ar": "إضافة محطة"}
+{"module": "core", "key": "gui-train/add-temporary-station-title", "ar": "إضافة محطة مؤقتة"}
+{"module": "core", "key": "gui-train/cant-set-request-condition-not-requested", "ar": "لا يمكن ضبط العناصر غير المطلوبة."}
+{"module": "core", "key": "gui-train/change-station-title", "ar": "تغيير المحطة"}
+{"module": "core", "key": "gui-train/empty-train-group", "ar": "[لم تُعيّن مجموعة]"}
+{"module": "core", "key": "gui-train/fast-wait-condition-description", "ar": "__ALT_CONTROL__1__fast-wait-condition__ لإضافة شروط الانتظار بسرعة."}
+{"module": "core", "key": "gui-train/fuel-condition-all", "ar": "الوقود (الكل)"}
+{"module": "core", "key": "gui-train/fuel-condition-any", "ar": "الوقود (أي)"}
+{"module": "core", "key": "gui-train/interaction-1", "ar": "__CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__: إدراج محطة مؤقتة."}
+{"module": "core", "key": "gui-train/interaction-2", "ar": "__CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__: إضافة المحطة المحددة إلى الجدول."}
+{"module": "core", "key": "gui-train/no-station-specified", "ar": "(غير محدد)"}
+{"module": "core", "key": "gui-train/paused-mode", "ar": "دفع متوقف مؤقتاً"}
+{"module": "core", "key": "gui-train/request-not-satisfied-condition", "ar": "طلب غير مستوفى"}
+{"module": "core", "key": "gui-train/request-satisfied-condition", "ar": "طلب مستوفى"}
+{"module": "core", "key": "gui-train/station-partially-accessible", "ar": "يمكن الوصول إلى __1__ فقط من أصل __2__ محطات __plural_for_parameter__1__{1=متاحة|rest=متاحة}__."}
+{"module": "core", "key": "gui-train/stations-disabled", "ar": "__plural_for_parameter__1__{1=المحطة معطلة|2=المحطتان معطلتان|rest=كل المحطات الـ __1__ معطلة}__."}
+{"module": "core", "key": "gui-train/stations-not-accessible", "ar": "__plural_for_parameter__1__{0=لا يمكن الوصول إلى أي محطة|1=لا يمكن الوصول إلى المحطة|2=لا يمكن الوصول إلى المحطتين|rest=لا يمكن الوصول إلى كل المحطات الـ __1__}__ من الموضع الحالي."}
+{"module": "core", "key": "gui-train/train-group", "ar": "مجموعة القطار"}
+{"module": "core", "key": "gui-train/train-group-note", "ar": "القطار ضمن مجموعة"}
+{"module": "core", "key": "gui-train/train-group-note-tooltip", "ar": "ستُطبق أي تغييرات على هذا الجدول على كل القطارات في مجموعة القطار (مع تجاهل المحطات المؤقتة)."}
+{"module": "core", "key": "gui-train/trains-in-this-group", "ar": "عدد القطارات في مجموعة القطار هذه."}
+{"module": "core", "key": "gui-train/unload", "ar": "تفريغ"}
+{"module": "core", "key": "gui-train/unload-description", "ar": "السماح بتفريغ الحمولة في هذه المحطة."}
+{"module": "core", "key": "gui-train/use-train-stop-color", "ar": "استخدام لون محطة القطار الوجهة"}
+{"module": "core", "key": "gui-train/use-train-stop-color-tooltip", "ar": "سينسخ القطار لونه من محطة القطار الوجهة، ويُحدّث في كل مرة يغادر فيها القطار محطة."}
+{"module": "core", "key": "gui-train/when", "ar": "عندما:"}
+{"module": "core", "key": "gui-trains/groups-tab", "ar": "المجموعات"}
+{"module": "core", "key": "gui-turret/priority-ignore-unlisted", "ar": "تجاهل الأهداف غير المدرجة"}
+{"module": "core", "key": "gui-turret/priority-ignore-unlisted-description", "ar": "عند التفعيل، لن تُستهدف أبداً الأهداف غير الموجودة في قائمة الأولويات. وإلا فستأتي بعد كل الأهداف المدرجة."}
+{"module": "core", "key": "gui-turret/priority-list", "ar": "أولويات الأهداف"}
+{"module": "core", "key": "gui-turret/priority-list-description", "ar": "يحدد ترتيباً صريحاً لاختيار الأهداف إذا كان عدة منها في المدى."}
+{"module": "core", "key": "gui-undelete-space-platforms/no-deleted-platforms", "ar": "لا توجد منصات محذوفة"}
+{"module": "core", "key": "gui-undelete-space-platforms/platform-name", "ar": "اسم المنصة"}
+{"module": "core", "key": "gui-undelete-space-platforms/removed-by", "ar": "حذفها"}
+{"module": "core", "key": "gui-undelete-space-platforms/time-until-final-removal", "ar": "الوقت حتى الحذف النهائي"}
+{"module": "core", "key": "gui-undelete-space-platforms/title", "ar": "المنصات المحذوفة"}
+{"module": "core", "key": "gui-undo-action/add-wires-header", "ar": "التراجع عن إضافة"}
+{"module": "core", "key": "gui-undo-action/build-entities-header", "ar": "التراجع عن بناء"}
+{"module": "core", "key": "gui-undo-action/build-tiles-header", "ar": "التراجع عن وضع"}
+{"module": "core", "key": "gui-undo-action/copy-entity-settings-header", "ar": "التراجع عن نسخ الإعدادات إلى"}
+{"module": "core", "key": "gui-undo-action/entities-remainder", "ar": "+__1__ __plural_for_parameter__1__{1=كيان آخر|2=كيانان آخران|rest=كيانات أخرى}__"}
+{"module": "core", "key": "gui-undo-action/install-modules-header", "ar": "التراجع عن تركيب"}
+{"module": "core", "key": "gui-undo-action/line", "ar": "__1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-action/modules-remainder", "ar": "+__1__ __plural_for_parameter__1__{1=وحدة أخرى|2=وحدتان أخريان|rest=وحدات أخرى}__"}
+{"module": "core", "key": "gui-undo-action/remove-entities-header", "ar": "التراجع عن تفكيك"}
+{"module": "core", "key": "gui-undo-action/remove-tiles-header", "ar": "التراجع عن إزالة"}
+{"module": "core", "key": "gui-undo-action/remove-wires-header", "ar": "التراجع عن إزالة"}
+{"module": "core", "key": "gui-undo-action/rotate-entity-header", "ar": "التراجع عن تدوير"}
+{"module": "core", "key": "gui-undo-action/surfaces", "ar": "__plural_for_parameter__1__{1=السطح|rest=الأسطح}__: __2__"}
+{"module": "core", "key": "gui-undo-action/tiles-remainder", "ar": "+__1__ __plural_for_parameter__1__{1=بلاطة أخرى|2=بلاطتان أخريان|rest=بلاطات أخرى}__"}
+{"module": "core", "key": "gui-undo-action/uninstall-modules-header", "ar": "التراجع عن فك"}
+{"module": "core", "key": "gui-undo-action/upgrade-entities-header", "ar": "التراجع عن ترقية"}
+{"module": "core", "key": "gui-undo-action/wires-remainder", "ar": "+__1__ __plural_for_parameter__1__{1=سلك آخر|2=سلكان آخران|rest=أسلاك أخرى}__"}
+{"module": "core", "key": "gui-undo-confirmation/are-you-sure", "ar": "هل أنت متأكد من التراجع عن إجراء نُفذ قبل __1__؟\\n\\n__2__"}
+{"module": "core", "key": "gui-undo-confirmation/confirm-undo", "ar": "تراجع"}
+{"module": "core", "key": "gui-undo-redo-wire-type/copper", "ar": "نحاسي"}
+{"module": "core", "key": "gui-undo-redo-wire-type/green", "ar": "أخضر"}
+{"module": "core", "key": "gui-undo-redo-wire-type/red", "ar": "أحمر"}
+{"module": "core", "key": "gui-undo-tooltip/multiple-surfaces-single-line", "ar": "__1__ على عدة أسطح"}

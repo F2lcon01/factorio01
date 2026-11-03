@@ -10,8 +10,8 @@ BLOCK = re.compile(r'(__plural_for_parameter__\d+__\{)([^}]*)(\}__)')
 
 def _fix(m):
     forms = [f.partition('=') for f in m.group(2).split('|')]
-    if [c for c, _, _ in forms] != ['1', '2', 'rest']:
-        return m.group(0)
+    if [c for c, _, _ in forms] != ['1', '2', 'rest'] or any('__' in t for _, _, t in forms):
+        return m.group(0)  # other shapes, or whole phrases with parameters (not a counted noun): keep as written
     one, two, many = (t for _, _, t in forms)
     body = '|'.join([f'1={one}', f'2={two}'] + [f'{n}={many}' for n in range(3, 11)] + [f'rest={one}'])
     return m.group(1) + body + m.group(3)

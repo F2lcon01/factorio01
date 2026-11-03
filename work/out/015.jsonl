@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-undo-tooltip/single-surface-single-line", "ar": "__1__ على __2__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-heterogeneous", "ar": "التراجع عن إضافة __1__ أسلاك"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-homogeneous", "ar": "التراجع عن إضافة __1__ أسلاك (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-single", "ar": "التراجع عن إضافة سلك __1__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-entity-heterogeneous", "ar": "التراجع عن بناء __1__ كيانات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-entity-homogeneous", "ar": "التراجع عن بناء __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-tile-heterogeneous", "ar": "التراجع عن وضع __1__ بلاطات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-tile-homogeneous", "ar": "التراجع عن وضع __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-heterogeneous", "ar": "التراجع عن نسخ الإعدادات إلى __1__ كيانات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-homogeneous", "ar": "التراجع عن نسخ الإعدادات إلى __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-single", "ar": "التراجع عن نسخ الإعدادات إلى __1__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-heterogeneous", "ar": "التراجع عن تركيب __1__ وحدات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-homogeneous", "ar": "التراجع عن تركيب __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-single", "ar": "التراجع عن تركيب __1__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-remove-module-heterogeneous", "ar": "التراجع عن إزالة __1__ وحدات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-remove-module-homogeneous", "ar": "التراجع عن إزالة __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-remove-module-single", "ar": "التراجع عن إزالة __1__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-entity-heterogeneous", "ar": "التراجع عن تفكيك __1__ كيانات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-entity-homogeneous", "ar": "التراجع عن تفكيك __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-tile-heterogeneous", "ar": "التراجع عن إزالة __1__ بلاطات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-tile-homogeneous", "ar": "التراجع عن إزالة __1__ (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-wire-heterogeneous", "ar": "التراجع عن إزالة __1__ أسلاك"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-wire-homogeneous", "ar": "التراجع عن إزالة __1__ أسلاك (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-removed-wire-single", "ar": "التراجع عن إزالة سلك __1__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-rotated-entity-heterogeneous", "ar": "التراجع عن تدوير __1__ كيانات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-rotated-entity-homogeneous", "ar": "التراجع عن تدوير __1__ كيانات (× __2__)"}
+{"module": "core", "key": "gui-undo-tooltip/undo-rotated-entity-single", "ar": "التراجع عن تدوير __1__"}
+{"module": "core", "key": "gui-undo-tooltip/undo-upgraded-entity-heterogeneous", "ar": "التراجع عن ترقية __1__ كيانات"}
+{"module": "core", "key": "gui-undo-tooltip/undo-upgraded-entity-homogeneous", "ar": "التراجع عن ترقية __1__ (× __2__)"}
+{"module": "core", "key": "gui-update/updates-available-instructions1", "ar": "التحديثات التالية متاحة"}
+{"module": "core", "key": "gui-update/updates-available-instructions2", "ar": "قد يستغرق التحديث وقتاً طويلاً. يُرجى الصبر."}
+{"module": "core", "key": "gui-upgrade/entity-filter", "ar": "مرشح الكيانات"}
+{"module": "core", "key": "gui-upgrade/entity-filter-description", "ar": "نوع الآلة المراد ترقية وحداتها."}
+{"module": "core", "key": "gui-upgrade/entity-settings", "ar": "إعدادات الكيان"}
+{"module": "core", "key": "gui-upgrade/module-limit", "ar": "حد العدد"}
+{"module": "core", "key": "gui-upgrade/module-limit-description", "ar": "أقصى عدد من الوحدات من هذا النوع في آلة واحدة."}
+{"module": "core", "key": "gui-upgrade/module-settings", "ar": "إعدادات الوحدات"}
+{"module": "core", "key": "gui-upgrade/module-slots", "ar": "خانات الوحدات"}
+{"module": "core", "key": "gui-upgrade/module-slots-description", "ar": "اضبط الوحدات المركّبة في الكيان المُرقّى."}
+{"module": "core", "key": "gui-user-login/log-in-required", "ar": "يتطلب هذا الإصدار من اللعبة تسجيل الدخول."}
+{"module": "core", "key": "gui/all-merged", "ar": "الكل (مدمج)"}
+{"module": "core", "key": "gui/all-separate", "ar": "الكل (منفصل)"}
+{"module": "core", "key": "gui/automated-insertion-limit", "ar": "حد الإدخال الآلي"}
+{"module": "core", "key": "gui/back-instruction", "ar": "رجوع (__CONTROL__back__)"}
+{"module": "core", "key": "gui/base", "ar": "القاعدة"}
+{"module": "core", "key": "gui/blueprint-include-fuel", "ar": "وقود المركبات"}
+{"module": "core", "key": "gui/blueprint-include-vehicles", "ar": "المركبات"}
+{"module": "core", "key": "gui/blueprint-include-vehicles-tooltip", "ar": "تضمين المركبات (عدا القطارات) في المخطط"}
+{"module": "core", "key": "gui/blueprint-is-buildability-rule-inconsistent", "ar": "في المخطط تعارض في قواعد قابلية البناء على البلاط."}
+{"module": "core", "key": "gui/blueprint-memory-usage-estimate", "ar": "تقدير استخدام الذاكرة"}
+{"module": "core", "key": "gui/blueprint-preview-hint-generic", "ar": "__CONTROL_RIGHT_CLICK__ للإزالة، __CONTROL_LEFT_CLICK__ للاستعادة."}
+{"module": "core", "key": "gui/blueprint-preview-hint-specific", "ar": "__CONTROL__mine__ للإزالة، __CONTROL__build__ للاستعادة."}
+{"module": "core", "key": "gui/checking-map-consistency", "ar": "التحقق من الاتساق __1__"}
+{"module": "core", "key": "gui/confirm-load-game-fix", "ar": "التحميل والإصلاح"}
+{"module": "core", "key": "gui/confirm-load-game-fix-tooltip", "ar": "يحاول إصلاح ملفات الحفظ غير الخاصة بعصر الفضاء لتندمج بشكل أفضل مع تدرج عصر الفضاء."}
+{"module": "core", "key": "gui/confirm-load-game-settings-changed", "ar": "أُزيلت مودات أو تغيرت إعداداتها.\\nهل أنت متأكد من متابعة تحميل ملف الحفظ هذا؟"}
+{"module": "core", "key": "gui/confirm-load-non-space-age-in-space-age", "ar": "يُنصح بشدة ببدء ملف حفظ جديد عند لعب عصر الفضاء.\\nيقدم عصر الفضاء تغييرات كثيرة في التقنيات والإيقاع، ومع أن تحميل ملفات الحفظ والمتابعة فيه ممكن، فلن تكون التجربة المقصودة.\\nهل أنت متأكد من متابعة تحميل ملف الحفظ هذا؟"}
+{"module": "core", "key": "gui/controlled-by-circuit-network", "ar": "يتحكم فيه الدارة الكهربائية"}
+{"module": "core", "key": "gui/controlled-by-missing-construction-materials", "ar": "طلبات للبناء"}
+{"module": "core", "key": "gui/controlled-by-transitional-requests", "ar": "الطلبات التلقائية من منصات الفضاء"}
+{"module": "core", "key": "gui/controlled-by-transitional-requests-tooltip", "ar": "اطلب الإمدادات تلقائياً من الشبكة اللوجستية المحلية لتلبية طلبات منصات الفضاء في المدار."}
+{"module": "core", "key": "gui/entity-equipment-grid", "ar": "شبكة معدات __1__"}
+{"module": "core", "key": "gui/food", "ar": "الطعام"}
+{"module": "core", "key": "gui/forward-instruction", "ar": "تقدم (__CONTROL__forward__)"}
+{"module": "core", "key": "gui/game-type", "ar": "نوع اللعبة"}
+{"module": "core", "key": "gui/ghost-cursor-selection", "ar": "اختيار مؤشر الشبح"}
+{"module": "core", "key": "gui/ingredient-quality", "ar": "جودة المكونات"}
+{"module": "core", "key": "gui/instruction-to-alt-select-spiders", "ar": "__1__ واسحب للإضافة إلى السبايدرترونات المحددة."}
+{"module": "core", "key": "gui/instruction-to-deselect-spiders", "ar": "__1__ واسحب للإزالة من السبايدرترونات المحددة."}
+{"module": "core", "key": "gui/instruction-to-inverse-cancel-deconstruct", "ar": "__1__ واسحب لإلغاء التفكيك بمرشح معكوس."}
+{"module": "core", "key": "gui/instruction-to-inverse-deconstruct", "ar": "__1__ واسحب للتفكيك بمرشح معكوس."}
+{"module": "core", "key": "gui/instruction-to-move", "ar": "__1__ للتحريك."}
+{"module": "core", "key": "gui/instruction-to-select-spiders", "ar": "__1__ واسحب لتحديد السبايدرترونات."}
+{"module": "core", "key": "gui/instruction-to-super-force-build", "ar": "__1__ لبناء المخطط بالبناء الإجباري الفائق. يضع التضاريس تلقائياً ويعلّم الكيانات المتصادمة للتفكيك."}
+{"module": "core", "key": "gui/left-click-to-center-on-train", "ar": "انقر بالزر الأيسر للتمركز على القطار"}
+{"module": "core", "key": "gui/not-in-orbital-network", "ar": "ليس في الشبكة المدارية"}
+{"module": "core", "key": "gui/nutrients", "ar": "المغذيات"}
+{"module": "core", "key": "gui/occupied", "ar": "__1__ (مشغول)"}
+{"module": "core", "key": "gui/parametrise-blueprint-tooltip", "ar": "تحويل المخطط إلى عوامل/إعادة ضبطه."}
+{"module": "core", "key": "gui/pin", "ar": "تثبيت"}
+{"module": "core", "key": "gui/pin-search-result", "ar": "تثبيت نتيجة البحث هذه."}
+{"module": "core", "key": "gui/recipe-has-no-quality", "ar": "__1__ لا يدعم الجودة."}
+{"module": "core", "key": "gui/recipe-with-no-item-ingredients-has-no-quality", "ar": "__1__ ليس له مكونات عناصر، لذا فهو لا يدعم الجودة."}
+{"module": "core", "key": "gui/refresh", "ar": "تحديث"}
+{"module": "core", "key": "gui/request-from-planet", "ar": "الطلب من الكوكب"}
+{"module": "core", "key": "gui/reset-consumption-filters", "ar": "إعادة ضبط المرشحات"}
+{"module": "core", "key": "gui/reset-storage-filters", "ar": "إعادة ضبط المرشحات"}
+{"module": "core", "key": "gui/right-click-to-center-on-target-stop", "ar": "انقر بالزر الأيمن للتمركز على المحطة التي يتعذر الوصول إليها."}
+{"module": "core", "key": "gui/rocket-cargo-description", "ar": "العناصر المسموح بها"}
+{"module": "core", "key": "gui/select-icon", "ar": "اختر أيقونة"}
+{"module": "core", "key": "gui/select-platform-to-launch-rocket", "ar": "اختر منصة الفضاء"}
+{"module": "core", "key": "gui/set-constant", "ar": "ضبط الثابت"}
+{"module": "core", "key": "gui/set-ghost-cursor", "ar": "ضبط مؤشر الشبح"}
+{"module": "core", "key": "gui/setting-up-entities", "ar": "تشغيل إعداد الكيانات __1__"}
+{"module": "core", "key": "gui/show-universe-statistics", "ar": "إحصاءات الكون"}
+{"module": "core", "key": "gui/space-age", "ar": "عصر الفضاء"}
+{"module": "core", "key": "gui/space-trash-slot", "ar": "العناصر هنا ستسقط إلى سطح الكوكب الذي في مداره.\\nاستخدم __CONTROL__stack-transfer__ أو __CONTROL__inventory-transfer__ لنقل العناصر إلى هنا يدوياً."}
+{"module": "core", "key": "gui/space-usage-mb", "ar": "المساحة المستخدمة: __1__ ميغابايت / __2__ ميغابايت"}
+{"module": "core", "key": "gui/special-signal-has-no-quality", "ar": "__1__ لا يدعم الجودة."}
+{"module": "core", "key": "ini-parse-error/missing-value", "ar": "قيمة مفقودة عند __1__:__2__"}
+{"module": "core", "key": "inventory-restriction/cant-be-smelted_until", "ar": "لا يمكن صهر __1__ حتى يُبحث __2__."}
+{"module": "core", "key": "inventory-restriction/cant-insert-module", "ar": "لا يمكن استخدام __1__ في __2__."}
+{"module": "core", "key": "inventory-restriction/cant-insert-partially-spoiled", "ar": "لا يمكن إدخال عناصر تالفة جزئياً في هذه الخانة."}
+{"module": "core", "key": "inventory-restriction/cant-plant", "ar": "لا يمكن زراعة __1__."}
+{"module": "core", "key": "item-limitation/item-not-allowed-in-this-container-item", "ar": "يُمنع وضع هذا العنصر في عنصر الحاوية هذا."}
+{"module": "core", "key": "item-limitation/productivity-effect", "ar": "لا يمكن استخدام الوحدة الإنتاجية إلا على المنتجات المتوسطة."}
+{"module": "core", "key": "item-limitation/quality-effect", "ar": "لا يمكن استخدام وحدات الجودة على هذه الوصفة."}
+{"module": "core", "key": "json-parse-error/invalid-utf16-low-surrogate", "ar": "بديل UTF-16 منخفض غير صالح في محارف الهروب لسلسلة JSON عند __1__:__2__"}
+{"module": "core", "key": "json-parse-error/unexpected-utf16-low-surrogate", "ar": "بديل UTF-16 منخفض غير متوقع في محارف الهروب لسلسلة JSON عند __1__:__2__"}
+{"module": "core", "key": "lua-profiler/elapsed", "ar": "المنقضي: __1__ مللي ثانية"}
+{"module": "core", "key": "modifier-description/change-recipe-productivity", "ar": "إنتاجية __1__: __2__"}
+{"module": "core", "key": "modifier-description/cliff-deconstruction-enabled", "ar": "يسمح لمخطط التفكك ومخطط السكك والبناء الإجباري بتعليم الأجراف للتفكيك."}
+{"module": "core", "key": "modifier-description/mining-with-fluid", "ar": "يسمح باستخدام السوائل في حفارات التنقيب."}
+{"module": "core", "key": "modifier-description/space-location-discovery", "ar": "يكتشف الموقع __1__."}
+{"module": "core", "key": "modifier-description/unlock-circuit-network", "ar": "يفتح الدارة الكهربائية."}
+{"module": "core", "key": "modifier-description/unlock-quality", "ar": "يفتح الجودة __1__."}
+{"module": "core", "key": "modifier-description/unlock-space-platforms", "ar": "يفتح منصات الفضاء."}
+{"module": "core", "key": "modifier-description/unlock-travel-to-space-platforms", "ar": "يتيح للاعب السفر إلى منصات الفضاء بالصاروخ."}
+{"module": "core", "key": "modifier-description/vehicle-logistics", "ar": "يفتح لوجستيات المركبات."}
+{"module": "core", "key": "multiplayer/address-in-use", "ar": "المنفذ المحلي __1__ قيد الاستخدام بالفعل.\\nقد يكون السبب نسخة أخرى من Factorio، أو برنامجاً آخر يستخدم هذا المنفذ."}

@@ -1,0 +1,120 @@
+gui-text-tags/following-text-space-location-with-quality= [موقع فضائي: __1__ __2__]
+gui-text-tags/following-text-space-platform-no-name= [منصة فضاء]
+gui-text-tags/following-text-space-platform-with-name= [منصة فضاء: __1__]
+gui-text-tags/following-text-tip= [نصيحة: __1__]
+gui-text-tags/following-text-virtual-signal-with-quality= [إشارة افتراضية: __1__ __2__]
+gui-text-tags/following-text-wrong-tip-name= [لا توجد نصيحة باسم __1__]
+gui-text-tags/gps-invalid-platform=حُددت منصة فضاء غير صالحة
+gui-tips-and-tricks/cheat-mode=فُعّل وضع الغش، لن تظهر نصائح جديدة في ملف الحفظ هذا.
+gui-tips-and-tricks/mark-as-unread=تعليم كغير مقروء
+gui-tips-and-tricks/new-tip=نصيحة جديدة:
+gui-tips-and-tricks/not-a-freeplay=تظهر النصائح الجديدة فقط في سيناريوهات اللعب الحر أو الدروس التعليمية.
+gui-tips-and-tricks/nothing-selected=لم تُحدد أي نصائح وحيل
+gui-train-state/destination-full=[img=utility/destination_full_icon] الوجهة ممتلئة __1__
+gui-train-state/heading-to=متجه إلى __1__ __REMARK_COLOR_BEGIN__[__2__ م]__REMARK_COLOR_END__
+gui-train-state/manually-stopped=[img=utility/warning_icon] متوقف يدوياً
+gui-train-state/no-path-to=[img=utility/no_path_icon] لا يوجد مسار إلى __1__
+gui-train-state/no-valid-stops=[img=utility/warning_icon] لا توجد محطات صالحة
+gui-train-stop/no-trains-on-the-way=لا توجد قطارات في الطريق إلى هذه المحطة.
+gui-train-stop/no-trains-with-this-stop=لا توجد قطارات تتضمن هذه المحطة.
+gui-train-stop/train-stop-priority=الأولوية
+gui-train-stop/train-stop-priority-tooltip=تُخدم محطة القطار ذات الأولوية الأعلى أولاً.\n(0 هي الأدنى، و255 الأعلى)
+gui-train-stop/trains-on-the-way=القطارات في الطريق
+gui-train-stop/trains-with-this-stop=القطارات التي تتضمن هذه المحطة
+gui-train-wait-condition-description/all-requests-satisfied=كل الطلبات مستوفاة
+gui-train-wait-condition-description/any-planet-import-zero=أي استيراد كوكبي صفر
+gui-train-wait-condition-description/any-request-not-satisfied=أي طلب غير مستوفى
+gui-train-wait-condition-description/any-request-zero=أي طلب صفر
+gui-train-wait-condition-description/at-station=عند __1__
+gui-train-wait-condition-description/damage-taken=الضرر المتلقى
+gui-train-wait-condition-description/destination-full-or-no-path=الوجهة ممتلئة أو لا يوجد مسار
+gui-train-wait-condition-description/empty-item-id=[ ]
+gui-train-wait-condition-description/fuel-full=كل رؤوس القطار ممتلئة بالوقود
+gui-train-wait-condition-description/fuel-item-count=الوقود: __1__ __2__ __3__
+gui-train-wait-condition-description/inactivity-condition=__1__ __plural_for_parameter__1__{1=ثانية|2=ثانيتان|rest=ثوان}__ من الخمول
+gui-train-wait-condition-description/not-at-station=ليس عند __1__
+gui-train-wait-condition-description/not-empty-condition=توجد حمولة في المخزون
+gui-train-wait-condition-description/request-not-satisfied=طلب غير مستوفى: __1__
+gui-train-wait-condition-description/request-satisfied=طلب مستوفى: __1__
+gui-train-wait-condition-description/specific-destination-full=__1__ ممتلئة
+gui-train-wait-condition-description/specific-destination-not-full=__1__ غير ممتلئة
+gui-train-wait-condition-description/time-condition=مرّت __1__ __plural_for_parameter__1__{1=ثانية|2=ثانيتان|rest=ثوان}__
+gui-train/add-all-requests-satisfied-condition=كل الطلبات مستوفاة
+gui-train/add-any-planet-import-zero-condition=أي استيراد كوكبي صفر
+gui-train/add-any-request-not-satisfied-condition=أي طلب غير مستوفى
+gui-train/add-any-request-zero-condition=أي طلب صفر
+gui-train/add-at-station-condition=عند المحطة المحددة
+gui-train/add-damage-taken-condition=الضرر المتلقى
+gui-train/add-destination-full-or-no-path-condition=الوجهة ممتلئة أو لا يوجد مسار
+gui-train/add-fly-condition=+ إضافة شرط طيران
+gui-train/add-fuel-full-condition=وقود ممتلئ
+gui-train/add-fuel-item-count-all-condition=الوقود (كل رؤوس القطار)
+gui-train/add-fuel-item-count-any-condition=الوقود (أي رأس قطار)
+gui-train/add-interrupt=+ إضافة مقاطعة
+gui-train/add-interrupt-condition=+ إضافة شرط مقاطعة
+gui-train/add-interrupt-station=+ إضافة محطة مقاطعة
+gui-train/add-not-at-station-condition=ليس عند المحطة المحددة
+gui-train/add-not-empty-condition=توجد حمولة
+gui-train/add-request-not-satisfied-condition=طلب غير مستوفى
+gui-train/add-request-satisfied-condition=طلب مستوفى
+gui-train/add-specific-destination-full-condition=المحطة ممتلئة
+gui-train/add-specific-destination-not-full-condition=المحطة غير ممتلئة
+gui-train/add-station-title=إضافة محطة
+gui-train/add-temporary-station-title=إضافة محطة مؤقتة
+gui-train/cant-set-request-condition-not-requested=لا يمكن ضبط العناصر غير المطلوبة.
+gui-train/change-station-title=تغيير المحطة
+gui-train/empty-train-group=[لم تُعيّن مجموعة]
+gui-train/fast-wait-condition-description=__ALT_CONTROL__1__fast-wait-condition__ لإضافة شروط الانتظار بسرعة.
+gui-train/fuel-condition-all=الوقود (الكل)
+gui-train/fuel-condition-any=الوقود (أي)
+gui-train/interaction-1=__CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__: إدراج محطة مؤقتة.
+gui-train/interaction-2=__CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__: إضافة المحطة المحددة إلى الجدول.
+gui-train/no-station-specified=(غير محدد)
+gui-train/paused-mode=دفع متوقف مؤقتاً
+gui-train/request-not-satisfied-condition=طلب غير مستوفى
+gui-train/request-satisfied-condition=طلب مستوفى
+gui-train/station-partially-accessible=يمكن الوصول إلى __1__ فقط من أصل __2__ محطات __plural_for_parameter__1__{1=متاحة|rest=متاحة}__.
+gui-train/stations-disabled=__plural_for_parameter__1__{1=المحطة معطلة|2=المحطتان معطلتان|rest=كل المحطات الـ __1__ معطلة}__.
+gui-train/stations-not-accessible=__plural_for_parameter__1__{0=لا يمكن الوصول إلى أي محطة|1=لا يمكن الوصول إلى المحطة|2=لا يمكن الوصول إلى المحطتين|rest=لا يمكن الوصول إلى كل المحطات الـ __1__}__ من الموضع الحالي.
+gui-train/train-group=مجموعة القطار
+gui-train/train-group-note=القطار ضمن مجموعة
+gui-train/train-group-note-tooltip=ستُطبق أي تغييرات على هذا الجدول على كل القطارات في مجموعة القطار (مع تجاهل المحطات المؤقتة).
+gui-train/trains-in-this-group=عدد القطارات في مجموعة القطار هذه.
+gui-train/unload=تفريغ
+gui-train/unload-description=السماح بتفريغ الحمولة في هذه المحطة.
+gui-train/use-train-stop-color=استخدام لون محطة القطار الوجهة
+gui-train/use-train-stop-color-tooltip=سينسخ القطار لونه من محطة القطار الوجهة، ويُحدّث في كل مرة يغادر فيها القطار محطة.
+gui-train/when=عندما:
+gui-trains/groups-tab=المجموعات
+gui-turret/priority-ignore-unlisted=تجاهل الأهداف غير المدرجة
+gui-turret/priority-ignore-unlisted-description=عند التفعيل، لن تُستهدف أبداً الأهداف غير الموجودة في قائمة الأولويات. وإلا فستأتي بعد كل الأهداف المدرجة.
+gui-turret/priority-list=أولويات الأهداف
+gui-turret/priority-list-description=يحدد ترتيباً صريحاً لاختيار الأهداف إذا كان عدة منها في المدى.
+gui-undelete-space-platforms/no-deleted-platforms=لا توجد منصات محذوفة
+gui-undelete-space-platforms/platform-name=اسم المنصة
+gui-undelete-space-platforms/removed-by=حذفها
+gui-undelete-space-platforms/time-until-final-removal=الوقت حتى الحذف النهائي
+gui-undelete-space-platforms/title=المنصات المحذوفة
+gui-undo-action/add-wires-header=التراجع عن إضافة
+gui-undo-action/build-entities-header=التراجع عن بناء
+gui-undo-action/build-tiles-header=التراجع عن وضع
+gui-undo-action/copy-entity-settings-header=التراجع عن نسخ الإعدادات إلى
+gui-undo-action/entities-remainder=+__1__ __plural_for_parameter__1__{1=كيان آخر|2=كيانان آخران|rest=كيانات أخرى}__
+gui-undo-action/install-modules-header=التراجع عن تركيب
+gui-undo-action/line=__1__ (× __2__)
+gui-undo-action/modules-remainder=+__1__ __plural_for_parameter__1__{1=وحدة أخرى|2=وحدتان أخريان|rest=وحدات أخرى}__
+gui-undo-action/remove-entities-header=التراجع عن تفكيك
+gui-undo-action/remove-tiles-header=التراجع عن إزالة
+gui-undo-action/remove-wires-header=التراجع عن إزالة
+gui-undo-action/rotate-entity-header=التراجع عن تدوير
+gui-undo-action/surfaces=__plural_for_parameter__1__{1=السطح|rest=الأسطح}__: __2__
+gui-undo-action/tiles-remainder=+__1__ __plural_for_parameter__1__{1=بلاطة أخرى|2=بلاطتان أخريان|rest=بلاطات أخرى}__
+gui-undo-action/uninstall-modules-header=التراجع عن فك
+gui-undo-action/upgrade-entities-header=التراجع عن ترقية
+gui-undo-action/wires-remainder=+__1__ __plural_for_parameter__1__{1=سلك آخر|2=سلكان آخران|rest=أسلاك أخرى}__
+gui-undo-confirmation/are-you-sure=هل أنت متأكد من التراجع عن إجراء نُفذ قبل __1__؟\n\n__2__
+gui-undo-confirmation/confirm-undo=تراجع
+gui-undo-redo-wire-type/copper=نحاسي
+gui-undo-redo-wire-type/green=أخضر
+gui-undo-redo-wire-type/red=أحمر
+gui-undo-tooltip/multiple-surfaces-single-line=__1__ على عدة أسطح

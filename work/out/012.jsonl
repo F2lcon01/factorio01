@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-redo-action/copy-entity-settings-header", "ar": "إعادة نسخ الإعدادات إلى"}
+{"module": "core", "key": "gui-redo-action/install-modules-header", "ar": "إعادة تركيب"}
+{"module": "core", "key": "gui-redo-action/remove-entities-header", "ar": "إعادة تفكيك"}
+{"module": "core", "key": "gui-redo-action/remove-tiles-header", "ar": "إعادة إزالة"}
+{"module": "core", "key": "gui-redo-action/remove-wires-header", "ar": "إعادة إزالة"}
+{"module": "core", "key": "gui-redo-action/rotate-entity-header", "ar": "إعادة تدوير"}
+{"module": "core", "key": "gui-redo-action/uninstall-modules-header", "ar": "إعادة فك"}
+{"module": "core", "key": "gui-redo-action/upgrade-entities-header", "ar": "إعادة ترقية"}
+{"module": "core", "key": "gui-redo-confirmation/are-you-sure", "ar": "هل أنت متأكد من إعادة إجراء نُفذ قبل __1__؟\\n\\n__2__"}
+{"module": "core", "key": "gui-redo-confirmation/confirm-redo", "ar": "إعادة"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-heterogeneous", "ar": "إعادة إضافة __1__ أسلاك"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-homogeneous", "ar": "إعادة إضافة __1__ أسلاك (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-single", "ar": "إعادة إضافة سلك __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-heterogeneous", "ar": "إعادة بناء __1__ كيانات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-homogeneous", "ar": "إعادة بناء __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-single", "ar": "إعادة بناء __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-tile-heterogeneous", "ar": "إعادة وضع __1__ بلاطات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-tile-homogeneous", "ar": "إعادة وضع __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-tile-single", "ar": "إعادة وضع __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-copy-entity-settings-heterogeneous", "ar": "إعادة نسخ الإعدادات إلى __1__ كيانات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-copy-entity-settings-homogeneous", "ar": "إعادة نسخ الإعدادات إلى __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-copy-entity-settings-single", "ar": "إعادة نسخ الإعدادات إلى __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-install-module-heterogeneous", "ar": "إعادة تركيب __1__ وحدات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-install-module-homogeneous", "ar": "إعادة تركيب __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-install-module-single", "ar": "إعادة تركيب __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-remove-module-heterogeneous", "ar": "إعادة إزالة __1__ وحدات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-remove-module-homogeneous", "ar": "إعادة إزالة __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-remove-module-single", "ar": "إعادة إزالة __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-entity-heterogeneous", "ar": "إعادة تفكيك __1__ كيانات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-entity-homogeneous", "ar": "إعادة تفكيك __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-entity-single", "ar": "إعادة تفكيك __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-tile-heterogeneous", "ar": "إعادة إزالة __1__ بلاطات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-tile-homogeneous", "ar": "إعادة إزالة __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-tile-single", "ar": "إعادة إزالة __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-wire-heterogeneous", "ar": "إعادة إزالة __1__ أسلاك"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-wire-homogeneous", "ar": "إعادة إزالة __1__ أسلاك (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-wire-single", "ar": "إعادة إزالة سلك __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-rotated-entity-heterogeneous", "ar": "إعادة تدوير __1__ كيانات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-rotated-entity-homogeneous", "ar": "إعادة تدوير __1__ كيانات (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-rotated-entity-single", "ar": "إعادة تدوير __1__"}
+{"module": "core", "key": "gui-redo-tooltip/redo-upgraded-entity-heterogeneous", "ar": "إعادة ترقية __1__ كيانات"}
+{"module": "core", "key": "gui-redo-tooltip/redo-upgraded-entity-homogeneous", "ar": "إعادة ترقية __1__ (× __2__)"}
+{"module": "core", "key": "gui-redo-tooltip/redo-upgraded-entity-single", "ar": "إعادة ترقية __1__"}
+{"module": "core", "key": "gui-remote-view/cancel", "ar": "إلغاء الهبوط على الكوكب"}
+{"module": "core", "key": "gui-remote-view/land-on-planet", "ar": "[img=entity/character] الهبوط إلى كوكب"}
+{"module": "core", "key": "gui-remote-view/land-on-planet-tooltip", "ar": "اختر كوكباً للهبوط إليه عندما تكون __1__ في مداره."}
+{"module": "core", "key": "gui-remote-view/landing-on-planet", "ar": "[img=entity/character] الهبوط إلى __1__"}
+{"module": "core", "key": "gui-remote-view/landing-on-planet-tooltip", "ar": "ستهبط إلى __1__ عندما تكون __2__ في مدار الكوكب."}
+{"module": "core", "key": "gui-remote-view/reset", "ar": "إعادة ضبط موضع العرض عن بُعد"}
+{"module": "core", "key": "gui-remote-view/select-a-planet", "ar": "اختر كوكباً للهبوط إليه"}
+{"module": "core", "key": "gui-remote-view/surfaces", "ar": "الأسطح"}
+{"module": "core", "key": "gui-rename/multiplier-tooltip", "ar": "يضاعف طلبات هذه المجموعة اللوجستية"}
+{"module": "core", "key": "gui-rename/perform-group-change", "ar": "تطبيق التغيير\\nاضغط مع الاستمرار على __CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__ أثناء التأكيد لإعادة تسمية المجموعة كاملة."}
+{"module": "core", "key": "gui-rename/perform-stop-change", "ar": "تطبيق التغيير\\nاضغط مع الاستمرار على __CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__ أثناء التأكيد لإعادة تسمية كل المحطات بهذا الاسم."}
+{"module": "core", "key": "gui-rename/perform-train-change", "ar": "تطبيق التغيير\\nاضغط مع الاستمرار على __CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__ أثناء التأكيد لإعادة تسمية المجموعة كاملة."}
+{"module": "core", "key": "gui-rename/rename-group", "ar": "تغيير المجموعة اللوجستية"}
+{"module": "core", "key": "gui-rename/rename-stop", "ar": "تغيير اسم المحطة"}
+{"module": "core", "key": "gui-rename/rename-train", "ar": "تغيير مجموعة القطار"}
+{"module": "core", "key": "gui-roboport/only-worker-robots", "ar": "لا يمكن طلب سوى الروبوتات العاملة."}
+{"module": "core", "key": "gui-roboport/robot-request", "ar": "طلبات الروبوتات"}
+{"module": "core", "key": "gui-roboport/robot-request-description", "ar": "يطلب روبوتات عاملة من مراكز الروبوتات الأخرى لتتمركز في مركز الروبوتات هذا."}
+{"module": "core", "key": "gui-rocket-silo/assembly-tab", "ar": "التجميع"}
+{"module": "core", "key": "gui-rocket-silo/cannot-launch-not-enough-space-in-hub", "ar": "لا يمكن تسليم الشحنة لعدم وجود مساحة كافية في مركز المنصة."}
+{"module": "core", "key": "gui-rocket-silo/cant-insert-into-rocket-silo-when-not-sendable-to-space", "ar": "لا فائدة من إرسال __1__ إلى المدار."}
+{"module": "core", "key": "gui-rocket-silo/cant-insert-into-rocket-silo-with-automated-delivery", "ar": "لا يمكن إدخال الشحنة يدوياً أثناء تفعيل 'الطلبات التلقائية من منصات الفضاء'."}
+{"module": "core", "key": "gui-rocket-silo/cant-send-empty-rocket", "ar": "لا يمكن إرسال صاروخ فارغ."}
+{"module": "core", "key": "gui-rocket-silo/cant-travel-remotely", "ar": "لا يمكن السفر إلى الفضاء أثناء استخدام العرض عن بُعد."}
+{"module": "core", "key": "gui-rocket-silo/cant-travel-with-items", "ar": "لا يمكن السفر إلى الفضاء ومعك عناصر في مخزونك أو خانات المهملات أو خانات الذخيرة. (يُسمح بالدروع والأسلحة فقط.)"}
+{"module": "core", "key": "gui-rocket-silo/cargo-delivery-unit-is-not-ready", "ar": "وحدة الشحن غير جاهزة."}
+{"module": "core", "key": "gui-rocket-silo/deliver-cargo", "ar": "تسليم الشحنة"}
+{"module": "core", "key": "gui-rocket-silo/empty-rocket", "ar": "مخزون الصاروخ فارغ."}
+{"module": "core", "key": "gui-rocket-silo/frozen-rocket", "ar": "آلية إطلاق الصاروخ متجمدة."}
+{"module": "core", "key": "gui-rocket-silo/no-available-landing-pad", "ar": "لا توجد منصة هبوط حمولة متاحة."}
+{"module": "core", "key": "gui-rocket-silo/no-cargo-landing-pad-built", "ar": "لم تُبنَ منصة هبوط حمولة على هذا الكوكب."}
+{"module": "core", "key": "gui-rocket-silo/no-landing-pad-nor-platform", "ar": "لا توجد منصة هبوط حمولة لاستلام نتائج الإطلاق، ولا منصة فضاء في المدار لإرسال هذه الشحنة إليها."}
+{"module": "core", "key": "gui-rocket-silo/no-space-in-landing-pad", "ar": "لا توجد مساحة في منصة هبوط الحمولة."}
+{"module": "core", "key": "gui-rocket-silo/no-valid-destination-platforms", "ar": "لا توجد منصات فضاء في المدار حالياً."}
+{"module": "core", "key": "gui-rocket-silo/platform-needs-starter-pack", "ar": "لم تُبنَ منصة الفضاء __1__ بعد."}
+{"module": "core", "key": "gui-rocket-silo/rocket-capacity-used", "ar": "استخدام سعة الصاروخ"}
+{"module": "core", "key": "gui-rocket-silo/rocket-is-not-ready", "ar": "الصاروخ غير جاهز."}
+{"module": "core", "key": "gui-rocket-silo/rocket-needs-destination", "ar": "لا يمكن إطلاق الصاروخ دون منصة فضاء وجهة."}
+{"module": "core", "key": "gui-rocket-silo/rocket-tab", "ar": "الصاروخ"}
+{"module": "core", "key": "gui-rocket-silo/select-space-platform", "ar": "اختر وجهة الصاروخ"}
+{"module": "core", "key": "gui-rocket-silo/send-to-orbit-automatically", "ar": "الإرسال إلى المدار تلقائياً"}
+{"module": "core", "key": "gui-rocket-silo/send-to-orbit-automatically-tooltip", "ar": "عندما يحتوي مخزون الصاروخ على عنصر له نواتج إطلاق (مثل [color=green]__1__[/color])، سيُرسل إلى المدار تلقائياً."}
+{"module": "core", "key": "gui-rocket-silo/sending-this-payload-to-orbit-is-useless", "ar": "لا فائدة من إرسال هذه الحمولة إلى المدار."}
+{"module": "core", "key": "gui-rocket-silo/space-platform-button", "ar": "بناء منصة فضاء جديدة"}
+{"module": "core", "key": "gui-rocket-silo/space-platform-button-tooltip-disabled", "ar": "يجب أن يحتوي مخزون الصاروخ على [color=green][item=space-platform-starter-pack] __ITEM__space-platform-starter-pack__[/color] واحدة، أو أن تكون 'الطلبات التلقائية من منصات الفضاء' مفعّلة، لإنشاء منصة فضاء جديدة."}
+{"module": "core", "key": "gui-rocket-silo/travel-to-space", "ar": "[img=entity/character] السفر إلى منصة الفضاء"}
+{"module": "core", "key": "gui-rocket-silo/travel-to-space-platforms-locked", "ar": "غير متاح بعد.\\nاكتشف كوكباً عبر البحث لفتح القفل."}
+{"module": "core", "key": "gui-save-game/cant-save-over-autosaves", "ar": "يُرجى اختيار اسم حفظ مختلف.\\nملفات الحفظ التلقائي محجوزة للحفظ التلقائي وسيُكتب فوقها في عمليات الحفظ التلقائي القادمة."}
+{"module": "core", "key": "gui-save-game/confirm-overwrite-time-warning", "ar": "تحذير: ملف الحفظ المحدد فيه __1__ __plural_for_parameter__1__{1=ساعة|2=ساعتان|rest=ساعات}__ من وقت اللعب!"}
+{"module": "core", "key": "gui-select-upgrade-planner/instructions", "ar": "__CONTROL_LEFT_CLICK__ للتطبيق كترقية، __CONTROL_RIGHT_CLICK__ للتطبيق كتخفيض."}
+{"module": "core", "key": "gui-selector/count", "ar": "عدّ المُدخلات"}
+{"module": "core", "key": "gui-selector/count-description", "ar": "يُخرج عدد إشارات الإدخال المميزة."}
+{"module": "core", "key": "gui-selector/count-output", "ar": "إشارة مُخرج العدّ"}
+{"module": "core", "key": "gui-selector/day-length", "ar": "طول اليوم"}
+{"module": "core", "key": "gui-selector/day-tick", "ar": "تكة اليوم"}
+{"module": "core", "key": "gui-selector/disabled", "ar": " [معطّل]"}
+{"module": "core", "key": "gui-selector/feature-disabled", "ar": "الميزة معطّلة"}
+{"module": "core", "key": "gui-selector/feature-disabled-tooltip", "ar": "الميزة المطلوبة لهذه العملية غير مفعّلة، لذا فهذا الخيار بلا فائدة."}
+{"module": "core", "key": "gui-selector/game-tick", "ar": "تكة اللعبة"}
+{"module": "core", "key": "gui-selector/index", "ar": "الفهرس"}
+{"module": "core", "key": "gui-selector/quality-destination", "ar": "الإشارة المستهدفة"}
+{"module": "core", "key": "gui-selector/quality-filter", "ar": "مرشح الجودة"}
+{"module": "core", "key": "gui-selector/quality-filter-description", "ar": "يُخرج كل إشارات الإدخال التي تجتاز مرشح الجودة."}
+{"module": "core", "key": "gui-selector/quality-select", "ar": "اختيار الجودة"}
+{"module": "core", "key": "gui-selector/quality-select-description", "ar": "لكل إشارة إدخال، تمر فقط الإشارة ذات الجودة الأعلى أو الأدنى."}
+{"module": "core", "key": "gui-selector/quality-source-signal", "ar": "الاختيار من إشارة"}
+{"module": "core", "key": "gui-selector/quality-source-signal-description", "ar": "يبحث عن الإشارة المحددة في المُدخلات، ويختار أعلى جودة بين الإشارات الموجودة."}
+{"module": "core", "key": "gui-selector/quality-source-static", "ar": "اختيار مباشر"}
+{"module": "core", "key": "gui-selector/quality-transfer", "ar": "نقل الجودة"}
+{"module": "core", "key": "gui-selector/quality-transfer-description", "ar": "يُخرج الإشارة المستهدفة بالجودة المحددة وبقيمتها الأصلية."}
+{"module": "core", "key": "gui-selector/random", "ar": "إدخال عشوائي"}
+{"module": "core", "key": "gui-selector/random-description", "ar": "يُخرج إشارة عشوائية من الإدخال كل تكة."}
+{"module": "core", "key": "gui-selector/random-interval", "ar": "فاصل التحديث"}
+{"module": "core", "key": "gui-selector/rocket-capacity", "ar": "سعة الصاروخ"}
+{"module": "core", "key": "gui-selector/rocket-capacity-description", "ar": "يُخرج سعة الصاروخ لإشارات الإدخال."}
+{"module": "core", "key": "gui-selector/select", "ar": "اختيار الإدخال"}
+{"module": "core", "key": "gui-selector/select-description", "ar": "يختار إشارة محددة من بين كل إشارات الإدخال بناءً على معايير."}
