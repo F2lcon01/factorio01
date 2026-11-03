@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading", "ar": "الاتجاه"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-controller-description", "ar": "تحريك العصا في اتجاه ما يجعل المركبات تستدير وتتسارع تلقائياً نحو ذلك الجانب من الشاشة."}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-keyboard-description", "ar": "الضغط في اتجاه ما يجعل المركبات تستدير وتتسارع تلقائياً نحو ذلك الجانب من الشاشة."}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering", "ar": "التوجيه"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering-controller-description", "ar": "تحريك العصا للأعلى/للأسفل يجعل المركبات تتسارع/تكبح.\\nتحريك العصا لليسار/لليمين يجعل المركبات تستدير في ذلك الاتجاه."}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering-keyboard-description", "ar": "الضغط للأعلى/للأسفل يجعل المركبات تتسارع/تكبح.\\nالضغط لليسار/لليمين يجعل المركبات تستدير في ذلك الاتجاه."}
+{"module": "core", "key": "gui-current-research/science-per-minute", "ar": "العلوم في الدقيقة"}
+{"module": "core", "key": "gui-current-research/tooltip-estimated-time", "ar": "تقدير الوقت المتبقي"}
+{"module": "core", "key": "gui-current-research/tooltip-remaining-research", "ar": "التقدم"}
+{"module": "core", "key": "gui-current-research/tooltip-title", "ar": "معلومات إنتاج العلوم __1__"}
+{"module": "core", "key": "gui-decider/add-condition", "ar": "+ إضافة شرط"}
+{"module": "core", "key": "gui-decider/add-else-output", "ar": "+ إضافة \"وإلا\""}
+{"module": "core", "key": "gui-decider/add-output", "ar": "+ إضافة مُخرج"}
+{"module": "core", "key": "gui-decider/conditions", "ar": "الشروط"}
+{"module": "core", "key": "gui-decider/else-output-header", "ar": "مُخرجات \"وإلا\""}
+{"module": "core", "key": "gui-decider/else-output-header-tooltip", "ar": "إشارات المُخرج التي تُرسل عندما لا تتحقق الشروط."}
+{"module": "core", "key": "gui-decider/outputs", "ar": "المُخرجات"}
+{"module": "core", "key": "gui-display-panel/add-message", "ar": "إضافة رسالة جديدة"}
+{"module": "core", "key": "gui-display-panel/always-show", "ar": "الإظهار دائماً في \"Alt-mode\""}
+{"module": "core", "key": "gui-display-panel/always-show-tooltip", "ar": "إظهار السطر الأول من نص لوحة العرض دائماً في \"Alt-mode\" حتى عند عدم تحديدها."}
+{"module": "core", "key": "gui-display-panel/condition", "ar": "الشرط"}
+{"module": "core", "key": "gui-display-panel/edit-message", "ar": "تعديل الرسالة"}
+{"module": "core", "key": "gui-display-panel/icon", "ar": "الأيقونة"}
+{"module": "core", "key": "gui-display-panel/message", "ar": "الرسالة"}
+{"module": "core", "key": "gui-display-panel/message-limit-reached", "ar": "تم بلوغ حد الرسائل"}
+{"module": "core", "key": "gui-display-panel/no-label", "ar": "[بلا تسمية]"}
+{"module": "core", "key": "gui-display-panel/show-in-chart", "ar": "إظهار العلامة في الخريطة"}
+{"module": "core", "key": "gui-display-panel/show-in-chart-tooltip", "ar": "إظهار الأيقونة المختارة والسطر الأول من النص في خرائط الكشف."}
+{"module": "core", "key": "gui-downloading-mods/currently-downloading-mod", "ar": "__1__ (__2__/__3__)"}
+{"module": "core", "key": "gui-edit-label/add-description", "ar": "إضافة وصف"}
+{"module": "core", "key": "gui-edit-label/description", "ar": "الوصف"}
+{"module": "core", "key": "gui-edit-pin/always-visible", "ar": "مرئي دائماً"}
+{"module": "core", "key": "gui-edit-pin/label", "ar": "التسمية"}
+{"module": "core", "key": "gui-edit-pin/preview-distance", "ar": "مسافة المعاينة"}
+{"module": "core", "key": "gui-edit-pin/title", "ar": "إعدادات التثبيت"}
+{"module": "core", "key": "gui-electric-energy-interface/input-flow-limit", "ar": "حد تدفق الإدخال"}
+{"module": "core", "key": "gui-electric-energy-interface/mode", "ar": "الوضع"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-accumulator", "ar": "مجمع"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-primary-input", "ar": "إدخال أساسي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-primary-output", "ar": "إخراج أساسي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-secondary-input", "ar": "إدخال ثانوي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-secondary-output", "ar": "إخراج ثانوي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-solar-output", "ar": "إخراج شمسي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-tertiary-input", "ar": "إدخال ثالثي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-tertiary-input-output", "ar": "إدخال/إخراج ثالثي"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-tertiary-output", "ar": "إخراج ثالثي"}
+{"module": "core", "key": "gui-electric-energy-interface/output-flow-limit", "ar": "حد تدفق الإخراج"}
+{"module": "core", "key": "gui-explore-mods-filter-description/armor", "ar": "الدروع أو معدات الدروع."}
+{"module": "core", "key": "gui-explore-mods-filter-description/blueprints", "ar": "تغيير سلوك المخططات."}
+{"module": "core", "key": "gui-explore-mods-filter-description/character", "ar": "تغييرات على مظهر اللاعب داخل اللعبة."}
+{"module": "core", "key": "gui-explore-mods-filter-description/cheats", "ar": "العب على طريقتك."}
+{"module": "core", "key": "gui-explore-mods-filter-description/circuit-network", "ar": "كيانات تتفاعل مع الدارة الكهربائية."}
+{"module": "core", "key": "gui-explore-mods-filter-description/combat", "ar": "طرق جديدة للتعامل مع الأعداء، هجوماً أو دفاعاً."}
+{"module": "core", "key": "gui-explore-mods-filter-description/content", "ar": "مودات تضيف محتوى جديداً إلى اللعبة."}
+{"module": "core", "key": "gui-explore-mods-filter-description/enemies", "ar": "تغييرات على الأعداء أو أعداء جدد تماماً لمواجهتهم."}
+{"module": "core", "key": "gui-explore-mods-filter-description/environment", "ar": "توليد الخرائط وتعديل التضاريس."}
+{"module": "core", "key": "gui-explore-mods-filter-description/fluids", "ar": "أشياء متعلقة بالنفط والسوائل الأخرى."}
+{"module": "core", "key": "gui-explore-mods-filter-description/internal", "ar": "مكتبات Lua لاستخدام المودات الأخرى، ومودات فرعية تشكل أجزاء من مود أكبر."}
+{"module": "core", "key": "gui-explore-mods-filter-description/localizations", "ar": "ترجمات لمودات أخرى."}
+{"module": "core", "key": "gui-explore-mods-filter-description/logistic-network", "ar": "متعلقة بمراكز الروبوتات والروبوتات اللوجستية."}
+{"module": "core", "key": "gui-explore-mods-filter-description/logistics", "ar": "طرق محسّنة أو جديدة لنقل المواد - أحزمة، أذرع آلية، أنابيب!"}
+{"module": "core", "key": "gui-explore-mods-filter-description/manufacturing", "ar": "أفران وأجهزة تجميع وسلاسل إنتاج."}
+{"module": "core", "key": "gui-explore-mods-filter-description/mining", "ar": "خامات وموارد جديدة، وآلات أيضاً."}
+{"module": "core", "key": "gui-explore-mods-filter-description/mod-packs", "ar": "مجموعات مودات مع تعديلات لتعمل معاً."}
+{"module": "core", "key": "gui-explore-mods-filter-description/no-category", "ar": "مودات تتجاوز حدود تصنيفات بوابة المودات. وهو أيضاً التصنيف الافتراضي للمودات الجديدة."}
+{"module": "core", "key": "gui-explore-mods-filter-description/overhaul", "ar": "مودات تحويل شاملة كبيرة."}
+{"module": "core", "key": "gui-explore-mods-filter-description/planets", "ar": "أماكن جديدة لبناء المزيد من المصانع."}
+{"module": "core", "key": "gui-explore-mods-filter-description/power", "ar": "تغييرات على إنتاج الطاقة وتوزيعها."}
+{"module": "core", "key": "gui-explore-mods-filter-description/scenarios", "ar": "سيناريوهات وخرائط وألغاز."}
+{"module": "core", "key": "gui-explore-mods-filter-description/space-age", "ar": "يكمل Factorio: عصر الفضاء رحلة اللاعب بعد إطلاق الصواريخ إلى الفضاء. اكتشف عوالم جديدة بتحديات فريدة، واستغل مواردها المبتكرة لتحقيق تقدم تقني متطور، وأدر أسطولك من منصات الفضاء بين الكواكب."}
+{"module": "core", "key": "gui-explore-mods-filter-description/storage", "ar": "أكثر من مجرد صناديق."}
+{"module": "core", "key": "gui-explore-mods-filter-description/trains", "ar": "القطارات رائعة، لكن ماذا لو استطاعت فعل المزيد؟"}
+{"module": "core", "key": "gui-explore-mods-filter-description/transportation", "ar": "نقل اللاعب، بالمركبات أو أجهزة النقل الآني."}
+{"module": "core", "key": "gui-explore-mods-filter-description/tweaks", "ar": "تغييرات صغيرة تخص التوازن أو أسلوب اللعب أو الرسوميات."}
+{"module": "core", "key": "gui-explore-mods-filter-description/utilities", "ar": "تزود اللاعب بأدوات جديدة أو تعدّل واجهة اللعبة دون تغيير أسلوب اللعب جوهرياً."}
+{"module": "core", "key": "gui-explore-mods-filter-name/armor", "ar": "الدروع"}
+{"module": "core", "key": "gui-explore-mods-filter-name/blueprints", "ar": "المخططات"}
+{"module": "core", "key": "gui-explore-mods-filter-name/character", "ar": "الشخصية"}
+{"module": "core", "key": "gui-explore-mods-filter-name/cheats", "ar": "الغش"}
+{"module": "core", "key": "gui-explore-mods-filter-name/circuit-network", "ar": "الدارة الكهربائية"}
+{"module": "core", "key": "gui-explore-mods-filter-name/combat", "ar": "القتال"}
+{"module": "core", "key": "gui-explore-mods-filter-name/content", "ar": "المحتوى"}
+{"module": "core", "key": "gui-explore-mods-filter-name/enemies", "ar": "الأعداء"}
+{"module": "core", "key": "gui-explore-mods-filter-name/environment", "ar": "البيئة"}
+{"module": "core", "key": "gui-explore-mods-filter-name/fluids", "ar": "السوائل"}
+{"module": "core", "key": "gui-explore-mods-filter-name/internal", "ar": "داخلي"}
+{"module": "core", "key": "gui-explore-mods-filter-name/localizations", "ar": "الترجمات"}
+{"module": "core", "key": "gui-explore-mods-filter-name/logistic-network", "ar": "الشبكة اللوجستية"}
+{"module": "core", "key": "gui-explore-mods-filter-name/logistics", "ar": "الخدمات اللوجستية"}
+{"module": "core", "key": "gui-explore-mods-filter-name/manufacturing", "ar": "التصنيع"}
+{"module": "core", "key": "gui-explore-mods-filter-name/mining", "ar": "التنقيب"}
+{"module": "core", "key": "gui-explore-mods-filter-name/mod-packs", "ar": "حزم المودات"}
+{"module": "core", "key": "gui-explore-mods-filter-name/no-category", "ar": "بلا تصنيف"}
+{"module": "core", "key": "gui-explore-mods-filter-name/overhaul", "ar": "تحويل شامل"}
+{"module": "core", "key": "gui-explore-mods-filter-name/planets", "ar": "الكواكب"}
+{"module": "core", "key": "gui-explore-mods-filter-name/power", "ar": "الطاقة"}
+{"module": "core", "key": "gui-explore-mods-filter-name/scenarios", "ar": "السيناريوهات"}
+{"module": "core", "key": "gui-explore-mods-filter-name/space-age", "ar": "عصر الفضاء [space-age]"}
+{"module": "core", "key": "gui-explore-mods-filter-name/storage", "ar": "التخزين"}
+{"module": "core", "key": "gui-explore-mods-filter-name/trains", "ar": "القطارات"}
+{"module": "core", "key": "gui-explore-mods-filter-name/transportation", "ar": "النقل"}
+{"module": "core", "key": "gui-explore-mods-filter-name/tweaks", "ar": "التعديلات"}
+{"module": "core", "key": "gui-explore-mods-filter-name/utilities", "ar": "الأدوات المساعدة"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/last_updated_at", "ar": "المحدّثة مؤخراً"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/most_downloads", "ar": "التنزيلات"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/relevancy", "ar": "الصلة"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/trending", "ar": "الرائجة"}
+{"module": "core", "key": "gui-explore-mods/bookmarks-only", "ar": "المحفوظة فقط"}
+{"module": "core", "key": "gui-explore-mods/categories", "ar": "التصنيفات"}
+{"module": "core", "key": "gui-explore-mods/deprecated", "ar": "مهمل"}
+{"module": "core", "key": "gui-explore-mods/exclude-filter", "ar": "الاستبعاد من نتائج البحث"}
+{"module": "core", "key": "gui-explore-mods/expansion", "ar": "التوسعة"}
+{"module": "core", "key": "gui-explore-mods/filters", "ar": "المرشحات"}
+{"module": "core", "key": "gui-explore-mods/include-deprecated", "ar": "تضمين المهملة"}
+{"module": "core", "key": "gui-explore-mods/installed", "ar": "مثبّت"}
+{"module": "core", "key": "gui-explore-mods/installing", "ar": "جارٍ التثبيت..."}
+{"module": "core", "key": "gui-explore-mods/sort-by", "ar": "الترتيب حسب"}
+{"module": "core", "key": "gui-explore-mods/space-age-mod", "ar": "[space-age] مود عصر الفضاء"}
+{"module": "core", "key": "gui-explore-mods/tags", "ar": "الوسوم"}
+{"module": "core", "key": "gui-explore-mods/total-mods-count", "ar": "عُثر على __1__ مود"}

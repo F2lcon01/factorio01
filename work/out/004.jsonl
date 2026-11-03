@@ -1,0 +1,120 @@
+{"module": "core", "key": "description/beacons-potential-header", "ar": "أبراج المنضمات المحتملة:"}
+{"module": "core", "key": "description/buildable-on", "ar": "قابل للبناء على"}
+{"module": "core", "key": "description/cargo-hatch-count", "ar": "عدد فتحات الشحن"}
+{"module": "core", "key": "description/cargo-hatch-input-count", "ar": "فتحات الإدخال"}
+{"module": "core", "key": "description/cargo-hatch-output-count", "ar": "فتحات الإخراج"}
+{"module": "core", "key": "description/character-grounded", "ar": "على الأرض"}
+{"module": "core", "key": "description/circuit-signal", "ar": "إشارة الدارة"}
+{"module": "core", "key": "description/collection-area", "ar": "منطقة الجمع"}
+{"module": "core", "key": "description/collects", "ar": "يجمع"}
+{"module": "core", "key": "description/completed-trips", "ar": "الرحلات المكتملة"}
+{"module": "core", "key": "description/continuous-radar-coverage-distance", "ar": "مسافة التغطية المستمرة"}
+{"module": "core", "key": "description/crafted-on", "ar": "يُصنع في"}
+{"module": "core", "key": "description/creates-number-entities-value", "ar": "__1__ × __2__"}
+{"module": "core", "key": "description/current-health", "ar": "الصحة عند عامل التطور الحالي (__1__)"}
+{"module": "core", "key": "description/damage-per-hp", "ar": "الضرر لكل نقطة صحة"}
+{"module": "core", "key": "description/disabled", "ar": "معطّل"}
+{"module": "core", "key": "description/drain", "ar": "الاستنزاف"}
+{"module": "core", "key": "description/effect-duration", "ar": "مدة التأثير"}
+{"module": "core", "key": "description/effect-value-negative", "ar": "-__1__%"}
+{"module": "core", "key": "description/effect-value-negative-limit", "ar": "-__1__% = الحد"}
+{"module": "core", "key": "description/effect-value-positive", "ar": "+__1__%"}
+{"module": "core", "key": "description/effect-value-positive-limit", "ar": "+__1__% = الحد"}
+{"module": "core", "key": "description/effect-value-zero", "ar": "__1__%"}
+{"module": "core", "key": "description/enabled", "ar": "مفعّل"}
+{"module": "core", "key": "description/enraged-speed", "ar": "السرعة عند الغضب"}
+{"module": "core", "key": "description/exploration-radar-coverage-distance", "ar": "مسافة تغطية الاستكشاف"}
+{"module": "core", "key": "description/extra-count-factor", "ar": "فرصة __1__% لمنتج إضافي"}
+{"module": "core", "key": "description/factoriopedia-science-pack-remaining-amount-key", "ar": "سعة العلوم"}
+{"module": "core", "key": "description/flow-rate", "ar": "معدل التدفق"}
+{"module": "core", "key": "description/food-energy-value", "ar": "القيمة الغذائية"}
+{"module": "core", "key": "description/fork-chance-per-jump", "ar": "فرصة التفرع لكل قفزة"}
+{"module": "core", "key": "description/freshness", "ar": "النضارة"}
+{"module": "core", "key": "description/from-evolution", "ar": "من التطور"}
+{"module": "core", "key": "description/green-circuit-network", "ar": "الدارة الكهربائية الخضراء"}
+{"module": "core", "key": "description/growth", "ar": "النمو"}
+{"module": "core", "key": "description/growth-time", "ar": "مدة النمو"}
+{"module": "core", "key": "description/healing", "ar": "الشفاء"}
+{"module": "core", "key": "description/heating-energy", "ar": "الطاقة المطلوبة للتدفئة"}
+{"module": "core", "key": "description/hitpoints", "ar": "__1__ __plural_for_parameter__1__{1=نقطة صحة|2=نقطتا صحة|rest=نقاط صحة}__"}
+{"module": "core", "key": "description/initial-items", "ar": "العناصر الأولية"}
+{"module": "core", "key": "description/input-cargo-hatch-bonus", "ar": "مكافأة فتحات شحن الإدخال"}
+{"module": "core", "key": "description/input-cargo-hatch-count", "ar": "عدد فتحات شحن الإدخال"}
+{"module": "core", "key": "description/investigating-speed", "ar": "سرعة التحري"}
+{"module": "core", "key": "description/item-on-ground-name", "ar": "عنصر على الأرض: __1__"}
+{"module": "core", "key": "description/item-request-proxy-deliver", "ar": "عمليات التسليم المعلقة"}
+{"module": "core", "key": "description/item-request-proxy-pickup", "ar": "عمليات الاستلام المعلقة"}
+{"module": "core", "key": "description/length", "ar": "الطول"}
+{"module": "core", "key": "description/lift-weight", "ar": "وزن الرفع"}
+{"module": "core", "key": "description/logistic-request-tooltip-in-rocket-silos", "ar": "متاح في منصات إطلاق الصاروخ"}
+{"module": "core", "key": "description/logistic-request-tooltip-no-platforms-providing", "ar": "لا توجد منصات توفر المواد"}
+{"module": "core", "key": "description/logistic-request-tooltip-no-transitional-rocket-silo", "ar": "لا توجد منصات إطلاق صاروخ تقبل الطلبات التلقائية من منصات الفضاء"}
+{"module": "core", "key": "description/logistic-request-tooltip-not-enough-for-one-delivery", "ar": "الكمية لا تكفي لملء صاروخ واحد"}
+{"module": "core", "key": "description/logistic-request-tooltip-not-enough-hub-space", "ar": "لا توجد مساحة كافية في مركز منصة الفضاء"}
+{"module": "core", "key": "description/logistic-request-tooltip-on-planet", "ar": "متاح على الكوكب"}
+{"module": "core", "key": "description/logistic-request-tooltip-on-platforms", "ar": "متاح على المنصات"}
+{"module": "core", "key": "description/logistic-request-tooltip-priority-request-reserved-space", "ar": "المساحة محجوزة لطلب ذي أولوية"}
+{"module": "core", "key": "description/logistic-request-tooltip-transition-requested-from", "ar": "مطلوب من المنصة"}
+{"module": "core", "key": "description/logistic-request-tooltip-transition-requesting-from", "ar": "يطلب من"}
+{"module": "core", "key": "description/max-cargo-bay-unloading-distance", "ar": "أقصى مسافة تفريغ"}
+{"module": "core", "key": "description/max-forks", "ar": "أقصى عدد للتفرعات"}
+{"module": "core", "key": "description/max-health", "ar": "أقصى صحة ممكنة عند عامل التطور (__1__)"}
+{"module": "core", "key": "description/max-jumps", "ar": "أقصى عدد للقفزات"}
+{"module": "core", "key": "description/maximum-effective-temperature", "ar": "أقصى درجة حرارة فعالة"}
+{"module": "core", "key": "description/maximum-flying-reach", "ar": "أقصى مدى للطيران"}
+{"module": "core", "key": "description/maximum-input-temperature", "ar": "أقصى درجة حرارة للمُدخل"}
+{"module": "core", "key": "description/mean-lightning-power", "ar": "متوسط كثافة طاقة البرق"}
+{"module": "core", "key": "description/mean-lightning-power-unit", "ar": "__1__/م²"}
+{"module": "core", "key": "description/mined-by", "ar": "يُستخرج بواسطة"}
+{"module": "core", "key": "description/minimum-input-temperature", "ar": "أدنى درجة حرارة للمُدخل"}
+{"module": "core", "key": "description/minimum-operational-time", "ar": "أدنى زمن تشغيل"}
+{"module": "core", "key": "description/module-slots", "ar": "خانات الوحدات"}
+{"module": "core", "key": "description/movement-speed-bonus-disabled", "ar": "معطّل"}
+{"module": "core", "key": "description/movement-speed-bonus-toggle", "ar": "__1__ - __2__ للتبديل"}
+{"module": "core", "key": "description/nutrients-energy-value", "ar": "القيمة اللذيذة"}
+{"module": "core", "key": "description/output-cargo-hatch-bonus", "ar": "مكافأة فتحات شحن الإخراج"}
+{"module": "core", "key": "description/output-cargo-hatch-count", "ar": "عدد فتحات شحن الإخراج"}
+{"module": "core", "key": "description/patrolling-speed", "ar": "سرعة الدورية"}
+{"module": "core", "key": "description/per-chunk", "ar": "لكل قطعة خريطة"}
+{"module": "core", "key": "description/personal-roboport-status", "ar": "الحالة"}
+{"module": "core", "key": "description/personal-roboport-status-disabled", "ar": "معطّل"}
+{"module": "core", "key": "description/personal-roboport-status-enabled", "ar": "مفعّل"}
+{"module": "core", "key": "description/personal-roboport-status-toggle", "ar": "__1__ - __2__ للتبديل"}
+{"module": "core", "key": "description/piercing-power", "ar": "قوة الاختراق"}
+{"module": "core", "key": "description/pipeline-extent", "ar": "امتداد خط الأنابيب"}
+{"module": "core", "key": "description/player-description", "ar": "الوصف"}
+{"module": "core", "key": "description/pollution-absorption", "ar": "امتصاص __1__"}
+{"module": "core", "key": "description/pollution-to-join-attack", "ar": "يستهلك __1__"}
+{"module": "core", "key": "description/power-output-neighbour-bonus", "ar": "__1__ (مكافأة الجوار __2__)"}
+{"module": "core", "key": "description/protected-entity", "ar": "محمي من الإطلاق الآلي.\\n يمكن استخدام __CONTROL__shoot-selected__ لإطلاق النار عليه يدوياً."}
+{"module": "core", "key": "description/quality-bonus", "ar": "الجودة"}
+{"module": "core", "key": "description/radar-coverage-distance", "ar": "مسافة تغطية الرادار"}
+{"module": "core", "key": "description/recipe-no-ingredients", "ar": "لا شيء"}
+{"module": "core", "key": "description/recipe-no-products", "ar": "لا شيء"}
+{"module": "core", "key": "description/red-circuit-network", "ar": "الدارة الكهربائية الحمراء"}
+{"module": "core", "key": "description/remaining-time", "ar": "الوقت المتبقي"}
+{"module": "core", "key": "description/required-fluid-per-mining-operation", "ar": "السائل المطلوب لكل عملية تنقيب"}
+{"module": "core", "key": "description/requires", "ar": "يتطلب"}
+{"module": "core", "key": "description/resource-drain", "ar": "استنزاف الموارد"}
+{"module": "core", "key": "description/result-fluid", "ar": "السائل الناتج"}
+{"module": "core", "key": "description/rocket-capacity", "ar": "سعة الصاروخ"}
+{"module": "core", "key": "description/rocket-capacity-value", "ar": "__1__ (__3__ __plural_for_parameter__2__{1=كومة|2=كومتان|rest=كومات}__)"}
+{"module": "core", "key": "description/rocket-capacity-value-short", "ar": "__1__"}
+{"module": "core", "key": "description/rocket-cargo-weight", "ar": "وزن الحمولة"}
+{"module": "core", "key": "description/rocket-lift-weight", "ar": "أقصى وزن للرفع"}
+{"module": "core", "key": "description/rocket-lift-weight-value-modded", "ar": "__1__ (__2__%)"}
+{"module": "core", "key": "description/science-pack-drain", "ar": "استنزاف حزم العلوم"}
+{"module": "core", "key": "description/soil-for", "ar": "تربة لـ"}
+{"module": "core", "key": "description/spoil-result", "ar": "ناتج التلف"}
+{"module": "core", "key": "description/spoil-time", "ar": "مدة التلف"}
+{"module": "core", "key": "description/stack-size", "ar": "حجم الكومة"}
+{"module": "core", "key": "description/stop-priority", "ar": "أولوية محطة القطار"}
+{"module": "core", "key": "description/storage-chest-counts", "ar": "تخزين النظام اللوجستي"}
+{"module": "core", "key": "description/surface-lightning-range", "ar": "مدى البرق"}
+{"module": "core", "key": "description/target-filters", "ar": "مرشحات الأهداف"}
+{"module": "core", "key": "description/target-temperature", "ar": "درجة الحرارة المستهدفة"}
+{"module": "core", "key": "description/threshold", "ar": "العتبة"}
+{"module": "core", "key": "description/thrust", "ar": "الدفع"}
+{"module": "core", "key": "description/time-to-damage", "ar": "الوقت حتى الضرر"}
+{"module": "core", "key": "description/too-heavy-for-rocket", "ar": "ثقيل جداً على الصاروخ!"}
+{"module": "core", "key": "description/total-trash", "ar": "المهملات"}

@@ -1,0 +1,120 @@
+{"module": "core", "key": "factoriopedia/surface-creation-result", "ar": "ناتج إنشاء السطح"}
+{"module": "core", "key": "factoriopedia/surface-creation-result-tooltip", "ar": "سطح منصة الفضاء الذي يُنشأ عند إطلاق هذا العنصر بصاروخ."}
+{"module": "core", "key": "factoriopedia/thrust", "ar": "الدفع"}
+{"module": "core", "key": "factoriopedia/thruster-performance-curves", "ar": "منحنيات أداء الدافع"}
+{"module": "core", "key": "factoriopedia/tile", "ar": "بلاطة"}
+{"module": "core", "key": "factoriopedia/title", "ar": "موسوعة فاكتوريو"}
+{"module": "core", "key": "factoriopedia/transforms-when-starved", "ar": "يتحول عند الجوع"}
+{"module": "core", "key": "factoriopedia/unlocked-by", "ar": "يُفتح بواسطة"}
+{"module": "core", "key": "factoriopedia/upgraded-by", "ar": "يُرقّى بواسطة"}
+{"module": "core", "key": "factoriopedia/used-by", "ar": "يستخدمه"}
+{"module": "core", "key": "factoriopedia/used-by-vehicle", "ar": "تستخدمه المركبة"}
+{"module": "core", "key": "factoriopedia/used-in", "ar": "يُستخدم في"}
+{"module": "core", "key": "factoriopedia/virtual-signal", "ar": "إشارة افتراضية"}
+{"module": "core", "key": "factoriopedia/yields", "ar": "ينتج"}
+{"module": "core", "key": "graphics-errors/device-removed-message3", "ar": "إذا تكرر هذا الخطأ كثيراً، فجرّب إعادة تشغيل الحاسوب أو تحديث تعريفات بطاقة الرسوميات.\\nقد يكون الحاسوب غير مستقر أيضاً بسبب كسر السرعة أو ارتفاع الحرارة."}
+{"module": "core", "key": "graphics-errors/opengl-failed-to-initialize", "ar": "يتطلب Factorio إصدار OpenGL __1__ أو أعلى. الإصدار المتاح على هذا الحاسوب هو __2__."}
+{"module": "core", "key": "gui-additional-entity-settings/quick-action-enter-hub-as-character", "ar": "الدخول بالشخصية"}
+{"module": "core", "key": "gui-additional-entity-settings/quick-action-make-silo-ready", "ar": "تجهيز منصة الإطلاق"}
+{"module": "core", "key": "gui-advert-switch2/description", "ar": "رقِّ إلى Factorio – إصدار Nintendo Switch 2 مجاناً!"}
+{"module": "core", "key": "gui-advert-switch2/title", "ar": "Factorio – إصدار Nintendo Switch 2"}
+{"module": "core", "key": "gui-advert/description", "ar": "توسعة Factorio: عصر الفضاء متاحة الآن!"}
+{"module": "core", "key": "gui-advert/link-text", "ar": "انقر هنا لمعرفة المزيد!"}
+{"module": "core", "key": "gui-advert/link-text-console", "ar": "اعرف المزيد!"}
+{"module": "core", "key": "gui-advert/title", "ar": "Factorio: عصر الفضاء"}
+{"module": "core", "key": "gui-alert-tooltip/attack", "ar": "__1__ __plural_for_parameter__1__{1=كيان يتعرض|2=كيانان يتعرضان|rest=كيانات تتعرض}__ للضرر."}
+{"module": "core", "key": "gui-alert-tooltip/collector-path-blocked", "ar": "مسار جامع الكويكبات محجوب."}
+{"module": "core", "key": "gui-alert-tooltip/custom-alert", "ar": "تنبيه مخصص"}
+{"module": "core", "key": "gui-alert-tooltip/destroyed", "ar": "__1__ __plural_for_parameter__1__{1=كيان دُمّر|2=كيانان دُمّرا|rest=كيانات دُمّرت}__."}
+{"module": "core", "key": "gui-alert-tooltip/expansion-base-built", "ar": "رُصدت قاعدة توسع جديدة للأعداء."}
+{"module": "core", "key": "gui-alert-tooltip/fluid-mixing", "ar": "يجري خلط السوائل."}
+{"module": "core", "key": "gui-alert-tooltip/no-material-for-construction", "ar": "__1__ __plural_for_parameter__1__{1=كيان تنقصه|2=كيانان تنقصهما|rest=كيانات تنقصها}__ مواد البناء."}
+{"module": "core", "key": "gui-alert-tooltip/no-platform-storage", "ar": "لا توجد مساحة تخزين كافية في مركز المنصة."}
+{"module": "core", "key": "gui-alert-tooltip/no-roboport-storage", "ar": "لا توجد خانات روبوتات فارغة كافية في مراكز الروبوتات."}
+{"module": "core", "key": "gui-alert-tooltip/not-enough-construction-robots", "ar": "__1__ __plural_for_parameter__1__{1=كيان تنقصه|2=كيانان تنقصهما|rest=كيانات تنقصها}__ روبوتات البناء."}
+{"module": "core", "key": "gui-alert-tooltip/not-enough-repair-packs", "ar": "__1__ __plural_for_parameter__1__{1=كيان تنقصه|2=كيانان تنقصهما|rest=كيانات تنقصها}__ حزم الإصلاح."}
+{"module": "core", "key": "gui-alert-tooltip/pipeline-overextended", "ar": "امتد خط الأنابيب أكثر من اللازم."}
+{"module": "core", "key": "gui-alert-tooltip/platform-tile-building-blocked", "ar": "مُنع وضع البلاطة على منصة الفضاء. لا يمكن أن تحتوي المنصات على ثقوب (لا يمكن أن تكون على شكل حلقة)."}
+{"module": "core", "key": "gui-alert-tooltip/train-no-path", "ar": "لا يستطيع القطار إيجاد مسار إلى الوجهة."}
+{"module": "core", "key": "gui-alert-tooltip/turret-fire", "ar": "__1__ __plural_for_parameter__1__{1=برج يشتبك|2=برجان يشتبكان|rest=أبراج تشتبك}__ مع العدو."}
+{"module": "core", "key": "gui-alert-tooltip/turret-out-of-ammo", "ar": "__1__ __plural_for_parameter__1__{1=برج نفدت ذخيرته|2=برجان نفدت ذخيرتهما|rest=أبراج نفدت ذخيرتها}__ للتو."}
+{"module": "core", "key": "gui-alert-tooltip/unclaimed-cargo", "ar": "عناصر غير مستلمة تنتظر في كبسولات الإسقاط."}
+{"module": "core", "key": "gui-alert/title", "ar": "نظرة عامة على التنبيهات"}
+{"module": "core", "key": "gui-assembling-machine/no-recipe-set", "ar": "لم تُحدد وصفة"}
+{"module": "core", "key": "gui-auth-server/factorio-already-linked-nintendo", "ar": "حساب Factorio.com هذا مرتبط بالفعل بحساب Nintendo آخر. يمكنك إلغاء الربط من ملفك الشخصي على __1__."}
+{"module": "core", "key": "gui-auth-server/galaxy-upload-already-in-progress", "ar": "يجري بالفعل رفع إلى المجرة خاص بك. يُرجى الانتظار حتى ينتهي."}
+{"module": "core", "key": "gui-auth-server/galaxy-upload-not-in-progress", "ar": "لا يوجد رفع إلى المجرة قيد التنفيذ خاص بك. ربما انتهى بالفعل أو انتهت مهلة العملية."}
+{"module": "core", "key": "gui-auth-server/login-banned", "ar": "تم حظر حسابك. إن كنت تعتقد أن هذا خطأ، يُرجى التواصل مع support@factorio.com."}
+{"module": "core", "key": "gui-auth-server/login-blacklist", "ar": "عنوان IP الخاص بك مدرج في القائمة السوداء بسبب إساءة استخدام سابقة. إن كنت تعتقد أن هذا خطأ وتريد رفع الحظر، يُرجى التواصل مع __1__."}
+{"module": "core", "key": "gui-auth-server/login-insufficient-membership-expansion", "ar": "حسابك لا يملك Factorio: عصر الفضاء. يُرجى شراؤه لتسجيل الدخول."}
+{"module": "core", "key": "gui-auth-server/nintendo-already-linked", "ar": "يوجد حساب Factorio.com آخر مرتبط بحساب Nintendo هذا."}
+{"module": "core", "key": "gui-blueprint-book/scroll-to-change-active-specific", "ar": "استخدم __CONTROL_STYLE_BEGIN____1__عجلة الفأرة__CONTROL_STYLE_END__ لتغيير المخطط النشط."}
+{"module": "core", "key": "gui-blueprint-library/game-blueprints-title-tooltip", "ar": "المخططات المحفوظة في اللعبة الحالية. يتشاركها جميع اللاعبين النشطين في الجلسة"}
+{"module": "core", "key": "gui-blueprint-library/large-memory-usage-warning", "ar": "تستخدم مكتبة المخططات قدراً كبيراً من الذاكرة. حذف بعض المخططات وكتب المخططات الكبيرة سيحرر بعض الذاكرة ويحسّن أوقات التحميل والحفظ."}
+{"module": "core", "key": "gui-blueprint-library/not-synced-warning", "ar": "[img=utility/warning_icon] [color=red]مكتبة المخططات غير متزامنة.[/color]"}
+{"module": "core", "key": "gui-blueprint-library/other-players-blueprints", "ar": "مخططات اللاعبين الآخرين"}
+{"module": "core", "key": "gui-blueprint-library/private-shelf-tooltip", "ar": "مخططات شخصية متاحة من أي لعبة"}
+{"module": "core", "key": "gui-blueprint-library/slots-view", "ar": "عرض الخانات"}
+{"module": "core", "key": "gui-blueprint-parametrisation/available-variables", "ar": "المتغيرات المتاحة"}
+{"module": "core", "key": "gui-blueprint-parametrisation/dependency-index", "ar": "#__1__"}
+{"module": "core", "key": "gui-blueprint-parametrisation/dependency-index-missing", "ar": "#"}
+{"module": "core", "key": "gui-blueprint-parametrisation/evaluation-order-info", "ar": "تُقيَّم العوامل من الأعلى إلى الأسفل."}
+{"module": "core", "key": "gui-blueprint-parametrisation/evaluation-order-info-tooltip", "ar": "لا يمكن أن تستهدف التبعيات إلا العوامل التي فوقها.\\nيمكنك سحب العوامل لتغيير ترتيبها."}
+{"module": "core", "key": "gui-blueprint-parametrisation/fluid-ingredient-of", "ar": "مكون سائل لـ"}
+{"module": "core", "key": "gui-blueprint-parametrisation/fluid-product-of", "ar": "منتج سائل لـ"}
+{"module": "core", "key": "gui-blueprint-parametrisation/formula", "ar": "الصيغة"}
+{"module": "core", "key": "gui-blueprint-parametrisation/formula-tooltip", "ar": "يمكن أن تحتوي على تعبير رياضي بكل المتغيرات المحددة أعلاه."}
+{"module": "core", "key": "gui-blueprint-parametrisation/independent", "ar": "مستقل"}
+{"module": "core", "key": "gui-blueprint-parametrisation/ingredient-of", "ar": "مكون لـ"}
+{"module": "core", "key": "gui-blueprint-parametrisation/item-ingredient-of", "ar": "مكون عنصر لـ"}
+{"module": "core", "key": "gui-blueprint-parametrisation/item-product-of", "ar": "منتج عنصر لـ"}
+{"module": "core", "key": "gui-blueprint-parametrisation/name", "ar": "الاسم"}
+{"module": "core", "key": "gui-blueprint-parametrisation/nothing-to-parametrise", "ar": "لا يوجد ما يمكن تحويله إلى عوامل"}
+{"module": "core", "key": "gui-blueprint-parametrisation/parameter", "ar": "العامل"}
+{"module": "core", "key": "gui-blueprint-parametrisation/product-of", "ar": "منتج لـ"}
+{"module": "core", "key": "gui-blueprint-parametrisation/source-of-dependency-isnt-above", "ar": "مصدر التبعية ليس في الأعلى."}
+{"module": "core", "key": "gui-blueprint-parametrisation/title", "ar": "تحويل المخطط إلى عوامل"}
+{"module": "core", "key": "gui-blueprint-parametrisation/value", "ar": "القيمة"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable", "ar": "المتغير"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-crafting-time", "ar": "وقت صنع العامل N"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-ingredient-count", "ar": "عدد عناصر المكون __1__ للعامل N."}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-number-from-above", "ar": "رقم من الأعلى"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-rocket-capacity", "ar": "سعة الصاروخ للعامل N"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-stack-size", "ar": "حجم الكومة للعامل N"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-tooltip", "ar": "اختياري، عند تحديده يمكن استخدام هذا المتغير في الصيغ أدناه."}
+{"module": "core", "key": "gui-blueprint/components-tooltip", "ar": "__ALT_CONTROL_RIGHT_CLICK__1__ لإزالة كل المكونات من هذا النوع.\\n__ALT_CONTROL_LEFT_CLICK__1__ لإعادة كل المكونات من هذا النوع."}
+{"module": "core", "key": "gui-blueprint/description", "ar": "الوصف"}
+{"module": "core", "key": "gui-blueprint/grid-position-tooltip", "ar": "__CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + __CONTROL_STYLE_END____CONTROL_LEFT_CLICK__ في المعاينة لتغيير موضع الشبكة."}
+{"module": "core", "key": "gui-bonus/beacon-distribution", "ar": "معدِّل توزيع برج المنضمات"}
+{"module": "core", "key": "gui-bonus/belt-stack-size-bonus", "ar": "مكافأة حجم الكومة على الحزام"}
+{"module": "core", "key": "gui-bonus/bulk-inserter-capacity-bonus", "ar": "سعة الذراع الآلي الكبير"}
+{"module": "core", "key": "gui-bonus/cargo-unit-speed-bonus", "ar": "مكافأة سرعة وحدات الشحن"}
+{"module": "core", "key": "gui-bonus/productivity-bonus", "ar": "مكافأة الإنتاجية"}
+{"module": "core", "key": "gui-browse-games/has-friends", "ar": "أصدقاء Steam في اللعبة"}
+{"module": "core", "key": "gui-browse-games/is-favourited", "ar": "في المفضلة"}
+{"module": "core", "key": "gui-car/drive-remotely", "ar": "القيادة عن بُعد"}
+{"module": "core", "key": "gui-car/driven-physically-by", "ar": "يقودها فعلياً __1__"}
+{"module": "core", "key": "gui-car/driven-remotely-by", "ar": "يقودها عن بُعد __1__"}
+{"module": "core", "key": "gui-car/stop-driving", "ar": "إيقاف القيادة"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/can-upload-later", "ar": "يمكنك أيضاً اختيار رفع لعبتك (أو إعادة رفعها) لاحقاً من قائمة اللعبة."}
+{"module": "core", "key": "gui-chartbundle-upload-screen/comment", "ar": "تعليق"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/login", "ar": "تسجيل الدخول"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/only-one-slot", "ar": "رفع اللعبة الحالية سيستبدل اللعبة السابقة!"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/title", "ar": "العنوان"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload", "ar": "رفع"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-charts", "ar": "خرائط كواكبك ومنصاتك، بما فيها أيقونات الوصفات والعلامات وأسماء المحطات."}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-game", "ar": "ارفع لعبتك إلى مجرة المشاهير"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-game-message", "ar": "[font=default-bold]شكراً لإكمالك عصر الفضاء!\\n\\nيمكنك الآن رفع لقطة من لعبتك إلى خريطة الفضاء في factorio.com.[/font]\\n\\n وستحتوي على ما يلي:"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-metadata", "ar": "بذرة الخريطة وعدد اللاعبين والمودات."}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-statistics", "ar": "إحصاءات الإنتاج والقتل والطاقة."}
+{"module": "core", "key": "gui-chartbundle-upload-screen/you-need-to-login", "ar": "يجب تسجيل الدخول لرفع خريطتك."}
+{"module": "core", "key": "gui-control-behavior-modes-guis/entire-belt-hold-mode", "ar": "استمرار (كل الأحزمة)"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/entire-belt-hold-mode-description-belt", "ar": "تُرسل الإشارة باستمرار طالما بقيت العناصر على هذا الحزام أو على الأحزمة المتصلة به مباشرة من الأمام والخلف. تنقطع الأحزمة عند التحميل الجانبي وداخل المقسمات."}
+{"module": "core", "key": "gui-control-behavior-modes-guis/fluid-temperature", "ar": "درجة حرارة السائل"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/hub-damage-taken-signal", "ar": "الضرر"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/hub-speed-signal", "ar": "السرعة"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lab-technology-level-signal", "ar": "المستوى"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-blue", "ar": "أزرق"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-green", "ar": "أخضر"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-red", "ar": "أحمر"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-rgb", "ar": "ألوان RGB"}

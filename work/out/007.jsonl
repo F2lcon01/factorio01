@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-control-behavior-modes-guis/priority", "ar": "الأولوية"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/priority-description", "ar": "أولوية محطة القطار"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-channel", "ar": "القناة"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-surface", "ar": "السطح"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-surface-description", "ar": "ستُبث الإشارات إلى كل الرادارات في وضع السطح على السطح نفسه."}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-universe", "ar": "الكون"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-universe-description", "ar": "ستُبث الإشارات إلى كل الرادارات في وضع الكون على القناة نفسها."}
+{"module": "core", "key": "gui-control-behavior-modes-guis/roboport-count", "ar": "مراكز الروبوتات في الشبكة"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/temperature", "ar": "درجة الحرارة"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/temperature-description", "ar": "درجة الحرارة"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-harvesting", "ar": "تفعيل شرط الحصاد"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-harvesting-description", "ar": "عند التفعيل، لا يحصد البرج إلا عندما يتحقق الشرط."}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-planting", "ar": "تفعيل شرط الزراعة"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-planting-description", "ar": "عند التفعيل، لا يزرع البرج إلا عندما يتحقق الشرط."}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-read-contents-description", "ar": "يقرأ محتوى الآلة: البذور المراد زراعتها والنباتات المحصودة."}
+{"module": "core", "key": "gui-control-behavior-modes/assembler-read-contents-description", "ar": "يقرأ محتوى الآلة: المكونات والمنتجات وخانات المهملات والعناصر/السوائل قيد الصنع."}
+{"module": "core", "key": "gui-control-behavior-modes/assembler-read-contents-include-in-crafting", "ar": "تضمين ما قيد الصنع"}
+{"module": "core", "key": "gui-control-behavior-modes/assembler-read-contents-include-in-crafting-description", "ar": "المكونات التي تشكل جزءاً من الوصفة قيد الصنع."}
+{"module": "core", "key": "gui-control-behavior-modes/asteroid-collector-read-contents-include-hands", "ar": "تضمين الأيدي"}
+{"module": "core", "key": "gui-control-behavior-modes/asteroid-collector-read-contents-include-hands-description", "ar": "قطع الكويكبات في أيدي الجامع"}
+{"module": "core", "key": "gui-control-behavior-modes/close-signal-description", "ar": "عندما يتحقق الشرط المحدد، تحاول جعل هذه الإشارة حمراء وإيقاف مرور أي قطارات.\\nإذا لم يستطع قطار التوقف في الوقت المناسب (الإشارة صفراء) أو كان يعبر بالفعل (الإشارة حمراء)، فلن توقف الإشارة ذلك القطار.\\nملاحظة: غالباً ما يتوقف القطار عند الإشارة ولا يحاول إيجاد مسار بديل حتى لو كان متاحاً."}
+{"module": "core", "key": "gui-control-behavior-modes/container-read-empty-slots", "ar": "قراءة الخانات الفارغة"}
+{"module": "core", "key": "gui-control-behavior-modes/container-read-empty-slots-description", "ar": "يرسل عدد الخانات الفارغة في المخزون الرئيسي لهذا الكيان. تُتجاهل الخانات المقيّدة."}
+{"module": "core", "key": "gui-control-behavior-modes/container-set-requests-description", "ar": "يضبط الطلبات اللوجستية للصندوق بناءً على الإشارات من الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/enable-if", "ar": "التفعيل إذا"}
+{"module": "core", "key": "gui-control-behavior-modes/enable-if-description", "ar": "شغّل هذا الكيان فقط عندما يتحقق الشرط."}
+{"module": "core", "key": "gui-control-behavior-modes/enable-if-train-stop-description", "ar": "شغّل هذا الكيان فقط عندما يتحقق الشرط.\\nعندما لا يتحقق الشرط، تُعد محطة القطار ممتلئة ولن تُرسل إليها قطارات جديدة."}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-damage-taken", "ar": "قراءة الضرر المتلقى"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-damage-taken-description", "ar": "يرسل مقدار الضرر الذي تلقته المنصة منذ بدء الرحلة."}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-from", "ar": "قراءة الانطلاق من"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-from-description", "ar": "يرسل الموقع عند بداية المسار الفضائي الذي تسير عليه المنصة."}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-to", "ar": "قراءة الاتجاه إلى"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-to-description", "ar": "يرسل الموقع عند نهاية المسار الفضائي الذي تسير عليه المنصة. لتمييز هذه الإشارة عن إشارة \"الانطلاق من\"، تُرسل هذه الإشارة بالقيمة 2."}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-speed", "ar": "قراءة السرعة"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-speed-description", "ar": "يرسل السرعة الحالية للمنصة."}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-contents", "ar": "قراءة المحتويات"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-contents-description", "ar": "يقرأ محتوى المختبر: حزم العلوم وخانات المهملات."}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-research-cost", "ar": "قراءة تكلفة البحث"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-research-cost-description", "ar": "يقرأ حزم العلوم اللازمة للبحث الحالي."}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-technology-level", "ar": "قراءة مستوى التقنية"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-technology-level-description", "ar": "يقرأ مستوى التقنية التي يجري بحثها حالياً."}
+{"module": "core", "key": "gui-control-behavior-modes/lab-set-research", "ar": "ضبط البحث"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-set-research-description", "ar": "يضبط البحث النشط على أول إدخال مستوفٍ."}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-color-mapping", "ar": "ربط الألوان"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-color-mapping-description", "ar": "يُحدد اللون بناءً على إشارات الألوان المقدمة."}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-components", "ar": "مكونات اللون"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-components-description", "ar": "يمكن تحديد اللون بإشارات منفصلة للأحمر والأخضر والأزرق. يجب أن تكون قيمها من 0 إلى 255."}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-packed-rgb", "ar": "RGB مدمج"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-packed-rgb-description", "ar": "يُقدم اللون كقيمة RGB واحدة بترميز سداسي عشري. يجب أن تكون القيمة من 0 إلى 16777215."}
+{"module": "core", "key": "gui-control-behavior-modes/landing-pad-set-requests-description", "ar": "يضبط الطلبات اللوجستية لمنصة هبوط الحمولة بناءً على الإشارات من الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/none-read-description", "ar": "لا تقرأ أي معلومات من هذا الكيان."}
+{"module": "core", "key": "gui-control-behavior-modes/platform-read-contents-description", "ar": "يقرأ محتويات مركز المنصة ويرسلها إلى الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/platform-set-requests-description", "ar": "يضبط الطلبات اللوجستية لمركز المنصة بناءً على الإشارات من الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/read-ammo", "ar": "قراءة الذخيرة"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ammo-description", "ar": "يُخرج ذخيرة البرج، مع احتساب العناصر والسوائل حسب الحالة."}
+{"module": "core", "key": "gui-control-behavior-modes/read-fluid-temperature", "ar": "قراءة درجة حرارة السائل"}
+{"module": "core", "key": "gui-control-behavior-modes/read-fuel", "ar": "قراءة الوقود"}
+{"module": "core", "key": "gui-control-behavior-modes/read-fuel-description", "ar": "يقرأ مخزون الوقود والوقود المحترق حالياً"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ingredients", "ar": "قراءة المكونات"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ingredients-description", "ar": "يُخرج المكونات المطلوبة للوصفة المضبوطة حالياً."}
+{"module": "core", "key": "gui-control-behavior-modes/read-logistic-network-requests", "ar": "قراءة طلبات الشبكة اللوجستية"}
+{"module": "core", "key": "gui-control-behavior-modes/read-logistic-network-requests-description", "ar": "يقرأ طلبات العناصر غير المستوفاة من الشبكة اللوجستية لمركز الروبوتات هذا ويرسلها إلى الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/read-orbital-requests", "ar": "قراءة الطلبات المدارية"}
+{"module": "core", "key": "gui-control-behavior-modes/read-orbital-requests-description", "ar": "يُخرج مجموع كل الطلبات اللوجستية غير المستوفاة من منصات الفضاء الموجودة حالياً في مدار هذا الكوكب.\\nلا يشمل الطلبات بين المنصات."}
+{"module": "core", "key": "gui-control-behavior-modes/read-pipeline-contents", "ar": "قراءة محتويات خط الأنابيب"}
+{"module": "core", "key": "gui-control-behavior-modes/read-pipeline-contents-description", "ar": "يقرأ محتويات خط الأنابيب ويرسلها إلى الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/read-recipe-finished", "ar": "قراءة اكتمال الوصفة"}
+{"module": "core", "key": "gui-control-behavior-modes/read-recipe-finished-description", "ar": "يُخرج الإشارة المحددة لمدة تكة واحدة عند اكتمال الوصفة."}
+{"module": "core", "key": "gui-control-behavior-modes/read-resources-description", "ar": "يقرأ كمية الموارد المتوقعة من هذا الحفار/مضخة النفط ويرسلها إلى الدارة الكهربائية.\\nبالنسبة للموارد اللانهائية، يقرأ معدل التنقيب غير المعدّل.\\nتُحدَّث القيمة كل 5 ثوان."}
+{"module": "core", "key": "gui-control-behavior-modes/read-signal-description", "ar": "يقرأ لون إشارة السكك الحديدية ويرسل إشارة الدارة الكهربائية المحددة أدناه.\\nإذا كانت إشارة السكك الحديدية حمراء لأنها أُغلقت من الدارة الكهربائية، فلن يُرسل شيء."}
+{"module": "core", "key": "gui-control-behavior-modes/read-temperature", "ar": "قراءة درجة الحرارة"}
+{"module": "core", "key": "gui-control-behavior-modes/read-temperature-description", "ar": "يقرأ درجة حرارة المفاعل"}
+{"module": "core", "key": "gui-control-behavior-modes/read-transfers", "ar": "قراءة عمليات النقل"}
+{"module": "core", "key": "gui-control-behavior-modes/read-transfers-description", "ar": "يقرأ عدد العناصر المنقولة ويرسلها إلى الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/read-working", "ar": "قراءة حالة العمل"}
+{"module": "core", "key": "gui-control-behavior-modes/read-working-description", "ar": "يُخرج الإشارة إذا كانت الآلة تعمل."}
+{"module": "core", "key": "gui-control-behavior-modes/rocket-silo-read-launched", "ar": "قراءة الإطلاق"}
+{"module": "core", "key": "gui-control-behavior-modes/rocket-silo-read-launched-description", "ar": "يرسل نبضة لمدة تكة واحدة بإشارة المُخرج المحددة عند إطلاق صاروخ."}
+{"module": "core", "key": "gui-control-behavior-modes/send-to-platform", "ar": "إرسال إلى المنصة"}
+{"module": "core", "key": "gui-control-behavior-modes/send-to-platform-description", "ar": "يرسل محتويات الدارة الكهربائية إلى المنصة لاستخدامها في شروط الانتظار."}
+{"module": "core", "key": "gui-control-behavior-modes/set-filter", "ar": "ضبط المرشح"}
+{"module": "core", "key": "gui-control-behavior-modes/set-filter-description", "ar": "يضبط المرشح بناءً على الإشارات من الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/set-filters-description", "ar": "يضبط المرشحات بناءً على الإشارات من الدارة الكهربائية."}
+{"module": "core", "key": "gui-control-behavior-modes/set-priority", "ar": "ضبط الأولوية"}
+{"module": "core", "key": "gui-control-behavior-modes/set-priority-description", "ar": "يضبط أولوية محطة القطار التي تحدد المحطات التي تقصدها القطارات أولاً."}
+{"module": "core", "key": "gui-control-behavior-modes/set-recipe", "ar": "ضبط الوصفة"}
+{"module": "core", "key": "gui-control-behavior-modes/set-recipe-description", "ar": "يضبط الوصفة من أول إشارة وصفة صالحة، أو أول إشارة عنصر صالحة، أو أول إشارة كيان صالحة."}
+{"module": "core", "key": "gui-control-behavior-modes/set-stack-size", "ar": "ضبط حجم اليد"}
+{"module": "core", "key": "gui-control-behavior-modes/set-stack-size-description", "ar": "يضبط أقصى حجم كومة في يد هذا الذراع الآلي بناءً على قيمة إشارة الدارة الكهربائية المحددة."}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-ignore-unlisted", "ar": "ضبط تجاهل الأهداف غير المدرجة"}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-ignore-unlisted-description", "ar": "يجعل البرج يتجاهل الأهداف غير الموجودة في قائمة أولوياته إذا تحقق الشرط."}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-priorities", "ar": "ضبط قائمة الأولويات"}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-priorities-description", "ar": "يضبط قائمة أولويات البرج من إشارات الكيانات، مرتبة حسب قيمة الإشارة مع تجاهل القيم السالبة."}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-left", "ar": "اليسار"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-right", "ar": "اليمين"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-filter", "ar": "ضبط المرشح"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-filter-description", "ar": ""}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-input-side", "ar": "ضبط جهة الإدخال"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-input-side-description", "ar": ""}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-output-side", "ar": "ضبط جهة الإخراج"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-output-side-description", "ar": ""}
+{"module": "core", "key": "gui-control-behavior-modes/use-colors-description", "ar": "يضبط لون المصباح بناءً على إشارات الألوان.\\nإذا كانت قيمة إشارة لون أكبر من 0، فسيُظهر المصباح ذلك اللون.\\nإذا وُجدت عدة ألوان، فسيُستخدم واحد منها فقط."}
+{"module": "core", "key": "gui-control-behavior/connected-to-network", "ar": "متصل بـ:"}
+{"module": "core", "key": "gui-control-behavior/open-connected-network", "ar": "فتح الشبكة المتصلة"}
+{"module": "core", "key": "gui-control-settings/controller-icons-auto", "ar": "كشف تلقائي (__1__)"}
+{"module": "core", "key": "gui-control-settings/cursor-sensitivity", "ar": "حساسية عصا المؤشر"}
+{"module": "core", "key": "gui-control-settings/cursor-sensitivity-description", "ar": "مدى سرعة تحرك المؤشر استجابةً لحركة العصا."}
+{"module": "core", "key": "gui-control-settings/enabled", "ar": "مفعّل"}
+{"module": "core", "key": "gui-control-settings/input-method", "ar": "طريقة الإدخال:"}
+{"module": "core", "key": "gui-control-settings/input-not-found-controller", "ar": "طريقة الإدخال المحددة هي يد التحكم، لكن لا توجد يد تحكم متصلة."}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode", "ar": "وضع الفأرة"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode-disabled", "ar": "معطّل"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode-left", "ar": "Joy-Con 2 الأيسر"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode-right", "ar": "Joy-Con 2 الأيمن"}
+{"module": "core", "key": "gui-control-settings/keyboard-and-mouse-settings", "ar": "إعدادات لوحة المفاتيح والفأرة"}
+{"module": "core", "key": "gui-control-settings/mouse-sensitivity", "ar": "حساسية الفأرة"}
+{"module": "core", "key": "gui-control-settings/movement-sensitivity", "ar": "حساسية عصا الحركة"}
+{"module": "core", "key": "gui-control-settings/movement-sensitivity-description", "ar": "مدى سرعة تحرك الخريطة في العرض عن بُعد استجابةً لحركة العصا."}
+{"module": "core", "key": "gui-control-settings/swap-buttons", "ar": "تبديل __1__ و__2__"}
+{"module": "core", "key": "gui-control-settings/swap-buttons-description", "ar": "بدّل زري التأكيد والكتف ليسهل النقر في وضع الفأرة."}

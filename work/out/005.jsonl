@@ -1,0 +1,120 @@
+{"module": "core", "key": "description/trigger-radius", "ar": "نصف قطر التفعيل"}
+{"module": "core", "key": "description/turret-ignores-unprioritised", "ar": "سيتجاهل الأهداف الأخرى."}
+{"module": "core", "key": "description/turret-priority-list", "ar": "أولويات الأهداف"}
+{"module": "core", "key": "description/vehicle-friction-modifier", "ar": "احتكاك المركبة"}
+{"module": "core", "key": "entity-status/armed", "ar": "مُسلّح"}
+{"module": "core", "key": "entity-status/broken", "ar": "معطوب"}
+{"module": "core", "key": "entity-status/computing-navigation", "ar": "جارٍ حساب المسار"}
+{"module": "core", "key": "entity-status/destination-stop-full", "ar": "محطة الوجهة ممتلئة"}
+{"module": "core", "key": "entity-status/frozen", "ar": "متجمد"}
+{"module": "core", "key": "entity-status/ghost", "ar": "شبح"}
+{"module": "core", "key": "entity-status/hatches-blocked-by-elevated-rail", "ar": "الفتحات محجوبة بسكك حديدية مرتفعة"}
+{"module": "core", "key": "entity-status/input-fluid-too-cold", "ar": "السائل المُدخل بارد جداً"}
+{"module": "core", "key": "entity-status/input-fluid-too-hot", "ar": "السائل المُدخل ساخن جداً"}
+{"module": "core", "key": "entity-status/no-filter", "ar": "لا يوجد مرشح"}
+{"module": "core", "key": "entity-status/no-food", "ar": "لا يوجد طعام"}
+{"module": "core", "key": "entity-status/no-nutrients", "ar": "لا توجد مغذيات"}
+{"module": "core", "key": "entity-status/no-path", "ar": "لا يوجد مسار"}
+{"module": "core", "key": "entity-status/no-spot-seedable-by-inputs", "ar": "لا يوجد موضع قابل للزراعة بالمُدخلات"}
+{"module": "core", "key": "entity-status/not-connected-to-hub-or-pad", "ar": "غير متصل بالمركز أو منصة الهبوط"}
+{"module": "core", "key": "entity-status/not-enough-space-in-output", "ar": "لا توجد مساحة كافية في المُخرج"}
+{"module": "core", "key": "entity-status/not-enough-thrust", "ar": "الدفع غير كافٍ"}
+{"module": "core", "key": "entity-status/on-the-way", "ar": "في الطريق"}
+{"module": "core", "key": "entity-status/paused", "ar": "متوقف مؤقتاً"}
+{"module": "core", "key": "entity-status/pipeline-overextended", "ar": "خط الأنابيب ممتد أكثر من اللازم"}
+{"module": "core", "key": "entity-status/recipe-is-parameter", "ar": "الوصفة عامل متغير"}
+{"module": "core", "key": "entity-status/recipe-not-researched", "ar": "الوصفة غير مبحوثة"}
+{"module": "core", "key": "entity-status/thrust-not-required", "ar": "الدفع غير مطلوب"}
+{"module": "core", "key": "entity-status/too-far-from-pad-to-unload", "ar": "بعيد جداً عن منصة الهبوط للتفريغ"}
+{"module": "core", "key": "entity-status/waiting-at-stop", "ar": "ينتظر في المحطة"}
+{"module": "core", "key": "entity-status/waiting-for-more-items", "ar": "بانتظار المزيد من العناصر"}
+{"module": "core", "key": "entity-status/waiting-for-plants-to-grow", "ar": "بانتظار نمو النباتات"}
+{"module": "core", "key": "entity-status/waiting-for-rocket-to-arrive", "ar": "بانتظار وصول الصاروخ"}
+{"module": "core", "key": "entity-status/waiting-for-space-in-destination", "ar": "الهدف ممتلئ"}
+{"module": "core", "key": "entity-status/waiting-for-space-in-platform-hub", "ar": "بانتظار مساحة في مركز المنصة"}
+{"module": "core", "key": "entity-status/waiting-for-upgrade", "ar": "بانتظار الترقية"}
+{"module": "core", "key": "entity-status/waiting-in-orbit", "ar": "ينتظر في المدار"}
+{"module": "core", "key": "entity-status/waiting-to-clear-drop-slots", "ar": "بانتظار إخلاء خانات الإسقاط"}
+{"module": "core", "key": "error/crash-to-desktop-message", "ar": "حدث خطأ غير متوقع. إذا كنت تشغّل أحدث إصدار من اللعبة، يمكنك مساعدتنا في حل المشكلة بنشر محتويات ملف السجل في منتديات Factorio.\\nيُرجى أيضاً إرفاق ملف (ملفات) الحفظ، وأي مودات قد تستخدمها، وأي خطوات تعرفها لإعادة إنتاج التعطل."}
+{"module": "core", "key": "error/low-available-space-in-steam-storage", "ar": "لم يتبقَّ لديك سوى __1__ ميغابايت من المساحة الحرة في تخزين Steam البعيد. إذا نفدت المساحة المتاحة، فقد لا تتمكن اللعبة من تخزين إعداداتك ومكتبة المخططات، وقد تفقد تقدمك إن كنت تعتمد على Steam Cloud لمزامنة ملفات الحفظ بين الحواسيب.\\nننصحك بحذف بعض ملفات الحفظ القديمة باستخدام زر الحذف في نافذة تحميل اللعبة لتحرير المساحة."}
+{"module": "core", "key": "factoriopedia/accepted-science-packs", "ar": "حزم العلوم المقبولة"}
+{"module": "core", "key": "factoriopedia/accepted-seeds", "ar": "البذور المقبولة"}
+{"module": "core", "key": "factoriopedia/allows-placement-of", "ar": "يسمح بوضع"}
+{"module": "core", "key": "factoriopedia/alternative-recipes", "ar": "وصفات بديلة"}
+{"module": "core", "key": "factoriopedia/ammo-category", "ar": "فئة الذخيرة"}
+{"module": "core", "key": "factoriopedia/appears-on", "ar": "يظهر على"}
+{"module": "core", "key": "factoriopedia/asteroid-chunk", "ar": "قطعة كويكب"}
+{"module": "core", "key": "factoriopedia/asteroids", "ar": "الكويكبات"}
+{"module": "core", "key": "factoriopedia/beacon-transmission-strength", "ar": "قوة إرسال برج المنضمات"}
+{"module": "core", "key": "factoriopedia/buildable-on", "ar": "قابل للبناء على"}
+{"module": "core", "key": "factoriopedia/burned-in", "ar": "يُحرق في"}
+{"module": "core", "key": "factoriopedia/can-be-destroyed-by", "ar": "يمكن تدميره بواسطة"}
+{"module": "core", "key": "factoriopedia/can-be-placed-on", "ar": "يمكن وضعه على"}
+{"module": "core", "key": "factoriopedia/can-craft", "ar": "يمكنه صنع"}
+{"module": "core", "key": "factoriopedia/can-extract-from", "ar": "يمكنه الاستخراج من"}
+{"module": "core", "key": "factoriopedia/can-mine", "ar": "يمكنه تنقيب"}
+{"module": "core", "key": "factoriopedia/can-plant-seeds", "ar": "يمكنه زراعة البذور"}
+{"module": "core", "key": "factoriopedia/cargo-unit-launched-by", "ar": "يُطلق بواسطة"}
+{"module": "core", "key": "factoriopedia/cargo-unit-received-by", "ar": "يُستقبل بواسطة"}
+{"module": "core", "key": "factoriopedia/collected-by", "ar": "يُجمع بواسطة"}
+{"module": "core", "key": "factoriopedia/connections", "ar": "الاتصالات"}
+{"module": "core", "key": "factoriopedia/consumed-in", "ar": "يُستهلك في"}
+{"module": "core", "key": "factoriopedia/container-spawned-by", "ar": "الحاوية ناتجة عن"}
+{"module": "core", "key": "factoriopedia/contains", "ar": "يحتوي على"}
+{"module": "core", "key": "factoriopedia/crafted-on", "ar": "يُصنع في"}
+{"module": "core", "key": "factoriopedia/current-evolution-on-planet", "ar": "عامل التطور الحالي على __1__"}
+{"module": "core", "key": "factoriopedia/current-platform-position", "ar": "الموضع الحالي على المسار"}
+{"module": "core", "key": "factoriopedia/digested-by", "ar": "يهضمه"}
+{"module": "core", "key": "factoriopedia/eaten-by", "ar": "يأكله"}
+{"module": "core", "key": "factoriopedia/efficiency", "ar": "الكفاءة"}
+{"module": "core", "key": "factoriopedia/empty-barrel-recipes", "ar": "وصفات تفريغ البراميل"}
+{"module": "core", "key": "factoriopedia/enemy-spawn-probability", "ar": "احتمال ظهور الأعداء"}
+{"module": "core", "key": "factoriopedia/entity", "ar": "كيان"}
+{"module": "core", "key": "factoriopedia/exclusive-entities", "ar": "كيانات حصرية"}
+{"module": "core", "key": "factoriopedia/exclusive-entities-tooltip", "ar": "لا يمكن بناء الكيانات المدرجة إلا على هذا السطح."}
+{"module": "core", "key": "factoriopedia/exclusive-recipes", "ar": "وصفات حصرية"}
+{"module": "core", "key": "factoriopedia/exclusive-recipes-tooltip", "ar": "لا يمكن استخدام الوصفات المدرجة إلا على هذا السطح."}
+{"module": "core", "key": "factoriopedia/extracted-by", "ar": "يُستخرج بواسطة"}
+{"module": "core", "key": "factoriopedia/fill-barrel-recipes", "ar": "وصفات تعبئة البراميل"}
+{"module": "core", "key": "factoriopedia/fluid", "ar": "سائل"}
+{"module": "core", "key": "factoriopedia/fluid-usage", "ar": "استخدام السائل"}
+{"module": "core", "key": "factoriopedia/gathered-from", "ar": "يُجمع من"}
+{"module": "core", "key": "factoriopedia/generated-by", "ar": "يُولَّد بواسطة"}
+{"module": "core", "key": "factoriopedia/grows-from", "ar": "ينمو من"}
+{"module": "core", "key": "factoriopedia/grows-into", "ar": "ينمو إلى"}
+{"module": "core", "key": "factoriopedia/grows-on", "ar": "ينمو على"}
+{"module": "core", "key": "factoriopedia/ingredients", "ar": "المكونات"}
+{"module": "core", "key": "factoriopedia/item", "ar": "عنصر"}
+{"module": "core", "key": "factoriopedia/launches-cargo-units", "ar": "يُطلق"}
+{"module": "core", "key": "factoriopedia/length", "ar": "الطول"}
+{"module": "core", "key": "factoriopedia/loot", "ar": "الغنائم"}
+{"module": "core", "key": "factoriopedia/looted-from", "ar": "يُغنم من"}
+{"module": "core", "key": "factoriopedia/made-in", "ar": "يُصنع في"}
+{"module": "core", "key": "factoriopedia/needed-for", "ar": "مطلوب لـ"}
+{"module": "core", "key": "factoriopedia/obtained-by-launching", "ar": "يُحصل عليه بإطلاق"}
+{"module": "core", "key": "factoriopedia/pin-tooltip", "ar": "عند التثبيت، لن تُغلق النافذة عند التفاعل مع بقية اللعبة."}
+{"module": "core", "key": "factoriopedia/planet", "ar": "كوكب"}
+{"module": "core", "key": "factoriopedia/planted-by", "ar": "يُزرع بواسطة"}
+{"module": "core", "key": "factoriopedia/produced-by", "ar": "يُنتج بواسطة"}
+{"module": "core", "key": "factoriopedia/produces", "ar": "يُنتج"}
+{"module": "core", "key": "factoriopedia/products", "ar": "المنتجات"}
+{"module": "core", "key": "factoriopedia/receives-cargo-units", "ar": "يستقبل"}
+{"module": "core", "key": "factoriopedia/recycling-recipes", "ar": "وصفات إعادة التدوير"}
+{"module": "core", "key": "factoriopedia/related", "ar": "ذو صلة"}
+{"module": "core", "key": "factoriopedia/show-unresearched", "ar": "إظهار غير المبحوث"}
+{"module": "core", "key": "factoriopedia/similar-recipes", "ar": "وصفات مشابهة"}
+{"module": "core", "key": "factoriopedia/soil-for", "ar": "تربة لـ"}
+{"module": "core", "key": "factoriopedia/source-of", "ar": "مصدر لـ"}
+{"module": "core", "key": "factoriopedia/space-connection-from", "ar": "من"}
+{"module": "core", "key": "factoriopedia/space-connection-to", "ar": "إلى"}
+{"module": "core", "key": "factoriopedia/spawned-enemies", "ar": "الأعداء الناشئون"}
+{"module": "core", "key": "factoriopedia/spawner-health", "ar": "صحة العش"}
+{"module": "core", "key": "factoriopedia/spawns-container", "ar": "ينشئ حاوية"}
+{"module": "core", "key": "factoriopedia/spawns-upon-spoilage-of", "ar": "ينشأ عند تلف"}
+{"module": "core", "key": "factoriopedia/spoilage-from", "ar": "مواد تالفة من"}
+{"module": "core", "key": "factoriopedia/surface", "ar": "السطح"}
+{"module": "core", "key": "factoriopedia/surface-conditions-construction-suffix", "ar": "البناء"}
+{"module": "core", "key": "factoriopedia/surface-conditions-crafting", "ar": "ظروف السطح: الصنع"}
+{"module": "core", "key": "factoriopedia/surface-conditions-recipe-suffix", "ar": "الصنع"}
+{"module": "core", "key": "factoriopedia/surface-creation-item", "ar": "عنصر إنشاء السطح"}
+{"module": "core", "key": "factoriopedia/surface-creation-item-tooltip", "ar": "العنصر الذي يجب إرساله بصاروخ لإنشاء منصة الفضاء."}
