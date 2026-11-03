@@ -15,3 +15,4 @@ core:gui-control-settings/controller-icons-steamdeck
 core:gui-control-settings/controller-icons-ps
 core:gui-control-settings/controller-icons-joycon
 core:gui-interface-settings/nintendo-switch
+core:gui-graphics-settings/linux-preferred-video-driver-wayland

@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-migrated-content/removed-asteroid-chunk", "ar": "قطع كويكبات محذوفة"}
+{"module": "core", "key": "gui-migrated-content/removed-collision-layer", "ar": "طبقات تصادم محذوفة"}
+{"module": "core", "key": "gui-migrated-content/removed-custom-event", "ar": "أحداث مخصصة محذوفة"}
+{"module": "core", "key": "gui-migrated-content/removed-equipment", "ar": "معدات محذوفة"}
+{"module": "core", "key": "gui-migrated-content/removed-quality", "ar": "جودات محذوفة"}
+{"module": "core", "key": "gui-migrated-content/removed-space-location", "ar": "مواقع فضائية محذوفة"}
+{"module": "core", "key": "gui-mining-drill/blacklist", "ar": "القائمة السوداء"}
+{"module": "core", "key": "gui-mining-drill/filter", "ar": "المرشح"}
+{"module": "core", "key": "gui-mining-drill/whitelist", "ar": "القائمة البيضاء"}
+{"module": "core", "key": "gui-mod-info/mod-portal-page", "ar": "بوابة المودات"}
+{"module": "core", "key": "gui-mod-info/recommended-dependency", "ar": "(موصى به)"}
+{"module": "core", "key": "gui-mod-load-error/circular-dependencies", "ar": "اكتُشفت تبعيات دائرية"}
+{"module": "core", "key": "gui-mod-load-error/dependency-incompatible", "ar": "غير متوافق مع __1__"}
+{"module": "core", "key": "gui-mod-load-error/dependency-missing", "ar": "تبعية مطلوبة مفقودة: __1__"}
+{"module": "core", "key": "gui-mod-load-error/dependency-not-satisfied", "ar": "التبعية __1__ غير مستوفاة (النشط: __2__)"}
+{"module": "core", "key": "gui-mod-load-error/factorio-version-incompatible", "ar": "إصدار Factorio غير متوافق (الحالي: __1__، المطلوب: __2__)"}
+{"module": "core", "key": "gui-mod-load-error/manage-mods", "ar": "إدارة المودات"}
+{"module": "core", "key": "gui-mod-startup-settings-mismatch/description", "ar": "إعدادات بدء التشغيل لموداتك لا تطابق إعدادات الخادم الذي تتصل به.\\n\\nهل تريد تطبيق إعدادات بدء التشغيل الخاصة بالخادم وإعادة تشغيل اللعبة؟"}
+{"module": "core", "key": "gui-mods/bookmark", "ar": "إضافة إلى المحفوظات"}
+{"module": "core", "key": "gui-mods/cant-install-mod-error", "ar": "تعذر تثبيت كل التبعيات المطلوبة لـ __1__: __2__. هل تريد تثبيت المود دون تبعيات؟"}
+{"module": "core", "key": "gui-mods/cant-install-mod-no-compatible-release", "ar": "لا يوجد إصدار متوافق من __1__ في بوابة المودات."}
+{"module": "core", "key": "gui-mods/explore", "ar": "استكشاف"}
+{"module": "core", "key": "gui-mods/install-failed", "ar": "فشل تثبيت __1__: __2__"}
+{"module": "core", "key": "gui-mods/mod-selection-invalid", "ar": "إعداد المودات المحدد غير صالح. تبعيات بعض المودات غير مستوفاة."}
+{"module": "core", "key": "gui-mods/mod-selection-invalid-console", "ar": "إعداد المحتوى الإضافي المحدد غير صالح. تبعيات بعض المحتويات الإضافية غير مستوفاة."}
+{"module": "core", "key": "gui-mods/remove-bookmark", "ar": "إزالة من المحفوظات"}
+{"module": "core", "key": "gui-mods/sync-mods-with-server", "ar": "موداتك النشطة لا تطابق مودات الخادم. هل تريد مزامنة موداتك مع الخادم؟"}
+{"module": "core", "key": "gui-mods/title-console", "ar": "محتوى إضافي (DLC)"}
+{"module": "core", "key": "gui-mods/unconfirmed-mod-changes", "ar": "__1__ __plural_for_parameter__1__{1=مود تغيّر|2=مودان تغيّرا|rest=مودات تغيّرت}__."}
+{"module": "core", "key": "gui-mods/unconfirmed-mod-installed", "ar": "__1__ __plural_for_parameter__1__{1=مود ثُبّت|2=مودان ثُبّتا|rest=مودات ثُبّتت}__."}
+{"module": "core", "key": "gui-mods/unconfirmed-mod-updated", "ar": "__1__ __plural_for_parameter__1__{1=مود حُدّث|2=مودان حُدّثا|rest=مودات حُدّثت}__."}
+{"module": "core", "key": "gui-mods/waiting-for-mod-portal", "ar": "بانتظار بوابة المودات..."}
+{"module": "core", "key": "gui-multiplayer-lobby/auto-pause-while-players-connect", "ar": "إيقاف اللعبة مؤقتاً تلقائياً أثناء اتصال أحد اللاعبين."}
+{"module": "core", "key": "gui-network-selector/green-connected", "ar": "تبديل مرشح الشبكة الخضراء"}
+{"module": "core", "key": "gui-network-selector/green-label", "ar": "G"}
+{"module": "core", "key": "gui-network-selector/green-not-connected", "ar": "الشبكة الخضراء غير متصلة"}
+{"module": "core", "key": "gui-network-selector/not-relevant", "ar": "اختيار الشبكة غير ذي صلة"}
+{"module": "core", "key": "gui-network-selector/red-connected", "ar": "تبديل مرشح الشبكة الحمراء"}
+{"module": "core", "key": "gui-network-selector/red-label", "ar": "R"}
+{"module": "core", "key": "gui-network-selector/red-not-connected", "ar": "الشبكة الحمراء غير متصلة"}
+{"module": "core", "key": "gui-new-space-platform/create", "ar": "إنشاء"}
+{"module": "core", "key": "gui-new-space-platform/name", "ar": "الاسم"}
+{"module": "core", "key": "gui-new-space-platform/planet", "ar": "الكوكب"}
+{"module": "core", "key": "gui-new-space-platform/position", "ar": "الموضع"}
+{"module": "core", "key": "gui-new-space-platform/starter-pack", "ar": "حزمة البداية"}
+{"module": "core", "key": "gui-new-space-platform/title", "ar": "منصة فضاء جديدة"}
+{"module": "core", "key": "gui-orbital-request/all", "ar": "الكل"}
+{"module": "core", "key": "gui-orbital-request/all-tooltip", "ar": "ستُطلب الشحنات من الكوكب ومن منصات الفضاء معاً."}
+{"module": "core", "key": "gui-orbital-request/any-location", "ar": "أي موقع"}
+{"module": "core", "key": "gui-orbital-request/custom-minimal-payload", "ar": "حد أدنى مخصص للحمولة"}
+{"module": "core", "key": "gui-orbital-request/custom-minimal-payload-too-high", "ar": "الحد الأدنى للحمولة (__1__) أكبر من أكبر حمولة ممكنة (__2__)."}
+{"module": "core", "key": "gui-orbital-request/custom-minimum-payload-tooltip", "ar": "خفّض الحد الأدنى لكمية العناصر التي يوصلها صاروخ واحد."}
+{"module": "core", "key": "gui-orbital-request/import-from", "ar": "الاستيراد من"}
+{"module": "core", "key": "gui-orbital-request/import-from-planet", "ar": "الاستيراد من الكوكب"}
+{"module": "core", "key": "gui-orbital-request/import-from-platforms", "ar": "الاستيراد من المنصات"}
+{"module": "core", "key": "gui-orbital-request/import-from-tooltip", "ar": "سيكون هذا المرشح نشطاً على الكوكب المحدد فقط.\\nالفراغ يعني أن المرشح سيكون نشطاً على كل الكواكب."}
+{"module": "core", "key": "gui-orbital-request/planet", "ar": "الكوكب"}
+{"module": "core", "key": "gui-orbital-request/planet-tooltip", "ar": "ستُطلب الشحنات من منصات إطلاق الصاروخ على الكوكب."}
+{"module": "core", "key": "gui-orbital-request/platforms", "ar": "المنصات"}
+{"module": "core", "key": "gui-orbital-request/platforms-tooltip", "ar": "ستُطلب الشحنات من منصات الفضاء في المدار فوق الكوكب."}
+{"module": "core", "key": "gui-orbital-request/set-orbital-request", "ar": "ضبط الطلب المداري"}
+{"module": "core", "key": "gui-other-settings-description/move-character-to-editor-on-editor-exit", "ar": "عند التفعيل، سيُنقل موقعك الفعلي في اللعبة إلى موقع المحرر. عند التعطيل، ستعود إلى موقعك الأصلي في اللعبة قبل فتح المحرر."}
+{"module": "core", "key": "gui-other-settings/delete-achievements-label-tooltip-modded", "ar": "سيحذف هذا كل إنجازات المودات نهائياً."}
+{"module": "core", "key": "gui-other-settings/enable-logitech-led-support", "ar": "تفعيل دعم Logitech LED"}
+{"module": "core", "key": "gui-other-settings/enable-razer-chroma-support", "ar": "تفعيل دعم Razer Chroma"}
+{"module": "core", "key": "gui-other-settings/enable-steelseries-gamesense-support", "ar": "تفعيل دعم SteelSeries GameSense"}
+{"module": "core", "key": "gui-other-settings/move-character-to-editor-on-editor-exit", "ar": "نقل اللاعب إلى موقع المحرر عند الخروج"}
+{"module": "core", "key": "gui-other-settings/proxy", "ar": "الخادم الوكيل"}
+{"module": "core", "key": "gui-other-settings/proxy-password", "ar": "كلمة مرور الخادم الوكيل"}
+{"module": "core", "key": "gui-other-settings/proxy-username", "ar": "اسم مستخدم الخادم الوكيل"}
+{"module": "core", "key": "gui-package-list/too-large-to-cloud-sync", "ar": "هذه اللعبة أكبر من أن تُزامن عبر سحابة Steam."}
+{"module": "core", "key": "gui-package-list/up-from-dir", "ar": "__1__/.."}
+{"module": "core", "key": "gui-permissions-names/AddDeciderCombinatorElseOutput", "ar": "إضافة مُخرج \"وإلا\" للدامج المقرر"}
+{"module": "core", "key": "gui-permissions-names/CancelSelectArea", "ar": "إلغاء تحديد المنطقة"}
+{"module": "core", "key": "gui-permissions-names/ChangeResearchCondition", "ar": "تغيير شرط البحث"}
+{"module": "core", "key": "gui-permissions-names/ChangeSelectArea", "ar": "تغيير تحديد المنطقة"}
+{"module": "core", "key": "gui-permissions-names/ChangeTrainStation", "ar": "تغيير محطة القطار"}
+{"module": "core", "key": "gui-permissions-names/DragDeciderCombinatorElseOutput", "ar": "سحب مُخرج \"وإلا\" للدامج المقرر"}
+{"module": "core", "key": "gui-permissions-names/DragResearchCondition", "ar": "سحب شرط البحث"}
+{"module": "core", "key": "gui-permissions-names/GuiInventoryAction", "ar": "إجراء في واجهة المخزون"}
+{"module": "core", "key": "gui-permissions-names/GuiInventoryBarChanged", "ar": "تغيير شريط المخزون في الواجهة"}
+{"module": "core", "key": "gui-permissions-names/GuiInventoryFilterChanged", "ar": "تغيير مرشح المخزون في الواجهة"}
+{"module": "core", "key": "gui-permissions-names/ModifyDeciderCombinatorElseOutput", "ar": "تعديل مُخرج \"وإلا\" للدامج المقرر"}
+{"module": "core", "key": "gui-permissions-names/OpenAlertsConfigGui", "ar": "فتح واجهة إعدادات التنبيهات"}
+{"module": "core", "key": "gui-permissions-names/OpenNewPlatformButtonFromRocketSilo", "ar": "زر فتح منصة جديدة من منصة إطلاق الصاروخ"}
+{"module": "core", "key": "gui-permissions-names/ProvidingToOtherPlatforms", "ar": "التزويد للمنصات الأخرى"}
+{"module": "core", "key": "gui-permissions-names/RemoveDeciderCombinatorElseOutput", "ar": "إزالة مُخرج \"وإلا\" للدامج المقرر"}
+{"module": "core", "key": "gui-permissions-names/SetControlBehaviorInputNetworks", "ar": "ضبط شبكات الإدخال لسلوك التحكم"}
+{"module": "core", "key": "gui-permissions-names/SetControlBehaviorOutputNetworks", "ar": "ضبط شبكات الإخراج لسلوك التحكم"}
+{"module": "core", "key": "gui-permissions-names/SetEquipmentEnergyProperty", "ar": "ضبط خاصية طاقة المعدات"}
+{"module": "core", "key": "gui-permissions-names/SetInfinityContainerLogisticMode", "ar": "ضبط الوضع اللوجستي للحاوية اللانهائية"}
+{"module": "core", "key": "gui-permissions-names/SetRocketSiloSendToOrbitAutomatedMode", "ar": "ضبط وضع الإرسال التلقائي إلى المدار لمنصة إطلاق الصاروخ"}
+{"module": "core", "key": "gui-permissions-names/StartSelectArea", "ar": "بدء تحديد المنطقة"}
+{"module": "core", "key": "gui-permissions-names/ToggleBlueprintSnapToGrid", "ar": "تبديل محاذاة المخطط مع الشبكة"}
+{"module": "core", "key": "gui-permissions-names/ToggleSelectedEntity", "ar": "تبديل الكيان المحدد"}
+{"module": "core", "key": "gui-permissions-names/ToggleTallEntityVisibility", "ar": "تبديل ظهور الكيانات الطويلة"}
+{"module": "core", "key": "gui-plant-entity/ticks-until-grown", "ar": "التكات حتى النمو"}
+{"module": "core", "key": "gui-player-management/online-players", "ar": "المتصلون: __1__/__2__"}
+{"module": "core", "key": "gui-production/title", "ar": "إنتاج __1__"}
+{"module": "core", "key": "gui-production/universe", "ar": "الكون"}
+{"module": "core", "key": "gui-programmable-speaker/global-playback", "ar": "الكون"}
+{"module": "core", "key": "gui-programmable-speaker/global-playback-description", "ar": "ستُسمع الأصوات التي يصدرها مكبر الصوت في كل مكان."}
+{"module": "core", "key": "gui-programmable-speaker/instrument", "ar": "الفئة/الآلة"}
+{"module": "core", "key": "gui-programmable-speaker/local-playback", "ar": "محلي"}
+{"module": "core", "key": "gui-programmable-speaker/local-playback-description", "ar": "ستُسمع الأصوات التي يصدرها مكبر الصوت ضمن نطاق السمع لمكبر الصوت."}
+{"module": "core", "key": "gui-programmable-speaker/note", "ar": "الصوت/النغمة"}
+{"module": "core", "key": "gui-programmable-speaker/playback-mode", "ar": "وضع التشغيل"}
+{"module": "core", "key": "gui-programmable-speaker/signal-value-is-volume", "ar": "قيمة الإشارة هي مستوى الصوت"}
+{"module": "core", "key": "gui-programmable-speaker/signal-value-is-volume-description", "ar": "تحدد قيمة إشارة الدارة الكهربائية المُدخلة مستوى صوت التشغيل كنسبة مئوية بين 0 و100. تُقصّ القيم الخارجة عن النطاق."}
+{"module": "core", "key": "gui-programmable-speaker/sound-settings", "ar": "إعدادات الصوت"}
+{"module": "core", "key": "gui-programmable-speaker/stop-playing-sounds", "ar": "إيقاف الأصوات الجارية"}
+{"module": "core", "key": "gui-programmable-speaker/stop-playing-sounds-description", "ar": "تغيّر إشارة الدارة الكهربائية المُدخلة سيوقف الأصوات الجارية فوراً بدلاً من انتظار انتهائها."}
+{"module": "core", "key": "gui-programmable-speaker/surface-playback", "ar": "السطح"}
+{"module": "core", "key": "gui-programmable-speaker/surface-playback-description", "ar": "ستُسمع الأصوات التي يصدرها مكبر الصوت في كل مكان على سطح مكبر الصوت."}
+{"module": "core", "key": "gui-quick-panel/shortcuts-next-page", "ar": "__1__: الصفحة التالية"}
+{"module": "core", "key": "gui-quick-panel/shortcuts-next-tab", "ar": "__1__: التبويب التالي"}
+{"module": "core", "key": "gui-quick-panel/shortcuts-previous-page", "ar": "__1__: الصفحة السابقة"}
+{"module": "core", "key": "gui-redo-action/add-wires-header", "ar": "إعادة إضافة"}
+{"module": "core", "key": "gui-redo-action/build-entities-header", "ar": "إعادة بناء"}
+{"module": "core", "key": "gui-redo-action/build-tiles-header", "ar": "إعادة وضع"}

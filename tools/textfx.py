@@ -14,7 +14,7 @@ INLINE = (r'__plural_for_parameter__\d+__\{[^}]*\}__'
 INLINE_RE = re.compile(INLINE)
 LTR = r"[A-Za-z0-9](?:[A-Za-z0-9 .,:/%+\-_'×]*[A-Za-z0-9%])?"
 UNIT_RE = re.compile(f'{INLINE}|{LTR}|.', re.S)
-MIRROR = dict(zip('()[]{}<>«»', ')(][}{><»«'))
+MIRROR = dict(zip('()[]{}<>«»≤≥', ')(][}{><»«≥≤'))  # Unicode Bidi_Mirrored pairs used in the game texts
 ARABIC_RE = re.compile('[\\u0600-\\u06FF\\uFB50-\\uFDFF\\uFE70-\\uFEFF]')  # logical or presentation forms
 TOOLTIP_RE = re.compile(r'(\[tooltip=)([^,\]]*)(,[^\]]*\])')  # [tooltip=visible text,locale-key]
 _RESHAPER = arabic_reshaper.ArabicReshaper(configuration={'delete_harakat': True})

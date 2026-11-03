@@ -3,8 +3,11 @@ import collections, hashlib, json, re, sys
 from tools.cfg import read_cfg
 from tools.paths import MODULES, ROOT, SRC, read_en
 
+RICH_TAGS = ('img|item|entity|technology|recipe|item-group|fluid|tile|virtual-signal|achievement|gps|special-item|'
+             'armor|train|train-stop|shortcut|tip|tooltip|space-location|planet|quality|space-platform|font|color|'
+             'space-age')  # real rich-text tags; '[modified]' or '[No label]' are plain display text
 TOKEN_RE = re.compile(r'__[A-Z][A-Z_]*__(?:\d+__)?(?:[a-z0-9][a-z0-9\-]*__)?|__\d+__'
-                      r'|\[/?[a-z\-]+(?:=[^\]]*)?\]|\\n')
+                      rf'|\[/?(?:{RICH_TAGS})(?:=[^\]]*)?\]|\\n')
 PLURAL_RE = re.compile(r'__plural_for_parameter__(\d+)__\{([^}]*)\}__')
 COND_RE = re.compile(r'^(?:\d+|rest|ends in \d+)$')
 ARABIC_RE = re.compile(r'[\u0621-\u064A]')

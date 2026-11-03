@@ -22,6 +22,12 @@ def test_tooltip_tag_visible_text_may_be_translated_but_key_must_stay():
     assert 'tokens' in check_value(en, 'انظر [tooltip=صناديق المزود,other-key].')
 
 
+def test_comparison_signs_are_mirrored_so_meaning_survives_reversal():
+    out = to_visual('أ ≤ ب', shape=False)
+    assert out == 'ب ≥ أ'  # read right-to-left: «أ ≤ ب»
+    assert from_visual(out) == 'أ ≤ ب'
+
+
 def test_tooltip_tag_text_is_reversed_with_the_line():
     s = 'انظر [tooltip=صناديق المزود,a.b-c].'
     out = to_visual(s, shape=False)

@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-interrupts/save-interrupt-name", "ar": "حفظ اسم المقاطعة الجديد"}
+{"module": "core", "key": "gui-interrupts/targets", "ar": "الأهداف"}
+{"module": "core", "key": "gui-interrupts/targets-tooltip", "ar": "المحطات المستهدفة لهذه المقاطعة."}
+{"module": "core", "key": "gui-interrupts/title", "ar": "إضافة مقاطعة"}
+{"module": "core", "key": "gui-lab/add-research-condition", "ar": "+ إضافة شرط بحث"}
+{"module": "core", "key": "gui-lab/research-condition", "ar": "شرط البحث"}
+{"module": "core", "key": "gui-lab/research-condition-tooltip", "ar": "يضبط البحث النشط عندما يتحقق الشرط."}
+{"module": "core", "key": "gui-lab/technology-selection", "ar": "اختيار التقنية"}
+{"module": "core", "key": "gui-lamp/always-on", "ar": "يعمل دائماً"}
+{"module": "core", "key": "gui-lamp/always-on-description", "ar": "سيعمل المصباح دائماً (ما لم يُعطّله سلوك التحكم)."}
+{"module": "core", "key": "gui-load-game/sort-by-name", "ar": "الترتيب حسب الاسم"}
+{"module": "core", "key": "gui-load-game/sort-by-recent", "ar": "الترتيب حسب آخر تعديل"}
+{"module": "core", "key": "gui-logistic-section/cannot-edit-manually", "ar": "لا يمكن تعديل هذا القسم اللوجستي يدوياً."}
+{"module": "core", "key": "gui-logistic-section/conflict-error", "ar": "يتعارض المرشح مع المرشح في الخانة __1__."}
+{"module": "core", "key": "gui-logistic-section/index-out-of-bounds-error", "ar": "الفهرس خارج النطاق: __1__ > __2__ (الحد الأقصى)"}
+{"module": "core", "key": "gui-logistic-section/invalid-filter-error", "ar": "مرشح غير صالح: لا يمكن استخدام 'أي جودة' إلا مع مقارنة المساواة."}
+{"module": "core", "key": "gui-logistic-section/min-max-error", "ar": "يجب أن يكون الحد الأدنى (__1__) ≤ الحد الأقصى (__2__)."}
+{"module": "core", "key": "gui-logistic-section/non-zero-request-error", "ar": "لا يمكن تحديد طلب غير صفري مع شرط مرشح عناصر غير بسيط."}
+{"module": "core", "key": "gui-logistic/add-section", "ar": "إضافة قسم"}
+{"module": "core", "key": "gui-logistic/cant-request-for-nontrivial-filter", "ar": "اخترت مرشحاً يطابق أكثر من جودة واحدة. في هذه الحالة يمكنك اختيار مرشح المهملات فقط، ولا يمكن استخدام الطلبات بسبب الغموض."}
+{"module": "core", "key": "gui-logistic/delete-logistic-group", "ar": "حذف المجموعة اللوجستية"}
+{"module": "core", "key": "gui-logistic/logistic-group", "ar": "مجموعة الطلبات"}
+{"module": "core", "key": "gui-logistic/logistics-and-trash", "ar": "اللوجستيات الشخصية"}
+{"module": "core", "key": "gui-logistic/no-networks", "ar": "لا توجد شبكات"}
+{"module": "core", "key": "gui-logistic/no-networks-on-surface", "ar": "لا توجد شبكات على هذا السطح"}
+{"module": "core", "key": "gui-logistic/remove-logistic-section", "ar": "إزالة القسم اللوجستي من هذا الكيان"}
+{"module": "core", "key": "gui-logistic/space-trash-slots", "ar": "خانات الإسقاط المداري"}
+{"module": "core", "key": "gui-logistic/title-filters", "ar": "المرشحات اللوجستية"}
+{"module": "core", "key": "gui-logistic/title-requests", "ar": "الطلبات اللوجستية"}
+{"module": "core", "key": "gui-logistic/vehicle-logistics-and-trash", "ar": "لوجستيات المركبة"}
+{"module": "core", "key": "gui-map-editor-entity-editor/auto-force", "ar": "**تلقائي**"}
+{"module": "core", "key": "gui-map-editor-force-data-editor/evolution-factors", "ar": "عوامل التطور"}
+{"module": "core", "key": "gui-map-editor-force-data-editor/recipe-productivity-bonuses", "ar": "مكافآت إنتاجية الوصفات"}
+{"module": "core", "key": "gui-map-editor-force-editor/auto-force", "ar": "**تلقائي**"}
+{"module": "core", "key": "gui-map-editor-force-editor/edit-evolution-factor", "ar": "تعديل عامل التطور"}
+{"module": "core", "key": "gui-map-editor-force-editor/edit-map-settings", "ar": "تعديل إعدادات الخريطة"}
+{"module": "core", "key": "gui-map-editor-instructions/build-cliffs", "ar": "__1__ لبناء الأجراف."}
+{"module": "core", "key": "gui-map-editor-instructions/remove-cliffs", "ar": "__1__ لإزالة الأجراف."}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/asteroids", "ar": "الكويكبات"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/difficulty-settings", "ar": "إعدادات الصعوبة"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/enemy-evolution", "ar": "تطور الأعداء"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/enemy-expansion", "ar": "توسع الأعداء"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/misc", "ar": "غير مصنف"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/path-finder", "ar": "باحث المسارات"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/pollution", "ar": "التلوث"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/steering-default", "ar": "التوجيه (افتراضي)"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/steering-moving", "ar": "التوجيه (أثناء الحركة)"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/title", "ar": "إعدادات الخريطة"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/unit-group", "ar": "مجموعات الوحدات"}
+{"module": "core", "key": "gui-map-editor-settings-categories/map", "ar": "الخريطة"}
+{"module": "core", "key": "gui-map-editor-settings/ignore-tile-conditions", "ar": "تجاهل شروط البلاط"}
+{"module": "core", "key": "gui-map-editor-surface-editor/cant-delete-surface", "ar": "لا يمكن حذف هذا السطح."}
+{"module": "core", "key": "gui-map-editor-surface-editor/generate-planets", "ar": "توليد الكواكب"}
+{"module": "core", "key": "gui-map-editor-surface-editor/global-electric-network", "ar": "شبكة كهربائية عامة"}
+{"module": "core", "key": "gui-map-editor-surface-editor/ignore-surface-conditions", "ar": "تجاهل شروط السطح"}
+{"module": "core", "key": "gui-map-editor-surface-editor/planet-settings", "ar": "استخدام الإعدادات من"}
+{"module": "core", "key": "gui-map-editor-surface-editor/planet-settings-empty", "ar": "<فارغ>"}
+{"module": "core", "key": "gui-map-editor-tile-editor/smart-out-of-map-collision-mode-tooltip", "ar": "لا يمكن البناء فوق بلاط __TILE__out-of-map__ إلا عند البناء باستخدام __CONTROL__build-ghost__."}
+{"module": "core", "key": "gui-map-editor-time-editor/tick-sixty", "ar": "التكة الستون"}
+{"module": "core", "key": "gui-map-editor-title/asteroid-chunk-editor", "ar": "قطع الكويكبات"}
+{"module": "core", "key": "gui-map-editor-title/cliff-editor", "ar": "الأجراف"}
+{"module": "core", "key": "gui-map-editor/cliffs", "ar": "الأجراف"}
+{"module": "core", "key": "gui-map-editor/import-surface-as", "ar": "باسم"}
+{"module": "core", "key": "gui-map-editor/surface-name", "ar": "السطح"}
+{"module": "core", "key": "gui-map-editor/tools", "ar": "الأدوات"}
+{"module": "core", "key": "gui-map-generator/achievement-notice", "ar": "ستُعطّل بعض الإنجازات بالإعدادات الحالية للأسباب التالية:\\n__1__\\nهل تريد المتابعة؟"}
+{"module": "core", "key": "gui-map-generator/appears-on", "ar": "يظهر على"}
+{"module": "core", "key": "gui-map-generator/appears-on-description", "ar": "الكواكب التي يُولّد عليها هذا المورد."}
+{"module": "core", "key": "gui-map-generator/asteroids", "ar": "الكويكبات"}
+{"module": "core", "key": "gui-map-generator/asteroids-spawning-rate", "ar": "معدل الظهور"}
+{"module": "core", "key": "gui-map-generator/asteroids-spawning-rate-description", "ar": "المعدل الذي تظهر به الكويكبات في الفضاء."}
+{"module": "core", "key": "gui-map-generator/cliff-continuity-description", "ar": "طول مقاطع الأجراف المتصلة."}
+{"module": "core", "key": "gui-map-generator/cliff-frequency-description", "ar": "عدد الأجراف."}
+{"module": "core", "key": "gui-map-generator/custom", "ar": "[معدّل]"}
+{"module": "core", "key": "gui-map-generator/enemy-attack-pollution-consumption-modifier-description", "ar": "معدِّل كمية التلوث المستهلكة لإرسال بايتر للهجوم.\\nملاحظة: القيمة الأعلى من 100% ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-evolution-group-size-factor", "ar": "عامل حجم المجموعة حسب التطور"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-evolution-group-size-factor-description", "ar": "مدى تأثير عامل التطور في حجم مجموعات توسع الأعداء.\\nملاحظة: القيمة الأقل من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-group-tile-description", "ar": "يمكن لهذا تشغيل منطق التوسع أو إيقافه بالكامل.\\nملاحظة: إيقاف التوسع سيعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-maximum-expansion-cooldown-description", "ar": "أقصى مدة بين إرسال حملات توسع الأعداء.\\nملاحظة: القيمة الأعلى من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-maximum-expansion-distance-description", "ar": "أقصى مسافة يبحث فيها الأعداء عن مواقع للتوسع من قواعدهم الأخرى.\\nملاحظة: القيمة الأقل من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-minimum-expansion-cooldown-description", "ar": "أدنى مدة بين إرسال حملات توسع الأعداء.\\nملاحظة: القيمة الأعلى من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-minimum-expansion-distance", "ar": "أدنى مسافة للتوسع"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-minimum-expansion-distance-description", "ar": "أدنى مسافة يبحث فيها الأعداء عن مواقع للتوسع من قواعدهم الأخرى.\\nملاحظة: القيمة الأعلى من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-frequency-description", "ar": "عدد قواعد الأعداء.\\nملاحظة: القيمة الأقل من 100% ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/enemy-size-description", "ar": "حجم كل قاعدة للأعداء.\\nملاحظة: القيمة الأقل من 100% ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/evolution-description", "ar": "يتحكم في تفعيل تطور الأعداء.\\nملاحظة: تعطيل التطور سيعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/evolution-destroy-factor-description", "ar": "يتحكم في سرعة ازدياد التطور بسبب تدمير أعشاش الأعداء.\\nملاحظة: القيمة الأقل من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/evolution-pollution-factor-description", "ar": "يتحكم في سرعة ازدياد التطور بسبب إنتاج التلوث.\\nملاحظة: القيمة الأقل من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/evolution-time-factor-description", "ar": "يتحكم في سرعة ازدياد التطور مع مرور الوقت.\\nملاحظة: القيمة الأقل من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/exchange-string-export", "ar": "تصدير سلسلة تبادل الخريطة"}
+{"module": "core", "key": "gui-map-generator/exchange-string-import", "ar": "استيراد سلسلة تبادل الخريطة"}
+{"module": "core", "key": "gui-map-generator/import", "ar": "استيراد"}
+{"module": "core", "key": "gui-map-generator/minimum-pollution-to-damage-trees-description", "ar": "تمر الأشجار بـ 4 مراحل متدرجة حتى يدمرها التلوث. أي تلوث فوق هذه الكمية يبدأ نقل الشجرة إلى مرحلة أكثر تضرراً.\\nملاحظة: القيمة الأعلى من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/no-enemies-mode-checkbox", "ar": "بلا أعداء"}
+{"module": "core", "key": "gui-map-generator/no-enemies-mode-description", "ar": "في وضع \"بلا أعداء\" لن تظهر وحدات الأعداء من الأعشاش أو من توليد الخريطة أو من العناصر. ستظل أعشاش الأعداء الخاملة تظهر على الخريطة.\\nملاحظة: تفعيل هذا سيعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/peaceful-mode-description", "ar": "في الوضع السلمي لن يهاجم الأعداء أو يتوسعوا بنشاط، لكنهم سيهاجمون دفاعاً عن أنفسهم.\\nملاحظة: تفعيل هذا سيعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/pollution-absorbed-per-tree-damaged-description", "ar": "تمر الأشجار بـ 4 مراحل متدرجة حتى يدمرها التلوث. تحدد هذه القيمة كمية التلوث الممتصة عند الانتقال إلى مرحلة أكثر تضرراً.\\nملاحظة: القيمة الأعلى من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/pollution-absorption-modifier-description", "ar": "معدِّل كمية التلوث التي تمتصها الأشجار والبلاط.\\nملاحظة: القيمة الأعلى من 100% ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/pollution-description", "ar": "يتحكم في تفعيل التلوث.\\nملاحظة: تعطيل التلوث سيعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/pollution-diffusion-ratio-description", "ar": "كمية التلوث التي تنتشر إلى قطع الخريطة المجاورة في الثانية.\\nملاحظة: القيمة الأقل من __1__ ستعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-generator/reset-to-preset", "ar": "إعادة __1__ __plural_for_parameter__1__{1=خيار|2=خياران|rest=خيارات}__ إلى __plural_for_parameter__1__{1=القيمة الافتراضية|2=القيمتين الافتراضيتين|rest=القيم الافتراضية}__ للإعداد المسبق"}
+{"module": "core", "key": "gui-map-generator/spoiling", "ar": "التلف"}
+{"module": "core", "key": "gui-map-generator/spoiling-rate", "ar": "معدل التلف"}
+{"module": "core", "key": "gui-map-generator/spoiling-rate-description", "ar": "المعدل الذي تتلف به العناصر القابلة للتلف"}
+{"module": "core", "key": "gui-map-generator/starting-area-size-description", "ar": "حجم المنطقة الخالية من قواعد الأعداء حول اللاعب.\\nملاحظة: تكبير المنطقة سيعطّل بعض الإنجازات."}
+{"module": "core", "key": "gui-map-view-settings/show-pipelines", "ar": "إظهار خطوط الأنابيب"}
+{"module": "core", "key": "gui-menu/cant-pause-resume-not-admin", "ar": "لا يمكن الإيقاف المؤقت/الاستئناف - لست مشرفاً."}
+{"module": "core", "key": "gui-menu/desync-explanation", "ar": "فقدت التزامن مع اللعبة.\\nسبب ذلك خطأ برمجي في اللعبة أو في أحد المودات أو سكربتات السيناريو (إن كانت مستخدمة).\\nإن لم تكن تستخدم مودات، يُرجى الإبلاغ عن المشكلة في منتدى الإبلاغ عن الأخطاء. أرفق تفاصيل ما كان اللاعبون يفعلونه، وارفع تقرير فقدان التزامن."}
+{"module": "core", "key": "gui-menu/desync-explanation-console", "ar": "فقدت التزامن مع اللعبة.\\nإذا استمرت المشكلة، يُرجى الإبلاغ عنها في منتدى الإبلاغ عن الأخطاء."}
+{"module": "core", "key": "gui-menu/dlc", "ar": "محتوى إضافي (DLC)"}
+{"module": "core", "key": "gui-menu/feature-not-available-with-debugadapter", "ar": "هذه الميزة غير متاحة عند اتصال مُحوّل تصحيح (Debug Adapter)."}
+{"module": "core", "key": "gui-menu/galaxy-of-fame", "ar": "مجرة المشاهير"}
+{"module": "core", "key": "gui-menu/lan-username", "ar": "اسم المستخدم في LAN"}
+{"module": "core", "key": "gui-migrated-content/changed-airborne-pollutant", "ar": "ملوثات هوائية متغيرة"}
+{"module": "core", "key": "gui-migrated-content/changed-asteroid-chunk", "ar": "قطع كويكبات متغيرة"}
+{"module": "core", "key": "gui-migrated-content/changed-collision-layer", "ar": "طبقات تصادم متغيرة"}
+{"module": "core", "key": "gui-migrated-content/changed-custom-event", "ar": "أحداث مخصصة متغيرة"}
+{"module": "core", "key": "gui-migrated-content/changed-quality", "ar": "جودات متغيرة"}
+{"module": "core", "key": "gui-migrated-content/changed-space-location", "ar": "مواقع فضائية متغيرة"}
+{"module": "core", "key": "gui-migrated-content/removed-airborne-pollutant", "ar": "ملوثات هوائية محذوفة"}

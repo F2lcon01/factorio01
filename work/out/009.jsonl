@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-explore-mods/unable-to-search", "ar": "تعذر البحث في بوابة المودات"}
+{"module": "core", "key": "gui-explore-mods/view", "ar": "عرض"}
+{"module": "core", "key": "gui-feedback/discard-are-you-sure", "ar": "هل أنت متأكد من تجاهل نموذج الملاحظات هذا بالكامل؟"}
+{"module": "core", "key": "gui-feedback/discard-button", "ar": "تجاهل النموذج"}
+{"module": "core", "key": "gui-feedback/email", "ar": "البريد الإلكتروني"}
+{"module": "core", "key": "gui-feedback/finalize-submit-to-wube", "ar": "إرسال الملاحظات"}
+{"module": "core", "key": "gui-feedback/include-save", "ar": "تضمين ملف الحفظ"}
+{"module": "core", "key": "gui-feedback/include-screenshot", "ar": "تضمين لقطة الشاشة"}
+{"module": "core", "key": "gui-feedback/info-message", "ar": "يتيح لك هذا النموذج إرسال ملاحظاتك مباشرة إلى فريق Factorio. يمكن إرفاق لقطة شاشة وملف حفظ حالي للعبتك مع الرسالة. نريد بالتأكيد أن نسمع منك عن الأخطاء البرمجية، لكن يمكنك أيضاً إخبارنا عن الأجزاء الممتعة أو المملة من تجربة لعبك."}
+{"module": "core", "key": "gui-feedback/message", "ar": "الرسالة"}
+{"module": "core", "key": "gui-feedback/message-details", "ar": "تفاصيل الرسالة"}
+{"module": "core", "key": "gui-feedback/message-empty", "ar": "لا يمكن أن تكون الرسالة فارغة."}
+{"module": "core", "key": "gui-feedback/preview-screenshot", "ar": "معاينة لقطة الشاشة"}
+{"module": "core", "key": "gui-feedback/screenshot", "ar": "لقطة الشاشة __1__"}
+{"module": "core", "key": "gui-feedback/screenshot-preview", "ar": "معاينة لقطة الشاشة"}
+{"module": "core", "key": "gui-feedback/start-feedback", "ar": "إرسال ملاحظات (__CONTROL__submit-feedback__)"}
+{"module": "core", "key": "gui-feedback/subject", "ar": "الموضوع"}
+{"module": "core", "key": "gui-feedback/subject-bug", "ar": "خطأ برمجي"}
+{"module": "core", "key": "gui-feedback/subject-crash", "ar": "تعطل"}
+{"module": "core", "key": "gui-feedback/subject-general", "ar": "عام"}
+{"module": "core", "key": "gui-feedback/subject-suggestion", "ar": "اقتراح"}
+{"module": "core", "key": "gui-feedback/submit-button", "ar": "كل شيء جاهز. أرسل الملاحظات."}
+{"module": "core", "key": "gui-feedback/take-screenshot", "ar": "التقاط لقطة شاشة"}
+{"module": "core", "key": "gui-feedback/title", "ar": "العنوان"}
+{"module": "core", "key": "gui-feedback/title-empty", "ar": "لا يمكن أن يكون العنوان فارغاً."}
+{"module": "core", "key": "gui-feedback/window-title", "ar": "إرسال ملاحظات"}
+{"module": "core", "key": "gui-fluidbox/filtered-entities", "ar": "المباني المرشّحة"}
+{"module": "core", "key": "gui-fluidbox/fluid", "ar": "السائل"}
+{"module": "core", "key": "gui-fluidbox/flush-pipeline", "ar": "تصريف __1__ من خط الأنابيب هذا."}
+{"module": "core", "key": "gui-fluidbox/flush-this", "ar": "تصريف __1__ من __2__."}
+{"module": "core", "key": "gui-fluidbox/no-fluid", "ar": "لا يوجد سائل"}
+{"module": "core", "key": "gui-fluidbox/pipeline-contents", "ar": "محتويات خط الأنابيب"}
+{"module": "core", "key": "gui-fluidbox/this-contents", "ar": "محتويات __1__"}
+{"module": "core", "key": "gui-fluidbox/visualize-segment", "ar": "عرض خط الأنابيب"}
+{"module": "core", "key": "gui-fluidbox/visualize-segment-description", "ar": "استخدم __CONTROL__visualize-entity-fluid-segments__ أثناء التمرير فوق هذا الكيان لتبديل هذا دون فتح الواجهة."}
+{"module": "core", "key": "gui-game-finished/lost", "ar": "لقد هُزمت"}
+{"module": "core", "key": "gui-goal-description/title", "ar": "الهدف"}
+{"module": "core", "key": "gui-graphics-settings-description/additional-terrain-effects", "ar": "عطّله لتحسين الأداء على بطاقات الرسوميات الضعيفة. يعطّل رسم الصبغة العامة للتضاريس والبرك على البلاط الذي يعرّفها."}
+{"module": "core", "key": "gui-graphics-settings-description/enable-arachnophobia-mode", "ar": "عند التفعيل، لن تُرسم أرجل بعض الكيانات ذات المظهر العنكبوتي بالكامل. قد يؤثر هذا على اللعب في بعض الحالات التي يكون فيها موضع الأرجل مهماً."}
+{"module": "core", "key": "gui-graphics-settings-description/full-color-depth", "ar": "الرسم بنصف عمق الألوان فقط (16-bit) يحسّن الأداء على بطاقات الرسوميات الضعيفة والمدمجة. لهذا الخيار تأثير فقط على Windows 8+ أو في مُصيِّر OpenGL."}
+{"module": "core", "key": "gui-graphics-settings-description/graphics-quality-label-console", "ar": "دقة الرسوم. الدقة الأقل تقلل استخدام الذاكرة ووقت التحميل."}
+{"module": "core", "key": "gui-graphics-settings-description/light-occlusion", "ar": "عند التعطيل قد يكون الرسم أسرع، لكن البلاط والأجسام المضيئة مثل النار واليورانيوم ومصابيح LED المختلفة ستلمع عبر الأجسام التي فوقها."}
+{"module": "core", "key": "gui-graphics-settings-description/linux-preferred-video-driver", "ar": "يختار الخيار \"تلقائي\" Wayland إذا كان المُركِّب يدعم fifo-v1، وإلا فسيختار X11. إذا لم يتوفر مشغل الفيديو المفضل، فستُجرّب المشغلات بترتيب ظهورها."}
+{"module": "core", "key": "gui-graphics-settings-description/show-animated-ghosts", "ar": "عطّله لتحسين الأداء على بطاقات الرسوميات الضعيفة."}
+{"module": "core", "key": "gui-graphics-settings-description/show-fullscreen-flash", "ar": "من تفجير القنابل النووية، أو ضربات البرق، أو تعرض اللاعب للضرر."}
+{"module": "core", "key": "gui-graphics-settings-description/variable-refresh-rate-switch2", "ar": "تفعيل معدل التحديث المتغير لشاشة الجهاز أو التلفاز."}
+{"module": "core", "key": "gui-graphics-settings-description/video-memory-budget-label", "ar": "أقصى حجم من ذاكرة الفيديو (VRAM) يُسمح للعبة باستخدامه للخامات (الرسوم)."}
+{"module": "core", "key": "gui-graphics-settings/accessibility", "ar": "إمكانية الوصول"}
+{"module": "core", "key": "gui-graphics-settings/additional-terrain-effects", "ar": "تأثيرات تضاريس إضافية"}
+{"module": "core", "key": "gui-graphics-settings/enable-arachnophobia-mode", "ar": "تفعيل وضع رهاب العناكب"}
+{"module": "core", "key": "gui-graphics-settings/enable-warning-icons-blinking", "ar": "تفعيل وميض أيقونات التحذير"}
+{"module": "core", "key": "gui-graphics-settings/game-render-scaling", "ar": "تحجيم رسم اللعبة"}
+{"module": "core", "key": "gui-graphics-settings/graphics-quality-medium", "ar": "متوسط"}
+{"module": "core", "key": "gui-graphics-settings/light-occlusion", "ar": "حجب رسوم الضوء"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver", "ar": "مشغل الفيديو المفضل"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver-auto", "ar": "تلقائي"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver-wayland", "ar": "Wayland"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver-x11", "ar": "X11"}
+{"module": "core", "key": "gui-graphics-settings/nintendo-switch-maximum-tv-mode-resolution", "ar": "أقصى دقة في وضع التلفاز"}
+{"module": "core", "key": "gui-graphics-settings/setting-disabled-on-resolution", "ar": "هذا الإعداد معطّل تلقائياً لدقة الشاشة الحالية."}
+{"module": "core", "key": "gui-graphics-settings/show-animated-ghosts", "ar": "إظهار الأشباح المتحركة"}
+{"module": "core", "key": "gui-graphics-settings/show-fog", "ar": "إظهار الضباب"}
+{"module": "core", "key": "gui-graphics-settings/show-fullscreen-flash", "ar": "إظهار الوميض على كامل الشاشة"}
+{"module": "core", "key": "gui-graphics-settings/show-space-dust", "ar": "إظهار الغبار الفضائي"}
+{"module": "core", "key": "gui-graphics-settings/variable-refresh-rate-switch2", "ar": "تفعيل معدل تحديث الشاشة المتغير"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode", "ar": "الوضع اللوجستي"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-active-provider", "ar": "مزود نشط"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-buffer", "ar": "مؤقت"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-default", "ar": "افتراضي"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-none", "ar": "لا شيء"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-passive-provider", "ar": "مزود خامل"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-requester", "ar": "طالب"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-storage", "ar": "تخزين"}
+{"module": "core", "key": "gui-inserter/fresh-first", "ar": "الطازج أولاً"}
+{"module": "core", "key": "gui-inserter/override-stack-size", "ar": "تجاوز حجم اليد"}
+{"module": "core", "key": "gui-inserter/spoiled-first", "ar": "التالف أولاً"}
+{"module": "core", "key": "gui-inserter/spoiled-priority", "ar": "أولوية التلف"}
+{"module": "core", "key": "gui-inserter/spoiled-priority-tooltip", "ar": "يختار العناصر بناءً على نسبة تلفها.\\n\\nيُطبق فقط عند أخذ العناصر من مخزون."}
+{"module": "core", "key": "gui-inserter/use-filters", "ar": "استخدام المرشحات"}
+{"module": "core", "key": "gui-interface-settings-description/auto-accept-connect-to-server", "ar": "القبول التلقائي لطلبات الاتصال بالخوادم التي تطلقها السكربتات."}
+{"module": "core", "key": "gui-interface-settings-description/manual-display-point-ui-scale", "ar": "تتحجّم الواجهة مع إعداد تحجيم شاشتك. هذا الخيار أنسب إذا كانت لديك عدة شاشات بكثافات بكسل مختلفة."}
+{"module": "core", "key": "gui-interface-settings-description/manual-pixel-ui-scale", "ar": "تتحجّم الواجهة نسبةً إلى البكسلات الفعلية على شاشتك. يمنحك هذا الخيار أكبر قدر من التحكم ولا يطبق إعدادات تحجيم شاشتك."}
+{"module": "core", "key": "gui-interface-settings-description/nintendo-switch-use-predictive-text-input", "ar": "إظهار اقتراحات الكلمات عند استخدام لوحة المفاتيح على الشاشة.\\nتفعيل هذا يتيح أيضاً إدخال النصوص الصينية والكورية وأحرف الكانجي اليابانية."}
+{"module": "core", "key": "gui-interface-settings-description/quick-bar-width", "ar": "عدد الخانات في كل صف من الشريط السريع. القيم المقبولة في النطاق [__1__, __2__]."}
+{"module": "core", "key": "gui-interface-settings-description/quick-pipette", "ar": "عند الضغط على المفتاح المرتبط بخانة فارغة في الشريط السريع، تُستدعى القطّارة وتُملأ الخانة بنتيجتها."}
+{"module": "core", "key": "gui-interface-settings-description/show-fluid-segment-visualization", "ar": "عند حمل كيان متعلق بالسوائل، تُعرض كل خطوط أنابيب السوائل في مجال الرؤية."}
+{"module": "core", "key": "gui-interface-settings-description/show-fluid-segment-visualization-when-selected", "ar": "عند التمرير فوق كيان، تُعرض خطوط أنابيب السوائل الخاصة به."}
+{"module": "core", "key": "gui-interface-settings-description/show-parameters-in-selection-lists", "ar": "لا تؤثر العوامل في اللعبة بشيء، لكن يمكن استخدامها لإنشاء مخططات بعوامل.\\nعادةً لا يمكن اختيار العوامل إلا عند تحويل المخططات إلى عوامل، لكن بهذا الخيار يمكنك استخدامها في اللعبة لتحضير المخطط مباشرة."}
+{"module": "core", "key": "gui-interface-settings-description/show-undo-redo-confirmations", "ar": "يُظهر نافذة تأكيد مع معاينة قبل محاولة التراجع عن بعض الإجراءات أو إعادتها."}
+{"module": "core", "key": "gui-interface-settings/alt-mode", "ar": "وضع Alt"}
+{"module": "core", "key": "gui-interface-settings/auto-accept-connect-to-server", "ar": "القبول التلقائي لطلبات الاتصال بالخوادم من السكربتات"}
+{"module": "core", "key": "gui-interface-settings/lock-belt-building-to-straight-line", "ar": "تقييد بناء الأحزمة بخط مستقيم"}
+{"module": "core", "key": "gui-interface-settings/manual-display-point-ui-scale", "ar": "يدوي (نقاط)"}
+{"module": "core", "key": "gui-interface-settings/manual-pixel-ui-scale", "ar": "يدوي (بكسلات)"}
+{"module": "core", "key": "gui-interface-settings/quick-bar-width", "ar": "عرض الشريط السريع"}
+{"module": "core", "key": "gui-interface-settings/quick-pipette", "ar": "القطّارة السريعة"}
+{"module": "core", "key": "gui-interface-settings/quickbar", "ar": "الشريط السريع"}
+{"module": "core", "key": "gui-interface-settings/research-finished-stops-game", "ar": "فتح شاشة التقنيات عند اكتمال البحث"}
+{"module": "core", "key": "gui-interface-settings/show-fluid-segment-visualization", "ar": "إظهار عرض خطوط أنابيب السوائل"}
+{"module": "core", "key": "gui-interface-settings/show-fluid-segment-visualization-when-selected", "ar": "إظهار عرض خطوط أنابيب السوائل عند التحديد"}
+{"module": "core", "key": "gui-interface-settings/show-machine-arrows-when-detailed-info-is-on", "ar": "إظهار أسهم الآلات في \"Alt-mode\""}
+{"module": "core", "key": "gui-interface-settings/show-multiplayer-selection-rectangles", "ar": "إظهار مستطيلات التحديد في اللعب الجماعي"}
+{"module": "core", "key": "gui-interface-settings/show-parameters-in-selection-lists", "ar": "إظهار العوامل في قوائم الاختيار"}
+{"module": "core", "key": "gui-interface-settings/show-undo-redo-confirmations", "ar": "إظهار نوافذ تأكيد التراجع/الإعادة"}
+{"module": "core", "key": "gui-interface-settings/smart-belt-building", "ar": "بناء الأحزمة الذكي"}
+{"module": "core", "key": "gui-interface-settings/zoom-towards-cursor", "ar": "التكبير نحو المؤشر حيثما أمكن"}
+{"module": "core", "key": "gui-interrupts/already-used", "ar": "هذه المقاطعة موجودة بالفعل في الجدول."}
+{"module": "core", "key": "gui-interrupts/conditions", "ar": "الشروط"}
+{"module": "core", "key": "gui-interrupts/conditions-tooltip", "ar": "عندما تتحقق الشروط، تتفعل المقاطعة وتضيف كل الأهداف إلى الجدول كمحطات مؤقتة."}
+{"module": "core", "key": "gui-interrupts/edit-interrupt", "ar": "تعديل المقاطعة"}
+{"module": "core", "key": "gui-interrupts/edit-interrupt-name", "ar": "تعديل اسم المقاطعة"}
+{"module": "core", "key": "gui-interrupts/inside-interrupt", "ar": "السماح بمقاطعة المقاطعات الأخرى"}
+{"module": "core", "key": "gui-interrupts/inside-interrupt-tooltip", "ar": "افتراضياً، لا يمكن أن تنطلق مقاطعة أثناء تنفيذ مقاطعة أخرى. يعطّل هذا الخيار ذلك السلوك، فيسمح للمقاطعة بالانطلاق أثناء تنفيذ مقاطعة أخرى."}
+{"module": "core", "key": "gui-interrupts/interrupt-header", "ar": "المقاطعات"}
+{"module": "core", "key": "gui-interrupts/interrupt-header-tooltip", "ar": "المقاطعات شروط يمكن إضافتها إلى الجداول.\\nإعداداتها مشتركة عموماً بين كل القطارات أو منصات الفضاء."}
+{"module": "core", "key": "gui-interrupts/name-already-used", "ar": "يجب أن تكون أسماء المقاطعات فريدة."}
+{"module": "core", "key": "gui-interrupts/name-cant-be-empty", "ar": "لا يمكن أن يكون اسم المقاطعة فارغاً."}
+{"module": "core", "key": "gui-interrupts/name-too-long", "ar": "اسم المقاطعة طويل جداً."}
+{"module": "core", "key": "gui-interrupts/no-interrupts", "ar": "لم يُعثر على مقاطعات."}
+{"module": "core", "key": "gui-interrupts/save-changes", "ar": "حفظ المقاطعة"}
