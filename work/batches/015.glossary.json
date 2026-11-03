@@ -1,0 +1,20 @@
+{
+ "blueprint": "المخطط",
+ "circuit network": "دارة كهربائية",
+ "cliff": "كليف",
+ "deconstruction planner": "مخطط التفكك",
+ "default": "افتراضي",
+ "fuel": "الوقود",
+ "ghost": "شبح",
+ "intermediate products": "المنتجات المتوسطة",
+ "island": "جزيرة",
+ "lakes": "بحيرات",
+ "logistics": "الخدمات اللوجستية",
+ "modules": "الوحدات",
+ "no item": "لا يوجد عنصر",
+ "productivity module": "الوحدة الإنتاجية",
+ "rail": "سكة حديدية",
+ "rocket": "صاروخ",
+ "space": "فضاء",
+ "tiles": "البلاط"
+}

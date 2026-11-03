@@ -1,0 +1,120 @@
+{"module": "space-age", "key": "decorative-name/split-gill-red-1x1", "en": "Small split gill lichen red", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/split-gill-red-2x2", "en": "Medium split gill lichen red", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/sulfur-rock-cluster", "en": "Pebbles", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/sulfur-stain", "en": "Sulfur stain", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/sulfur-stain-small", "en": "Sulfur stain", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/sulfuric-acid-puddle", "en": "Sulfuric acid puddle", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/sulfuric-acid-puddle-small", "en": "Sulfuric acid puddle", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/tiny-fulgora-rock", "en": "Tiny Fulgora rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/tiny-rock-cluster", "en": "Pebbles", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/tiny-sulfur-rock", "en": "Tiny sulfur rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/tiny-volcanic-rock", "en": "Tiny volcanic rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/urchin-cactus", "en": "Urchin cactus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/v-brown-carpet-grass", "en": "Vulcanus carpet grass", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/v-brown-hairy-grass", "en": "Vulcanus brown grass", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/v-green-hairy-grass", "en": "Vulcanus green grass", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/v-red-pita", "en": "Vulcanus pita", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/veins", "en": "Vein", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/veins-small", "en": "Small vein", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal", "en": "Large cold cracks", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal-huge-warm", "en": "Huge warm cracks", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal-large", "en": "Huge cold cracks", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal-warm", "en": "Large warm cracks", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-dune-decal", "en": "Vulcanus dune decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-lava-fire", "en": "Lava edge fire", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-rock-decal-large", "en": "Large volcanic stone", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/vulcanus-sand-decal", "en": "Vulcanus sand decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/waves-decal", "en": "Waves", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/white-carpet-grass", "en": "White carpet grass", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/wispy-lichen", "en": "Wispy lichen", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-coral", "en": "Yellow coral", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-1x1", "en": "Yellow lettuce lichen 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-3x3", "en": "Yellow lettuce lichen 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-6x6", "en": "Yellow lettuce lichen 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-cups-1x1", "en": "Yellow lettuce lichen cups 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-cups-3x3", "en": "Yellow lettuce lichen cups 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-cups-6x6", "en": "Yellow lettuce lichen cups 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collection-arm-count", "en": "Collection arm count", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collection-arm-max-speed", "en": "Collection arm max speed", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collection-arm-usage", "en": "Collection arm usage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collector-arm-storage-size", "en": "Collection arm storage size", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/asteroid-collector", "en": "Collects asteroid chunks. Bigger asteroids must be broken up into chunks by turrets.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/cargo-bay", "en": "Increases the hub and landing pad inventory size, and adds an additional cargo hatch.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/cargo-pod", "en": "Used to transfer items from the space platform to the planet's surface.\\nIt is launched automatically upon a space platform arriving in orbit if the [entity=cargo-landing-pad] is requesting cargo.\\nIt can be sent manually by __CONTROL__stack-transfer__ on the item icon in the space platform hub GUI.", "hint": "تستخدم لنقل أصناف من المنصة الفضائية إلى سطح الكوكب.\\nيتم إطلاقه تلقائياً عند وصول منصة فضائية إلى المدار إذا كان [entity=cargo-landing-pad] يطلب حمولة.\\nيمكن إرسالها يدوياً بواسطة __CONTROL__stack-transfer__ على أيقونة البند في محور المنصة الفضائية GUI.", "reason": "not-involutive"}
+{"module": "space-age", "key": "entity-description/cargo-pod-container", "en": "Appears on the planet's surface with cargo from the space platform. It is destroyed upon removing the cargo.\\nWhen [entity=cargo-landing-pad] is built, delivery pods stop arriving at the initial coordinates, and cargo is delivered directly there.", "hint": "يظهر على سطح الكوكب مع الشحنة من منصة الفضاء. يتم تدميره عند إزالة الشحنة.\\nعند بناء[entity=cargo-landing-pad]، تتوقف الكبسولات عن الوصول إلى الإحداثيات الأولية، وتتم توصيل الشحنة مباشرةً إلى هناك.", "reason": "not-involutive"}
+{"module": "space-age", "key": "entity-description/landing-pad-unloading-bay", "en": "Allows inserters to remove items from the shared inventory when attached to a cargo landing pad.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/turbo-underground-belt", "en": "Used to allow a belt to cross entities or impassable terrain.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/yumako-tree", "en": "A Gleba tree that yields nutritious yumako fruit.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/ashland-lichen-tree", "en": "Ashland tree", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/ashland-lichen-tree-flaming", "en": "Flaming ashland tree", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-demolisher", "en": "Big demolisher", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-fulgora-rock", "en": "Big Fulgora rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-stomper-corpse", "en": "Big stomper pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-stomper-pentapod", "en": "Big stomper pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-stomper-shell", "en": "Big stomper pentapod shell", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-strafer-corpse", "en": "Big strafer pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-strafer-pentapod", "en": "Big strafer pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-volcanic-rock-hot", "en": "Big hot volcanic rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-wriggler-pentapod", "en": "Big wriggler pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-wriggler-pentapod-corpse", "en": "Big wriggler pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/big-wriggler-pentapod-premature", "en": "Big premature wriggler pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/boompuff", "en": "Boompuff", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/cliff-fulgora", "en": "Plateau edge", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/cliff-gleba", "en": "Gleba cliff", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/cliff-vulcanus", "en": "Vulcanus cliff", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/copper-stromatolite", "en": "Copper stromatolite", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/cuttlepop", "en": "Cuttlepop", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud", "en": "__1__ ash cloud", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud-trail", "en": "__1__ ash cloud trail", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud-visual-dummy", "en": "Demolisher ash cloud (visual dummy)", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-corpse", "en": "__1__ remains", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-expanding-ash-cloud", "en": "__1__ expanding ash cloud __2__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure", "en": "__1__ erupting fissure", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-damage-explosion", "en": "__1__ fissure explosion damage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-explosion", "en": "__1__ fissure explosion", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-scorchmark", "en": "__1__ fissure scorchmark", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-segment", "en": "__1__ segment", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-tail", "en": "__1__ tail", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-trail-lower", "en": "__1__ trail lower", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-trail-upper", "en": "__1__ trail upper", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/fulgora-sunk-ruin-big", "en": "Big flooded Fulgoran ruin", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/fulgora-sunk-ruin-medium-tall", "en": "Medium flooded Fulgoran ruin", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/funneltrunk", "en": "Funneltrunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/fusion-generator", "en": "Fusion generator", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/gleba-spawner", "en": "Egg raft", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/gleba-spawner-corpse", "en": "Gleba spawner corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/gleba-spawner-corpse-small", "en": "Small Gleba spawner corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/gleba-spawner-small", "en": "Small egg raft", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/hairyclubnub", "en": "Hairy clubnub", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/huge-volcanic-rock-hot", "en": "Huge hot volcanic rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/iron-stromatolite", "en": "Iron stromatolite", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/jellystem", "en": "Jellystem", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/landing-pad-unloading-bay", "en": "Landing pad unloading bay", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/lickmaw", "en": "Lickmaw", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/lithium-iceberg-big", "en": "Big lithium ice formation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/lithium-iceberg-huge", "en": "Huge lithium ice formation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-demolisher", "en": "Medium demolisher", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-stomper-corpse", "en": "Medium stomper pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-stomper-pentapod", "en": "Medium stomper pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-stomper-shell", "en": "Medium stomper pentapod shell", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-strafer-corpse", "en": "Medium strafer pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-strafer-pentapod", "en": "Medium strafer pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-wriggler-pentapod", "en": "Medium wriggler pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-wriggler-pentapod-corpse", "en": "Medium wriggler pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/medium-wriggler-pentapod-premature", "en": "Medium premature wriggler pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/rocket-turret", "en": "Rocket turret", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/slipstack", "en": "Slipstack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-demolisher", "en": "Small demolisher", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-stomper-corpse", "en": "Small stomper pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-stomper-pentapod", "en": "Small stomper pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-stomper-shell", "en": "Small stomper pentapod shell", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-strafer-corpse", "en": "Small strafer pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-strafer-pentapod", "en": "Small strafer pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-wriggler-pentapod", "en": "Small wriggler pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-wriggler-pentapod-corpse", "en": "Small wriggler pentapod corpse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/small-wriggler-pentapod-premature", "en": "Small premature wriggler pentapod", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/stack-inserter", "en": "Stack inserter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/stingfrond", "en": "Stingfrond", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/sunnycomb", "en": "Sunnycomb", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/teflilly", "en": "Teflilly", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/tesla-turret-slow", "en": "Tesla turret slow", "hint": "", "reason": "missing"}

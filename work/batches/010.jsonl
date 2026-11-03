@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-lab/research-condition", "en": "Research Condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-lab/research-condition-tooltip", "en": "Sets the active research when the condition passes.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-lab/technology-selection", "en": "Technology selection", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-lamp/always-on", "en": "Always on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-lamp/always-on-description", "en": "Lamp will be always on (unless disabled by control behavior).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-load-game/sort-by-name", "en": "Sort by name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-load-game/sort-by-recent", "en": "Sort by last modified", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic-section/cannot-edit-manually", "en": "This logistic section can't be manually edited.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic-section/conflict-error", "en": "Filter conflicts with filter in slot __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic-section/index-out-of-bounds-error", "en": "Index out of bounds: __1__ > __2__ (max)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic-section/invalid-filter-error", "en": "Invalid filter: 'Any Quality' can only be used with the equals comparison.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic-section/min-max-error", "en": "Min (__1__) must be ≤ max (__2__).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic-section/non-zero-request-error", "en": "Can't specify non zero request with non trivial item filter condition.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/add-section", "en": "Add section", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/cant-request-for-nontrivial-filter", "en": "You selected a filter that matches more than one quality. In this case, you can only select trash filter, but requests can't be used for its ambiguity.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/delete-logistic-group", "en": "Delete logistic group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/logistic-group", "en": "Request group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/logistics-and-trash", "en": "Personal logistics", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/no-networks", "en": "No networks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/no-networks-on-surface", "en": "No networks on this surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/remove-logistic-section", "en": "Remove logistic section from this entity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/space-trash-slots", "en": "Orbital drop slots", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/title-filters", "en": "Logistic filters", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/title-requests", "en": "Logistic requests", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-logistic/vehicle-logistics-and-trash", "en": "Vehicle logistics", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-entity-editor/auto-force", "en": "**AUTO**", "hint": "**AUTO**", "reason": "no-arabic"}
+{"module": "core", "key": "gui-map-editor-force-data-editor/evolution-factors", "en": "Evolution factors", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-force-data-editor/recipe-productivity-bonuses", "en": "Recipe productivity bonuses", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-force-editor/auto-force", "en": "**AUTO**", "hint": "**AUTO**", "reason": "no-arabic"}
+{"module": "core", "key": "gui-map-editor-force-editor/edit-evolution-factor", "en": "Edit evolution factor", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-force-editor/edit-map-settings", "en": "Edit map settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/asteroids", "en": "Asteroids", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/difficulty-settings", "en": "Difficulty settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/enemy-evolution", "en": "Enemy evolution", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/enemy-expansion", "en": "Enemy expansion", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/misc", "en": "Uncategorized", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/path-finder", "en": "Pathfinder", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/pollution", "en": "Pollution", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/steering-default", "en": "Steering (default)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/steering-moving", "en": "Steering (moving)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/title", "en": "Map settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-map-settings-editor/unit-group", "en": "Unit groups", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-settings-categories/map", "en": "Map", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-settings/ignore-tile-conditions", "en": "Ignore tile conditions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-surface-editor/cant-delete-surface", "en": "This surface cannot be deleted.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-surface-editor/generate-planets", "en": "Generate planets", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-surface-editor/global-electric-network", "en": "Global electric network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-surface-editor/ignore-surface-conditions", "en": "Ignore surface conditions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-surface-editor/planet-settings", "en": "Use settings from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-surface-editor/planet-settings-empty", "en": "<Empty>", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-tile-editor/smart-out-of-map-collision-mode-tooltip", "en": "__TILE__out-of-map__ tiles can only be built over when building with __CONTROL__build-ghost__.", "hint": ".__CONTROL__build-ghost__ البلاط يمكن بناؤه فقط عند البناء مع __TILE__out-of-map__", "reason": "direction"}
+{"module": "core", "key": "gui-map-editor-time-editor/tick-sixty", "en": "Tick sixty", "hint": "Tick sixty", "reason": "no-arabic"}
+{"module": "core", "key": "gui-map-editor-title/asteroid-chunk-editor", "en": "Asteroid Chunks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor/import-surface-as", "en": "As", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor/surface-name", "en": "Surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor/tools", "en": "Tools", "hint": "Tools", "reason": "no-arabic"}
+{"module": "core", "key": "gui-map-generator/achievement-notice", "en": "Some of the achievements will be disabled with the current settings because:\\n__1__\\nProceed?", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/appears-on", "en": "Appears on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/appears-on-description", "en": "The planets that this resource is generated on.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/asteroids", "en": "Asteroids", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/asteroids-spawning-rate", "en": "Spawning rate", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/asteroids-spawning-rate-description", "en": "Rate at which asteroids spawn in space.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-attack-pollution-consumption-modifier-description", "en": "Modifier of how much pollution is consumed to send a biter to attack.\\nNote: A value higher than 100% will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-evolution-group-size-factor", "en": "Evolution group size factor", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-evolution-group-size-factor-description", "en": "How much the evolution factor affects the size of enemy expansion parties.\\nNote: A value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-group-tile-description", "en": "This can turn off/on the expansion logic as a whole.\\nNote: Turning expansion off will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-maximum-expansion-cooldown-description", "en": "The maximum time between enemy expansions being sent out.\\nNote: A value higher than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-maximum-expansion-distance-description", "en": "The maximum distance enemies will look to expand from other enemy bases.\\nNote: A value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-minimum-expansion-cooldown-description", "en": "The minimum time between enemy expansions being sent out.\\nNote: A value higher than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-minimum-expansion-distance", "en": "Minimum expansion distance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-expansion-minimum-expansion-distance-description", "en": "The minimum distance enemies will look to expand from other enemy bases.\\nNote: A value higher than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/enemy-frequency-description", "en": "The number of enemy bases.\\nNote: A value lower than 100% will disable some achievements.", "hint": "عدد قواعد العدو.\\n ملاحظة: قيمة أقل من 100% سوف تعطل بعض الانجازات.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-map-generator/enemy-size-description", "en": "The size of each enemy base.\\nNote: A value lower than 100% will disable some achievements.", "hint": "حجم كل قاعدة عدو.\\n ملاحظة: قيمة أقل من 100% سيعطل بعض الإنجازات.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-map-generator/evolution-description", "en": "Controls whether enemy evolution is enabled.\\nNote: Disabled evolution will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/evolution-destroy-factor-description", "en": "Controls how fast evolution increases due to destroying enemy spawners.\\nNote: A value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/evolution-pollution-factor-description", "en": "Controls how fast evolution increases due to producing pollution.\\nNote: A value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/evolution-time-factor-description", "en": "Controls how fast evolution increases over time.\\nNote: A value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/exchange-string-export", "en": "Export map exchange string", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/exchange-string-import", "en": "Import map exchange string", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/import", "en": "Import", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/minimum-pollution-to-damage-trees-description", "en": "Trees have 4 different progressive stages toward being destroyed by pollution. Any pollution above this amount starts the process of moving a tree toward a more damaged stage.\\nNote: a value higher than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/no-enemies-mode-checkbox", "en": "No enemies", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/no-enemies-mode-description", "en": "In \"no enemies\" mode, enemy units will not spawn from spawners, map generation, or items. Inactive enemy spawners will still appear on the map.\\nNote: Enabling this will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/peaceful-mode-description", "en": "In peaceful mode, the enemies will not actively attack or expand. Enemies will still attack to defend themselves.\\nNote: Enabling this will disable some achievements.", "hint": "في الوضع السلمي، لن يهاجمك الأعداء أو يتوسعون. سوف يهاجم الأعداء للدفاع عن أنفسهم فقط.\\n ملاحظة: تمكين هذا سيعطل بعض الإنجازات.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-map-generator/pollution-absorbed-per-tree-damaged-description", "en": "Trees have 4 different progressive stages toward being destroyed by pollution. This value specifies how much pollution is absorbed when moving to a more damaged stage.\\nNote: a value higher than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/pollution-absorption-modifier-description", "en": "Modifier of how much pollution is absorbed by trees and tiles.\\nNote: A value higher than 100% will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/pollution-description", "en": "Controls whether pollution is enabled.\\nNote: Disabled pollution will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/pollution-diffusion-ratio-description", "en": "The amount of pollution diffused into neighboring chunks per second.\\nNote: a value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/reset-to-preset", "en": "Reset __1__ __plural_for_parameter__1__{1=option|rest=options}__ to preset __plural_for_parameter__1__{1=default|rest=defaults}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/spoiling", "en": "Spoiling", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/spoiling-rate", "en": "Spoiling rate", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/spoiling-rate-description", "en": "Rate at which spoilable items spoil", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/starting-area-size-description", "en": "The size of the area without enemy bases around the player.\\nNote: Making the area larger will disable some achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-view-settings/show-pipelines", "en": "Show pipelines", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-menu/cant-pause-resume-not-admin", "en": "Cannot pause/unpause - you are not an admin.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-menu/desync-explanation", "en": "You desynchronized from the game.\\nThis was caused by a bug in the game or a bug in one of the mods or scenario scripts (if any are in use).\\nIf you are not using mods, please report this problem in our bug report forum. Include details about what the players were doing, and upload the desync report.", "hint": "يوجد عدم تزامن بين جهازك و بين الخادم. يحتمل أن يكون السبب خطأً برمجياً من اللعبة، أو من أحد التعديلات (mods) أو برمجيات الأطوار المعدلة (scenarios) (أن كنت تستخدم أياً منها). إن تحققت أن المشكلة مستمرة و لم تكن من التعديل أو الأطوار المعدلة، بلّغ عنها في منتدى التبليغ عن المشاكل. ألحق بعض التفاصيل كتفاصيل جهازك و أنشطتك في اللعبة، و ارفعها في تقرير عدم التزامن.", "reason": "tokens"}
+{"module": "core", "key": "gui-menu/desync-explanation-console", "en": "You desynchronized from the game.\\nIf the problem persists, please report this problem in our bug report forum.", "hint": "يوجد عدم تزامن بين جهازك و بين الخادم. إذا استمرت المشكلة، بلّغ عنها في منتدى التبليغ عن المشاكل.", "reason": "tokens"}
+{"module": "core", "key": "gui-menu/dlc", "en": "DLC", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-menu/feature-not-available-with-debugadapter", "en": "This feature is not available when a Debug Adapter is connected.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-menu/galaxy-of-fame", "en": "Galaxy Of Fame", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-menu/lan-username", "en": "LAN username", "hint": "LAN username", "reason": "no-arabic"}
+{"module": "core", "key": "gui-migrated-content/changed-airborne-pollutant", "en": "Changed airborne pollutants", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/changed-asteroid-chunk", "en": "Changed asteroid chunks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/changed-collision-layer", "en": "Changed collision layers", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/changed-custom-event", "en": "Changed custom events", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/changed-quality", "en": "Changed qualities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/changed-space-location", "en": "Changed space locations", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-airborne-pollutant", "en": "Removed airborne pollutants", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-asteroid-chunk", "en": "Removed asteroid chunks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-collision-layer", "en": "Removed collision layers", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-custom-event", "en": "Removed custom events", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-equipment", "en": "Removed equipment", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-quality", "en": "Removed qualities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-space-location", "en": "Removed space locations", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mining-drill/blacklist", "en": "Blacklist", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mining-drill/filter", "en": "Filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mining-drill/whitelist", "en": "Whitelist", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-info/mod-portal-page", "en": "Mod portal", "hint": "Mod portal", "reason": "no-arabic"}
+{"module": "core", "key": "gui-mod-info/recommended-dependency", "en": "(recommended)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-load-error/circular-dependencies", "en": "Circular dependencies detected", "hint": "", "reason": "missing"}

@@ -1,0 +1,120 @@
+{"module": "space-age", "key": "achievement-name/reach-for-the-stars", "en": "Reach for the stars", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/research-with-agriculture", "en": "Research with agriculture", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/research-with-cryogenics", "en": "Research with cryogenics", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/research-with-electromagnetics", "en": "Research with electromagnetics", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/research-with-metallurgics", "en": "Research with metallurgics", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/research-with-promethium", "en": "Research with promethium", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/rush-to-space", "en": "Rush to space", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/second-star-to-the-right-and-straight-on-till-morning", "en": "Second star to the right and straight on till morning", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/shattered-planet-1", "en": "Going to shattered planet 1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/shattered-planet-2", "en": "Going to shattered planet 2", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/shattered-planet-3", "en": "Going to shattered planet 3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/size-doesnt-matter", "en": "Size doesn't matter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/todays-fish-is-trout-a-la-creme", "en": "Today's fish is trout a la creme", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/visit-aquilo", "en": "Visit Aquilo", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/visit-gleba", "en": "Visit Gleba", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/visit-vulcanus", "en": "Visit Vulcanus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/we-need-bigger-guns", "en": "We need bigger guns", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/work-around-the-clock", "en": "Work around the clock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "agricultural-tower-gui/input", "en": "Input", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "agricultural-tower-gui/modules", "en": "Modules", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "agricultural-tower-gui/output", "en": "Output", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "agricultural-tower-gui/seeds", "en": "Seeds", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "agricultural-tower-gui/seeds-description", "en": "Possible inputs", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "airborne-pollutant-name-with-amount/spores", "en": "__1__ __plural_for_parameter__1__{1=spore|rest=spores}__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "airborne-pollutant-name/spores", "en": "Spores", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "ammo-category-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "ammo-category-name/seismic", "en": "Seismic", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "ammo-category-name/tesla", "en": "Tesla", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "asteroid-chunk-name/carbonic-asteroid-chunk", "en": "Carbonic asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "asteroid-chunk-name/metallic-asteroid-chunk", "en": "Metallic asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "asteroid-chunk-name/oxide-asteroid-chunk", "en": "Oxide asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "asteroid-chunk-name/promethium-asteroid-chunk", "en": "Promethium asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "autoplace-control-names/vulcanus_volcanism", "en": "Vulcanus volcanism", "hint": "Vulcanus volcanism", "reason": "no-arabic"}
+{"module": "space-age", "key": "decorative-name/aqulio-ice-decal-blue", "en": "Ice decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/aqulio-snowy-decal", "en": "Light snow decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/barnacles-decal", "en": "Barnacles decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/black-sceptre", "en": "Black sceptre", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/blood-grape", "en": "Blood grape", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/blood-grape-vibrant", "en": "Blood grape red", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/brambles", "en": "Brambles", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/brown-cup", "en": "Brown cup", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/calcite-stain", "en": "Calcite stain", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/calcite-stain-small", "en": "Calcite stain", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/coral-land", "en": "Coral (land)", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/coral-stunted", "en": "Stunted coral", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/coral-stunted-grey", "en": "Stunted coral grey", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/coral-water", "en": "Coral (water)", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/crater-large", "en": "Large crater", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/crater-small", "en": "Small crater", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/cream-nerve-roots-veins-dense", "en": "Cream Nerve root veins dense", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/cream-nerve-roots-veins-sparse", "en": "Cream Nerve root veins sparse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/curly-roots-grey", "en": "Curly roots grey", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/curly-roots-orange", "en": "Curly roots orange", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/floating-iceberg-large", "en": "Big floating iceberg", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/floating-iceberg-small", "en": "Small floating iceberg", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/fuchsia-pita", "en": "Fuchsia pita", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-big-decal", "en": "Big flooded Fulgoran ruin decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-medium", "en": "Medium flooded Fulgoran ruin", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-small", "en": "Small flooded Fulgoran ruin", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/fulgoran-ruin-tiny", "en": "Tiny Fulgoran ruin", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/gleba-spawner-slime", "en": "Spawning foam", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-cup", "en": "Green cup", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-1x1", "en": "Green lettuce lichen 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-3x3", "en": "Green lettuce lichen 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-6x6", "en": "Green lettuce lichen 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-1x1", "en": "Green lettuce lichen water 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-3x3", "en": "Green lettuce lichen water 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-6x6", "en": "Green lettuce lichen water 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/grey-cracked-mud-decal", "en": "Grey cracked mud decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/honeycomb-fungus", "en": "Medium honeycomb fungus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/honeycomb-fungus-1x1", "en": "Small honeycomb fungus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/honeycomb-fungus-decayed", "en": "Dead honeycomb fungus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/knobbly-roots", "en": "Knobbly roots", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/knobbly-roots-orange", "en": "Knobbly roots orange", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/lithium-iceberg-medium", "en": "Medium lithium ice formation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/lithium-iceberg-small", "en": "Small lithium ice formation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/lithium-iceberg-tiny", "en": "Tiny lithium ice formation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/matches-small", "en": "Small match fungus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/medium-fulgora-rock", "en": "Medium Fulgora rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/medium-fulgoran-gravewort", "en": "Medium Fulgoran gravewort", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/medium-volcanic-rock", "en": "Medium volcanic rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/mycelium", "en": "Mycelium", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/nerve-roots-dense", "en": "Nerve roots dense", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/nerve-roots-sparse", "en": "Nerve roots sparse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-1x1", "en": "Pale lettuce lichen 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-3x3", "en": "Pale lettuce lichen 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-6x6", "en": "Pale lettuce lichen 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-1x1", "en": "Pale lettuce lichen cups 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-3x3", "en": "Pale lettuce lichen cups 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-6x6", "en": "Pale lettuce lichen cups 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-1x1", "en": "Pale lettuce lichen water 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-3x3", "en": "Pale lettuce lichen water 3x3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-6x6", "en": "Pale lettuce lichen water 6x6", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pink-lichen-decal", "en": "Pink lichen decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pink-phalanges", "en": "Pink phalanges", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/polycephalum-balloon", "en": "Polycephalum balloon", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/polycephalum-slime", "en": "Polycephalum slime", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/pumice-relief-decal", "en": "Rock decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/purple-nerve-roots-veins-dense", "en": "Purple Nerve root veins dense", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/purple-nerve-roots-veins-sparse", "en": "Purple Nerve root veins sparse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/red-lichen-decal", "en": "Red lichen decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/red-nerve-roots-veins-dense", "en": "Red Nerve root veins dense", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/red-nerve-roots-veins-sparse", "en": "Red Nerve root veins sparse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/small-fulgora-rock", "en": "Small Fulgora rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/small-fulgoran-gravewort", "en": "Small Fulgoran gravewort", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/small-sulfur-rock", "en": "Small sulfur rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/small-volcanic-rock", "en": "Small volcanic rock", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/snow-drift-decal", "en": "Snow drift decal", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/solo-barnacle", "en": "Solo Barnacle", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-1x1", "en": "Space platform decorative 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-2x2", "en": "Space platform decorative 2x2", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-4x4", "en": "Space platform decorative 4x4", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-1x1", "en": "Space platform decorative pipes 1x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-1x2", "en": "Space platform decorative pipes 1x2", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-2x1", "en": "Space platform decorative pipes 2x1", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/space-platform-decorative-tiny", "en": "Space platform decorative tiny", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/split-gill-1x1", "en": "Small split gill lichen", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/split-gill-2x2", "en": "Medium split gill lichen", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/split-gill-dying-1x1", "en": "Small dying split gill lichen", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "decorative-name/split-gill-dying-2x2", "en": "Medium dying split gill lichen", "hint": "", "reason": "missing"}

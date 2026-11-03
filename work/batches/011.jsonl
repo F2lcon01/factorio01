@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-mod-load-error/dependency-incompatible", "en": "Incompatible with __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-load-error/dependency-missing", "en": "Missing required dependency __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-load-error/dependency-not-satisfied", "en": "Dependency __1__ is not satisfied (active: __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-load-error/factorio-version-incompatible", "en": "Incompatible Factorio version (current: __1__, required: __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-load-error/manage-mods", "en": "Manage mods", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-startup-settings-mismatch/description", "en": "Your mod startup settings do not match with those of the server you are connecting to.\\n\\nDo you want to apply the server's startup settings and restart the game?", "hint": "nهل تريد تطبيق إعدادات بدء تشغيل الخادم وإعادة تشغيل اللعبة؟\\nإعدادات بدء تشغيل المود الخاص بك لا تتطابق مع إعدادات الخادم الذي تتصل به.\\", "reason": "tokens"}
+{"module": "core", "key": "gui-mods/bookmark", "en": "Add to bookmarks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/cant-install-mod-error", "en": "Unable to install all required dependencies for __1__: __2__. Would you like to install the mod without dependencies?", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/cant-install-mod-no-compatible-release", "en": "There is no compatible version of __1__ on the mod portal.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/explore", "en": "Explore", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/install-failed", "en": "Install failed for __1__: __2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/mod-selection-invalid", "en": "The selected mod configuration is not valid. The dependencies for some mods are not met.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/mod-selection-invalid-console", "en": "The selected DLC configuration is not valid. The dependencies for some DLCs are not met.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/remove-bookmark", "en": "Remove from bookmarks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/sync-mods-with-server", "en": "Your active mods don't match the server's. Do you want to sync your mods with the server?", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/title-console", "en": "DLC", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/unconfirmed-mod-changes", "en": "__1__ __plural_for_parameter__1__{1=mod|rest=mods}__ changed.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/unconfirmed-mod-installed", "en": "__1__ __plural_for_parameter__1__{1=mod|rest=mods}__ installed.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/unconfirmed-mod-updated", "en": "__1__ __plural_for_parameter__1__{1=mod|rest=mods}__ updated.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mods/waiting-for-mod-portal", "en": "Waiting for mod portal...", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-multiplayer-lobby/auto-pause-while-players-connect", "en": "Auto pause the game while someone is connecting.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/green-connected", "en": "Toggle green network filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/green-label", "en": "G", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/green-not-connected", "en": "Green network not connected", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/not-relevant", "en": "Network selection is not relevant", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/red-connected", "en": "Toggle red network filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/red-label", "en": "R", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-network-selector/red-not-connected", "en": "Red network not connected", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-new-space-platform/create", "en": "Create", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-new-space-platform/name", "en": "Name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-new-space-platform/planet", "en": "Planet", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-new-space-platform/position", "en": "Position", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-new-space-platform/starter-pack", "en": "Starter pack", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-new-space-platform/title", "en": "New space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/all", "en": "All", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/all-tooltip", "en": "Deliveries will be requested from both the planet and space platforms.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/any-location", "en": "Any location", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/custom-minimal-payload", "en": "Custom minimum payload", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/custom-minimal-payload-too-high", "en": "Minimum payload (__1__) is larger than largest possible payload (__2__).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/custom-minimum-payload-tooltip", "en": "Override the minimum amount of items delivered by a single rocket to a lower value.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/import-from", "en": "Import from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/import-from-planet", "en": "Import from planet", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/import-from-platforms", "en": "Import from platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/import-from-tooltip", "en": "This filter will only be active on the specified planet.\\nEmpty means the filter will be active on all planets.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/planet", "en": "Planet", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/planet-tooltip", "en": "Deliveries will be requested from rocket silos on the planet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/platforms", "en": "Platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/platforms-tooltip", "en": "Deliveries will be requested from space platforms in orbit over the planet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-orbital-request/set-orbital-request", "en": "Set orbital request", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-other-settings-description/move-character-to-editor-on-editor-exit", "en": "If enabled, will move your real in-game location to the editor location. If disabled, will return to your original in-game location before you opened the editor.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-other-settings/delete-achievements-label-tooltip-modded", "en": "This will permanently delete all modded achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-other-settings/move-character-to-editor-on-editor-exit", "en": "Move player to editor location on exit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-other-settings/proxy", "en": "Proxy server", "hint": "Proxy server", "reason": "no-arabic"}
+{"module": "core", "key": "gui-other-settings/proxy-password", "en": "Proxy server password", "hint": "Proxy server password", "reason": "no-arabic"}
+{"module": "core", "key": "gui-other-settings/proxy-username", "en": "Proxy server username", "hint": "Proxy server username", "reason": "no-arabic"}
+{"module": "core", "key": "gui-package-list/too-large-to-cloud-sync", "en": "This game is too large to be synced via Steam cloud.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-package-list/up-from-dir", "en": "__1__/..", "hint": "__1__/..", "reason": "direction"}
+{"module": "core", "key": "gui-permissions-names/AddDeciderCombinatorElseOutput", "en": "Add decider combinator else-output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/CancelSelectArea", "en": "Cancel select area", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ChangeResearchCondition", "en": "Change research condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ChangeSelectArea", "en": "Change select area", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ChangeTrainStation", "en": "Change train station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/DragDeciderCombinatorElseOutput", "en": "Drag decider combinator else-output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/DragResearchCondition", "en": "Drag research condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/GuiInventoryAction", "en": "Gui inventory action", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/GuiInventoryBarChanged", "en": "Gui inventory bar changed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/GuiInventoryFilterChanged", "en": "Gui inventory filter changed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ModifyDeciderCombinatorElseOutput", "en": "Modify decider combinator else-output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/OpenAlertsConfigGui", "en": "Open alerts configuration gui", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/OpenNewPlatformButtonFromRocketSilo", "en": "Open new platform button from rocket silo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ProvidingToOtherPlatforms", "en": "Providing to other platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/RemoveDeciderCombinatorElseOutput", "en": "Remove decider combinator else-output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/SetControlBehaviorInputNetworks", "en": "Set control behavior input networks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/SetControlBehaviorOutputNetworks", "en": "Set control behavior output networks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/SetEquipmentEnergyProperty", "en": "Set equipment energy property", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/SetInfinityContainerLogisticMode", "en": "Set infinity container logistic mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/SetRocketSiloSendToOrbitAutomatedMode", "en": "Set rocket silo send to orbit automated mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/StartSelectArea", "en": "Start select area", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ToggleBlueprintSnapToGrid", "en": "Toggle blueprint snap to grid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ToggleSelectedEntity", "en": "Toggle selected entity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-permissions-names/ToggleTallEntityVisibility", "en": "Toggle tall entity visibility", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-plant-entity/ticks-until-grown", "en": "Ticks until grown", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-player-management/online-players", "en": "Online: __1__/__2__", "hint": "اللعب الجماعي عبر الإنترنت", "reason": "tokens"}
+{"module": "core", "key": "gui-production/title", "en": "__1__ production", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-production/universe", "en": "Universe", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/global-playback", "en": "Universe", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/global-playback-description", "en": "Sounds created by the speaker will be heard everywhere.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/instrument", "en": "Category/Instrument", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/local-playback", "en": "Local", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/local-playback-description", "en": "Sounds created by the speaker will be heard within the audible range of the speaker.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/note", "en": "Sound/Note", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/playback-mode", "en": "Playback mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/signal-value-is-volume", "en": "Signal value is volume", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/signal-value-is-volume-description", "en": "The value of the input circuit network signal determines the volume of the sound played, in percents, in the range between 0 and 100. Values outside of the range are clamped.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/sound-settings", "en": "Sound settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/stop-playing-sounds", "en": "Stop playing sounds", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/stop-playing-sounds-description", "en": "Change of the input circuit network signal will stop currently playing sounds immediately instead of waiting for them to finish.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/surface-playback", "en": "Surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-programmable-speaker/surface-playback-description", "en": "Sounds created by the speaker will be heard everywhere on the speaker's surface.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-quick-panel/shortcuts-next-page", "en": "__1__: next page", "hint": "الصفحة التالية", "reason": "tokens"}
+{"module": "core", "key": "gui-quick-panel/shortcuts-next-tab", "en": "__1__: next tab", "hint": "علامة التبويب التالية", "reason": "tokens"}
+{"module": "core", "key": "gui-quick-panel/shortcuts-previous-page", "en": "__1__: previous page", "hint": "الصفحة السابقة", "reason": "tokens"}
+{"module": "core", "key": "gui-redo-action/add-wires-header", "en": "Redo addition of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/build-entities-header", "en": "Redo construction of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/build-tiles-header", "en": "Redo placement of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/copy-entity-settings-header", "en": "Redo copying settings to", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/install-modules-header", "en": "Redo installation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/remove-entities-header", "en": "Redo deconstruction of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/remove-tiles-header", "en": "Redo removal of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/remove-wires-header", "en": "Redo removal of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/rotate-entity-header", "en": "Redo rotation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/uninstall-modules-header", "en": "Redo uninstallation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/upgrade-entities-header", "en": "Redo upgrade of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-confirmation/are-you-sure", "en": "Are you sure you want to redo an action from __1__ ago?\\n\\n__2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-confirmation/confirm-redo", "en": "Redo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-heterogeneous", "en": "Redo addition of __1__ wires", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-homogeneous", "en": "Redo addition of __1__ wires (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-single", "en": "Redo addition of __1__ wire", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-heterogeneous", "en": "Redo construction of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-homogeneous", "en": "Redo construction of __1__ (× __2__)", "hint": "", "reason": "missing"}

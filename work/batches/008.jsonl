@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering", "en": "Steering", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering-controller-description", "en": "Moving the stick up/down will make vehicles accelerate/brake.\\nMoving the stick left/right will make vehicles turn in that direction.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering-keyboard-description", "en": "Pressing up/down will make vehicles accelerate/brake.\\nPressing left/right will make vehicles turn in that direction.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-current-research/science-per-minute", "en": "Science per minute", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-current-research/tooltip-estimated-time", "en": "Remaining time estimate", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-current-research/tooltip-remaining-research", "en": "Progress", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-current-research/tooltip-title", "en": "__1__ Science production information", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/add-condition", "en": "+ Add condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/add-else-output", "en": "+ Add else", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/add-output", "en": "+ Add output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/conditions", "en": "Conditions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/else-output-header", "en": "Else outputs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/else-output-header-tooltip", "en": "Output signals that are being sent when conditions evaluate to false.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-decider/outputs", "en": "Outputs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/add-message", "en": "Add new message", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/always-show", "en": "Always show in \"Alt-mode\"", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/always-show-tooltip", "en": "Always show the first line of the display panel's text in \"Alt-mode\" even when not selected.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/condition", "en": "Condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/edit-message", "en": "Edit Message", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/icon", "en": "Icon", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/message", "en": "Message", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/message-limit-reached", "en": "Message limit reached", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/no-label", "en": "[No label]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/show-in-chart", "en": "Show tag in chart", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-display-panel/show-in-chart-tooltip", "en": "Show the chosen icon and the first line of text in the map charts.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-downloading-mods/currently-downloading-mod", "en": "__1__ (__2__/__3__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-edit-label/add-description", "en": "Add description", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-edit-label/description", "en": "Description", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-edit-pin/always-visible", "en": "Always visible", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-edit-pin/label", "en": "Label", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-edit-pin/preview-distance", "en": "Preview distance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-edit-pin/title", "en": "Pin settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/input-flow-limit", "en": "Input flow limit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode", "en": "Mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-accumulator", "en": "Accumulator", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-primary-input", "en": "Primary input", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-primary-output", "en": "Primary output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-secondary-input", "en": "Secondary input", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-secondary-output", "en": "Secondary output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-solar-output", "en": "Solar output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-tertiary-input", "en": "Tertiary input", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-tertiary-input-output", "en": "Tertiary input/output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/mode-tertiary-output", "en": "Tertiary output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-electric-energy-interface/output-flow-limit", "en": "Output flow limit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/armor", "en": "Armors or armor equipment.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/blueprints", "en": "Change blueprint behavior.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/character", "en": "Changes to the player's in-game appearance.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/cheats", "en": "Play it your way.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/circuit-network", "en": "Entities which interact with the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/combat", "en": "New ways to deal with enemies, be it attack or defense.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/content", "en": "Mods introducing new content into the game.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/enemies", "en": "Changes to enemies or entirely new enemies to deal with.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/environment", "en": "Map generation and terrain modification.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/fluids", "en": "Things related to oil and other fluids.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/internal", "en": "Lua libraries for use by other mods and submods that are parts of a larger mod.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/localizations", "en": "Translations for other mods.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/logistic-network", "en": "Related to roboports and logistic robots.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/logistics", "en": "Augmented or new ways of transporting materials - belts, inserters, pipes!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/manufacturing", "en": "Furnaces, assembling machines, production chains.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/mining", "en": "New Ores and resources as well as machines.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/mod-packs", "en": "Collections of mods with tweaks to make them work together.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/no-category", "en": "Mods escaping the bounds of mod portal categorization. It's also the default for new mods.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/overhaul", "en": "Large total conversion mods.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/planets", "en": "New places to build more factories.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/power", "en": "Changes to power production and distribution.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/scenarios", "en": "Scenarios, maps, and puzzles.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/space-age", "en": "Factorio: Space Age continues the player's journey after launching rockets into space. Discover new worlds with unique challenges, exploit their novel resources for advanced technological gains, and manage your fleet of interplanetary space platforms.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/storage", "en": "More than just chests.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/trains", "en": "Trains are great, but what if they could do even more?", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/transportation", "en": "Transportation of the player, be it vehicles or teleporters.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/tweaks", "en": "Small changes concerning balance, gameplay, or graphics.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-description/utilities", "en": "Providing the player with new tools or adjusting the game interface, without fundamentally changing gameplay.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/armor", "en": "Armor", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/blueprints", "en": "Blueprints", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/character", "en": "Character", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/cheats", "en": "Cheats", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/circuit-network", "en": "Circuit network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/combat", "en": "Combat", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/content", "en": "Content", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/enemies", "en": "Enemies", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/environment", "en": "Environment", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/fluids", "en": "Fluids", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/internal", "en": "Internal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/localizations", "en": "Localizations", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/logistic-network", "en": "Logistic network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/logistics", "en": "Logistics", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/manufacturing", "en": "Manufacturing", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/mining", "en": "Mining", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/mod-packs", "en": "Mod packs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/no-category", "en": "No category", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/overhaul", "en": "Overhaul", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/planets", "en": "Planets", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/power", "en": "Power", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/scenarios", "en": "Scenarios", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/space-age", "en": "Space Age [space-age]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/storage", "en": "Storage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/trains", "en": "Trains", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/transportation", "en": "Transportation", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/tweaks", "en": "Tweaks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-filter-name/utilities", "en": "Utilities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/last_updated_at", "en": "Recently updated", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/most_downloads", "en": "Downloads", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/relevancy", "en": "Relevance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods-sort-attribute-name/trending", "en": "Trending", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/bookmarks-only", "en": "Bookmarks only", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/categories", "en": "Categories", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/deprecated", "en": "DEPRECATED", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/exclude-filter", "en": "Exclude from search results", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/expansion", "en": "Expansion", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/filters", "en": "Filters", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/include-deprecated", "en": "Include deprecated", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/installed", "en": "Installed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/installing", "en": "Installing...", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/sort-by", "en": "Sort by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/space-age-mod", "en": "[space-age] Space Age Mod", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/tags", "en": "Tags", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/total-mods-count", "en": "Found __1__ mods", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/unable-to-search", "en": "Unable to search the mod portal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/view", "en": "View", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/discard-are-you-sure", "en": "Are you sure you want to discard this entire feedback form?", "hint": "", "reason": "missing"}

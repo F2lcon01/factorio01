@@ -1,0 +1,19 @@
+{
+ "accumulator": "مجمع",
+ "blueprint": "المخطط",
+ "character": "الشخصية",
+ "circuit network": "دارة كهربائية",
+ "combat": "قتال",
+ "default": "افتراضي",
+ "display panel": "لوحة العرض",
+ "enemies": "أعداء",
+ "environment": "البيئة",
+ "fluids": "السوائل",
+ "input": "مُدخل",
+ "logistics": "الخدمات اللوجستية",
+ "output": "مُخرج",
+ "production": "الإنتاج",
+ "science": "العلوم",
+ "signals": "إشارات",
+ "space": "فضاء"
+}

@@ -1,0 +1,23 @@
+{
+ "alert": "تنبيه",
+ "anything": "أي شيء",
+ "asteroid collector": "جامع الكويكبات",
+ "blueprint": "المخطط",
+ "cargo landing pad": "منصة هبوط الحمولة",
+ "damage": "الضرر",
+ "default": "افتراضي",
+ "enemies": "أعداء",
+ "fluids": "السوائل",
+ "fuel": "الوقود",
+ "input": "مُدخل",
+ "output": "مُخرج",
+ "programmable speaker": "سماعة مبرمجة",
+ "roboport": "مركز الروبوتات",
+ "science": "العلوم",
+ "science pack": "حُزمة العلوم",
+ "space": "فضاء",
+ "tiles": "البلاط",
+ "train stop": "محطة قطار",
+ "tree": "شجرة",
+ "wait": "انتظار"
+}

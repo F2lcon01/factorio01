@@ -1,0 +1,120 @@
+{"module": "space-age", "key": "entity-name/turbo-splitter", "en": "Turbo splitter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/turbo-underground-belt", "en": "Turbo underground belt", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/vulcanus-cliff-collapse", "en": "Vulcanus cliff collapse", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/water-cane", "en": "Water cane", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/wube-logo-space-platform", "en": "Wube logo (space platform)", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/yumako-tree", "en": "Yumako tree", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "equipment-name/battery-mk3-equipment", "en": "Personal battery MK3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "equipment-name/fusion-reactor-equipment", "en": "Portable fusion reactor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "equipment-name/toolbelt-equipment", "en": "Toolbelt equipment", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "factoriopedia-description/fusion-generator", "en": "Consumes plasma from the [entity=fusion-reactor] to create electric energy. Power production is nominal, but less plasma is consumed if the temperature is higher. It outputs heated coolant equal to the amount of plasma consumed that can be cooled in an [entity=cryogenic-plant]. Fusion generators can be linked and transfer plasma to each other.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "factoriopedia-description/fusion-reactor", "en": "Uses fluoroketone coolant with fusion power cells to make super-heated plasma. It can only be output directly to an [entity=fusion-generator]. The neighbor bonus with other fusion reactors greatly increases the plasma temperature without increasing the amount of coolant used.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-description/fusion-plasma", "en": "Ultra-high-temperature ions generated in [entity=fusion-reactor] and consumed by a [entity=fusion-generator]. It is not a normal fluid and cannot be moved in [entity=pipe], it can only be moved through the Fusion reactor and Fusion generator.\\nThe temperature of plasma determines its energy value.\\nA quantity of plasma also represents that amount of coolant that travels with it, and the heated coolant is output by the Fusion generator as the plasma is used for energy.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-description/thruster-fuel", "en": "Liquid thruster fuel", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/ammonia", "en": "Ammonia", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/ammoniacal-solution", "en": "Ammoniacal solution", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/electrolyte", "en": "Electrolyte", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/fluorine", "en": "Fluorine", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/fluoroketone-cold", "en": "Fluoroketone (Cold)", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/fluoroketone-hot", "en": "Fluoroketone (Hot)", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/fusion-plasma", "en": "Plasma", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/holmium-solution", "en": "Holmium solution", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/lithium-brine", "en": "Lithium brine", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/molten-copper", "en": "Molten copper", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/molten-iron", "en": "Molten iron", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/thruster-fuel", "en": "Thruster fuel", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-name/thruster-oxidizer", "en": "Thruster oxidizer", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fuel-category-name/fusion", "en": "Fusion fuel", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fuel-category-name/nutrients", "en": "Nutrients", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-asteroid-collector/chunk-filter", "en": "Asteroid chunk filter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-asteroid-collector/chunk-filter-description", "en": "When set the Asteroid Collector only captures these chunks.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-map-editor-instructions/asteroid-chunks-only-buildable-on-platforms", "en": "Asteroid chunks can only be built on space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-rocket-silo/auto-launch-tooltip", "en": "Launches the rocket automatically for space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/artificial-jellynut-soil", "en": "Must be placed over [tile=wetland-jellynut].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/artificial-yumako-soil", "en": "Must be placed over [tile=wetland-yumako].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/bioflux", "en": "Highly nutritious blend of Gleba crops. Grants burst of both health regeneration and movement speed when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/capture-robot-rocket", "en": "Grapples on and captures the targeted [entity=biter-spawner] into [entity=captive-biter-spawner].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/carbonic-asteroid-chunk", "en": "An asteroid chunk with high carbon content.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/foundation", "en": "Engineered structural foundation with heat shielding and deep screw piles. Can be placed on lava, oil ocean, and most water.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/fusion-reactor-equipment", "en": "Provides power for equipment modules.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/ice-platform", "en": "A stable floating platform of ice for sufficiently cold planets.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/jelly", "en": "Grants burst of movement speed when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/jellynut", "en": "Slimy farmable crop. Grants burst of movement speed when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/jellynut-seed", "en": "Can be planted on jellynut soil.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/metallic-asteroid-chunk", "en": "An asteroid chunk with high metal content.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/overgrowth-jellynut-soil", "en": "Soil for [entity=jellystem] placeable anywhere in the red biome.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/overgrowth-yumako-soil", "en": "Soil for [entity=yumako-tree] placeable anywhere in the green biome.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/oxide-asteroid-chunk", "en": "An asteroid chunk with high oxygen content.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/promethium-asteroid-chunk", "en": "An asteroid chunk only found when approaching the shattered planet.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/railgun-ammo", "en": "Used to break even the biggest asteroids.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/space-platform-foundation", "en": "Can be placed in space to extend existing space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/space-platform-starter-pack", "en": "Contains everything needed to set up a space platform foundation.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/space-science-pack", "en": "Used by labs for research. Obtained by processing asteroids in space.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/yumako", "en": "Nutritious farmable crop. Grants burst of health regeneration when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/yumako-mash", "en": "Grants burst of health regeneration when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/yumako-seed", "en": "Can be planted on yumako soil.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/agricultural-science-pack", "en": "Agricultural science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/artificial-jellynut-soil", "en": "Artificial jellynut soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/artificial-yumako-soil", "en": "Artificial yumako soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/big-mining-drill", "en": "Big mining drill", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/bioflux", "en": "Bioflux", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/biter-egg", "en": "Biter egg", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/calcite", "en": "Calcite", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/captive-biter-spawner", "en": "Captive biter spawner", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/capture-robot-rocket", "en": "Capture bot rocket", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/carbon", "en": "Carbon", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/carbon-fiber", "en": "Carbon fiber", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/carbonic-asteroid-chunk", "en": "Carbonic asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/copper-bacteria", "en": "Copper bacteria", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/crusher", "en": "Crusher", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/cryogenic-plant", "en": "Cryogenic plant", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/cryogenic-science-pack", "en": "Cryogenic science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/electromagnetic-science-pack", "en": "Electromagnetic science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/foundation", "en": "Foundation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/fusion-power-cell", "en": "Fusion power cell", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/holmium-ore", "en": "Holmium ore", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/holmium-plate", "en": "Holmium plate", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/ice", "en": "Ice", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/ice-platform", "en": "Ice platform", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/iron-bacteria", "en": "Iron bacteria", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/jelly", "en": "Jelly", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/jellynut", "en": "Jellynut", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/jellynut-seed", "en": "Jellynut seed", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/lithium", "en": "Lithium", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/lithium-plate", "en": "Lithium plate", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/mech-armor", "en": "Mech armor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/metallic-asteroid-chunk", "en": "Metallic asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/metallurgic-science-pack", "en": "Metallurgic science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/nutrients", "en": "Nutrients", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/overgrowth-jellynut-soil", "en": "Overgrowth jellynut soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/overgrowth-yumako-soil", "en": "Overgrowth yumako soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/oxide-asteroid-chunk", "en": "Oxide asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/pentapod-egg", "en": "Pentapod egg", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/promethium-asteroid-chunk", "en": "Promethium asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/promethium-science-pack", "en": "Promethium science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/railgun-ammo", "en": "Railgun ammo", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/scrap", "en": "Scrap", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/space-platform-foundation", "en": "Space platform foundation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/space-platform-starter-pack", "en": "Space platform starter pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/spoilage", "en": "Spoilage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/supercapacitor", "en": "Supercapacitor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/superconductor", "en": "Superconductor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/tesla-ammo", "en": "Tesla ammo", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/teslagun", "en": "Tesla gun", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/tungsten-carbide", "en": "Tungsten carbide", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/tungsten-ore", "en": "Tungsten ore", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/tungsten-plate", "en": "Tungsten plate", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/turbo-splitter", "en": "Turbo splitter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/turbo-transport-belt", "en": "Turbo transport belt", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/turbo-underground-belt", "en": "Turbo underground belt", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/yumako", "en": "Yumako", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/yumako-mash", "en": "Yumako mash", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-name/yumako-seed", "en": "Yumako seed", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "map-gen-preset-name/vulcanus", "en": "Vulcanus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "mod-description/space-age", "en": "Sky is not the limit!", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/belt-stack-size-bonus", "en": "Transport belt capacity: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/rail-support-on-deep-oil-ocean", "en": "Allows building elevated rails also on the deep parts of the oil ocean.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/railgun-damage-bonus", "en": "Railgun damage: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/railgun-shooting-speed-bonus", "en": "Railgun shooting speed: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/tesla-damage-bonus", "en": "Tesla damage: +__1__", "hint": "", "reason": "missing"}

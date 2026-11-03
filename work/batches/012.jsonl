@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-single", "en": "Redo construction of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-tile-heterogeneous", "en": "Redo placement of __1__ tiles", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-tile-homogeneous", "en": "Redo placement of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-tile-single", "en": "Redo placement of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-copy-entity-settings-heterogeneous", "en": "Redo copying settings to __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-copy-entity-settings-homogeneous", "en": "Redo copying settings to __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-copy-entity-settings-single", "en": "Redo copying settings to __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-install-module-heterogeneous", "en": "Redo installation of __1__ modules", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-install-module-homogeneous", "en": "Redo installation of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-install-module-single", "en": "Redo installation of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-remove-module-heterogeneous", "en": "Redo removal of __1__ modules", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-remove-module-homogeneous", "en": "Redo removal of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-remove-module-single", "en": "Redo removal of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-entity-heterogeneous", "en": "Redo deconstruction of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-entity-homogeneous", "en": "Redo deconstruction of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-entity-single", "en": "Redo deconstruction of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-tile-heterogeneous", "en": "Redo removal of __1__ tiles", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-tile-homogeneous", "en": "Redo removal of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-tile-single", "en": "Redo removal of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-wire-heterogeneous", "en": "Redo removal of __1__ wires", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-wire-homogeneous", "en": "Redo removal of __1__ wires (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-removed-wire-single", "en": "Redo removal of __1__ wire", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-rotated-entity-heterogeneous", "en": "Redo rotation of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-rotated-entity-homogeneous", "en": "Redo rotation of __1__ entities (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-rotated-entity-single", "en": "Redo rotation of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-upgraded-entity-heterogeneous", "en": "Redo upgrade of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-upgraded-entity-homogeneous", "en": "Redo upgrade of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-upgraded-entity-single", "en": "Redo upgrade of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/cancel", "en": "Cancel planet drop", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/land-on-planet", "en": "[img=entity/character] Drop to a planet", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/land-on-planet-tooltip", "en": "Choose a planet to drop to when __1__ is in orbit over it.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/landing-on-planet", "en": "[img=entity/character] Dropping to __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/landing-on-planet-tooltip", "en": "You will drop to __1__ when __2__ is in orbit over the planet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/reset", "en": "Reset remote view position", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/select-a-planet", "en": "Select planet to drop to", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-remote-view/surfaces", "en": "Surfaces", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/multiplier-tooltip", "en": "Multiplies the requests of this logistic group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/perform-group-change", "en": "Apply change\\nHold __CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__ while submitting to rename the entire group.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/perform-stop-change", "en": "Apply change\\nHold __CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__ while submitting to rename all stops with this name.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/perform-train-change", "en": "Apply change\\nHold __CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__ while submitting to rename the entire group.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/rename-group", "en": "Change logistic group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/rename-stop", "en": "Change stop name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rename/rename-train", "en": "Change train group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-roboport/only-worker-robots", "en": "Only worker robots can be requested.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-roboport/robot-request", "en": "Robot requests", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-roboport/robot-request-description", "en": "Requests worker robots from other roboports to station in this roboport.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/assembly-tab", "en": "Assembly", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cannot-launch-not-enough-space-in-hub", "en": "Can't deliver cargo because the platform hub does not have enough space.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cant-insert-into-rocket-silo-when-not-sendable-to-space", "en": "There is no point in sending __1__ to orbit.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cant-insert-into-rocket-silo-with-automated-delivery", "en": "Can't manually insert cargo while 'Automatic requests from space platforms' is enabled.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cant-send-empty-rocket", "en": "Can't send an empty rocket.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cant-travel-remotely", "en": "Can't travel to space while using remote view.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cant-travel-with-items", "en": "Can't travel to space with items in your inventory, trash slots, or ammo slots. (Only armor and guns are allowed.)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/cargo-delivery-unit-is-not-ready", "en": "Cargo unit is not ready.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/deliver-cargo", "en": "Deliver cargo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/empty-rocket", "en": "Rocket inventory is empty.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/frozen-rocket", "en": "Rocket launch mechanism is frozen.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/no-available-landing-pad", "en": "No available cargo landing pad.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/no-cargo-landing-pad-built", "en": "No cargo landing pad built on this planet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/no-landing-pad-nor-platform", "en": "No cargo landing pad to collect the launch results nor space platform in orbit to send this cargo to.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/no-space-in-landing-pad", "en": "No space in cargo landing pad.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/no-valid-destination-platforms", "en": "No space platforms currently in orbit overhead.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/platform-needs-starter-pack", "en": "Space platform __1__ has not been built yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/rocket-capacity-used", "en": "Rocket capacity usage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/rocket-is-not-ready", "en": "Rocket is not ready.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/rocket-needs-destination", "en": "Rocket cannot be launched without a destination space platform.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/rocket-tab", "en": "Rocket", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/select-space-platform", "en": "Select rocket destination", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/send-to-orbit-automatically", "en": "Send to orbit automatically", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/send-to-orbit-automatically-tooltip", "en": "When the rocket inventory contains an item that has rocket launch products (e.g. [color=green]__1__[/color]), it will be automatically sent to orbit.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/sending-this-payload-to-orbit-is-useless", "en": "Sending this payload to orbit is useless.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/space-platform-button", "en": "Build new space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/space-platform-button-tooltip-disabled", "en": "Rocket inventory must contain one [color=green][item=space-platform-starter-pack] __ITEM__space-platform-starter-pack__[/color] or have 'Automatic requests from space platforms' enabled to create a new space platform.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/travel-to-space", "en": "[img=entity/character] Travel to space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-rocket-silo/travel-to-space-platforms-locked", "en": "Not available yet.\\nDiscover a planet via research to unlock.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-save-game/cant-save-over-autosaves", "en": "Please choose a different save name.\\nAutosave files are reserved for autosaves and will be overwritten during future autosaves.", "hint": "الرجاء اختيار اسم حفظ مختلف.\\nملفات Autosave محجوزة للمبادلات التلقائية وسيتم الكتابة فوقها خلال أوقات الحفظ التلقائية.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-save-game/confirm-overwrite-time-warning", "en": "Warning: The selected save has __1__ __plural_for_parameter__1__{1=hour|rest=hours}__ of playtime!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-select-upgrade-planner/instructions", "en": "__CONTROL_LEFT_CLICK__ to apply as upgrade, __CONTROL_RIGHT_CLICK__ to apply as downgrade.", "hint": ".(لتطبيق التدنية (إنزال و تقليل التقنية __CONTROL_RIGHT_CLICK__ ،لتطبيق الترقية __CONTROL_LEFT_CLICK__", "reason": "direction"}
+{"module": "core", "key": "gui-selector/count", "en": "Count inputs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/count-description", "en": "Outputs the number of distinct input signals.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/count-output", "en": "Count output signal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/day-length", "en": "Day length", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/day-tick", "en": "Day tick", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/disabled", "en": " [Disabled]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/feature-disabled", "en": "Feature is disabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/feature-disabled-tooltip", "en": "Feature required for this operation is not enabled, so this option is useless.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/game-tick", "en": "Game tick", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/index", "en": "Index", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-destination", "en": "Target signal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-filter", "en": "Quality filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-filter-description", "en": "Outputs all input signals that pass the quality filter.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-select", "en": "Quality select", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-select-description", "en": "For each input signal, only the highest or lowest quality one is passed through.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-source-signal", "en": "Select from signal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-source-signal-description", "en": "Searches specified signal in the inputs, and picks highest quality of found signals.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-source-static", "en": "Direct selection", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-transfer", "en": "Quality transfer", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/quality-transfer-description", "en": "Outputs the target signal with the specified quality and its original value.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/random", "en": "Random input", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/random-description", "en": "Outputs a random signal from the input every tick.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/random-interval", "en": "Update interval", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/rocket-capacity", "en": "Rocket capacity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/rocket-capacity-description", "en": "Outputs the rocket capacity of the input signals.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select", "en": "Select input", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-description", "en": "Selects a specific signal out of all input signals, based on criteria.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-highest-quality", "en": "Highest quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-lowest-quality", "en": "Lowest quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-max", "en": "Sort descending", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-min", "en": "Sort ascending", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-sort-description", "en": "Sort input signals by count ascending/descending, before applying index.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/stack-size", "en": "Stack size", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/stack-size-description", "en": "Outputs the stack size of the input signals.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/time", "en": "Time", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/time-description", "en": "Outputs the game tick, day time in ticks, and number of ticks through the current day.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/alerts-config", "en": "Alerts configuration", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/blueprint-library-locked", "en": "Blueprint library is not relevant yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/bonuses-locked", "en": "No bonuses unlocked yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/factoriopedia", "en": "Factoriopedia (__ALT_CONTROL__1__open-factoriopedia__ when hovering over an object)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/logistic-networks", "en": "Logistic networks (__CONTROL__logistic-networks__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/logistic-networks-locked", "en": "No logistic networks present.", "hint": "", "reason": "missing"}

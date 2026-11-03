@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-surface", "en": "Surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-surface-description", "en": "Signals will be broadcast to all Surface mode radars on the same surface.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-universe", "en": "Universe", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-universe-description", "en": "Signals will be broadcast to all Universe mode radars with the same channel.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/roboport-count", "en": "Roboports in network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/temperature", "en": "Temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/temperature-description", "en": "Temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-harvesting", "en": "Enable harvesting condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-harvesting-description", "en": "When enabled, the tower only harvests when the condition is true.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-planting", "en": "Enable planting condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-enable-planting-description", "en": "When enabled, the tower only plants when the condition is true.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/agricultural-tower-read-contents-description", "en": "Reads the content of the machine: seeds to be planted and harvested plants.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/assembler-read-contents-description", "en": "Reads the content of the machine: ingredients, products, trash slots and items/fluids in crafting.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/assembler-read-contents-include-in-crafting", "en": "Include in crafting", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/assembler-read-contents-include-in-crafting-description", "en": "Ingredients that are part of in-craft recipe.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/asteroid-collector-read-contents-include-hands", "en": "Include hands", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/asteroid-collector-read-contents-include-hands-description", "en": "Asteroid chunks in collector hands", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/close-signal-description", "en": "When the specified condition is true, it tries to make this signal red and stop any trains from passing.\\nIf a train cannot stop in time (signal is yellow) or is already passing through (signal is red), the signal will not stop that train.\\nNote: The train will very often stop at the signal and not try to find an alternative path even if one is available.", "hint": "عندما يكون الشرط المحدد صحيحًا ، فإنه يحاول جعل هذه الإشارة حمراء وإيقاف أي قطارات من المرور.\\nإذا تعذر على القطار التوقف في الوقت المناسب (الإشارة صفراء) أو قد تجاوز بالفعل (الإشارة حمراء) ، فلن توقف الإشارة هذا القطار.\\nملاحظة: غالبًا ما يتوقف القطار عند الإشارة ولا يحاول العثور على مسار بديل حتى لو كان متاحًا.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-control-behavior-modes/container-read-empty-slots", "en": "Read empty slots", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/container-read-empty-slots-description", "en": "Sends the number of empty slots in the main inventory of this entity. Limited slots are ignored.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/container-set-requests-description", "en": "Sets the logistic requests of the chest based on the signals from the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/enable-if", "en": "Enable if", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/enable-if-description", "en": "Turn this entity on only when the condition is true.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/enable-if-train-stop-description", "en": "Turn this entity on only when the condition is true.\\nWhen condition is false the train stop is considered full and no new trains will be dispatched to it.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-damage-taken", "en": "Read damage taken", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-damage-taken-description", "en": "Sends amount of damage taken by the platform since when travel was started.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-from", "en": "Read moving from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-from-description", "en": "Sends the location at the beginning of the space connection which the platform is traveling along.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-to", "en": "Read moving to", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-moving-to-description", "en": "Sends the location at the end of the space connection which the platform is traveling along. To tell this signal apart \"moving from\" signal, this signal is transmitted with value of 2.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-speed", "en": "Read speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/hub-read-speed-description", "en": "Sends current speed of the platform.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-contents", "en": "Read contents", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-contents-description", "en": "Reads the content of the lab: science packs, and trash slots.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-research-cost", "en": "Read research cost", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-research-cost-description", "en": "Reads the science packs needed for the current research.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-technology-level", "en": "Read technology level", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-read-technology-level-description", "en": "Reads level of the technology currently being researched.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-set-research", "en": "Set research", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lab-set-research-description", "en": "Sets the active research to the first passing entry.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-color-mapping", "en": "Color mapping", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-color-mapping-description", "en": "Color is based on provided color signals.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-components", "en": "Color components", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-components-description", "en": "Color can be specified by red, green and blue signals separately. Their value should be from 0 to 255.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-packed-rgb", "en": "Packed RGB", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/lamp-mode-packed-rgb-description", "en": "Color is provided by a single hex encoded RGB color. Value should be from 0 to 16777215.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/landing-pad-set-requests-description", "en": "Sets the logistic requests of the cargo landing pad based on the signals from the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/none-read-description", "en": "Don't read any information from this entity.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/platform-read-contents-description", "en": "Reads the contents of the platform hub and sends them to the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/platform-set-requests-description", "en": "Sets the logistic requests of the platform hub based on the signals from the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ammo", "en": "Read ammunition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ammo-description", "en": "Outputs the turret's ammunition, considering items and fluids where applicable.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-fluid-temperature", "en": "Read fluid temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-fuel", "en": "Read fuel", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-fuel-description", "en": "Reads fuel inventory and currently burning fuel", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ingredients", "en": "Read ingredients", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-ingredients-description", "en": "Outputs the ingredients required for the currently configured recipe.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-logistic-network-requests", "en": "Read logistic network requests", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-logistic-network-requests-description", "en": "Reads the unsatisfied item requests from the logistic network of this roboport and sends them to the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-orbital-requests", "en": "Read orbital requests", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-orbital-requests-description", "en": "Outputs the sum of all unsatisfied logistic requests made by space platforms currently in orbit around this planet.\\nDoes not include platform to platform requests.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-pipeline-contents", "en": "Read pipeline contents", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-pipeline-contents-description", "en": "Reads the contents of the pipeline and sends them to the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-recipe-finished", "en": "Read recipe finished", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-recipe-finished-description", "en": "Outputs the given signal for one tick when the recipe completes.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-resources-description", "en": "Reads the amount of resources expected from this miner/pumpjack and sends it to the circuit network.\\nFor infinite resources, it reads the unmodified mining rate.\\nThe value is updated every 5 seconds.", "hint": "يقرأ مقدار الموارد المتوقعة من حفار التعدين / المضخة ويرسلها إلى شبكة التحكم.\\nبالنسبة للموارد غير المحدودة ، يقرأ معدل التنقيب غير المعدل.\\nيتم تحديث القيمة كل 5 ثوانٍ.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-control-behavior-modes/read-signal-description", "en": "Reads the color of the rail signal and sends the circuit network signal specified below.\\nIf the rail signal is red because it was closed from the circuit network, nothing will be sent.", "hint": "يقرأ لون إشارة السكك الحديدية ويرسل إشارة شبكة التحكم المحددة أدناه.\\nإذا كانت إشارة السكك الحديدية حمراء لأنها كانت مغلقة من شبكة التحكم ، فلن يتم إرسال أي شيء.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-control-behavior-modes/read-temperature", "en": "Read temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-temperature-description", "en": "Reads temperature of the reactor", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-transfers", "en": "Read transfers", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-transfers-description", "en": "Reads count of items moved and sends them to the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-working", "en": "Read working", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/read-working-description", "en": "Outputs the signal if the machine is working.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/rocket-silo-read-launched", "en": "Read launched", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/rocket-silo-read-launched-description", "en": "Sends a 1 tick pulse of selected output signal when a rocket is launched.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/send-to-platform", "en": "Send to platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/send-to-platform-description", "en": "Sends the contents of the circuit network to the platform, so they can be used for wait conditions.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-filter", "en": "Set filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-filter-description", "en": "Sets the filter based on the signals from the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-filters-description", "en": "Sets the filters based on the signals from the circuit network.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-priority", "en": "Set priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-priority-description", "en": "Sets the train stop priority that affects which stops will be taken first by the trains.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-recipe", "en": "Set recipe", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-recipe-description", "en": "Sets the recipe from the first valid recipe signal, or the first valid item signal, or the first valid entity signal.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-stack-size", "en": "Set hand size", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-stack-size-description", "en": "Set the maximum hand stack size of this inserter based on the count of the selected circuit network signal.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-ignore-unlisted", "en": "Set ignore unlisted targets", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-ignore-unlisted-description", "en": "Sets the turret to ignore targets not on its priority list if the condition is met.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-priorities", "en": "Set priority list", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/set-turret-priorities-description", "en": "Sets the turret's priority list from entity signals, sorted by signal value, ignoring negative values.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-left", "en": "Left", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-right", "en": "Right", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-filter", "en": "Set filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-filter-description", "en": "", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-input-side", "en": "Set input side", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-input-side-description", "en": "", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-output-side", "en": "Set output side", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/splitter-set-output-side-description", "en": "", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes/use-colors-description", "en": "Sets the color of the lamp based on color signals.\\nIf a color signal has a value greater than 0, the lamp will show that color.\\nIf multiple colors are present, only one of them will be used.", "hint": "وضع لون المصباح بناءً على اشارات اللون.\\nإذا كانت إشارة اللون لها قيمة أكبر من 0، فإن المصباح سيظهر ذلك اللون.\\nإذا كانت الالوان الموجودة متعدده، سيتم استخدام لون واحد منها فقط.", "reason": "not-involutive"}
+{"module": "core", "key": "gui-control-behavior/connected-to-network", "en": "Connected to:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior/open-connected-network", "en": "Open connected network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/controller-icons-auto", "en": "Auto-detect (__1__)", "hint": "Auto-detect (__1__)", "reason": "no-arabic"}
+{"module": "core", "key": "gui-control-settings/cursor-sensitivity", "en": "Cursor stick sensitivity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/cursor-sensitivity-description", "en": "How fast the cursor moves in reaction to stick movement.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/enabled", "en": "Enabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/input-method", "en": "Input method:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/input-not-found-controller", "en": "Your selected input method is controller but no controller is connected.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode", "en": "Mouse mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode-disabled", "en": "Disabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode-left", "en": "Left Joy-Con 2", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/joy-con-mouse-mode-right", "en": "Right Joy-Con 2", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/keyboard-and-mouse-settings", "en": "Keyboard and mouse settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/mouse-sensitivity", "en": "Mouse sensitivity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/movement-sensitivity", "en": "Movement stick sensitivity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/movement-sensitivity-description", "en": "How fast the map in remote view moves in reaction to stick movement.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/swap-buttons", "en": "Swap __1__ and __2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/swap-buttons-description", "en": "Swap the confirm and bumper buttons so it's easier to click when in mouse mode.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading", "en": "Heading", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-controller-description", "en": "Moving the stick in a direction will make vehicles automatically turn and accelerate to that side of the screen.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-keyboard-description", "en": "Pressing in a direction will make vehicles automatically turn and accelerate to that side of the screen.", "hint": "", "reason": "missing"}

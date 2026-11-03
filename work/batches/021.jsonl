@@ -1,0 +1,120 @@
+{"module": "space-age", "key": "technology-description/lithium-processing", "en": "Lithium is the least dense solid element, highly flammable, and difficult to store.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/low-density-structure-productivity", "en": "Increases productivity for low density structure recipes.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/mech-armor", "en": "Be one with the machine.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/metallurgic-science-pack", "en": "Allows study beyond the basics of metallurgy.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/overgrowth-soil", "en": "More robust soil which allows growing plants anywhere in their biome.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/planet-discovery-aquilo", "en": "A freezing wasteland with bottomless oceans of liquid ammonia that cannot be landfilled. Precarious icebergs are the closest thing to solid ground and can be extended with floating ice platform. Structures and belts will freeze if not heated by adjacent heat pipe or other hot structures, but must be placed on concrete to not melt the ice below.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/planet-discovery-fulgora", "en": "A dry wind-swept planet with lightning storms on plateaus, and oceans of oil that can be bridged by elevated rails.\\nThere appear to be some ruins.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/planet-discovery-gleba", "en": "A humid swampy planet with deep bogs. Wetland can support agriculture but is difficult to build on, it can be landfilled but stone is scarce.\\nSnaking hills have stone and are better to build on but can't support agriculture.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/planet-discovery-vulcanus", "en": "A hot volcanic planet with mountainous volcanoes, rivers of lava, plains of ash, and sulfuric acid geysers. Rich in metals. Lava can only be crossed by elevated rail.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/plastic-bar-productivity", "en": "Increases productivity for plastic bar recipes.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/processing-unit-productivity", "en": "Increases productivity for the processing unit recipe.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/promethium-science-pack", "en": "Used to increase research productivity, which makes it easier to research other upgrades that make future expeditions to the shattered planet easier.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/quantum-processor", "en": "A processor that exploits several quantum phenomena for various applications.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/rail-support-foundations", "en": "Allows building elevated rails also on the deep parts of the oil ocean on [planet=fulgora].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/railgun", "en": "An electrically powered cross between a cannon and a sniper rifle.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/railgun-damage", "en": "Making railgun projectiles denser and sturdier results in more damage.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/railgun-shooting-speed", "en": "Improved cooling systems mean the railgun can shoot more often.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/research-productivity", "en": "Increases the amount of research progress per consumed science pack.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/rocket-fuel-productivity", "en": "Increases productivity for rocket fuel recipes.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/rocket-part-productivity", "en": "Increases productivity for rocket part crafting.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/rocket-silo", "en": "Used to launch items and players to space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/rocket-turret", "en": "A long range turret that fires rockets.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/scrap-recycling-productivity", "en": "Increased yield from scrap recycling.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/space-platform", "en": "Process asteroid chunks into useful materials.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/space-platform-thruster", "en": "Allows space platforms to move to other planets.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/space-science-pack-space-age", "en": "Production of [item=space-science-pack] on a space platform.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/stack-inserter", "en": "Stack inserters capable of putting items on transport belts in layered stacks, but they wait for their hand to be full until they swing.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/steel-plate-productivity", "en": "Increases productivity for steel plate and casting steel.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/stellar-discovery-solar-system-edge", "en": "The end! Or rather, a new beginning. Building a space platform capable of surviving this far beyond the relative safety of the crash landing site proves your capability to travel anywhere else in the great depths of interstellar space beyond. For a space platform to survive this trip, it would need to be particularly self-sufficient and have the tools needed to turn the large, dangerous asteroids along the way into usable resources.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/tesla-weapons", "en": "Weapons that deal electrical damage and bounce between enemies.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/toolbelt-equipment", "en": "Inserted into armor to expand your inventory.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/tree-seeding", "en": "Collect tree seeds and plant them on grass or dirt.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/tungsten-carbide", "en": "Allows you to make tungsten carbide, a hard heat resistant ceramic. Easily accessible tungsten ore can be found in some surface rocks of Vulcanus.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/tungsten-steel", "en": "Allows you to make tungsten-steel plate.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/turbo-transport-belt", "en": "Even faster transport belts.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-description/yumako", "en": "The yumako tree yields tasty nutritious fruit. Plant the seeds on yumako soil (yellow on map).", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/advanced-asteroid-processing", "en": "Advanced asteroid processing", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/agricultural-science-pack", "en": "Agricultural science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/agriculture", "en": "Agriculture", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/artificial-soil", "en": "Artificial soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/artillery-shell-damage", "en": "Artillery shell damage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/asteroid-productivity", "en": "Asteroid productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/asteroid-reprocessing", "en": "Asteroid reprocessing", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/bacteria-cultivation", "en": "Bacteria cultivation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/battery-mk3-equipment", "en": "Personal battery MK3", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/big-mining-drill", "en": "Big mining drill", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/biochamber", "en": "Biochamber", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/bioflux", "en": "Bioflux", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/bioflux-processing", "en": "Bioflux processing", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/biter-egg-handling", "en": "Biter egg handling", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/calcite-processing", "en": "Calcite processing", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/captive-biter-spawner", "en": "Captive biter spawner", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/captivity", "en": "Captivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/carbon-fiber", "en": "Carbon fiber", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/cryogenic-plant", "en": "Cryogenic plant", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/cryogenic-science-pack", "en": "Cryogenic science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/electric-weapons-damage", "en": "Electric weapons damage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/electromagnetic-plant", "en": "Electromagnetic plant", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/electromagnetic-science-pack", "en": "Electromagnetic science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/fish-breeding", "en": "Fish breeding", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/foundation", "en": "Foundation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/foundry", "en": "Foundry", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/fusion-reactor", "en": "Fusion reactor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/fusion-reactor-equipment", "en": "Portable fusion reactor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/heating-tower", "en": "Heating tower", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/holmium-processing", "en": "Holmium processing", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/jellynut", "en": "Jellynut", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/landing-pad-unloading-bay", "en": "Landing pad unloading bay", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/laser-weapons-damage", "en": "Laser weapons damage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/lightning-collector", "en": "Lightning collector", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/low-density-structure-productivity", "en": "Low density structure productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/mech-armor", "en": "Mech armor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/metallurgic-science-pack", "en": "Metallurgic science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/overgrowth-soil", "en": "Overgrowth soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/planet-discovery-aquilo", "en": "Planet discovery Aquilo", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/planet-discovery-gleba", "en": "Planet discovery Gleba", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/planet-discovery-vulcanus", "en": "Planet discovery Vulcanus", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/plastic-bar-productivity", "en": "Plastic bar productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/processing-unit-productivity", "en": "Processing unit productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/promethium-science-pack", "en": "Promethium science pack", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/rail-support-foundations", "en": "Rail support foundations", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/railgun-damage", "en": "Railgun damage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/railgun-shooting-speed", "en": "Railgun shooting speed", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/research-productivity", "en": "Research productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/rocket-fuel-productivity", "en": "Rocket fuel productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/rocket-part-productivity", "en": "Rocket part productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/rocket-turret", "en": "Rocket turret", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/scrap-recycling-productivity", "en": "Scrap recycling productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/space-platform", "en": "Space platform", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/space-platform-thruster", "en": "Space platform thruster", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/stack-inserter", "en": "Stack inserter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/steel-plate-productivity", "en": "Steel plate productivity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/stellar-discovery-solar-system-edge", "en": "Stellar discovery solar system edge", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/tesla-weapons", "en": "Tesla weapons", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/toolbelt-equipment", "en": "Toolbelt equipment", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/transport-belt-capacity", "en": "Transport belt capacity", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/tungsten-carbide", "en": "Tungsten carbide", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/tungsten-steel", "en": "Tungsten steel", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/turbo-transport-belt", "en": "Turbo transport belt", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "technology-name/yumako", "en": "Yumako", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/ammoniacal-ocean", "en": "Ammoniacal ocean", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/ammoniacal-ocean-2", "en": "Ammoniacal ocean 2", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/artificial-jellynut-soil", "en": "Artificial jellynut soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/artificial-yumako-soil", "en": "Artificial yumako soil", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/brash-ice", "en": "Brash ice", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/dust-crests", "en": "Dust crests", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/dust-flat", "en": "Dust flat", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/dust-lumpy", "en": "Dust lumpy", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/dust-patchy", "en": "Dust patchy", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/empty-space", "en": "Empty space", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/foundation", "en": "Foundation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-concrete", "en": "Frozen concrete", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-foundation", "en": "Frozen foundation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-hazard-concrete-left", "en": "Frozen hazard concrete left", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-hazard-concrete-right", "en": "Frozen hazard concrete right", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-refined-concrete", "en": "Frozen refined concrete", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-refined-hazard-concrete-left", "en": "Frozen refined hazard concrete left", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-refined-hazard-concrete-right", "en": "Frozen refined hazard concrete right", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "tile-name/frozen-stone-path", "en": "Frozen stone path", "hint": "", "reason": "missing"}

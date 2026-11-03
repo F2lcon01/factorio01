@@ -1,0 +1,21 @@
+{
+ "alert": "تنبيه",
+ "asteroid collector": "جامع الكويكبات",
+ "beacon": "برج المنضمات",
+ "blueprint": "المخطط",
+ "bulk inserter": "ذراع آلي كبير",
+ "character": "الشخصية",
+ "damage": "الضرر",
+ "default": "افتراضي",
+ "fluids": "السوائل",
+ "inserter": "ذراع آلي",
+ "production": "الإنتاج",
+ "roboport": "مركز الروبوتات",
+ "rocket": "صاروخ",
+ "space": "فضاء",
+ "speed": "السرعة",
+ "stack size": "حجم الكومة",
+ "thruster": "دافع",
+ "train stop": "محطة قطار",
+ "wait": "انتظار"
+}

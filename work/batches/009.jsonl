@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-feedback/discard-button", "en": "Discard form", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/email", "en": "Email", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/finalize-submit-to-wube", "en": "Submit feedback", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/include-save", "en": "Include Save File", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/include-screenshot", "en": "Include Screenshot", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/info-message", "en": "This form lets you submit feedback directly to the Factorio team. A screenshot and a current save of your game can be included with the message. We definitely want to hear from you about bugs, but you can also tell us about interesting or boring parts of your play experience.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/message", "en": "Message", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/message-details", "en": "Message details", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/message-empty", "en": "Message cannot be empty.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/preview-screenshot", "en": "Preview screenshot", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/screenshot", "en": "screenshot __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/screenshot-preview", "en": "Screenshot preview", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/start-feedback", "en": "Send Feedback (__CONTROL__submit-feedback__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/subject", "en": "Subject", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/subject-bug", "en": "Bug", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/subject-crash", "en": "Crash", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/subject-general", "en": "General", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/subject-suggestion", "en": "Suggestion", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/submit-button", "en": "All is ready. Submit feedback.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/take-screenshot", "en": "Take screenshot", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/title", "en": "Title", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/title-empty", "en": "Title cannot be empty.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/window-title", "en": "Submit Feedback", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/filtered-entities", "en": "Filtered buildings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/fluid", "en": "Fluid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/flush-pipeline", "en": "Flush __1__ from this pipeline.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/flush-this", "en": "Flush __1__ from __2__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/no-fluid", "en": "No fluid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/pipeline-contents", "en": "Pipeline contents", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/this-contents", "en": "__1__ contents", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/visualize-segment", "en": "Visualize pipeline", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-fluidbox/visualize-segment-description", "en": "Use __CONTROL__visualize-entity-fluid-segments__ while hovering this entity to toggle this without opening the GUI.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-game-finished/lost", "en": "You have been defeated", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-goal-description/title", "en": "Objective", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/additional-terrain-effects", "en": "Disable to increase performance on low-end video cards. Disables rendering global terrain tint and puddles on tiles that define them.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/enable-arachnophobia-mode", "en": "When enabled, some entities with a spider-like appearance will not fully render their legs. This may impact playability in some instances where the position of legs is important for gameplay.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/graphics-quality-label-console", "en": "The resolution of the sprites. Lower resolution will reduce memory usage and loading time.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/light-occlusion", "en": "When disabled, rendering may be faster, but light emitting tiles and objects like fire, uranium or various LEDs will \"shine\" through objects above them.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/linux-preferred-video-driver", "en": "The \"Auto\" option will select Wayland if the compositor implements fifo-v1, but will otherwise select X11. If the preferred video driver is unavailable, drivers will be tried in order of appearance.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/show-animated-ghosts", "en": "Disable to increase performance on low-end video cards.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/show-fullscreen-flash", "en": "From nuke detonation, lightning strikes, or player damage.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/variable-refresh-rate-switch2", "en": "Enable variable refresh rate for the console's screen or the TV.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/accessibility", "en": "Accessibility", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/additional-terrain-effects", "en": "Additional terrain effects", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/enable-arachnophobia-mode", "en": "Enable arachnophobia mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/enable-warning-icons-blinking", "en": "Enable warning icons blinking", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/game-render-scaling", "en": "Game render scaling", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/graphics-quality-medium", "en": "Medium", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/light-occlusion", "en": "Occlude light sprites", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver", "en": "Preferred video driver", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver-auto", "en": "Auto", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver-wayland", "en": "Wayland", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/linux-preferred-video-driver-x11", "en": "X11", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/nintendo-switch-maximum-tv-mode-resolution", "en": "Maximum TV Mode resolution", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/setting-disabled-on-resolution", "en": "This setting is automatically disabled for the current screen resolution.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/show-animated-ghosts", "en": "Show animated ghosts", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/show-fog", "en": "Show fog", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/show-fullscreen-flash", "en": "Show fullscreen flash", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/show-space-dust", "en": "Show space dust", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings/variable-refresh-rate-switch2", "en": "Enable screen variable refresh rate", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode", "en": "Logistic mode", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-active-provider", "en": "Active provider", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-buffer", "en": "Buffer", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-default", "en": "Default", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-none", "en": "None", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-passive-provider", "en": "Passive Provider", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-requester", "en": "Requester", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-infinity-container/logistic-mode-storage", "en": "Storage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-inserter/fresh-first", "en": "Fresh first", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-inserter/override-stack-size", "en": "Override hand size", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-inserter/spoiled-first", "en": "Spoiled first", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-inserter/spoiled-priority", "en": "Spoiled priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-inserter/spoiled-priority-tooltip", "en": "Selects items based on spoiled percentage.\\n\\nOnly takes effect when taking items from an inventory.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-inserter/use-filters", "en": "Use filters", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/auto-accept-connect-to-server", "en": "Automatically accept server connection requests triggered by scripts.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/manual-display-point-ui-scale", "en": "The GUI scales along with your display's scale setting. This option is best suited if you have multiple displays with different pixel densities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/manual-pixel-ui-scale", "en": "The GUI scales relative to the physical pixels on your display. This option gives you the most control and will not apply your display's scale settings.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/nintendo-switch-use-predictive-text-input", "en": "Show word suggestions when using the on-screen keyboard.\\nEnabling this also allows entering Chinese and Korean text and Japanese kanji characters.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/quick-bar-width", "en": "How many slots each row of a quickbar has. Accepted values are in range [__1__, __2__].", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/quick-pipette", "en": "When pressing key related to empty quickbar slot will invoke pipette and set the slot with the pipette result.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/show-fluid-segment-visualization", "en": "When holding a fluid-related entity, show all fluid pipelines in view.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/show-fluid-segment-visualization-when-selected", "en": "When hovering over an entity, show that entity's fluid pipelines.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/show-parameters-in-selection-lists", "en": "Parameters don't do anything in the game, but can be used to make parametrised blueprints.\\nNormally, parameters can be only selected when parametrising blueprints, but with this option, you can use them in the game to prepare the blueprint directly.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings-description/show-undo-redo-confirmations", "en": "Shows a confirmation dialog with a preview before attempting to undo or redo some actions.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/alt-mode", "en": "Alt-mode", "hint": "Alt-mode", "reason": "no-arabic"}
+{"module": "core", "key": "gui-interface-settings/auto-accept-connect-to-server", "en": "Auto-accept scripted server connection requests", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/lock-belt-building-to-straight-line", "en": "Lock belt building to straight line", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/manual-display-point-ui-scale", "en": "Manual (points)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/manual-pixel-ui-scale", "en": "Manual (pixels)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/quick-bar-width", "en": "Quickbar width", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/quick-pipette", "en": "Quick pipette", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/quickbar", "en": "Quickbar", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/research-finished-stops-game", "en": "Open technology screen when research is completed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/show-fluid-segment-visualization", "en": "Show fluid pipeline visualization", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/show-fluid-segment-visualization-when-selected", "en": "Show fluid pipeline visualization when selected", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/show-machine-arrows-when-detailed-info-is-on", "en": "Show machine arrows in \"Alt-mode\"", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/show-multiplayer-selection-rectangles", "en": "Show multiplayer selection rectangles", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/show-parameters-in-selection-lists", "en": "Show parameters in selection lists", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/show-undo-redo-confirmations", "en": "Show undo/redo confirmation dialogs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/smart-belt-building", "en": "Smart belt building", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interface-settings/zoom-towards-cursor", "en": "Zoom towards the cursor where possible", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/already-used", "en": "This interrupt is already present in the schedule.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/conditions", "en": "Conditions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/conditions-tooltip", "en": "When the conditions are met, the interrupt will activate and append all the targets to the schedule as temporary stops.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/edit-interrupt", "en": "Edit interrupt", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/edit-interrupt-name", "en": "Edit interrupt name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/inside-interrupt", "en": "Allow interrupting other interrupts", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/inside-interrupt-tooltip", "en": "By default, an interrupt cannot trigger while another interrupt is being executed. This option disables this behavior, allowing the interrupt to trigger while another interrupt is in progress.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/interrupt-header", "en": "Interrupts", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/interrupt-header-tooltip", "en": "Interrupts are conditions that can be added to schedules.\\nTheir configuration is shared globally between all trains or space platforms.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/name-already-used", "en": "Interrupt names must be unique.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/name-cant-be-empty", "en": "Interrupt name cannot be empty.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/name-too-long", "en": "Interrupt name is too long.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/no-interrupts", "en": "No interrupts found.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/save-changes", "en": "Save interrupt", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/save-interrupt-name", "en": "Save new interrupt name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/targets", "en": "Targets", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/targets-tooltip", "en": "The target stops of this interrupt.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/title", "en": "Add interrupt", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-lab/add-research-condition", "en": "+ Add Research Condition", "hint": "", "reason": "missing"}

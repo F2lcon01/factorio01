@@ -1,0 +1,14 @@
+{
+ "blueprint": "المخطط",
+ "damage": "الضرر",
+ "default": "افتراضي",
+ "effects": "التأثيرات",
+ "enemies": "أعداء",
+ "environment": "البيئة",
+ "lab": "مختبر",
+ "logistics": "الخدمات اللوجستية",
+ "output": "مُخرج",
+ "rocket": "صاروخ",
+ "space": "فضاء",
+ "speed": "السرعة"
+}

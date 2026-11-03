@@ -1,0 +1,120 @@
+{"module": "core", "key": "noise-expression/elevation_nauvis", "en": "Nauvis elevation", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-expression/moisture", "en": "Nauvis moisture (Default)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-expression/moisture_basic", "en": "Basic moisture", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-expression/moisture_nauvis", "en": "Nauvis moisture", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-expression/temperature", "en": "Basic temperature (Default)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-expression/temperature_basic", "en": "Basic temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-property/aux", "en": "Aux", "hint": "Aux", "reason": "no-arabic"}
+{"module": "core", "key": "noise-property/cliff_elevation", "en": "Cliff elevation", "hint": "", "reason": "missing"}
+{"module": "core", "key": "noise-property/cliffiness", "en": "Cliffiness", "hint": "", "reason": "missing"}
+{"module": "core", "key": "permissions-help/add-player", "en": "<group> <player> - Adds the player to the given group.", "hint": ".يضيف اللاعب إلى مجموعة معينة - <player> <group>", "reason": "direction"}
+{"module": "core", "key": "permissions-help/create-group", "en": "<name> - Creates a new group with the given name, or the default name is used if no name is given.", "hint": ".ينشئ مجموعة جديدة بالاسم المحدد، أو يستخدم الاسم الافتراضي إذا لم يتم إعطاء أي اسم - <name>", "reason": "direction"}
+{"module": "core", "key": "permissions-help/delete-group", "en": "<group> - Deletes the given group.", "hint": ".يحذف المجموعة المعينة - <group>", "reason": "direction"}
+{"module": "core", "key": "permissions-help/edit-group", "en": "<group> <action> <true/false> - Enables or disables the given action for the given group.", "hint": ".تمكين أو تعطيل الإجراء المعين لمجموعة معينة - <true/false> <action> <group>", "reason": "direction"}
+{"module": "core", "key": "permissions-help/get-player-group", "en": "<player> - Gets the group the given player is part of (if any).", "hint": ".(يحصل على المجموعة التي يكون اللاعب المعني جزءا منها (إن وجدت - <player>", "reason": "direction"}
+{"module": "core", "key": "permissions-help/remove-player", "en": "<group> <player> - Removes the player from the given group.", "hint": ".يضيف اللاعب إلى مجموعة معينة - <player> <group>", "reason": "direction"}
+{"module": "core", "key": "permissions-help/rename-group", "en": "<group> <name> - Renames the given group to the new name.", "hint": ".يعيد تسمية المجموعة المعينة إلى الاسم الجديد - <name> <group>", "reason": "direction"}
+{"module": "core", "key": "quality-description/quality-unknown", "en": "This quality is not available due to mod removal, it will be restored if the mod is re-enabled.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-name/quality-unknown", "en": "Unknown", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/affected", "en": "Affected by quality.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/beacon-effectivity", "en": "Transmitted effect is stronger at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/continuous-radar-coverage-distance", "en": "Coverage distance is increased at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/crafting-speed", "en": "Increases the crafting speed at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/energy-capacity", "en": "More energy can be stored at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/exploration-radar-coverage-distance", "en": "Coverage distance is increased at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/fluid-consumption", "en": "Increases consumption at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/fluid-output", "en": "Increases output at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/grid-size", "en": "Increases the grid size at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/heat-output", "en": "Increases heat output at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/increases", "en": "Increases with higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/input-flow-limit", "en": "Increases the input limit at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/inventory-size", "en": "Increases the inventory size at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/inventory-size-bonus", "en": "Increases the inventory size bonus at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/maximum-power-input", "en": "Consumes more power at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/maximum-power-output", "en": "Generates more power at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/mining-drill-resource-drain", "en": "Resources are depleted more slowly at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/movement-speed-bonus", "en": "Increases movement speed bonus at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/output-flow-limit", "en": "Increases the output limit at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/personal-roboport-max-robot-count", "en": "Allows more robots at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/reduced-energy", "en": "Less energy is used at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/robot-recharge-rate", "en": "Increases the recharge speed at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/rotation-speed", "en": "Increases the rotation speed at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/science-pack-drain", "en": "Science packs are depleted more slowly at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/spoils-slower", "en": "Spoils more slowly at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/supply-area", "en": "Increase the supply area at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "quality-tooltip/wire-reach", "en": "Increases the wire reach at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "recipe-description/recipe-unknown", "en": "This recipe is not available due to mod removal, it will be restored if the mod is re-enabled.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "recipe-name/recipe-unknown", "en": "Unknown recipe", "hint": "", "reason": "missing"}
+{"module": "core", "key": "space-platforms/header", "en": "Space platform __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "space-platforms/space-platform-died", "en": "Space platform __1__ was destroyed.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "space-platforms/space-platform-died-in-orbit", "en": "Space platform __1__ was destroyed by __2__ while in orbit above __3__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "space-platforms/space-platform-died-in-transit", "en": "Space platform __1__ was destroyed by __2__ en route from __3__ to __4__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/build-entity", "en": "Build __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/capture-any-spawner", "en": "Capture any spawner.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/capture-spawner", "en": "Capture __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/craft-item", "en": "Craft __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/craft-items", "en": "Craft __1__ __2__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/create-space-platform", "en": "Create space platform.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/create-space-platform-specific", "en": "Create space platform by sending __1__ to space.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/mine-entities", "en": "Mine any of:\\n__1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/mine-entity", "en": "Mine __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "technology-trigger/send-item-to-orbit", "en": "Send __1__ to orbit.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "tooltip-category/construction-surface-conditions", "en": "Construction surface conditions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "tooltip-category/crafting-surface-conditions", "en": "Crafting surface conditions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "tooltip-category/electric-network", "en": "Electric network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "tooltip-category/shot", "en": "Shot", "hint": "", "reason": "missing"}
+{"module": "core", "key": "tooltip-category/spoilable", "en": "Spoilable", "hint": "", "reason": "missing"}
+{"module": "elevated-rails", "key": "item-description/rail", "en": "Use to build straight rails manually or through the rail planner.\\n__CONTROL__build__ to build short paths directly.\\n__CONTROL__build-ghost__ to place long ghost paths.\\n__CONTROL__toggle-rail-layer__ to switch between ground and elevated paths.", "hint": "استخدم هذه الأداة لإنشاء مسارات مستقيمة يدويًا أو من خلال أداة تخطيط المسارات.\\n__CONTROL__build__ لإنشاء مسارات قصيرة مباشرةً.\\n__CONTROL__build-ghost__ لوضع مسارات شبحية طويلة.\\n__CONTROL__toggle-rail-layer__ للتبديل بين المسارات الأرضية والمسارات المرتفعة.", "reason": "not-involutive"}
+{"module": "elevated-rails", "key": "tips-and-tricks-item-description/elevated-rails", "en": "Elevated rails are used to traverse impassible terrain or other obstacles.\\nTo switch between ground and elevated rail press __CONTROL__toggle-rail-layer__ while in the rail building mode.\\n[entity=rail-ramp] allows train to enter different rail layer. [entity=rail-support] is used to support elevated layer of rails over ground or water.", "hint": "تُستخدم القضبان المرتفعة لعبور التضاريس الوعرة أو العوائق الأخرى.\\nللتبديل بين القضبان الأرضية والمرتفعة، اضغط على __CONTROL__toggle-rail-layer__ أثناء وجودك في وضع بناء القضبان.\\nتسمح [entity=rail-ramp] للقطار بالدخول إلى طبقة قضبان مختلفة. ويُستخدم [entity=rail-support] لدعم طبقة القضبان المرتفعة فوق الأرض أو الماء.", "reason": "not-involutive"}
+{"module": "quality", "key": "technology-description/epic-quality", "en": "Allows production of epic quality items.", "hint": "", "reason": "missing"}
+{"module": "quality", "key": "technology-description/legendary-quality", "en": "Allows production of legendary quality items.", "hint": "", "reason": "missing"}
+{"module": "quality", "key": "tips-and-tricks-item-description/quality", "en": "Quality improves certain aspects of entities, items and equipment.\\nEach entity has higher health with higher quality.\\nEach entity type (apart from a few [tooltip=exceptions,tips-and-tricks-item-description.quality-bonus-exceptions]) gets its own unique bonus, like the reach of electric poles in this example.\\nItems that can be used as buildable tiles can benefit from quality only as a part of other recipes. They revert to normal quality upon being placed as tiles.", "hint": "تحسن الجودة جوانب معينة من الكيانات والعناصر والمعدات.\\nتزداد صحة كل كيان كلما ارتفعت جودته.\\nيحصل كل نوع من الكيانات (باستثناء بعض [tooltip=exceptions,tips-and-tricks-item-description.quality-bonus-exceptions]) على مكافأة فريدة خاصة به، مثل مدى وصول أعمدة الكهرباء في هذا المثال.\\nيمكن للعناصر التي يمكن استخدامها كبلاطات قابلة للبناء الاستفادة من الجودة فقط كجزء من وصفات أخرى. وتعود إلى الجودة العادية عند وضعها كبلاطات.", "reason": "not-involutive"}
+{"module": "quality", "key": "tips-and-tricks-item-description/quality-bonus-exceptions", "en": "Quality bonus exceptions:\\n[entity=transport-belt] Transport belt \\n[entity=pipe] Pipe \\n[entity=straight-rail] Rail", "hint": "استثناءات مكافأة الجودة:\\transport-belt=entity]n] حزام النقل \\pipe=entity]n] الأنبوب \\straight-rail=entity]n] القضيب المستقيم", "reason": "tokens"}
+{"module": "quality", "key": "tips-and-tricks-item-description/quality-factoriopedia", "en": "Properties of entities, items and equipment are marked by the [img=quality_info] icon in the tooltip. \\nWhen the related object is opened in Factoriopedia (__CONTROL__open-factoriopedia__), the icon can be hovered to show the specific values.", "hint": "يُشار إلى خصائص الكيانات والعناصر والمعدات برمز [img=quality_info] في تلميح الأداة. \\nوعند فتح الكائن ذي الصلة في open-factoriopedia__CONTROL__) Factoriopedia__)، يمكن تمرير المؤشر فوق الرمز لإظهار القيم المحددة.", "reason": "not-involutive"}
+{"module": "quality", "key": "tips-and-tricks-item-description/quality-modules", "en": "[tooltip=Quality Modules,tips-and-tricks-item-description.quality-module-list] increase the chance of producing higher quality items in [tooltip=Production entities,tips-and-tricks-item-description.production-entity-list].", "hint": ".[tooltip=Production entities,tips-and-tricks-item-description.production-entity-list] تزيد من فرصة إنتاج عناصر ذات جودة أعلى في [tooltip=Quality Modules,tips-and-tricks-item-description.quality-module-list]", "reason": "direction"}
+{"module": "quality", "key": "tips-and-tricks-item-description/quality-probabilities", "en": "The chance of producing an item with higher quality is 1% with one [item=quality-module,quality=normal] and can go up to 25% with four [item=quality-module-3,quality=legendary].\\nThere is also a small chance of skipping steps and getting higher quality directly as shown in the table.", "hint": "", "reason": "missing"}
+{"module": "recycler", "key": "entity-description/recycler", "en": "The recycler reverses most processes except smelting and chemistry, returning 25% of the ingredients on average. Fluid ingredients are not regained. Other items are usually returned 25% of the time (losing 75%).", "hint": "", "reason": "missing"}
+{"module": "recycler", "key": "inventory-restriction/cant-be-recycled", "en": "__1__ cannot be recycled.", "hint": "", "reason": "missing"}
+{"module": "recycler", "key": "inventory-restriction/cant-be-recycled_until", "en": "__1__ cannot be recycled until __2__ is researched.", "hint": "", "reason": "missing"}
+{"module": "recycler", "key": "recipe-name/recycling", "en": "__1__ recycling", "hint": "", "reason": "missing"}
+{"module": "recycler", "key": "technology-description/recycling", "en": "The recycler reverses most processes except smelting and chemistry, returning 25% of the ingredients on average. Fluid ingredients are not regained. Other items are usually returned 25% of the time (losing 75%).", "hint": "", "reason": "missing"}
+{"module": "recycler", "key": "tips-and-tricks-item-description/production-entity-list", "en": "[entity=electric-mining-drill] Electric mining drill \\n[entity=pumpjack] Pumpjack \\n[entity=assembling-machine-2] Assembling machine 2 \\n[entity=assembling-machine-3] Assembling machine 3 \\n[entity=electric-furnace] Electric furnace \\n[entity=recycler] Recycler \\n[entity=chemical-plant] Chemical plant \\n[entity=centrifuge] Centrifuge", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/crafting-with-quality", "en": "Craft a quality module 3.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/express-delivery", "en": "Finish the game within 40 hours.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/fusion-power", "en": "Start producing electric power by fusion powerplant.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/get-off-my-lawn", "en": "Disturb a demolisher by building on its territory.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/if-it-bleeds", "en": "Kill a small demolisher.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/it-stinks-and-they-do-like-it", "en": "Attract a group of pentapods using spores.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/look-at-my-shiny-rare-armor", "en": "Equip rare or better quality of power armor MK2 or mech armor.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/make-it-better", "en": "Manually insert a quality module into a module slot.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/my-modules-are-legendary", "en": "Craft a legendary quality module 3.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/no-room-for-more", "en": "Fill every tile of legendary mech armor with legendary equipment.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/reach-for-the-stars", "en": "Create a space platform.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/research-with-agriculture", "en": "Research a technology using agricultural science packs.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/research-with-cryogenics", "en": "Research a technology using cryogenic science packs.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/research-with-electromagnetics", "en": "Research a technology using electromagnetic science packs.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/research-with-metallurgics", "en": "Research a technology using metallurgic science packs.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/research-with-promethium", "en": "Research a technology using promethium science packs.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/rush-to-space", "en": "Research a technology using another planet's science pack before unlocking production or utility science packs.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/second-star-to-the-right-and-straight-on-till-morning", "en": "Finish the game.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/shattered-planet-1", "en": "Travel 10 000 km towards the shattered planet.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/shattered-planet-2", "en": "Travel 30 000 km towards the shattered planet.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/shattered-planet-3", "en": "Travel 60 000 km towards the shattered planet.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/size-doesnt-matter", "en": "Kill a big demolisher.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/todays-fish-is-trout-a-la-creme", "en": "Eat a legendary fish.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/visit-aquilo", "en": "Travel to planet Aquilo.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/visit-fulgora", "en": "Travel to planet Fulgora.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/visit-gleba", "en": "Travel to planet Gleba.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/visit-vulcanus", "en": "Travel to planet Vulcanus.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/we-need-bigger-guns", "en": "Kill a medium demolisher.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/work-around-the-clock", "en": "Finish the game within 100 hours.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/crafting-with-quality", "en": "Crafting with quality", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/express-delivery", "en": "Express delivery", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/fusion-power", "en": "Fusion power", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/get-off-my-lawn", "en": "Get off my lawn", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/if-it-bleeds", "en": "If it bleeds, we can kill it", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/it-stinks-and-they-do-like-it", "en": "It stinks and they do like it", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/look-at-my-shiny-rare-armor", "en": "Look at my shiny rare armor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/make-it-better", "en": "Make it better", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/my-modules-are-legendary", "en": "My modules are legendary", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/no-room-for-more", "en": "No room for more", "hint": "", "reason": "missing"}

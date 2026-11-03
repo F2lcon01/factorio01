@@ -1,0 +1,120 @@
+{"module": "core", "key": "/weeks-ago", "en": "__1__ __plural_for_parameter__1__{1=week|rest=weeks}__ ago", "hint": "أسابيع}__ منذ=rest|أسبوع=1}__plural_for_parameter__1__ __1__", "reason": "not-involutive"}
+{"module": "core", "key": "/years-ago", "en": "__1__ __plural_for_parameter__1__{1=year|rest=years}__ ago", "hint": "سنوات}__ منذ=rest|سنة=1}__plural_for_parameter__1__ __1__", "reason": "not-involutive"}
+{"module": "core", "key": "achievement-progress/already-won", "en": "The game was already won on this save.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-a-freeplay-map", "en": "Can only be unlocked on a freeplay map.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-in-no-enemies-mode", "en": "Cannot be unlocked in no-enemies mode.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-in-peaceful-mode", "en": "Cannot be unlocked in peaceful mode.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-with-bigger-starting-area", "en": "Cannot be unlocked when the starting area is enlarged.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-with-easier-enemy-evolution-settings", "en": "Cannot be unlocked with easier enemy evolution settings.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-with-easier-enemy-expansion-settings", "en": "Cannot be unlocked with easier enemy expansion settings.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-with-easier-pollution-settings", "en": "Cannot be unlocked with easier pollution settings.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-with-extra-trees", "en": "Cannot be unlocked when tree spawning is higher than default.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/not-with-lower-enemies", "en": "Cannot be unlocked when enemy bases are set lower than default.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/too-slow", "en": "You took too long.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/you-built-it", "en": "You built too many of the forbidden entities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/you-crafted-too-many", "en": "You crafted too much!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/you-killed-it", "en": "You destroyed an entity manually.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/you-produced-energy", "en": "You produced energy using one of the forbidden entities.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "achievement-progress/you-researched-science-too-early", "en": "You researched a science pack too early.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/column-disabled", "en": "Disabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/column-icon", "en": "Icon", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/column-muted", "en": "Muted", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/column-name", "en": "Name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/column-time", "en": "Latest", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/disabled-label", "en": "", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/muted-label", "en": "", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-collector_path_blocked", "en": "Asteroid collector blocked", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-custom", "en": "Custom alert", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-entity_destroyed", "en": "Entity destroyed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-entity_under_attack", "en": "Entity being damaged", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-expansion_base_built", "en": "Enemy expansion base detected", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-fluid_mixing", "en": "Fluids mixed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-no_material_for_construction", "en": "Missing material for construction", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-no_platform_storage", "en": "Not enough platform hub storage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-no_roboport_storage", "en": "Not enough empty roboport robot slots", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-no_storage", "en": "Not enough logistic network storage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-not_enough_construction_robots", "en": "Not enough construction robots", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-not_enough_repair_packs", "en": "Missing repair packs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-pipeline_overextended", "en": "Pipeline overextended", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-platform_tile_building_blocked", "en": "Space platform cannot place tiles", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-train_no_path", "en": "Train cannot find path", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-train_out_of_fuel", "en": "Train out of fuel", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-turret_fire", "en": "Turret engaged with the enemy", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-turret_out_of_ammo", "en": "Turret out of ammunition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/name-unclaimed_cargo", "en": "Unclaimed items waiting", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/time-ago", "en": "__1__ ago", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/time-never", "en": "never", "hint": "", "reason": "missing"}
+{"module": "core", "key": "alerts-config-gui/title", "en": "Alerts configuration", "hint": "", "reason": "missing"}
+{"module": "core", "key": "cant-build-reason/bad-surface-conditions", "en": "__1__ can't be built on this surface.", "hint": "لا يمكن بناء ‎_1_‎ على هذا السطح.", "reason": "tokens"}
+{"module": "core", "key": "cant-build-reason/mixing-fluids", "en": "Cannot connect pipelines with different fluids", "hint": "", "reason": "missing"}
+{"module": "core", "key": "cant-build-reason/not-place-for-rail-support", "en": "__1__ must be built on a designated position under bridge", "hint": "يجب بناء ‎_1_‎ في الموقع المخصص أسفل الجسر", "reason": "tokens"}
+{"module": "core", "key": "cant-build-reason/tile-connectivity-violated", "en": "__1__ does not allow holes or detached sections to be built.", "hint": ".لا يسمح بوجود فراغات أو أقسام غير متصلة ‎_1_‎", "reason": "direction"}
+{"module": "core", "key": "cant-build-reason/too-many-cargo-landing-pads", "en": "You can only build __1__ __plural_for_parameter__1__{1=cargo landing pad|rest=cargo landing pads}__ per surface.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/creating-archive", "en": "Creating archive", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/done", "en": "Done", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/error", "en": "Process failed: __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/gathering-data", "en": "Gathering data", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/rendering-charts", "en": "Rendering charts", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/rendering-icons", "en": "Rendering icons", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/saving-sprites", "en": "Saving sprites", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/server-package-processing", "en": "Server package processing", "hint": "", "reason": "missing"}
+{"module": "core", "key": "chartbundle-state/uploading-archive", "en": "Uploading archive", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/circuit-condition", "en": "in circuit condition __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/description", "en": "Description __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/filter", "en": "Filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/filter-of", "en": "Filter __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/formula", "en": "in formula __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/inventory-filter", "en": "Inventory filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/name", "en": "Name __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/of-something", "en": "in __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/output", "en": "Output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/recipe", "en": "Recipe", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/request", "en": "Request __1__×__2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/schedule-entry", "en": "Schedule entry __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/signal", "en": "Signal __1__×__2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/train", "en": "in train", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/train-group", "en": "Train group __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/train-named", "en": "in train __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/train-stop-limit", "en": "Train stop limit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/train-stop-priority", "en": "Train stop priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/wait-condition-damage", "en": "Damage amount in wait condition: \"__1__\"", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/wait-condition-item", "en": "Item in wait condition: \"__1__\"", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/wait-condition-station", "en": "Station name in wait condition: \"__1__\"", "hint": "", "reason": "missing"}
+{"module": "core", "key": "collector-context/wait-condition-ticks", "en": "Ticks in wait condition: \"__1__\"", "hint": "", "reason": "missing"}
+{"module": "core", "key": "command-help/alerts", "en": "<enable/disable/mute/unmute> <alert> - Enables, disables, mutes, or unmutes the given alert type.", "hint": ".تمكين أو تعطيل أو كتم أو إلغاء كتم نوع تنبيه معين - <alert> <enable/disable/mute/unmute>", "reason": "direction"}
+{"module": "core", "key": "command-help/ban", "en": "<player> <reason> - Bans the specified player.", "hint": ".حظر اللاعب المحدد - <reason><player>", "reason": "direction"}
+{"module": "core", "key": "command-help/banlist", "en": "<add/remove/get/clear> <player> - Adds or removes a player from the banlist. Same as /ban or /unban.", "hint": ".إضافة او إزالة لاعب من قائمة الحظر. مثل الحظر و إلغاء الحظر - <ar<player>add/remove/get/cle>", "reason": "direction"}
+{"module": "core", "key": "command-help/cheat", "en": "<all> - Researches all technologies and enables cheat mode. Using the <all> option also gives the player some additional items.\\n <planet-name> - moves the player to the specified planet.\\n <platform-name> - moves the player to the specified platform.\\n <off> - turns the cheat mode off.", "hint": ".اللاعب بعض العناصر الإضافية <all> يبحث عن جميع التقنيات ويقوم بتفعيل وضع الغش. كما يمنح استخدام الخيار - <all>\\n.ينقل اللاعب إلى الكوكب المحدد - <planet-name> \\n.ينقل اللاعب إلى المنصة المحددة - <platform-name> \\n.يقوم بإيقاف تشغيل وضع الغش - <off> ", "reason": "direction"}
+{"module": "core", "key": "command-help/color", "en": "<color> - Changes your color. Can either be one of the predefined colors or RGBA values in the format of \"# # # #\".", "hint": ".\"# # # #\" بتنسيق RGBA تغيير لونك. يمكن أن تكون إما واحدة من الألوان المحددة مسبقاً أو قيم - <color>", "reason": "direction"}
+{"module": "core", "key": "command-help/command", "en": "<command> - Executes a Lua command (if allowed).", "hint": ".(إذا كان مسموحا) Lua ينفذ أمر - <command>", "reason": "direction"}
+{"module": "core", "key": "command-help/delete-blueprint-library", "en": "<player> - Deletes the blueprint library storage for the given offline player from the save file. Enter \"everybody confirm\" to delete the storage of all offline players.", "hint": ".يحذف مخطط ذاكرة المكتبة لللاعب غير متصل من ملف الحفظ. أدخل \"تأكيد الجميع\" لحذف تخزين جميع اللاعبين دون اتصال - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/demote", "en": "<player> - Demotes the player from admin.", "hint": ".يقوم بتجريب اللاعب من المسؤول - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/evolution", "en": "<surface> - Prints info about the alien evolution factor.", "hint": ".يطبع معلومات حول عامل التطور الفضائي - <surface>", "reason": "direction"}
+{"module": "core", "key": "command-help/help", "en": "<command> - Prints a list of available commands. The optional argument can specify the command that should be described.", "hint": ".يطبع قائمة بالأوامر المتاحة. يمكن أن تحدد الحجة الاختيارية الأمر الذي يجب وصفه - <command>", "reason": "direction"}
+{"module": "core", "key": "command-help/ignore", "en": "<player> - Prevents the chat from showing messages from this player. Admin messages are still shown.", "hint": ".يمنع المحادثة من عرض الرسائل من هذا اللاعب. لا تزال رسائل المشرف معروضة - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/kick", "en": "<player> <reason> - Kicks the specified player.", "hint": ".طرد اللاعب المحدد - <reason><player>", "reason": "direction"}
+{"module": "core", "key": "command-help/large-blueprint-size", "en": "<set/get> <number> - Sets or reads the threshold for what is a \"large\" blueprint (in bytes). Copying large blueprints will use the \"large\" version of the input action which can be optionally allowed/disabled through the permissions system.", "hint": ".يحدد أو يقرأ الحد الأدنى لـ«المخطط الكبير» (بالبايت). سيستخدم نسخ المخططات الكبيرة النسخة «الكبيرة» من إجراء الإدخال، والتي يمكن السماح بها أو تعطيلها اختياريًا من خلال نظام الأذونات - <number> <set/get>", "reason": "direction"}
+{"module": "core", "key": "command-help/measured-command", "en": "<command> - Executes a Lua command (if allowed) and measures time it took.", "hint": ".إذا كان مسموحا) ويقيّم الوقت المتاح له) Lua ينفذ أمر - <command>", "reason": "direction"}
+{"module": "core", "key": "command-help/mute", "en": "<player> - Prevents the player from saying anything in chat.", "hint": ".يمنع اللاعب من قول أي شيء في الدردشة - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/mute-programmable-speaker", "en": "<mute/unmute> <local/everyone> - Mutes or unmutes universe and surface sounds created by the programmable speaker. Use \"local\" to mute just the local client. Admins can use \"everyone\" to mute the sounds for everyone on the server.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "command-help/open", "en": "<player> - Opens another player's inventory.", "hint": ".فتح مخزون لاعب آخر - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/promote", "en": "<player> - Promotes the player to admin.", "hint": ".يقوم بتجريب اللاعب من المسؤول - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/purge", "en": "<player> - Clears all the messages from this player from the chat log.", "hint": ".مسح جميع الرسائل من هذا اللاعب من سجل المحادثة - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/reply", "en": "<message> - Replies to the last player that whispered to you.", "hint": ".الردود على آخر لاعب يهتس لك - <message>", "reason": "direction"}
+{"module": "core", "key": "command-help/save", "en": "<name> - Saves the current game with the specified name.", "hint": ".حفظ اللعبة الحالية بالاسم المحدد - <name>", "reason": "direction"}
+{"module": "core", "key": "command-help/screenshot", "en": "<x resolution> <y resolution> <zoom> - Takes a screenshot with your current view settings, or with the specified resolution. Zoom is optional and defaults to 1.", "hint": ".يأخذ لقطة شاشة مع إعدادات العرض الحالية الخاصة بك، أو مع الدقة المحددة. التكبير اختياري والإفتراضي إلى 1 - <zoom> <y resolution> <x resolution>", "reason": "direction"}
+{"module": "core", "key": "command-help/shout", "en": "<message> - Sends a message to all players including other forces.", "hint": ".يرسل رسالة إلى جميع اللاعبين بما في ذلك القوى الأخرى - <message>", "reason": "direction"}
+{"module": "core", "key": "command-help/silent-command", "en": "<command> - Executes a Lua command (if allowed) without printing it to the console.", "hint": ".إذا كان مسموحا) دون طباعته إلى وحدة التحكم) Lua ينفذ أمر - <command>", "reason": "direction"}
+{"module": "core", "key": "command-help/space-platform-delete-time", "en": "<number> - Sets the number of ticks between requesting a space platform be deleted and it actually being deleted.", "hint": ".يحدد عدد وحدات الوقت التي تفصل بين طلب حذف منصة فضائية وحذفها فعليًا - <number>", "reason": "direction"}
+{"module": "core", "key": "command-help/swap-players", "en": "<player> <player> - Swaps characters between the specified players. If not given, the second player is yourself.", "hint": ".مقايضة الأحرف بين اللاعبين المحددين. إذا لم يتم منحه، اللاعب الثاني هو نفسك - <player> <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/unban", "en": "<player> - Unbans the specified player.", "hint": ".فك الحظر عن اللاعب المحدد - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/unignore", "en": "<player> - Allows the chat to show messages from this player.", "hint": ".يسمح للمحادثة بإظهار الرسائل من هذا اللاعب - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/unmute", "en": "<player> - Allows the player to talk in chat again.", "hint": ".يسمح للاعب بالتحدث في المحادثة مرة أخرى - <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/whisper", "en": "<player> <message> - Sends a message to the specified player.", "hint": ".يرسل رسالة إلى اللاعب المحدد - <message> <player>", "reason": "direction"}
+{"module": "core", "key": "command-help/whitelist", "en": "<enable/disable/add/remove/get/clear> <player> - Enables, disables, adds or removes a player from the whitelist, where only whitelisted players can join the game. Enter nothing for 'player' when using 'get' to print a list of all whitelisted players.", "hint": ".تمكين اللاعب أو تعطيله أو إضافته أو إزالته من القائمة البيضاء حيث يمكن فقط للاعبين المدرجين في القائمة البيضاء الانضمام إلى اللعبة. لا أدخل شيئا لـ 'اللاعب' عند استخدام 'احصل على' لطباعة قائمة بجميع اللاعبين المدرجين في القائمة البيضاء - <player> <enable/disable/add/remove/get/clear>", "reason": "direction"}
+{"module": "core", "key": "command-output/programmable-speaker-muted-everyone", "en": "Programmable speaker universe and surface sounds muted for everyone on the server.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "command-output/programmable-speaker-muted-local", "en": "Programmable speaker universe and surface sounds muted on local client.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "command-output/programmable-speaker-unmuted-everyone", "en": "Programmable speaker universe and surface sounds unmuted for everyone on the server.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "command-output/programmable-speaker-unmuted-local", "en": "Programmable speaker universe and surface sounds unmuted on local client.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "config-help/allow-commands", "en": "<true/false/admins-only> - Sets if Lua commands are allowed.", "hint": ".يحدد إذا كان مسموح بأوامر لوا - <true/false/admins-only>", "reason": "direction"}
+{"module": "core", "key": "config-help/allow-debug-settings", "en": "<true/false> - Sets if non-trivial debug settings are allowed for non-admin players.", "hint": ".تعيين إذا كانت إعدادات تصحيح الأخطاء غير تافهة مسموح بها للاعبين غير المشرفين - <true/false>", "reason": "direction"}

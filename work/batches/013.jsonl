@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-side-menu/map", "en": "Map (__CONTROL__toggle-map__)\\n__CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + Mouse wheel__CONTROL_STYLE_END__ to zoom in and out.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/master-mute-muted", "en": "Muted", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/master-mute-no-audio", "en": "No audio", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/master-mute-unmuted", "en": "Unmuted", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/players", "en": "Players", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/space-platforms", "en": "Space platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/space-platforms-locked", "en": "Space platforms are not accessible yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/trains-locked", "en": "Trains are not present yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings-description/environment-sounds-volume", "en": "Sounds of machines and vehicles.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings-description/preferred-audio-driver", "en": "If the preferred audio driver is unavailable, drivers will be tried in order of appearance.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings-description/slider-enabled", "en": "Enable/Disable (Mute) all sounds of this category.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings-description/wind-volume", "en": "Global persistent and semi-persistent ambient sounds.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings-description/world-ambient-volume", "en": "Local ambient sounds of entities and terrain.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/alerts-volume", "en": "Alerts", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/default-device", "en": "Default device", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/enemies-volume", "en": "Enemies", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/environment-sounds-volume", "en": "Environment", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/explosions-volume", "en": "Explosions", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/game-effects-volume", "en": "Game effects", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/gui-effects-volume", "en": "GUI effects", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/master-volume", "en": "Master", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/music-volume", "en": "Music", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver", "en": "Preferred audio driver", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-alsa", "en": "ALSA", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-core-audio", "en": "Core Audio", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-default", "en": "Default", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-direct-sound", "en": "DirectSound", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-overridden-by-env", "en": "The SDL_AUDIODRIVER environment variable is set to \"__1__\", which overrides this setting.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-pipe-wire", "en": "PipeWire", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-pulse-audio", "en": "PulseAudio", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-audio-driver-wasapi", "en": "WASAPI", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/preferred-output", "en": "Preferred output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/simulation-volume", "en": "Simulations", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/title", "en": "Sound settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/walking-sound-volume", "en": "Walking", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/weapons-volume", "en": "Weapons", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/wind-volume", "en": "Wind", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-sound-settings/world-ambient-volume", "en": "Ambient", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/connections", "en": "Connections", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/contains", "en": "Contains", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/evolution-factor", "en": "Evolution factor", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/overview", "en": "Overview", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/planet-surface-not-generated", "en": "Planet surface not generated", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/title", "en": "Space map", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-locations/view", "en": "View", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platform/damage", "en": "Damage taken", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platform/mass", "en": "Mass", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platform/speed", "en": "Speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platform/thrust", "en": "Thrust", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/cancel-delete", "en": "Cancel deletion", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/cant-delete-platform", "en": "Space platforms can't be deleted while passengers are on board.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/confirm-deletion-with-undo", "en": "Are you sure you want to delete this space platform?\\nYou will be able to undo this action for __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/confirm-deletion-without-undo", "en": "Are you sure you want to delete this space platform?\\nYou cannot undo this action.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/create", "en": "Create", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/delete", "en": "Delete space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/delete-this-platform", "en": "Delete this space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/overview", "en": "Overview", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/space-platform-not-created-yet", "en": "Space platform hasn't been built yet. A rocket must deliver a [color=green][item=space-platform-starter-pack] __ITEM__space-platform-starter-pack__[/color] first.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/space-platform-starter-pack-requested", "en": "A starter pack for this platform has been requested.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/space-platform-waiting-for-deliver-of-starter-pack", "en": "A starter pack for this platform is on the way.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/stopped-at", "en": "Stopped at __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/title", "en": "Space Platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space-platforms/view", "en": "View", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/allow-providing-to-other-platforms", "en": "Provide materials to other platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/allow-providing-to-other-platforms-tooltip", "en": "Allow this platform to provide materials to other platforms in orbit.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/construction-materials", "en": "Construction materials", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/construction-materials-tooltip", "en": "Materials used for construction on the space platform.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/logistic-materials", "en": "Logistic materials", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/logistic-materials-tooltip", "en": "Materials used for logistics on the space platform.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/not-requestable-to-hub", "en": "__1__ can not be delivered to the hub.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/open-electric-network", "en": "Show electric network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-space/request-missing-construction-materials", "en": "Auto request missing construction materials.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-starmap/choose-space-platform", "en": "Choose space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-surface-list/new-space-platform-button", "en": "+ Add space platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tag-edit/last-user", "en": "Last user: __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tag-edit/move-tooltip", "en": "Move this tag to a new location", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-preview/editor-research-tooltip", "en": "(Map editor) __CONTROL_LEFT_CLICK__ to research. __CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + __CONTROL_STYLE_END____CONTROL_LEFT_CLICK__ to instant research with all prerequisites.", "hint": "__CONTROL_KEY_SHIFT__ لإجراء البحث الفوري مع جميع المتطلبات السابقة.__CONTROL_STYLE_BEGIN__ + __CONTROL_STYLE_END__(محرر الخرائط) __CONTROL_LEFT_CLICK__ لإجراء البحث. __CONTROL_LEFT_CLICK__", "reason": "tokens"}
+{"module": "core", "key": "gui-technology-preview/enqueue-research", "en": "Enqueue research", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-preview/productivity-blocked", "en": "Productivity does not apply.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-preview/productivity-blocked-description", "en": "Research for this technology will not profit from productivity bonuses granted by other technologies.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-preview/researched-by-action", "en": "This is researched by performing an action that the technology defines.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-preview/researched-by-lab", "en": "Research is being set by a lab", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-preview/unit-research-trigger-requirements", "en": "Researched by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-queue/cannot-move-backwards-already-at-back", "en": "Already at back.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-queue/cannot-move-because-of-prerequisite", "en": "Can't move due to prerequisites.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-queue/cannot-move-invalid-index", "en": "Invalid queue position.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-queue/cannot-move-same-position", "en": "Already at that position.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-queue/move-backwards", "en": "Move backwards", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology-queue/move-forwards", "en": "Move forwards", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology/cannot-enqueue-trigger-technologies", "en": "Trigger technologies cannot be enqueued.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology/cannot-select-trigger-technologies", "en": "Trigger technologies cannot be selected.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology/show-only-essential", "en": "Show only essential technologies", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-technology/technologies-omitted", "en": "__1__ __plural_for_parameter__1__{1=technology has|rest=technologies have}__ been omitted from this view.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/contains-blueprints", "en": "Contains __1__ __plural_for_parameter__1__{1=blueprint|rest=blueprints}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-asteroid-chunk", "en": " [Asteroid chunk: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-entity-with-quality", "en": " [Entity: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-fluid-with-quality", "en": " [Fluid: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-item-with-quality", "en": " [Item: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-planet", "en": " [Planet: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-planet-with-quality", "en": " [Planet: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-quality", "en": " [Quality: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-quality-with-quality", "en": " [Quality: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-recipe-with-quality", "en": " [Recipe: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-shortcut", "en": " [Shortcut: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-space-location", "en": " [Space location: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-space-location-with-quality", "en": " [Space location: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-space-platform-no-name", "en": " [Space platform]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-space-platform-with-name", "en": " [Space platform: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-tip", "en": " [Tip: __1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-virtual-signal-with-quality", "en": " [Virtual signal: __1__ __2__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/following-text-wrong-tip-name", "en": " [Tip named __1__ doesn't exist]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-text-tags/gps-invalid-platform", "en": "Invalid space platform specified", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tips-and-tricks/cheat-mode", "en": "Cheat mode was activated, new tips won't appear on this save.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tips-and-tricks/mark-as-unread", "en": "Mark as unread", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tips-and-tricks/new-tip", "en": "New tip:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tips-and-tricks/not-a-freeplay", "en": "New tips appear only in freeplay or tutorial scenarios.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-tips-and-tricks/nothing-selected", "en": "No tips and tricks selected", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-state/destination-full", "en": "[img=utility/destination_full_icon] Destination full __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-state/heading-to", "en": "Heading to __1__ __REMARK_COLOR_BEGIN__[__2__m]__REMARK_COLOR_END__", "hint": "__REMARK_COLOR_BEGIN__[m__2__]__REMARK_COLOR_END__العنوان إلى __1__ ", "reason": "not-involutive"}
+{"module": "core", "key": "gui-train-state/manually-stopped", "en": "[img=utility/warning_icon] Manually stopped", "hint": "توقف يدوي [img=Uity/warning_icon]", "reason": "tokens"}

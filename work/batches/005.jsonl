@@ -1,0 +1,120 @@
+{"module": "core", "key": "description/trigger-radius", "en": "Trigger radius", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/turret-ignores-unprioritised", "en": "Will ignore other targets.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/turret-priority-list", "en": "Target priorities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/vehicle-friction-modifier", "en": "Vehicle friction", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/armed", "en": "Armed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/broken", "en": "Broken", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/computing-navigation", "en": "Computing Navigation", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/destination-stop-full", "en": "Destination stop full", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/frozen", "en": "Frozen", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/ghost", "en": "Ghost", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/hatches-blocked-by-elevated-rail", "en": "Hatches blocked by elevated rail", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/input-fluid-too-cold", "en": "Input fluid too cold", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/input-fluid-too-hot", "en": "Input fluid too hot", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/no-filter", "en": "No filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/no-food", "en": "No food", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/no-nutrients", "en": "No nutrients", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/no-path", "en": "No path", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/no-spot-seedable-by-inputs", "en": "No spot seedable by inputs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/not-connected-to-hub-or-pad", "en": "Not connected to hub or landing pad", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/not-enough-space-in-output", "en": "Not enough space in the output", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/not-enough-thrust", "en": "Not enough thrust", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/on-the-way", "en": "On the way", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/paused", "en": "Paused", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/pipeline-overextended", "en": "Pipeline overextended", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/recipe-is-parameter", "en": "Recipe is parameter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/recipe-not-researched", "en": "Recipe not researched", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/thrust-not-required", "en": "Thrust not required", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/too-far-from-pad-to-unload", "en": "Too far from landing pad to unload", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-at-stop", "en": "Waiting at stop", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-for-more-items", "en": "Waiting for more items", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-for-plants-to-grow", "en": "Waiting for plants to grow", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-for-rocket-to-arrive", "en": "Waiting for rocket to arrive", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-for-space-in-destination", "en": "Target full", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-for-space-in-platform-hub", "en": "Waiting for space in platform hub", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-for-upgrade", "en": "Waiting for upgrade", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-in-orbit", "en": "Waiting in orbit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "entity-status/waiting-to-clear-drop-slots", "en": "Waiting to clear drop slots", "hint": "", "reason": "missing"}
+{"module": "core", "key": "error/low-available-space-in-steam-storage", "en": "You have only __1__ MB of free space left in Steam Remote Storage. If you run out of available space, the game might not be able to store your configuration and blueprint library, and you might lose your progress if you rely on Steam Cloud for synchronizing save files between computers.\\nWe recommend you delete some old save files using delete button in Load Game dialog to free up space.", "hint": "لديك فقط __1__ ميغابايت من المساحة المجانية المتبقية في تخزين الستيم البعيد. إذا نفدت المساحة المتاحة، قد لا تكون اللعبة قادرة على تخزين مكتبة الإعدادات والمخططات الخاصة بك، وقد تفقد تقدمك إذا كنت تعتمد على سحابة ستيم لمزامنة حفظ الملفات بين أجهزة الكمبيوتر.\\nننصحك بحذف بعض الملفات القديمة المحفوظة باستخدام زر الحذف في مربع حوار لعبة تحميل لتفريغ المساحة.", "reason": "not-involutive"}
+{"module": "core", "key": "factoriopedia/accepted-science-packs", "en": "Accepted science packs", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/accepted-seeds", "en": "Accepted seeds", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/allows-placement-of", "en": "Allows placement of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/alternative-recipes", "en": "Alternative recipes", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/ammo-category", "en": "Ammo category", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/appears-on", "en": "Appears on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/asteroid-chunk", "en": "Asteroid chunk", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/asteroids", "en": "Asteroids", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/beacon-transmission-strength", "en": "Beacon transmission strength", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/buildable-on", "en": "Buildable on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/burned-in", "en": "Burned in", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/can-be-destroyed-by", "en": "Can be destroyed by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/can-be-placed-on", "en": "Can be placed on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/can-craft", "en": "Can craft", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/can-extract-from", "en": "Can extract from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/can-mine", "en": "Can mine", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/can-plant-seeds", "en": "Can plant seeds", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/cargo-unit-launched-by", "en": "Launched by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/cargo-unit-received-by", "en": "Received by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/collected-by", "en": "Collected by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/connections", "en": "Connections", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/consumed-in", "en": "Consumed in", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/container-spawned-by", "en": "Container spawned by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/contains", "en": "Contains", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/crafted-on", "en": "Crafted on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/current-evolution-on-planet", "en": "Current evolution factor on __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/current-platform-position", "en": "Current position on connection", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/digested-by", "en": "Digested by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/eaten-by", "en": "Eaten by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/efficiency", "en": "Efficiency", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/empty-barrel-recipes", "en": "Empty barrel recipes", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/enemy-spawn-probability", "en": "Enemy spawn probability", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/entity", "en": "Entity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/exclusive-entities", "en": "Exclusive entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/exclusive-entities-tooltip", "en": "Listed entities can be built only on this surface.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/exclusive-recipes", "en": "Exclusive recipes", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/exclusive-recipes-tooltip", "en": "Listed recipes can be used only on this surface.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/extracted-by", "en": "Extracted by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/fill-barrel-recipes", "en": "Fill barrel recipes", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/fluid", "en": "Fluid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/fluid-usage", "en": "Fluid usage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/gathered-from", "en": "Gathered from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/generated-by", "en": "Generated by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/grows-from", "en": "Grows from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/grows-into", "en": "Grows into", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/grows-on", "en": "Grows on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/ingredients", "en": "Ingredients", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/item", "en": "Item", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/launches-cargo-units", "en": "Launches", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/length", "en": "Length", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/loot", "en": "Loot", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/looted-from", "en": "Looted from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/made-in", "en": "Made in", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/needed-for", "en": "Needed for", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/obtained-by-launching", "en": "Obtained by launching", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/pin-tooltip", "en": "When pinned, the window will not close when interacting with rest of the game.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/planet", "en": "Planet", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/planted-by", "en": "Planted by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/produced-by", "en": "Produced by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/produces", "en": "Produces", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/products", "en": "Products", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/receives-cargo-units", "en": "Receives", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/recycling-recipes", "en": "Recycling recipes", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/related", "en": "Related", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/show-unresearched", "en": "Show unresearched", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/similar-recipes", "en": "Similar recipes", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/soil-for", "en": "Soil for", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/source-of", "en": "Source of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/space-connection-from", "en": "From", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/space-connection-to", "en": "To", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/spawned-enemies", "en": "Spawned enemies", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/spawner-health", "en": "Spawner health", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/spawns-container", "en": "Spawns container", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/spawns-upon-spoilage-of", "en": "Spawns upon spoilage of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/spoilage-from", "en": "Spoilage from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface", "en": "Surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface-conditions-construction-suffix", "en": "Construction", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface-conditions-crafting", "en": "Surface conditions: Crafting", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface-conditions-recipe-suffix", "en": "Crafting", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface-creation-item", "en": "Surface creation item", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface-creation-item-tooltip", "en": "Item required to be sent by a rocket for space platform to be created.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/surface-creation-result", "en": "Surface creation result", "hint": "", "reason": "missing"}

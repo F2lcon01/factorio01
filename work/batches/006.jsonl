@@ -1,0 +1,120 @@
+{"module": "core", "key": "factoriopedia/surface-creation-result-tooltip", "en": "Space platform surface created upon launching this item by a rocket.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/thrust", "en": "Thrust", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/thruster-performance-curves", "en": "Thruster performance curves", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/tile", "en": "Tile", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/title", "en": "Factoriopedia", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/transforms-when-starved", "en": "Transforms when starved", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/unlocked-by", "en": "Unlocked by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/upgraded-by", "en": "Upgraded by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/used-by", "en": "Used by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/used-by-vehicle", "en": "Used by vehicle", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/used-in", "en": "Used in", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/virtual-signal", "en": "Virtual signal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "factoriopedia/yields", "en": "Yields", "hint": "", "reason": "missing"}
+{"module": "core", "key": "graphics-errors/device-removed-message3", "en": "If you see this error often, try rebooting the PC or updating your graphics drivers.\\nThe PC might also be unstable due to overclocking or overheating.", "hint": "إذا تكرر الخطأ، حاول إعادة تشغيل الكمبيوتر أو تحديث مشغل الرسوميات الخاص بك.\\nربما يكون جهاز الكمبيوتر غير مستقرٍ بسبب الإجهاد أو ارتفاع الحرارة.", "reason": "not-involutive"}
+{"module": "core", "key": "graphics-errors/opengl-failed-to-initialize", "en": "Factorio requires OpenGL version __1__ or higher. The version available on this computer is __2__.", "hint": ".__أو أعلى. النسخة المتاحة على هذا الكمبيوتر هي __OpenGL __1__ 2 يتطلب إصدار Factorio", "reason": "direction"}
+{"module": "core", "key": "gui-additional-entity-settings/quick-action-enter-hub-as-character", "en": "Enter as character", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-additional-entity-settings/quick-action-make-silo-ready", "en": "Make silo ready", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-advert-switch2/description", "en": "Upgrade to Factorio – Nintendo Switch 2 Edition for free!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-advert-switch2/title", "en": "Factorio – Nintendo Switch 2 Edition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-advert/description", "en": "Factorio: Space Age expansion is out now!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-advert/link-text", "en": "Click here to learn more!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-advert/link-text-console", "en": "Learn more!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-advert/title", "en": "Factorio: Space Age", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/attack", "en": "__1__ __plural_for_parameter__1__{1=entity is|rest=entities are}__ being damaged.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/collector-path-blocked", "en": "Asteroid collector path blocked.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/custom-alert", "en": "Custom alert", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/destroyed", "en": "__1__ __plural_for_parameter__1__{1=entity is|rest=entities are}__ destroyed.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/expansion-base-built", "en": "New enemy expansion base detected.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/fluid-mixing", "en": "Fluids are being mixed.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/no-material-for-construction", "en": "__1__ __plural_for_parameter__1__{1=entity is|rest=entities are}__ missing the material for construction.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/no-platform-storage", "en": "Not enough platform hub storage space available.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/no-roboport-storage", "en": "Not enough empty roboport robot slots available.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/not-enough-construction-robots", "en": "__1__ __plural_for_parameter__1__{1=entity is|rest=entities are}__ missing construction robots.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/not-enough-repair-packs", "en": "__1__ __plural_for_parameter__1__{1=entity is|rest=entities are}__ missing repair packs.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/pipeline-overextended", "en": "Pipeline has been overextended.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/platform-tile-building-blocked", "en": "Tile placement prevented on space platform. Platforms cannot have holes in them (cannot form doughnuts).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/train-no-path", "en": "Train cannot find path to destination.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/turret-fire", "en": "__1__ __plural_for_parameter__1__{1=turret is|rest=turrets are}__ engaged with the enemy.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/turret-out-of-ammo", "en": "__1__ __plural_for_parameter__1__{1=turret|rest=turrets}__ just ran out of ammunition.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert-tooltip/unclaimed-cargo", "en": "Unclaimed items waiting in drop pods.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-alert/title", "en": "Alert overview", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-assembling-machine/no-recipe-set", "en": "No recipe set", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-auth-server/factorio-already-linked-nintendo", "en": "This Factorio.com account is already linked to a different Nintendo Account. You can unlink it in your profile on __1__.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-auth-server/galaxy-upload-already-in-progress", "en": "A galaxy upload is already in progress for you. Please wait for it to finish.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-auth-server/galaxy-upload-not-in-progress", "en": "No galaxy upload is in progress for you. Maybe it has already finished or the process timed out.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-auth-server/login-blacklist", "en": "Your IP address is on the blacklist due to abuse in the past. If you feel like this is in error and would like the ban to be lifted, please contact __1__.", "hint": "عنوان الـIP الخاص بك مدرج في لائحة العناوين المحظورة بسبب إساءة الاستخدام سابقاً. إن أحسست بوجود خطأٍ و تريد رفع الحظر، الرجاء التواصل مع الدعم support@", "reason": "tokens"}
+{"module": "core", "key": "gui-auth-server/login-insufficient-membership-expansion", "en": "Your account doesn't own Factorio: Space Age. Please buy it to log in.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-auth-server/nintendo-already-linked", "en": "There is a different Factorio.com account linked to this Nintendo Account.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-book/scroll-to-change-active-specific", "en": "Use __CONTROL_STYLE_BEGIN____1__Mouse wheel__CONTROL_STYLE_END__ to change active blueprint.", "hint": " لتغيير المخطط.__CONTROL_STYLE_END__استخدم __CONTROL_STYLE_BEGIN____1__mouse عجلة الفأرة ", "reason": "not-involutive"}
+{"module": "core", "key": "gui-blueprint-library/game-blueprints-title-tooltip", "en": "Blueprints saved in the current game. Shared by all active players in the session", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-library/large-memory-usage-warning", "en": "The blueprint library is using a large amount of RAM. Deleting some large blueprints and blueprint books will free up some memory and improve loading and saving times.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-library/not-synced-warning", "en": "[img=utility/warning_icon] [color=red]Blueprint library is not synchronized.[/color]", "hint": " [img=Uity/warning_icon][color=red].مكتبة المخططات غير متزامنة[/color]", "reason": "tokens"}
+{"module": "core", "key": "gui-blueprint-library/other-players-blueprints", "en": "Other player's blueprints", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-library/private-shelf-tooltip", "en": "Personal blueprints accessible from any game", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-library/slots-view", "en": "Slots view", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/available-variables", "en": "Available variables", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/dependency-index", "en": "#__1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/dependency-index-missing", "en": "#", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/evaluation-order-info", "en": "Parameters are evaluated top to bottom.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/evaluation-order-info-tooltip", "en": "Dependencies can only target parameters above them.\\nYou can drag the parameters to change the order.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/fluid-ingredient-of", "en": "Fluid ingredient of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/fluid-product-of", "en": "Fluid product of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/formula", "en": "Formula", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/formula-tooltip", "en": "Can contain math expression with all the variables specified above.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/independent", "en": "Independent", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/ingredient-of", "en": "Ingredient of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/item-ingredient-of", "en": "Item ingredient of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/item-product-of", "en": "Item product of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/name", "en": "Name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/nothing-to-parametrise", "en": "Nothing to parametrise", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/parameter", "en": "Parameter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/product-of", "en": "Product of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/source-of-dependency-isnt-above", "en": "Source of dependency isn't above.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/title", "en": "Blueprint parametrisation", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/value", "en": "Value", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable", "en": "Variable", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-crafting-time", "en": "Crafting time of parameter N", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-ingredient-count", "en": "Item count of ingredient __1__ of parameter N.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-number-from-above", "en": "Number from above", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-rocket-capacity", "en": "Rocket capacity of parameter N", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-stack-size", "en": "Stack size of parameter N", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint-parametrisation/variable-tooltip", "en": "Optional, when specified, this variable can be used in formulas below.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint/components-tooltip", "en": "__ALT_CONTROL_RIGHT_CLICK__1__ to remove all components of that type.\\n__ALT_CONTROL_LEFT_CLICK__1__ to add all components of that type back.", "hint": ".لحذف جميع العينات من هذا النوع __ALT_CONTROL_RIGHT_CLICK__1__\\n.لإعادة جميع العينات المحذوفة مرة أخرى __ALT_CONTROL_LEFT_CLICK__1__", "reason": "direction"}
+{"module": "core", "key": "gui-blueprint/description", "en": "Description", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-blueprint/grid-position-tooltip", "en": "__CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + __CONTROL_STYLE_END____CONTROL_LEFT_CLICK__ in the preview to change the grid position.", "hint": "__CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + __CONTROL_STYLE_END__.في منسدلة المعاينة لتغيير الموقع في الشبكة __CONTROL_LEFT_CLICK__", "reason": "direction"}
+{"module": "core", "key": "gui-bonus/beacon-distribution", "en": "Beacon distribution modifier", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-bonus/belt-stack-size-bonus", "en": "Belt stack size bonus", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-bonus/bulk-inserter-capacity-bonus", "en": "Bulk inserter capacity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-bonus/cargo-unit-speed-bonus", "en": "Cargo unit speed bonus", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-bonus/productivity-bonus", "en": "Productivity bonus", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-browse-games/is-favourited", "en": "Is favorited", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-car/drive-remotely", "en": "Drive remotely", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-car/driven-physically-by", "en": "Driven physically by __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-car/driven-remotely-by", "en": "Driven remotely by __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-car/stop-driving", "en": "Stop driving", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/can-upload-later", "en": "You can also choose to (re)-upload your game at a later time from the game menu.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/comment", "en": "Comment", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/login", "en": "Login", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/only-one-slot", "en": "Uploading the current game will overwrite the previous one!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/title", "en": "Title", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload", "en": "Upload", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-charts", "en": "Maps of your planets and platforms, including recipe icons, tags and station names.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-game", "en": "Upload your game to the Galaxy Of Fame", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-game-message", "en": "[font=default-bold]Thank you for playing through Space Age!\\n\\nNow you can upload a snapshot of your game to the factorio.com space map.[/font]\\n\\n It will contain this:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-metadata", "en": "Map seed, player count and mods.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/upload-statistics", "en": "Production, kills and energy statistics.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-chartbundle-upload-screen/you-need-to-login", "en": "You need to login to upload your map.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/entire-belt-hold-mode", "en": "Hold (all belts)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/entire-belt-hold-mode-description-belt", "en": "The signal is sent continuously as long as the items are on this belt or directly connected belts in front and in the back. Belts are cut on side-loading and inside of splitters.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/fluid-temperature", "en": "Fluid temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/hub-damage-taken-signal", "en": "Damage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/hub-speed-signal", "en": "Speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lab-technology-level-signal", "en": "Level", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-blue", "en": "Blue", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-green", "en": "Green", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-red", "en": "Red", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/lamp-rgb", "en": "RGB", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/priority", "en": "Priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/priority-description", "en": "Priority of the train stop", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-channel", "en": "Channel", "hint": "", "reason": "missing"}

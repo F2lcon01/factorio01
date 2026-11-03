@@ -1,0 +1,19 @@
+{
+ "circuit network": "دارة كهربائية",
+ "damage": "الضرر",
+ "health": "صحة",
+ "input": "مُدخل",
+ "item on ground": "عنصر على الأرض",
+ "lightning": "برق",
+ "logistic system": "النظام اللوجستي",
+ "output": "مُخرج",
+ "radar": "رادار",
+ "rocket": "صاروخ",
+ "science": "العلوم",
+ "science pack": "حُزمة العلوم",
+ "space": "فضاء",
+ "space platform hub": "مركز منصة الفضاء",
+ "speed": "السرعة",
+ "stack size": "حجم الكومة",
+ "train stop": "محطة قطار"
+}

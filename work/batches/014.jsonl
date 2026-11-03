@@ -1,0 +1,120 @@
+{"module": "core", "key": "gui-train-state/no-path-to", "en": "[img=utility/no_path_icon] No path to __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-state/no-valid-stops", "en": "[img=utility/warning_icon] No valid stops", "hint": "لا توجد محطات صالحة [img=Uity/warning_icon]", "reason": "tokens"}
+{"module": "core", "key": "gui-train-stop/no-trains-on-the-way", "en": "There are no trains on the way to this stop.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-stop/no-trains-with-this-stop", "en": "There are no trains with this stop.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-stop/train-stop-priority", "en": "Priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-stop/train-stop-priority-tooltip", "en": "Higher priority train stop will be served first.\\n(0 is the lowest, 255 the highest)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-stop/trains-on-the-way", "en": "Trains on the way", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-stop/trains-with-this-stop", "en": "Trains with this stop", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/all-requests-satisfied", "en": "All requests satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/any-planet-import-zero", "en": "Any planet import zero", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/any-request-not-satisfied", "en": "Any request not satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/any-request-zero", "en": "Any request zero", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/at-station", "en": "At __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/damage-taken", "en": "Damage taken", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/destination-full-or-no-path", "en": "Destination full or no path", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/empty-item-id", "en": "[ ]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/fuel-full", "en": "All locomotives fully fueled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/fuel-item-count", "en": "Fuel: __1__ __2__ __3__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/inactivity-condition", "en": "__1__ __plural_for_parameter__1__{1=second|rest=seconds}__ of inactivity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/not-at-station", "en": "Not at __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/not-empty-condition", "en": "Has cargo in inventory", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/request-not-satisfied", "en": "Request not satisfied: __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/request-satisfied", "en": "Request satisfied: __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/specific-destination-full", "en": "__1__ is full", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/specific-destination-not-full", "en": "__1__ is not full", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train-wait-condition-description/time-condition", "en": "__1__ __plural_for_parameter__1__{1=second|rest=seconds}__ passed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-all-requests-satisfied-condition", "en": "All requests satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-any-planet-import-zero-condition", "en": "Any planet import zero", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-any-request-not-satisfied-condition", "en": "Any request not satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-any-request-zero-condition", "en": "Any request zero", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-at-station-condition", "en": "At specified station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-damage-taken-condition", "en": "Damage taken", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-destination-full-or-no-path-condition", "en": "Destination full or no path", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-fly-condition", "en": "+ Add fly condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-fuel-full-condition", "en": "Full fuel", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-fuel-item-count-all-condition", "en": "Fuel (all locomotives)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-fuel-item-count-any-condition", "en": "Fuel (any locomotive)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-interrupt", "en": "+ Add interrupt", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-interrupt-condition", "en": "+ Add interrupt condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-interrupt-station", "en": "+ Add interrupt station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-not-at-station-condition", "en": "Not at specified station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-not-empty-condition", "en": "Has cargo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-request-not-satisfied-condition", "en": "Request not satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-request-satisfied-condition", "en": "Request satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-specific-destination-full-condition", "en": "Station is full", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-specific-destination-not-full-condition", "en": "Station is not full", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-station-title", "en": "Add station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/add-temporary-station-title", "en": "Add temporary station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/cant-set-request-condition-not-requested", "en": "Items which are not requested cannot be set.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/change-station-title", "en": "Change station", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/empty-train-group", "en": "[No group assigned]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/fast-wait-condition-description", "en": "__ALT_CONTROL__1__fast-wait-condition__ to fast-add wait conditions.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/fuel-condition-all", "en": "Fuel (all)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/fuel-condition-any", "en": "Fuel (any)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/interaction-1", "en": "__CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__: Insert a temporary stop.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/interaction-2", "en": "__CONTROL_STYLE_BEGIN____1____CONTROL_STYLE_END__: Add the selected stop to the schedule.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/no-station-specified", "en": "(Not specified)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/paused-mode", "en": "Paused thrust", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/request-not-satisfied-condition", "en": "Request not satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/request-satisfied-condition", "en": "Request satisfied", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/station-partially-accessible", "en": "Only __1__ out of __2__ stops __plural_for_parameter__1__{1=is|rest=are}__ accessible.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/stations-disabled", "en": "__plural_for_parameter__1__{1=Stop is|2=Both stops are|rest=All __1__ stops are}__ disabled.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/stations-not-accessible", "en": "__plural_for_parameter__1__{0=No stop is accessible|1=Stop is inaccessible|2=Both stops are inaccessible|rest=All __1__ stops are inaccessible}__ from current position.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/train-group", "en": "Train group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/train-group-note", "en": "Train is in a group", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/train-group-note-tooltip", "en": "Any changes made to this schedule will be applied to all trains in the train group (ignoring any temporary stops).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/trains-in-this-group", "en": "Number of trains in this train group.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/unload", "en": "Unload", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/unload-description", "en": "Allow unloading cargo at this stop.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/use-train-stop-color", "en": "Use destination train stop color", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/use-train-stop-color-tooltip", "en": "The train will copy its color from the destination train stop, updated each time the train leaves a station.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-train/when", "en": "When:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-trains/groups-tab", "en": "Groups", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-turret/priority-ignore-unlisted", "en": "Ignore unlisted targets", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-turret/priority-ignore-unlisted-description", "en": "If set, targets not appearing in the priority list will never be targeted. Otherwise they come after all listed targets.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-turret/priority-list", "en": "Target priorities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-turret/priority-list-description", "en": "Gives an explicit order in which targets will be picked if multiple are in range.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undelete-space-platforms/no-deleted-platforms", "en": "No deleted platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undelete-space-platforms/platform-name", "en": "Platform name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undelete-space-platforms/removed-by", "en": "Removed by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undelete-space-platforms/time-until-final-removal", "en": "Time until final removal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undelete-space-platforms/title", "en": "Deleted platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/add-wires-header", "en": "Undo addition of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/build-entities-header", "en": "Undo construction of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/build-tiles-header", "en": "Undo placement of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/copy-entity-settings-header", "en": "Undo copying settings to", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/entities-remainder", "en": "+__1__ other __plural_for_parameter__1__{1=entity|rest=entities}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/install-modules-header", "en": "Undo installation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/line", "en": "__1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/modules-remainder", "en": "+__1__ other __plural_for_parameter__1__{1=module|rest=modules}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/remove-entities-header", "en": "Undo deconstruction of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/remove-tiles-header", "en": "Undo removal of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/remove-wires-header", "en": "Undo removal of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/rotate-entity-header", "en": "Undo rotation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/surfaces", "en": "__plural_for_parameter__1__{1=Surface|rest=Surfaces}__: __2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/tiles-remainder", "en": "+__1__ other __plural_for_parameter__1__{1=tile|rest=tiles}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/uninstall-modules-header", "en": "Undo uninstallation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/upgrade-entities-header", "en": "Undo upgrade of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-action/wires-remainder", "en": "+__1__ other __plural_for_parameter__1__{1=wire|rest=wires}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-confirmation/are-you-sure", "en": "Are you sure you want to undo an action from __1__ ago?\\n\\n__2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-confirmation/confirm-undo", "en": "Undo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-redo-wire-type/copper", "en": "copper", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-redo-wire-type/green", "en": "green", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-redo-wire-type/red", "en": "red", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/multiple-surfaces-single-line", "en": "__1__ on multiple surfaces", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/single-surface-single-line", "en": "__1__ on __2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-heterogeneous", "en": "Undo addition of __1__ wires", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-homogeneous", "en": "Undo addition of __1__ wires (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-single", "en": "Undo addition of __1__ wire", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-entity-heterogeneous", "en": "Undo construction of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-entity-homogeneous", "en": "Undo construction of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-tile-heterogeneous", "en": "Undo placement of __1__ tiles", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-tile-homogeneous", "en": "Undo placement of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-heterogeneous", "en": "Undo copying settings to __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-homogeneous", "en": "Undo copying settings to __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-single", "en": "Undo copying settings to __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-heterogeneous", "en": "Undo installation of __1__ modules", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-homogeneous", "en": "Undo installation of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-single", "en": "Undo installation of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-remove-module-heterogeneous", "en": "Undo removal of __1__ modules", "hint": "", "reason": "missing"}

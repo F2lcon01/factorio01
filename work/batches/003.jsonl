@@ -1,0 +1,120 @@
+{"module": "core", "key": "config-help/auto-pause-when-players-connect", "en": "<true/false> - Sets if the server auto pauses while someone is connecting.", "hint": ".يحدد ما إذا كان الخادم سيتوقف تلقائيًا أثناء اتصال أحد المستخدمين - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/autosave-interval", "en": "<number> - Sets the autosave interval (in minutes). 0 means disabled.", "hint": ".تعيين الفاصل الزمني التلقائي (بالدقائق). 0 يعني التعطيل - <number>", "reason": "direction"}
+{"module": "core", "key": "config-help/autosave-only-on-server", "en": "<true/false> - Sets if only the server will create autosaves.", "hint": ".تعيين إذا كان الخادم فقط سينشئ موسيقى تلقائية - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/description", "en": "<description> - Sets the server description (can be empty).", "hint": ".(تعيين وصف الخادم (يمكن أن يكون فارغا - <description>", "reason": "direction"}
+{"module": "core", "key": "config-help/ignore-player-limit-for-returning-players", "en": "<true/false> - Sets if the server player limit is ignored for returning players.", "hint": ".تعيين إذا تم تجاهل الحد الأقصى للسيرفر للاعبين العائدين - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/max-players", "en": "<number> - Sets the maximum number of players allowed in this server. 0 means no limit.", "hint": ".تعيين الحد الأقصى لعدد اللاعبين المسموح بهم في هذا الخادم. 0 يعني لا حدود - <number>", "reason": "direction"}
+{"module": "core", "key": "config-help/max-upload-slots", "en": "<number> - Sets the maximum number of upload slots. 0 means no limit.", "hint": ".تعيين الحد الأقصى لعدد فتحات التحميل. 0 يعني عدم وجود حد - <number>", "reason": "direction"}
+{"module": "core", "key": "config-help/max-upload-speed", "en": "<number> - Sets the maximum upload speed in kilobytes per second. 0 means no limit.", "hint": ".تعيين الحد الأقصى لسرعة الرفع بالكيلوبايت في الثانية الواحدة. 0 يعني عدم وجود حد - <number>", "reason": "direction"}
+{"module": "core", "key": "config-help/name", "en": "<name> - Sets the server name.", "hint": ".تعيين اسم الخادم - <name>", "reason": "direction"}
+{"module": "core", "key": "config-help/only-admins-can-pause", "en": "<true/false> - Sets if only admins are allowed to pause the game.", "hint": ".تعيين إذا كان مسموحاً فقط للمشرفين بإيقاف اللعبة مؤقتاً - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/password", "en": "<password> - Sets the multiplayer password. An empty password means no password.", "hint": ".تعيين كلمة مرور متعددة اللاعب. كلمة المرور فارغة تعني عدم وجود كلمة مرور - <password>", "reason": "direction"}
+{"module": "core", "key": "config-help/require-user-verification", "en": "<true/false> - Sets if a user's identity has to be confirmed to join the server.", "hint": ".يحدد إذا كان يجب تأكيد هوية المستخدم للانضمام إلى الخادم - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/tags", "en": "<tags> - Sets the server tags - a list of strings (can be empty).", "hint": ".(تعيين وسوم الخادم - قائمة السلاسل (يمكن أن تكون فارغة - <tags>", "reason": "direction"}
+{"module": "core", "key": "config-help/visibility-lan", "en": "<true/false> - Sets if the game will be visible on LAN.", "hint": ".يحدد إذا كانت اللعبة ستكون مرئية على الشبكة المحلية - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/visibility-public", "en": "<true/false> - Sets if the game will be publicly visible.", "hint": ".يحدد ما إذا كانت اللعبة ستكون مرئية علنا - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-help/visibility-steam", "en": "<true/false> - Sets if friends can join through Steam.", "hint": ".Steam تعيين إذا كان بإمكان الأصدقاء الانضمام من خلال - <true/false>", "reason": "direction"}
+{"module": "core", "key": "config-output/afk-autokick-changed-to-minutes", "en": "AFK auto-kick changed to __1__ __plural_for_parameter__1__{1=minute|rest=minutes}__.", "hint": "تم تغيير الإعداد ”AFK auto-kick“ إلى __minutes__ __1=rest|minute=1}__plural_for_parameter__1}__.", "reason": "tokens"}
+{"module": "core", "key": "config-output/afk-autokick-interval-minutes", "en": "Kick if AFK for more than __1__ __plural_for_parameter__1__{1=minute|rest=minutes}__.", "hint": "طرد المستخدم إذا غاب عن اللعبة لأكثر من __1__ __1}__plural_for_parameter__1=دقيقة|الباقي=دقائق}__.", "reason": "tokens"}
+{"module": "core", "key": "config-output/allow-commands", "en": "Allow Lua commands: __1__.", "hint": "السماح لأوامر Lua التي تم تعيينها إلى الووز الخفيف (ل يو إي).", "reason": "tokens"}
+{"module": "core", "key": "config-output/autosave-changed-to-minutes", "en": "Autosave interval changed to __1__ __plural_for_parameter__1__{1=minute|rest=minutes}__.", "hint": "تم تغيير فترة الحفظ التلقائي إلى __1__ __1}__plural_for_parameter__1=دقيقة|الباقي=دقائق}__.", "reason": "tokens"}
+{"module": "core", "key": "config-output/autosave-interval-minutes", "en": "Autosave every __1__ __plural_for_parameter__1__{1=minute|rest=minutes}__.", "hint": "الحفظ التلقائي كل __1__ __1}__plural_for_parameter__1=دقيقة|الباقي=دقائق}__.", "reason": "tokens"}
+{"module": "core", "key": "control-keys/drag", "en": "drag", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/left-option", "en": "Left Option", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-eject", "en": "Media Eject", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-fast-forward", "en": "Media Fast Forward", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-next", "en": "Media Next", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-play", "en": "Media Play", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-play-pause", "en": "Media Play/Pause", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-prev", "en": "Media Previous", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-rewind", "en": "Media Rewind", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/media-stop", "en": "Media Stop", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/option", "en": "Option", "hint": "", "reason": "missing"}
+{"module": "core", "key": "control-keys/right-option", "en": "Right Option", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/alternative-gui-move-down", "en": "Alternative key for navigating the GUI.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/alternative-gui-move-left", "en": "Alternative key for navigating the GUI.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/alternative-gui-move-right", "en": "Alternative key for navigating the GUI.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/alternative-gui-move-up", "en": "Alternative key for navigating the GUI.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/back", "en": "Go to the last opened window.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/cycle-quality-down", "en": "Lowers quality of current cursor item or selection screen.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/cycle-quality-up", "en": "Increases quality of current cursor item or selection screen.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/editor-switch-to-surface", "en": "Switches to the surface number pressed in combination with this hotkey: __CONTROL__editor-switch-to-surface__ + 3 -> switches to surface 3.", "hint": "التبديل إلى رقم السطح الذي يتم الضغط عليه مع هذا المفتاح الساخن: __CONTROL__editor-switch-to-surface__ + 3 -> مفاتيح التبديل إلى السطح 3.", "reason": "not-involutive"}
+{"module": "core", "key": "controls-description/fast-wait-condition", "en": "Usable only in the space platform schedule GUI, for request satisfied wait conditions.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/forward", "en": "Go forward in the opened window queue.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/move", "en": "Move the character and navigate the GUI.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/next-surface", "en": "Move to the next surface in the surface list in remote view", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/open-factoriopedia", "en": "Opens the factoriopedia entry for the currently hovered object.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/open-info-panel", "en": "Opens panel with more detailed info about the hovered thing.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/pin", "en": "Pin the selected entity or position.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/pipette", "en": "Picks items from your inventory used to build the currently selected entity and places them in your cursor. For resources it will select the fastest available mining drill.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/play-previous-track", "en": "Up to 5 previous tracks are remembered.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/previous-surface", "en": "Move to the previous surface in the surface list in remote view", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/rename-all", "en": "Usable only in specific rename GUIs, such as renaming a train stop. Hold this modifier while submitting the rename to rename all with that name.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/reverse-select", "en": "Activates downgrade mode with the upgrade planner.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/scroll-tooltip-down", "en": "Scroll tooltip down (only applies when attached to the right side of the view).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/scroll-tooltip-up", "en": "Scroll the entity tooltip up (only applies when attached to the right side of the view).", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/super-forced-build", "en": "Super-forced build. Automatically builds terrain under entities where needed and marks colliding entities in the way for deconstruction.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls-description/toggle-rail-layer", "en": "When a rail planner is used, changes if the rails should end on ground or elevated.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/alternative-gui-move-down", "en": "Alternative GUI move down", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/alternative-gui-move-left", "en": "Alternative GUI move left", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/alternative-gui-move-right", "en": "Alternative GUI move right", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/alternative-gui-move-up", "en": "Alternative GUI move up", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/alternative-use-item", "en": "Queue command", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/back", "en": "Back", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/copy-inventory-filter", "en": "Copy inventory filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/cycle-quality-down", "en": "Decrease quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/cycle-quality-up", "en": "Increase quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/debug-toggle-gui-visibility", "en": "Toggle GUI visibility", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/deselect", "en": "Deselect", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/fast-wait-condition", "en": "Fast-add wait condition", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/flip-horizontal", "en": "Flip horizontal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/flip-vertical", "en": "Flip vertical", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/forward", "en": "Forward", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/hide-tall-entities", "en": "Toggle visibility of tall entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-down", "en": "Move blueprint absolute grid down", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-left", "en": "Move blueprint absolute grid left", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-right", "en": "Move blueprint absolute grid right", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-up", "en": "Move blueprint absolute grid up", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-entities-down", "en": "Move blueprint entities down", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-entities-left", "en": "Move blueprint entities left", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-entities-right", "en": "Move blueprint entities right", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-blueprint-entities-up", "en": "Move blueprint entities up", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/move-tag", "en": "Move tag", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/next-surface", "en": "Select next surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/not-set-with-control-name", "en": "Not set [__1__]", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/open-factoriopedia", "en": "Open factoriopedia", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/paste-inventory-filter", "en": "Paste inventory filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/pause-resume-music", "en": "Pause/Resume music", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/pin", "en": "Pin", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/pipette", "en": "Pipette tool", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/play-next-track", "en": "Play the next music track", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/play-previous-track", "en": "Play the previous music track", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/previous-surface", "en": "Select previous surface", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/redo", "en": "Redo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/rename-all", "en": "Rename all", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/scroll-tooltip-down", "en": "Scroll tooltip down", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/scroll-tooltip-up", "en": "Scroll tooltip up", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/select-for-super-forced-deconstruct", "en": "Select for super-forced deconstruction", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/slash-editor", "en": "/editor", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/submit-feedback", "en": "Open feedback form", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/super-forced-build", "en": "Super-forced build", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/toggle-blueprint-snap-to-grid", "en": "Toggle blueprint snap to grid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/toggle-entity", "en": "Toggle entity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/toggle-rail-layer", "en": "Toggle rail layer", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/use-item", "en": "Use item", "hint": "", "reason": "missing"}
+{"module": "core", "key": "controls/visualize-entity-fluid-segments", "en": "Visualize entity fluid pipelines", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/accepted-fluid", "en": "Accepted fluid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/accepted-food", "en": "Accepted food", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/accepted-fuel", "en": "Accepted fuel", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/accepted-nutrients", "en": "Accepted nutrients", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/attacking-speed", "en": "Attacking speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/auto-targeting", "en": "Auto targeting", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/available-weapons", "en": "Available weapons", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/base-consumption", "en": "Base energy consumption", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/base-health", "en": "Base health", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/base-pollution", "en": "Base pollution", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/base-quality", "en": "Base quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/base-speed", "en": "Base speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/beacons-header", "en": "Beacons:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/beacons-line", "en": "[img=entity/__1__] ×__2__ (__3__% each)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/beacons-line-short", "en": "[img=entity/__1__] ×__2__", "hint": "", "reason": "missing"}

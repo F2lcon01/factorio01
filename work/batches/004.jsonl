@@ -1,0 +1,120 @@
+{"module": "core", "key": "description/beacons-potential-header", "en": "Potential beacons:", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/buildable-on", "en": "Buildable on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/cargo-hatch-count", "en": "Cargo hatch count", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/cargo-hatch-input-count", "en": "Input hatches", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/cargo-hatch-output-count", "en": "Output hatches", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/character-grounded", "en": "Grounded", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/circuit-signal", "en": "Circuit signal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/collection-area", "en": "Collection area", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/collects", "en": "Collects", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/completed-trips", "en": "Completed trips", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/continuous-radar-coverage-distance", "en": "Continuous coverage distance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/crafted-on", "en": "Crafted on", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/creates-number-entities-value", "en": "__1__ × __2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/current-health", "en": "Health at current evolution factor (__1__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/damage-per-hp", "en": "Damage per HP", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/disabled", "en": "Disabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/drain", "en": "Drain", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/effect-duration", "en": "Effect duration", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/effect-value-negative", "en": "-__1__%", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/effect-value-negative-limit", "en": "-__1__% = limit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/effect-value-positive", "en": "+__1__%", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/effect-value-positive-limit", "en": "+__1__% = limit", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/effect-value-zero", "en": "__1__%", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/enabled", "en": "Enabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/enraged-speed", "en": "Enraged speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/exploration-radar-coverage-distance", "en": "Exploration coverage distance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/extra-count-factor", "en": "__1__% chance of additional product", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/factoriopedia-science-pack-remaining-amount-key", "en": "Science capacity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/flow-rate", "en": "Flow rate", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/food-energy-value", "en": "Energy value", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/fork-chance-per-jump", "en": "Fork chance per jump", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/freshness", "en": "Freshness", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/from-evolution", "en": "from evolution", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/green-circuit-network", "en": "Green circuit network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/growth", "en": "Growth", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/growth-time", "en": "Growth time", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/healing", "en": "Healing", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/heating-energy", "en": "Power required to heat", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/hitpoints", "en": "__1__ __plural_for_parameter__1__{1=hitpoint|rest=hitpoints}__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/initial-items", "en": "Initial items", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/input-cargo-hatch-bonus", "en": "Input cargo hatch bonus", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/input-cargo-hatch-count", "en": "Input cargo hatch count", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/investigating-speed", "en": "Investigating speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/item-on-ground-name", "en": "Item on ground: __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/item-request-proxy-deliver", "en": "Pending deliveries", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/item-request-proxy-pickup", "en": "Pending pickups", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/length", "en": "Length", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/lift-weight", "en": "Lift weight", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-in-rocket-silos", "en": "Available in rocket silos", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-no-platforms-providing", "en": "No platforms providing materials", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-no-transitional-rocket-silo", "en": "No rocket silos accepting automatic requests from space platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-not-enough-for-one-delivery", "en": "Not enough to fill one rocket", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-not-enough-hub-space", "en": "Not enough space in the space platform hub", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-on-planet", "en": "Available on planet", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-on-platforms", "en": "Available on platforms", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-priority-request-reserved-space", "en": "Space is reserved for a priority request", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-transition-requested-from", "en": "Requested by platform", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/logistic-request-tooltip-transition-requesting-from", "en": "Requesting from", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/max-cargo-bay-unloading-distance", "en": "Max unloading distance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/max-forks", "en": "Max forks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/max-health", "en": "Max. possible health at evolution factor (__1__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/max-jumps", "en": "Max jumps", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/maximum-effective-temperature", "en": "Max. effective temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/maximum-flying-reach", "en": "Maximum flying reach", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/maximum-input-temperature", "en": "Max. input temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/mean-lightning-power", "en": "Average lightning power density", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/mean-lightning-power-unit", "en": "__1__/m²", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/mined-by", "en": "Mined by", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/minimum-input-temperature", "en": "Min. input temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/minimum-operational-time", "en": "Minimum operational time", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/module-slots", "en": "Module slots", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/movement-speed-bonus-disabled", "en": "Disabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/movement-speed-bonus-toggle", "en": "__1__ - __2__ to toggle", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/nutrients-energy-value", "en": "Yummy value", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/output-cargo-hatch-bonus", "en": "Output cargo hatch bonus", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/output-cargo-hatch-count", "en": "Output cargo hatch count", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/patrolling-speed", "en": "Patrolling speed", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/per-chunk", "en": "per chunk", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/personal-roboport-status", "en": "Status", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/personal-roboport-status-disabled", "en": "Disabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/personal-roboport-status-enabled", "en": "Enabled", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/personal-roboport-status-toggle", "en": "__1__ - __2__ to toggle", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/piercing-power", "en": "Piercing power", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/pipeline-extent", "en": "Pipeline extent", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/player-description", "en": "Description", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/pollution-absorption", "en": "__1__ absorption", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/pollution-to-join-attack", "en": "Consumes __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/power-output-neighbour-bonus", "en": "__1__ (__2__ neighbor bonus)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/protected-entity", "en": "Protected from automated shooting.\\n __CONTROL__shoot-selected__ can be used to shoot it manually.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/quality-bonus", "en": "Quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/radar-coverage-distance", "en": "Radar coverage distance", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/recipe-no-ingredients", "en": "None", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/recipe-no-products", "en": "None", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/red-circuit-network", "en": "Red circuit network", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/remaining-time", "en": "Remaining time", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/required-fluid-per-mining-operation", "en": "Required fluid per mining operation", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/requires", "en": "Requires", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/resource-drain", "en": "Resource drain", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/result-fluid", "en": "Result fluid", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/rocket-capacity", "en": "Rocket capacity", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/rocket-capacity-value", "en": "__1__ (__3__ __plural_for_parameter__2__{1=stack|rest=stacks}__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/rocket-capacity-value-short", "en": "__1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/rocket-cargo-weight", "en": "Cargo weight", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/rocket-lift-weight", "en": "Maximum lift weight", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/rocket-lift-weight-value-modded", "en": "__1__ (__2__%)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/science-pack-drain", "en": "Science pack drain", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/soil-for", "en": "Soil for", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/spoil-result", "en": "Spoil result", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/spoil-time", "en": "Spoil time", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/stack-size", "en": "Stack size", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/stop-priority", "en": "Train stop priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/storage-chest-counts", "en": "Logistic system storage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/surface-lightning-range", "en": "Lightning reach", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/target-filters", "en": "Target filters", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/target-temperature", "en": "Target temperature", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/threshold", "en": "Threshold", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/thrust", "en": "Thrust", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/time-to-damage", "en": "Time to damage", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/too-heavy-for-rocket", "en": "Too heavy for a rocket!", "hint": "", "reason": "missing"}
+{"module": "core", "key": "description/total-trash", "en": "Trash", "hint": "", "reason": "missing"}
