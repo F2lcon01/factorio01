@@ -15,15 +15,18 @@ while (Get-Process factorio -ErrorAction SilentlyContinue) {
     Start-Sleep -Seconds 2
 }
 
-if ($Restore) {
-    $last = Get-ChildItem (Join-Path $root 'backups') -Directory -Filter 'settings-*' | Sort-Object Name | Select-Object -Last 1
+if ($Restore) {  # explicit confirmation: a mistaken restore silently switches the game back to English
+    $answer = Read-Host 'This returns the game to its previous language. Type YES to continue'
+    if ($answer -cne 'YES') { Write-Output 'cancelled: nothing changed'; return }
+    $last = Get-ChildItem (Join-Path $root 'backups') -Directory -Filter 'settings-*' | Sort-Object LastWriteTime | Select-Object -Last 1
     Copy-Item (Join-Path $last.FullName 'config.ini') $cfg
     Copy-Item (Join-Path $last.FullName 'core-ar-info.json') $info
     Write-Output "restored from $($last.Name)"
     return
 }
 
-$bk = Join-Path $root ('backups\settings-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+$stamp = (Get-Date).ToString('yyyyMMdd-HHmmss', [Globalization.CultureInfo]::InvariantCulture)  # Gregorian, not system calendar
+$bk = Join-Path $root "backups\settings-$stamp"
 New-Item -ItemType Directory -Force $bk | Out-Null
 Copy-Item $cfg (Join-Path $bk 'config.ini')
 Copy-Item $info (Join-Path $bk 'core-ar-info.json')
