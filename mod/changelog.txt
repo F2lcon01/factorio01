@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2026-11-03
+  Features:
+    - Complete Arabic locale for core, base, elevated-rails, quality, recycler and space-age.
+    - Connected letters (presentation forms) and right-to-left reading order.
+    - Long descriptions are pre-wrapped so lines read top to bottom.

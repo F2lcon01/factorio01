@@ -1,0 +1,10 @@
+{
+  "name": "arabic-complete",
+  "version": "0.0.0",
+  "title": "Arabic — complete & shaped",
+  "author": "Falcon",
+  "factorio_version": "2.1",
+  "description": "Complete Arabic translation with connected letters and correct reading order.",
+  "dependencies": ["base >= 2.1.0", "? elevated-rails >= 2.1.0", "? quality >= 2.1.0",
+                   "? recycler >= 2.1.0", "? space-age >= 2.1.0", "! zzz-arabic-shaper"]
+}

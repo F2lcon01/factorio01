@@ -1,0 +1,455 @@
+{"en": "Acid neutralisation", "hint": "", "keys": ["space-age:recipe-name/acid-neutralisation"]}
+{"en": "Advanced asteroid processing", "hint": "", "keys": ["space-age:technology-name/advanced-asteroid-processing"]}
+{"en": "Advanced carbonic asteroid crushing", "hint": "", "keys": ["space-age:recipe-name/advanced-carbonic-asteroid-crushing"]}
+{"en": "Advanced combinators", "hint": "Advanced combinators", "keys": ["base:technology-name/advanced-combinators"]}
+{"en": "Advanced metallic asteroid crushing", "hint": "", "keys": ["space-age:recipe-name/advanced-metallic-asteroid-crushing"]}
+{"en": "Advanced oxide asteroid crushing", "hint": "", "keys": ["space-age:recipe-name/advanced-oxide-asteroid-crushing"]}
+{"en": "Advanced thruster fuel", "hint": "", "keys": ["space-age:recipe-name/advanced-thruster-fuel"]}
+{"en": "Advanced thruster oxidizer", "hint": "", "keys": ["space-age:recipe-name/advanced-thruster-oxidizer"]}
+{"en": "Agricultural science pack", "hint": "", "keys": ["space-age:item-name/agricultural-science-pack", "space-age:technology-name/agricultural-science-pack"]}
+{"en": "Agriculture", "hint": "", "keys": ["space-age:technology-name/agriculture"]}
+{"en": "Ammonia", "hint": "", "keys": ["space-age:fluid-name/ammonia"]}
+{"en": "Ammonia rocket fuel", "hint": "", "keys": ["space-age:recipe-name/ammonia-rocket-fuel"]}
+{"en": "Ammoniacal ocean", "hint": "", "keys": ["space-age:tile-name/ammoniacal-ocean"]}
+{"en": "Ammoniacal ocean 2", "hint": "", "keys": ["space-age:tile-name/ammoniacal-ocean-2"]}
+{"en": "Ammoniacal solution", "hint": "", "keys": ["space-age:fluid-name/ammoniacal-solution"]}
+{"en": "Ammoniacal solution separation", "hint": "", "keys": ["space-age:recipe-name/ammoniacal-solution-separation"]}
+{"en": "Aquilo", "hint": "", "keys": ["space-age:space-location-name/aquilo"]}
+{"en": "Artificial jellynut soil", "hint": "", "keys": ["space-age:item-name/artificial-jellynut-soil", "space-age:tile-name/artificial-jellynut-soil"]}
+{"en": "Artificial soil", "hint": "", "keys": ["space-age:technology-name/artificial-soil"]}
+{"en": "Artificial yumako soil", "hint": "", "keys": ["space-age:item-name/artificial-yumako-soil", "space-age:tile-name/artificial-yumako-soil"]}
+{"en": "Artillery shell damage", "hint": "", "keys": ["space-age:technology-name/artillery-shell-damage"]}
+{"en": "Ashland tree", "hint": "", "keys": ["space-age:entity-name/ashland-lichen-tree"]}
+{"en": "Asteroid productivity", "hint": "", "keys": ["space-age:technology-name/asteroid-productivity"]}
+{"en": "Asteroid reprocessing", "hint": "", "keys": ["space-age:technology-name/asteroid-reprocessing"]}
+{"en": "Bacteria cultivation", "hint": "", "keys": ["space-age:technology-name/bacteria-cultivation"]}
+{"en": "Barnacles decal", "hint": "", "keys": ["space-age:decorative-name/barnacles-decal"]}
+{"en": "Beige crust lichen", "hint": "", "keys": ["space-age:tile-name/midland-yellow-crust-3"]}
+{"en": "Big demolisher", "hint": "", "keys": ["space-age:entity-name/big-demolisher"]}
+{"en": "Big floating iceberg", "hint": "", "keys": ["space-age:decorative-name/floating-iceberg-large"]}
+{"en": "Big flooded Fulgoran ruin", "hint": "", "keys": ["space-age:entity-name/fulgora-sunk-ruin-big"]}
+{"en": "Big flooded Fulgoran ruin decal", "hint": "", "keys": ["space-age:decorative-name/fulgora-sunk-ruin-big-decal"]}
+{"en": "Big Fulgora rock", "hint": "", "keys": ["space-age:entity-name/big-fulgora-rock"]}
+{"en": "Big hot volcanic rock", "hint": "", "keys": ["space-age:entity-name/big-volcanic-rock-hot"]}
+{"en": "Big lithium ice formation", "hint": "", "keys": ["space-age:entity-name/lithium-iceberg-big"]}
+{"en": "Big mining drill", "hint": "", "keys": ["space-age:item-name/big-mining-drill", "space-age:technology-name/big-mining-drill"]}
+{"en": "Big premature wriggler pentapod", "hint": "", "keys": ["space-age:entity-name/big-wriggler-pentapod-premature"]}
+{"en": "Big stomper pentapod", "hint": "", "keys": ["space-age:entity-name/big-stomper-pentapod"]}
+{"en": "Big stomper pentapod corpse", "hint": "", "keys": ["space-age:entity-name/big-stomper-corpse"]}
+{"en": "Big stomper pentapod shell", "hint": "", "keys": ["space-age:entity-name/big-stomper-shell"]}
+{"en": "Big strafer pentapod", "hint": "", "keys": ["space-age:entity-name/big-strafer-pentapod"]}
+{"en": "Big strafer pentapod corpse", "hint": "", "keys": ["space-age:entity-name/big-strafer-corpse"]}
+{"en": "Big wriggler pentapod", "hint": "", "keys": ["space-age:entity-name/big-wriggler-pentapod"]}
+{"en": "Big wriggler pentapod corpse", "hint": "", "keys": ["space-age:entity-name/big-wriggler-pentapod-corpse"]}
+{"en": "Biochamber", "hint": "", "keys": ["space-age:technology-name/biochamber"]}
+{"en": "Bioflux", "hint": "", "keys": ["space-age:item-name/bioflux", "space-age:technology-name/bioflux"]}
+{"en": "Bioflux processing", "hint": "", "keys": ["space-age:technology-name/bioflux-processing"]}
+{"en": "Biolubricant", "hint": "", "keys": ["space-age:recipe-name/biolubricant"]}
+{"en": "Bioplastic", "hint": "", "keys": ["space-age:recipe-name/bioplastic"]}
+{"en": "Biosulfur", "hint": "", "keys": ["space-age:recipe-name/biosulfur"]}
+{"en": "Biter egg", "hint": "", "keys": ["space-age:item-name/biter-egg"]}
+{"en": "Biter egg handling", "hint": "", "keys": ["space-age:technology-name/biter-egg-handling"]}
+{"en": "Black sceptre", "hint": "", "keys": ["space-age:decorative-name/black-sceptre"]}
+{"en": "Blood grape", "hint": "", "keys": ["space-age:decorative-name/blood-grape"]}
+{"en": "Blood grape red", "hint": "", "keys": ["space-age:decorative-name/blood-grape-vibrant"]}
+{"en": "Blue marsh", "hint": "", "keys": ["space-age:tile-name/wetland-blue-slime"]}
+{"en": "Boompuff", "hint": "", "keys": ["space-age:entity-name/boompuff"]}
+{"en": "Brambles", "hint": "", "keys": ["space-age:decorative-name/brambles"]}
+{"en": "Brash ice", "hint": "", "keys": ["space-age:tile-name/brash-ice"]}
+{"en": "Brown blubber", "hint": "", "keys": ["space-age:tile-name/lowland-brown-blubber"]}
+{"en": "Brown cup", "hint": "", "keys": ["space-age:decorative-name/brown-cup"]}
+{"en": "Burnt spoilage", "hint": "", "keys": ["space-age:recipe-name/burnt-spoilage"]}
+{"en": "Calcite", "hint": "", "keys": ["space-age:item-name/calcite"]}
+{"en": "Calcite processing", "hint": "", "keys": ["space-age:technology-name/calcite-processing"]}
+{"en": "Calcite stain", "hint": "", "keys": ["space-age:decorative-name/calcite-stain", "space-age:decorative-name/calcite-stain-small"]}
+{"en": "Captive biter spawner", "hint": "", "keys": ["space-age:item-name/captive-biter-spawner", "space-age:technology-name/captive-biter-spawner"]}
+{"en": "Captivity", "hint": "", "keys": ["space-age:technology-name/captivity"]}
+{"en": "Capture bot rocket", "hint": "", "keys": ["space-age:item-name/capture-robot-rocket"]}
+{"en": "Carbon", "hint": "", "keys": ["space-age:item-name/carbon"]}
+{"en": "Carbon fiber", "hint": "", "keys": ["space-age:item-name/carbon-fiber", "space-age:technology-name/carbon-fiber"]}
+{"en": "Carbonic asteroid chunk", "hint": "", "keys": ["space-age:asteroid-chunk-name/carbonic-asteroid-chunk", "space-age:item-name/carbonic-asteroid-chunk"]}
+{"en": "Carbonic asteroid crushing", "hint": "", "keys": ["space-age:recipe-name/carbonic-asteroid-crushing"]}
+{"en": "Carbonic asteroid reprocessing", "hint": "", "keys": ["space-age:recipe-name/carbonic-asteroid-reprocessing"]}
+{"en": "Casting copper", "hint": "", "keys": ["space-age:recipe-name/casting-copper"]}
+{"en": "Casting copper cable", "hint": "", "keys": ["space-age:recipe-name/casting-copper-cable"]}
+{"en": "Casting iron", "hint": "", "keys": ["space-age:recipe-name/casting-iron"]}
+{"en": "Casting iron gear wheel", "hint": "", "keys": ["space-age:recipe-name/casting-iron-gear-wheel"]}
+{"en": "Casting iron stick", "hint": "", "keys": ["space-age:recipe-name/casting-iron-stick"]}
+{"en": "Casting low density structure", "hint": "", "keys": ["space-age:recipe-name/casting-low-density-structure"]}
+{"en": "Casting pipe", "hint": "", "keys": ["space-age:recipe-name/casting-pipe"]}
+{"en": "Casting pipe to ground", "hint": "", "keys": ["space-age:recipe-name/casting-pipe-to-ground"]}
+{"en": "Casting steel", "hint": "", "keys": ["space-age:recipe-name/casting-steel"]}
+{"en": "Cauliflower lichen", "hint": "", "keys": ["space-age:tile-name/lowland-cream-cauliflower"]}
+{"en": "Cauliflower mold", "hint": "", "keys": ["space-age:tile-name/lowland-cream-cauliflower-2"]}
+{"en": "Cauliflower red mold", "hint": "", "keys": ["space-age:tile-name/lowland-cream-red"]}
+{"en": "Coal synthesis", "hint": "", "keys": ["space-age:recipe-name/coal-synthesis"]}
+{"en": "Concrete from molten iron", "hint": "", "keys": ["space-age:recipe-name/concrete-from-molten-iron"]}
+{"en": "Cooling hot fluoroketone", "hint": "", "keys": ["space-age:recipe-name/fluoroketone-cooling"]}
+{"en": "Copper bacteria", "hint": "", "keys": ["space-age:item-name/copper-bacteria", "space-age:recipe-name/copper-bacteria"]}
+{"en": "Copper bacteria cultivation", "hint": "", "keys": ["space-age:recipe-name/copper-bacteria-cultivation"]}
+{"en": "Copper ore melting", "hint": "", "keys": ["space-age:recipe-name/copper-ore-melting"]}
+{"en": "Copper stromatolite", "hint": "", "keys": ["space-age:entity-name/copper-stromatolite"]}
+{"en": "Coral (land)", "hint": "", "keys": ["space-age:decorative-name/coral-land"]}
+{"en": "Coral (water)", "hint": "", "keys": ["space-age:decorative-name/coral-water"]}
+{"en": "Cracked lichen", "hint": "", "keys": ["space-age:tile-name/midland-cracked-lichen"]}
+{"en": "Cracked lichen dark", "hint": "", "keys": ["space-age:tile-name/midland-cracked-lichen-dark"]}
+{"en": "Cracked lichen dull", "hint": "", "keys": ["space-age:tile-name/midland-cracked-lichen-dull"]}
+{"en": "Cream Nerve root veins dense", "hint": "", "keys": ["space-age:decorative-name/cream-nerve-roots-veins-dense"]}
+{"en": "Cream Nerve root veins sparse", "hint": "", "keys": ["space-age:decorative-name/cream-nerve-roots-veins-sparse"]}
+{"en": "Crusher", "hint": "", "keys": ["space-age:item-name/crusher"]}
+{"en": "Cryogenic plant", "hint": "", "keys": ["space-age:item-name/cryogenic-plant", "space-age:technology-name/cryogenic-plant"]}
+{"en": "Cryogenic science pack", "hint": "", "keys": ["space-age:item-name/cryogenic-science-pack", "space-age:technology-name/cryogenic-science-pack"]}
+{"en": "Curly roots grey", "hint": "", "keys": ["space-age:decorative-name/curly-roots-grey"]}
+{"en": "Curly roots orange", "hint": "", "keys": ["space-age:decorative-name/curly-roots-orange"]}
+{"en": "Cuttlepop", "hint": "", "keys": ["space-age:entity-name/cuttlepop"]}
+{"en": "Dark dry lichen", "hint": "", "keys": ["space-age:tile-name/highland-dark-rock"]}
+{"en": "Dead honeycomb fungus", "hint": "", "keys": ["space-age:decorative-name/honeycomb-fungus-decayed"]}
+{"en": "Deadskin marsh", "hint": "", "keys": ["space-age:tile-name/wetland-dead-skin"]}
+{"en": "Deadskin mold", "hint": "", "keys": ["space-age:tile-name/lowland-dead-skin"]}
+{"en": "Deadskin mold bright", "hint": "", "keys": ["space-age:tile-name/lowland-dead-skin-2"]}
+{"en": "Deep lake", "hint": "", "keys": ["space-age:tile-name/gleba-deep-lake"]}
+{"en": "Deep oil ocean", "hint": "", "keys": ["space-age:tile-name/oil-ocean-deep"]}
+{"en": "Deep oil ocean 2", "hint": "", "keys": ["space-age:tile-name/oil-ocean-deep-2"]}
+{"en": "Demolisher ash cloud (visual dummy)", "hint": "", "keys": ["space-age:entity-name/demolisher-ash-cloud-visual-dummy"]}
+{"en": "Dust crests", "hint": "", "keys": ["space-age:tile-name/dust-crests"]}
+{"en": "Dust flat", "hint": "", "keys": ["space-age:tile-name/dust-flat"]}
+{"en": "Dust lumpy", "hint": "", "keys": ["space-age:tile-name/dust-lumpy"]}
+{"en": "Dust patchy", "hint": "", "keys": ["space-age:tile-name/dust-patchy"]}
+{"en": "Egg raft", "hint": "", "keys": ["space-age:entity-name/gleba-spawner"]}
+{"en": "Electric weapons damage", "hint": "", "keys": ["space-age:technology-name/electric-weapons-damage"]}
+{"en": "Electrolyte", "hint": "", "keys": ["space-age:fluid-name/electrolyte"]}
+{"en": "Electromagnetic plant", "hint": "", "keys": ["space-age:technology-name/electromagnetic-plant"]}
+{"en": "Electromagnetic science pack", "hint": "", "keys": ["space-age:item-name/electromagnetic-science-pack", "space-age:technology-name/electromagnetic-science-pack"]}
+{"en": "Empty space", "hint": "", "keys": ["space-age:tile-name/empty-space"]}
+{"en": "Fish breeding", "hint": "", "keys": ["space-age:recipe-name/fish-breeding", "space-age:technology-name/fish-breeding"]}
+{"en": "Flaming ashland tree", "hint": "", "keys": ["space-age:entity-name/ashland-lichen-tree-flaming"]}
+{"en": "Fluorine", "hint": "", "keys": ["space-age:fluid-name/fluorine"]}
+{"en": "Fluoroketone", "hint": "", "keys": ["space-age:recipe-name/fluoroketone"]}
+{"en": "Fluoroketone (Cold)", "hint": "", "keys": ["space-age:fluid-name/fluoroketone-cold"]}
+{"en": "Fluoroketone (Hot)", "hint": "", "keys": ["space-age:fluid-name/fluoroketone-hot"]}
+{"en": "Foundation", "hint": "", "keys": ["space-age:item-name/foundation", "space-age:technology-name/foundation", "space-age:tile-name/foundation"]}
+{"en": "Foundry", "hint": "", "keys": ["space-age:technology-name/foundry"]}
+{"en": "Frozen concrete", "hint": "", "keys": ["space-age:tile-name/frozen-concrete"]}
+{"en": "Frozen foundation", "hint": "", "keys": ["space-age:tile-name/frozen-foundation"]}
+{"en": "Frozen hazard concrete left", "hint": "", "keys": ["space-age:tile-name/frozen-hazard-concrete-left"]}
+{"en": "Frozen hazard concrete right", "hint": "", "keys": ["space-age:tile-name/frozen-hazard-concrete-right"]}
+{"en": "Frozen refined concrete", "hint": "", "keys": ["space-age:tile-name/frozen-refined-concrete"]}
+{"en": "Frozen refined hazard concrete left", "hint": "", "keys": ["space-age:tile-name/frozen-refined-hazard-concrete-left"]}
+{"en": "Frozen refined hazard concrete right", "hint": "", "keys": ["space-age:tile-name/frozen-refined-hazard-concrete-right"]}
+{"en": "Frozen stone path", "hint": "", "keys": ["space-age:tile-name/frozen-stone-path"]}
+{"en": "Fuchsia pita", "hint": "", "keys": ["space-age:decorative-name/fuchsia-pita"]}
+{"en": "Fulgoran conduit", "hint": "", "keys": ["space-age:tile-name/fulgoran-conduit"]}
+{"en": "Fulgoran dunes", "hint": "", "keys": ["space-age:tile-name/fulgoran-dunes"]}
+{"en": "Fulgoran machinery", "hint": "", "keys": ["space-age:tile-name/fulgoran-machinery"]}
+{"en": "Fulgoran paving", "hint": "", "keys": ["space-age:tile-name/fulgoran-paving"]}
+{"en": "Fulgoran walls", "hint": "", "keys": ["space-age:tile-name/fulgoran-walls"]}
+{"en": "Funneltrunk", "hint": "", "keys": ["space-age:entity-name/funneltrunk"]}
+{"en": "Fusion fuel", "hint": "", "keys": ["space-age:fuel-category-name/fusion"]}
+{"en": "Fusion generator", "hint": "", "keys": ["space-age:entity-name/fusion-generator"]}
+{"en": "Fusion power cell", "hint": "", "keys": ["space-age:item-name/fusion-power-cell"]}
+{"en": "Fusion reactor", "hint": "", "keys": ["space-age:technology-name/fusion-reactor"]}
+{"en": "Gleba", "hint": "", "keys": ["space-age:space-location-name/gleba"]}
+{"en": "Gleba cliff", "hint": "", "keys": ["space-age:entity-name/cliff-gleba"]}
+{"en": "Gleba spawner corpse", "hint": "", "keys": ["space-age:entity-name/gleba-spawner-corpse"]}
+{"en": "Green cup", "hint": "", "keys": ["space-age:decorative-name/green-cup"]}
+{"en": "Green lettuce lichen 1x1", "hint": "", "keys": ["space-age:decorative-name/green-lettuce-lichen-1x1"]}
+{"en": "Green lettuce lichen 3x3", "hint": "", "keys": ["space-age:decorative-name/green-lettuce-lichen-3x3"]}
+{"en": "Green lettuce lichen 6x6", "hint": "", "keys": ["space-age:decorative-name/green-lettuce-lichen-6x6"]}
+{"en": "Green lettuce lichen water 1x1", "hint": "", "keys": ["space-age:decorative-name/green-lettuce-lichen-water-1x1"]}
+{"en": "Green lettuce lichen water 3x3", "hint": "", "keys": ["space-age:decorative-name/green-lettuce-lichen-water-3x3"]}
+{"en": "Green lettuce lichen water 6x6", "hint": "", "keys": ["space-age:decorative-name/green-lettuce-lichen-water-6x6"]}
+{"en": "Green marsh", "hint": "", "keys": ["space-age:tile-name/wetland-green-slime"]}
+{"en": "Grey cracked mud decal", "hint": "", "keys": ["space-age:decorative-name/grey-cracked-mud-decal"]}
+{"en": "Hairy clubnub", "hint": "", "keys": ["space-age:entity-name/hairyclubnub"]}
+{"en": "Heating tower", "hint": "", "keys": ["space-age:technology-name/heating-tower"]}
+{"en": "Highland rock", "hint": "", "keys": ["space-age:tile-name/highland-dark-rock-2"]}
+{"en": "Highland yellow rock", "hint": "", "keys": ["space-age:tile-name/highland-yellow-rock"]}
+{"en": "Holmium ore", "hint": "", "keys": ["space-age:item-name/holmium-ore"]}
+{"en": "Holmium plate", "hint": "", "keys": ["space-age:item-name/holmium-plate"]}
+{"en": "Holmium processing", "hint": "", "keys": ["space-age:technology-name/holmium-processing"]}
+{"en": "Holmium solution", "hint": "", "keys": ["space-age:fluid-name/holmium-solution"]}
+{"en": "Hot lava", "hint": "", "keys": ["space-age:tile-name/lava-hot"]}
+{"en": "Huge cold cracks", "hint": "", "keys": ["space-age:decorative-name/vulcanus-crack-decal-large"]}
+{"en": "Huge hot volcanic rock", "hint": "", "keys": ["space-age:entity-name/huge-volcanic-rock-hot"]}
+{"en": "Huge lithium ice formation", "hint": "", "keys": ["space-age:entity-name/lithium-iceberg-huge"]}
+{"en": "Huge warm cracks", "hint": "", "keys": ["space-age:decorative-name/vulcanus-crack-decal-huge-warm"]}
+{"en": "Ice", "hint": "", "keys": ["space-age:item-name/ice"]}
+{"en": "Ice decal", "hint": "", "keys": ["space-age:decorative-name/aqulio-ice-decal-blue"]}
+{"en": "Ice melting", "hint": "", "keys": ["space-age:recipe-name/ice-melting"]}
+{"en": "Ice platform", "hint": "", "keys": ["space-age:item-name/ice-platform", "space-age:tile-name/ice-platform"]}
+{"en": "Iron bacteria", "hint": "", "keys": ["space-age:item-name/iron-bacteria", "space-age:recipe-name/iron-bacteria"]}
+{"en": "Iron bacteria cultivation", "hint": "", "keys": ["space-age:recipe-name/iron-bacteria-cultivation"]}
+{"en": "Iron ore melting", "hint": "", "keys": ["space-age:recipe-name/iron-ore-melting"]}
+{"en": "Iron stromatolite", "hint": "", "keys": ["space-age:entity-name/iron-stromatolite"]}
+{"en": "Jelly", "hint": "", "keys": ["space-age:item-name/jelly"]}
+{"en": "Jellynut", "hint": "", "keys": ["space-age:item-name/jellynut", "space-age:technology-name/jellynut"]}
+{"en": "Jellynut processing", "hint": "", "keys": ["space-age:recipe-name/jellynut-processing"]}
+{"en": "Jellynut seed", "hint": "", "keys": ["space-age:item-name/jellynut-seed"]}
+{"en": "Jellynut wetland", "hint": "", "keys": ["space-age:tile-name/wetland-jellynut"]}
+{"en": "Jellystem", "hint": "", "keys": ["space-age:entity-name/jellystem"]}
+{"en": "Knobbly roots", "hint": "", "keys": ["space-age:decorative-name/knobbly-roots"]}
+{"en": "Knobbly roots orange", "hint": "", "keys": ["space-age:decorative-name/knobbly-roots-orange"]}
+{"en": "Landing pad unloading bay", "hint": "", "keys": ["space-age:entity-name/landing-pad-unloading-bay", "space-age:technology-name/landing-pad-unloading-bay"]}
+{"en": "Large cold cracks", "hint": "", "keys": ["space-age:decorative-name/vulcanus-crack-decal"]}
+{"en": "Large crater", "hint": "", "keys": ["space-age:decorative-name/crater-large"]}
+{"en": "Large volcanic stone", "hint": "", "keys": ["space-age:decorative-name/vulcanus-rock-decal-large"]}
+{"en": "Large warm cracks", "hint": "", "keys": ["space-age:decorative-name/vulcanus-crack-decal-warm"]}
+{"en": "Laser weapons damage", "hint": "", "keys": ["space-age:technology-name/laser-weapons-damage"]}
+{"en": "Lava", "hint": "", "keys": ["space-age:tile-name/lava"]}
+{"en": "Lava edge fire", "hint": "", "keys": ["space-age:decorative-name/vulcanus-lava-fire"]}
+{"en": "Lickmaw", "hint": "", "keys": ["space-age:entity-name/lickmaw"]}
+{"en": "Light deadskin marsh", "hint": "", "keys": ["space-age:tile-name/wetland-light-dead-skin"]}
+{"en": "Light green marsh", "hint": "", "keys": ["space-age:tile-name/wetland-light-green-slime"]}
+{"en": "Light snow decal", "hint": "", "keys": ["space-age:decorative-name/aqulio-snowy-decal"]}
+{"en": "Lightning collector", "hint": "", "keys": ["space-age:technology-name/lightning-collector"]}
+{"en": "Lithium", "hint": "", "keys": ["space-age:item-name/lithium"]}
+{"en": "Lithium brine", "hint": "", "keys": ["space-age:fluid-name/lithium-brine"]}
+{"en": "Lithium plate", "hint": "", "keys": ["space-age:item-name/lithium-plate"]}
+{"en": "Low density structure productivity", "hint": "", "keys": ["space-age:technology-name/low-density-structure-productivity"]}
+{"en": "Mech armor", "hint": "", "keys": ["space-age:item-name/mech-armor", "space-age:technology-name/mech-armor"]}
+{"en": "Medium demolisher", "hint": "", "keys": ["space-age:entity-name/medium-demolisher"]}
+{"en": "Medium dying split gill lichen", "hint": "", "keys": ["space-age:decorative-name/split-gill-dying-2x2"]}
+{"en": "Medium flooded Fulgoran ruin", "hint": "", "keys": ["space-age:entity-name/fulgora-sunk-ruin-medium-tall", "space-age:decorative-name/fulgora-sunk-ruin-medium"]}
+{"en": "Medium Fulgora rock", "hint": "", "keys": ["space-age:decorative-name/medium-fulgora-rock"]}
+{"en": "Medium Fulgoran gravewort", "hint": "", "keys": ["space-age:decorative-name/medium-fulgoran-gravewort"]}
+{"en": "Medium honeycomb fungus", "hint": "", "keys": ["space-age:decorative-name/honeycomb-fungus"]}
+{"en": "Medium lithium ice formation", "hint": "", "keys": ["space-age:decorative-name/lithium-iceberg-medium"]}
+{"en": "Medium premature wriggler pentapod", "hint": "", "keys": ["space-age:entity-name/medium-wriggler-pentapod-premature"]}
+{"en": "Medium split gill lichen", "hint": "", "keys": ["space-age:decorative-name/split-gill-2x2"]}
+{"en": "Medium split gill lichen red", "hint": "", "keys": ["space-age:decorative-name/split-gill-red-2x2"]}
+{"en": "Medium stomper pentapod", "hint": "", "keys": ["space-age:entity-name/medium-stomper-pentapod"]}
+{"en": "Medium stomper pentapod corpse", "hint": "", "keys": ["space-age:entity-name/medium-stomper-corpse"]}
+{"en": "Medium stomper pentapod shell", "hint": "", "keys": ["space-age:entity-name/medium-stomper-shell"]}
+{"en": "Medium strafer pentapod", "hint": "", "keys": ["space-age:entity-name/medium-strafer-pentapod"]}
+{"en": "Medium strafer pentapod corpse", "hint": "", "keys": ["space-age:entity-name/medium-strafer-corpse"]}
+{"en": "Medium volcanic rock", "hint": "", "keys": ["space-age:decorative-name/medium-volcanic-rock"]}
+{"en": "Medium wriggler pentapod", "hint": "", "keys": ["space-age:entity-name/medium-wriggler-pentapod"]}
+{"en": "Medium wriggler pentapod corpse", "hint": "", "keys": ["space-age:entity-name/medium-wriggler-pentapod-corpse"]}
+{"en": "Metallic asteroid chunk", "hint": "", "keys": ["space-age:asteroid-chunk-name/metallic-asteroid-chunk", "space-age:item-name/metallic-asteroid-chunk"]}
+{"en": "Metallic asteroid crushing", "hint": "", "keys": ["space-age:recipe-name/metallic-asteroid-crushing"]}
+{"en": "Metallic asteroid reprocessing", "hint": "", "keys": ["space-age:recipe-name/metallic-asteroid-reprocessing"]}
+{"en": "Metallurgic science pack", "hint": "", "keys": ["space-age:item-name/metallurgic-science-pack", "space-age:technology-name/metallurgic-science-pack"]}
+{"en": "Molten copper", "hint": "", "keys": ["space-age:fluid-name/molten-copper"]}
+{"en": "Molten copper from lava", "hint": "", "keys": ["space-age:recipe-name/molten-copper-from-lava"]}
+{"en": "Molten iron", "hint": "", "keys": ["space-age:fluid-name/molten-iron"]}
+{"en": "Molten iron from lava", "hint": "", "keys": ["space-age:recipe-name/molten-iron-from-lava"]}
+{"en": "Mycelium", "hint": "", "keys": ["space-age:decorative-name/mycelium"]}
+{"en": "Natural jellynut soil", "hint": "", "keys": ["space-age:tile-name/natural-jellynut-soil"]}
+{"en": "Natural yumako soil", "hint": "", "keys": ["space-age:tile-name/natural-yumako-soil"]}
+{"en": "Nauvis", "hint": "Nauvis", "keys": ["base:space-location-name/nauvis"]}
+{"en": "Nerve roots dense", "hint": "", "keys": ["space-age:decorative-name/nerve-roots-dense"]}
+{"en": "Nerve roots sparse", "hint": "", "keys": ["space-age:decorative-name/nerve-roots-sparse"]}
+{"en": "Nutrients", "hint": "", "keys": ["space-age:item-name/nutrients", "space-age:fuel-category-name/nutrients"]}
+{"en": "Nutrients from bioflux", "hint": "", "keys": ["space-age:recipe-name/nutrients-from-bioflux"]}
+{"en": "Nutrients from biter egg", "hint": "", "keys": ["space-age:recipe-name/nutrients-from-biter-egg"]}
+{"en": "Nutrients from fish", "hint": "", "keys": ["space-age:recipe-name/nutrients-from-fish"]}
+{"en": "Nutrients from spoilage", "hint": "", "keys": ["space-age:recipe-name/nutrients-from-spoilage"]}
+{"en": "Nutrients from yumako mash", "hint": "", "keys": ["space-age:recipe-name/nutrients-from-yumako-mash"]}
+{"en": "Oil ocean", "hint": "", "keys": ["space-age:tile-name/oil-ocean-shallow"]}
+{"en": "Oil ocean 2", "hint": "", "keys": ["space-age:tile-name/oil-ocean-shallow-2"]}
+{"en": "Olive blubber", "hint": "", "keys": ["space-age:tile-name/lowland-olive-blubber-2"]}
+{"en": "Olive blubber bright", "hint": "", "keys": ["space-age:tile-name/lowland-olive-blubber-3"]}
+{"en": "Olive blubber lichen", "hint": "", "keys": ["space-age:tile-name/lowland-olive-blubber"]}
+{"en": "Orange crust lichen", "hint": "", "keys": ["space-age:tile-name/midland-yellow-crust"]}
+{"en": "Overgrowth jellynut soil", "hint": "", "keys": ["space-age:item-name/overgrowth-jellynut-soil", "space-age:tile-name/overgrowth-jellynut-soil"]}
+{"en": "Overgrowth soil", "hint": "", "keys": ["space-age:technology-name/overgrowth-soil"]}
+{"en": "Overgrowth yumako soil", "hint": "", "keys": ["space-age:item-name/overgrowth-yumako-soil", "space-age:tile-name/overgrowth-yumako-soil"]}
+{"en": "Oxide asteroid chunk", "hint": "", "keys": ["space-age:asteroid-chunk-name/oxide-asteroid-chunk", "space-age:item-name/oxide-asteroid-chunk"]}
+{"en": "Oxide asteroid crushing", "hint": "", "keys": ["space-age:recipe-name/oxide-asteroid-crushing"]}
+{"en": "Oxide asteroid reprocessing", "hint": "", "keys": ["space-age:recipe-name/oxide-asteroid-reprocessing"]}
+{"en": "Pale lettuce lichen 1x1", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-1x1"]}
+{"en": "Pale lettuce lichen 3x3", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-3x3"]}
+{"en": "Pale lettuce lichen 6x6", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-6x6"]}
+{"en": "Pale lettuce lichen cups 1x1", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-cups-1x1"]}
+{"en": "Pale lettuce lichen cups 3x3", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-cups-3x3"]}
+{"en": "Pale lettuce lichen cups 6x6", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-cups-6x6"]}
+{"en": "Pale lettuce lichen water 1x1", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-water-1x1"]}
+{"en": "Pale lettuce lichen water 3x3", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-water-3x3"]}
+{"en": "Pale lettuce lichen water 6x6", "hint": "", "keys": ["space-age:decorative-name/pale-lettuce-lichen-water-6x6"]}
+{"en": "Pebbles", "hint": "", "keys": ["space-age:decorative-name/tiny-rock-cluster", "space-age:decorative-name/sulfur-rock-cluster"]}
+{"en": "Pentapod egg", "hint": "", "keys": ["space-age:item-name/pentapod-egg"]}
+{"en": "Personal battery MK3", "hint": "", "keys": ["space-age:equipment-name/battery-mk3-equipment", "space-age:technology-name/battery-mk3-equipment"]}
+{"en": "Pink lichen decal", "hint": "", "keys": ["space-age:decorative-name/pink-lichen-decal"]}
+{"en": "Pink marsh", "hint": "", "keys": ["space-age:tile-name/wetland-pink-tentacle"]}
+{"en": "Pink phalanges", "hint": "", "keys": ["space-age:decorative-name/pink-phalanges"]}
+{"en": "Pit rock", "hint": "", "keys": ["space-age:tile-name/pit-rock"]}
+{"en": "Planet discovery Aquilo", "hint": "", "keys": ["space-age:technology-name/planet-discovery-aquilo"]}
+{"en": "Planet discovery Gleba", "hint": "", "keys": ["space-age:technology-name/planet-discovery-gleba"]}
+{"en": "Planet discovery Vulcanus", "hint": "", "keys": ["space-age:technology-name/planet-discovery-vulcanus"]}
+{"en": "Plasma", "hint": "", "keys": ["space-age:fluid-name/fusion-plasma"]}
+{"en": "Plastic bar productivity", "hint": "", "keys": ["space-age:technology-name/plastic-bar-productivity"]}
+{"en": "Plateau edge", "hint": "", "keys": ["space-age:entity-name/cliff-fulgora"]}
+{"en": "Polycephalum balloon", "hint": "", "keys": ["space-age:decorative-name/polycephalum-balloon"]}
+{"en": "Polycephalum slime", "hint": "", "keys": ["space-age:decorative-name/polycephalum-slime"]}
+{"en": "Portable fusion reactor", "hint": "", "keys": ["space-age:equipment-name/fusion-reactor-equipment", "space-age:technology-name/fusion-reactor-equipment"]}
+{"en": "Processing unit productivity", "hint": "", "keys": ["space-age:technology-name/processing-unit-productivity"]}
+{"en": "Promethium asteroid chunk", "hint": "", "keys": ["space-age:asteroid-chunk-name/promethium-asteroid-chunk", "space-age:item-name/promethium-asteroid-chunk"]}
+{"en": "Promethium science pack", "hint": "", "keys": ["space-age:item-name/promethium-science-pack", "space-age:technology-name/promethium-science-pack"]}
+{"en": "Purple Nerve root veins dense", "hint": "", "keys": ["space-age:decorative-name/purple-nerve-roots-veins-dense"]}
+{"en": "Purple Nerve root veins sparse", "hint": "", "keys": ["space-age:decorative-name/purple-nerve-roots-veins-sparse"]}
+{"en": "Rail support foundations", "hint": "", "keys": ["space-age:technology-name/rail-support-foundations"]}
+{"en": "Railgun", "hint": "", "keys": ["space-age:item-name/railgun", "space-age:technology-name/railgun", "space-age:ammo-category-name/railgun"]}
+{"en": "Railgun ammo", "hint": "", "keys": ["space-age:item-name/railgun-ammo"]}
+{"en": "Railgun damage", "hint": "", "keys": ["space-age:technology-name/railgun-damage"]}
+{"en": "Railgun shooting speed", "hint": "", "keys": ["space-age:technology-name/railgun-shooting-speed"]}
+{"en": "Red coral marsh", "hint": "", "keys": ["space-age:tile-name/wetland-red-tentacle"]}
+{"en": "Red croton", "hint": "Red croton", "keys": ["base:decorative-name/red-croton"]}
+{"en": "Red crust lichen", "hint": "", "keys": ["space-age:tile-name/midland-yellow-crust-2"]}
+{"en": "Red infection", "hint": "", "keys": ["space-age:tile-name/lowland-red-infection"]}
+{"en": "Red lichen decal", "hint": "", "keys": ["space-age:decorative-name/red-lichen-decal"]}
+{"en": "Red Nerve root veins dense", "hint": "", "keys": ["space-age:decorative-name/red-nerve-roots-veins-dense"]}
+{"en": "Red Nerve root veins sparse", "hint": "", "keys": ["space-age:decorative-name/red-nerve-roots-veins-sparse"]}
+{"en": "Red pita", "hint": "Red pita", "keys": ["base:decorative-name/red-pita"]}
+{"en": "Red vein bright", "hint": "", "keys": ["space-age:tile-name/lowland-red-vein-4"]}
+{"en": "Red vein bulges", "hint": "", "keys": ["space-age:tile-name/lowland-red-vein-2"]}
+{"en": "Red vein dead", "hint": "", "keys": ["space-age:tile-name/lowland-red-vein-dead"]}
+{"en": "Red vein dull", "hint": "", "keys": ["space-age:tile-name/lowland-red-vein-3"]}
+{"en": "Research productivity", "hint": "", "keys": ["space-age:technology-name/research-productivity"]}
+{"en": "Rock decal", "hint": "", "keys": ["space-age:decorative-name/pumice-relief-decal"]}
+{"en": "Rocket fuel from jelly", "hint": "", "keys": ["space-age:recipe-name/rocket-fuel-from-jelly"]}
+{"en": "Rocket fuel productivity", "hint": "", "keys": ["space-age:technology-name/rocket-fuel-productivity"]}
+{"en": "Rocket part productivity", "hint": "", "keys": ["space-age:technology-name/rocket-part-productivity"]}
+{"en": "Rocket turret", "hint": "", "keys": ["space-age:entity-name/rocket-turret", "space-age:technology-name/rocket-turret"]}
+{"en": "Rough ice", "hint": "", "keys": ["space-age:tile-name/ice-rough"]}
+{"en": "Sanguine lichen", "hint": "", "keys": ["space-age:tile-name/lowland-red-vein"]}
+{"en": "Scrap", "hint": "", "keys": ["space-age:item-name/scrap"]}
+{"en": "Scrap recycling productivity", "hint": "", "keys": ["space-age:technology-name/scrap-recycling-productivity"]}
+{"en": "Seismic", "hint": "", "keys": ["space-age:ammo-category-name/seismic"]}
+{"en": "Shattered planet", "hint": "", "keys": ["space-age:space-location-name/shattered-planet"]}
+{"en": "Sickly blubber", "hint": "", "keys": ["space-age:tile-name/lowland-pale-green"]}
+{"en": "Simple coal liquefaction", "hint": "", "keys": ["space-age:recipe-name/simple-coal-liquefaction"]}
+{"en": "Slipstack", "hint": "", "keys": ["space-age:entity-name/slipstack"]}
+{"en": "Small crater", "hint": "", "keys": ["space-age:decorative-name/crater-small"]}
+{"en": "Small demolisher", "hint": "", "keys": ["space-age:entity-name/small-demolisher"]}
+{"en": "Small dying split gill lichen", "hint": "", "keys": ["space-age:decorative-name/split-gill-dying-1x1"]}
+{"en": "Small egg raft", "hint": "", "keys": ["space-age:entity-name/gleba-spawner-small"]}
+{"en": "Small floating iceberg", "hint": "", "keys": ["space-age:decorative-name/floating-iceberg-small"]}
+{"en": "Small flooded Fulgoran ruin", "hint": "", "keys": ["space-age:decorative-name/fulgora-sunk-ruin-small"]}
+{"en": "Small Fulgora rock", "hint": "", "keys": ["space-age:decorative-name/small-fulgora-rock"]}
+{"en": "Small Fulgoran gravewort", "hint": "", "keys": ["space-age:decorative-name/small-fulgoran-gravewort"]}
+{"en": "Small Gleba spawner corpse", "hint": "", "keys": ["space-age:entity-name/gleba-spawner-corpse-small"]}
+{"en": "Small honeycomb fungus", "hint": "", "keys": ["space-age:decorative-name/honeycomb-fungus-1x1"]}
+{"en": "Small lithium ice formation", "hint": "", "keys": ["space-age:decorative-name/lithium-iceberg-small"]}
+{"en": "Small match fungus", "hint": "", "keys": ["space-age:decorative-name/matches-small"]}
+{"en": "Small premature wriggler pentapod", "hint": "", "keys": ["space-age:entity-name/small-wriggler-pentapod-premature"]}
+{"en": "Small split gill lichen", "hint": "", "keys": ["space-age:decorative-name/split-gill-1x1"]}
+{"en": "Small split gill lichen red", "hint": "", "keys": ["space-age:decorative-name/split-gill-red-1x1"]}
+{"en": "Small stomper pentapod", "hint": "", "keys": ["space-age:entity-name/small-stomper-pentapod"]}
+{"en": "Small stomper pentapod corpse", "hint": "", "keys": ["space-age:entity-name/small-stomper-corpse"]}
+{"en": "Small stomper pentapod shell", "hint": "", "keys": ["space-age:entity-name/small-stomper-shell"]}
+{"en": "Small strafer pentapod", "hint": "", "keys": ["space-age:entity-name/small-strafer-pentapod"]}
+{"en": "Small strafer pentapod corpse", "hint": "", "keys": ["space-age:entity-name/small-strafer-corpse"]}
+{"en": "Small sulfur rock", "hint": "", "keys": ["space-age:decorative-name/small-sulfur-rock"]}
+{"en": "Small vein", "hint": "", "keys": ["space-age:decorative-name/veins-small"]}
+{"en": "Small volcanic rock", "hint": "", "keys": ["space-age:decorative-name/small-volcanic-rock"]}
+{"en": "Small wriggler pentapod", "hint": "", "keys": ["space-age:entity-name/small-wriggler-pentapod"]}
+{"en": "Small wriggler pentapod corpse", "hint": "", "keys": ["space-age:entity-name/small-wriggler-pentapod-corpse"]}
+{"en": "Smooth ice", "hint": "", "keys": ["space-age:tile-name/ice-smooth"]}
+{"en": "Snow crests", "hint": "", "keys": ["space-age:tile-name/snow-crests"]}
+{"en": "Snow drift decal", "hint": "", "keys": ["space-age:decorative-name/snow-drift-decal"]}
+{"en": "Snow flat", "hint": "", "keys": ["space-age:tile-name/snow-flat"]}
+{"en": "Snow lumpy", "hint": "", "keys": ["space-age:tile-name/snow-lumpy"]}
+{"en": "Snow patchy", "hint": "", "keys": ["space-age:tile-name/snow-patchy"]}
+{"en": "Solar system edge", "hint": "", "keys": ["space-age:space-location-name/solar-system-edge"]}
+{"en": "Solid fuel from ammonia", "hint": "", "keys": ["space-age:recipe-name/solid-fuel-from-ammonia"]}
+{"en": "Solo Barnacle", "hint": "", "keys": ["space-age:decorative-name/solo-barnacle"]}
+{"en": "Space platform", "hint": "", "keys": ["space-age:technology-name/space-platform", "space-age:surface-name/space-platform"]}
+{"en": "Space platform decorative 1x1", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-1x1"]}
+{"en": "Space platform decorative 2x2", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-2x2"]}
+{"en": "Space platform decorative 4x4", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-4x4"]}
+{"en": "Space platform decorative pipes 1x1", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-pipes-1x1"]}
+{"en": "Space platform decorative pipes 1x2", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-pipes-1x2"]}
+{"en": "Space platform decorative pipes 2x1", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-pipes-2x1"]}
+{"en": "Space platform decorative tiny", "hint": "", "keys": ["space-age:decorative-name/space-platform-decorative-tiny"]}
+{"en": "Space platform foundation", "hint": "", "keys": ["space-age:item-name/space-platform-foundation", "space-age:tile-name/space-platform-foundation"]}
+{"en": "Space platform starter pack", "hint": "", "keys": ["space-age:item-name/space-platform-starter-pack"]}
+{"en": "Space platform thruster", "hint": "", "keys": ["space-age:technology-name/space-platform-thruster"]}
+{"en": "Spawning foam", "hint": "", "keys": ["space-age:decorative-name/gleba-spawner-slime"]}
+{"en": "Spoilage", "hint": "", "keys": ["space-age:item-name/spoilage"]}
+{"en": "Spores", "hint": "", "keys": ["space-age:airborne-pollutant-name/spores"]}
+{"en": "Stack inserter", "hint": "", "keys": ["space-age:entity-name/stack-inserter", "space-age:technology-name/stack-inserter"]}
+{"en": "Steam condensation", "hint": "", "keys": ["space-age:recipe-name/steam-condensation"]}
+{"en": "Steel plate productivity", "hint": "", "keys": ["space-age:technology-name/steel-plate-productivity"]}
+{"en": "Stellar discovery solar system edge", "hint": "", "keys": ["space-age:technology-name/stellar-discovery-solar-system-edge"]}
+{"en": "Stingfrond", "hint": "", "keys": ["space-age:entity-name/stingfrond"]}
+{"en": "Stunted coral", "hint": "", "keys": ["space-age:decorative-name/coral-stunted"]}
+{"en": "Stunted coral grey", "hint": "", "keys": ["space-age:decorative-name/coral-stunted-grey"]}
+{"en": "Sulfur stain", "hint": "", "keys": ["space-age:decorative-name/sulfur-stain", "space-age:decorative-name/sulfur-stain-small"]}
+{"en": "Sulfuric acid puddle", "hint": "", "keys": ["space-age:decorative-name/sulfuric-acid-puddle", "space-age:decorative-name/sulfuric-acid-puddle-small"]}
+{"en": "Sunnycomb", "hint": "", "keys": ["space-age:entity-name/sunnycomb"]}
+{"en": "Supercapacitor", "hint": "", "keys": ["space-age:item-name/supercapacitor"]}
+{"en": "Superconductor", "hint": "", "keys": ["space-age:item-name/superconductor"]}
+{"en": "Teflilly", "hint": "", "keys": ["space-age:entity-name/teflilly"]}
+{"en": "Tesla", "hint": "", "keys": ["space-age:ammo-category-name/tesla"]}
+{"en": "Tesla ammo", "hint": "", "keys": ["space-age:item-name/tesla-ammo"]}
+{"en": "Tesla gun", "hint": "", "keys": ["space-age:item-name/teslagun"]}
+{"en": "Tesla turret slow", "hint": "", "keys": ["space-age:entity-name/tesla-turret-slow"]}
+{"en": "Tesla weapons", "hint": "", "keys": ["space-age:technology-name/tesla-weapons"]}
+{"en": "Thruster fuel", "hint": "", "keys": ["space-age:fluid-name/thruster-fuel"]}
+{"en": "Thruster oxidizer", "hint": "", "keys": ["space-age:fluid-name/thruster-oxidizer"]}
+{"en": "Tiny Fulgora rock", "hint": "", "keys": ["space-age:decorative-name/tiny-fulgora-rock"]}
+{"en": "Tiny Fulgoran ruin", "hint": "", "keys": ["space-age:decorative-name/fulgoran-ruin-tiny"]}
+{"en": "Tiny lithium ice formation", "hint": "", "keys": ["space-age:decorative-name/lithium-iceberg-tiny"]}
+{"en": "Tiny sulfur rock", "hint": "", "keys": ["space-age:decorative-name/tiny-sulfur-rock"]}
+{"en": "Tiny volcanic rock", "hint": "", "keys": ["space-age:decorative-name/tiny-volcanic-rock"]}
+{"en": "Toolbelt equipment", "hint": "", "keys": ["space-age:equipment-name/toolbelt-equipment", "space-age:technology-name/toolbelt-equipment"]}
+{"en": "Transport belt capacity", "hint": "", "keys": ["space-age:technology-name/transport-belt-capacity"]}
+{"en": "Tungsten carbide", "hint": "", "keys": ["space-age:item-name/tungsten-carbide", "space-age:technology-name/tungsten-carbide"]}
+{"en": "Tungsten ore", "hint": "", "keys": ["space-age:item-name/tungsten-ore"]}
+{"en": "Tungsten plate", "hint": "", "keys": ["space-age:item-name/tungsten-plate"]}
+{"en": "Tungsten steel", "hint": "", "keys": ["space-age:technology-name/tungsten-steel"]}
+{"en": "Turbo splitter", "hint": "", "keys": ["space-age:entity-name/turbo-splitter", "space-age:item-name/turbo-splitter"]}
+{"en": "Turbo transport belt", "hint": "", "keys": ["space-age:item-name/turbo-transport-belt", "space-age:technology-name/turbo-transport-belt"]}
+{"en": "Turbo underground belt", "hint": "", "keys": ["space-age:entity-name/turbo-underground-belt", "space-age:item-name/turbo-underground-belt"]}
+{"en": "Turquoise bark", "hint": "", "keys": ["space-age:tile-name/midland-turquoise-bark-2"]}
+{"en": "Turquoise bark lichen", "hint": "", "keys": ["space-age:tile-name/midland-turquoise-bark"]}
+{"en": "Unknown", "hint": "", "keys": ["core:quality-name/quality-unknown"]}
+{"en": "Unknown recipe", "hint": "", "keys": ["core:recipe-name/recipe-unknown"]}
+{"en": "Urchin cactus", "hint": "", "keys": ["space-age:decorative-name/urchin-cactus"]}
+{"en": "Vein", "hint": "", "keys": ["space-age:decorative-name/veins"]}
+{"en": "Volcanic ash cracks", "hint": "", "keys": ["space-age:tile-name/volcanic-ash-cracks"]}
+{"en": "Volcanic ash dark", "hint": "", "keys": ["space-age:tile-name/volcanic-ash-dark"]}
+{"en": "Volcanic ash flat", "hint": "", "keys": ["space-age:tile-name/volcanic-ash-flats"]}
+{"en": "Volcanic ash light", "hint": "", "keys": ["space-age:tile-name/volcanic-ash-light"]}
+{"en": "Volcanic ash soil", "hint": "", "keys": ["space-age:tile-name/volcanic-ash-soil"]}
+{"en": "Volcanic cracks", "hint": "", "keys": ["space-age:tile-name/volcanic-cracks"]}
+{"en": "Volcanic cracks hot", "hint": "", "keys": ["space-age:tile-name/volcanic-cracks-hot"]}
+{"en": "Volcanic cracks warm", "hint": "", "keys": ["space-age:tile-name/volcanic-cracks-warm"]}
+{"en": "Volcanic folds", "hint": "", "keys": ["space-age:tile-name/volcanic-folds"]}
+{"en": "Volcanic folds flat", "hint": "", "keys": ["space-age:tile-name/volcanic-folds-flat"]}
+{"en": "Volcanic folds warm", "hint": "", "keys": ["space-age:tile-name/volcanic-folds-warm"]}
+{"en": "Volcanic jagged ground", "hint": "", "keys": ["space-age:tile-name/volcanic-jagged-ground"]}
+{"en": "Volcanic pumice stones", "hint": "", "keys": ["space-age:tile-name/volcanic-pumice-stones"]}
+{"en": "Volcanic smooth stone", "hint": "", "keys": ["space-age:tile-name/volcanic-smooth-stone"]}
+{"en": "Volcanic smooth stone warm", "hint": "", "keys": ["space-age:tile-name/volcanic-smooth-stone-warm"]}
+{"en": "Volcanic soil dark", "hint": "", "keys": ["space-age:tile-name/volcanic-soil-dark"]}
+{"en": "Volcanic soil light", "hint": "", "keys": ["space-age:tile-name/volcanic-soil-light"]}
+{"en": "Vulcanus", "hint": "", "keys": ["space-age:map-gen-preset-name/vulcanus", "space-age:space-location-name/vulcanus"]}
+{"en": "Vulcanus brown grass", "hint": "", "keys": ["space-age:decorative-name/v-brown-hairy-grass"]}
+{"en": "Vulcanus carpet grass", "hint": "", "keys": ["space-age:decorative-name/v-brown-carpet-grass"]}
+{"en": "Vulcanus cliff", "hint": "", "keys": ["space-age:entity-name/cliff-vulcanus"]}
+{"en": "Vulcanus cliff collapse", "hint": "", "keys": ["space-age:entity-name/vulcanus-cliff-collapse"]}
+{"en": "Vulcanus dune decal", "hint": "", "keys": ["space-age:decorative-name/vulcanus-dune-decal"]}
+{"en": "Vulcanus green grass", "hint": "", "keys": ["space-age:decorative-name/v-green-hairy-grass"]}
+{"en": "Vulcanus pita", "hint": "", "keys": ["space-age:decorative-name/v-red-pita"]}
+{"en": "Vulcanus sand decal", "hint": "", "keys": ["space-age:decorative-name/vulcanus-sand-decal"]}
+{"en": "Vulcanus volcanism", "hint": "Vulcanus volcanism", "keys": ["space-age:autoplace-control-names/vulcanus_volcanism"]}
+{"en": "Water cane", "hint": "", "keys": ["space-age:entity-name/water-cane"]}
+{"en": "Waves", "hint": "", "keys": ["space-age:decorative-name/waves-decal"]}
+{"en": "White carpet grass", "hint": "", "keys": ["space-age:decorative-name/white-carpet-grass"]}
+{"en": "Wispy lichen", "hint": "", "keys": ["space-age:decorative-name/wispy-lichen"]}
+{"en": "Wube logo (space platform)", "hint": "", "keys": ["space-age:entity-name/wube-logo-space-platform"]}
+{"en": "Yellow coral", "hint": "", "keys": ["space-age:decorative-name/yellow-coral"]}
+{"en": "Yellow crust lichen", "hint": "", "keys": ["space-age:tile-name/midland-yellow-crust-4"]}
+{"en": "Yellow lettuce lichen 1x1", "hint": "", "keys": ["space-age:decorative-name/yellow-lettuce-lichen-1x1"]}
+{"en": "Yellow lettuce lichen 3x3", "hint": "", "keys": ["space-age:decorative-name/yellow-lettuce-lichen-3x3"]}
+{"en": "Yellow lettuce lichen 6x6", "hint": "", "keys": ["space-age:decorative-name/yellow-lettuce-lichen-6x6"]}
+{"en": "Yellow lettuce lichen cups 1x1", "hint": "", "keys": ["space-age:decorative-name/yellow-lettuce-lichen-cups-1x1"]}
+{"en": "Yellow lettuce lichen cups 3x3", "hint": "", "keys": ["space-age:decorative-name/yellow-lettuce-lichen-cups-3x3"]}
+{"en": "Yellow lettuce lichen cups 6x6", "hint": "", "keys": ["space-age:decorative-name/yellow-lettuce-lichen-cups-6x6"]}
+{"en": "Yumako", "hint": "", "keys": ["space-age:item-name/yumako", "space-age:technology-name/yumako"]}
+{"en": "Yumako mash", "hint": "", "keys": ["space-age:item-name/yumako-mash"]}
+{"en": "Yumako processing", "hint": "", "keys": ["space-age:recipe-name/yumako-processing"]}
+{"en": "Yumako seed", "hint": "", "keys": ["space-age:item-name/yumako-seed"]}
+{"en": "Yumako tree", "hint": "", "keys": ["space-age:entity-name/yumako-tree"]}
+{"en": "Yumako wetland", "hint": "", "keys": ["space-age:tile-name/wetland-yumako"]}
