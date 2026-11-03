@@ -14,6 +14,12 @@ def test_write_follows_given_order_and_skips_missing(tmp_path):
     assert p.read_text(encoding='utf-8') == '[s]\na=1\nb=2\n'
 
 
+def test_write_uses_lf_only_like_the_game_files(tmp_path):
+    p = tmp_path / 'c.cfg'
+    write_cfg(p, {'s/a': '1'}, ['s/a'])
+    assert p.read_bytes() == b'[s]\na=1\n'
+
+
 def test_roundtrip_every_official_locale_file(tmp_path):
     files = list(GAME_DATA.glob('**/locale/en/*.cfg')) + list(GAME_DATA.glob('**/locale/ar/*.cfg'))
     assert files

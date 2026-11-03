@@ -31,4 +31,4 @@ def write_cfg(path, values: dict[str, str], order: list[str]) -> None:
             sec = s
         lines.append(f'{k}={values[full]}')
     Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    Path(path).write_text('\n'.join(lines) + '\n', encoding='utf-8', newline='\n')  # LF like the game's files
