@@ -133,7 +133,7 @@ def run(shots, locale_cfg='', extra_mods=(), tag='spike', timeout=300):
                       '--mod-directory', str(ENV / 'mods'), '--load-scenario', 'base/freeplay',
                       '--disable-audio', '--window-size', '1600x900'])
     t0 = time.time()
-    while not log_path.exists() and time.time() - t0 < 60:
+    while not log_path.exists() and time.time() - t0 < 150:  # Steam relaunch can be slow when Steam is busy
         time.sleep(0.5)
     if not log_path.exists():  # config rejected => the game is writing into the user's real data: stop now
         _kill_ours()

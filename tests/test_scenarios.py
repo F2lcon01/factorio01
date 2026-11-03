@@ -34,6 +34,23 @@ def test_import_build_apply_restore_roundtrip(tmp_path, monkeypatch):
     assert scenarios.status() == {'patched': 0, 'original': 1, 'other': 0}
 
 
+def test_reapply_keeps_the_pristine_original_for_restore(tmp_path, monkeypatch):
+    game = tmp_path / 'data'
+    loc = _fake_game(game)
+    original = (loc / 'ar' / 'freeplay.cfg').read_bytes()
+    for name, val in (('GAME_DATA', game), ('SRC_SC', tmp_path / 'src'), ('OUT_SC', tmp_path / 'out'),
+                      ('BACKUPS', tmp_path / 'backups'), ('TODO', tmp_path / 'todo.jsonl')):
+        monkeypatch.setattr(scenarios, name, val)
+    todo = scenarios.import_()
+    scenarios.add_translations([{'file': todo[0]['file'], 'key': '/msg-goal', 'ar': 'أطلق __1__ صواريخ.'}])
+    scenarios.build(); scenarios.apply()
+    scenarios.add_translations([{'file': todo[0]['file'], 'key': '/msg-goal', 'ar': 'أطلق __1__ صاروخاً.'}])
+    import time; time.sleep(1.1)  # distinct backup stamp
+    scenarios.build(); scenarios.apply()                  # second patch over the first one
+    scenarios.restore()
+    assert (loc / 'ar' / 'freeplay.cfg').read_bytes() == original
+
+
 def test_add_translations_rejects_broken_tokens(tmp_path, monkeypatch):
     game = tmp_path / 'data'
     _fake_game(game)

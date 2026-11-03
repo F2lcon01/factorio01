@@ -78,14 +78,24 @@ def build():
 
 def apply():
     stamp = time.strftime('%Y%m%d-%H%M%S')
+    prev_root = _latest_backup() if BACKUPS.exists() and any((p / 'manifest.json').exists() for p in BACKUPS.iterdir()) else None
+    prev = json.loads((prev_root / 'manifest.json').read_text(encoding='utf-8')) if prev_root else {}
     manifest = {}
     for rel, _, ar_path in en_files():
         built = OUT_SC / rel
         backup = BACKUPS / stamp / rel
         backup.parent.mkdir(parents=True, exist_ok=True)
-        if ar_path.exists():
-            shutil.copy2(ar_path, backup)
-        manifest[rel] = {'original': _sha(ar_path) if ar_path.exists() else None, 'patched': _sha(built)}
+        current = _sha(ar_path) if ar_path.exists() else None
+        if rel in prev and current is not None and current == prev[rel]['patched']:
+            # the game still holds our previous patch: carry the pristine original forward, never back up our own file
+            original = prev[rel]['original']
+            if original is not None:
+                shutil.copy2(prev_root / rel, backup)
+        else:
+            original = current
+            if ar_path.exists():
+                shutil.copy2(ar_path, backup)
+        manifest[rel] = {'original': original, 'patched': _sha(built)}
     (BACKUPS / stamp / 'manifest.json').write_text(json.dumps(manifest, indent=1), encoding='utf-8')
     for rel, _, ar_path in en_files():  # write only after every backup succeeded
         ar_path.parent.mkdir(parents=True, exist_ok=True)
