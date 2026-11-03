@@ -51,7 +51,6 @@ if ($Update) {
         file = Get-Item $zip; description = $desc; category = $meta.category; license = $meta.license }
 }
 if (-not $res.success) { throw "$($res.error): $($res.message)" }
-$d = Invoke-RestMethod -Method Post -Uri "$base/edit_details" -Headers $h -Form @{
-    mod = $name; title = $meta.title; summary = $meta.summary; description = $desc }   # page text follows every release
-if (-not $d.success) { throw "details: $($d.error): $($d.message)" }
 Write-Output "published: https://mods.factorio.com/mod/$name"
+$env:FACTORIO_API_KEY = $key   # this process only: the page (text, FAQ, gallery) follows every release
+try { & (Join-Path $PSScriptRoot 'portal_page.ps1') } finally { Remove-Item Env:FACTORIO_API_KEY -ErrorAction SilentlyContinue }

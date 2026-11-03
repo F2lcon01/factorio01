@@ -2,5 +2,7 @@
   "title": "Arabic — complete, connected letters (العربية)",
   "summary": "Complete Arabic translation of Factorio 2.1 + Space Age with connected letters and right-to-left reading order. ترجمة عربية كاملة للعبة وتوسعة عصر الفضاء بحروف متصلة واتجاه قراءة صحيح.",
   "category": "localizations",
-  "license": "default_mit"
+  "license": "default_mit",
+  "homepage": "https://github.com/F2lcon01/factorio01/releases/latest",
+  "source_url": "https://github.com/F2lcon01/factorio01"
 }

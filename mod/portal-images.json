@@ -1,0 +1,32 @@
+{
+  "3-freeplay-intro": {
+    "thumbnail": "https://assets-mod.factorio.com/assets/27d1c64c96a22bc6c9e95a9e37f67c5fe8ca6a51.thumb.png",
+    "id": "27d1c64c96a22bc6c9e95a9e37f67c5fe8ca6a51",
+    "sha1": "27d1c64c96a22bc6c9e95a9e37f67c5fe8ca6a51",
+    "url": "https://assets-mod.factorio.com/assets/27d1c64c96a22bc6c9e95a9e37f67c5fe8ca6a51.png"
+  },
+  "4-long-description": {
+    "thumbnail": "https://assets-mod.factorio.com/assets/38f8c6fdc008475ece1a978af16d1b65b2671cac.thumb.png",
+    "id": "38f8c6fdc008475ece1a978af16d1b65b2671cac",
+    "sha1": "38f8c6fdc008475ece1a978af16d1b65b2671cac",
+    "url": "https://assets-mod.factorio.com/assets/38f8c6fdc008475ece1a978af16d1b65b2671cac.png"
+  },
+  "5-language-tool": {
+    "thumbnail": "https://assets-mod.factorio.com/assets/268b4a160adc244bb58a775e81974994392eada1.thumb.png",
+    "id": "268b4a160adc244bb58a775e81974994392eada1",
+    "sha1": "268b4a160adc244bb58a775e81974994392eada1",
+    "url": "https://assets-mod.factorio.com/assets/268b4a160adc244bb58a775e81974994392eada1.png"
+  },
+  "2-achievements": {
+    "thumbnail": "https://assets-mod.factorio.com/assets/af2d1a67f74e05ce53f28ebc65138fa4485e2811.thumb.png",
+    "id": "af2d1a67f74e05ce53f28ebc65138fa4485e2811",
+    "sha1": "af2d1a67f74e05ce53f28ebc65138fa4485e2811",
+    "url": "https://assets-mod.factorio.com/assets/af2d1a67f74e05ce53f28ebc65138fa4485e2811.png"
+  },
+  "1-before-after": {
+    "thumbnail": "https://assets-mod.factorio.com/assets/0704714c4f1738c53de10f314c2a5de4b38e972b.thumb.png",
+    "id": "0704714c4f1738c53de10f314c2a5de4b38e972b",
+    "sha1": "0704714c4f1738c53de10f314c2a5de4b38e972b",
+    "url": "https://assets-mod.factorio.com/assets/0704714c4f1738c53de10f314c2a5de4b38e972b.png"
+  }
+}
