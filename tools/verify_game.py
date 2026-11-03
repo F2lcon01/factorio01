@@ -38,7 +38,7 @@ def main(version='0.0.1'):
         built.update(read_cfg(p))
     # Every name/description the game resolves (incl. composite names such as "__1__ barrel") is classified:
     # exact = equals our key; ok = shaped Arabic built from other keys; english / unshaped = real failures.
-    counts, bad = {'exact': 0, 'ok': 0, 'english': 0, 'unshaped': 0}, []
+    counts, bad = {'exact': 0, 'ok': 0, 'exception': 0, 'english': 0, 'unshaped': 0}, []
     for dump in (ENV / 'write' / 'script-output').glob('*-locale.json'):
         ptype = dump.name[:-len('-locale.json')]
         data = json.loads(dump.read_text(encoding='utf-8'))
@@ -58,7 +58,17 @@ def main(version='0.0.1'):
     sys.exit(1 if bad or counts['exact'] == 0 else 0)
 
 
+# Not localisable through locale files (a mod would have to change prototype data → non-zero checksum):
+EXCEPTIONS = {
+    'dummy': 'literal localised_name = "dummy" (base/prototypes/entity/trains.lua:396-473, enemies.lua:966)',
+    'entity-name.uranium-cannon-explosion': 'game bug: plain string instead of a locale key '
+                                            '(base/prototypes/entity/explosions.lua:7885), English shows it too',
+}
+
+
 def classify(text):
+    if text in EXCEPTIONS:
+        return 'exception'
     if any('ء' <= c <= 'ي' and c != 'ـ' for c in text):
         return 'unshaped'  # official (disconnected) Arabic leaked through
     shaped = any('ﭐ' <= c <= '﻿' for c in text)
