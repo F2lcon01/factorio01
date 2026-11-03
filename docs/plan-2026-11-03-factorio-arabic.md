@@ -611,8 +611,10 @@ if __name__ == '__main__':
     main()
 ```
 
-- [ ] **Step 2: شغّل** `python -E -m tools.import_official` — المتوقع: `missing` = 2,410 (بلا wave-defense)، والمجموع بين ~2,700 و~2,900.
-- [ ] **Step 3: تحقق** `python -E -m tools.lint` — المتوقع: كل الأخطاء من نوع `missing` فقط، وعددها = طول `todo.jsonl`.
+- [ ] **Step 2: شغّل** `python -E -m tools.import_official` — المتوقع (مُقاس على 2.1.24 بهذا الكود حرفياً):
+  `{'missing': 2410, 'not-involutive': 81, 'direction': 81, 'tokens': 42, 'no-arabic': 36, 'forbidden-char': 1}` → `todo total = 2651`.
+- [ ] **Step 3: تحقق** `python -E -m tools.lint` — المتوقع: core 1808 · base 76 · elevated-rails 2 · quality 7 · recycler 6 · space-age 752 = **2651** = طول `todo.jsonl` بالضبط (خروج 1 متوقع هنا).
+- [ ] **Step 3b:** راجع الـ 36 `no-arabic`: ما كان اسماً علماً أو اختصاراً مقصوداً (مثل UPS) يُضاف مفتاحه `module:section/key` إلى `lint_allow.txt` ويُحذف من `todo.jsonl`؛ الباقي يُترجم.
 
 - [ ] **Step 4: المسرد** `tools/glossary.py`:
 
@@ -648,10 +650,10 @@ if __name__ == '__main__':
     main()
 ```
 
-- [ ] **Step 5: شغّل** `python -E -m tools.glossary` — راجع التعارضات واحسمها يدوياً في `glossary.json` (Falcon يقرر المصطلح المعتمد).
+- [ ] **Step 5: شغّل** `python -E -m tools.glossary` — المتوقع: `743 terms; 34 conflicts` (مثل `crude oil: نفط الخام | نفط خام`، `fire: نار | حريق`). احسم الـ 34 يدوياً في `glossary.json` (Falcon يقرر المصطلح المعتمد)، وصحّح المفاتيح المخالفة في `src/ar/*.cfg` لتوحيد المصطلح.
 - [ ] **Step 6: Commit** — `git add -A && git commit -m "feat: import official Arabic as logical source, defects report, glossary"`
 
-### Task 5: الترجمة على دفعات (2,411 ناقص + العيوب)
+### Task 5: الترجمة على دفعات (2,651 مفتاحاً = 2,410 ناقص + 241 معيب → 23 دفعة)
 
 **Files:**
 - Create: `tools/batches.py`, `tools/merge.py`
