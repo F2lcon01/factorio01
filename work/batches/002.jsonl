@@ -1,4 +1,3 @@
-{"module": "core", "key": "/weeks-ago", "en": "__1__ __plural_for_parameter__1__{1=week|rest=weeks}__ ago", "hint": "أسابيع}__ منذ=rest|أسبوع=1}__plural_for_parameter__1__ __1__", "reason": "not-involutive"}
 {"module": "core", "key": "/years-ago", "en": "__1__ __plural_for_parameter__1__{1=year|rest=years}__ ago", "hint": "سنوات}__ منذ=rest|سنة=1}__plural_for_parameter__1__ __1__", "reason": "not-involutive"}
 {"module": "core", "key": "achievement-progress/already-won", "en": "The game was already won on this save.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "achievement-progress/not-a-freeplay-map", "en": "Can only be unlocked on a freeplay map.", "hint": "", "reason": "missing"}
@@ -116,5 +115,6 @@
 {"module": "core", "key": "command-output/programmable-speaker-muted-local", "en": "Programmable speaker universe and surface sounds muted on local client.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "command-output/programmable-speaker-unmuted-everyone", "en": "Programmable speaker universe and surface sounds unmuted for everyone on the server.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "command-output/programmable-speaker-unmuted-local", "en": "Programmable speaker universe and surface sounds unmuted on local client.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "config-help/afk-auto-kick", "en": "<number> - Sets the time (in minutes) a player has to be inactive before they are auto-kicked. 0 means disabled.", "hint": "يحدد الوقت (بالدقائق) يجب أن يكون اللاعب غير نشط قبل أن يتم طرده تلقائيا. 0 يعني تعطيل - <number>", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "config-help/allow-commands", "en": "<true/false/admins-only> - Sets if Lua commands are allowed.", "hint": ".يحدد إذا كان مسموح بأوامر لوا - <true/false/admins-only>", "reason": "direction"}
 {"module": "core", "key": "config-help/allow-debug-settings", "en": "<true/false> - Sets if non-trivial debug settings are allowed for non-admin players.", "hint": ".تعيين إذا كانت إعدادات تصحيح الأخطاء غير تافهة مسموح بها للاعبين غير المشرفين - <true/false>", "reason": "direction"}

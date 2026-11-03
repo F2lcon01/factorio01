@@ -1,5 +1,4 @@
 {
- "blueprint": "المخطط",
  "cargo landing pad": "منصة هبوط الحمولة",
  "character": "الشخصية",
  "each": "كل",
@@ -10,7 +9,7 @@
  "rocket": "صاروخ",
  "signals": "إشارات",
  "space": "فضاء",
- "stack size": "حجم الكومة",
+ "space platform": "منصة الفضاء",
  "tiles": "البلاط",
  "unlock": "فتح القفل"
 }

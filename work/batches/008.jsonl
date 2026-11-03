@@ -1,3 +1,6 @@
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading", "en": "Heading", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-controller-description", "en": "Moving the stick in a direction will make vehicles automatically turn and accelerate to that side of the screen.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-keyboard-description", "en": "Pressing in a direction will make vehicles automatically turn and accelerate to that side of the screen.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering", "en": "Steering", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering-controller-description", "en": "Moving the stick up/down will make vehicles accelerate/brake.\\nMoving the stick left/right will make vehicles turn in that direction.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-settings/vehicle-driving-mode-steering-keyboard-description", "en": "Pressing up/down will make vehicles accelerate/brake.\\nPressing left/right will make vehicles turn in that direction.", "hint": "", "reason": "missing"}
@@ -115,6 +118,3 @@
 {"module": "core", "key": "gui-explore-mods/space-age-mod", "en": "[space-age] Space Age Mod", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-explore-mods/tags", "en": "Tags", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-explore-mods/total-mods-count", "en": "Found __1__ mods", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-explore-mods/unable-to-search", "en": "Unable to search the mod portal", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-explore-mods/view", "en": "View", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-feedback/discard-are-you-sure", "en": "Are you sure you want to discard this entire feedback form?", "hint": "", "reason": "missing"}

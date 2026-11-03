@@ -126,8 +126,9 @@ if __name__ == '__main__':
     cmd = sys.argv[1]
     if cmd == 'import':
         print('todo =', len(import_()))
-    elif cmd == 'merge':  # work/scenarios-out.jsonl from the translator
-        rows = [json.loads(l) for l in (WORK / 'scenarios-out.jsonl').read_text(encoding='utf-8').splitlines() if l.strip()]
+    elif cmd == 'merge':  # work/scenarios-out.jsonl (or a given fix file) from the translator
+        path = Path(sys.argv[2]) if len(sys.argv) > 2 else WORK / 'scenarios-out.jsonl'
+        rows = [json.loads(l) for l in path.read_text(encoding='utf-8').splitlines() if l.strip()]
         rej = add_translations(rows)
         print(f'merged={len(rows) - len(rej)} rejected={len(rej)}')
         for r in rej:

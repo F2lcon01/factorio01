@@ -1,3 +1,18 @@
+{"module": "core", "key": "gui-undo-tooltip/single-surface-single-line", "en": "__1__ on __2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-heterogeneous", "en": "Undo addition of __1__ wires", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-homogeneous", "en": "Undo addition of __1__ wires (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-added-wire-single", "en": "Undo addition of __1__ wire", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-entity-heterogeneous", "en": "Undo construction of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-entity-homogeneous", "en": "Undo construction of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-tile-heterogeneous", "en": "Undo placement of __1__ tiles", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-built-tile-homogeneous", "en": "Undo placement of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-heterogeneous", "en": "Undo copying settings to __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-homogeneous", "en": "Undo copying settings to __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-copy-entity-settings-single", "en": "Undo copying settings to __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-heterogeneous", "en": "Undo installation of __1__ modules", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-homogeneous", "en": "Undo installation of __1__ (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-install-module-single", "en": "Undo installation of __1__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-undo-tooltip/undo-remove-module-heterogeneous", "en": "Undo removal of __1__ modules", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-undo-tooltip/undo-remove-module-homogeneous", "en": "Undo removal of __1__ (× __2__)", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-undo-tooltip/undo-remove-module-single", "en": "Undo removal of __1__", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-undo-tooltip/undo-removed-entity-heterogeneous", "en": "Undo deconstruction of __1__ entities", "hint": "", "reason": "missing"}
@@ -103,18 +118,3 @@
 {"module": "core", "key": "modifier-description/unlock-travel-to-space-platforms", "en": "Unlocks player travelling to space platforms via rocket.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "modifier-description/vehicle-logistics", "en": "Unlocks vehicle logistics.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "multiplayer/address-in-use", "en": "The local port __1__ is already in use.\\nThis could be caused by another instance of Factorio, or by another program using this port.", "hint": "المنفذ المحلي __1__ قيد الاستخدام.\\nيمكن أن يكون هذا بسبب نموذج آخر لـ Factorio، أو بواسطة برنامج آخر يستخدم هذا المنفذ.", "reason": "not-involutive"}
-{"module": "core", "key": "multiplayer/player-fallback", "en": "Player __1__", "hint": "", "reason": "missing"}
-{"module": "core", "key": "multiplayer/server-is-running-newer-version", "en": "The server is running a newer version of the game.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "multiplayer/server-is-running-older-version", "en": "The server is running an older version of the game.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "multiplayer/waiting-for-respawn", "en": "You died. Bad luck. Respawn in __1__ __plural_for_parameter__1__{1=second|rest=seconds}__.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "multiplayer/waiting-for-upload-slot", "en": "Waiting for upload slot. __1__ __plural_for_parameter__1__{1=player|rest=players}__ waiting.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/aux", "en": "Nauvis aux (Default)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/aux_basic", "en": "Basic aux", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/aux_nauvis", "en": "Nauvis aux", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/cliff_elevation", "en": "Nauvis cliff elevation (Default)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/cliff_elevation_from_elevation", "en": "Inherit main elevation", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/cliffiness", "en": "Nauvis cliffiness (Default)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/cliffiness_basic", "en": "Basic cliffiness", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/elevation", "en": "Nauvis elevation (Default)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/elevation_island", "en": "Island elevation", "hint": "", "reason": "missing"}
-{"module": "core", "key": "noise-expression/elevation_lakes", "en": "Lakes elevation", "hint": "", "reason": "missing"}

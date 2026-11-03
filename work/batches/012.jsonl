@@ -1,3 +1,18 @@
+{"module": "core", "key": "gui-redo-action/copy-entity-settings-header", "en": "Redo copying settings to", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/install-modules-header", "en": "Redo installation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/remove-entities-header", "en": "Redo deconstruction of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/remove-tiles-header", "en": "Redo removal of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/remove-wires-header", "en": "Redo removal of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/rotate-entity-header", "en": "Redo rotation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/uninstall-modules-header", "en": "Redo uninstallation of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-action/upgrade-entities-header", "en": "Redo upgrade of", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-confirmation/are-you-sure", "en": "Are you sure you want to redo an action from __1__ ago?\\n\\n__2__", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-confirmation/confirm-redo", "en": "Redo", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-heterogeneous", "en": "Redo addition of __1__ wires", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-homogeneous", "en": "Redo addition of __1__ wires (× __2__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-single", "en": "Redo addition of __1__ wire", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-heterogeneous", "en": "Redo construction of __1__ entities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-homogeneous", "en": "Redo construction of __1__ (× __2__)", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-redo-tooltip/redo-built-entity-single", "en": "Redo construction of __1__", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-redo-tooltip/redo-built-tile-heterogeneous", "en": "Redo placement of __1__ tiles", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-redo-tooltip/redo-built-tile-homogeneous", "en": "Redo placement of __1__ (× __2__)", "hint": "", "reason": "missing"}
@@ -103,18 +118,3 @@
 {"module": "core", "key": "gui-selector/rocket-capacity-description", "en": "Outputs the rocket capacity of the input signals.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-selector/select", "en": "Select input", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-selector/select-description", "en": "Selects a specific signal out of all input signals, based on criteria.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/select-highest-quality", "en": "Highest quality", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/select-lowest-quality", "en": "Lowest quality", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/select-max", "en": "Sort descending", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/select-min", "en": "Sort ascending", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/select-sort-description", "en": "Sort input signals by count ascending/descending, before applying index.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/stack-size", "en": "Stack size", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/stack-size-description", "en": "Outputs the stack size of the input signals.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/time", "en": "Time", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-selector/time-description", "en": "Outputs the game tick, day time in ticks, and number of ticks through the current day.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-side-menu/alerts-config", "en": "Alerts configuration", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-side-menu/blueprint-library-locked", "en": "Blueprint library is not relevant yet.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-side-menu/bonuses-locked", "en": "No bonuses unlocked yet.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-side-menu/factoriopedia", "en": "Factoriopedia (__ALT_CONTROL__1__open-factoriopedia__ when hovering over an object)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-side-menu/logistic-networks", "en": "Logistic networks (__CONTROL__logistic-networks__)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-side-menu/logistic-networks-locked", "en": "No logistic networks present.", "hint": "", "reason": "missing"}

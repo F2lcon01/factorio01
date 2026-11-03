@@ -7,11 +7,14 @@
  "ghost": "شبح",
  "health": "صحة",
  "input": "مُدخل",
+ "nutrients": "مغذيات",
  "output": "مُخرج",
  "rail": "سكة حديدية",
  "recycling": "إعادة التدوير",
  "rocket": "صاروخ",
  "science": "العلوم",
  "space": "فضاء",
+ "space platform": "منصة الفضاء",
+ "spoilage": "مواد تالفة",
  "steam": "بخار"
 }

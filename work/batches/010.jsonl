@@ -1,3 +1,8 @@
+{"module": "core", "key": "gui-interrupts/save-interrupt-name", "en": "Save new interrupt name", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/targets", "en": "Targets", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/targets-tooltip", "en": "The target stops of this interrupt.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-interrupts/title", "en": "Add interrupt", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-lab/add-research-condition", "en": "+ Add Research Condition", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-lab/research-condition", "en": "Research Condition", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-lab/research-condition-tooltip", "en": "Sets the active research when the condition passes.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-lab/technology-selection", "en": "Technology selection", "hint": "", "reason": "missing"}
@@ -29,6 +34,8 @@
 {"module": "core", "key": "gui-map-editor-force-editor/auto-force", "en": "**AUTO**", "hint": "**AUTO**", "reason": "no-arabic"}
 {"module": "core", "key": "gui-map-editor-force-editor/edit-evolution-factor", "en": "Edit evolution factor", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-editor-force-editor/edit-map-settings", "en": "Edit map settings", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-instructions/build-cliffs", "en": "__1__ to build cliffs.", "hint": "__1__ لبناء المنحدرات.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-editor-instructions/remove-cliffs", "en": "__1__ to remove cliffs.", "hint": "__1__ لإزالة المنحدرات.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-map-editor-map-settings-editor/asteroids", "en": "Asteroids", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-editor-map-settings-editor/difficulty-settings", "en": "Difficulty settings", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-editor-map-settings-editor/enemy-evolution", "en": "Enemy evolution", "hint": "", "reason": "missing"}
@@ -51,6 +58,8 @@
 {"module": "core", "key": "gui-map-editor-tile-editor/smart-out-of-map-collision-mode-tooltip", "en": "__TILE__out-of-map__ tiles can only be built over when building with __CONTROL__build-ghost__.", "hint": ".__CONTROL__build-ghost__ البلاط يمكن بناؤه فقط عند البناء مع __TILE__out-of-map__", "reason": "direction"}
 {"module": "core", "key": "gui-map-editor-time-editor/tick-sixty", "en": "Tick sixty", "hint": "Tick sixty", "reason": "no-arabic"}
 {"module": "core", "key": "gui-map-editor-title/asteroid-chunk-editor", "en": "Asteroid Chunks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-editor-title/cliff-editor", "en": "Cliffs", "hint": "المنحدرات", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-editor/cliffs", "en": "Cliffs", "hint": "المنحدرات", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-map-editor/import-surface-as", "en": "As", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-editor/surface-name", "en": "Surface", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-editor/tools", "en": "Tools", "hint": "Tools", "reason": "no-arabic"}
@@ -60,6 +69,9 @@
 {"module": "core", "key": "gui-map-generator/asteroids", "en": "Asteroids", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-generator/asteroids-spawning-rate", "en": "Spawning rate", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-generator/asteroids-spawning-rate-description", "en": "Rate at which asteroids spawn in space.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-map-generator/cliff-continuity-description", "en": "The length of unbroken cliff segments.", "hint": "طول المنحدرات التي لم تنقطع.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-generator/cliff-frequency-description", "en": "The number of cliffs.", "hint": "عدد المنحدرات.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-generator/custom", "en": "[modified]", "hint": "[modified]", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-map-generator/enemy-attack-pollution-consumption-modifier-description", "en": "Modifier of how much pollution is consumed to send a biter to attack.\\nNote: A value higher than 100% will disable some achievements.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-generator/enemy-expansion-evolution-group-size-factor", "en": "Evolution group size factor", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-map-generator/enemy-expansion-evolution-group-size-factor-description", "en": "How much the evolution factor affects the size of enemy expansion parties.\\nNote: A value lower than __1__ will disable some achievements.", "hint": "", "reason": "missing"}
@@ -106,15 +118,3 @@
 {"module": "core", "key": "gui-migrated-content/changed-quality", "en": "Changed qualities", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-migrated-content/changed-space-location", "en": "Changed space locations", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-migrated-content/removed-airborne-pollutant", "en": "Removed airborne pollutants", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-migrated-content/removed-asteroid-chunk", "en": "Removed asteroid chunks", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-migrated-content/removed-collision-layer", "en": "Removed collision layers", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-migrated-content/removed-custom-event", "en": "Removed custom events", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-migrated-content/removed-equipment", "en": "Removed equipment", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-migrated-content/removed-quality", "en": "Removed qualities", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-migrated-content/removed-space-location", "en": "Removed space locations", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-mining-drill/blacklist", "en": "Blacklist", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-mining-drill/filter", "en": "Filter", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-mining-drill/whitelist", "en": "Whitelist", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-mod-info/mod-portal-page", "en": "Mod portal", "hint": "Mod portal", "reason": "no-arabic"}
-{"module": "core", "key": "gui-mod-info/recommended-dependency", "en": "(recommended)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-mod-load-error/circular-dependencies", "en": "Circular dependencies detected", "hint": "", "reason": "missing"}

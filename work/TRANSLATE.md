@@ -39,6 +39,11 @@ input JSON it appears as `"\\n"`. Your `ar` must contain the same number of thes
    ambiguous without them. Keep keyboard keys and brands in Latin (Ctrl, Shift, Alt, Steam, Xbox, PlayStation, LAN).
 6. `hint` non-empty → it is an earlier translation with the defect named in `reason`: reuse its correct wording,
    fix the defect (broken tokens, English left over, wrong word order caused by reversed text, etc.).
+   `reason` starting with `review` → the hint is the current text; fix exactly what the reason says (a line that
+   starts with «.» or «:» is reversed — move the punctuation to the end; translate leftover English words except
+   brand names, URLs and chat commands; "cliff/cliffs" = «جرف/أجراف»; "16-bit" stays "16-bit").
+8. `glossary.json` now holds 1055 settled names (including all Space Age names). Every prototype name you mention
+   must be the glossary form — e.g. «منصة الفضاء»، «مسبك»، «حزام نقل توربو»، «نوفيس»، «فولكانوس».
 7. Every `ar` must contain Arabic letters (except pure numbers/tokens/brand names where the English has no real words).
 
 ## Validate (mandatory, repeat until `errors=0`)

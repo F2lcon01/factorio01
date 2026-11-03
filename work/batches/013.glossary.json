@@ -5,10 +5,15 @@
  "effects": "التأثيرات",
  "enemies": "أعداء",
  "environment": "البيئة",
+ "input": "مُدخل",
  "lab": "مختبر",
  "logistics": "الخدمات اللوجستية",
  "output": "مُخرج",
+ "research productivity": "إنتاجية البحث",
  "rocket": "صاروخ",
+ "signals": "إشارات",
  "space": "فضاء",
- "speed": "السرعة"
+ "space platform": "منصة الفضاء",
+ "speed": "السرعة",
+ "stack size": "حجم الكومة"
 }

@@ -1,3 +1,6 @@
+{"module": "core", "key": "gui-control-behavior-modes-guis/priority", "en": "Priority", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/priority-description", "en": "Priority of the train stop", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-control-behavior-modes-guis/radar-channel", "en": "Channel", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-behavior-modes-guis/radar-surface", "en": "Surface", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-behavior-modes-guis/radar-surface-description", "en": "Signals will be broadcast to all Surface mode radars on the same surface.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-behavior-modes-guis/radar-universe", "en": "Universe", "hint": "", "reason": "missing"}
@@ -115,6 +118,3 @@
 {"module": "core", "key": "gui-control-settings/movement-sensitivity-description", "en": "How fast the map in remote view moves in reaction to stick movement.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-settings/swap-buttons", "en": "Swap __1__ and __2__", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-settings/swap-buttons-description", "en": "Swap the confirm and bumper buttons so it's easier to click when in mouse mode.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading", "en": "Heading", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-controller-description", "en": "Moving the stick in a direction will make vehicles automatically turn and accelerate to that side of the screen.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-control-settings/vehicle-driving-mode-heading-keyboard-description", "en": "Pressing in a direction will make vehicles automatically turn and accelerate to that side of the screen.", "hint": "", "reason": "missing"}

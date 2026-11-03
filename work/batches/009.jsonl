@@ -1,3 +1,6 @@
+{"module": "core", "key": "gui-explore-mods/unable-to-search", "en": "Unable to search the mod portal", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-explore-mods/view", "en": "View", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-feedback/discard-are-you-sure", "en": "Are you sure you want to discard this entire feedback form?", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-feedback/discard-button", "en": "Discard form", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-feedback/email", "en": "Email", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-feedback/finalize-submit-to-wube", "en": "Submit feedback", "hint": "", "reason": "missing"}
@@ -34,12 +37,14 @@
 {"module": "core", "key": "gui-goal-description/title", "en": "Objective", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/additional-terrain-effects", "en": "Disable to increase performance on low-end video cards. Disables rendering global terrain tint and puddles on tiles that define them.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/enable-arachnophobia-mode", "en": "When enabled, some entities with a spider-like appearance will not fully render their legs. This may impact playability in some instances where the position of legs is important for gameplay.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/full-color-depth", "en": "Rendering in only half (16-bit) color depth improves performance on low-end and integrated GPUs. This option only has an effect on Windows 8+ or in the OpenGL renderer.", "hint": "معالجة فقط نصف عمق الألوان (bit-16) يزيد الأداء في كروت الشاشة منخفضة الأداء أو المدمجة مع المعالج,  هذا الخيار له تأثير فقط على Windows 8+ أو في OpenGL.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-graphics-settings-description/graphics-quality-label-console", "en": "The resolution of the sprites. Lower resolution will reduce memory usage and loading time.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/light-occlusion", "en": "When disabled, rendering may be faster, but light emitting tiles and objects like fire, uranium or various LEDs will \"shine\" through objects above them.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/linux-preferred-video-driver", "en": "The \"Auto\" option will select Wayland if the compositor implements fifo-v1, but will otherwise select X11. If the preferred video driver is unavailable, drivers will be tried in order of appearance.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/show-animated-ghosts", "en": "Disable to increase performance on low-end video cards.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/show-fullscreen-flash", "en": "From nuke detonation, lightning strikes, or player damage.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings-description/variable-refresh-rate-switch2", "en": "Enable variable refresh rate for the console's screen or the TV.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-graphics-settings-description/video-memory-budget-label", "en": "The maximum size of video memory (VRAM) the game is allowed to use for textures (sprites).", "hint": "الحد الأقصى لحجم ذاكرة الفيديو (VRAM) المسموح للعبة باستخدامها في معالجة التشابك البصري (sprites).", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-graphics-settings/accessibility", "en": "Accessibility", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings/additional-terrain-effects", "en": "Additional terrain effects", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-graphics-settings/enable-arachnophobia-mode", "en": "Enable arachnophobia mode", "hint": "", "reason": "missing"}
@@ -113,8 +118,3 @@
 {"module": "core", "key": "gui-interrupts/name-too-long", "en": "Interrupt name is too long.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-interrupts/no-interrupts", "en": "No interrupts found.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-interrupts/save-changes", "en": "Save interrupt", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-interrupts/save-interrupt-name", "en": "Save new interrupt name", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-interrupts/targets", "en": "Targets", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-interrupts/targets-tooltip", "en": "The target stops of this interrupt.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-interrupts/title", "en": "Add interrupt", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-lab/add-research-condition", "en": "+ Add Research Condition", "hint": "", "reason": "missing"}

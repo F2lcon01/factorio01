@@ -1,3 +1,17 @@
+{"module": "space-age", "key": "achievement-description/visit-gleba", "en": "Travel to planet Gleba.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/visit-vulcanus", "en": "Travel to planet Vulcanus.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/we-need-bigger-guns", "en": "Kill a medium demolisher.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-description/work-around-the-clock", "en": "Finish the game within 100 hours.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/crafting-with-quality", "en": "Crafting with quality", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/express-delivery", "en": "Express delivery", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/fusion-power", "en": "Fusion power", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/get-off-my-lawn", "en": "Get off my lawn", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/if-it-bleeds", "en": "If it bleeds, we can kill it", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/it-stinks-and-they-do-like-it", "en": "It stinks and they do like it", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/look-at-my-shiny-rare-armor", "en": "Look at my shiny rare armor", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/make-it-better", "en": "Make it better", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/my-modules-are-legendary", "en": "My modules are legendary", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "achievement-name/no-room-for-more", "en": "No room for more", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "achievement-name/reach-for-the-stars", "en": "Reach for the stars", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "achievement-name/research-with-agriculture", "en": "Research with agriculture", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "achievement-name/research-with-cryogenics", "en": "Research with cryogenics", "hint": "", "reason": "missing"}
@@ -22,99 +36,85 @@
 {"module": "space-age", "key": "agricultural-tower-gui/seeds", "en": "Seeds", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "agricultural-tower-gui/seeds-description", "en": "Possible inputs", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "airborne-pollutant-name-with-amount/spores", "en": "__1__ __plural_for_parameter__1__{1=spore|rest=spores}__", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "airborne-pollutant-name/spores", "en": "Spores", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "ammo-category-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "ammo-category-name/seismic", "en": "Seismic", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "ammo-category-name/tesla", "en": "Tesla", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/carbonic-asteroid-chunk", "en": "Carbonic asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/metallic-asteroid-chunk", "en": "Metallic asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/oxide-asteroid-chunk", "en": "Oxide asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/promethium-asteroid-chunk", "en": "Promethium asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "autoplace-control-names/vulcanus_volcanism", "en": "Vulcanus volcanism", "hint": "Vulcanus volcanism", "reason": "no-arabic"}
-{"module": "space-age", "key": "decorative-name/aqulio-ice-decal-blue", "en": "Ice decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/aqulio-snowy-decal", "en": "Light snow decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/barnacles-decal", "en": "Barnacles decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/black-sceptre", "en": "Black sceptre", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/blood-grape", "en": "Blood grape", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/blood-grape-vibrant", "en": "Blood grape red", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/brambles", "en": "Brambles", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/brown-cup", "en": "Brown cup", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/calcite-stain", "en": "Calcite stain", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/calcite-stain-small", "en": "Calcite stain", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-land", "en": "Coral (land)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-stunted", "en": "Stunted coral", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-stunted-grey", "en": "Stunted coral grey", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-water", "en": "Coral (water)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/crater-large", "en": "Large crater", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/crater-small", "en": "Small crater", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/cream-nerve-roots-veins-dense", "en": "Cream Nerve root veins dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/cream-nerve-roots-veins-sparse", "en": "Cream Nerve root veins sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/curly-roots-grey", "en": "Curly roots grey", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/curly-roots-orange", "en": "Curly roots orange", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/floating-iceberg-large", "en": "Big floating iceberg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/floating-iceberg-small", "en": "Small floating iceberg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fuchsia-pita", "en": "Fuchsia pita", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-big-decal", "en": "Big flooded Fulgoran ruin decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-medium", "en": "Medium flooded Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-small", "en": "Small flooded Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgoran-ruin-tiny", "en": "Tiny Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/gleba-spawner-slime", "en": "Spawning foam", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-cup", "en": "Green cup", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-1x1", "en": "Green lettuce lichen 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-3x3", "en": "Green lettuce lichen 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-6x6", "en": "Green lettuce lichen 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-1x1", "en": "Green lettuce lichen water 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-3x3", "en": "Green lettuce lichen water 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-6x6", "en": "Green lettuce lichen water 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/grey-cracked-mud-decal", "en": "Grey cracked mud decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/honeycomb-fungus", "en": "Medium honeycomb fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/honeycomb-fungus-1x1", "en": "Small honeycomb fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/honeycomb-fungus-decayed", "en": "Dead honeycomb fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/knobbly-roots", "en": "Knobbly roots", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/knobbly-roots-orange", "en": "Knobbly roots orange", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/lithium-iceberg-medium", "en": "Medium lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/lithium-iceberg-small", "en": "Small lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/lithium-iceberg-tiny", "en": "Tiny lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/matches-small", "en": "Small match fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/medium-fulgora-rock", "en": "Medium Fulgora rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/medium-fulgoran-gravewort", "en": "Medium Fulgoran gravewort", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/medium-volcanic-rock", "en": "Medium volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/mycelium", "en": "Mycelium", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/nerve-roots-dense", "en": "Nerve roots dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/nerve-roots-sparse", "en": "Nerve roots sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-1x1", "en": "Pale lettuce lichen 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-3x3", "en": "Pale lettuce lichen 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-6x6", "en": "Pale lettuce lichen 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-1x1", "en": "Pale lettuce lichen cups 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-3x3", "en": "Pale lettuce lichen cups 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-6x6", "en": "Pale lettuce lichen cups 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-1x1", "en": "Pale lettuce lichen water 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-3x3", "en": "Pale lettuce lichen water 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-6x6", "en": "Pale lettuce lichen water 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pink-lichen-decal", "en": "Pink lichen decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pink-phalanges", "en": "Pink phalanges", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/polycephalum-balloon", "en": "Polycephalum balloon", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/polycephalum-slime", "en": "Polycephalum slime", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pumice-relief-decal", "en": "Rock decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/purple-nerve-roots-veins-dense", "en": "Purple Nerve root veins dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/purple-nerve-roots-veins-sparse", "en": "Purple Nerve root veins sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/red-lichen-decal", "en": "Red lichen decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/red-nerve-roots-veins-dense", "en": "Red Nerve root veins dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/red-nerve-roots-veins-sparse", "en": "Red Nerve root veins sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-fulgora-rock", "en": "Small Fulgora rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-fulgoran-gravewort", "en": "Small Fulgoran gravewort", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-sulfur-rock", "en": "Small sulfur rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-volcanic-rock", "en": "Small volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/snow-drift-decal", "en": "Snow drift decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/solo-barnacle", "en": "Solo Barnacle", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-1x1", "en": "Space platform decorative 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-2x2", "en": "Space platform decorative 2x2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-4x4", "en": "Space platform decorative 4x4", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-1x1", "en": "Space platform decorative pipes 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-1x2", "en": "Space platform decorative pipes 1x2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-2x1", "en": "Space platform decorative pipes 2x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-tiny", "en": "Space platform decorative tiny", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-1x1", "en": "Small split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-2x2", "en": "Medium split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-dying-1x1", "en": "Small dying split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-dying-2x2", "en": "Medium dying split gill lichen", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collection-arm-count", "en": "Collection arm count", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collection-arm-max-speed", "en": "Collection arm max speed", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collection-arm-usage", "en": "Collection arm usage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "description/collector-arm-storage-size", "en": "Collection arm storage size", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/asteroid-collector", "en": "Collects asteroid chunks. Bigger asteroids must be broken up into chunks by turrets.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/cargo-bay", "en": "Increases the hub and landing pad inventory size, and adds an additional cargo hatch.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/cargo-pod", "en": "Used to transfer items from the space platform to the planet's surface.\\nIt is launched automatically upon a space platform arriving in orbit if the [entity=cargo-landing-pad] is requesting cargo.\\nIt can be sent manually by __CONTROL__stack-transfer__ on the item icon in the space platform hub GUI.", "hint": "تستخدم لنقل أصناف من المنصة الفضائية إلى سطح الكوكب.\\nيتم إطلاقه تلقائياً عند وصول منصة فضائية إلى المدار إذا كان [entity=cargo-landing-pad] يطلب حمولة.\\nيمكن إرسالها يدوياً بواسطة __CONTROL__stack-transfer__ على أيقونة البند في محور المنصة الفضائية GUI.", "reason": "not-involutive"}
+{"module": "space-age", "key": "entity-description/cargo-pod-container", "en": "Appears on the planet's surface with cargo from the space platform. It is destroyed upon removing the cargo.\\nWhen [entity=cargo-landing-pad] is built, delivery pods stop arriving at the initial coordinates, and cargo is delivered directly there.", "hint": "يظهر على سطح الكوكب مع الشحنة من منصة الفضاء. يتم تدميره عند إزالة الشحنة.\\nعند بناء[entity=cargo-landing-pad]، تتوقف الكبسولات عن الوصول إلى الإحداثيات الأولية، وتتم توصيل الشحنة مباشرةً إلى هناك.", "reason": "not-involutive"}
+{"module": "space-age", "key": "entity-description/landing-pad-unloading-bay", "en": "Allows inserters to remove items from the shared inventory when attached to a cargo landing pad.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/turbo-underground-belt", "en": "Used to allow a belt to cross entities or impassable terrain.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-description/yumako-tree", "en": "A Gleba tree that yields nutritious yumako fruit.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud", "en": "__1__ ash cloud", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-ash-cloud-trail", "en": "__1__ ash cloud trail", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-corpse", "en": "__1__ remains", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-expanding-ash-cloud", "en": "__1__ expanding ash cloud __2__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure", "en": "__1__ erupting fissure", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-damage-explosion", "en": "__1__ fissure explosion damage", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-explosion", "en": "__1__ fissure explosion", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-fissure-scorchmark", "en": "__1__ fissure scorchmark", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-segment", "en": "__1__ segment", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-tail", "en": "__1__ tail", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-trail-lower", "en": "__1__ trail lower", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "entity-name/demolisher-trail-upper", "en": "__1__ trail upper", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "factoriopedia-description/fusion-generator", "en": "Consumes plasma from the [entity=fusion-reactor] to create electric energy. Power production is nominal, but less plasma is consumed if the temperature is higher. It outputs heated coolant equal to the amount of plasma consumed that can be cooled in an [entity=cryogenic-plant]. Fusion generators can be linked and transfer plasma to each other.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "factoriopedia-description/fusion-reactor", "en": "Uses fluoroketone coolant with fusion power cells to make super-heated plasma. It can only be output directly to an [entity=fusion-generator]. The neighbor bonus with other fusion reactors greatly increases the plasma temperature without increasing the amount of coolant used.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-description/fusion-plasma", "en": "Ultra-high-temperature ions generated in [entity=fusion-reactor] and consumed by a [entity=fusion-generator]. It is not a normal fluid and cannot be moved in [entity=pipe], it can only be moved through the Fusion reactor and Fusion generator.\\nThe temperature of plasma determines its energy value.\\nA quantity of plasma also represents that amount of coolant that travels with it, and the heated coolant is output by the Fusion generator as the plasma is used for energy.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "fluid-description/thruster-fuel", "en": "Liquid thruster fuel", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-asteroid-collector/chunk-filter", "en": "Asteroid chunk filter", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-asteroid-collector/chunk-filter-description", "en": "When set the Asteroid Collector only captures these chunks.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-map-editor-instructions/asteroid-chunks-only-buildable-on-platforms", "en": "Asteroid chunks can only be built on space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "gui-rocket-silo/auto-launch-tooltip", "en": "Launches the rocket automatically for space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/artificial-jellynut-soil", "en": "Must be placed over [tile=wetland-jellynut].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/artificial-yumako-soil", "en": "Must be placed over [tile=wetland-yumako].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/bioflux", "en": "Highly nutritious blend of Gleba crops. Grants burst of both health regeneration and movement speed when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/capture-robot-rocket", "en": "Grapples on and captures the targeted [entity=biter-spawner] into [entity=captive-biter-spawner].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/carbonic-asteroid-chunk", "en": "An asteroid chunk with high carbon content.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/foundation", "en": "Engineered structural foundation with heat shielding and deep screw piles. Can be placed on lava, oil ocean, and most water.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/fusion-reactor-equipment", "en": "Provides power for equipment modules.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/ice-platform", "en": "A stable floating platform of ice for sufficiently cold planets.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/jelly", "en": "Grants burst of movement speed when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/jellynut", "en": "Slimy farmable crop. Grants burst of movement speed when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/jellynut-seed", "en": "Can be planted on jellynut soil.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/metallic-asteroid-chunk", "en": "An asteroid chunk with high metal content.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/overgrowth-jellynut-soil", "en": "Soil for [entity=jellystem] placeable anywhere in the red biome.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/overgrowth-yumako-soil", "en": "Soil for [entity=yumako-tree] placeable anywhere in the green biome.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/oxide-asteroid-chunk", "en": "An asteroid chunk with high oxygen content.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/promethium-asteroid-chunk", "en": "An asteroid chunk only found when approaching the shattered planet.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/railgun-ammo", "en": "Used to break even the biggest asteroids.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/space-platform-foundation", "en": "Can be placed in space to extend existing space platforms.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/space-platform-starter-pack", "en": "Contains everything needed to set up a space platform foundation.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/space-science-pack", "en": "Used by labs for research. Obtained by processing asteroids in space.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/yumako", "en": "Nutritious farmable crop. Grants burst of health regeneration when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/yumako-mash", "en": "Grants burst of health regeneration when eaten.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "item-description/yumako-seed", "en": "Can be planted on yumako soil.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "mod-description/space-age", "en": "Sky is not the limit!", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/belt-stack-size-bonus", "en": "Transport belt capacity: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/rail-support-on-deep-oil-ocean", "en": "Allows building elevated rails also on the deep parts of the oil ocean.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/railgun-damage-bonus", "en": "Railgun damage: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/railgun-shooting-speed-bonus", "en": "Railgun shooting speed: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "modifier-description/tesla-damage-bonus", "en": "Tesla damage: +__1__", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/aquilo_elevation", "en": "Aquilo elevation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/fulgora_cliffiness", "en": "Fulgora cliffiness", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/fulgora_elevation", "en": "Fulgora elevation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/gleba-plants", "en": "Gleba plants", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/gleba_aux", "en": "Gleba aux", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/gleba_elevation", "en": "Gleba elevation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/gleba_moisture", "en": "Gleba moisture", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/gleba_temperature", "en": "Gleba temperature", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/vulcanus_aux", "en": "Vulcanus aux", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/vulcanus_elevation", "en": "Vulcanus elevation", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/vulcanus_moisture", "en": "Vulcanus moisture", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "noise-expression/vulcanus_temperature", "en": "Vulcanus temperature", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "quality-tooltip/collection-area", "en": "Increases the collection area at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "quality-tooltip/collection-arm-count", "en": "More arms collect asteroids at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "quality-tooltip/collection-arm-max-speed", "en": "The collector arms move faster at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "quality-tooltip/collector-arm-storage-size", "en": "Increases the collector arm storage size at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "quality-tooltip/storage-size", "en": "Increases the storage size at higher qualities.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "recipe-description/ammonia-rocket-fuel", "en": "A convenient use of ammonia.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "recipe-description/ammoniacal-solution-separation", "en": "[fluid=ammoniacal-solution] is gained by an [entity=offshore-pump] in the oceans of [planet=aquilo].", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "space-location-description/aquilo", "en": "A freezing wasteland with oceans of liquid ammonia and fluorine vents. Structures and belts will freeze if not heated by adjacent heat pipe or other hot structures.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "space-location-description/fulgora", "en": "A dry wind-swept planet with lightning storms on plateaus, and oceans of oil that can be bridged by elevated rails.\\nThere appear to be some ruins.", "hint": "", "reason": "missing"}
+{"module": "space-age", "key": "space-location-description/gleba", "en": "A humid swampy planet with deep bogs. Wetland can support agriculture but is difficult to build on, it can be landfilled but stone is scarce.\\nSnaking hills have stone and are better to build on but can't support agriculture.", "hint": "", "reason": "missing"}

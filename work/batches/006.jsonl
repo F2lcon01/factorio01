@@ -1,3 +1,4 @@
+{"module": "core", "key": "factoriopedia/surface-creation-result", "en": "Surface creation result", "hint": "", "reason": "missing"}
 {"module": "core", "key": "factoriopedia/surface-creation-result-tooltip", "en": "Space platform surface created upon launching this item by a rocket.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "factoriopedia/thrust", "en": "Thrust", "hint": "", "reason": "missing"}
 {"module": "core", "key": "factoriopedia/thruster-performance-curves", "en": "Thruster performance curves", "hint": "", "reason": "missing"}
@@ -43,6 +44,7 @@
 {"module": "core", "key": "gui-auth-server/factorio-already-linked-nintendo", "en": "This Factorio.com account is already linked to a different Nintendo Account. You can unlink it in your profile on __1__.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-auth-server/galaxy-upload-already-in-progress", "en": "A galaxy upload is already in progress for you. Please wait for it to finish.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-auth-server/galaxy-upload-not-in-progress", "en": "No galaxy upload is in progress for you. Maybe it has already finished or the process timed out.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-auth-server/login-banned", "en": "Your account has been banned. If you believe this is in error, please contact support@factorio.com.", "hint": "لقد تم حظر حسابك. إن كنت تعتقد أن هنالك خطأً، الرجاء التواصل على factorio.com@support.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-auth-server/login-blacklist", "en": "Your IP address is on the blacklist due to abuse in the past. If you feel like this is in error and would like the ban to be lifted, please contact __1__.", "hint": "عنوان الـIP الخاص بك مدرج في لائحة العناوين المحظورة بسبب إساءة الاستخدام سابقاً. إن أحسست بوجود خطأٍ و تريد رفع الحظر، الرجاء التواصل مع الدعم support@", "reason": "tokens"}
 {"module": "core", "key": "gui-auth-server/login-insufficient-membership-expansion", "en": "Your account doesn't own Factorio: Space Age. Please buy it to log in.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-auth-server/nintendo-already-linked", "en": "There is a different Factorio.com account linked to this Nintendo Account.", "hint": "", "reason": "missing"}
@@ -88,6 +90,7 @@
 {"module": "core", "key": "gui-bonus/bulk-inserter-capacity-bonus", "en": "Bulk inserter capacity", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-bonus/cargo-unit-speed-bonus", "en": "Cargo unit speed bonus", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-bonus/productivity-bonus", "en": "Productivity bonus", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-browse-games/has-friends", "en": "Steam friends in game", "hint": "أصدقاء steam في اللعبة", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-browse-games/is-favourited", "en": "Is favorited", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-car/drive-remotely", "en": "Drive remotely", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-car/driven-physically-by", "en": "Driven physically by __1__", "hint": "", "reason": "missing"}
@@ -115,6 +118,3 @@
 {"module": "core", "key": "gui-control-behavior-modes-guis/lamp-green", "en": "Green", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-behavior-modes-guis/lamp-red", "en": "Red", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-control-behavior-modes-guis/lamp-rgb", "en": "RGB", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-control-behavior-modes-guis/priority", "en": "Priority", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-control-behavior-modes-guis/priority-description", "en": "Priority of the train stop", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-control-behavior-modes-guis/radar-channel", "en": "Channel", "hint": "", "reason": "missing"}

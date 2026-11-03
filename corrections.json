@@ -1,5 +1,23 @@
 {
  "base:item-name/filled-barrel": "برميل __1__",
  "base:recipe-name/empty-filled-barrel": "تفريغ برميل __1__",
- "base:recipe-name/fill-barrel": "تعبئة برميل __1__"
+ "base:recipe-name/fill-barrel": "تعبئة برميل __1__",
+ "base:entity-name/cliff": "جرف",
+ "base:equipment-name/battery-mk2-equipment": "بطارية شخصية MK2",
+ "base:technology-name/battery-mk2-equipment": "بطارية شخصية MK2",
+ "base:recipe-name/coal-liquefaction": "تسييل الفحم",
+ "base:technology-name/coal-liquefaction": "تسييل الفحم",
+ "base:technology-name/toolbelt": "حزام الأدوات",
+ "space-age:autoplace-control-names/gleba_cliff": "أجراف غليبا",
+ "space-age:autoplace-control-names/fulgora_cliff": "أجراف فولغورا",
+ "space-age:entity-name/boompuff-explosion": "بومباف",
+ "space-age:entity-name/fulgoran-ruin-attractor": "جاذب البرق الفولغوري",
+ "space-age:entity-name/fulgoran-ruin-stonehenge": "أطلال فولغورية كبيرة",
+ "space-age:entity-name/fulgoran-ruin-vault": "أطلال قبو فولغوري",
+ "space-age:entity-name/fulgoran-ruin-colossal": "أطلال فولغورية هائلة",
+ "space-age:entity-name/fulgoran-ruin-huge": "أطلال فولغورية ضخمة",
+ "space-age:entity-name/fulgoran-ruin-big": "أطلال فولغورية كبيرة",
+ "space-age:entity-name/fulgoran-ruin-medium": "أطلال فولغورية متوسطة",
+ "space-age:entity-name/fulgoran-ruin-small": "أطلال فولغورية صغيرة",
+ "space-age:entity-name/captive-biter-spawner": "عش بايتر أسير"
 }

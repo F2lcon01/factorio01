@@ -1375,9 +1375,7 @@
 {"module": "core", "key": "gui-migrated-content/changed-collision-layer", "en": "Changed collision layers", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-migrated-content/removed-airborne-pollutant", "en": "Removed airborne pollutants", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-migrated-content/changed-airborne-pollutant", "en": "Changed airborne pollutants", "hint": "", "reason": "missing"}
-{"module": "core", "key": "recipe-name/recipe-unknown", "en": "Unknown recipe", "hint": "", "reason": "missing"}
 {"module": "core", "key": "recipe-description/recipe-unknown", "en": "This recipe is not available due to mod removal, it will be restored if the mod is re-enabled.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "quality-name/quality-unknown", "en": "Unknown", "hint": "", "reason": "missing"}
 {"module": "core", "key": "quality-description/quality-unknown", "en": "This quality is not available due to mod removal, it will be restored if the mod is re-enabled.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-user-login/log-in-required", "en": "This version of the game requires you to log in.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "inventory-restriction/cant-plant", "en": "__1__ cannot be planted.", "hint": "", "reason": "missing"}
@@ -1790,8 +1788,6 @@
 {"module": "core", "key": "chartbundle-state/done", "en": "Done", "hint": "", "reason": "missing"}
 {"module": "core", "key": "chartbundle-state/error", "en": "Process failed: __1__", "hint": "", "reason": "missing"}
 {"module": "base", "key": "entity-description/item-on-ground", "en": "Can be picked up by pressing __CONTROL__pick-items__.\\nCan be dropped manually [tip=z-dropping] or by entities like [entity=burner-mining-drill].", "hint": ".__CONTROL__pick-itemsيمكن اسقاطه يدويا [tip=z-dropping] او عبر كائنات مثل [entity=burner-mining-drill].\\nيمكن حمله بالضغط على __", "reason": "not-involutive"}
-{"module": "base", "key": "decorative-name/red-croton", "en": "Red croton", "hint": "Red croton", "reason": "no-arabic"}
-{"module": "base", "key": "decorative-name/red-pita", "en": "Red pita", "hint": "Red pita", "reason": "no-arabic"}
 {"module": "base", "key": "virtual-signal-description/signal-everything", "en": "If all input signals meet the condition, it will pass.\\nIt is true when there are no inputs.\\nOutput all input signals.", "hint": "إذا استوفت جميع إشارات الإدخال الشرط، فستمر.\\nتكون النتيجة صحيحة عندما لا توجد مدخلات.\\nإخراج جميع إشارات الإدخال.", "reason": "not-involutive"}
 {"module": "base", "key": "virtual-signal-description/signal-anything", "en": "If any of the input signals meet the condition, it will pass.\\nIt is false when there are no inputs.\\nOutput the first input signal, or the first signal that passed all conditions, respecting signal order in both cases.", "hint": "قم بإخراج أول إشارة دخل، أو أول إشارة اجتازت جميع الشروط، مع احترام ترتيب الإشارات في كلتا الحالتين.\\nيكون الإخراج خاطئًا عندما لا تكون هناك أي مدخلات.\\n\\nإذا استوفى أي من الإشارات الداخلة الشرط، فستمر.\\n", "reason": "not-involutive"}
 {"module": "base", "key": "virtual-signal-description/signal-each", "en": "Evaluates the condition for each input signal individually.\\nTo pass completely, a signal has to pass all conditions.\\nOutput every signal that passed all conditions.", "hint": "يقيم الشرط لكل إشارة دخل بشكل فردي.\\nللاجتياز الكامل، يجب أن تجتاز الإشارة جميع الشروط.\\nقم بإخراج كل إشارة اجتازت جميع الشروط.", "reason": "not-involutive"}
@@ -1803,13 +1799,11 @@
 {"module": "base", "key": "item-description/rail", "en": "Use to build straight rails manually or through the rail planner.\\n__CONTROL__build__ to build short paths directly.\\n__CONTROL__build-ghost__ to place long ghost paths.", "hint": ".لوضع مسارات شبحية طويلة Control__build-ghost\\n.لإنشاء مسارات قصيرة مباشرة Control__build\\nاستخدم لبناء السكك المستقيمة يدويًا أو عبر مخطط السكك.", "reason": "tokens"}
 {"module": "base", "key": "item-description/red-wire", "en": "Used to connect machines to the circuit network using __CONTROL__build__.", "hint": "تستخدم لتوصيل الآلات مع الدارة الكهربائية باستخدام.", "reason": "tokens"}
 {"module": "base", "key": "modifier-description/unlock-logistic-network", "en": "Logistic network connection for entities", "hint": "", "reason": "missing"}
-{"module": "base", "key": "technology-name/advanced-combinators", "en": "Advanced combinators", "hint": "Advanced combinators", "reason": "no-arabic"}
 {"module": "base", "key": "technology-description/tank", "en": "Powerful offensive vehicle capable of mounting various weapons and equipment.", "hint": "", "reason": "missing"}
 {"module": "base", "key": "technology-description/automated-rail-transportation", "en": "Enables building train stops and rail signals to set up automated train routes and coordinating multiple trains within the same rail network.", "hint": "", "reason": "missing"}
 {"module": "base", "key": "technology-description/uranium-mining", "en": "Allows you to use [fluid=sulfuric-acid] in [entity=electric-mining-drill] to mine [entity=uranium-ore]", "hint": "[entity=uranium-ore]", "reason": "tokens"}
 {"module": "base", "key": "achievement-description/so-long-and-thanks-for-all-the-fish", "en": "", "hint": "", "reason": "missing"}
 {"module": "base", "key": "achievement-description/automate-this", "en": "Build an assembling machine 1.", "hint": "", "reason": "missing"}
-{"module": "base", "key": "space-location-name/nauvis", "en": "Nauvis", "hint": "Nauvis", "reason": "no-arabic"}
 {"module": "base", "key": "tips-and-tricks-item-name/entity-flip", "en": "__CONTROL__flip-horizontal__ or __CONTROL__flip-vertical__ to flip entities", "hint": "__CONTROL__", "reason": "tokens"}
 {"module": "base", "key": "tips-and-tricks-item-name/fast-replace", "en": "Fast replace", "hint": "Fast replace", "reason": "no-arabic"}
 {"module": "base", "key": "tips-and-tricks-item-description/clear-cursor", "en": "When holding an item, you can clear it using __CONTROL__clear-cursor__, which will return it to the [img=utility/hand] slot in the source inventory.\\nIt also cancels rail planning, wire dragging and selection boxes.", "hint": "عند الاحتفاظ بأحد العناصر، يمكنك مسحه باستخدام __CONTROL__clear-cursor__، الذي سوف يعيده إلى خانة [img=Uity/hand] في مخزون المصدر.\\nيلغي أيضا تخطيط السكك الحديدية وسحب الأسلاك وصناديق الاختيار.", "reason": "not-involutive"}
@@ -1879,8 +1873,6 @@
 {"module": "recycler", "key": "inventory-restriction/cant-be-recycled", "en": "__1__ cannot be recycled.", "hint": "", "reason": "missing"}
 {"module": "recycler", "key": "inventory-restriction/cant-be-recycled_until", "en": "__1__ cannot be recycled until __2__ is researched.", "hint": "", "reason": "missing"}
 {"module": "recycler", "key": "tips-and-tricks-item-description/production-entity-list", "en": "[entity=electric-mining-drill] Electric mining drill \\n[entity=pumpjack] Pumpjack \\n[entity=assembling-machine-2] Assembling machine 2 \\n[entity=assembling-machine-3] Assembling machine 3 \\n[entity=electric-furnace] Electric furnace \\n[entity=recycler] Recycler \\n[entity=chemical-plant] Chemical plant \\n[entity=centrifuge] Centrifuge", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "autoplace-control-names/vulcanus_volcanism", "en": "Vulcanus volcanism", "hint": "Vulcanus volcanism", "reason": "no-arabic"}
-{"module": "space-age", "key": "map-gen-preset-name/vulcanus", "en": "Vulcanus", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-description/turbo-underground-belt", "en": "Used to allow a belt to cross entities or impassable terrain.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-description/cargo-bay", "en": "Increases the hub and landing pad inventory size, and adds an additional cargo hatch.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-description/landing-pad-unloading-bay", "en": "Allows inserters to remove items from the shared inventory when attached to a cargo landing pad.", "hint": "", "reason": "missing"}
@@ -1888,73 +1880,11 @@
 {"module": "space-age", "key": "entity-description/cargo-pod-container", "en": "Appears on the planet's surface with cargo from the space platform. It is destroyed upon removing the cargo.\\nWhen [entity=cargo-landing-pad] is built, delivery pods stop arriving at the initial coordinates, and cargo is delivered directly there.", "hint": "يظهر على سطح الكوكب مع الشحنة من منصة الفضاء. يتم تدميره عند إزالة الشحنة.\\nعند بناء[entity=cargo-landing-pad]، تتوقف الكبسولات عن الوصول إلى الإحداثيات الأولية، وتتم توصيل الشحنة مباشرةً إلى هناك.", "reason": "not-involutive"}
 {"module": "space-age", "key": "entity-description/asteroid-collector", "en": "Collects asteroid chunks. Bigger asteroids must be broken up into chunks by turrets.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-description/yumako-tree", "en": "A Gleba tree that yields nutritious yumako fruit.", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/huge-volcanic-rock-hot", "en": "Huge hot volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-volcanic-rock-hot", "en": "Big hot volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/fulgora-sunk-ruin-big", "en": "Big flooded Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/fulgora-sunk-ruin-medium-tall", "en": "Medium flooded Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/landing-pad-unloading-bay", "en": "Landing pad unloading bay", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/tesla-turret-slow", "en": "Tesla turret slow", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/turbo-underground-belt", "en": "Turbo underground belt", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/turbo-splitter", "en": "Turbo splitter", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/cliff-vulcanus", "en": "Vulcanus cliff", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/cliff-gleba", "en": "Gleba cliff", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/cliff-fulgora", "en": "Plateau edge", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/slipstack", "en": "Slipstack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/cuttlepop", "en": "Cuttlepop", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/sunnycomb", "en": "Sunnycomb", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/teflilly", "en": "Teflilly", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/yumako-tree", "en": "Yumako tree", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/boompuff", "en": "Boompuff", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/funneltrunk", "en": "Funneltrunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/hairyclubnub", "en": "Hairy clubnub", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/jellystem", "en": "Jellystem", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/lickmaw", "en": "Lickmaw", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/stingfrond", "en": "Stingfrond", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/ashland-lichen-tree", "en": "Ashland tree", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/ashland-lichen-tree-flaming", "en": "Flaming ashland tree", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/rocket-turret", "en": "Rocket turret", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/lithium-iceberg-huge", "en": "Huge lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/lithium-iceberg-big", "en": "Big lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/gleba-spawner", "en": "Egg raft", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/gleba-spawner-small", "en": "Small egg raft", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/gleba-spawner-corpse", "en": "Gleba spawner corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/gleba-spawner-corpse-small", "en": "Small Gleba spawner corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-stomper-pentapod", "en": "Small stomper pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-strafer-pentapod", "en": "Small strafer pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-wriggler-pentapod", "en": "Small wriggler pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-wriggler-pentapod-corpse", "en": "Small wriggler pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-wriggler-pentapod-premature", "en": "Small premature wriggler pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-stomper-pentapod", "en": "Medium stomper pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-strafer-pentapod", "en": "Medium strafer pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-wriggler-pentapod", "en": "Medium wriggler pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-wriggler-pentapod-corpse", "en": "Medium wriggler pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-wriggler-pentapod-premature", "en": "Medium premature wriggler pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-stomper-pentapod", "en": "Big stomper pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-strafer-pentapod", "en": "Big strafer pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-wriggler-pentapod", "en": "Big wriggler pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-wriggler-pentapod-corpse", "en": "Big wriggler pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-wriggler-pentapod-premature", "en": "Big premature wriggler pentapod", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-stomper-corpse", "en": "Small stomper pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-stomper-corpse", "en": "Medium stomper pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-stomper-corpse", "en": "Big stomper pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-strafer-corpse", "en": "Small strafer pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-strafer-corpse", "en": "Medium strafer pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-strafer-corpse", "en": "Big strafer pentapod corpse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-stomper-shell", "en": "Small stomper pentapod shell", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-stomper-shell", "en": "Medium stomper pentapod shell", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-stomper-shell", "en": "Big stomper pentapod shell", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/fusion-generator", "en": "Fusion generator", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/stack-inserter", "en": "Stack inserter", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-fulgora-rock", "en": "Big Fulgora rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/small-demolisher", "en": "Small demolisher", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/medium-demolisher", "en": "Medium demolisher", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/big-demolisher", "en": "Big demolisher", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-segment", "en": "__1__ segment", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-tail", "en": "__1__ tail", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-corpse", "en": "__1__ remains", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-ash-cloud", "en": "__1__ ash cloud", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-expanding-ash-cloud", "en": "__1__ expanding ash cloud __2__", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/demolisher-ash-cloud-visual-dummy", "en": "Demolisher ash cloud (visual dummy)", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-fissure", "en": "__1__ erupting fissure", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-fissure-scorchmark", "en": "__1__ fissure scorchmark", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-fissure-explosion", "en": "__1__ fissure explosion", "hint": "", "reason": "missing"}
@@ -1962,150 +1892,6 @@
 {"module": "space-age", "key": "entity-name/demolisher-ash-cloud-trail", "en": "__1__ ash cloud trail", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-trail-upper", "en": "__1__ trail upper", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "entity-name/demolisher-trail-lower", "en": "__1__ trail lower", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/vulcanus-cliff-collapse", "en": "Vulcanus cliff collapse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/iron-stromatolite", "en": "Iron stromatolite", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/copper-stromatolite", "en": "Copper stromatolite", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/water-cane", "en": "Water cane", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "entity-name/wube-logo-space-platform", "en": "Wube logo (space platform)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/black-sceptre", "en": "Black sceptre", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pink-phalanges", "en": "Pink phalanges", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-cup", "en": "Green cup", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-water", "en": "Coral (water)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-land", "en": "Coral (land)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-stunted", "en": "Stunted coral", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/coral-stunted-grey", "en": "Stunted coral grey", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-1x1", "en": "Yellow lettuce lichen 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-3x3", "en": "Yellow lettuce lichen 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-6x6", "en": "Yellow lettuce lichen 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-cups-1x1", "en": "Yellow lettuce lichen cups 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-cups-3x3", "en": "Yellow lettuce lichen cups 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-lettuce-lichen-cups-6x6", "en": "Yellow lettuce lichen cups 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/honeycomb-fungus", "en": "Medium honeycomb fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/honeycomb-fungus-1x1", "en": "Small honeycomb fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/honeycomb-fungus-decayed", "en": "Dead honeycomb fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-1x1", "en": "Green lettuce lichen 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-3x3", "en": "Green lettuce lichen 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-6x6", "en": "Green lettuce lichen 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-1x1", "en": "Green lettuce lichen water 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-3x3", "en": "Green lettuce lichen water 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/green-lettuce-lichen-water-6x6", "en": "Green lettuce lichen water 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-1x1", "en": "Pale lettuce lichen 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-3x3", "en": "Pale lettuce lichen 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-6x6", "en": "Pale lettuce lichen 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-1x1", "en": "Pale lettuce lichen water 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-3x3", "en": "Pale lettuce lichen water 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-water-6x6", "en": "Pale lettuce lichen water 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-1x1", "en": "Small split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-2x2", "en": "Medium split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-dying-1x1", "en": "Small dying split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-dying-2x2", "en": "Medium dying split gill lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-red-1x1", "en": "Small split gill lichen red", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/split-gill-red-2x2", "en": "Medium split gill lichen red", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fuchsia-pita", "en": "Fuchsia pita", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/wispy-lichen", "en": "Wispy lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/mycelium", "en": "Mycelium", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/veins", "en": "Vein", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/veins-small", "en": "Small vein", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-fulgoran-gravewort", "en": "Small Fulgoran gravewort", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/medium-fulgoran-gravewort", "en": "Medium Fulgoran gravewort", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/urchin-cactus", "en": "Urchin cactus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/brambles", "en": "Brambles", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/blood-grape", "en": "Blood grape", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/blood-grape-vibrant", "en": "Blood grape red", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/brown-cup", "en": "Brown cup", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/polycephalum-slime", "en": "Polycephalum slime", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/polycephalum-balloon", "en": "Polycephalum balloon", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/curly-roots-orange", "en": "Curly roots orange", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/curly-roots-grey", "en": "Curly roots grey", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-1x1", "en": "Pale lettuce lichen cups 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-3x3", "en": "Pale lettuce lichen cups 3x3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pale-lettuce-lichen-cups-6x6", "en": "Pale lettuce lichen cups 6x6", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/gleba-spawner-slime", "en": "Spawning foam", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/medium-volcanic-rock", "en": "Medium volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-volcanic-rock", "en": "Small volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/tiny-volcanic-rock", "en": "Tiny volcanic rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/tiny-rock-cluster", "en": "Pebbles", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-sulfur-rock", "en": "Small sulfur rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/tiny-sulfur-rock", "en": "Tiny sulfur rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/sulfur-rock-cluster", "en": "Pebbles", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/v-green-hairy-grass", "en": "Vulcanus green grass", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/v-brown-hairy-grass", "en": "Vulcanus brown grass", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/v-brown-carpet-grass", "en": "Vulcanus carpet grass", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/v-red-pita", "en": "Vulcanus pita", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-rock-decal-large", "en": "Large volcanic stone", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal", "en": "Large cold cracks", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal-large", "en": "Huge cold cracks", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal-huge-warm", "en": "Huge warm cracks", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-crack-decal-warm", "en": "Large warm cracks", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/calcite-stain", "en": "Calcite stain", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/calcite-stain-small", "en": "Calcite stain", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/sulfur-stain", "en": "Sulfur stain", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/sulfur-stain-small", "en": "Sulfur stain", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/sulfuric-acid-puddle", "en": "Sulfuric acid puddle", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/sulfuric-acid-puddle-small", "en": "Sulfuric acid puddle", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/crater-small", "en": "Small crater", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/crater-large", "en": "Large crater", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pumice-relief-decal", "en": "Rock decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-sand-decal", "en": "Vulcanus sand decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-dune-decal", "en": "Vulcanus dune decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/vulcanus-lava-fire", "en": "Lava edge fire", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/waves-decal", "en": "Waves", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/barnacles-decal", "en": "Barnacles decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/grey-cracked-mud-decal", "en": "Grey cracked mud decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/pink-lichen-decal", "en": "Pink lichen decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/lithium-iceberg-medium", "en": "Medium lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/lithium-iceberg-small", "en": "Small lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/lithium-iceberg-tiny", "en": "Tiny lithium ice formation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-tiny", "en": "Space platform decorative tiny", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-1x1", "en": "Space platform decorative 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-2x2", "en": "Space platform decorative 2x2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-4x4", "en": "Space platform decorative 4x4", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-1x1", "en": "Space platform decorative pipes 1x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-1x2", "en": "Space platform decorative pipes 1x2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/space-platform-decorative-pipes-2x1", "en": "Space platform decorative pipes 2x1", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/medium-fulgora-rock", "en": "Medium Fulgora rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/small-fulgora-rock", "en": "Small Fulgora rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/tiny-fulgora-rock", "en": "Tiny Fulgora rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgoran-ruin-tiny", "en": "Tiny Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-big-decal", "en": "Big flooded Fulgoran ruin decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-medium", "en": "Medium flooded Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/fulgora-sunk-ruin-small", "en": "Small flooded Fulgoran ruin", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/solo-barnacle", "en": "Solo Barnacle", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/yellow-coral", "en": "Yellow coral", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/matches-small", "en": "Small match fungus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/white-carpet-grass", "en": "White carpet grass", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/nerve-roots-dense", "en": "Nerve roots dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/nerve-roots-sparse", "en": "Nerve roots sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/red-nerve-roots-veins-dense", "en": "Red Nerve root veins dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/red-nerve-roots-veins-sparse", "en": "Red Nerve root veins sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/purple-nerve-roots-veins-dense", "en": "Purple Nerve root veins dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/purple-nerve-roots-veins-sparse", "en": "Purple Nerve root veins sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/cream-nerve-roots-veins-dense", "en": "Cream Nerve root veins dense", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/cream-nerve-roots-veins-sparse", "en": "Cream Nerve root veins sparse", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/knobbly-roots", "en": "Knobbly roots", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/knobbly-roots-orange", "en": "Knobbly roots orange", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/red-lichen-decal", "en": "Red lichen decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/floating-iceberg-large", "en": "Big floating iceberg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/floating-iceberg-small", "en": "Small floating iceberg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/aqulio-ice-decal-blue", "en": "Ice decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/aqulio-snowy-decal", "en": "Light snow decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "decorative-name/snow-drift-decal", "en": "Snow drift decal", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "equipment-name/toolbelt-equipment", "en": "Toolbelt equipment", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "equipment-name/battery-mk3-equipment", "en": "Personal battery MK3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "equipment-name/fusion-reactor-equipment", "en": "Portable fusion reactor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/ammoniacal-solution", "en": "Ammoniacal solution", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/lithium-brine", "en": "Lithium brine", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/fluorine", "en": "Fluorine", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/fluoroketone-cold", "en": "Fluoroketone (Cold)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/fluoroketone-hot", "en": "Fluoroketone (Hot)", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/ammonia", "en": "Ammonia", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/molten-copper", "en": "Molten copper", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/molten-iron", "en": "Molten iron", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/holmium-solution", "en": "Holmium solution", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/electrolyte", "en": "Electrolyte", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/thruster-fuel", "en": "Thruster fuel", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/thruster-oxidizer", "en": "Thruster oxidizer", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fluid-name/fusion-plasma", "en": "Plasma", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "fluid-description/thruster-fuel", "en": "Liquid thruster fuel", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "fluid-description/fusion-plasma", "en": "Ultra-high-temperature ions generated in [entity=fusion-reactor] and consumed by a [entity=fusion-generator]. It is not a normal fluid and cannot be moved in [entity=pipe], it can only be moved through the Fusion reactor and Fusion generator.\\nThe temperature of plasma determines its energy value.\\nA quantity of plasma also represents that amount of coolant that travels with it, and the heated coolant is output by the Fusion generator as the plasma is used for energy.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "item-description/space-science-pack", "en": "Used by labs for research. Obtained by processing asteroids in space.", "hint": "", "reason": "missing"}
@@ -2131,192 +1917,13 @@
 {"module": "space-age", "key": "item-description/foundation", "en": "Engineered structural foundation with heat shielding and deep screw piles. Can be placed on lava, oil ocean, and most water.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "item-description/yumako-seed", "en": "Can be planted on yumako soil.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "item-description/jellynut-seed", "en": "Can be planted on jellynut soil.", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/metallic-asteroid-chunk", "en": "Metallic asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/carbonic-asteroid-chunk", "en": "Carbonic asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/oxide-asteroid-chunk", "en": "Oxide asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "asteroid-chunk-name/promethium-asteroid-chunk", "en": "Promethium asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/yumako-mash", "en": "Yumako mash", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/jelly", "en": "Jelly", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/iron-bacteria", "en": "Iron bacteria", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/copper-bacteria", "en": "Copper bacteria", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/bioflux", "en": "Bioflux", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/artificial-yumako-soil", "en": "Artificial yumako soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/overgrowth-yumako-soil", "en": "Overgrowth yumako soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/artificial-jellynut-soil", "en": "Artificial jellynut soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/overgrowth-jellynut-soil", "en": "Overgrowth jellynut soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/nutrients", "en": "Nutrients", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/jellynut", "en": "Jellynut", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/yumako-seed", "en": "Yumako seed", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/jellynut-seed", "en": "Jellynut seed", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/ice", "en": "Ice", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/scrap", "en": "Scrap", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/space-platform-foundation", "en": "Space platform foundation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/space-platform-starter-pack", "en": "Space platform starter pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/agricultural-science-pack", "en": "Agricultural science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/metallic-asteroid-chunk", "en": "Metallic asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/carbonic-asteroid-chunk", "en": "Carbonic asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/oxide-asteroid-chunk", "en": "Oxide asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/promethium-asteroid-chunk", "en": "Promethium asteroid chunk", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/big-mining-drill", "en": "Big mining drill", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/calcite", "en": "Calcite", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/captive-biter-spawner", "en": "Captive biter spawner", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/capture-robot-rocket", "en": "Capture bot rocket", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/carbon", "en": "Carbon", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/crusher", "en": "Crusher", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/cryogenic-plant", "en": "Cryogenic plant", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/cryogenic-science-pack", "en": "Cryogenic science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/promethium-science-pack", "en": "Promethium science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/electromagnetic-science-pack", "en": "Electromagnetic science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/fusion-power-cell", "en": "Fusion power cell", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/holmium-ore", "en": "Holmium ore", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/holmium-plate", "en": "Holmium plate", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/lithium", "en": "Lithium", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/lithium-plate", "en": "Lithium plate", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/mech-armor", "en": "Mech armor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/metallurgic-science-pack", "en": "Metallurgic science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/railgun-ammo", "en": "Railgun ammo", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/supercapacitor", "en": "Supercapacitor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/superconductor", "en": "Superconductor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/tesla-ammo", "en": "Tesla ammo", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/teslagun", "en": "Tesla gun", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/tungsten-carbide", "en": "Tungsten carbide", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/tungsten-ore", "en": "Tungsten ore", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/tungsten-plate", "en": "Tungsten plate", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/turbo-splitter", "en": "Turbo splitter", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/turbo-transport-belt", "en": "Turbo transport belt", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/turbo-underground-belt", "en": "Turbo underground belt", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/yumako", "en": "Yumako", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/spoilage", "en": "Spoilage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/carbon-fiber", "en": "Carbon fiber", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/biter-egg", "en": "Biter egg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/pentapod-egg", "en": "Pentapod egg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/ice-platform", "en": "Ice platform", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "item-name/foundation", "en": "Foundation", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "modifier-description/belt-stack-size-bonus", "en": "Transport belt capacity: +__1__", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "modifier-description/railgun-shooting-speed-bonus", "en": "Railgun shooting speed: +__1__", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "modifier-description/railgun-damage-bonus", "en": "Railgun damage: +__1__", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "modifier-description/tesla-damage-bonus", "en": "Tesla damage: +__1__", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "modifier-description/rail-support-on-deep-oil-ocean", "en": "Allows building elevated rails also on the deep parts of the oil ocean.", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/molten-iron-from-lava", "en": "Molten iron from lava", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/molten-copper-from-lava", "en": "Molten copper from lava", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/iron-ore-melting", "en": "Iron ore melting", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/copper-ore-melting", "en": "Copper ore melting", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/yumako-processing", "en": "Yumako processing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/rocket-fuel-from-jelly", "en": "Rocket fuel from jelly", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/jellynut-processing", "en": "Jellynut processing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/iron-bacteria", "en": "Iron bacteria", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/iron-bacteria-cultivation", "en": "Iron bacteria cultivation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/copper-bacteria", "en": "Copper bacteria", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/copper-bacteria-cultivation", "en": "Copper bacteria cultivation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/burnt-spoilage", "en": "Burnt spoilage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/nutrients-from-spoilage", "en": "Nutrients from spoilage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/nutrients-from-yumako-mash", "en": "Nutrients from yumako mash", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/nutrients-from-bioflux", "en": "Nutrients from bioflux", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/nutrients-from-fish", "en": "Nutrients from fish", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/nutrients-from-biter-egg", "en": "Nutrients from biter egg", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/biosulfur", "en": "Biosulfur", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/biolubricant", "en": "Biolubricant", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/fish-breeding", "en": "Fish breeding", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/simple-coal-liquefaction", "en": "Simple coal liquefaction", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/coal-synthesis", "en": "Coal synthesis", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/advanced-metallic-asteroid-crushing", "en": "Advanced metallic asteroid crushing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/advanced-carbonic-asteroid-crushing", "en": "Advanced carbonic asteroid crushing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/advanced-oxide-asteroid-crushing", "en": "Advanced oxide asteroid crushing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/ice-melting", "en": "Ice melting", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/metallic-asteroid-crushing", "en": "Metallic asteroid crushing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/metallic-asteroid-reprocessing", "en": "Metallic asteroid reprocessing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/carbonic-asteroid-crushing", "en": "Carbonic asteroid crushing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/carbonic-asteroid-reprocessing", "en": "Carbonic asteroid reprocessing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/oxide-asteroid-crushing", "en": "Oxide asteroid crushing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/oxide-asteroid-reprocessing", "en": "Oxide asteroid reprocessing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/fluoroketone", "en": "Fluoroketone", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/fluoroketone-cooling", "en": "Cooling hot fluoroketone", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/bioplastic", "en": "Bioplastic", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/acid-neutralisation", "en": "Acid neutralisation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/ammoniacal-solution-separation", "en": "Ammoniacal solution separation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/solid-fuel-from-ammonia", "en": "Solid fuel from ammonia", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/advanced-thruster-fuel", "en": "Advanced thruster fuel", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/advanced-thruster-oxidizer", "en": "Advanced thruster oxidizer", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/concrete-from-molten-iron", "en": "Concrete from molten iron", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-low-density-structure", "en": "Casting low density structure", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-iron", "en": "Casting iron", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-steel", "en": "Casting steel", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-copper", "en": "Casting copper", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-iron-gear-wheel", "en": "Casting iron gear wheel", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-iron-stick", "en": "Casting iron stick", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-pipe", "en": "Casting pipe", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-pipe-to-ground", "en": "Casting pipe to ground", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/casting-copper-cable", "en": "Casting copper cable", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/steam-condensation", "en": "Steam condensation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "recipe-name/ammonia-rocket-fuel", "en": "Ammonia rocket fuel", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "recipe-description/ammoniacal-solution-separation", "en": "[fluid=ammoniacal-solution] is gained by an [entity=offshore-pump] in the oceans of [planet=aquilo].", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "recipe-description/ammonia-rocket-fuel", "en": "A convenient use of ammonia.", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/space-platform", "en": "Space platform", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/landing-pad-unloading-bay", "en": "Landing pad unloading bay", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/bioflux", "en": "Bioflux", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/bacteria-cultivation", "en": "Bacteria cultivation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/artificial-soil", "en": "Artificial soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/stack-inserter", "en": "Stack inserter", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/transport-belt-capacity", "en": "Transport belt capacity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/toolbelt-equipment", "en": "Toolbelt equipment", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/fish-breeding", "en": "Fish breeding", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/space-platform-thruster", "en": "Space platform thruster", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/planet-discovery-vulcanus", "en": "Planet discovery Vulcanus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/planet-discovery-gleba", "en": "Planet discovery Gleba", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/planet-discovery-aquilo", "en": "Planet discovery Aquilo", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/electric-weapons-damage", "en": "Electric weapons damage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/scrap-recycling-productivity", "en": "Scrap recycling productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/battery-mk3-equipment", "en": "Personal battery MK3", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/fusion-reactor-equipment", "en": "Portable fusion reactor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/artillery-shell-damage", "en": "Artillery shell damage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/foundry", "en": "Foundry", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/tungsten-carbide", "en": "Tungsten carbide", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/tungsten-steel", "en": "Tungsten steel", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/turbo-transport-belt", "en": "Turbo transport belt", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/big-mining-drill", "en": "Big mining drill", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/metallurgic-science-pack", "en": "Metallurgic science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/laser-weapons-damage", "en": "Laser weapons damage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/railgun-shooting-speed", "en": "Railgun shooting speed", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/railgun-damage", "en": "Railgun damage", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/mech-armor", "en": "Mech armor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/agriculture", "en": "Agriculture", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/captivity", "en": "Captivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/captive-biter-spawner", "en": "Captive biter spawner", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/jellynut", "en": "Jellynut", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/bioflux-processing", "en": "Bioflux processing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/biochamber", "en": "Biochamber", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/agricultural-science-pack", "en": "Agricultural science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/biter-egg-handling", "en": "Biter egg handling", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/overgrowth-soil", "en": "Overgrowth soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/holmium-processing", "en": "Holmium processing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/electromagnetic-plant", "en": "Electromagnetic plant", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/electromagnetic-science-pack", "en": "Electromagnetic science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/rail-support-foundations", "en": "Rail support foundations", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/tesla-weapons", "en": "Tesla weapons", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/heating-tower", "en": "Heating tower", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/cryogenic-plant", "en": "Cryogenic plant", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/cryogenic-science-pack", "en": "Cryogenic science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/fusion-reactor", "en": "Fusion reactor", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/research-productivity", "en": "Research productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/asteroid-productivity", "en": "Asteroid productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/asteroid-reprocessing", "en": "Asteroid reprocessing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/advanced-asteroid-processing", "en": "Advanced asteroid processing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/lightning-collector", "en": "Lightning collector", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/processing-unit-productivity", "en": "Processing unit productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/steel-plate-productivity", "en": "Steel plate productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/low-density-structure-productivity", "en": "Low density structure productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/plastic-bar-productivity", "en": "Plastic bar productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/rocket-fuel-productivity", "en": "Rocket fuel productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/rocket-part-productivity", "en": "Rocket part productivity", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/yumako", "en": "Yumako", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/rocket-turret", "en": "Rocket turret", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/carbon-fiber", "en": "Carbon fiber", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/calcite-processing", "en": "Calcite processing", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/promethium-science-pack", "en": "Promethium science pack", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/foundation", "en": "Foundation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "technology-name/stellar-discovery-solar-system-edge", "en": "Stellar discovery solar system edge", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "technology-description/space-platform", "en": "Process asteroid chunks into useful materials.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "technology-description/bioflux", "en": "A combination of different plants could have a lot of uses.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "technology-description/bioflux-processing", "en": "Using bioflux to get chemicals in a biological way.", "hint": "", "reason": "missing"}
@@ -2390,108 +1997,6 @@
 {"module": "space-age", "key": "technology-description/rocket-fuel-productivity", "en": "Increases productivity for rocket fuel recipes.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "technology-description/rocket-part-productivity", "en": "Increases productivity for rocket part crafting.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "technology-description/scrap-recycling-productivity", "en": "Increased yield from scrap recycling.", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-olive-blubber", "en": "Olive blubber lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-olive-blubber-2", "en": "Olive blubber", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-olive-blubber-3", "en": "Olive blubber bright", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-brown-blubber", "en": "Brown blubber", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-pale-green", "en": "Sickly blubber", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-cream-cauliflower", "en": "Cauliflower lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-cream-cauliflower-2", "en": "Cauliflower mold", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-cream-red", "en": "Cauliflower red mold", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-dead-skin", "en": "Deadskin mold", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-dead-skin-2", "en": "Deadskin mold bright", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-red-vein", "en": "Sanguine lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-red-vein-2", "en": "Red vein bulges", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-red-vein-3", "en": "Red vein dull", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-red-vein-4", "en": "Red vein bright", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-red-vein-dead", "en": "Red vein dead", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lowland-red-infection", "en": "Red infection", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-cracked-lichen", "en": "Cracked lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-cracked-lichen-dull", "en": "Cracked lichen dull", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-cracked-lichen-dark", "en": "Cracked lichen dark", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-turquoise-bark", "en": "Turquoise bark lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-turquoise-bark-2", "en": "Turquoise bark", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-yellow-crust", "en": "Orange crust lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-yellow-crust-2", "en": "Red crust lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-yellow-crust-3", "en": "Beige crust lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/midland-yellow-crust-4", "en": "Yellow crust lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/highland-dark-rock", "en": "Dark dry lichen", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/highland-dark-rock-2", "en": "Highland rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/highland-yellow-rock", "en": "Highland yellow rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/pit-rock", "en": "Pit rock", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/empty-space", "en": "Empty space", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/space-platform-foundation", "en": "Space platform foundation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/snow-flat", "en": "Snow flat", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/snow-crests", "en": "Snow crests", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/snow-lumpy", "en": "Snow lumpy", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/snow-patchy", "en": "Snow patchy", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/dust-flat", "en": "Dust flat", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/dust-crests", "en": "Dust crests", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/dust-lumpy", "en": "Dust lumpy", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/dust-patchy", "en": "Dust patchy", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/brash-ice", "en": "Brash ice", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/ice-rough", "en": "Rough ice", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/ice-smooth", "en": "Smooth ice", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/ice-platform", "en": "Ice platform", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-stone-path", "en": "Frozen stone path", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-concrete", "en": "Frozen concrete", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-foundation", "en": "Frozen foundation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-hazard-concrete-left", "en": "Frozen hazard concrete left", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-hazard-concrete-right", "en": "Frozen hazard concrete right", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-refined-concrete", "en": "Frozen refined concrete", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-refined-hazard-concrete-left", "en": "Frozen refined hazard concrete left", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/frozen-refined-hazard-concrete-right", "en": "Frozen refined hazard concrete right", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/oil-ocean-shallow", "en": "Oil ocean", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/oil-ocean-shallow-2", "en": "Oil ocean 2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/oil-ocean-deep", "en": "Deep oil ocean", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/oil-ocean-deep-2", "en": "Deep oil ocean 2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-yumako", "en": "Yumako wetland", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-jellynut", "en": "Jellynut wetland", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/ammoniacal-ocean", "en": "Ammoniacal ocean", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/ammoniacal-ocean-2", "en": "Ammoniacal ocean 2", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/natural-yumako-soil", "en": "Natural yumako soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/natural-jellynut-soil", "en": "Natural jellynut soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/artificial-yumako-soil", "en": "Artificial yumako soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/artificial-jellynut-soil", "en": "Artificial jellynut soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/overgrowth-yumako-soil", "en": "Overgrowth yumako soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/overgrowth-jellynut-soil", "en": "Overgrowth jellynut soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-light-green-slime", "en": "Light green marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-green-slime", "en": "Green marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-light-dead-skin", "en": "Light deadskin marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-dead-skin", "en": "Deadskin marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-pink-tentacle", "en": "Pink marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-red-tentacle", "en": "Red coral marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/wetland-blue-slime", "en": "Blue marsh", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/gleba-deep-lake", "en": "Deep lake", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lava-hot", "en": "Hot lava", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/lava", "en": "Lava", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-cracks-hot", "en": "Volcanic cracks hot", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-cracks-warm", "en": "Volcanic cracks warm", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-cracks", "en": "Volcanic cracks", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-smooth-stone", "en": "Volcanic smooth stone", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-smooth-stone-warm", "en": "Volcanic smooth stone warm", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-folds-warm", "en": "Volcanic folds warm", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-folds", "en": "Volcanic folds", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-folds-flat", "en": "Volcanic folds flat", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-jagged-ground", "en": "Volcanic jagged ground", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-pumice-stones", "en": "Volcanic pumice stones", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-soil-dark", "en": "Volcanic soil dark", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-soil-light", "en": "Volcanic soil light", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-ash-dark", "en": "Volcanic ash dark", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-ash-light", "en": "Volcanic ash light", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-ash-flats", "en": "Volcanic ash flat", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-ash-soil", "en": "Volcanic ash soil", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/volcanic-ash-cracks", "en": "Volcanic ash cracks", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/fulgoran-dunes", "en": "Fulgoran dunes", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/fulgoran-paving", "en": "Fulgoran paving", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/fulgoran-walls", "en": "Fulgoran walls", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/fulgoran-conduit", "en": "Fulgoran conduit", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/fulgoran-machinery", "en": "Fulgoran machinery", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "tile-name/foundation", "en": "Foundation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "ammo-category-name/railgun", "en": "Railgun", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "ammo-category-name/tesla", "en": "Tesla", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "ammo-category-name/seismic", "en": "Seismic", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "airborne-pollutant-name/spores", "en": "Spores", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "airborne-pollutant-name-with-amount/spores", "en": "__1__ __plural_for_parameter__1__{1=spore|rest=spores}__", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "achievement-name/second-star-to-the-right-and-straight-on-till-morning", "en": "Second star to the right and straight on till morning", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "achievement-name/rush-to-space", "en": "Rush to space", "hint": "", "reason": "missing"}
@@ -2556,11 +2061,6 @@
 {"module": "space-age", "key": "agricultural-tower-gui/seeds-description", "en": "Possible inputs", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "agricultural-tower-gui/modules", "en": "Modules", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "mod-description/space-age", "en": "Sky is not the limit!", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "space-location-name/vulcanus", "en": "Vulcanus", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "space-location-name/gleba", "en": "Gleba", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "space-location-name/aquilo", "en": "Aquilo", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "space-location-name/solar-system-edge", "en": "Solar system edge", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "space-location-name/shattered-planet", "en": "Shattered planet", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "space-location-description/vulcanus", "en": "A hot volcanic planet with mountainous volcanoes, rivers of lava, plains of ash, and sulfuric acid geysers. Rich in metals. Lava can only be crossed by elevated rail.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "space-location-description/gleba", "en": "A humid swampy planet with deep bogs. Wetland can support agriculture but is difficult to build on, it can be landfilled but stone is scarce.\\nSnaking hills have stone and are better to build on but can't support agriculture.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "space-location-description/fulgora", "en": "A dry wind-swept planet with lightning storms on plateaus, and oceans of oil that can be bridged by elevated rails.\\nThere appear to be some ruins.", "hint": "", "reason": "missing"}
@@ -2613,8 +2113,6 @@
 {"module": "space-age", "key": "noise-expression/fulgora_elevation", "en": "Fulgora elevation", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "noise-expression/fulgora_cliffiness", "en": "Fulgora cliffiness", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "noise-expression/aquilo_elevation", "en": "Aquilo elevation", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fuel-category-name/nutrients", "en": "Nutrients", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "fuel-category-name/fusion", "en": "Fusion fuel", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "gui-rocket-silo/auto-launch-tooltip", "en": "Launches the rocket automatically for space platforms.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "gui-map-editor-instructions/asteroid-chunks-only-buildable-on-platforms", "en": "Asteroid chunks can only be built on space platforms.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "gui-asteroid-collector/chunk-filter", "en": "Asteroid chunk filter", "hint": "", "reason": "missing"}
@@ -2628,6 +2126,25 @@
 {"module": "space-age", "key": "quality-tooltip/collection-arm-max-speed", "en": "The collector arms move faster at higher qualities.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "quality-tooltip/storage-size", "en": "Increases the storage size at higher qualities.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "quality-tooltip/collector-arm-storage-size", "en": "Increases the collector arm storage size at higher qualities.", "hint": "", "reason": "missing"}
-{"module": "space-age", "key": "surface-name/space-platform", "en": "Space platform", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "factoriopedia-description/fusion-generator", "en": "Consumes plasma from the [entity=fusion-reactor] to create electric energy. Power production is nominal, but less plasma is consumed if the temperature is higher. It outputs heated coolant equal to the amount of plasma consumed that can be cooled in an [entity=cryogenic-plant]. Fusion generators can be linked and transfer plasma to each other.", "hint": "", "reason": "missing"}
 {"module": "space-age", "key": "factoriopedia-description/fusion-reactor", "en": "Uses fluoroketone coolant with fusion power cells to make super-heated plasma. It can only be output directly to an [entity=fusion-generator]. The neighbor bonus with other fusion reactors greatly increases the plasma temperature without increasing the amount of coolant used.", "hint": "", "reason": "missing"}
+{"module": "base", "key": "map-gen-preset-description/lakes", "en": "Lakes with consistent size and cliffs that tend to follow the coastline. Forest paths are disabled. The same elevation as Factorio 1.1.", "hint": "بحيرات ذات حجم ثابت ومنحدرات تميل إلى اتباع الخط الساحلي. تم تعطيل مسارات الغابات. نفس الارتفاع مثل إصدار 1.1.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "/error-with-handler-failed", "en": "__1__\\nWhile handling this, an error handler caused another error:\\n__2__", "hint": "__1__\\n:أثناء التعامل مع هذا، تسبب معالج الخطأ في خطأ آخر\\n__2__", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "/error-with-handler-message", "en": "__1__\\nAn error handler added the following information:\\n__2__", "hint": "__1__\\n:أضاف معالج الخطأ المعلومات التالية\\n__2__", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "config-help/afk-auto-kick", "en": "<number> - Sets the time (in minutes) a player has to be inactive before they are auto-kicked. 0 means disabled.", "hint": "يحدد الوقت (بالدقائق) يجب أن يكون اللاعب غير نشط قبل أن يتم طرده تلقائيا. 0 يعني تعطيل - <number>", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "error/crash-to-desktop-message", "en": "Unexpected error occurred. If you're running the latest version of the game, you can help us resolve the problem by posting the contents of the log file on the Factorio forums.\\nPlease also include the save file(s), any mods you may be using, and any steps you know of to reproduce the crash.", "hint": ".Factoroالرجاء أيضًا تضمين ملف (ملفات) حفظ أي مودٍ قد تستخدمه، وأي خطوات تعرفها لاستنساخ التعطل.\\nحدث خطأ غير متوقع. إذا كنت تشغل أحدث إصدار من اللعبة، يمكنك مساعدتنا في حل المشكلة من خلال نشر محتويات ملف السجل على منتديات ", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-auth-server/login-banned", "en": "Your account has been banned. If you believe this is in error, please contact support@factorio.com.", "hint": "لقد تم حظر حسابك. إن كنت تعتقد أن هنالك خطأً، الرجاء التواصل على factorio.com@support.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-browse-games/has-friends", "en": "Steam friends in game", "hint": "أصدقاء steam في اللعبة", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-graphics-settings-description/full-color-depth", "en": "Rendering in only half (16-bit) color depth improves performance on low-end and integrated GPUs. This option only has an effect on Windows 8+ or in the OpenGL renderer.", "hint": "معالجة فقط نصف عمق الألوان (bit-16) يزيد الأداء في كروت الشاشة منخفضة الأداء أو المدمجة مع المعالج,  هذا الخيار له تأثير فقط على Windows 8+ أو في OpenGL.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-graphics-settings-description/video-memory-budget-label", "en": "The maximum size of video memory (VRAM) the game is allowed to use for textures (sprites).", "hint": "الحد الأقصى لحجم ذاكرة الفيديو (VRAM) المسموح للعبة باستخدامها في معالجة التشابك البصري (sprites).", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-editor-instructions/build-cliffs", "en": "__1__ to build cliffs.", "hint": "__1__ لبناء المنحدرات.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-editor-instructions/remove-cliffs", "en": "__1__ to remove cliffs.", "hint": "__1__ لإزالة المنحدرات.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-editor-title/cliff-editor", "en": "Cliffs", "hint": "المنحدرات", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-editor/cliffs", "en": "Cliffs", "hint": "المنحدرات", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-generator/cliff-continuity-description", "en": "The length of unbroken cliff segments.", "hint": "طول المنحدرات التي لم تنقطع.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-generator/cliff-frequency-description", "en": "The number of cliffs.", "hint": "عدد المنحدرات.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-map-generator/custom", "en": "[modified]", "hint": "[modified]", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-other-settings/enable-logitech-led-support", "en": "Enable Logitech LED support", "hint": "تمكين Logitech LED support", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-other-settings/enable-razer-chroma-support", "en": "Enable Razer Chroma support", "hint": "تمكين Razer Chroma support", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-other-settings/enable-steelseries-gamesense-support", "en": "Enable SteelSeries GameSense support", "hint": "تمكين SteelSeries GameSense support", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "multiplayer/player-banned-by-authserver", "en": "You are banned in this game by authserver recommendation. To appeal contact support@factorio.com.", "hint": "تم حظرك في هذا الخادم عن طريق توصية الخادم. للاعتراض، تواصل على factorio.com@support.", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}

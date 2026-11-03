@@ -1,3 +1,18 @@
+{"module": "core", "key": "gui-selector/select-highest-quality", "en": "Highest quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-lowest-quality", "en": "Lowest quality", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-max", "en": "Sort descending", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-min", "en": "Sort ascending", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/select-sort-description", "en": "Sort input signals by count ascending/descending, before applying index.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/stack-size", "en": "Stack size", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/stack-size-description", "en": "Outputs the stack size of the input signals.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/time", "en": "Time", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-selector/time-description", "en": "Outputs the game tick, day time in ticks, and number of ticks through the current day.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/alerts-config", "en": "Alerts configuration", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/blueprint-library-locked", "en": "Blueprint library is not relevant yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/bonuses-locked", "en": "No bonuses unlocked yet.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/factoriopedia", "en": "Factoriopedia (__ALT_CONTROL__1__open-factoriopedia__ when hovering over an object)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/logistic-networks", "en": "Logistic networks (__CONTROL__logistic-networks__)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-side-menu/logistic-networks-locked", "en": "No logistic networks present.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-side-menu/map", "en": "Map (__CONTROL__toggle-map__)\\n__CONTROL_KEY_SHIFT____CONTROL_STYLE_BEGIN__ + Mouse wheel__CONTROL_STYLE_END__ to zoom in and out.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-side-menu/master-mute-muted", "en": "Muted", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-side-menu/master-mute-no-audio", "en": "No audio", "hint": "", "reason": "missing"}
@@ -103,18 +118,3 @@
 {"module": "core", "key": "gui-text-tags/following-text-recipe-with-quality", "en": " [Recipe: __1__ __2__]", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-text-tags/following-text-shortcut", "en": " [Shortcut: __1__]", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-text-tags/following-text-space-location", "en": " [Space location: __1__]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/following-text-space-location-with-quality", "en": " [Space location: __1__ __2__]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/following-text-space-platform-no-name", "en": " [Space platform]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/following-text-space-platform-with-name", "en": " [Space platform: __1__]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/following-text-tip", "en": " [Tip: __1__]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/following-text-virtual-signal-with-quality", "en": " [Virtual signal: __1__ __2__]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/following-text-wrong-tip-name", "en": " [Tip named __1__ doesn't exist]", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-text-tags/gps-invalid-platform", "en": "Invalid space platform specified", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-tips-and-tricks/cheat-mode", "en": "Cheat mode was activated, new tips won't appear on this save.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-tips-and-tricks/mark-as-unread", "en": "Mark as unread", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-tips-and-tricks/new-tip", "en": "New tip:", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-tips-and-tricks/not-a-freeplay", "en": "New tips appear only in freeplay or tutorial scenarios.", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-tips-and-tricks/nothing-selected", "en": "No tips and tricks selected", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-train-state/destination-full", "en": "[img=utility/destination_full_icon] Destination full __1__", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-train-state/heading-to", "en": "Heading to __1__ __REMARK_COLOR_BEGIN__[__2__m]__REMARK_COLOR_END__", "hint": "__REMARK_COLOR_BEGIN__[m__2__]__REMARK_COLOR_END__العنوان إلى __1__ ", "reason": "not-involutive"}
-{"module": "core", "key": "gui-train-state/manually-stopped", "en": "[img=utility/warning_icon] Manually stopped", "hint": "توقف يدوي [img=Uity/warning_icon]", "reason": "tokens"}

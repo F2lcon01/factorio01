@@ -1,3 +1,15 @@
+{"module": "core", "key": "gui-migrated-content/removed-asteroid-chunk", "en": "Removed asteroid chunks", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-collision-layer", "en": "Removed collision layers", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-custom-event", "en": "Removed custom events", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-equipment", "en": "Removed equipment", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-quality", "en": "Removed qualities", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-migrated-content/removed-space-location", "en": "Removed space locations", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mining-drill/blacklist", "en": "Blacklist", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mining-drill/filter", "en": "Filter", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mining-drill/whitelist", "en": "Whitelist", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-info/mod-portal-page", "en": "Mod portal", "hint": "Mod portal", "reason": "no-arabic"}
+{"module": "core", "key": "gui-mod-info/recommended-dependency", "en": "(recommended)", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-mod-load-error/circular-dependencies", "en": "Circular dependencies detected", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-mod-load-error/dependency-incompatible", "en": "Incompatible with __1__", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-mod-load-error/dependency-missing", "en": "Missing required dependency __1__", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-mod-load-error/dependency-not-satisfied", "en": "Dependency __1__ is not satisfied (active: __2__)", "hint": "", "reason": "missing"}
@@ -49,6 +61,9 @@
 {"module": "core", "key": "gui-orbital-request/set-orbital-request", "en": "Set orbital request", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-other-settings-description/move-character-to-editor-on-editor-exit", "en": "If enabled, will move your real in-game location to the editor location. If disabled, will return to your original in-game location before you opened the editor.", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-other-settings/delete-achievements-label-tooltip-modded", "en": "This will permanently delete all modded achievements.", "hint": "", "reason": "missing"}
+{"module": "core", "key": "gui-other-settings/enable-logitech-led-support", "en": "Enable Logitech LED support", "hint": "تمكين Logitech LED support", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-other-settings/enable-razer-chroma-support", "en": "Enable Razer Chroma support", "hint": "تمكين Razer Chroma support", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
+{"module": "core", "key": "gui-other-settings/enable-steelseries-gamesense-support", "en": "Enable SteelSeries GameSense support", "hint": "تمكين SteelSeries GameSense support", "reason": "review (fix reversed line / leftover English / cliff = جرف، أجراف)"}
 {"module": "core", "key": "gui-other-settings/move-character-to-editor-on-editor-exit", "en": "Move player to editor location on exit", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-other-settings/proxy", "en": "Proxy server", "hint": "Proxy server", "reason": "no-arabic"}
 {"module": "core", "key": "gui-other-settings/proxy-password", "en": "Proxy server password", "hint": "Proxy server password", "reason": "no-arabic"}
@@ -103,18 +118,3 @@
 {"module": "core", "key": "gui-redo-action/add-wires-header", "en": "Redo addition of", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-redo-action/build-entities-header", "en": "Redo construction of", "hint": "", "reason": "missing"}
 {"module": "core", "key": "gui-redo-action/build-tiles-header", "en": "Redo placement of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/copy-entity-settings-header", "en": "Redo copying settings to", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/install-modules-header", "en": "Redo installation of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/remove-entities-header", "en": "Redo deconstruction of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/remove-tiles-header", "en": "Redo removal of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/remove-wires-header", "en": "Redo removal of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/rotate-entity-header", "en": "Redo rotation of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/uninstall-modules-header", "en": "Redo uninstallation of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-action/upgrade-entities-header", "en": "Redo upgrade of", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-confirmation/are-you-sure", "en": "Are you sure you want to redo an action from __1__ ago?\\n\\n__2__", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-confirmation/confirm-redo", "en": "Redo", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-heterogeneous", "en": "Redo addition of __1__ wires", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-homogeneous", "en": "Redo addition of __1__ wires (× __2__)", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-tooltip/redo-added-wire-single", "en": "Redo addition of __1__ wire", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-heterogeneous", "en": "Redo construction of __1__ entities", "hint": "", "reason": "missing"}
-{"module": "core", "key": "gui-redo-tooltip/redo-built-entity-homogeneous", "en": "Redo construction of __1__ (× __2__)", "hint": "", "reason": "missing"}
