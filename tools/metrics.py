@@ -29,6 +29,8 @@ def char_px(c):
 
 
 def _token_px(tok):
+    if tok.startswith('[tooltip='):  # its visible text is rendered
+        return _shaped_px(tok[len('[tooltip='):].split(',', 1)[0])
     if tok.startswith('['):
         return TOKEN_PX['icon']
     if tok.startswith('__plural'):

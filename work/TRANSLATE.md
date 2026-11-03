@@ -48,6 +48,9 @@ input JSON it appears as `"\\n"`. Your `ar` must contain the same number of thes
    - "condition" = «شرط» (circuit condition = «شرط الدائرة», wait condition = «شرط الانتظار»).
    - "tick(s)" = «تكة / تكات»; "Factoriopedia" = «موسوعة فاكتوريو».
    - Chat-command keywords, `<parameters>`, typed literals ("everybody confirm"), Lua, RGBA stay Latin exactly.
+   - `[tooltip=Visible text,locale-key]`: translate the visible text, keep `,locale-key]` exactly
+     (e.g. `[tooltip=صناديق المزود,tips-and-tricks-item-description.storage-chest-list]`).
+   - active / passive provider chest = «صندوق مزود نشط» / «صندوق مزود خامل».
 8. `glossary.json` now holds 1055 settled names (including all Space Age names). Every prototype name you mention
    must be the glossary form — e.g. «منصة الفضاء»، «مسبك»، «حزام نقل توربو»، «نوفيس»، «فولكانوس».
 7. Every `ar` must contain Arabic letters (except pure numbers/tokens/brand names where the English has no real words).

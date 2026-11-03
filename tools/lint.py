@@ -12,7 +12,11 @@ LATIN_RE = re.compile(r'[A-Za-z]{2,}')
 FORBIDDEN_RE = re.compile(r'[\uFB50-\uFDFF\uFE70-\uFEFF\uE000-\uF8FF\u200E\u200F\u202A-\u202E\u2066-\u2069]')
 
 
+TOOLTIP_TEXT = re.compile(r'\[tooltip=[^,\]]*,')  # visible text of [tooltip=text,key] is translatable
+
+
 def signature(s):
+    s = TOOLTIP_TEXT.sub('[tooltip=*,', s)
     plurals = [f'P{n}' for n, _ in PLURAL_RE.findall(s)]
     return collections.Counter(TOKEN_RE.findall(PLURAL_RE.sub('', s)) + plurals)
 

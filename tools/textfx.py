@@ -15,7 +15,8 @@ INLINE_RE = re.compile(INLINE)
 LTR = r"[A-Za-z0-9](?:[A-Za-z0-9 .,:/%+\-_'×]*[A-Za-z0-9%])?"
 UNIT_RE = re.compile(f'{INLINE}|{LTR}|.', re.S)
 MIRROR = dict(zip('()[]{}<>«»', ')(][}{><»«'))
-ARABIC_RE = re.compile(r'[؀-ۿﭐ-﷿ﹰ-﻿]')  # logical or presentation forms
+ARABIC_RE = re.compile('[\\u0600-\\u06FF\\uFB50-\\uFDFF\\uFE70-\\uFEFF]')  # logical or presentation forms
+TOOLTIP_RE = re.compile(r'(\[tooltip=)([^,\]]*)(,[^\]]*\])')  # [tooltip=visible text,locale-key]
 _RESHAPER = arabic_reshaper.ArabicReshaper(configuration={'delete_harakat': True})
 
 
@@ -25,6 +26,9 @@ def _unit(u):
         forms = [f.partition('=') for f in m.group(2).split('|')]
         return m.group(1) + '|'.join(f'{c}={_reverse_run(t)}' if eq else _reverse_run(c)
                                      for c, eq, t in forms) + m.group(3)
+    m = TOOLTIP_RE.fullmatch(u)
+    if m and ARABIC_RE.search(m.group(2)):  # visible text is shown: it follows the line's direction
+        return m.group(1) + _reverse_run(m.group(2)) + m.group(3)
     return MIRROR.get(u, u)
 
 
