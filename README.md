@@ -32,6 +32,15 @@ python -E -m tools.scenario_check           # المحرك يقرأ نص الس�
 > التثبيت بـ PowerShell لا Python: نسخة Python من Microsoft Store تحوّل كتاباتها تحت `%APPDATA%`
 > إلى نسخة خاصة لا تراها اللعبة (مُثبت). `tools/install.py` يرفض عمداً ويشير إلى `install.ps1`.
 
+## النشر
+منشور على [mods.factorio.com/mod/arabic-complete](https://mods.factorio.com/mod/arabic-complete) (1.0.0، SHA1 مطابق لـ `dist`).
+```powershell
+python -E -m tools.package 1.0.1                                   # zip + صورة + Crowdin + crowdin-diff.csv
+pwsh -NoProfile -File tools\publish.ps1 -Version 1.0.1 -DryRun     # فحص محلي
+pwsh -NoProfile -File tools\publish.ps1 -Version 1.0.1 -Update     # إصدار جديد؛ يطلب المفتاح بإدخال مخفي
+```
+قبل كل إصدار: ارفع `version` و أضف قسماً في `mod/changelog.txt` (يُفحص صيغته `tools.package`).
+
 ## الاسترجاع
 ```powershell
 powershell -NoProfile -File tools\install.ps1 -Uninstall   # تعطيل + نقل المود إلى %APPDATA%\Factorio\mods-parked (لا حذف)
