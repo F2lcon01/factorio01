@@ -1,2 +1,5 @@
 * text=auto eol=lf
 *.png binary
+# files players open in Notepad / cmd.exe keep Windows line endings
+*.cmd eol=crlf
+mod/README-AR.txt eol=crlf
