@@ -49,6 +49,7 @@ if ($Update) {
         file = Get-Item $zip; description = $desc; category = $meta.category; license = $meta.license }
 }
 if (-not $res.success) { throw "$($res.error): $($res.message)" }
-$d = Invoke-RestMethod -Method Post -Uri "$base/edit_details" -Headers $h -Form @{ mod = $name; title = $meta.title; summary = $meta.summary }
+$d = Invoke-RestMethod -Method Post -Uri "$base/edit_details" -Headers $h -Form @{
+    mod = $name; title = $meta.title; summary = $meta.summary; description = $desc }   # page text follows every release
 if (-not $d.success) { throw "details: $($d.error): $($d.message)" }
 Write-Output "published: https://mods.factorio.com/mod/$name"

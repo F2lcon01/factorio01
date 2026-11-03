@@ -5,6 +5,7 @@ import csv, re, sys, zipfile
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from tools.build import build
+from tools.bundle import add_tools
 from tools.cfg import read_cfg
 from tools.paths import DIST, GAME_DATA, MODULES, REPORTS, ROOT, read_en
 from tools.textfx import from_visual, to_visual
@@ -77,6 +78,7 @@ def main(version):
     if errs:
         sys.exit('changelog invalid: ' + '; '.join(errs))
     mod = build(version)
+    print('tools:', add_tools(mod))   # temporary language tool for players, inside the mod
     crowdin = build(version, shape=False)
     print('mod zip:', zip_dir(mod, DIST / f'{mod.name}.zip'))
     print('crowdin zip:', zip_dir(crowdin, DIST / f'{crowdin.name}.zip'))

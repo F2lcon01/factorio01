@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.24
+Date: 2026-11-03
+  Features:
+    - The mod version now follows the game version (2.1.24).
+    - arabic-tools folder (temporary, until an official Arabic release): Arabic / English switcher with a
+      game-version check, "matching" status or a one-click Fix. Read arabic-tools/README-AR.txt.
+  Bugfixes:
+    - Freeplay intro text, version message and one achievement name corrected.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2026-11-03
   Features:
