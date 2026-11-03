@@ -31,6 +31,8 @@ def build(version: str, shape: bool = True, out_root: Path = DIST) -> Path:
         info['name'] = name
     (mod / 'info.json').write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     shutil.copy(ROOT / 'mod' / 'changelog.txt', mod / 'changelog.txt')
+    if shape and (ROOT / 'mod' / 'thumbnail.png').exists():  # shown by the game and the mod portal
+        shutil.copy(ROOT / 'mod' / 'thumbnail.png', mod / 'thumbnail.png')
     return mod
 
 
