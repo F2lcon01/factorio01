@@ -35,14 +35,15 @@ def _visible_len(text):
     return len(INLINE_RE.sub('xx', FORMAT_RE.sub('', text)))
 
 
-def wrap_logical(text, width):
-    """Hard-wrap logical text at word boundaries; tokens never split."""
+def wrap_logical(text, width, measure=_visible_len):
+    """Hard-wrap logical text at word boundaries; tokens never split.
+    `measure` maps a logical line to its width (chars by default, pixels via tools.metrics.line_px)."""
     out = []
     for para in text.split(NL):
         words, line = re.findall(f'(?:{INLINE}|\\S)+', para), ''
         for w in words:
             cand = f'{line} {w}' if line else w
-            if line and _visible_len(cand) > width:
+            if line and measure(cand) > width:
                 out.append(line)
                 line = w
             else:
@@ -51,8 +52,8 @@ def wrap_logical(text, width):
     return NL.join(out)
 
 
-def to_visual(logical, *, shape=True, wrap=None):
-    text = wrap_logical(logical, wrap) if wrap and _visible_len(logical) > wrap else logical
+def to_visual(logical, *, shape=True, wrap=None, measure=_visible_len):
+    text = wrap_logical(logical, wrap, measure) if wrap and measure(logical) > wrap else logical
     lines = []
     for line in text.split(NL):
         if shape:
