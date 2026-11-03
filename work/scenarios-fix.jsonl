@@ -1,0 +1,40 @@
+{"file": "base/campaigns/tutorial/level-05/locale/demo_level-05.cfg", "key": "final-screen/text-demo", "ar": "[font=heading-2]تهانينا، لقد وصلت إلى نهاية العرض التجريبي.[/font][font=default]\\n\\nيمكنك مواصلة اللعب في هذا المستوى قدر ما تشاء.\\n\\nنأمل أن تفكر في شراء Factorio لفتح كامل محتوى اللعبة، حيث ستتمكن من:[/font]"}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/goal-close-inserter-gui", "ar": "أغلق نافذة الذراع الآلي (اضغط __CONTROL__open-character-gui__)."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-mine-iron-ore-precise", "ar": "استخرج الحديد الخام (اضغط مطولا على __CONTROL__mine__): __1__/__2__"}
+{"file": "base/scenarios/pvp/locale/pvp.cfg", "key": "/base_exclusion_time", "ar": "مدة حظر دخول القواعد"}
+{"file": "base/scenarios/pvp/locale/pvp.cfg", "key": "/base-exclusion-ends", "ar": "انتهت مدة حظر دخول القواعد."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-mine-iron-ore", "ar": "اقترب من منجم الحديد الخام وضع المؤشر عليه."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-mine-iron-ore-controller", "ar": "اقترب من منجم الحديد الخام لتحديده."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-insert-iron-into-furnace", "ar": "ضع الحديد الخام في خانة الموارد في الفرن الحجري."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/msg-furnace-working", "ar": "يصهر الفرن الحجري الآن الحديد الخام إلى صفائح حديدية."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-craft-burner-miner", "ar": "اصنع حفار تنقيب بدائيا."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-add-filter", "ar": "أضف حفار التنقيب البدائي إلى الشريط السريع أسفل الشاشة باستخدام __CONTROL__pick-item__."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-place-burner-miner", "ar": "ابنِ حفار التنقيب البدائي على الأرض فوق منجم."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-insert-fuel-into-burner-miner", "ar": "ضع بعض الوقود في حفار التنقيب البدائي."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/msg-burner-miner-resources-placement", "ar": "يلقي حفار التنقيب الموارد المستخرجة أمامه."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/think-storage-needed", "ar": "يمكنني بناء شيء ما هنا لجمع الموارد من حفار التنقيب."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-put-chest-below-burner-miner", "ar": "ابنِ الصندوق الخشبي عند موضع إسقاط حفار التنقيب."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-remove-blocking-entity", "ar": "شيء ما يعيق حفار التنقيب البدائي. أزل المبنى المحدد باستخدام __CONTROL__mine__."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/msg-entity-blocking-miner", "ar": "هذا الشيء يعيق حفار التنقيب البدائي. عليك إزالته."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/msg-mined-burner-miner-instead-of-open", "ar": "هنالك مشكلة! قمت بهدم حفار التنقيب بدلا من فتح واجهة المستخدم الخاصة به. يمكنك فتحها بالضغط على __CONTROL__open-gui__."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "/goal-mine-burner-miner", "ar": "اهدم حفار التنقيب."}
+{"file": "base/campaigns/tutorial/level-01/locale/demo_level-01.cfg", "key": "entity-description/iron-plate", "ar": "المنتج المنصهر من الحديد الخام."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/goal-rotate-inserter-2", "ar": "أدر الذراع الآلي بالضغط على __CONTROL__rotate__ والمؤشر فوقه، بحيث يضع الحديد الخام في الفرن الحجري."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/goal-rotate-inserter-2-controller", "ar": "أدر الذراع الآلي بالضغط على __CONTROL__rotate__ أثناء تحديده، بحيث يضع الحديد الخام في الفرن الحجري."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/think-automated-stone-mining", "ar": "قضيت الكثير من الوقت في استخراج هذا الحجر. يجب أن أستخدم أول حفار تنقيب بدائي لدي ليستخرجه بدلا مني."}
+{"file": "base/campaigns/tutorial/level-03/locale/demo_level-03.cfg", "key": "/msg-factory-instruction-2", "ar": "استخدم حفار التنقيب الكهربائي لاستخراج الموارد. إنه أسرع بكثير من حفار التنقيب البدائي."}
+{"file": "base/campaigns/tutorial/level-03/locale/demo_level-03.cfg", "key": "/think-electric-mining", "ar": "يمكنني استخدام حفارات التنقيب الكهربائية. فهي أسرع بكثير من حفارات التنقيب البدائية."}
+{"file": "base/campaigns/tutorial/level-05/locale/demo_level-05.cfg", "key": "/iron-processing-stop", "ar": "[img=item/iron-ore] معالجة الحديد الخام"}
+{"file": "base/campaigns/tutorial/level-05/locale/demo_level-05.cfg", "key": "/iron-mine-stop", "ar": "[img=item/iron-ore] منجم الحديد الخام"}
+{"file": "base/tutorials/entity-transfers/locale/entity-transfers.cfg", "key": "/ctrl-click-to-furnaces", "ar": "استخدم خاصية النقل السريع الجديدة لأخذ الفحم والحديد الخام من الصندوق، وإدخالهما في جميع الأفران."}
+{"file": "base/tutorials/trains-stations/locale/trains-stations.cfg", "key": "/load-wagon", "ar": "ابنِ أذرعا آلية لتحميل العربة بالحديد الخام."}
+{"file": "base/tutorials/trains-stations/locale/trains-stations.cfg", "key": "/unload-train", "ar": "أفرغ الحديد الخام من عربة نقل البضائع، وأدخله في الأفران."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/goal-open-machine-gui", "ar": "افتح الذراع الآلي البدائي (اضغط __CONTROL__open-gui__)."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/goal-insert-fuel-into-inserter-1", "ar": "ضع الوقود في الذراع الآلي البدائي."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-inserter-2-reversed", "ar": "أما الذراع الآلي البدائي الثاني، فاعكس اتجاهه."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/goal-build-inserter-back", "ar": "أعد بناء الذراع الآلي البدائي."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-inserter-1-wrong-position", "ar": "تم بناء الذراع الآلي البدائي في الموقع الخاطئ."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-inserter-2-wrong-position", "ar": "تم بناء الذراع الآلي البدائي في الموقع الخاطئ."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-mined-inserter-instead-of-open", "ar": "قمت بتفكيك الذراع الآلي البدائي بدلاً من فتحه. أعد بناءه ثم فتحه بالضغط على __CONTROL__open-gui__."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-mined-inserter-instead-of-open-2", "ar": "قمت بتفكيك الذراع الآلي البدائي بدلاً من تدويره. أعد بناءه ثم قم بتدويره بالضغط على __CONTROL__rotate__."}
+{"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-inserter-2-reversed", "ar": "الذراع الآلي البدائي الثاني معكوس الاتجاه."}
