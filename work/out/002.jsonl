@@ -1,0 +1,120 @@
+{"module": "core", "key": "/years-ago", "ar": "منذ __1__ __plural_for_parameter__1__{1=سنة|2=سنتين|rest=سنوات}__"}
+{"module": "core", "key": "achievement-progress/already-won", "ar": "سبق الفوز باللعبة في ملف الحفظ هذا."}
+{"module": "core", "key": "achievement-progress/not-a-freeplay-map", "ar": "لا يمكن فتحه إلا في خريطة اللعب الحر."}
+{"module": "core", "key": "achievement-progress/not-in-no-enemies-mode", "ar": "لا يمكن فتحه في وضع بدون أعداء."}
+{"module": "core", "key": "achievement-progress/not-in-peaceful-mode", "ar": "لا يمكن فتحه في الوضع السلمي."}
+{"module": "core", "key": "achievement-progress/not-with-bigger-starting-area", "ar": "لا يمكن فتحه عند تكبير منطقة البداية."}
+{"module": "core", "key": "achievement-progress/not-with-easier-enemy-evolution-settings", "ar": "لا يمكن فتحه مع إعدادات أسهل لتطور الأعداء."}
+{"module": "core", "key": "achievement-progress/not-with-easier-enemy-expansion-settings", "ar": "لا يمكن فتحه مع إعدادات أسهل لتوسع الأعداء."}
+{"module": "core", "key": "achievement-progress/not-with-easier-pollution-settings", "ar": "لا يمكن فتحه مع إعدادات أسهل للتلوث."}
+{"module": "core", "key": "achievement-progress/not-with-extra-trees", "ar": "لا يمكن فتحه عندما يكون توليد الأشجار أعلى من الافتراضي."}
+{"module": "core", "key": "achievement-progress/not-with-lower-enemies", "ar": "لا يمكن فتحه عند ضبط قواعد الأعداء على أقل من الافتراضي."}
+{"module": "core", "key": "achievement-progress/too-slow", "ar": "لقد استغرقت وقتاً طويلاً جداً."}
+{"module": "core", "key": "achievement-progress/you-built-it", "ar": "لقد بنيت عدداً كبيراً جداً من الكيانات المحظورة."}
+{"module": "core", "key": "achievement-progress/you-crafted-too-many", "ar": "لقد صنعت أكثر من اللازم!"}
+{"module": "core", "key": "achievement-progress/you-killed-it", "ar": "لقد دمرت كياناً يدوياً."}
+{"module": "core", "key": "achievement-progress/you-produced-energy", "ar": "لقد أنتجت طاقة باستخدام أحد الكيانات المحظورة."}
+{"module": "core", "key": "achievement-progress/you-researched-science-too-early", "ar": "لقد أجريت بحث حُزمة العلوم في وقت مبكر جداً."}
+{"module": "core", "key": "alerts-config-gui/column-disabled", "ar": "معطل"}
+{"module": "core", "key": "alerts-config-gui/column-icon", "ar": "الأيقونة"}
+{"module": "core", "key": "alerts-config-gui/column-muted", "ar": "مكتوم"}
+{"module": "core", "key": "alerts-config-gui/column-name", "ar": "الاسم"}
+{"module": "core", "key": "alerts-config-gui/column-time", "ar": "الأحدث"}
+{"module": "core", "key": "alerts-config-gui/disabled-label", "ar": ""}
+{"module": "core", "key": "alerts-config-gui/muted-label", "ar": ""}
+{"module": "core", "key": "alerts-config-gui/name-collector_path_blocked", "ar": "جامع الكويكبات محجوب"}
+{"module": "core", "key": "alerts-config-gui/name-custom", "ar": "تنبيه مخصص"}
+{"module": "core", "key": "alerts-config-gui/name-entity_destroyed", "ar": "تم تدمير كيان"}
+{"module": "core", "key": "alerts-config-gui/name-entity_under_attack", "ar": "كيان يتعرض للضرر"}
+{"module": "core", "key": "alerts-config-gui/name-expansion_base_built", "ar": "تم رصد قاعدة توسع للأعداء"}
+{"module": "core", "key": "alerts-config-gui/name-fluid_mixing", "ar": "تم خلط السوائل"}
+{"module": "core", "key": "alerts-config-gui/name-no_material_for_construction", "ar": "نقص المواد اللازمة للبناء"}
+{"module": "core", "key": "alerts-config-gui/name-no_platform_storage", "ar": "مساحة تخزين مركز المنصة غير كافية"}
+{"module": "core", "key": "alerts-config-gui/name-no_roboport_storage", "ar": "خانات الروبوتات الفارغة في مركز الروبوتات غير كافية"}
+{"module": "core", "key": "alerts-config-gui/name-no_storage", "ar": "مساحة تخزين الشبكة اللوجستية غير كافية"}
+{"module": "core", "key": "alerts-config-gui/name-not_enough_construction_robots", "ar": "روبوتات البناء غير كافية"}
+{"module": "core", "key": "alerts-config-gui/name-not_enough_repair_packs", "ar": "نقص حزم الإصلاح"}
+{"module": "core", "key": "alerts-config-gui/name-pipeline_overextended", "ar": "خط الأنابيب تجاوز الطول الأقصى"}
+{"module": "core", "key": "alerts-config-gui/name-platform_tile_building_blocked", "ar": "منصة الفضاء لا تستطيع وضع البلاط"}
+{"module": "core", "key": "alerts-config-gui/name-train_no_path", "ar": "القطار لا يجد مساراً"}
+{"module": "core", "key": "alerts-config-gui/name-train_out_of_fuel", "ar": "نفد الوقود من القطار"}
+{"module": "core", "key": "alerts-config-gui/name-turret_fire", "ar": "البرج يشتبك مع العدو"}
+{"module": "core", "key": "alerts-config-gui/name-turret_out_of_ammo", "ar": "نفدت ذخيرة البرج"}
+{"module": "core", "key": "alerts-config-gui/name-unclaimed_cargo", "ar": "عناصر غير مستلمة في الانتظار"}
+{"module": "core", "key": "alerts-config-gui/time-ago", "ar": "منذ __1__"}
+{"module": "core", "key": "alerts-config-gui/time-never", "ar": "أبداً"}
+{"module": "core", "key": "alerts-config-gui/title", "ar": "إعدادات التنبيهات"}
+{"module": "core", "key": "cant-build-reason/bad-surface-conditions", "ar": "لا يمكن بناء __1__ على هذا السطح."}
+{"module": "core", "key": "cant-build-reason/mixing-fluids", "ar": "لا يمكن توصيل خطوط أنابيب مختلفة السوائل"}
+{"module": "core", "key": "cant-build-reason/not-place-for-rail-support", "ar": "يجب بناء __1__ في الموضع المخصص أسفل الجسر"}
+{"module": "core", "key": "cant-build-reason/tile-connectivity-violated", "ar": "لا يسمح __1__ ببناء فراغات أو أقسام منفصلة."}
+{"module": "core", "key": "cant-build-reason/too-many-cargo-landing-pads", "ar": "يمكنك بناء __1__ __plural_for_parameter__1__{1=منصة هبوط الحمولة|rest=منصات هبوط الحمولة}__ فقط على كل سطح."}
+{"module": "core", "key": "chartbundle-state/creating-archive", "ar": "جار إنشاء الأرشيف"}
+{"module": "core", "key": "chartbundle-state/done", "ar": "تم"}
+{"module": "core", "key": "chartbundle-state/error", "ar": "فشلت العملية: __1__"}
+{"module": "core", "key": "chartbundle-state/gathering-data", "ar": "جار جمع البيانات"}
+{"module": "core", "key": "chartbundle-state/rendering-charts", "ar": "جار رسم الخرائط"}
+{"module": "core", "key": "chartbundle-state/rendering-icons", "ar": "جار رسم الأيقونات"}
+{"module": "core", "key": "chartbundle-state/saving-sprites", "ar": "جار حفظ الرسوميات"}
+{"module": "core", "key": "chartbundle-state/server-package-processing", "ar": "جار معالجة الحزمة على الخادم"}
+{"module": "core", "key": "chartbundle-state/uploading-archive", "ar": "جار رفع الأرشيف"}
+{"module": "core", "key": "collector-context/circuit-condition", "ar": "في شرط الدائرة __1__"}
+{"module": "core", "key": "collector-context/description", "ar": "الوصف __1__"}
+{"module": "core", "key": "collector-context/filter", "ar": "الفلتر"}
+{"module": "core", "key": "collector-context/filter-of", "ar": "الفلتر __1__"}
+{"module": "core", "key": "collector-context/formula", "ar": "في الصيغة __1__"}
+{"module": "core", "key": "collector-context/inventory-filter", "ar": "فلتر المخزون"}
+{"module": "core", "key": "collector-context/name", "ar": "الاسم __1__"}
+{"module": "core", "key": "collector-context/of-something", "ar": "في __1__"}
+{"module": "core", "key": "collector-context/output", "ar": "المُخرج"}
+{"module": "core", "key": "collector-context/recipe", "ar": "الوصفة"}
+{"module": "core", "key": "collector-context/request", "ar": "الطلب __1__×__2__"}
+{"module": "core", "key": "collector-context/schedule-entry", "ar": "بند الجدول __1__"}
+{"module": "core", "key": "collector-context/signal", "ar": "الإشارة __1__×__2__"}
+{"module": "core", "key": "collector-context/train", "ar": "في القطار"}
+{"module": "core", "key": "collector-context/train-group", "ar": "مجموعة القطارات __1__"}
+{"module": "core", "key": "collector-context/train-named", "ar": "في القطار __1__"}
+{"module": "core", "key": "collector-context/train-stop-limit", "ar": "حد محطة قطار"}
+{"module": "core", "key": "collector-context/train-stop-priority", "ar": "أولوية محطة قطار"}
+{"module": "core", "key": "collector-context/wait-condition-damage", "ar": "مقدار الضرر في شرط الانتظار: «__1__»"}
+{"module": "core", "key": "collector-context/wait-condition-item", "ar": "العنصر في شرط الانتظار: «__1__»"}
+{"module": "core", "key": "collector-context/wait-condition-station", "ar": "اسم المحطة في شرط الانتظار: «__1__»"}
+{"module": "core", "key": "collector-context/wait-condition-ticks", "ar": "عدد التكات في شرط الانتظار: «__1__»"}
+{"module": "core", "key": "command-help/alerts", "ar": "<enable/disable/mute/unmute> <alert> - يفعل نوع التنبيه المحدد أو يعطله أو يكتمه أو يلغي كتمه."}
+{"module": "core", "key": "command-help/ban", "ar": "<player> <reason> - يحظر اللاعب المحدد."}
+{"module": "core", "key": "command-help/banlist", "ar": "<add/remove/get/clear> <player> - يضيف لاعباً إلى قائمة الحظر أو يزيله منها. يماثل /ban أو /unban."}
+{"module": "core", "key": "command-help/cheat", "ar": "<all> - يبحث جميع التقنيات ويشغل وضع الغش. استخدام الخيار <all> يمنح اللاعب أيضاً بعض العناصر الإضافية.\\n <planet-name> - ينقل اللاعب إلى الكوكب المحدد.\\n <platform-name> - ينقل اللاعب إلى المنصة المحددة.\\n <off> - يوقف وضع الغش."}
+{"module": "core", "key": "command-help/color", "ar": "<color> - يغير لونك. يمكن أن يكون أحد الألوان المحددة مسبقاً أو قيم RGBA بالتنسيق \"# # # #\"."}
+{"module": "core", "key": "command-help/command", "ar": "<command> - ينفذ أمر Lua (إن كان مسموحاً)."}
+{"module": "core", "key": "command-help/delete-blueprint-library", "ar": "<player> - يحذف مخزن مكتبة المخططات للاعب المحدد غير المتصل من ملف الحفظ. أدخل \"everybody confirm\" لحذف مخزن جميع اللاعبين غير المتصلين."}
+{"module": "core", "key": "command-help/demote", "ar": "<player> - يزيل صلاحيات المشرف من اللاعب."}
+{"module": "core", "key": "command-help/evolution", "ar": "<surface> - يعرض معلومات عن عامل تطور الكائنات الفضائية."}
+{"module": "core", "key": "command-help/help", "ar": "<command> - يعرض قائمة بالأوامر المتاحة. يمكن للوسيط الاختياري تحديد الأمر المراد شرحه."}
+{"module": "core", "key": "command-help/ignore", "ar": "<player> - يمنع الدردشة من عرض رسائل هذا اللاعب. تظل رسائل المشرفين معروضة."}
+{"module": "core", "key": "command-help/kick", "ar": "<player> <reason> - يطرد اللاعب المحدد."}
+{"module": "core", "key": "command-help/large-blueprint-size", "ar": "<set/get> <number> - يضبط أو يقرأ الحد الذي يعتبر عنده المخطط «كبيراً» (بالبايت). نسخ المخططات الكبيرة يستخدم النسخة «الكبيرة» من إجراء المُدخلات، والتي يمكن السماح بها أو تعطيلها اختيارياً عبر نظام الأذونات."}
+{"module": "core", "key": "command-help/measured-command", "ar": "<command> - ينفذ أمر Lua (إن كان مسموحاً) ويقيس الوقت الذي استغرقه."}
+{"module": "core", "key": "command-help/mute", "ar": "<player> - يمنع اللاعب من قول أي شيء في الدردشة."}
+{"module": "core", "key": "command-help/mute-programmable-speaker", "ar": "<mute/unmute> <local/everyone> - يكتم أو يلغي كتم أصوات الكون والسطح الصادرة عن سماعة مبرمجة. استخدم \"local\" للكتم على جهازك المحلي فقط. يمكن للمشرفين استخدام \"everyone\" لكتم الأصوات لكل من على الخادم."}
+{"module": "core", "key": "command-help/open", "ar": "<player> - يفتح مخزون لاعب آخر."}
+{"module": "core", "key": "command-help/promote", "ar": "<player> - يرقي اللاعب إلى مشرف."}
+{"module": "core", "key": "command-help/purge", "ar": "<player> - يمسح جميع رسائل هذا اللاعب من سجل الدردشة."}
+{"module": "core", "key": "command-help/reply", "ar": "<message> - يرد على آخر لاعب همس لك."}
+{"module": "core", "key": "command-help/save", "ar": "<name> - يحفظ اللعبة الحالية بالاسم المحدد."}
+{"module": "core", "key": "command-help/screenshot", "ar": "<x resolution> <y resolution> <zoom> - يلتقط لقطة شاشة بإعدادات العرض الحالية، أو بالدقة المحددة. التكبير اختياري وقيمته الافتراضية 1."}
+{"module": "core", "key": "command-help/shout", "ar": "<message> - يرسل رسالة إلى جميع اللاعبين بما في ذلك الفرق الأخرى."}
+{"module": "core", "key": "command-help/silent-command", "ar": "<command> - ينفذ أمر Lua (إن كان مسموحاً) دون طباعته في وحدة التحكم."}
+{"module": "core", "key": "command-help/space-platform-delete-time", "ar": "<number> - يحدد عدد التكات بين طلب حذف منصة الفضاء وحذفها فعلياً."}
+{"module": "core", "key": "command-help/swap-players", "ar": "<player> <player> - يبادل الشخصيات بين اللاعبين المحددين. إن لم يحدد اللاعب الثاني فهو أنت."}
+{"module": "core", "key": "command-help/unban", "ar": "<player> - يرفع الحظر عن اللاعب المحدد."}
+{"module": "core", "key": "command-help/unignore", "ar": "<player> - يسمح للدردشة بعرض رسائل هذا اللاعب."}
+{"module": "core", "key": "command-help/unmute", "ar": "<player> - يسمح للاعب بالتحدث في الدردشة مجدداً."}
+{"module": "core", "key": "command-help/whisper", "ar": "<player> <message> - يرسل رسالة إلى اللاعب المحدد."}
+{"module": "core", "key": "command-help/whitelist", "ar": "<enable/disable/add/remove/get/clear> <player> - يفعل القائمة البيضاء أو يعطلها، أو يضيف لاعباً إليها أو يزيله منها، وعندها لا ينضم إلى اللعبة إلا اللاعبون المدرجون فيها. لا تدخل شيئاً مكان 'player' عند استخدام 'get' لعرض قائمة بجميع اللاعبين المدرجين في القائمة البيضاء."}
+{"module": "core", "key": "command-output/programmable-speaker-muted-everyone", "ar": "تم كتم أصوات الكون والسطح الصادرة عن سماعة مبرمجة لكل من على الخادم."}
+{"module": "core", "key": "command-output/programmable-speaker-muted-local", "ar": "تم كتم أصوات الكون والسطح الصادرة عن سماعة مبرمجة على الجهاز المحلي."}
+{"module": "core", "key": "command-output/programmable-speaker-unmuted-everyone", "ar": "تم إلغاء كتم أصوات الكون والسطح الصادرة عن سماعة مبرمجة لكل من على الخادم."}
+{"module": "core", "key": "command-output/programmable-speaker-unmuted-local", "ar": "تم إلغاء كتم أصوات الكون والسطح الصادرة عن سماعة مبرمجة على الجهاز المحلي."}
+{"module": "core", "key": "config-help/afk-auto-kick", "ar": "<number> - يحدد المدة (بالدقائق) التي يجب أن يبقى فيها اللاعب غير نشط قبل طرده تلقائياً. القيمة 0 تعني التعطيل."}
+{"module": "core", "key": "config-help/allow-commands", "ar": "<true/false/admins-only> - يحدد ما إذا كانت أوامر Lua مسموحة."}
+{"module": "core", "key": "config-help/allow-debug-settings", "ar": "<true/false> - يحدد ما إذا كانت إعدادات التصحيح غير البسيطة مسموحة للاعبين غير المشرفين."}

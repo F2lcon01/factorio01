@@ -42,6 +42,12 @@ input JSON it appears as `"\\n"`. Your `ar` must contain the same number of thes
    `reason` starting with `review` → the hint is the current text; fix exactly what the reason says (a line that
    starts with «.» or «:» is reversed — move the punctuation to the end; translate leftover English words except
    brand names, URLs and chat commands; "cliff/cliffs" = «جرف/أجراف»; "16-bit" stays "16-bit").
+9. Project decisions (binding):
+   - Plurals: `{1=مفرد|2=مثنى|3=جمع|4=جمع|…|10=جمع|rest=مفرد}` — write 3..10 as ten separate conditions
+     (e.g. `{1=دقيقة|2=دقيقتان|3=دقائق|…|10=دقائق|rest=دقيقة}`), never `rest=جمع`.
+   - "condition" = «شرط» (circuit condition = «شرط الدائرة», wait condition = «شرط الانتظار»).
+   - "tick(s)" = «تكة / تكات»; "Factoriopedia" = «موسوعة فاكتوريو».
+   - Chat-command keywords, `<parameters>`, typed literals ("everybody confirm"), Lua, RGBA stay Latin exactly.
 8. `glossary.json` now holds 1055 settled names (including all Space Age names). Every prototype name you mention
    must be the glossary form — e.g. «منصة الفضاء»، «مسبك»، «حزام نقل توربو»، «نوفيس»، «فولكانوس».
 7. Every `ar` must contain Arabic letters (except pure numbers/tokens/brand names where the English has no real words).

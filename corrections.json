@@ -19,5 +19,6 @@
  "space-age:entity-name/fulgoran-ruin-big": "أطلال فولغورية كبيرة",
  "space-age:entity-name/fulgoran-ruin-medium": "أطلال فولغورية متوسطة",
  "space-age:entity-name/fulgoran-ruin-small": "أطلال فولغورية صغيرة",
- "space-age:entity-name/captive-biter-spawner": "عش بايتر أسير"
+ "space-age:entity-name/captive-biter-spawner": "عش بايتر أسير",
+ "core:/years-ago": "منذ __1__ __plural_for_parameter__1__{1=سنة|2=سنتين|3=سنوات|4=سنوات|5=سنوات|6=سنوات|7=سنوات|8=سنوات|9=سنوات|10=سنوات|rest=سنة}__"
 }

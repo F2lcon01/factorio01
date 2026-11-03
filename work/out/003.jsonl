@@ -1,0 +1,120 @@
+{"module": "core", "key": "config-help/auto-pause-when-players-connect", "ar": "<true/false> - يحدد ما إذا كان الخادم يتوقف مؤقتاً بشكل تلقائي أثناء اتصال أحد اللاعبين."}
+{"module": "core", "key": "config-help/autosave-interval", "ar": "<number> - يحدد الفاصل الزمني للحفظ التلقائي (بالدقائق). القيمة 0 تعني التعطيل."}
+{"module": "core", "key": "config-help/autosave-only-on-server", "ar": "<true/false> - يحدد ما إذا كان الخادم وحده هو من ينشئ ملفات الحفظ التلقائي."}
+{"module": "core", "key": "config-help/description", "ar": "<description> - يحدد وصف الخادم (يمكن أن يكون فارغاً)."}
+{"module": "core", "key": "config-help/ignore-player-limit-for-returning-players", "ar": "<true/false> - يحدد ما إذا كان يتم تجاهل حد عدد اللاعبين في الخادم بالنسبة للاعبين العائدين."}
+{"module": "core", "key": "config-help/max-players", "ar": "<number> - يحدد الحد الأقصى لعدد اللاعبين المسموح لهم في هذا الخادم. القيمة 0 تعني عدم وجود حد."}
+{"module": "core", "key": "config-help/max-upload-slots", "ar": "<number> - يحدد الحد الأقصى لعدد فتحات الرفع. القيمة 0 تعني عدم وجود حد."}
+{"module": "core", "key": "config-help/max-upload-speed", "ar": "<number> - يحدد السرعة القصوى للرفع بالكيلوبايت في الثانية. القيمة 0 تعني عدم وجود حد."}
+{"module": "core", "key": "config-help/name", "ar": "<name> - يحدد اسم الخادم."}
+{"module": "core", "key": "config-help/only-admins-can-pause", "ar": "<true/false> - يحدد ما إذا كان الإيقاف المؤقت للعبة مسموحاً للمشرفين فقط."}
+{"module": "core", "key": "config-help/password", "ar": "<password> - يحدد كلمة مرور اللعب الجماعي. كلمة المرور الفارغة تعني عدم وجود كلمة مرور."}
+{"module": "core", "key": "config-help/require-user-verification", "ar": "<true/false> - يحدد ما إذا كان يجب تأكيد هوية المستخدم للانضمام إلى الخادم."}
+{"module": "core", "key": "config-help/tags", "ar": "<tags> - يحدد وسوم الخادم - قائمة من النصوص (يمكن أن تكون فارغة)."}
+{"module": "core", "key": "config-help/visibility-lan", "ar": "<true/false> - يحدد ما إذا كانت اللعبة مرئية على الشبكة المحلية (LAN)."}
+{"module": "core", "key": "config-help/visibility-public", "ar": "<true/false> - يحدد ما إذا كانت اللعبة مرئية للعامة."}
+{"module": "core", "key": "config-help/visibility-steam", "ar": "<true/false> - يحدد ما إذا كان بإمكان الأصدقاء الانضمام عبر Steam."}
+{"module": "core", "key": "config-output/afk-autokick-changed-to-minutes", "ar": "تم تغيير الطرد التلقائي للاعبين الخاملين (AFK) إلى __1__ __plural_for_parameter__1__{1=دقيقة|2=دقيقتين|3=دقائق|4=دقائق|5=دقائق|6=دقائق|7=دقائق|8=دقائق|9=دقائق|10=دقائق|rest=دقيقة}__."}
+{"module": "core", "key": "config-output/afk-autokick-interval-minutes", "ar": "طرد اللاعب إذا بقي خاملاً (AFK) لأكثر من __1__ __plural_for_parameter__1__{1=دقيقة|2=دقيقتين|3=دقائق|4=دقائق|5=دقائق|6=دقائق|7=دقائق|8=دقائق|9=دقائق|10=دقائق|rest=دقيقة}__."}
+{"module": "core", "key": "config-output/allow-commands", "ar": "السماح بأوامر Lua: __1__."}
+{"module": "core", "key": "config-output/autosave-changed-to-minutes", "ar": "تم تغيير الفاصل الزمني للحفظ التلقائي إلى __1__ __plural_for_parameter__1__{1=دقيقة|2=دقيقتين|3=دقائق|4=دقائق|5=دقائق|6=دقائق|7=دقائق|8=دقائق|9=دقائق|10=دقائق|rest=دقيقة}__."}
+{"module": "core", "key": "config-output/autosave-interval-minutes", "ar": "الحفظ التلقائي كل __1__ __plural_for_parameter__1__{1=دقيقة|2=دقيقتين|3=دقائق|4=دقائق|5=دقائق|6=دقائق|7=دقائق|8=دقائق|9=دقائق|10=دقائق|rest=دقيقة}__."}
+{"module": "core", "key": "control-keys/drag", "ar": "سحب"}
+{"module": "core", "key": "control-keys/left-option", "ar": "Option الأيسر"}
+{"module": "core", "key": "control-keys/media-eject", "ar": "وسائط: إخراج"}
+{"module": "core", "key": "control-keys/media-fast-forward", "ar": "وسائط: تقديم سريع"}
+{"module": "core", "key": "control-keys/media-next", "ar": "وسائط: التالي"}
+{"module": "core", "key": "control-keys/media-play", "ar": "وسائط: تشغيل"}
+{"module": "core", "key": "control-keys/media-play-pause", "ar": "وسائط: تشغيل/إيقاف مؤقت"}
+{"module": "core", "key": "control-keys/media-prev", "ar": "وسائط: السابق"}
+{"module": "core", "key": "control-keys/media-rewind", "ar": "وسائط: ترجيع"}
+{"module": "core", "key": "control-keys/media-stop", "ar": "وسائط: إيقاف"}
+{"module": "core", "key": "control-keys/option", "ar": "مفتاح Option"}
+{"module": "core", "key": "control-keys/right-option", "ar": "Option الأيمن"}
+{"module": "core", "key": "controls-description/alternative-gui-move-down", "ar": "مفتاح بديل للتنقل في واجهة المستخدم."}
+{"module": "core", "key": "controls-description/alternative-gui-move-left", "ar": "مفتاح بديل للتنقل في واجهة المستخدم."}
+{"module": "core", "key": "controls-description/alternative-gui-move-right", "ar": "مفتاح بديل للتنقل في واجهة المستخدم."}
+{"module": "core", "key": "controls-description/alternative-gui-move-up", "ar": "مفتاح بديل للتنقل في واجهة المستخدم."}
+{"module": "core", "key": "controls-description/back", "ar": "العودة إلى آخر نافذة مفتوحة."}
+{"module": "core", "key": "controls-description/cycle-quality-down", "ar": "يخفض جودة العنصر الموجود حالياً في المؤشر أو في شاشة الاختيار."}
+{"module": "core", "key": "controls-description/cycle-quality-up", "ar": "يرفع جودة العنصر الموجود حالياً في المؤشر أو في شاشة الاختيار."}
+{"module": "core", "key": "controls-description/editor-switch-to-surface", "ar": "ينتقل إلى السطح الذي تضغط رقمه مع مفتاح الاختصار هذا: __CONTROL__editor-switch-to-surface__ + 3 -> ينتقل إلى السطح 3."}
+{"module": "core", "key": "controls-description/fast-wait-condition", "ar": "يمكن استخدامه فقط في واجهة جدول منصة الفضاء، لإضافة شروط انتظار «تلبية الطلبات»."}
+{"module": "core", "key": "controls-description/forward", "ar": "التقدم إلى الأمام في قائمة النوافذ المفتوحة."}
+{"module": "core", "key": "controls-description/move", "ar": "تحريك الشخصية والتنقل في واجهة المستخدم."}
+{"module": "core", "key": "controls-description/next-surface", "ar": "الانتقال إلى السطح التالي في قائمة الأسطح في العرض عن بعد"}
+{"module": "core", "key": "controls-description/open-factoriopedia", "ar": "يفتح صفحة موسوعة فاكتوريو للكائن الموجود حالياً تحت المؤشر."}
+{"module": "core", "key": "controls-description/open-info-panel", "ar": "يفتح لوحة تعرض معلومات أكثر تفصيلاً عن الشيء الموجود تحت المؤشر."}
+{"module": "core", "key": "controls-description/pin", "ar": "تثبيت الكيان أو الموقع المحدد."}
+{"module": "core", "key": "controls-description/pipette", "ar": "يأخذ من مخزونك العناصر المستخدمة لبناء الكيان المحدد حالياً ويضعها في المؤشر. أما مع الموارد فيختار أسرع حفار تنقيب متاح."}
+{"module": "core", "key": "controls-description/play-previous-track", "ar": "يتم تذكر ما يصل إلى 5 مقطوعات سابقة."}
+{"module": "core", "key": "controls-description/previous-surface", "ar": "الانتقال إلى السطح السابق في قائمة الأسطح في العرض عن بعد"}
+{"module": "core", "key": "controls-description/rename-all", "ar": "يمكن استخدامه فقط في واجهات إعادة تسمية معينة، مثل إعادة تسمية محطة قطار. اضغط مع الاستمرار على مفتاح التعديل هذا أثناء تأكيد إعادة التسمية لإعادة تسمية كل ما يحمل ذلك الاسم."}
+{"module": "core", "key": "controls-description/reverse-select", "ar": "تفعيل وضع خفض المستوى باستخدام مخطط الترقية."}
+{"module": "core", "key": "controls-description/scroll-tooltip-down", "ar": "تمرير التلميح لأسفل (ينطبق فقط عندما يكون مثبتاً على الجانب الأيمن من العرض)."}
+{"module": "core", "key": "controls-description/scroll-tooltip-up", "ar": "تمرير تلميح الكيان لأعلى (ينطبق فقط عندما يكون مثبتاً على الجانب الأيمن من العرض)."}
+{"module": "core", "key": "controls-description/super-forced-build", "ar": "البناء الإجباري الفائق. يبني البلاط تلقائياً تحت الكيانات عند الحاجة، ويضع علامة التفكيك على الكيانات المتعارضة التي تعترض الطريق."}
+{"module": "core", "key": "controls-description/toggle-rail-layer", "ar": "عند استخدام مخطط السكك الحديدية، يغير ما إذا كان يجب أن تنتهي السكك على الأرض أم مرتفعة."}
+{"module": "core", "key": "controls/alternative-gui-move-down", "ar": "تحريك بديل في واجهة المستخدم لأسفل"}
+{"module": "core", "key": "controls/alternative-gui-move-left", "ar": "تحريك بديل في واجهة المستخدم لليسار"}
+{"module": "core", "key": "controls/alternative-gui-move-right", "ar": "تحريك بديل في واجهة المستخدم لليمين"}
+{"module": "core", "key": "controls/alternative-gui-move-up", "ar": "تحريك بديل في واجهة المستخدم لأعلى"}
+{"module": "core", "key": "controls/alternative-use-item", "ar": "إضافة أمر إلى قائمة الانتظار"}
+{"module": "core", "key": "controls/back", "ar": "رجوع"}
+{"module": "core", "key": "controls/copy-inventory-filter", "ar": "نسخ عامل تصفية المخزون"}
+{"module": "core", "key": "controls/cycle-quality-down", "ar": "خفض الجودة"}
+{"module": "core", "key": "controls/cycle-quality-up", "ar": "رفع الجودة"}
+{"module": "core", "key": "controls/debug-toggle-gui-visibility", "ar": "تبديل ظهور واجهة المستخدم"}
+{"module": "core", "key": "controls/deselect", "ar": "إلغاء التحديد"}
+{"module": "core", "key": "controls/fast-wait-condition", "ar": "إضافة سريعة لشرط انتظار"}
+{"module": "core", "key": "controls/flip-horizontal", "ar": "قلب أفقي"}
+{"module": "core", "key": "controls/flip-vertical", "ar": "قلب عمودي"}
+{"module": "core", "key": "controls/forward", "ar": "إلى الأمام"}
+{"module": "core", "key": "controls/hide-tall-entities", "ar": "تبديل ظهور الكيانات الطويلة"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-down", "ar": "تحريك شبكة المخطط المطلقة لأسفل"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-left", "ar": "تحريك شبكة المخطط المطلقة لليسار"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-right", "ar": "تحريك شبكة المخطط المطلقة لليمين"}
+{"module": "core", "key": "controls/move-blueprint-absolute-grid-up", "ar": "تحريك شبكة المخطط المطلقة لأعلى"}
+{"module": "core", "key": "controls/move-blueprint-entities-down", "ar": "تحريك كيانات المخطط لأسفل"}
+{"module": "core", "key": "controls/move-blueprint-entities-left", "ar": "تحريك كيانات المخطط لليسار"}
+{"module": "core", "key": "controls/move-blueprint-entities-right", "ar": "تحريك كيانات المخطط لليمين"}
+{"module": "core", "key": "controls/move-blueprint-entities-up", "ar": "تحريك كيانات المخطط لأعلى"}
+{"module": "core", "key": "controls/move-tag", "ar": "نقل العلامة"}
+{"module": "core", "key": "controls/next-surface", "ar": "اختيار السطح التالي"}
+{"module": "core", "key": "controls/not-set-with-control-name", "ar": "لم يتم التعيين [__1__]"}
+{"module": "core", "key": "controls/open-factoriopedia", "ar": "فتح موسوعة فاكتوريو"}
+{"module": "core", "key": "controls/paste-inventory-filter", "ar": "لصق عامل تصفية المخزون"}
+{"module": "core", "key": "controls/pause-resume-music", "ar": "إيقاف/استئناف الموسيقى"}
+{"module": "core", "key": "controls/pin", "ar": "تثبيت"}
+{"module": "core", "key": "controls/pipette", "ar": "أداة الماصة"}
+{"module": "core", "key": "controls/play-next-track", "ar": "تشغيل المقطوعة الموسيقية التالية"}
+{"module": "core", "key": "controls/play-previous-track", "ar": "تشغيل المقطوعة الموسيقية السابقة"}
+{"module": "core", "key": "controls/previous-surface", "ar": "اختيار السطح السابق"}
+{"module": "core", "key": "controls/redo", "ar": "إعادة"}
+{"module": "core", "key": "controls/rename-all", "ar": "إعادة تسمية الكل"}
+{"module": "core", "key": "controls/scroll-tooltip-down", "ar": "تمرير التلميح لأسفل"}
+{"module": "core", "key": "controls/scroll-tooltip-up", "ar": "تمرير التلميح لأعلى"}
+{"module": "core", "key": "controls/select-for-super-forced-deconstruct", "ar": "تحديد للتفكيك الإجباري الفائق"}
+{"module": "core", "key": "controls/slash-editor", "ar": "الأمر /editor"}
+{"module": "core", "key": "controls/submit-feedback", "ar": "فتح نموذج الملاحظات"}
+{"module": "core", "key": "controls/super-forced-build", "ar": "البناء الإجباري الفائق"}
+{"module": "core", "key": "controls/toggle-blueprint-snap-to-grid", "ar": "تبديل محاذاة المخطط مع الشبكة"}
+{"module": "core", "key": "controls/toggle-entity", "ar": "تبديل حالة الكيان"}
+{"module": "core", "key": "controls/toggle-rail-layer", "ar": "تبديل طبقة السكك الحديدية"}
+{"module": "core", "key": "controls/use-item", "ar": "استخدام العنصر"}
+{"module": "core", "key": "controls/visualize-entity-fluid-segments", "ar": "إظهار خطوط أنابيب السوائل للكيان"}
+{"module": "core", "key": "description/accepted-fluid", "ar": "السائل المقبول"}
+{"module": "core", "key": "description/accepted-food", "ar": "الغذاء المقبول"}
+{"module": "core", "key": "description/accepted-fuel", "ar": "الوقود المقبول"}
+{"module": "core", "key": "description/accepted-nutrients", "ar": "المغذيات المقبولة"}
+{"module": "core", "key": "description/attacking-speed", "ar": "سرعة الهجوم"}
+{"module": "core", "key": "description/auto-targeting", "ar": "الاستهداف التلقائي"}
+{"module": "core", "key": "description/available-weapons", "ar": "الأسلحة المتاحة"}
+{"module": "core", "key": "description/base-consumption", "ar": "استهلاك الطاقة الأساسي"}
+{"module": "core", "key": "description/base-health", "ar": "الصحة الأساسية"}
+{"module": "core", "key": "description/base-pollution", "ar": "التلوث الأساسي"}
+{"module": "core", "key": "description/base-quality", "ar": "الجودة الأساسية"}
+{"module": "core", "key": "description/base-speed", "ar": "السرعة الأساسية"}
+{"module": "core", "key": "description/beacons-header", "ar": "أبراج المنضمات:"}
+{"module": "core", "key": "description/beacons-line", "ar": "[img=entity/__1__] ×__2__ (__3__% لكل منها)"}
+{"module": "core", "key": "description/beacons-line-short", "ar": "[img=entity/__1__] ×__2__"}
