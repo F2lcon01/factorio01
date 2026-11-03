@@ -2,7 +2,7 @@
 # Publish / update arabic-complete on mods.factorio.com with YOUR API key. The key is read from your own terminal's
 # environment, never written to disk, never printed.
 # Create the key at https://factorio.com/profile with usages: "ModPortal: Publish Mods", "Upload Mods", "Edit Mods".
-#   $env:FACTORIO_API_KEY = '<your key>'
+#   (the script asks for the key with hidden input; or set $env:FACTORIO_API_KEY yourself beforehand)
 #   pwsh -File tools\publish.ps1 -Version 1.0.0 -DryRun     # validate locally, no network
 #   pwsh -File tools\publish.ps1 -Version 1.0.0             # first publish (creates the mod)
 #   pwsh -File tools\publish.ps1 -Version 1.0.1 -Update     # later releases
@@ -33,8 +33,12 @@ Write-Output "title   : $($meta.title)"
 Write-Output "category: $($meta.category)   license: $($meta.license)"
 if ($DryRun) { Write-Output 'dry run: nothing sent'; return }
 
-if (-not $env:FACTORIO_API_KEY) { throw 'set $env:FACTORIO_API_KEY in this terminal first' }
-$h = @{ Authorization = "Bearer $($env:FACTORIO_API_KEY)" }
+$key = $env:FACTORIO_API_KEY
+if (-not $key) {  # hidden prompt: the key is typed by you, never echoed, never stored
+    $key = [Net.NetworkCredential]::new('', (Read-Host 'Factorio API key' -AsSecureString)).Password
+}
+if (-not $key) { throw 'no API key given' }
+$h = @{ Authorization = "Bearer $key" }
 $base = 'https://mods.factorio.com/api/v2/mods'
 if ($Update) {
     $init = Invoke-RestMethod -Method Post -Uri "$base/releases/init_upload" -Headers $h -Form @{ mod = $name }
