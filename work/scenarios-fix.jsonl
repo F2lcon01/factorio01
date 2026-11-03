@@ -38,3 +38,4 @@
 {"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-mined-inserter-instead-of-open", "ar": "قمت بتفكيك الذراع الآلي البدائي بدلاً من فتحه. أعد بناءه ثم فتحه بالضغط على __CONTROL__open-gui__."}
 {"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-mined-inserter-instead-of-open-2", "ar": "قمت بتفكيك الذراع الآلي البدائي بدلاً من تدويره. أعد بناءه ثم قم بتدويره بالضغط على __CONTROL__rotate__."}
 {"file": "base/campaigns/tutorial/level-02/locale/demo_level-02.cfg", "key": "/msg-inserter-2-reversed", "ar": "الذراع الآلي البدائي الثاني معكوس الاتجاه."}
+{"file": "base/scenarios/freeplay/locale/freeplay.cfg", "key": "/msg-intro", "ar": "مرحباً بك في وضع اللعب الحر في فاكتوريو. مهمتك هي إطلاق صاروخ إلى الفضاء. ستحتاج إلى البحث في التقنيات المتقدمة لفتح منصة إطلاق الصاروخ. ابدأ صغيراً وطوّر نفسك بالأتمتة. احمِ نفسك من الكائنات المحلية، فقد لا ترحب بوجودك."}

@@ -20,5 +20,8 @@
  "space-age:entity-name/fulgoran-ruin-medium": "أطلال فولغورية متوسطة",
  "space-age:entity-name/fulgoran-ruin-small": "أطلال فولغورية صغيرة",
  "space-age:entity-name/captive-biter-spawner": "عش بايتر أسير",
+ "core:multiplayer/your-version": "أنت تشغّل الإصدار __1__.",
+ "base:achievement-name/it-stinks-and-they-dont-like-it": "رائحته كريهة ولا يحبونها",
+ "base:achievement-description/it-stinks-and-they-dont-like-it": "استفز هجوماً من الكائنات الفضائية بالتلوث.",
  "core:/years-ago": "منذ __1__ __plural_for_parameter__1__{1=سنة|2=سنتين|3=سنوات|4=سنوات|5=سنوات|6=سنوات|7=سنوات|8=سنوات|9=سنوات|10=سنوات|rest=سنة}__"
 }
