@@ -2,6 +2,8 @@
 
 ![Factorio Arabic](https://capsule-render.vercel.app/api?type=waving&color=0:1a1a1a,50:5a3a10,100:ff9c00&height=200&section=header&text=Factorio%20Arabic&fontSize=48&fontColor=ffffff&fontAlignY=35&desc=Complete%20Arabic%20%C2%B7%20connected%20letters%20%C2%B7%20right-to-left&descAlignY=58&descAlign=50)
 
+**🧩 المود على موقع Factorio الرسمي: [mods.factorio.com/mod/arabic-complete](https://mods.factorio.com/mod/arabic-complete)**
+
 [![Version](https://img.shields.io/badge/🔖_version-2.1.24-ff9c00?style=for-the-badge)](https://mods.factorio.com/mod/arabic-complete)
 [![Factorio](https://img.shields.io/badge/🏭_Factorio-2.1_%2B_Space_Age-c47800?style=for-the-badge)](https://factorio.com)
 [![Strings](https://img.shields.io/badge/🔤_strings-7600-5a3a10?style=for-the-badge)](#-الملخص)
