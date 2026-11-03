@@ -1,0 +1,5 @@
+{
+ "base:item-name/filled-barrel": "برميل __1__",
+ "base:recipe-name/empty-filled-barrel": "تفريغ برميل __1__",
+ "base:recipe-name/fill-barrel": "تعبئة برميل __1__"
+}
