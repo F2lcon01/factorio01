@@ -167,22 +167,43 @@ def _llm_user(strings, glossary):
     return json.dumps(msg, ensure_ascii=False)
 
 
-def _chat_openai(cfg, key, user):
+def new_usage():
+    """Counted for every call: what the provider reports, so savings are measured, not guessed."""
+    return {'requests': 0, 'input_tokens': 0, 'output_tokens': 0, 'chars_in': 0, 'glossary_chars': 0}
+
+
+def add_usage(total, part):
+    for k, v in part.items():
+        total[k] = total.get(k, 0) + v
+    return total
+
+
+def _chat_openai(cfg, key, user, usage):
     body = {'model': cfg['model'], 'messages': [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': user}],
             'response_format': {'type': 'json_object'}}
+    usage['requests'] += 1
     try:
         data = _request(f"{cfg['base']}/chat/completions", headers=_auth('openai', key), body=body)
     except TranslatorError as e:
         if not str(e).startswith('HTTP 400'):
             raise
         body.pop('response_format')   # some servers do not support JSON mode: the prompt asks for JSON anyway
+        usage['requests'] += 1
         data = _request(f"{cfg['base']}/chat/completions", headers=_auth('openai', key), body=body)
+    u = data.get('usage') or {}
+    usage['input_tokens'] += u.get('prompt_tokens', 0)
+    usage['output_tokens'] += u.get('completion_tokens', 0)
     return data['choices'][0]['message']['content'] or ''
 
 
-def _chat_anthropic(cfg, key, user):
+def _chat_anthropic(cfg, key, user, usage):
     body = {'model': cfg['model'], 'max_tokens': 16000, 'system': SYSTEM, 'messages': [{'role': 'user', 'content': user}]}
+    usage['requests'] += 1
     data = _request(f"{cfg['base']}/messages", headers=_auth('anthropic', key), body=body)
+    u = data.get('usage') or {}
+    usage['input_tokens'] += u.get('input_tokens', 0) + u.get('cache_read_input_tokens', 0) + \
+        u.get('cache_creation_input_tokens', 0)
+    usage['output_tokens'] += u.get('output_tokens', 0)
     if data.get('stop_reason') == 'refusal':
         raise TranslatorError('the model declined the request')
     return ''.join(b.get('text', '') for b in data.get('content', []) if b.get('type') == 'text')
@@ -203,28 +224,34 @@ def unprotect(text, tokens):
     return text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
 
 
-def _deepl(cfg, key, strings):
+def _deepl(cfg, key, strings, usage):
     ids = [i for i, e in strings.items() if '__plural_for_parameter__' not in e]   # plural blocks: needs an LLM
     if not ids:
         return {}
     prot = [protect(strings[i]) for i in ids]
     body = {'text': [p for p, _ in prot], 'source_lang': 'EN', 'target_lang': 'AR', 'tag_handling': 'xml',
-            'ignore_tags': ['x']}
+            'ignore_tags': ['x'], 'show_billed_characters': True}
+    usage['requests'] += 1
+    usage['chars_in'] += sum(len(p) for p, _ in prot)
     data = _request(f"{cfg['base']}/translate", headers=_auth('deepl', key), body=body)
+    usage['input_tokens'] += sum(t.get('billed_characters', 0) for t in data['translations'])   # DeepL bills characters
     return {i: unprotect(t['text'], toks) for i, (_, toks), t in zip(ids, prot, data['translations'])}
 
 
 def translate(cfg, key, strings, glossary=None):
-    """strings {id: English} → {id: Arabic (logical order)}; ids the reply lacks are simply absent."""
+    """strings {id: English} → ({id: Arabic (logical order)}, usage); ids the reply lacks are simply absent."""
+    usage = new_usage()
     if not strings:
-        return {}
+        return {}, usage
     if cfg['kind'] == 'deepl':
-        return _deepl(cfg, key, strings)
+        return _deepl(cfg, key, strings, usage), usage
     user = _llm_user(strings, glossary)
-    reply = _chat_anthropic(cfg, key, user) if cfg['kind'] == 'anthropic' else _chat_openai(cfg, key, user)
+    usage['chars_in'] += len(SYSTEM) + len(user)
+    usage['glossary_chars'] += len(json.dumps(glossary, ensure_ascii=False)) if glossary else 0
+    reply = _chat_anthropic(cfg, key, user, usage) if cfg['kind'] == 'anthropic' else _chat_openai(cfg, key, user, usage)
     out = parse_json_object(reply)
     out = out.get('t', out) if isinstance(out, dict) else {}
-    return {i: v for i, v in out.items() if i in strings and isinstance(v, str)}
+    return {i: v for i, v in out.items() if i in strings and isinstance(v, str)}, usage
 
 
 def main():

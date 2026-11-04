@@ -61,20 +61,25 @@ def test_openai_shape_falls_back_without_json_mode(monkeypatch):
         if calls['n'] == 1:
             raise urllib.error.HTTPError(req.full_url, 400, 'bad', {}, io.BytesIO(b'response_format unsupported'))
         reply = '```json\n{"t": {"a": "تأكيد", "z": "extra"}}\n```'
-        return _Resp(json.dumps({'choices': [{'message': {'content': reply}}]}).encode())
+        return _Resp(json.dumps({'choices': [{'message': {'content': reply}}],
+                                 'usage': {'prompt_tokens': 50, 'completion_tokens': 9}}).encode())
     monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
     cfg = {'kind': 'openai', 'base': 'https://x/v1', 'model': 'm'}
-    assert translator.translate(cfg, 'k', {'a': 'Confirm'}) == {'a': 'تأكيد'}   # ids not asked for are dropped
+    out, usage = translator.translate(cfg, 'k', {'a': 'Confirm'})
+    assert out == {'a': 'تأكيد'}                                  # ids not asked for are dropped
     assert 'response_format' in seen[0] and 'response_format' not in seen[1]
+    assert usage['requests'] == 2 and usage['input_tokens'] == 50 and usage['output_tokens'] == 9
 
 
 def test_anthropic_shape(monkeypatch):
     seen = []
     reply = {'content': [{'type': 'thinking', 'thinking': ''}, {'type': 'text', 'text': '{"t": {"a": "إلغاء"}}'}],
-             'stop_reason': 'end_turn'}
+             'stop_reason': 'end_turn', 'usage': {'input_tokens': 120, 'output_tokens': 15}}
     monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen({('POST', '/v1/messages'): reply}, seen))
     cfg = {'kind': 'anthropic', 'base': 'https://api.anthropic.com/v1', 'model': 'claude-sonnet-5-5'}
-    assert translator.translate(cfg, 'sk-ant-k', {'a': 'Cancel'}, {'pipe': 'أنبوب'}) == {'a': 'إلغاء'}
+    out, usage = translator.translate(cfg, 'sk-ant-k', {'a': 'Cancel'}, {'pipe': 'أنبوب'})
+    assert out == {'a': 'إلغاء'} and usage['requests'] == 1 and usage['input_tokens'] == 120
+    assert usage['glossary_chars'] == len('{"pipe": "أنبوب"}')
     assert seen[0].get_header('X-api-key') == 'sk-ant-k'
     assert json.loads(json.loads(seen[0].data)['messages'][0]['content'])['glossary'] == {'pipe': 'أنبوب'}
 
@@ -85,12 +90,14 @@ def test_deepl_protects_tokens_and_skips_plural_blocks(monkeypatch):
     def urlopen(req, timeout=None):
         body = json.loads(req.data)
         seen.append(body)
-        return _Resp(json.dumps({'translations': [{'text': t.replace('Found', 'وجد')} for t in body['text']]}).encode())
+        return _Resp(json.dumps({'translations': [{'text': t.replace('Found', 'وجد'), 'billed_characters': 30}
+                                                  for t in body['text']]}).encode())
     monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
     cfg = {'kind': 'deepl', 'base': 'https://api-free.deepl.com/v2', 'model': 'deepl'}
-    out = translator.translate(cfg, 'k:fx', {'a': 'Found __1__ [item=pipe] <ok>',
-                                            'p': '__plural_for_parameter__1__{1=pipe|rest=pipes}__'})
-    assert out == {'a': 'وجد __1__ [item=pipe] <ok>'}
+    out, usage = translator.translate(cfg, 'k:fx', {'a': 'Found __1__ [item=pipe] <ok>',
+                                                   'p': '__plural_for_parameter__1__{1=pipe|rest=pipes}__'})
+    assert out == {'a': 'وجد __1__ [item=pipe] <ok>'} and usage['requests'] == 1 and usage['input_tokens'] == 30
+    assert seen[0]['show_billed_characters'] is True
     assert '__1__' not in seen[0]['text'][0] and '<x i="0"/>' in seen[0]['text'][0]
 
 
