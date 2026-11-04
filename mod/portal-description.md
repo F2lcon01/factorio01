@@ -50,7 +50,8 @@
 المودات التي تضيفها تظهر نصوصها بالإنجليزية. **أداة ترجمة المودات** تولّد على جهازك مود ترجمة محلياً
 (`arabic-mods-local`) بحروف متصلة كبقية اللعبة، بمفتاح API من **أي مزوّد** (OpenAI، Gemini، Claude، DeepL، OpenRouter،
 Groq، DeepSeek، Mistral، xAI). كل نص يُترجم يُحفظ في **ذاكرة مشتركة**: المود الذي لم يتغيّر لا يكلّف أي طلب، والمود
-الذي تحدّث تُترجم نصوصه الجديدة فقط (قياس: التشغيل الأول طلبان، والثاني 0).
+الذي تحدّث تُترجم نصوصه الجديدة فقط (قياس: التشغيل الأول طلبان، والثاني 0). ومود تريده **بلغته الأصلية** أزل
+العلامة بجانبه: تبقى بقية المودات عربية، وتعود ترجماته من الذاكرة دون أي طلب متى أعدت العلامة.
 
 **تنزيل:** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
 (نحو 12 ميغا، فيه Python مدمج) ← «استخراج الكل» ← `Translate-Mods.cmd` ← الصق المفتاح ← «ترجمة وتثبيت».
@@ -134,8 +135,9 @@ Mods you add show their texts in English. The **mods translator** (Windows) buil
 `arabic-mods-local`, shaped and ordered like the rest of the game, with an API key from **any provider** (OpenAI,
 Gemini, Claude, DeepL, OpenRouter, Groq, DeepSeek, Mistral, xAI). Every translated string goes into a **shared
 translation memory**: an unchanged mod costs no request, and an updated mod only sends its new or changed strings
-(measured: first run 2 requests, second run 0). Each answer is checked for placeholders, tags and plural forms before
-it is used.
+(measured: first run 2 requests, second run 0). Untick a mod to keep it in its **original language** while the others
+stay Arabic; tick it again and its translations come back from the memory with no request. Each answer is checked for
+placeholders, tags and plural forms before it is used.
 
 **Download:** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
 (about 12 MB, embedded Python, nothing to install) → Extract All → `Translate-Mods.cmd` → paste the key → Translate.

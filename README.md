@@ -114,13 +114,17 @@ xAI) ← **«حفظ وتحقق»**. تتعرّف الأداة على المزو�
 
 4️⃣ **«ترجمة وتثبيت»** ← افتح اللعبة.
 
+5️⃣ **مود تريده بلغته الأصلية؟** أزل العلامة بجانبه ثم «ترجمة وتثبيت». تبقى بقية المودات عربية، وتبقى ترجماته
+محفوظة: إعادة العلامة تعيده إلى العربية من الذاكرة **دون أي طلب**.
+
 <div align="center">
 
-| أثناء الترجمة | بعد التشغيل الثاني |
-|:-:|:-:|
-| ![نافذة ترجمة المودات أثناء الترجمة](docs/images/translator-busy.png) | ![نافذة ترجمة المودات بعد التشغيل الثاني: المود مترجم و0 طلبات](docs/images/translator-done.png) |
+| أثناء الترجمة | بعد التشغيل الثاني | مود بلغته الأصلية |
+|:-:|:-:|:-:|
+| ![نافذة ترجمة المودات أثناء الترجمة](docs/images/translator-busy.png) | ![نافذة ترجمة المودات بعد التشغيل الثاني: المود مترجم و0 طلبات](docs/images/translator-done.png) | ![مود أُزيلت علامته ليبقى بلغته الأصلية](docs/images/translator-original.png) |
 
-*اللقطة الثانية من قياس بمزوّد اختبار محلي يعدّ الطلبات: المود «مترجم»، و0 طلبات API، و44 نصاً من الذاكرة.*
+*اللقطتان الثانية والثالثة من قياس بمزوّد اختبار محلي يعدّ الطلبات: المود «مترجم»، و0 طلبات API، و44 نصاً من الذاكرة؛
+ثم أُزيلت علامة P.U.M.P. ليبقى بلغته الأصلية.*
 
 </div>
 
@@ -128,6 +132,7 @@ xAI) ← **«حفظ وتحقق»**. تتعرّف الأداة على المزو�
 
 | الترتيب | المصدر | الكلفة |
 |:-:|---|:-:|
+| 0 | مود أزلت علامته (أو نص تصحيحه `null`) يبقى بلغته الأصلية | 0 |
 | 1 | تصحيحك اليدوي (`modpack_overrides.json`) | 0 |
 | 2 | العربية التي يشحنها المود نفسه، بعد إصلاح اتجاهها وتشكيلها | 0 |
 | 3 | الأسماء والاختصارات (مثل `P.U.M.P.`) تبقى كما هي | 0 |
@@ -160,6 +165,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1  
 python -E -m tools.modpack status                     # حالة كل مود، دون أي طلب
 python -E -m tools.modpack summary                    # آخر تشغيل: الطلبات والتوكن والتوفير
 python -E -m tools.modpack export-tmx memory.tmx      # الذاكرة بصيغة TMX لأي أداة ترجمة
+python -E -m tools.modpack original pump              # إبقاء مود بلغته الأصلية (arabic pump يعيده)
 python -E -m tools.bundle translator                  # dist/arabic-mods-translator.zip (Python مدمج بهاش ثابت)
 ```
 
@@ -173,7 +179,8 @@ python -E -m tools.bundle translator                  # dist/arabic-mods-transla
 (embedded Python, nothing to install), run `Translate-Mods.cmd`, paste an API key from any provider (OpenAI, Gemini,
 Claude, DeepL, OpenRouter, Groq, DeepSeek, Mistral, xAI), press Translate. It builds a local locale mod,
 `arabic-mods-local`, shaped like the rest of the game. A shared translation memory means an unchanged mod costs no
-request and an updated mod only sends its new strings (measured: first run 2 requests, second run 0).
+request and an updated mod only sends its new strings (measured: first run 2 requests, second run 0). Untick a mod to
+keep it in its original language; tick it again and it comes back from the memory with no request.
 
 ---
 

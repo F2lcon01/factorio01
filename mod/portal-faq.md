@@ -34,6 +34,10 @@
 ([arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip))
 بمفتاح API من أي مزوّد. ما تُرجم مرة يُحفظ ولا يُطلب ثانية.
 
+**أريد مود معيّناً بلغته الأصلية وبقية المودات بالعربية.**
+في نافذة ترجمة المودات أزل العلامة بجانب ذلك المود، ثم اضغط «ترجمة وتثبيت». ترجماته تبقى محفوظة، وإعادة العلامة
+تعيده إلى العربية دون أي طلب.
+
 **هل تكلّفني أداة ترجمة المودات مالاً؟**
 المزوّد يحاسبك على الطلبات بحسب مفتاحك. الأداة تقلّلها: النص يُرسل مرة واحدة ثم يُحفظ، والمود الذي لم يتغيّر لا يُرسل
 عنه شيء، وتعرض النافذة عدد الطلبات والتوكن بعد كل تشغيل.
@@ -80,6 +84,10 @@ It does not come from this mod. Close Steam completely and open it again.
 This mod translates the base game and its expansions. For other mods use the mods translator
 ([arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip))
 with an API key from any provider; a string translated once is stored and never requested again.
+
+**I want one mod in its original language and the others in Arabic.**
+In the mods translator, untick that mod and press Translate. Its translations stay stored; tick it again and it is
+Arabic again with no request.
 
 **Does the mods translator cost money?**
 Your provider bills the requests made with your key. The tool keeps them low: each string is sent once and stored, an
