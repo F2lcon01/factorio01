@@ -7,7 +7,7 @@
 [![Version](https://img.shields.io/badge/🔖_version-2.1.24-ff9c00?style=for-the-badge)](https://mods.factorio.com/mod/arabic-complete)
 [![Factorio](https://img.shields.io/badge/🏭_Factorio-2.1_%2B_Space_Age-c47800?style=for-the-badge)](https://factorio.com)
 [![Strings](https://img.shields.io/badge/🔤_strings-7600-5a3a10?style=for-the-badge)](#-الملخص)
-[![Tests](https://img.shields.io/badge/🛡️_tests-51_passing-22c55e?style=for-the-badge)](tests)
+[![Tests](https://img.shields.io/badge/🛡️_tests-86_passing-22c55e?style=for-the-badge)](tests)
 [![F2lcon01](https://img.shields.io/badge/👤_F2lcon01-GitHub-1e3a5f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/F2lcon01)
 
 **تعريب كامل للعبة Factorio وتوسعة عصر الفضاء، بحروف متصلة واتجاه قراءة صحيح.**
@@ -15,6 +15,7 @@
 <br>
 
 [![Download the tool](https://img.shields.io/badge/⬇_Download-arabic--tools.zip-ff9c00?style=for-the-badge)](https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip)
+[![Mods translator](https://img.shields.io/badge/🌐_Mods_translator-arabic--mods--translator.zip-c47800?style=for-the-badge)](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
 [![Mod portal](https://img.shields.io/badge/🧩_Mod_portal-arabic--complete-5a3a10?style=for-the-badge)](https://mods.factorio.com/mod/arabic-complete)
 
 </div>
@@ -26,11 +27,12 @@
 | # | القسم | المحتوى |
 |:-:|---|---|
 | 1 | [🎮 للاعبين](#-للاعبين) | التثبيت خطوة بخطوة، وأداة اللغة وزر «إصلاح» |
-| 2 | [🏆 لماذا هذا المود](#-لماذا-هذا-المود) | الفرق عن الترجمة العربية الحالية في اللعبة |
-| 3 | [🔬 كيف يعمل](#-كيف-يعمل) | لماذا الحروف متصلة والأسطر مرتبة |
-| 4 | [🔧 للمطورين](#-للمطورين) | خط الإنتاج والنشر والتحديث والاسترجاع |
-| 5 | [📏 الحدود](#-الحدود) | ما لا يستطيع أي مود تغييره |
-| 6 | [📈 الملخص](#-الملخص) | الأرقام |
+| 2 | [🌐 ترجمة المودات الإضافية](#-ترجمة-المودات-الإضافية) | أي مود تضيفه بالعربية، بذاكرة ترجمة لا تطلب النص مرتين |
+| 3 | [🏆 لماذا هذا المود](#-لماذا-هذا-المود) | الفرق عن الترجمة العربية الحالية في اللعبة |
+| 4 | [🔬 كيف يعمل](#-كيف-يعمل) | لماذا الحروف متصلة والأسطر مرتبة |
+| 5 | [🔧 للمطورين](#-للمطورين) | خط الإنتاج والنشر والتحديث والاسترجاع |
+| 6 | [📏 الحدود](#-الحدود) | ما لا يستطيع أي مود تغييره |
+| 7 | [📈 الملخص](#-الملخص) | الأرقام |
 
 ---
 
@@ -91,6 +93,87 @@
 الشرح الكامل للمبتدئين: [`mod/README-AR.txt`](mod/README-AR.txt) · تغيير اللغة بالتفصيل: [`LANGUAGE.md`](LANGUAGE.md)
 
 </details>
+
+---
+
+## 🌐 ترجمة المودات الإضافية
+
+أي مود تضيفه تظهر نصوصه بالإنجليزية، لأن هذا المود يترجم اللعبة الأساسية فقط، واللعبة تعرض الإنجليزية لكل نص لا تجد
+له عربية. **أداة ترجمة المودات** تولّد على جهازك مود ترجمة اسمه `arabic-mods-local` لكل مودّاتك المفعّلة، بحروف متصلة
+وأسطر مرتبة كبقية اللعبة، وتحفظ كل ترجمة في **ذاكرة مشتركة** فلا تدفع ثمن النص نفسه مرتين.
+
+### ▶️ الاستخدام (لا يحتاج تثبيت Python)
+
+1️⃣ **نزّل** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
+(نحو 12 ميغا، وفيه Python مدمج) ← زر أيمن ← **«استخراج الكل»**.
+
+2️⃣ **شغّل** `Translate-Mods.cmd`، أو زر **«ترجمة المودات الإضافية...»** في نافذة أداة اللغة. لا يطلب صلاحيات المدير.
+
+3️⃣ **الصق مفتاح API من أي مزوّد** (OpenAI، Google Gemini، Anthropic Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral،
+xAI) ← **«حفظ وتحقق»**. تتعرّف الأداة على المزوّد وحدها، وتحفظ المفتاح مشفّراً لمستخدم Windows الحالي فقط.
+
+4️⃣ **«ترجمة وتثبيت»** ← افتح اللعبة.
+
+<div align="center">
+
+| أثناء الترجمة | بعد التشغيل الثاني |
+|:-:|:-:|
+| ![نافذة ترجمة المودات أثناء الترجمة](docs/images/translator-busy.png) | ![نافذة ترجمة المودات بعد التشغيل الثاني: المود مترجم و0 طلبات](docs/images/translator-done.png) |
+
+*اللقطة الثانية من قياس بمزوّد اختبار محلي يعدّ الطلبات: المود «مترجم»، و0 طلبات API، و44 نصاً من الذاكرة.*
+
+</div>
+
+### 🧠 من أين تأتي كل ترجمة
+
+| الترتيب | المصدر | الكلفة |
+|:-:|---|:-:|
+| 1 | تصحيحك اليدوي (`modpack_overrides.json`) | 0 |
+| 2 | العربية التي يشحنها المود نفسه، بعد إصلاح اتجاهها وتشكيلها | 0 |
+| 3 | الأسماء والاختصارات (مثل `P.U.M.P.`) تبقى كما هي | 0 |
+| 4 | ترجمتنا للعبة الأساسية (نحو 6,800 نص) | 0 |
+| 5 | **الذاكرة المشتركة**: كل نص تُرجم مرة، في أي مود | 0 |
+| 6 | طلب API: النصوص الجديدة فقط، كل نص فريد مرة واحدة، مع المسرد المطابق | توكن |
+
+> [!IMPORTANT]
+> **مود لم يتغيّر لا يُرسل عنه أي طلب.** تحديث المود من مطوّره يرسل نصوصه الجديدة أو المتغيّرة فقط.
+> **المسرد** (مثل water ← مياه) يوحّد المصطلحات لكنه **يضيف** توكن إلى كل طلب، ولا يغني عن ترجمة الجملة؛
+> لذلك تُرسل منه المصطلحات الموجودة في الدفعة فقط (60 حداً أقصى)، وتعرض الأداة حصته من التوكن.
+
+**مقيس:** على P.U.M.P. (47 نصاً) من الحزمة المفكوكة بـ Python المدمج:
+
+| التشغيل | طلبات API | النتيجة |
+|---|:-:|---|
+| الأول | 2 | 44 نصاً بالعربية (2 من ذاكرة اللعبة، و42 مترجمة)، و3 أسماء كما هي |
+| الثاني | **0** | الحالة «مترجم»، و44 نصاً من الذاكرة |
+| داخل المحرك | — | نصوص المود عربية، و`Checksum of arabic-mods-local: 0` |
+
+كل ترجمة تمر بفحص الرموز والوسوم وصيغ الجمع، وما يفشل يبقى بالإنجليزية ويُذكر في التقرير، مع تنبيهات الجودة
+(مصطلح لم يُستخدم، أو ترجمة أطول بكثير من الأصل)، وقائمة بما أُخذ من الذاكرة لسياق آخر لمراجعته.
+
+<details>
+<summary><b>للمطورين</b></summary>
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -STA -File .\Translate-Mods.ps1              # النافذة
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1             # بلا نافذة (-Offline -ResetKey -Uninstall)
+python -E -m tools.modpack status                     # حالة كل مود، دون أي طلب
+python -E -m tools.modpack summary                    # آخر تشغيل: الطلبات والتوكن والتوفير
+python -E -m tools.modpack export-tmx memory.tmx      # الذاكرة بصيغة TMX لأي أداة ترجمة
+python -E -m tools.bundle translator                  # dist/arabic-mods-translator.zip (Python مدمج بهاش ثابت)
+```
+
+التصميم: [`docs/superpowers/specs/2026-11-04-mods-translator-gui-design.md`](docs/superpowers/specs/2026-11-04-mods-translator-gui-design.md) ·
+التفاصيل: [`LANGUAGE.md`](LANGUAGE.md).
+
+</details>
+
+**English:** a translator for any other mod you install (Windows). Download
+[arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
+(embedded Python, nothing to install), run `Translate-Mods.cmd`, paste an API key from any provider (OpenAI, Gemini,
+Claude, DeepL, OpenRouter, Groq, DeepSeek, Mistral, xAI), press Translate. It builds a local locale mod,
+`arabic-mods-local`, shaped like the rest of the game. A shared translation memory means an unchanged mod costs no
+request and an updated mod only sends its new strings (measured: first run 2 requests, second run 0).
 
 ---
 
@@ -246,7 +329,7 @@ python -E -m tools.scenarios restore     # إعادة ملفات السينار�
 
 | ✅ نصوص الدروس | 📖 المسرد | 🧩 الوحدات | 🛡️ الاختبارات |
 |:-:|:-:|:-:|:-:|
-| 691 نصاً في 23 ملفاً | 1,055 مصطلحاً | core · base · space-age · quality · elevated-rails · recycler | 51 |
+| 691 نصاً في 23 ملفاً | 1,055 مصطلحاً | core · base · space-age · quality · elevated-rails · recycler | 86 |
 
 </div>
 

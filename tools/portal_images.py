@@ -4,6 +4,7 @@
    and from the built mod, not retyped.
 2-4: crops of real in-game screenshots (reports/screens, made by tools.visual_check / tools.scenario_check).
 5: the language tool window (docs/images/tool-states.png).
+6: the mods translator window (docs/images/translator-busy.png, made with Translate-Mods.ps1 -Snapshot -PreviewBusy).
 python -E -m tools.portal_images <version>"""
 import sys
 from pathlib import Path
@@ -76,6 +77,7 @@ def main(version):
     crop(screens / 'phase4-scenario-zoom.png', (0, 56, 520, 196), 2, OUT / '3-freeplay-intro.png')   # below the
     crop(ROOT / 'docs' / 'images' / 'in-game-tooltip.png', (0, 60, 536, 480), 1, OUT / '4-long-description.png')  # test caption
     crop(ROOT / 'docs' / 'images' / 'tool-states.png', (0, 0, 968, 399), 1, OUT / '5-language-tool.png')
+    crop(ROOT / 'docs' / 'images' / 'translator-busy.png', (0, 0, 836, 689), 1, OUT / '6-mods-translator.png')
     for p in sorted(OUT.glob('*.png')):
         print(p.name, Image.open(p).size, p.stat().st_size)
 

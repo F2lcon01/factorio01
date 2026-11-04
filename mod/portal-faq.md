@@ -29,6 +29,15 @@
 **ظهرت «Couldn't get Steam auth ticket» في قائمة المودات؟**
 ليست من هذا المود. أغلق Steam كلياً وأعد فتحه.
 
+**مود آخر أضفته يظهر بالإنجليزية؟**
+هذا المود يترجم اللعبة الأساسية وتوسعاتها. لنصوص المودات الأخرى استعمل أداة ترجمة المودات
+([arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip))
+بمفتاح API من أي مزوّد. ما تُرجم مرة يُحفظ ولا يُطلب ثانية.
+
+**هل تكلّفني أداة ترجمة المودات مالاً؟**
+المزوّد يحاسبك على الطلبات بحسب مفتاحك. الأداة تقلّلها: النص يُرسل مرة واحدة ثم يُحفظ، والمود الذي لم يتغيّر لا يُرسل
+عنه شيء، وتعرض النافذة عدد الطلبات والتوكن بعد كل تشغيل.
+
 **أين أبلغ عن خطأ في الترجمة؟**
 افتح بلاغاً على [GitHub](https://github.com/F2lcon01/factorio01/issues) واكتب فيه النص الإنجليزي والترجمة العربية
 التي تقترحها، أو استعمل تبويب **Discussion** في هذه الصفحة.
@@ -66,6 +75,15 @@ No. The mod does not change game data (checksum 0), and the tool never touches s
 
 **"Couldn't get Steam auth ticket" appears in the mod list.**
 It does not come from this mod. Close Steam completely and open it again.
+
+**Another mod I added shows English.**
+This mod translates the base game and its expansions. For other mods use the mods translator
+([arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip))
+with an API key from any provider; a string translated once is stored and never requested again.
+
+**Does the mods translator cost money?**
+Your provider bills the requests made with your key. The tool keeps them low: each string is sent once and stored, an
+unchanged mod sends nothing, and the window shows the requests and tokens after every run.
 
 **Where do I report a mistake in the translation?**
 Open an issue on [GitHub](https://github.com/F2lcon01/factorio01/issues) with the English text and the Arabic you

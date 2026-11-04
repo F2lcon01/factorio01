@@ -43,6 +43,18 @@
 
 بعد كل تحديث للعبة شغّل الأداة مرة أخرى. تحفظ نسخة احتياطية قبل أي تغيير.
 
+### ترجمة المودات الإضافية (أي مود تضيفه)
+
+![أداة ترجمة المودات الإضافية]({{img:6-mods-translator}})
+
+المودات التي تضيفها تظهر نصوصها بالإنجليزية. **أداة ترجمة المودات** تولّد على جهازك مود ترجمة محلياً
+(`arabic-mods-local`) بحروف متصلة كبقية اللعبة، بمفتاح API من **أي مزوّد** (OpenAI، Gemini، Claude، DeepL، OpenRouter،
+Groq، DeepSeek، Mistral، xAI). كل نص يُترجم يُحفظ في **ذاكرة مشتركة**: المود الذي لم يتغيّر لا يكلّف أي طلب، والمود
+الذي تحدّث تُترجم نصوصه الجديدة فقط (قياس: التشغيل الأول طلبان، والثاني 0).
+
+**تنزيل:** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
+(نحو 12 ميغا، فيه Python مدمج) ← «استخراج الكل» ← `Translate-Mods.cmd` ← الصق المفتاح ← «ترجمة وتثبيت».
+
 ### ما الذي في الترجمة
 
 - الوحدات الست: `core` و`base` و`space-age` و`quality` و`elevated-rails` و`recycler`. التوسعات اختيارية: يعمل المود باللعبة الأساسية وحدها.
@@ -115,6 +127,18 @@ it reads the patched tutorial texts from this mod, so they always match the inst
 4. Choose **العربية** or **English**; if **Fix** appears, press it. Then start the game.
 
 Run the tool again after every game update. It backs up every file before changing it.
+
+### Translator for your other mods
+
+Mods you add show their texts in English. The **mods translator** (Windows) builds a local locale mod,
+`arabic-mods-local`, shaped and ordered like the rest of the game, with an API key from **any provider** (OpenAI,
+Gemini, Claude, DeepL, OpenRouter, Groq, DeepSeek, Mistral, xAI). Every translated string goes into a **shared
+translation memory**: an unchanged mod costs no request, and an updated mod only sends its new or changed strings
+(measured: first run 2 requests, second run 0). Each answer is checked for placeholders, tags and plural forms before
+it is used.
+
+**Download:** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
+(about 12 MB, embedded Python, nothing to install) → Extract All → `Translate-Mods.cmd` → paste the key → Translate.
 
 ### What is translated
 
