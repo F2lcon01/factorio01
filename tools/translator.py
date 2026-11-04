@@ -1,10 +1,10 @@
 """Machine translation for strings this project has no Arabic for (used by tools.modpack). Provider-neutral:
 whatever API key the user gives. The key reaches this process only through FA_TRANSLATE_KEY (set by
 tools/translate_mods.ps1); it is never written by Python. The provider is detected from the key (prefix, then a
-probe of each candidate's model list), or forced with FA_TRANSLATE_PROVIDER / FA_TRANSLATE_BASE_URL /
-FA_TRANSLATE_MODEL. Three request shapes cover the providers:
+probe of that one provider's model list), or chosen with FA_TRANSLATE_PROVIDER / FA_TRANSLATE_BASE_URL /
+FA_TRANSLATE_MODEL; a key whose format names no provider is never tried on several services. Three request shapes:
   openai     POST {base}/chat/completions: OpenAI, Gemini, OpenRouter, Groq, DeepSeek, Mistral, xAI, Together,
-             and local servers (Ollama, LM Studio) through FA_TRANSLATE_BASE_URL
+             Hugging Face, Cerebras, Fireworks, NVIDIA, and local servers (Ollama, LM Studio: free, no key)
   anthropic  POST {base}/messages
   deepl      POST {base}/translate (rich-text tokens protected as XML tags)
 Standard library only.  python -E -m tools.translator probe   → prints the detected provider and model"""
@@ -25,11 +25,19 @@ PROVIDERS = {  # name: (kind, base_url, model preference: first regex that match
     'deepseek': ('openai', 'https://api.deepseek.com/v1', [r'^deepseek-chat$', r'deepseek']),
     'mistral': ('openai', 'https://api.mistral.ai/v1', [r'^mistral-large-latest$', r'^mistral-medium', r'mistral']),
     'together': ('openai', 'https://api.together.xyz/v1', [r'Llama-3\.3-70B', r'Qwen.*Instruct']),
+    'huggingface': ('openai', 'https://router.huggingface.co/v1', [r'Qwen.*Instruct', r'Llama-3\.3-70B', r'Instruct']),
+    'cerebras': ('openai', 'https://api.cerebras.ai/v1', [r'gpt-oss-120b', r'llama-3\.3-70b', r'qwen', r'llama']),
+    'fireworks': ('openai', 'https://api.fireworks.ai/inference/v1', [r'gpt-oss-120b', r'llama-v3p3-70b', r'qwen']),
+    'nvidia': ('openai', 'https://integrate.api.nvidia.com/v1', [r'llama-3\.3-70b', r'qwen', r'instruct']),
     'deepl-free': ('deepl', 'https://api-free.deepl.com/v2', []),
     'deepl': ('deepl', 'https://api.deepl.com/v2', []),
 }
-PREFIXES = [('sk-ant-', ['anthropic']), ('sk-or-', ['openrouter']), ('AIza', ['gemini']), ('gsk_', ['groq']),
-            ('xai-', ['xai']), ('sk-', ['openai', 'deepseek', 'together'])]
+# A key goes to one provider only: the one its format names, or the one the user picks. Keys that do not say whose
+# they are are not tried on several services in turn (each would see it; one even echoes its last characters).
+PREFIXES = [('sk-ant-', 'anthropic'), ('sk-or-', 'openrouter'), ('AIza', 'gemini'), ('gsk_', 'groq'), ('xai-', 'xai'),
+            ('hf_', 'huggingface'), ('csk-', 'cerebras'), ('fw_', 'fireworks'), ('nvapi-', 'nvidia'),
+            ('tgp_', 'together'), ('sk-', 'openai')]   # 'sk-' is also DeepSeek, Moonshot, DashScope...: OpenAI first
+UNKNOWN_FORMAT = 'UNKNOWN_FORMAT'
 NOT_CHAT = re.compile(r'embed|tts|whisper|dall-e|image|audio|realtime|transcribe|moderation|search|vision|guard|'
                       r'rerank|computer-use|-live', re.I)
 HTTP_TIMEOUT = 120
@@ -63,8 +71,14 @@ def _request(url, *, headers, body=None, method=None, form=False):
             if e.code in (408, 409, 429) or e.code >= 500:   # transient: back off and retry
                 time.sleep(min(2 ** attempt * 2, 30))
                 continue
-            detail = e.read().decode('utf-8', 'replace')[:300]
-            raise TranslatorError(f'HTTP {e.code}: {detail}') from None
+            raw = e.read().decode('utf-8', 'replace')
+            try:   # the provider's own message, not its whole JSON
+                j = json.loads(raw)
+                err = j.get('error', j) if isinstance(j, dict) else j
+                raw = err.get('message', raw) if isinstance(err, dict) else str(err)
+            except ValueError:
+                pass
+            raise TranslatorError(f'HTTP {e.code}: {" ".join(str(raw).split())[:160]}') from None
         except urllib.error.URLError as e:
             if attempt == 3:
                 raise TranslatorError(f'network: {e.reason}') from None
@@ -99,25 +113,34 @@ def pick_model(models, prefs):
 
 
 def candidates(key):
+    """The provider the key's format names, or [] when it does not say (the user then picks one)."""
     if key.endswith(':fx'):
         return ['deepl-free']
-    for prefix, names in PREFIXES:
+    for prefix, name in PREFIXES:
         if key.startswith(prefix):
-            return names
+            return [name]
     if re.fullmatch(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', key):
         return ['deepl']
-    return ['openai', 'mistral', 'deepseek', 'together', 'deepl']
+    return []
 
 
 def detect(key, env=os.environ):
-    """→ {'provider', 'kind', 'base', 'model'}; probes the network unless everything is given."""
+    """→ {'provider', 'kind', 'base', 'model'}; one probe (the model list) of one provider."""
     forced, base, model = env.get('FA_TRANSLATE_PROVIDER', ''), env.get('FA_TRANSLATE_BASE_URL', ''), \
         env.get('FA_TRANSLATE_MODEL', '')
+    if forced == 'deepl' and key.endswith(':fx'):
+        forced = 'deepl-free'   # a free DeepL key only works on the free endpoint
     if base:   # any OpenAI-compatible server (local or hosted), unless a kind is forced
         kind = PROVIDERS[forced][0] if forced in PROVIDERS else 'openai'
         names = [(forced or 'custom', kind, base.rstrip('/'), PROVIDERS.get(forced, ('', '', []))[2])]
+    elif forced:
+        if forced not in PROVIDERS:
+            raise TranslatorError(f'unknown provider: {forced}')
+        names = [(forced, *PROVIDERS[forced])]
     else:
-        names = [(n, *PROVIDERS[n]) for n in ([forced] if forced else candidates(key))]
+        names = [(n, *PROVIDERS[n]) for n in candidates(key)]
+        if not names:
+            raise TranslatorError(f'{UNKNOWN_FORMAT}: the key does not say which provider it is for; choose it')
     errors = []
     for name, kind, b, prefs in names:
         try:

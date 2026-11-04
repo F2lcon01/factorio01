@@ -25,19 +25,47 @@ def _fake_urlopen(routes, seen):
 
 @pytest.mark.parametrize('key,first', [('sk-ant-abc', 'anthropic'), ('sk-or-v1-x', 'openrouter'), ('AIzaXYZ', 'gemini'),
                                        ('gsk_1', 'groq'), ('xai-1', 'xai'), ('sk-proj-1', 'openai'), ('abc:fx', 'deepl-free'),
-                                       ('12345678-1234-1234-1234-123456789abc', 'deepl')])
+                                       ('12345678-1234-1234-1234-123456789abc', 'deepl'), ('hf_x', 'huggingface'),
+                                       ('csk-x', 'cerebras'), ('fw_x', 'fireworks'), ('nvapi-x', 'nvidia')])
 def test_provider_candidates_from_the_key(key, first):
     assert translator.candidates(key)[0] == first
 
 
-def test_detect_probes_until_a_provider_accepts_and_picks_a_chat_model(monkeypatch):
+def test_a_key_is_sent_to_one_provider_only(monkeypatch):
+    seen = []
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen({}, seen))   # every provider refuses
+    with pytest.raises(translator.TranslatorError, match='UNKNOWN_FORMAT'):
+        translator.detect('Ab3dEf6hIj9kLm2nOp5qRs8tUv1wXyZ0', env={})                 # says nothing about its owner
+    assert seen == []                                                                   # so it is sent nowhere
+    with pytest.raises(translator.TranslatorError, match=r'^key not accepted by: openai: HTTP 401'):
+        translator.detect('sk-something', env={})
+    assert [r.full_url for r in seen] == ['https://api.openai.com/v1/models']          # one provider, one request
+
+
+def test_a_chosen_provider_is_probed_and_a_chat_model_picked(monkeypatch):
     seen = []
     routes = {('GET', 'api.deepseek.com/v1/models'): {'data': [{'id': 'deepseek-embed'}, {'id': 'deepseek-chat'}]}}
     monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen(routes, seen))
-    cfg = translator.detect('sk-unknown', env={})
+    cfg = translator.detect('sk-unknown', env={'FA_TRANSLATE_PROVIDER': 'deepseek'})
     assert cfg == {'provider': 'deepseek', 'kind': 'openai', 'base': 'https://api.deepseek.com/v1', 'model': 'deepseek-chat'}
-    assert seen[0].full_url.startswith('https://api.openai.com')          # tried in order: openai refused first
-    assert seen[0].get_header('Authorization') == 'Bearer sk-unknown'
+    assert len(seen) == 1 and seen[0].get_header('Authorization') == 'Bearer sk-unknown'
+
+
+def test_provider_error_message_is_short_and_readable(monkeypatch):
+    def urlopen(req, timeout=None):
+        body = b'{"error": {"message": "Incorrect API key provided: sk-abc***xyz.", "type": "invalid_request_error"}}'
+        raise urllib.error.HTTPError(req.full_url, 401, 'unauthorized', {}, io.BytesIO(body))
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
+    with pytest.raises(translator.TranslatorError) as e:
+        translator.detect('sk-abc', env={})
+    assert str(e.value) == 'key not accepted by: openai: HTTP 401: Incorrect API key provided: sk-abc***xyz.'
+
+
+def test_a_free_deepl_key_goes_to_the_free_endpoint_even_when_deepl_is_chosen(monkeypatch):
+    seen = []
+    monkeypatch.setattr(translator.urllib.request, 'urlopen',
+                        _fake_urlopen({('GET', 'api-free.deepl.com/v2/usage'): {'character_count': 0}}, seen))
+    assert translator.detect('k:fx', env={'FA_TRANSLATE_PROVIDER': 'deepl'})['provider'] == 'deepl-free'
 
 
 def test_detect_honours_a_custom_base_url_and_model(monkeypatch):

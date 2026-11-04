@@ -161,11 +161,16 @@ function Invoke-FAPython([string[]]$PyArgs) {
     $old = $ErrorActionPreference
     $ErrorActionPreference = 'Continue'   # native stderr must not abort Windows PowerShell
     Set-FAPythonEnv
+    # Python writes UTF-8 (PYTHONIOENCODING); PowerShell decodes a native program's output with the console code page,
+    # which is the OEM one (720 on Arabic Windows) when started from Explorer: Arabic would arrive garbled.
+    $enc = $null
+    try { $enc = [Console]::OutputEncoding; [Console]::OutputEncoding = New-Object Text.UTF8Encoding $false } catch { }
     try {
         $all = @($py.Args) + @($PyArgs)
         $out = & $py.Exe @all 2>&1 | ForEach-Object { "$_" }
         $code = $LASTEXITCODE
     } finally {
+        if ($enc) { try { [Console]::OutputEncoding = $enc } catch { } }
         $ErrorActionPreference = $old
         Pop-Location
     }
@@ -195,6 +200,19 @@ function Save-FATranslatorKey([securestring]$Key) {
     New-Item -ItemType Directory -Force (Split-Path $f -Parent) | Out-Null
     [IO.File]::WriteAllText($f, ($Key | ConvertFrom-SecureString))
     $f
+}
+
+function Get-FAProviderChoice {
+    # the provider the user picked in the window (not secret): @{ provider = ''|'openai'|...|'custom'; base_url = '' }
+    $f = Join-Path $script:UserAppData 'Factorio\arabic-tools\translator-provider.json'
+    if (Test-Path $f) { try { return (Get-Content $f -Raw | ConvertFrom-Json) } catch { } }
+    [pscustomobject]@{ provider = ''; base_url = '' }
+}
+
+function Save-FAProviderChoice([string]$Provider, [string]$BaseUrl) {
+    $f = Join-Path $script:UserAppData 'Factorio\arabic-tools\translator-provider.json'
+    New-Item -ItemType Directory -Force (Split-Path $f -Parent) | Out-Null
+    [IO.File]::WriteAllText($f, (@{ provider = $Provider; base_url = $BaseUrl } | ConvertTo-Json), $script:Utf8)
 }
 
 function Remove-FATranslatorKey {

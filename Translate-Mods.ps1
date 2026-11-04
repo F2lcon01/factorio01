@@ -45,7 +45,7 @@ $form.RightToLeftLayout = $true
 $form.StartPosition = 'CenterScreen'
 $form.FormBorderStyle = 'FixedDialog'
 $form.MaximizeBox = $false
-$form.ClientSize = New-Object Drawing.Size(820, 650)
+$form.ClientSize = New-Object Drawing.Size(820, 678)
 $form.Font = New-Object Drawing.Font('Segoe UI', 10)
 $form.BackColor = $bg
 $form.ForeColor = $text
@@ -89,28 +89,58 @@ foreach ($c in @(@('المود', 250), @('الإصدار', 90), @('النصوص'
 }
 
 $keyBox = New-Object Windows.Forms.GroupBox
-$keyBox.Text = 'مفتاح API (أي مزوّد: OpenAI، Gemini، Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral...)'
+$keyBox.Text = 'مفتاح API: اختر المزوّد، أو «تلقائي» إن كان شكل المفتاح يدل عليه'
 $keyBox.ForeColor = $text
-$keyBox.SetBounds(20, 286, 780, 92)
+$keyBox.SetBounds(20, 286, 780, 120)
+# a key is sent to one provider only: the one its format names, or the one chosen here
+$providers = @(
+    @('تلقائي (من شكل المفتاح)', ''), @('OpenAI', 'openai'), @('Google Gemini', 'gemini'), @('Anthropic Claude', 'anthropic'),
+    @('DeepL', 'deepl'), @('OpenRouter', 'openrouter'), @('Groq', 'groq'), @('DeepSeek', 'deepseek'), @('Mistral', 'mistral'),
+    @('xAI (Grok)', 'xai'), @('Together', 'together'), @('Hugging Face', 'huggingface'), @('Cerebras', 'cerebras'),
+    @('Fireworks', 'fireworks'), @('NVIDIA', 'nvidia'), @('خادم محلي مجاني (Ollama)', 'custom'))   # also LM Studio
+$providerLabel = New-Label 'المزوّد:' 700 28 60 24 9.5
+$providerBox = New-Object Windows.Forms.ComboBox
+$providerBox.DropDownStyle = 'DropDownList'
+$providerBox.SetBounds(470, 25, 225, 26)
+foreach ($p in $providers) { [void]$providerBox.Items.Add($p[0]) }
 $keyInput = New-Object Windows.Forms.TextBox
 $keyInput.UseSystemPasswordChar = $true
 $keyInput.RightToLeft = 'No'
-$keyInput.SetBounds(240, 26, 520, 26)
-$btnKey = New-Button 'حفظ وتحقق' 120 24 110 30 ([Drawing.Color]::FromArgb(69, 90, 100))
-$btnForget = New-Button 'نسيان' 20 24 90 30 ([Drawing.Color]::FromArgb(90, 60, 60))
-$keyState = New-Label '' 20 60 740 24 9.5
-$keyBox.Controls.AddRange(@($keyInput, $btnKey, $btnForget, $keyState))
+$keyInput.SetBounds(240, 25, 222, 26)
+$btnKey = New-Button 'حفظ وتحقق' 120 23 110 30 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnForget = New-Button 'نسيان' 20 23 90 30 ([Drawing.Color]::FromArgb(90, 60, 60))
+$urlLabel = New-Label 'رابط الخادم:' 680 60 80 24 9.5
+$urlInput = New-Object Windows.Forms.TextBox
+$urlInput.RightToLeft = 'No'
+$urlInput.Text = 'http://localhost:11434/v1'
+$urlInput.SetBounds(240, 58, 435, 26)
+$keyState = New-Label '' 20 90 740 24 9.5
+$keyBox.Controls.AddRange(@($providerLabel, $providerBox, $keyInput, $btnKey, $btnForget, $urlLabel, $urlInput, $keyState))
 
-$btnTranslate = New-Button 'ترجمة وتثبيت' 600 392 200 44 ([Drawing.Color]::FromArgb(46, 125, 50))
+function Get-ChosenProvider { $providers[[Math]::Max(0, $providerBox.SelectedIndex)][1] }
+function Update-ProviderFields {
+    $custom = (Get-ChosenProvider) -eq 'custom'
+    $urlLabel.Visible = $custom
+    $urlInput.Visible = $custom
+}
+$choice = Get-FAProviderChoice
+$idx = 0
+for ($i = 0; $i -lt $providers.Count; $i++) { if ($providers[$i][1] -eq $choice.provider) { $idx = $i } }
+$providerBox.SelectedIndex = $idx
+if ($choice.base_url) { $urlInput.Text = $choice.base_url }
+Update-ProviderFields
+$providerBox.Add_SelectedIndexChanged({ Update-ProviderFields })
+
+$btnTranslate = New-Button 'ترجمة وتثبيت' 600 420 200 44 ([Drawing.Color]::FromArgb(46, 125, 50))
 $btnTranslate.Font = New-Object Drawing.Font('Segoe UI', 12, [Drawing.FontStyle]::Bold)
-$btnRefresh = New-Button 'تحديث القائمة' 450 398 140 34 ([Drawing.Color]::FromArgb(69, 90, 100))
-$btnReport = New-Button 'فتح التقرير' 300 398 140 34 ([Drawing.Color]::FromArgb(69, 90, 100))
-$btnUndo = New-Button 'إلغاء التثبيت (تراجع)' 20 398 270 34 ([Drawing.Color]::FromArgb(90, 60, 60))
+$btnRefresh = New-Button 'تحديث القائمة' 450 426 140 34 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnReport = New-Button 'فتح التقرير' 300 426 140 34 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnUndo = New-Button 'إلغاء التثبيت (تراجع)' 20 426 270 34 ([Drawing.Color]::FromArgb(90, 60, 60))
 
 $bar = New-Object Windows.Forms.ProgressBar
-$bar.SetBounds(20, 448, 780, 18)
+$bar.SetBounds(20, 476, 780, 18)
 $bar.RightToLeftLayout = $true
-$barText = New-Label 'جاهز.' 20 470 780 22 9.5
+$barText = New-Label 'جاهز.' 20 498 780 22 9.5
 $barText.ForeColor = $muted
 
 $summary = New-Object Windows.Forms.TextBox
@@ -120,8 +150,8 @@ $summary.BorderStyle = 'None'
 $summary.BackColor = $panel
 $summary.ForeColor = $text
 $summary.Font = New-Object Drawing.Font('Segoe UI', 9.5)
-$summary.SetBounds(20, 498, 780, 116)
-$footer = New-Label 'أغلق اللعبة قبل الترجمة. المفتاح يُحفظ مشفّراً لمستخدم Windows الحالي فقط، ولا يُكتب في أي ملف آخر.' 20 620 780 22 9
+$summary.SetBounds(20, 526, 780, 116)
+$footer = New-Label 'أغلق اللعبة قبل الترجمة. المفتاح يُحفظ مشفّراً لمستخدم Windows الحالي فقط، ولا يُرسل إلا إلى المزوّد الذي اخترته.' 20 648 780 22 9
 $footer.ForeColor = $muted
 
 $form.Controls.AddRange(@($title, $subtitle, $list, $keyBox, $btnTranslate, $btnRefresh, $btnReport, $btnUndo, $bar, $barText, $summary, $footer))
@@ -194,14 +224,17 @@ $script:job = $null
 $timer = New-Object Windows.Forms.Timer
 $timer.Interval = 300
 
-function Start-Run([string[]]$PyArgs, [string]$Key, [scriptblock]$OnDone) {
+function Start-Run([string[]]$PyArgs, [string]$Key, [scriptblock]$OnDone, [string]$Provider = '', [string]$BaseUrl = '') {
     $out = Join-Path $work 'out.txt'; $err = Join-Path $work 'err.txt'; $prog = Join-Path $work 'progress.jsonl'
     foreach ($f in @($out, $err, $prog)) { if (Test-Path $f) { [IO.File]::Delete($f) } }   # our own temp files
+    $names = 'FA_TRANSLATE_KEY', 'FA_PROGRESS_FILE', 'FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_BASE_URL'
     $env:FA_TRANSLATE_KEY = $Key
     $env:FA_PROGRESS_FILE = $prog
+    $env:FA_TRANSLATE_PROVIDER = $(if ($Provider -eq 'custom') { '' } else { $Provider })
+    $env:FA_TRANSLATE_BASE_URL = $(if ($Provider -eq 'custom') { $BaseUrl } else { '' })
     try { $p = Start-FAPython $PyArgs $out $err }
     finally {   # the child has its own copy of the environment: clear ours at once
-        foreach ($n in 'FA_TRANSLATE_KEY', 'FA_PROGRESS_FILE') { [Environment]::SetEnvironmentVariable($n, $null, 'Process') }
+        foreach ($n in $names) { [Environment]::SetEnvironmentVariable($n, $null, 'Process') }
     }
     $script:job = @{ Process = $p; Out = $out; Err = $err; Progress = $prog; OnDone = $OnDone }
     Set-Busy $true
@@ -235,8 +268,28 @@ $timer.Add_Tick({
 })
 
 # ---------- actions ----------
+function Get-KeyProblem([string[]]$Lines) {
+    # translator.py's error line -> a sentence a player can act on
+    $line = ($Lines | Where-Object { $_ -match 'translator:|TranslatorError|HTTP|network|UNKNOWN_FORMAT' } | Select-Object -Last 1)
+    if (-not $line) { $line = ($Lines | Select-Object -Last 1) }
+    if ($line -match 'UNKNOWN_FORMAT') {
+        return 'شكل المفتاح لا يدل على مزوّده، فلم يُرسل إلى أي جهة. اختر المزوّد من القائمة ثم اضغط «حفظ وتحقق» مرة أخرى.'
+    }
+    if ($line -match 'accepted by: ([\w-]+): HTTP (\d+):?\s*(.*)$') {
+        $who, $code, $msg = $Matches[1], $Matches[2], $Matches[3]
+        $hint = if ($code -in '401', '403') { 'المفتاح غير صالح لهذا المزوّد: تأكد منه، أو اختر المزوّد الصحيح من القائمة.' }
+                elseif ($code -eq '404') { 'العنوان غير موجود: تأكد من رابط الخادم.' } else { 'جرّب مرة أخرى لاحقاً.' }
+        return "رفض $who المفتاح (HTTP $code). $hint`n`nرسالة المزوّد: $msg"
+    }
+    if ($line -match 'network') { return 'تعذّر الاتصال بالمزوّد. تحقق من الإنترنت، أو من رابط الخادم المحلي إن اخترته.' }
+    "تعذّر التحقق من المفتاح:`n$line"
+}
+
 $btnKey.Add_Click({
+    $provider = Get-ChosenProvider
+    $baseUrl = $urlInput.Text.Trim()
     $plain = $keyInput.Text.Trim()
+    if (-not $plain -and $provider -eq 'custom') { $plain = 'local' }   # a local server usually needs no key
     if (-not $plain) { Show-Message 'الصق المفتاح في الخانة أولاً.'; return }
     $secure = ConvertTo-SecureString $plain -AsPlainText -Force
     $keyInput.Text = ''
@@ -248,16 +301,17 @@ $btnKey.Add_Click({
         if ($code -eq 0) {
             $cfg = $out[-1] | ConvertFrom-Json
             [void](Save-FATranslatorKey $secure)
+            Save-FAProviderChoice $provider $baseUrl
             New-Item -ItemType Directory -Force $stateDir | Out-Null
             $cache = @{ tag = ''; config = $cfg } | ConvertTo-Json
             [IO.File]::WriteAllText((Join-Path $stateDir 'translator.json'), $cache, (New-Object Text.UTF8Encoding $false))
             $barText.Text = "قُبل المفتاح: $($cfg.provider) / $($cfg.model)"
         } else {
             $barText.Text = 'رُفض المفتاح، ولم يُحفظ.'
-            Show-Message ("رُفض المفتاح ولم يُحفظ:`n" + (($err + $out) | Select-Object -Last 2) -join "`n")
+            Show-Message ('رُفض المفتاح ولم يُحفظ.' + "`n`n" + (Get-KeyProblem ($err + $out)))
         }
         Update-KeyState
-    }.GetNewClosure()
+    }.GetNewClosure() $provider $baseUrl
     $plain = $null
 })
 
@@ -270,20 +324,21 @@ $btnForget.Add_Click({
 $btnTranslate.Add_Click({
     if (Test-GameRunning) { Show-Message 'أغلق اللعبة أولاً ثم أعد المحاولة.'; return }
     $key = Get-FATranslatorKey
+    $saved = Get-FAProviderChoice
     $args2 = @('-m', 'tools.modpack', 'build')
     if (-not $key) { $args2 += '--offline' }
     Start-Run $args2 $key {
         param($code, $out, $err)
         if ($code -ne 0) {
             $barText.Text = 'فشل البناء.'
-            Show-Message ("فشلت الترجمة:`n" + (($err | Select-Object -Last 3) -join "`n"))
+            Show-Message ("فشلت الترجمة.`n`n" + (Get-KeyProblem $err))
             return
         }
         $r = $out[-1] | ConvertFrom-Json
         try { $msg = Install-FAPack $r.pack_path } catch { Show-Message ('تعذّر التثبيت: ' + $_.Exception.Message); return }
         Update-Mods; Update-Summary
         Show-Message ("تم. $msg`nبالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests).")
-    }
+    } ([string]$saved.provider) ([string]$saved.base_url)
     $key = $null
 })
 
