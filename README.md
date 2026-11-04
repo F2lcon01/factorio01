@@ -137,6 +137,16 @@
 5️⃣ **مود تريده بلغته الأصلية؟** أزل العلامة بجانبه ثم «ترجمة وتثبيت». تبقى بقية المودات عربية، وتبقى ترجماته
 محفوظة: إعادة العلامة تعيده إلى العربية من الذاكرة **دون أي طلب**.
 
+> [!TIP]
+> **الأداة ترى كل مود في مجلد `mods`، حتى ما نسخته قبل أن تشغّل اللعبة.** أي مود لن تحمّله اللعبة يظهر بسببه في
+> عمود الحالة، ولا يُرسل منه أي نص، فلا يُستهلك حدّك المجاني. الأسباب ثلاثة:
+> - **«لا يعمل مع إصدار لعبتك (يتطلب 0.14)»**.
+> - **«ينقصه: flib»**: ثبّت المود الناقص ثم اضغط «تحديث القائمة».
+> - **«معطّل في اللعبة»**.
+>
+> وإن بلغ المزوّد حدّه أثناء ترجمة مودات كثيرة، تتوقف الأداة وتحفظ ما تُرجم. أعد الضغط على «ترجمة وتثبيت» لاحقاً
+> فتُكمل من حيث توقفت.
+
 <div align="center">
 
 | أثناء الترجمة | بعد التشغيل الثاني | مود بلغته الأصلية |
@@ -205,6 +215,8 @@ request and an updated mod only sends its new strings (measured: first run 2 req
 keep it in its original language; tick it again and it comes back from the memory with no request.
 
 Both tools show their version in the title bar. Each time a window opens, it asks GitHub and the mod portal whether the tool or the mod has a newer release.
+
+The translator reads every mod in the `mods` folder, including mods copied in before the game has run. Some mods will not load in the game: they target another game version, lack a required mod, or are disabled. These are listed with the reason, and none of their strings is sent. When the provider reaches its limit, the run stops and keeps what it translated. The next run continues from there.
 
 ---
 

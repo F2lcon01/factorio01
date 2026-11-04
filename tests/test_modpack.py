@@ -35,6 +35,53 @@ def test_reads_folders_and_zips_and_keeps_the_newest_version(tmp_path):
     assert mods['alpha']['locale']['en'] == {'alpha/x': 'New'}
 
 
+def _info_mod(root, folder, info, en='[s]\nk=Some text\n'):
+    (root / folder / 'locale' / 'en').mkdir(parents=True)
+    (root / folder / 'info.json').write_text(json.dumps(info))
+    (root / folder / 'locale' / 'en' / 's.cfg').write_text(en, encoding='utf-8')
+
+
+def test_scan_sees_mods_the_game_has_not_listed_yet_and_explains_the_ones_it_will_not_load(tmp_path):
+    # mods copied in while the game was closed are not in mod-list.json yet: the game enables them on its next start
+    (tmp_path / 'mod-list.json').write_text(json.dumps({'mods': [
+        {'name': 'base', 'enabled': True}, {'name': 'space-age', 'enabled': True}, {'name': 'quality', 'enabled': False},
+        {'name': 'listed', 'enabled': True}, {'name': 'off', 'enabled': False}]}))
+    _info_mod(tmp_path, 'listed_1.0.0', {'name': 'listed', 'version': '1.0.0', 'factorio_version': '2.1'})
+    _info_mod(tmp_path, 'Flow Control', {'name': 'Flow Control', 'version': '3.2.4', 'factorio_version': '2.1'})   # no version
+    _info_mod(tmp_path, 'old_0.1.4', {'name': 'old', 'version': '0.1.4', 'factorio_version': '0.14'})
+    _info_mod(tmp_path, 'off_1.0.0', {'name': 'off', 'version': '1.0.0', 'factorio_version': '2.1'})
+    _info_mod(tmp_path, 'needs-lib', {'name': 'needs-lib', 'version': '1.0.0', 'factorio_version': '2.1',
+                                      'dependencies': ['base >= 2.1', 'flib >= 0.16', '? optional-thing']})
+    _info_mod(tmp_path, 'chain', {'name': 'chain', 'version': '1.0.0', 'factorio_version': '2.1',
+                                  'dependencies': ['~ needs-lib']})              # needs a mod that cannot load
+    _info_mod(tmp_path, 'dlc', {'name': 'dlc', 'version': '1.0.0', 'factorio_version': '2.1',
+                                'dependencies': ['space-age', 'quality']})       # quality is disabled here
+    usable, skipped = modpack.scan_mods(tmp_path, '2.1')
+    assert sorted(m['name'] for m in usable) == ['Flow Control', 'listed']
+    assert {m['name']: m['listed'] for m in usable} == {'Flow Control': False, 'listed': True}
+    assert [(s['mod']['name'], s['reason'], s['detail']) for s in skipped] == [
+        ('chain', 'missing-dep', 'needs-lib'), ('dlc', 'missing-dep', 'quality'), ('needs-lib', 'missing-dep', 'flib'),
+        ('off', 'disabled', ''), ('old', 'incompatible', '0.14')]
+    rows = modpack.skipped_states(skipped)
+    assert rows[4]['state_ar'] == 'لا يعمل مع إصدار لعبتك' and rows[4]['strings'] == 1
+
+
+def test_a_provider_at_its_limit_stops_the_run_and_keeps_what_was_done(tmp_path):
+    mods = [_m('a', {f'a/k{i}': f'Text number {i}' for i in range(200)})]   # 5 batches of 40
+    calls = []
+
+    def limited(batch, terms):
+        calls.append(len(batch))
+        if len(calls) > 1:
+            raise translator.TranslatorError('HTTP 429 (tried 2 times): quota', 429, busy=True)
+        return {k: 'نص مترجم رقم ' + k.split('k')[1] for k in batch}, translator.new_usage()
+    tm = _tm(tmp_path)
+    arabic, _, rows = _resolve(mods, tmp_path, memory_=tm, translate=limited)
+    assert len(calls) == 3 and rows['stopped'] is True              # 1 answered, 2 refused, the rest not tried
+    assert len(arabic) == 40 and sum(s == 'english' for s in rows['source'].values()) == 160
+    assert len(memory.TranslationMemory(tmp_path / 'memory.json')) == 40   # saved as it went, not only at the end
+
+
 def test_load_order_puts_dependencies_first_and_ignores_incompatible_markers():
     mods = [{'name': n, 'deps': d} for n, d in
             [('zeta', []), ('alpha', ['? zeta >= 1.0']), ('beta', ['! zeta', '~ alpha']), ('gamma', ['(?) beta'])]]
@@ -108,6 +155,7 @@ def test_reuse_under_another_key_is_listed_for_review_and_quality_checks(tmp_pat
     arabic, _, rows = _resolve([_m('b', {'b/w': 'Heat pipe'})], tmp_path, memory_=tm)
     assert arabic == {'b/w': 'أنبوب حراري'} and rows['review'] == [('b/w', 'a|a/x')]
     first = _resolve([_m('a', {'a/y': 'Lay the pipe here', 'a/z': 'Echo'})], tmp_path, terms={'pipe': 'أنبوب'},
+                     memory_=memory.TranslationMemory(tmp_path / 'fresh.json'),   # resolve saves as it goes
                      translate=_fake({'a/y': 'مدّ الخطوط هنا', 'a/z': 'Echo'}, []))[2]
     assert first['source']['a/z'] == 'english'                 # an answer that copies the English is rejected
     assert first['flags'] == [('a/y', 'مصطلح المسرد لم يُستخدم: pipe ← أنبوب')]
@@ -204,6 +252,16 @@ def test_pack_depends_on_translated_mods_and_holds_only_arabic(tmp_path, monkeyp
     assert info['factorio_version'] == '2.1' and '? pump' in info['dependencies']
     cfg = (pack / 'locale' / 'ar' / 'pump.cfg').read_text(encoding='utf-8')
     assert cfg == f'[s]\na={to_visual("تأكيد")}\n'     # shaped; the untranslated key is left to the game's English
+
+
+def test_a_mod_name_with_a_space_is_translated_but_not_written_as_a_dependency(tmp_path, monkeypatch):
+    monkeypatch.setattr(modpack, 'game_version', lambda: '2.1.24')
+    mods = [_m('Flow Control', {'fc/a': 'Valve'}), _m('pump', {'p/a': 'Confirm'})]
+    pack = modpack.build_pack(mods, {'fc/a': 'صمام', 'p/a': 'تأكيد'}, {'fc/a': 'Flow Control', 'p/a': 'pump'}, {},
+                              out_root=tmp_path)
+    deps = json.loads((pack / 'info.json').read_text(encoding='utf-8'))['dependencies']
+    assert '? pump' in deps and not any('Flow' in d for d in deps)   # the documented form has no space in a name
+    assert (pack / 'locale' / 'ar' / 'Flow Control.cfg').exists()
 
 
 def test_lua_findings_report_hardcoded_text_and_missing_keys():

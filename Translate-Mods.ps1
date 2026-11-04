@@ -36,6 +36,11 @@ $stateColor = @{
     changed    = [Drawing.Color]::FromArgb(255, 167, 38)
     pending    = [Drawing.Color]::FromArgb(255, 213, 79)
     original   = [Drawing.Color]::FromArgb(170, 170, 170)
+    empty      = [Drawing.Color]::FromArgb(120, 120, 120)
+    # the game will not load these: nothing is sent for them
+    disabled       = [Drawing.Color]::FromArgb(120, 120, 120)
+    incompatible   = [Drawing.Color]::FromArgb(229, 115, 115)
+    'missing-dep'  = [Drawing.Color]::FromArgb(229, 115, 115)
 }
 
 $form = New-Object Windows.Forms.Form
@@ -245,6 +250,8 @@ function Update-Mods {
         foreach ($m in $st.states) {
             $label = $m.state_ar
             if ($m.state -eq 'changed') { $label += " ($(N $m.changed) نصاً)" }
+            elseif ($m.state -eq 'incompatible') { $label += " (يتطلب $(N $m.detail))" }
+            elseif ($m.state -eq 'missing-dep') { $label += ": $($m.detail)" }
             $item = New-Object Windows.Forms.ListViewItem($m.title)
             foreach ($v in @((N $m.version), (N $m.strings), (N $m.arabic), (N $m.pending), $label)) { [void]$item.SubItems.Add([string]$v) }
             $item.UseItemStyleForSubItems = $false
@@ -254,6 +261,12 @@ function Update-Mods {
             [void]$list.Items.Add($item)
         }
         if (-not $st.states) { [void]$list.Items.Add((New-Object Windows.Forms.ListViewItem('لا توجد مودات إضافية مفعّلة'))) }
+        else {   # what the list means at a glance: how many will be translated, and why the others will not
+            $line = "$(N $st.mods) مود للترجمة"
+            if ($st.skipped) { $line += " · $(N $st.skipped) لن تحمّلها اللعبة، فلا يُرسل منها شيء (السبب في عمود الحالة)" }
+            if ($st.unlisted) { $line += " · $(N $st.unlisted) أُضيفت بعد آخر تشغيل للعبة، وتُفعّلها اللعبة عند تشغيلها" }
+            $barText.Text = $line
+        }
     } finally { $script:loading = $false }
 }
 
@@ -408,6 +421,7 @@ $btnTranslate.Add_Click({
         Update-Mods; Update-Summary
         $note = ''   # batches that failed leave their strings English: say why instead of a silent "done"
         if ($r.error) { $note = "`n`nتعذّرت ترجمة بعض النصوص فبقيت بالإنجليزية:`n" + (Get-KeyProblem @([string]$r.error)) }
+        if ($r.stopped) { $note += "`n`nتوقّفت الترجمة عند حدّ المزوّد. ما تُرجم محفوظ؛ اضغط «ترجمة وتثبيت» لاحقاً فيُكمل من حيث توقّف دون إعادة ما تُرجم." }
         Show-Message ("تم. $msg`nبالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests)." + $note)
     } ([string]$saved.provider) ([string]$saved.base_url)
     $key = $null

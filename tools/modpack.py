@@ -26,15 +26,19 @@ from tools.textfx import from_visual
 
 PACK, PACK_VERSION = 'arabic-mods-local', '1.0.0'
 NOT_TRANSLATED = set(MODULES) | {'arabic-complete', 'arabic-crowdin', PACK}
+BUILTIN = {'base', 'elevated-rails', 'quality', 'recycler', 'space-age'}   # ship with the game (DLC ones when enabled)
 STATE = Path(os.environ.get('FA_STATE_DIR') or WORK / 'modpack')
 DEP_RE = re.compile(r'^\s*(\(\?\)|\?|!|~)?\s*([^<>=]+?)\s*(?:[<>=].*)?$')
+DEP_NAME_RE = re.compile(r'[A-Za-z0-9_-]+')   # the mod portal's name rule: safe inside a dependency string
 BIDI_RE = re.compile('[‎‏‪-‮⁦-⁩]')
 WORD_RE = re.compile('[ء-ي]{2,}')
 LUA_LITERAL_RE = re.compile(r'\b(caption|tooltip)\s*=\s*"([^"]*[A-Za-z]{3,}[^"]*)"')
 LUA_KEY_RE = re.compile(r'\{\s*"([a-z0-9_-]+)\.([A-Za-z0-9_.-]+)"')
 BATCH_STRINGS, BATCH_CHARS = 40, 4000
 STATES_AR = {'translated': 'مترجم', 'new': 'جديد', 'changed': 'تغيّر', 'pending': 'ينتظر الترجمة',
-             'original': 'بلغته الأصلية'}
+             'original': 'بلغته الأصلية', 'empty': 'لا نصوص فيه',
+             # the game will not load these: nothing is sent for them
+             'disabled': 'معطّل في اللعبة', 'incompatible': 'لا يعمل مع إصدار لعبتك', 'missing-dep': 'ينقصه'}
 
 
 def mods_dir():
@@ -95,29 +99,74 @@ def read_mod(path: Path) -> dict:
         if m:
             locale.setdefault(m.group(1), {}).update(parse_cfg(text))
     return {'name': info['name'], 'title': info.get('title', info['name']), 'version': info.get('version', '0.0.0'),
-            'deps': info.get('dependencies', []), 'locale': locale,
-            'lua': [t for r, t in files.items() if r.endswith('.lua')]}
+            'factorio_version': str(info.get('factorio_version', '')), 'deps': info.get('dependencies', []),
+            'locale': locale, 'lua': [t for r, t in files.items() if r.endswith('.lua')]}
 
 
-def enabled_mods(directory: Path) -> list[dict]:
-    """The enabled third-party mods, newest installed version of each."""
-    listing = json.loads((directory / 'mod-list.json').read_text(encoding='utf-8-sig'))
-    enabled = {m['name'] for m in listing['mods'] if m.get('enabled')} - NOT_TRANSLATED
-    found = {}
+def _required(mod):
+    """Names of the mods this one cannot load without ('~' is required too, it only skips load ordering)."""
+    out = []
+    for d in mod['deps']:
+        g = DEP_RE.match(d)
+        if g and g.group(1) in (None, '~'):
+            out.append(g.group(2))
+    return out
+
+
+def _game_major_minor():
+    try:
+        return '.'.join(game_version().split('.')[:2])
+    except (OSError, KeyError, ValueError):
+        return None   # no game data here: do not judge compatibility
+
+
+def scan_mods(directory: Path, game_mm=None):
+    """Every third-party mod in the folder as the game will see it on its next start → (usable, skipped).
+    The internal name comes from info.json (folders like 'Flow Control' carry no version). A mod that mod-list.json
+    does not mention yet counts as enabled: the game adds a newly copied mod enabled when it starts. Skipped, with the
+    reason, because the game will not load them: 'disabled' in mod-list.json, 'incompatible' (factorio_version is
+    not the game's major.minor), 'missing-dep' (a required mod is absent, disabled or itself skipped)."""
+    listing = directory / 'mod-list.json'
+    state = {m['name']: bool(m.get('enabled')) for m in
+             (json.loads(listing.read_text(encoding='utf-8-sig'))['mods'] if listing.exists() else [])}
+    found, others = {}, set()
     for p in directory.iterdir():
         if not (p.is_dir() and (p / 'info.json').exists()) and p.suffix != '.zip':
             continue
-        name = re.sub(r'_\d+\.\d+\.\d+$', '', p.stem if p.suffix == '.zip' else p.name)
-        if name not in enabled:
-            continue
         try:
             mod = read_mod(p)
-        except (KeyError, ValueError, zipfile.BadZipFile):
+        except (KeyError, ValueError, OSError, zipfile.BadZipFile):
             continue   # not a readable mod: the game will complain about it, not us
-        if mod['name'] in enabled and (mod['name'] not in found
-                                       or _version_key(mod['version']) > _version_key(found[mod['name']]['version'])):
-            found[mod['name']] = mod
-    return list(found.values())
+        n = mod['name']
+        if n in NOT_TRANSLATED:
+            others.add(n)
+        elif n not in found or _version_key(mod['version']) > _version_key(found[n]['version']):
+            found[n] = mod
+    usable, skipped = {}, []
+    for n, m in found.items():
+        m['listed'] = n in state
+        if state.get(n, True) is False:
+            skipped.append({'mod': m, 'reason': 'disabled', 'detail': ''})
+        elif game_mm and m['factorio_version'] and m['factorio_version'] != game_mm:
+            skipped.append({'mod': m, 'reason': 'incompatible', 'detail': m['factorio_version']})
+        else:
+            usable[n] = m
+    loaded = {b for b in BUILTIN if state.get(b, b == 'base')} | {n for n in others if state.get(n, True)}
+    changed = True
+    while changed:   # a mod whose required mod is skipped is skipped too
+        changed = False
+        for n, m in list(usable.items()):
+            missing = [d for d in _required(m) if d not in usable and d not in loaded]
+            if missing:
+                skipped.append({'mod': m, 'reason': 'missing-dep', 'detail': ', '.join(missing)})
+                del usable[n]
+                changed = True
+    return list(usable.values()), sorted(skipped, key=lambda s: s['mod']['name'].lower())
+
+
+def enabled_mods(directory: Path) -> list[dict]:
+    """The third-party mods the game will load, newest installed version of each."""
+    return scan_mods(directory, _game_major_minor())[0]
 
 
 def load_order(mods: list[dict]) -> list[dict]:
@@ -233,16 +282,20 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         else:
             pending.append(k)
     usage = translator.new_usage()
+    stopped = False
     if pending and translate:
         same = {}   # the same English in several keys or mods is sent once, then applied to all of them
         for k in sorted(pending, key=lambda k: (owner[k], k)):
             same.setdefault(memory.norm(en[k]).lower(), []).append(k)
         todo = [keys[0] for keys in same.values()]
-        total, done = len(todo), 0
+        total, done, busy_in_a_row = len(todo), 0, 0
         progress('translate', 0, total)
         for _ in (1, 2):   # the second pass retries once what failed validation
             failed = []
             for batch in batches((k, en[k]) for k in todo):
+                if stopped:
+                    failed += list(batch)
+                    continue
                 batch_terms = memory.terms_for(batch.values(), terms)
                 try:
                     got, u = translate(batch, batch_terms)
@@ -251,7 +304,12 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
                     log(f'translation batch failed: {e}')
                     errors.append(str(e))   # shown to the player: the strings stay English for this reason
                     failed += list(batch)
+                    busy_in_a_row = busy_in_a_row + 1 if getattr(e, 'busy', False) else 0
+                    # every fallback model is busy or out of quota: the rest of this run would fail the same way.
+                    # Stop; what was translated is in the memory, and the next run continues from here.
+                    stopped = busy_in_a_row >= 2
                     continue
+                busy_in_a_row = 0
                 for k in batch:
                     ar = clean(got.get(k, ''))
                     if ar and ar != en[k].strip() and not check_value(en[k], ar):   # a copy of the source is no answer
@@ -262,15 +320,16 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
                         done += 1
                     else:
                         failed.append(k)
+                memory_.save()   # each answered batch is kept, even if the run is closed or stopped later
                 progress('translate', min(done, total), total)
             todo = failed
-            if not todo:
+            if not todo or stopped:
                 break
         pending = [twin for k in todo for twin in same[memory.norm(en[k]).lower()]]
     for k in pending:
         source[k] = 'english'
     return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage,
-                           'review': review, 'flags': flags, 'errors': errors}
+                           'review': review, 'flags': flags, 'errors': errors, 'stopped': stopped}
 
 
 def quality_flags(en, ar, terms):
@@ -299,13 +358,21 @@ def mod_states(mods, rows, manifest, keep=frozenset()):
         rec = manifest.get(m['name'])
         changed = [k for k in keys if not rec or rec.get('keys', {}).get(k) != _sha(rows['en'][k])]
         pending, original = src.count('english'), src.count('original')
-        state = 'original' if m['name'] in keep else 'new' if not rec else \
+        state = 'original' if m['name'] in keep else 'empty' if not keys else 'new' if not rec else \
             'changed' if rec.get('fp') != mod_fingerprint(m) else 'pending' if pending else 'translated'
         out.append({'name': m['name'], 'title': m['title'], 'version': m['version'], 'strings': len(keys),
                     'arabic': len(keys) - pending - original - src.count('brand'), 'brand': src.count('brand'),
                     'original': original, 'pending': pending, 'changed': len(changed), 'excluded': m['name'] in keep,
-                    'state': state, 'state_ar': STATES_AR[state]})
+                    'state': state, 'state_ar': STATES_AR[state], 'detail': ''})
     return out
+
+
+def skipped_states(skipped):
+    """Rows for the mods the game will not load: shown with the reason, nothing sent."""
+    return [{'name': s['mod']['name'], 'title': s['mod']['title'], 'version': s['mod']['version'],
+             'strings': len(s['mod']['locale'].get('en', {})), 'arabic': 0, 'brand': 0, 'original': 0, 'pending': 0,
+             'changed': 0, 'excluded': False, 'state': s['reason'], 'state_ar': STATES_AR[s['reason']],
+             'detail': s['detail']} for s in skipped]
 
 
 # ---------- the pack ----------
@@ -324,7 +391,11 @@ def build_pack(mods, arabic, owner, en, out_root=None) -> Path:
             'author': 'factorio-arabic', 'factorio_version': major_minor,
             'description': 'Arabic, shaped and ordered for the engine, for the other mods installed here. '
                            'Rebuilt by the Arabic mods translator; not for distribution.',
-            'dependencies': [f'base >= {major_minor}.0', '? arabic-complete'] + [f'? {n}' for n in sorted(by_owner)]}
+            # '? name' orders the pack after the mod. The documented dependency form has no spaces in the name, so a
+            # name like 'Flow Control' is left out rather than risk the game rejecting the whole pack: its strings are
+            # still translated, only a copy of Arabic that mod might ship itself would win over ours.
+            'dependencies': [f'base >= {major_minor}.0', '? arabic-complete'] +
+                            [f'? {n}' for n in sorted(by_owner) if DEP_NAME_RE.fullmatch(n)]}
     pack.mkdir(parents=True, exist_ok=True)
     (pack / 'info.json').write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     return pack
@@ -365,7 +436,7 @@ def savings(rows, history):
             'tokens_saved_estimate': round(hits * per_string), 'glossary_tokens_this_run': glossary_tokens}
 
 
-def report(mods, rows, findings, provider, states, last):
+def report(mods, rows, findings, provider, states, last, skipped=()):
     kinds = ['override', 'mod-arabic', 'memory-base', 'memory', 'machine', 'brand', 'original', 'english']
     names = {'override': 'يدوي', 'mod-arabic': 'عربية المود', 'memory-base': 'ذاكرة اللعبة', 'memory': 'الذاكرة المشتركة',
              'original': 'أصلي (باختيارك)',
@@ -381,6 +452,13 @@ def report(mods, rows, findings, provider, states, last):
         c = counts.get(m['name'], {})
         lines.append(f"| {m['name']} {m['version']} | {st[m['name']]['state_ar']} | "
                      + ' | '.join(str(c.get(k, 0)) for k in kinds) + ' |')
+    if skipped:
+        lines += ['', '## مودات لن تحمّلها اللعبة (لم يُرسل منها شيء)', '', '| المود | السبب |', '|---|---|']
+        lines += [f"| {s['name']} {s['version']} | {s['state_ar']}{': ' + s['detail'] if s['detail'] else ''} |"
+                  for s in skipped]
+    if rows.get('stopped'):
+        lines += ['', '> توقّفت الترجمة عند حدّ المزوّد (زحام أو حدّ مجاني). ما تُرجم محفوظ في الذاكرة، والتشغيل التالي '
+                      'يُكمل من حيث توقّف.']
     lines += ['', '## الاستهلاك والتوفير', '',
               f"- طلبات API في هذا التشغيل: **{last['requests']}** (توكن داخل {last['input_tokens']}، خارج {last['output_tokens']})",
               f"- نصوص من الذاكرة بلا طلب: **{last['memory_hits']}**؛ توفير مقدّر ≈ {last['tokens_saved_estimate']} توكن "
@@ -424,20 +502,21 @@ def _translator(offline, log):
 
 
 def _context(offline=True, log=print):
-    mods = load_order(enabled_mods(mods_dir()))
+    usable, skipped = scan_mods(mods_dir(), _game_major_minor())
+    mods = load_order(usable)
     mem = memory.TranslationMemory(STATE / 'memory.json')
     legacy = STATE / 'cache.json'   # first format, keyed by locale key: carried over once, never deleted
     if legacy.exists() and not (STATE / 'memory.json').exists():
         n = mem.import_legacy_cache(_load_json(legacy, {}), merge(mods)[0])
         log(f'imported {n} strings from the old cache')
     base = memory.base_memory(mods_dir())
-    return mods, mem, base
+    return mods, mem, base, skipped
 
 
 def build(offline=False, log=print):
     progress('scan', 0, 1)
     STATE.mkdir(parents=True, exist_ok=True)
-    mods, mem, base = _context(log=log)
+    mods, mem, base, skipped = _context(log=log)
     terms = memory.term_base(_load_json(ROOT / 'glossary.json', {}), memory.base_terms(mods_dir()))
     translate, provider = _translator(offline, log)
     keep = excluded()
@@ -467,24 +546,27 @@ def build(offline=False, log=print):
             'memory_size': len(mem), **u, **savings(rows, history)}
     _save_json(STATE / 'last_run.json', last)
     report(mods, rows, lua_findings(mods, set(rows['en']) | set().union(*(read_en(m) for m in MODULES))), provider,
-           states, last)
+           states, last, skipped_states(skipped))
     _save_json(STATE / 'state.json', {'fingerprint': fingerprint(mods), 'pending': pending, 'built_at': last['built_at']})
     progress('done', 1, 1)
     return {'pack': pack.name, 'pack_path': str(pack), 'mods': len(mods), 'strings': len(rows['en']),
             'arabic': len(arabic), 'english_left': pending, 'requests': u['requests'], 'translator': provider,
-            'error': rows['errors'][-1] if rows['errors'] else ''}
+            'error': rows['errors'][-1] if rows['errors'] else '', 'stopped': rows['stopped'], 'skipped': len(skipped)}
 
 
 def status():
-    """No API call: an offline resolve tells, for each mod, what is already covered."""
-    mods, mem, base = _context()
+    """No API call: an offline resolve tells, for each mod, what is already covered; then the mods the game will
+    not load, with the reason. unlisted: mods copied in since the game last ran (it enables them on its next start)."""
+    mods, mem, base, skipped = _context()
     keep = excluded()
     _, _, rows = resolve(mods, base=base, memory_=mem, overrides=_load_json(overrides_path(), {}), terms={},
                          log=lambda s: None, keep=keep)
     saved = _load_json(STATE / 'state.json', {})
     fp = fingerprint(mods)
     return {'fingerprint': fp, 'changed': fp != saved.get('fingerprint'), 'pending': saved.get('pending', 0),
-            'mods': len(mods), 'states': mod_states(mods, rows, _load_json(STATE / 'manifest.json', {}), keep)}
+            'mods': len(mods), 'skipped': len(skipped),
+            'unlisted': sum(not m.get('listed', True) for m in mods + [s['mod'] for s in skipped]),
+            'states': mod_states(mods, rows, _load_json(STATE / 'manifest.json', {}), keep) + skipped_states(skipped)}
 
 
 def keep_original(name: str, keep: bool) -> dict:
