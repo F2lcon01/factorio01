@@ -49,6 +49,22 @@ def test_newest_mod_release_from_the_portal(tmp_path):
     assert _read(tmp_path, 'Read-FAModRelease', portal) == {'Version': '2.1.24', 'FactorioVersion': '2.1'}
 
 
+def test_a_background_run_reports_its_real_exit_code():
+    # the window decides success from ExitCode: Start-Process alone reads $null after exit, so every key check and
+    # every build looked failed (translator 1.0.0 to 1.2.0)
+    script = ("$d = Join-Path $env:TEMP 'fa-exitcode'; New-Item -ItemType Directory -Force $d | Out-Null; "
+              "foreach ($c in @('print(1)', 'import sys; sys.exit(3)')) { "
+              "$p = Start-FAPython @('-c', $c) (Join-Path $d 'o.txt') (Join-Path $d 'e.txt'); "
+              "while (-not $p.HasExited) { Start-Sleep -Milliseconds 50 }; $p.WaitForExit(); "
+              "if ($null -eq $p.ExitCode) { 'null' } else { $p.ExitCode } }")
+    try:
+        assert _ps(script).split() == ['0', '3']
+    except AssertionError as e:
+        if 'Factorio installation not found' in str(e):
+            pytest.skip('needs a Factorio installation (Set-FAPythonEnv)')
+        raise
+
+
 def test_an_unreachable_check_reports_nothing_newer():
     # a closed local port: both requests fail fast, and the result says "unknown", never "newer"
     out = _ps("$c = Start-FAUpdateCheck; $c.Tools = $c.Client.GetStringAsync('http://127.0.0.1:9/'); "

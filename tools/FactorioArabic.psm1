@@ -15,7 +15,7 @@ $script:ModName = 'arabic-complete'
 $script:PortalApi = 'https://mods.factorio.com/api/mods/arabic-complete'
 # The language tool and the mods translator ship together (arabic-tools.zip, arabic-mods-translator.zip): one number,
 # released as the GitHub tag translator-<version>. The mod keeps its own number, which follows the game's.
-$script:ToolsVersion = '1.2.0'
+$script:ToolsVersion = '1.2.1'
 $script:ReleasesApi = 'https://api.github.com/repos/F2lcon01/factorio01/releases?per_page=30'
 $script:ReleasesPage = 'https://github.com/F2lcon01/factorio01/releases/latest'
 $script:ModPage = 'https://mods.factorio.com/mod/arabic-complete'
@@ -242,8 +242,12 @@ function Start-FAPython([string[]]$PyArgs, [string]$StdOut, [string]$StdErr) {
     $py = Get-FAPython
     Set-FAPythonEnv
     $quoted = (@($py.Args) + @($PyArgs)) | ForEach-Object { if ($_ -match '\s') { '"' + $_ + '"' } else { $_ } }
-    Start-Process -FilePath $py.Exe -ArgumentList ($quoted -join ' ') -WorkingDirectory $py.Cwd -WindowStyle Hidden `
+    $p = Start-Process -FilePath $py.Exe -ArgumentList ($quoted -join ' ') -WorkingDirectory $py.Cwd -WindowStyle Hidden `
         -RedirectStandardOutput $StdOut -RedirectStandardError $StdErr -PassThru
+    # Start-Process does not keep the process handle: once the child exits, ExitCode reads as $null (success and
+    # failure alike), and the window took every run for a failure. Opening the handle now keeps the exit code.
+    $null = $p.Handle
+    $p
 }
 
 # ---------- the translator's API key: DPAPI, this Windows user only, never in the project ----------

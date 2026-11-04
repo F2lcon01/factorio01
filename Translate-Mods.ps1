@@ -268,7 +268,9 @@ function Update-Summary {
         "حصة المسرد من التوكن الداخل: نحو $(N $s.glossary_tokens_this_run) (يوحّد المصطلحات ولا يغني عن ترجمة الجملة)   حجم الذاكرة المشتركة: $(N $s.memory_size) نصاً"
 }
 
+$script:messages = @()
 function Show-Message([string]$Text) {
+    if ($Snapshot) { $script:messages += $Text; return }   # automated checks: no modal box to block them
     [void][Windows.Forms.MessageBox]::Show($form, $Text, 'ترجمة المودات', 'OK', 'Information', 'Button1',
         [Windows.Forms.MessageBoxOptions]::RtlReading -bor [Windows.Forms.MessageBoxOptions]::RightAlign)
 }
@@ -469,6 +471,18 @@ if ($Snapshot) {   # for verification: draw the window into an image without sho
     if ($env:FA_TEST_TOGGLE) {   # automated check of the checkbox handler: untick that mod as a click would
         foreach ($it in $list.Items) { if ($it.Tag -eq $env:FA_TEST_TOGGLE) { $it.Checked = -not $it.Checked } }
     }
+    # automated check of the real button flows (background run, exit code, messages): FA_TEST_KEY pastes a key and
+    # presses «حفظ وتحقق»; FA_TEST_TRANSLATE then presses «ترجمة وتثبيت». Messages are printed, not shown.
+    $clicks = @()
+    if ($env:FA_TEST_KEY) { $clicks += 'key' }
+    if ($env:FA_TEST_TRANSLATE) { $clicks += 'translate' }
+    foreach ($c in $clicks) {
+        if ($c -eq 'key') { $keyInput.Text = $env:FA_TEST_KEY; $btnKey.PerformClick() } else { $btnTranslate.PerformClick() }
+        $deadline = (Get-Date).AddMinutes(6)
+        while ($script:job -and (Get-Date) -lt $deadline) { [Windows.Forms.Application]::DoEvents(); Start-Sleep -Milliseconds 100 }
+        Write-Output "[$c] bar: $($barText.Text)"
+    }
+    foreach ($m in $script:messages) { Write-Output "MESSAGE: $m" }
     $form.Refresh()
     $bmp = New-Object Drawing.Bitmap($form.Width, $form.Height)
     $form.DrawToBitmap($bmp, (New-Object Drawing.Rectangle(0, 0, $form.Width, $form.Height)))
