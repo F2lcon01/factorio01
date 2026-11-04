@@ -15,7 +15,7 @@ $script:ModName = 'arabic-complete'
 $script:PortalApi = 'https://mods.factorio.com/api/mods/arabic-complete'
 # The language tool and the mods translator ship together (arabic-tools.zip, arabic-mods-translator.zip): one number,
 # released as the GitHub tag translator-<version>. The mod keeps its own number, which follows the game's.
-$script:ToolsVersion = '1.3.0'
+$script:ToolsVersion = '1.3.1'
 $script:ReleasesApi = 'https://api.github.com/repos/F2lcon01/factorio01/releases?per_page=30'
 $script:ReleasesPage = 'https://github.com/F2lcon01/factorio01/releases/latest'
 $script:ModPage = 'https://mods.factorio.com/mod/arabic-complete'
@@ -25,6 +25,7 @@ function Get-FARoot { $script:Root }
 function Test-DevMode { Test-Path (Join-Path $script:Root 'tools\autoupdate.py') }
 
 function Get-FactorioDir {
+    if ($env:FA_FACTORIO_DIR) { return $env:FA_FACTORIO_DIR }   # tests: a copy of the game's folder layout
     $default = 'C:\Program Files (x86)\Steam\steamapps\common\Factorio'
     if (Test-Path (Join-Path $default 'data\base\info.json')) { return $default }
     $steam = (Get-ItemProperty 'HKCU:\Software\Valve\Steam' -ErrorAction SilentlyContinue).SteamPath
@@ -400,6 +401,55 @@ function Repair-Scenarios {
     Get-ScenarioState
 }
 
+# ---------- the game's own core texts: what it shows before any mod is loaded ----------
+# Screens such as "Error loading mods" appear before mods load, so they read data\core\locale\ar\core.cfg: the
+# game's Crowdin Arabic, typed in reversed letter order and unshaped, which the engine shows as reversed, broken
+# words. The installed mod's core.cfg (shaped, ordered for the engine) is copied over it; the original is kept
+# once per game version, and Steam's "verify integrity of game files" brings it back.
+function Get-GameCoreCfg { Join-Path (Get-FactorioDir) 'data\core\locale\ar\core.cfg' }
+
+function Get-ModCoreCfg {
+    $mod = Get-ModInfo
+    if (-not $mod) { return $null }
+    if (Test-Path $mod.Path -PathType Container) {
+        $f = Join-Path $mod.Path 'locale\ar\core.cfg'
+        if (Test-Path $f) { return $f }
+        return $null
+    }
+    $f = Join-Path (Get-BackupRoot) ('core-' + $mod.Version + '\core.cfg')   # zip from the mod portal: extract once
+    if (-not (Test-Path $f)) {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        $z = [IO.Compression.ZipFile]::OpenRead($mod.Path)
+        try {
+            $e = $z.Entries | Where-Object { $_.FullName -match '^[^/]+/locale/ar/core\.cfg$' } | Select-Object -First 1
+            if (-not $e) { return $null }
+            New-Item -ItemType Directory -Force (Split-Path $f -Parent) | Out-Null
+            [IO.Compression.ZipFileExtensions]::ExtractToFile($e, $f, $true)
+        } finally { $z.Dispose() }
+    }
+    $f
+}
+
+function Test-CoreLocalePatched {
+    $src = Get-ModCoreCfg
+    (-not $src) -or (Test-SameFile (Get-GameCoreCfg) $src)   # no mod core.cfg: nothing to compare with
+}
+
+function Repair-CoreLocale {
+    $src = Get-ModCoreCfg
+    if (-not $src) { return $false }
+    $game = Get-GameCoreCfg
+    if (Test-SameFile $game $src) { return $true }
+    $backup = Join-Path (Get-BackupRoot) ('core-original-' + (Get-GameVersion) + '\core.cfg')
+    if ((Test-Path $game) -and -not (Test-Path $backup)) {
+        New-Item -ItemType Directory -Force (Split-Path $backup -Parent) | Out-Null
+        Copy-Item $game $backup
+    }
+    New-Item -ItemType Directory -Force (Split-Path $game -Parent) | Out-Null
+    Copy-Item $src $game -Force
+    $true
+}
+
 # ---------- health check and one-click fix ----------
 function Get-FAHealth {
     $game = Get-GameVersion
@@ -413,6 +463,7 @@ function Get-FAHealth {
     }
     if ((Get-GameLanguage) -eq 'ar') {
         if (-not (Test-LanguageNamePatched)) { $problems += 'language-name' }
+        if ($mod -and -not (Test-CoreLocalePatched)) { $problems += 'core-locale' }
         $s = Get-ScenarioState
         if ($s -and ($s.Original -gt 0 -or $s.Other -gt 0)) { $problems += 'scenarios' }
     }
@@ -432,10 +483,12 @@ function Invoke-FAFix {
         & (Join-Path $script:ToolsDir 'auto_update.ps1') -Force | Out-Null   # rebuild the mod to the game version + repairs
         $done += 'rebuilt'
         if ((Get-GameLanguage) -eq 'ar' -and -not (Test-LanguageNamePatched)) { Set-LanguageName; $done += 'fixed-name' }
+        if ((Get-GameLanguage) -eq 'ar' -and -not (Test-CoreLocalePatched)) { if (Repair-CoreLocale) { $done += 'fixed-core' } }
         return $done
     }
     $h = Get-FAHealth
     if ($h.Problems -contains 'language-name') { Set-LanguageName; $done += 'fixed-name' }
+    if ($h.Problems -contains 'core-locale') { if (Repair-CoreLocale) { $done += 'fixed-core' } }
     if ($h.Problems -contains 'scenarios') { [void](Repair-Scenarios); $done += 'fixed-scenarios' }
     if ($h.Problems -contains 'mod-disabled') { Enable-Mod; $done += 'enabled-mod' }
     if ($h.Problems -contains 'version-mismatch' -or $h.Problems -contains 'incompatible' -or $h.Problems -contains 'mod-missing') {
