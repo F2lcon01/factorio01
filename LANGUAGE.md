@@ -119,9 +119,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1 -
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1 -Uninstall  # التراجع: تعطيل الحزمة ونقلها (لا حذف)
 ```
 
-**المفتاح:** تقبل الأداة مفتاح API من **أي مزوّد**، وتتعرّف عليه من شكله ثم تتحقق منه بطلب قائمة النماذج:
-OpenAI، وGoogle Gemini، وAnthropic Claude، وDeepL، وOpenRouter، وGroq، وDeepSeek، وMistral، وxAI، وTogether.
-ولخادم محلي متوافق مع OpenAI (Ollama أو LM Studio): `-BaseUrl http://localhost:11434/v1 -Model <اسم النموذج>`.
+**المفتاح:** تقبل الأداة مفتاح API من **أي مزوّد**: OpenAI، وGoogle Gemini، وAnthropic Claude، وDeepL، وOpenRouter،
+وGroq، وDeepSeek، وMistral، وxAI، وTogether، وHugging Face، وCerebras، وFireworks، وNVIDIA. اختر المزوّد من القائمة، أو
+«تلقائي» حين يدل شكل المفتاح عليه (`sk-ant-`، `AIza`، `gsk_`...). **لا يُرسل المفتاح إلا إلى مزوّد واحد**: المفتاح الذي لا
+يدل شكله على مزوّده لا يُرسل إلى أي جهة حتى تختار. ولخادم محلي مجاني متوافق مع OpenAI (Ollama أو LM Studio): اختر «خادم محلي
+مجاني» واكتب رابطه، بلا مفتاح (أو بالأمر `-BaseUrl http://localhost:11434/v1 -Model <اسم النموذج>`).
 يُحفظ المفتاح بعد قبوله مشفّراً لمستخدم Windows الحالي فقط (DPAPI) في
 `%APPDATA%\Factorio\arabic-tools\translator-key.txt`، ولا يُكتب في المشروع ولا يُطبع.
 

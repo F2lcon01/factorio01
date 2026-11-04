@@ -45,8 +45,9 @@ https://github.com/F2lcon01/factorio01/raw/main/download/arabic-tools.zip
 1) نزّل:  https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip
    (نحو 12 ميغا، وفيه Python مدمج: لا تحتاج تثبيت أي شيء) ثم «استخراج الكل».
 2) انقر مرتين على  Translate-Mods.cmd   (أو زر «ترجمة المودات الإضافية...» في نافذة أداة اللغة).
-3) الصق مفتاح API من أي مزوّد (OpenAI، Gemini، Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral...)
-   واضغط «حفظ وتحقق». يُحفظ المفتاح مشفّراً لمستخدم Windows الحالي فقط.
+3) اختر المزوّد من القائمة (OpenAI، Google Gemini، Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral...)
+   والصق مفتاحه، ثم اضغط «حفظ وتحقق». المفتاح لا يُرسل إلا إلى المزوّد الذي اخترته، ويُحفظ مشفّراً
+   لمستخدم Windows الحالي فقط. للترجمة المجانية: «خادم محلي مجاني (Ollama)» بلا مفتاح.
 4) اضغط «ترجمة وتثبيت»، ثم افتح اللعبة.
 كل نص يُترجم يُحفظ في ذاكرة، فلا يُطلب مرتين: المود الذي لم يتغيّر لا يكلّف أي طلب، والمود الذي تحدّث
 تُترجم نصوصه الجديدة فقط. التراجع: زر «إلغاء التثبيت (تراجع)» في النافذة.

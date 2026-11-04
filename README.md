@@ -109,8 +109,10 @@
 
 2️⃣ **شغّل** `Translate-Mods.cmd`، أو زر **«ترجمة المودات الإضافية...»** في نافذة أداة اللغة. لا يطلب صلاحيات المدير.
 
-3️⃣ **الصق مفتاح API من أي مزوّد** (OpenAI، Google Gemini، Anthropic Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral،
-xAI) ← **«حفظ وتحقق»**. تتعرّف الأداة على المزوّد وحدها، وتحفظ المفتاح مشفّراً لمستخدم Windows الحالي فقط.
+3️⃣ **اختر المزوّد والصق مفتاحه** (OpenAI، Google Gemini، Anthropic Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral،
+xAI، Together، Hugging Face، Cerebras، Fireworks، NVIDIA) ← **«حفظ وتحقق»**. «تلقائي» يكفي حين يدل شكل المفتاح على
+مزوّده. **المفتاح لا يُرسل إلا إلى المزوّد الذي اخترته**، ويُحفظ مشفّراً لمستخدم Windows الحالي فقط.
+وللترجمة المجانية: «خادم محلي مجاني (Ollama)» مع رابط الخادم، بلا مفتاح.
 
 4️⃣ **«ترجمة وتثبيت»** ← افتح اللعبة.
 
