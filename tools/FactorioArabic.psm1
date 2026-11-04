@@ -13,6 +13,12 @@ $script:Utf8 = New-Object Text.UTF8Encoding $false
 $script:ArabicName = -join ([char[]](0xFE94, 0xFEF4, 0xFE91, 0xFEAE, 0xFECC, 0xFEDF, 0xFE8D))  # shaped "Arabic"
 $script:ModName = 'arabic-complete'
 $script:PortalApi = 'https://mods.factorio.com/api/mods/arabic-complete'
+# The language tool and the mods translator ship together (arabic-tools.zip, arabic-mods-translator.zip): one number,
+# released as the GitHub tag translator-<version>. The mod keeps its own number, which follows the game's.
+$script:ToolsVersion = '1.2.0'
+$script:ReleasesApi = 'https://api.github.com/repos/F2lcon01/factorio01/releases?per_page=30'
+$script:ReleasesPage = 'https://github.com/F2lcon01/factorio01/releases/latest'
+$script:ModPage = 'https://mods.factorio.com/mod/arabic-complete'
 
 function Set-FAUserAppData([string]$Path) { $script:UserAppData = $Path }   # elevated runs keep the real user's data
 function Get-FARoot { $script:Root }
@@ -128,7 +134,61 @@ function Get-PortalRelease {
     } catch { return $null }
 }
 
-# ---------- scenario / tutorial texts ----------
+# ---------- versions: this tool, the mod, and what is newest online ----------
+function Get-FAToolsVersion { $script:ToolsVersion }
+function Get-FAReleasesPage { $script:ReleasesPage }
+function Get-FAModPage { $script:ModPage }
+
+# Windows shapes digits by context in right-to-left controls (47 -> Arabic-Indic, 2.2.6 reversed). The project rule is
+# Western digits: wrap numbers in a left-to-right embedding that starts with a left-to-right mark.
+function N($Value) { [string][char]0x202A + [char]0x200E + "$Value" + [char]0x202C }
+
+function Read-FAToolsRelease($Releases) {
+    # GitHub's release list -> the newest translator-<x.y.z> that is neither a draft nor a pre-release, or $null
+    $best = $null
+    foreach ($r in @($Releases)) {
+        if ($r.draft -or $r.prerelease -or "$($r.tag_name)" -notmatch '^translator-(\d+\.\d+\.\d+)$') { continue }
+        $v = $Matches[1]
+        if (-not $best -or [version]$v -gt [version]$best.Version) { $best = [pscustomobject]@{ Version = $v; Url = $r.html_url } }
+    }
+    $best
+}
+
+function Read-FAModRelease($Portal) {
+    # the mod portal's answer -> its newest release, or $null
+    $rel = @($Portal.releases) | Where-Object { $_.version } | Sort-Object { [version]$_.version } | Select-Object -Last 1
+    if (-not $rel) { return $null }
+    [pscustomobject]@{ Version = $rel.version; FactorioVersion = $rel.info_json.factorio_version }
+}
+
+function Start-FAUpdateCheck {
+    # Two GETs that do not block a window: GitHub releases (this tool) and the mod portal (the mod). Poll with
+    # Get-FAUpdateResult from a WinForms timer. Nothing about the user is sent.
+    Add-Type -AssemblyName System.Net.Http
+    [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+    $client = New-Object Net.Http.HttpClient
+    $client.Timeout = [TimeSpan]::FromSeconds(10)
+    $client.DefaultRequestHeaders.UserAgent.ParseAdd('factorio-arabic-tools/' + $script:ToolsVersion)
+    @{ Client = $client; Tools = $client.GetStringAsync($script:ReleasesApi); Mod = $client.GetStringAsync($script:PortalApi) }
+}
+
+function Get-FAUpdateResult($Check) {
+    # $null while a request is still running. Then: Tools/Mod = @{ Current; Latest ($null: unreachable); Newer }
+    if (-not ($Check.Tools.IsCompleted -and $Check.Mod.IsCompleted)) { return $null }
+    $tools = $null; $mod = $null
+    try { if ($Check.Tools.Status -eq 'RanToCompletion') { $tools = Read-FAToolsRelease ($Check.Tools.Result | ConvertFrom-Json) } } catch { }
+    try { if ($Check.Mod.Status -eq 'RanToCompletion') { $mod = Read-FAModRelease ($Check.Mod.Result | ConvertFrom-Json) } } catch { }
+    $Check.Client.Dispose()
+    $installed = Get-InstalledModVersion
+    [pscustomobject]@{
+        Tools = [pscustomobject]@{ Current = $script:ToolsVersion; Latest = $(if ($tools) { $tools.Version } else { $null })
+                                   Url = $(if ($tools) { $tools.Url } else { $script:ReleasesPage })
+                                   Newer = [bool]($tools -and [version]$tools.Version -gt [version]$script:ToolsVersion) }
+        Mod = [pscustomobject]@{ Current = $installed; Latest = $(if ($mod) { $mod.Version } else { $null }); Url = $script:ModPage
+                                 Newer = [bool]($mod -and $installed -and [version]$mod.Version -gt [version]$installed) }
+    }
+}
+
 # ---------- Python: the project's own, or the embedded one shipped in arabic-mods-translator.zip ----------
 function Test-EmbeddedPython { Test-Path (Join-Path $script:ToolsDir 'python\python.exe') }
 
@@ -202,15 +262,18 @@ function Save-FATranslatorKey([securestring]$Key) {
     $f
 }
 
+function Get-FAProviderFile { Join-Path $script:UserAppData 'Factorio\arabic-tools\translator-provider.json' }
+function Test-FAProviderChoice { Test-Path (Get-FAProviderFile) }   # $false: first run, the window suggests Gemini
+
 function Get-FAProviderChoice {
     # the provider the user picked in the window (not secret): @{ provider = ''|'openai'|...|'custom'; base_url = '' }
-    $f = Join-Path $script:UserAppData 'Factorio\arabic-tools\translator-provider.json'
+    $f = Get-FAProviderFile
     if (Test-Path $f) { try { return (Get-Content $f -Raw | ConvertFrom-Json) } catch { } }
     [pscustomobject]@{ provider = ''; base_url = '' }
 }
 
 function Save-FAProviderChoice([string]$Provider, [string]$BaseUrl) {
-    $f = Join-Path $script:UserAppData 'Factorio\arabic-tools\translator-provider.json'
+    $f = Get-FAProviderFile
     New-Item -ItemType Directory -Force (Split-Path $f -Parent) | Out-Null
     [IO.File]::WriteAllText($f, (@{ provider = $Provider; base_url = $BaseUrl } | ConvertTo-Json), $script:Utf8)
 }

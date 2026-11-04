@@ -39,7 +39,7 @@ $stateColor = @{
 }
 
 $form = New-Object Windows.Forms.Form
-$form.Text = 'ترجمة المودات الإضافية'
+$form.Text = 'ترجمة المودات الإضافية — الإصدار ' + (N (Get-FAToolsVersion))
 $form.RightToLeft = 'Yes'
 $form.RightToLeftLayout = $true
 $form.StartPosition = 'CenterScreen'
@@ -69,8 +69,21 @@ function New-Button([string]$Text, [int]$X, [int]$Y, [int]$W, [int]$H, [Drawing.
     $b
 }
 
-$title = New-Label 'ترجمة المودات الإضافية إلى العربية' 20 12 780 32 15 $true
+$title = New-Label 'ترجمة المودات الإضافية إلى العربية' 20 12 470 32 15 $true
 $title.ForeColor = $orange
+# this tool's version, and whether it or the Arabic mod has a newer release (checked in the background)
+$versionLink = New-Object Windows.Forms.LinkLabel
+$versionLink.Font = New-Object Drawing.Font('Segoe UI', 9.5)
+$versionLink.AutoSize = $false
+$versionLink.TextAlign = 'MiddleRight'
+$versionLink.SetBounds(500, 16, 300, 26)
+$versionLink.ForeColor = $muted
+$versionLink.LinkColor = $orange
+$versionLink.ActiveLinkColor = $orange
+$versionLink.Text = 'الإصدار ' + (N (Get-FAToolsVersion)) + ' · التحقق من التحديثات...'
+$versionLink.LinkArea = New-Object Windows.Forms.LinkArea(0, 0)
+$script:updateUrl = $null
+$versionLink.Add_LinkClicked({ if ($script:updateUrl) { Start-Process $script:updateUrl } })
 $subtitle = New-Label 'تُترجم نصوص كل مود تضيفه، وتُحفظ كل ترجمة في ذاكرة مشتركة فلا يُطلب النص نفسه مرتين. أزل العلامة عن مود لإبقائه بلغته الأصلية.' 20 46 780 22 9.5
 $subtitle.ForeColor = $muted
 
@@ -94,8 +107,9 @@ $keyBox.ForeColor = $text
 $keyBox.SetBounds(20, 286, 780, 120)
 # a key is sent to one provider only: the one its format names, or the one chosen here
 $providers = @(
-    @('تلقائي (من شكل المفتاح)', ''), @('OpenAI', 'openai'), @('Google Gemini', 'gemini'), @('Anthropic Claude', 'anthropic'),
-    @('DeepL', 'deepl'), @('OpenRouter', 'openrouter'), @('Groq', 'groq'), @('DeepSeek', 'deepseek'), @('Mistral', 'mistral'),
+    @('تلقائي (من شكل المفتاح)', ''), @('Google Gemini (مجاني)', 'gemini'), @('OpenRouter: نماذج مجانية فقط', 'openrouter-free'),
+    @('OpenRouter: كل النماذج (مدفوعة)', 'openrouter'), @('OpenAI', 'openai'), @('Anthropic Claude', 'anthropic'),
+    @('DeepL', 'deepl'), @('Groq', 'groq'), @('DeepSeek', 'deepseek'), @('Mistral', 'mistral'),
     @('xAI (Grok)', 'xai'), @('Together', 'together'), @('Hugging Face', 'huggingface'), @('Cerebras', 'cerebras'),
     @('Fireworks', 'fireworks'), @('NVIDIA', 'nvidia'), @('خادم محلي مجاني (Ollama)', 'custom'))   # also LM Studio
 $providerLabel = New-Label 'المزوّد:' 700 28 60 24 9.5
@@ -115,18 +129,24 @@ $urlInput.RightToLeft = 'No'
 $urlInput.Text = 'http://localhost:11434/v1'
 $urlInput.SetBounds(240, 58, 435, 26)
 $keyState = New-Label '' 20 90 740 24 9.5
-$keyBox.Controls.AddRange(@($providerLabel, $providerBox, $keyInput, $btnKey, $btnForget, $urlLabel, $urlInput, $keyState))
+# opens the provider's official key page; the player creates the key there and pastes it here
+$btnFreeKey = New-Button 'احصل على مفتاح مجاني' 470 56 225 30 ([Drawing.Color]::FromArgb(46, 125, 50))
+$keyBox.Controls.AddRange(@($providerLabel, $providerBox, $keyInput, $btnKey, $btnForget, $urlLabel, $urlInput, $btnFreeKey, $keyState))
 
 function Get-ChosenProvider { $providers[[Math]::Max(0, $providerBox.SelectedIndex)][1] }
+function Select-Provider([string]$Code) {
+    for ($i = 0; $i -lt $providers.Count; $i++) { if ($providers[$i][1] -eq $Code) { $providerBox.SelectedIndex = $i } }
+}
 function Update-ProviderFields {
     $custom = (Get-ChosenProvider) -eq 'custom'
     $urlLabel.Visible = $custom
     $urlInput.Visible = $custom
+    $btnFreeKey.Visible = -not $custom
 }
 $choice = Get-FAProviderChoice
-$idx = 0
-for ($i = 0; $i -lt $providers.Count; $i++) { if ($providers[$i][1] -eq $choice.provider) { $idx = $i } }
-$providerBox.SelectedIndex = $idx
+$providerBox.SelectedIndex = 0
+# first run, no key yet: suggest Google Gemini (free, and its key page is one click away)
+if (-not (Test-FAProviderChoice) -and -not (Get-FATranslatorKey)) { Select-Provider 'gemini' } else { Select-Provider $choice.provider }
 if ($choice.base_url) { $urlInput.Text = $choice.base_url }
 Update-ProviderFields
 $providerBox.Add_SelectedIndexChanged({ Update-ProviderFields })
@@ -154,14 +174,53 @@ $summary.SetBounds(20, 526, 780, 116)
 $footer = New-Label 'أغلق اللعبة قبل الترجمة. المفتاح يُحفظ مشفّراً لمستخدم Windows الحالي فقط، ولا يُرسل إلا إلى المزوّد الذي اخترته.' 20 648 780 22 9
 $footer.ForeColor = $muted
 
-$form.Controls.AddRange(@($title, $subtitle, $list, $keyBox, $btnTranslate, $btnRefresh, $btnReport, $btnUndo, $bar, $barText, $summary, $footer))
+$form.Controls.AddRange(@($title, $versionLink, $subtitle, $list, $keyBox, $btnTranslate, $btnRefresh, $btnReport, $btnUndo, $bar, $barText, $summary, $footer))
 
 # ---------- data ----------
 function Read-Json([string]$Path) { if (Test-Path $Path) { Get-Content $Path -Raw -Encoding UTF8 | ConvertFrom-Json } else { $null } }
+# N (numbers as Western digits in right-to-left text) comes from FactorioArabic.psm1
 
-# Windows shapes digits by context in right-to-left controls (47 -> Arabic-Indic, 2.2.6 reversed). The project rule is
-# Western digits: wrap numbers in a left-to-right embedding that starts with a left-to-right mark.
-function N($Value) { [string][char]0x202A + [char]0x200E + "$Value" + [char]0x202C }
+# ---------- versions: this tool and the Arabic mod, against the newest online ----------
+function Format-Updates($U) {
+    # -> @{ Text; Url } for the version line; Url only when there is something newer to get
+    $t, $m, $parts, $url = $U.Tools, $U.Mod, @(), $null
+    if ($t.Newer) { $parts += "⬆ أداة أحدث: $(N $t.Latest)"; $url = $t.Url }
+    if ($m.Newer) { $parts += "⬆ مود أحدث: $(N $m.Latest)"; if (-not $url) { $url = $m.Url } }
+    if (-not $parts) {
+        $parts += $(if ($t.Latest -and $m.Latest -and $m.Current) { '✓ الأداة والمود بآخر إصدار' }
+                    elseif ($t.Latest) { '✓ الأداة بآخر إصدار' } else { 'تعذّر التحقق من التحديثات' })
+    }
+    $text = ($parts -join ' · ')
+    if ($url) { $text += ' (اضغط هنا)' }
+    @{ Text = $text; Url = $url }
+}
+
+function Show-Updates($U) {
+    $f = Format-Updates $U
+    $versionLink.Text = 'الإصدار ' + (N (Get-FAToolsVersion)) + ' · ' + $f.Text
+    $script:updateUrl = $f.Url
+    $versionLink.LinkArea = $(if ($f.Url) { New-Object Windows.Forms.LinkArea(0, $versionLink.Text.Length) } else { New-Object Windows.Forms.LinkArea(0, 0) })
+    $versionLink.ForeColor = $(if ($f.Url) { $orange } elseif ($f.Text -like '✓*') { $stateColor.translated } else { $muted })
+}
+
+$script:updateCheck = $null
+try { $script:updateCheck = Start-FAUpdateCheck } catch { }
+$updTimer = New-Object Windows.Forms.Timer
+$updTimer.Interval = 400
+$updTimer.Add_Tick({
+    if (-not $script:updateCheck) { $updTimer.Stop(); $versionLink.Text = 'الإصدار ' + (N (Get-FAToolsVersion)); return }
+    $u = Get-FAUpdateResult $script:updateCheck
+    if ($u) { $updTimer.Stop(); Show-Updates $u }
+})
+$updTimer.Start()
+
+$btnFreeKey.Add_Click({
+    # Google Gemini, or OpenRouter's free models when OpenRouter is chosen: both have a free tier
+    if ((Get-ChosenProvider) -like 'openrouter*') { Select-Provider 'openrouter-free'; $page = 'https://openrouter.ai/keys' }
+    else { Select-Provider 'gemini'; $page = 'https://aistudio.google.com/apikey' }
+    Start-Process $page
+    $barText.Text = 'أنشئ المفتاح في الصفحة التي فُتحت في المتصفح، ثم الصقه هنا واضغط «حفظ وتحقق».'
+})
 
 function Update-KeyState {
     $cfg = Read-Json (Join-Path $stateDir 'translator.json')
@@ -397,6 +456,13 @@ if ($PreviewBusy) {   # for the documentation screenshot of a run in progress
 }
 
 if ($Snapshot) {   # for verification: draw the window into an image without showing it
+    $updTimer.Stop()
+    $deadline = (Get-Date).AddSeconds(15)   # the image shows the real update check, as the window would a moment later
+    while ($script:updateCheck -and (Get-Date) -lt $deadline) {
+        $u = Get-FAUpdateResult $script:updateCheck
+        if ($u) { Show-Updates $u; break }
+        Start-Sleep -Milliseconds 100
+    }
     $form.Opacity = 0
     $form.Show()
     [Windows.Forms.Application]::DoEvents()   # lets Shown run, as it does in the real message loop

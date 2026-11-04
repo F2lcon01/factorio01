@@ -74,7 +74,7 @@ function Switch-GameLanguage([string]$Code) {
 # 2) بلا واجهة
 if ($Check) {
     $h = Get-FAHealth
-    "إصدار اللعبة: $($h.GameVersion) | إصدار المود: $($h.ModVersion) | الوضع: $($h.Mode) | اللغة: $(Get-LanguageLabel)"
+    "إصدار الأداة: $(Get-FAToolsVersion) | إصدار اللعبة: $($h.GameVersion) | إصدار المود: $($h.ModVersion) | الوضع: $($h.Mode) | اللغة: $(Get-LanguageLabel)"
     if ($h.Problems) { 'غير متطابقة: ' + (($h.Problems | ForEach-Object { $problemText[$_] }) -join '، ') } else { 'متطابقة ✓' }
     return
 }
@@ -91,14 +91,14 @@ Add-Type -AssemblyName System.Windows.Forms, System.Drawing
 $ok = [Drawing.Color]::FromArgb(102, 187, 106)
 $warn = [Drawing.Color]::FromArgb(255, 167, 38)
 $form = New-Object Windows.Forms.Form
-$form.Text = 'لغة Factorio'
+$form.Text = 'لغة Factorio — الإصدار ' + (N (Get-FAToolsVersion))
 $form.RightToLeft = 'Yes'
 $form.RightToLeftLayout = $true
 $form.StartPosition = 'CenterScreen'
 $form.FormBorderStyle = 'FixedDialog'
 $form.MaximizeBox = $false
 $form.MinimizeBox = $false
-$form.ClientSize = New-Object Drawing.Size(460, 404)
+$form.ClientSize = New-Object Drawing.Size(460, 428)
 $form.Font = New-Object Drawing.Font('Segoe UI', 11)
 $form.BackColor = [Drawing.Color]::FromArgb(36, 36, 36)
 $form.ForeColor = [Drawing.Color]::FromArgb(255, 230, 192)
@@ -129,29 +129,42 @@ $title = New-Label 'أداة لغة Factorio' 12 34 15 $true
 $title.ForeColor = [Drawing.Color]::FromArgb(255, 156, 0)
 
 $versions = New-Label '' 52 26 11
-$state = New-Label '' 80 26 11 $true
-$details = New-Label '' 106 44 9.5
+# this tool's version, and whether it or the mod has a newer release (checked in the background)
+$updates = New-Object Windows.Forms.LinkLabel
+$updates.Font = New-Object Drawing.Font('Segoe UI', 9.5)
+$updates.AutoSize = $false
+$updates.TextAlign = 'MiddleCenter'
+$updates.SetBounds(20, 78, 420, 22)
+$updates.ForeColor = [Drawing.Color]::FromArgb(170, 170, 170)
+$updates.LinkColor = $warn
+$updates.ActiveLinkColor = $warn
+$updates.Text = 'إصدار الأداة ' + (N (Get-FAToolsVersion)) + ' · التحقق من التحديثات...'
+$updates.LinkArea = New-Object Windows.Forms.LinkArea(0, 0)
+$script:updateUrl = $null
+$updates.Add_LinkClicked({ if ($script:updateUrl) { Start-Process $script:updateUrl } })
+$state = New-Label '' 104 26 11 $true
+$details = New-Label '' 130 44 9.5
 $details.ForeColor = [Drawing.Color]::FromArgb(200, 200, 200)
-$btnFix = New-Button 'إصلاح' 150 152 160 40 $warn
+$btnFix = New-Button 'إصلاح' 150 176 160 40 $warn
 
 $sep = New-Object Windows.Forms.Label
-$sep.SetBounds(30, 204, 400, 1)
+$sep.SetBounds(30, 228, 400, 1)
 $sep.BackColor = [Drawing.Color]::FromArgb(80, 80, 80)
 
-$current = New-Label '' 212 26 11
-$btnAr = New-Button 'العربية' 250 244 180 56 ([Drawing.Color]::FromArgb(46, 125, 50))
-$btnEn = New-Button 'English' 30 244 180 56 ([Drawing.Color]::FromArgb(69, 90, 100))
-$btnMods = New-Button 'ترجمة المودات الإضافية...' 30 312 400 36 ([Drawing.Color]::FromArgb(69, 90, 100))
+$current = New-Label '' 236 26 11
+$btnAr = New-Button 'العربية' 250 268 180 56 ([Drawing.Color]::FromArgb(46, 125, 50))
+$btnEn = New-Button 'English' 30 268 180 56 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnMods = New-Button 'ترجمة المودات الإضافية...' 30 336 400 36 ([Drawing.Color]::FromArgb(69, 90, 100))
 $btnMods.Font = New-Object Drawing.Font('Segoe UI', 11, [Drawing.FontStyle]::Bold)
-$footer = New-Label 'أغلق اللعبة قبل أي تغيير. يعمل بصلاحيات المدير.' 356 36 9
+$footer = New-Label 'أغلق اللعبة قبل أي تغيير. يعمل بصلاحيات المدير.' 380 36 9
 $footer.ForeColor = [Drawing.Color]::FromArgb(160, 160, 160)
 
 function Update-Status {
     $h = Get-FAHealth
     $problems = @($h.Problems)
     if ($PreviewProblems) { $problems = @('version-mismatch', 'scenarios') }
-    $mv = if ($h.ModVersion) { $h.ModVersion } else { 'غير مثبت' }
-    $versions.Text = "إصدار اللعبة: $($h.GameVersion)     إصدار المود: $mv"
+    $mv = if ($h.ModVersion) { N $h.ModVersion } else { 'غير مثبت' }
+    $versions.Text = "إصدار اللعبة: $(N $h.GameVersion)     إصدار المود: $mv"
     if ($problems.Count -eq 0) {
         $state.Text = '✓ متطابقة — كل شيء سليم'
         $state.ForeColor = $ok
@@ -198,10 +211,51 @@ $btnMods.Add_Click({
     else { Start-Process 'https://github.com/F2lcon01/factorio01/releases/latest' }
 })
 
-$form.Controls.AddRange(@($title, $versions, $state, $details, $btnFix, $sep, $current, $btnAr, $btnEn, $btnMods, $footer))
+$form.Controls.AddRange(@($title, $versions, $updates, $state, $details, $btnFix, $sep, $current, $btnAr, $btnEn, $btnMods, $footer))
 Update-Status
 
+# ---------- الإصدارات: الأداة والمود مقابل أحدث ما نُشر ----------
+function Format-Updates($U) {
+    # -> @{ Text; Url } لسطر الإصدار؛ Url فقط حين يوجد ما هو أحدث
+    $t, $m, $parts, $url = $U.Tools, $U.Mod, @(), $null
+    if ($t.Newer) { $parts += "⬆ أداة أحدث: $(N $t.Latest)"; $url = $t.Url }
+    if ($m.Newer) { $parts += "⬆ مود أحدث: $(N $m.Latest)"; if (-not $url) { $url = $m.Url } }
+    if (-not $parts) {
+        $parts += $(if ($t.Latest -and $m.Latest -and $m.Current) { '✓ الأداة والمود بآخر إصدار' }
+                    elseif ($t.Latest) { '✓ الأداة بآخر إصدار' } else { 'تعذّر التحقق من التحديثات' })
+    }
+    $text = ($parts -join ' · ')
+    if ($url) { $text += ' (اضغط هنا)' }
+    @{ Text = $text; Url = $url }
+}
+
+function Show-Updates($U) {
+    $f = Format-Updates $U
+    $updates.Text = 'إصدار الأداة ' + (N (Get-FAToolsVersion)) + ' · ' + $f.Text
+    $script:updateUrl = $f.Url
+    $updates.LinkArea = $(if ($f.Url) { New-Object Windows.Forms.LinkArea(0, $updates.Text.Length) } else { New-Object Windows.Forms.LinkArea(0, 0) })
+    $updates.ForeColor = $(if ($f.Url) { $warn } elseif ($f.Text -like '✓*') { $ok } else { [Drawing.Color]::FromArgb(170, 170, 170) })
+}
+
+$script:updateCheck = $null
+try { $script:updateCheck = Start-FAUpdateCheck } catch { }
+$updTimer = New-Object Windows.Forms.Timer
+$updTimer.Interval = 400
+$updTimer.Add_Tick({
+    if (-not $script:updateCheck) { $updTimer.Stop(); $updates.Text = 'إصدار الأداة ' + (N (Get-FAToolsVersion)); return }
+    $u = Get-FAUpdateResult $script:updateCheck
+    if ($u) { $updTimer.Stop(); Show-Updates $u }
+})
+$updTimer.Start()
+
 if ($Snapshot) {   # للتحقق: رسم النافذة في صورة دون إظهارها
+    $updTimer.Stop()
+    $deadline = (Get-Date).AddSeconds(15)   # الصورة تُظهر نتيجة التحقق الحقيقية
+    while ($script:updateCheck -and (Get-Date) -lt $deadline) {
+        $u = Get-FAUpdateResult $script:updateCheck
+        if ($u) { Show-Updates $u; break }
+        Start-Sleep -Milliseconds 100
+    }
     $form.Opacity = 0
     $form.Show()
     $form.Refresh()

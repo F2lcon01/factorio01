@@ -22,6 +22,8 @@ PROVIDERS = {  # name: (kind, base_url, model preference: first regex that match
                 r'gemini']),
     'openrouter': ('openai', 'https://openrouter.ai/api/v1',
                    [r'^anthropic/claude-sonnet', r'^openai/gpt-5(\.\d+)?-mini$', r'^google/gemini-[\d.]+-flash$']),
+    'openrouter-free': ('openai', 'https://openrouter.ai/api/v1',   # zero-priced models only (FREE_ONLY): no cost
+                        [r'^google/gemma.*:free$', r'nemotron.*ultra.*:free$', r'^openrouter/free$']),
     'groq': ('openai', 'https://api.groq.com/openai/v1', [r'gpt-oss-120b', r'llama-3\.3-70b', r'llama']),
     'xai': ('openai', 'https://api.x.ai/v1', [r'^grok-\d+(\.\d+)?-mini', r'^grok-\d', r'^grok']),
     'deepseek': ('openai', 'https://api.deepseek.com/v1', [r'^deepseek-chat$', r'deepseek']),
@@ -36,13 +38,15 @@ PROVIDERS = {  # name: (kind, base_url, model preference: first regex that match
 }
 # A key goes to one provider only: the one its format names, or the one the user picks. Keys that do not say whose
 # they are are not tried on several services in turn (each would see it; one even echoes its last characters).
-PREFIXES = [('sk-ant-', 'anthropic'), ('sk-or-', 'openrouter'), ('AIza', 'gemini'), ('AQ.', 'gemini'),   # AQ.: newer
+FREE_ONLY = {'openrouter-free'}
+PREFIXES = [('sk-ant-', 'anthropic'), ('sk-or-', 'openrouter-free'),   # free unless the user picks paid OpenRouter
+            ('AIza', 'gemini'), ('AQ.', 'gemini'),                                                      # AQ.: newer
             ('gsk_', 'groq'), ('xai-', 'xai'),                                               # Google AI Studio keys
             ('hf_', 'huggingface'), ('csk-', 'cerebras'), ('fw_', 'fireworks'), ('nvapi-', 'nvidia'),
             ('tgp_', 'together'), ('sk-', 'openai')]   # 'sk-' is also DeepSeek, Moonshot, DashScope...: OpenAI first
 UNKNOWN_FORMAT = 'UNKNOWN_FORMAT'
 NOT_CHAT = re.compile(r'embed|tts|whisper|dall-e|image|audio|realtime|transcribe|moderation|search|vision|guard|'
-                      r'rerank|computer-use|-live', re.I)
+                      r'rerank|computer-use|-live|safety|lyria', re.I)
 HTTP_TIMEOUT = 120
 SYSTEM = """You translate the user interface of the video game Factorio (and its mods) from English into Modern Standard Arabic.
 Input: a JSON object {"strings": {"<id>": "<English>"}}. Output: only a JSON object {"t": {"<id>": "<Arabic>"}} with every id.
@@ -120,13 +124,23 @@ def _auth(kind, key):
     return {'Authorization': f'Bearer {key}'}
 
 
-def list_models(kind, base, key):
+def _is_free(item):
+    """OpenRouter lists a price per token for each model: '0' for prompt and completion means no cost."""
+    try:
+        p = item.get('pricing') or {}
+        return float(p['prompt']) == 0 and float(p['completion']) == 0
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def list_models(kind, base, key, free_only=False):
     if kind == 'deepl':
         _request(f'{base}/usage', headers=_auth(kind, key))   # validates the key
         return []
     data = _request(f'{base}/models', headers=_auth(kind, key))
-    items = data.get('data', data.get('models', [])) if isinstance(data, dict) else data
-    return [(m.get('id') or m.get('name') or '').removeprefix('models/') for m in items if isinstance(m, dict)]
+    items = [m for m in (data.get('data', data.get('models', [])) if isinstance(data, dict) else data)
+             if isinstance(m, dict) and (_is_free(m) or not free_only)]
+    return [(m.get('id') or m.get('name') or '').removeprefix('models/') for m in items]
 
 
 def _natural(model_id):   # 'gemini-3.10-flash' after 'gemini-3.9-flash'
@@ -182,13 +196,13 @@ def detect(key, env=os.environ):
     errors = []
     for name, kind, b, prefs in names:
         try:
-            models = list_models(kind, b, key)
+            models = list_models(kind, b, key, free_only=name in FREE_ONLY)
         except TranslatorError as e:
             errors.append(f'{name}: {e}')
             continue
         ranked = ['deepl'] if kind == 'deepl' else [model] if model else pick_models(models, prefs)
         if not ranked:
-            errors.append(f'{name}: no chat model available')
+            errors.append(f'{name}: no {"free " if name in FREE_ONLY else ""}chat model available')
             continue
         return {'provider': name, 'kind': kind, 'base': b, 'model': ranked[0], 'fallbacks': ranked[1:]}
     raise TranslatorError('key not accepted by: ' + '; '.join(errors))

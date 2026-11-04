@@ -23,7 +23,7 @@ def _fake_urlopen(routes, seen):
     return urlopen
 
 
-@pytest.mark.parametrize('key,first', [('sk-ant-abc', 'anthropic'), ('sk-or-v1-x', 'openrouter'), ('AIzaXYZ', 'gemini'),
+@pytest.mark.parametrize('key,first', [('sk-ant-abc', 'anthropic'), ('sk-or-v1-x', 'openrouter-free'), ('AIzaXYZ', 'gemini'),
                                        ('gsk_1', 'groq'), ('xai-1', 'xai'), ('sk-proj-1', 'openai'), ('abc:fx', 'deepl-free'),
                                        ('12345678-1234-1234-1234-123456789abc', 'deepl'), ('hf_x', 'huggingface'),
                                        ('csk-x', 'cerebras'), ('fw_x', 'fireworks'), ('nvapi-x', 'nvidia'),
@@ -154,6 +154,35 @@ def test_gemini_ranks_newest_flash_then_lite_fallbacks():
     ranked = translator.pick_models(GEMINI_LISTED, translator.PROVIDERS['gemini'][2])
     assert ranked == ['gemini-3.8-flash', 'gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3.5-pro']
     assert translator.pick_models(['m-3.9', 'm-3.10'], [r'^m-'], 1) == ['m-3.10']   # numbers compare as numbers
+
+
+OPENROUTER_LISTED = {'data': [   # shape of https://openrouter.ai/api/v1/models, shortened
+    {'id': 'anthropic/claude-sonnet-5', 'pricing': {'prompt': '0.000003', 'completion': '0.000015'}},
+    {'id': 'google/gemma-4-26b-a4b-it:free', 'pricing': {'prompt': '0', 'completion': '0'}},
+    {'id': 'google/gemma-4-31b-it:free', 'pricing': {'prompt': '0', 'completion': '0'}},
+    {'id': 'nvidia/nemotron-3.5-content-safety:free', 'pricing': {'prompt': '0', 'completion': '0'}},   # not a chat model
+    {'id': 'google/lyria-3-pro-preview', 'pricing': {'prompt': '0', 'completion': '0'}},                # music
+    {'id': 'openrouter/free', 'pricing': {'prompt': '0', 'completion': '0'}},
+    {'id': 'some/model-without-price'}]}
+
+
+def test_openrouter_free_keeps_only_zero_priced_chat_models(monkeypatch):
+    seen = []
+    routes = {('GET', 'openrouter.ai/api/v1/models'): OPENROUTER_LISTED}
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen(routes, seen))
+    cfg = translator.detect('sk-or-v1-k', env={})   # auto: an OpenRouter key goes to the free models
+    assert cfg['provider'] == 'openrouter-free' and cfg['base'] == 'https://openrouter.ai/api/v1'
+    assert [cfg['model']] + cfg['fallbacks'] == ['google/gemma-4-31b-it:free', 'openrouter/free', 'google/gemma-4-26b-a4b-it:free']
+    paid = translator.detect('sk-or-v1-k', env={'FA_TRANSLATE_PROVIDER': 'openrouter'})   # chosen: every model
+    assert paid['model'] == 'anthropic/claude-sonnet-5'
+    assert len(seen) == 2
+
+
+def test_openrouter_free_without_free_models_says_so(monkeypatch):
+    routes = {('GET', 'openrouter.ai/api/v1/models'): {'data': OPENROUTER_LISTED['data'][:1]}}
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen(routes, []))
+    with pytest.raises(translator.TranslatorError, match='openrouter-free: no free chat model available'):
+        translator.detect('sk-or-v1-k', env={})
 
 
 def _chat_reply(text):

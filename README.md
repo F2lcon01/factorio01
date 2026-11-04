@@ -56,6 +56,14 @@
 
 4️⃣ **اختر** **العربية** أو **English**. إن ظهر زر **«إصلاح»** فاضغطه. ثم افتح اللعبة.
 
+> [!NOTE]
+> **رقم الإصدار ظاهر دائماً.** رقم الأداة يظهر في شريط العنوان، ويظهر في سطر تحت إصدار المود. عند فتح النافذة تسأل
+> الأداة GitHub وموقع المودات عن آخر إصدار، ثم تعرض واحدة من حالتين:
+> - **«✓ الأداة والمود بآخر إصدار»**.
+> - **«⬆ أداة أحدث: …»** أو **«⬆ مود أحدث: …»**، والسطر رابط يفتح صفحة التنزيل.
+>
+> لا تُرسل أي بيانات عنك. أداة اللغة وأداة الترجمة تحملان الرقم نفسه لأنهما تُنشران معاً.
+
 <div align="center">
 
 ![أداة اللغة: على اليسار متطابقة، وعلى اليمين المود أقدم من اللعبة فيظهر زر إصلاح](docs/images/tool-states.png)
@@ -109,10 +117,20 @@
 
 2️⃣ **شغّل** `Translate-Mods.cmd`، أو زر **«ترجمة المودات الإضافية...»** في نافذة أداة اللغة. لا يطلب صلاحيات المدير.
 
-3️⃣ **اختر المزوّد والصق مفتاحه** (OpenAI، Google Gemini، Anthropic Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral،
-xAI، Together، Hugging Face، Cerebras، Fireworks، NVIDIA) ← **«حفظ وتحقق»**. «تلقائي» يكفي حين يدل شكل المفتاح على
-مزوّده. **المفتاح لا يُرسل إلا إلى المزوّد الذي اخترته**، ويُحفظ مشفّراً لمستخدم Windows الحالي فقط.
-وللترجمة المجانية: «خادم محلي مجاني (Ollama)» مع رابط الخادم، بلا مفتاح.
+3️⃣ **مفتاح مجاني:** اضغط **«احصل على مفتاح مجاني»**. يفتح الزر صفحة المفاتيح الرسمية في متصفحك:
+- **Google AI Studio**: هي الافتراضية، و**Google Gemini (مجاني)** مختار مسبقاً في القائمة.
+- **OpenRouter**: إن اخترته من القائمة.
+
+أنشئ المفتاح هناك بنفسك، ثم الصقه في النافذة ← **«حفظ وتحقق»**.
+
+مع **«OpenRouter: نماذج مجانية فقط»** لا تستعمل الأداة إلا النماذج التي سعرها صفر. مفتاح OpenRouter في وضع «تلقائي»
+يذهب إليها أيضاً. للنماذج المدفوعة اختر «OpenRouter: كل النماذج».
+
+تقبل الأداة أيضاً مفاتيح OpenAI وAnthropic Claude وDeepL وGroq وDeepSeek وMistral وxAI وTogether وHugging Face
+وCerebras وFireworks وNVIDIA. **المفتاح لا يُرسل إلا إلى المزوّد الذي اخترته**، ويُحفظ مشفّراً لمستخدم Windows الحالي
+فقط. وبلا أي مفتاح: «خادم محلي مجاني (Ollama)» مع رابط الخادم.
+
+حين يكون النموذج مزدحماً أو متوقفاً، أو حين تبلغ حدّه المجاني، ينتقل المترجم وحده إلى النموذج البديل التالي.
 
 4️⃣ **«ترجمة وتثبيت»** ← افتح اللعبة.
 
@@ -178,11 +196,15 @@ python -E -m tools.bundle translator                  # dist/arabic-mods-transla
 
 **English:** a translator for any other mod you install (Windows). Download
 [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
-(embedded Python, nothing to install), run `Translate-Mods.cmd`, paste an API key from any provider (OpenAI, Gemini,
-Claude, DeepL, OpenRouter, Groq, DeepSeek, Mistral, xAI), press Translate. It builds a local locale mod,
+(embedded Python, nothing to install) and run `Translate-Mods.cmd`.
+
+1. **Get a key.** *Get a free key* opens the official key page, Google AI Studio by default or OpenRouter. You create the key yourself and paste it into the window. You can also paste a key from any provider: OpenAI, Gemini, Claude, DeepL, OpenRouter (free models only by default), Groq, DeepSeek, Mistral or xAI.
+2. **Press Translate.** A busy model hands over to a fallback on its own. It builds a local locale mod,
 `arabic-mods-local`, shaped like the rest of the game. A shared translation memory means an unchanged mod costs no
 request and an updated mod only sends its new strings (measured: first run 2 requests, second run 0). Untick a mod to
 keep it in its original language; tick it again and it comes back from the memory with no request.
+
+Both tools show their version in the title bar. Each time a window opens, it asks GitHub and the mod portal whether the tool or the mod has a newer release.
 
 ---
 

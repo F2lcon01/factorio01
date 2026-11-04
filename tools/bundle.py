@@ -3,7 +3,7 @@ the mod portal rejects executable files in a mod ("Please remove all files endin
 - the mod carries data only: <mod>/scenario-patch/ (patched tutorial/scenario texts) and README-AR.txt;
 - the scripts go to download/arabic-tools.zip, served from GitHub (link in the README and the portal description).
 Player mode of FactorioArabic.psm1 reads scenario-patch from the installed mod, so the patch always matches the mod."""
-import shutil, zipfile
+import re, shutil, zipfile
 from pathlib import Path
 from tools import scenarios
 from tools.paths import ROOT
@@ -42,6 +42,12 @@ def tool_zip(out: Path = TOOL_ZIP) -> Path:
         for name, src in TOOL_FILES.items():
             z.writestr(zipfile.ZipInfo(name, FIXED_TIME), src.read_bytes(), zipfile.ZIP_DEFLATED)
     return out
+
+
+def tools_version() -> str:
+    """The number both tool zips show (FactorioArabic.psm1) and their GitHub release tag: translator-<version>."""
+    text = TOOL_FILES['FactorioArabic.psm1'].read_text(encoding='ascii')
+    return re.search(r"^\$script:ToolsVersion = '(\d+\.\d+\.\d+)'", text, re.M).group(1)
 
 
 def executables(zip_path: Path) -> list:
@@ -89,5 +95,7 @@ if __name__ == '__main__':
     if sys.argv[1:] == ['translator']:
         p = translator_zip()
         print(p, p.stat().st_size // 1024, 'KB')
+    elif sys.argv[1:] == ['version']:
+        print(tools_version())   # the release tag is translator-<this>
     else:
-        sys.exit('usage: python -E -m tools.bundle translator')
+        sys.exit('usage: python -E -m tools.bundle translator | version')
