@@ -195,10 +195,13 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
     (batch {key: English}, terms) → ({key: Arabic}, usage). Machine results enter the shared memory."""
     en, owner, mod_ar, conflicts = merge(mods)
     vocab = {w for v in base.values() for w in WORD_RE.findall(v)}
-    arabic, source, pending = {}, {}, []
+    arabic, source, pending, review, flags = {}, {}, [], [], []
     for k, e in en.items():
         shipped = orient(mod_ar[k], vocab) if k in mod_ar else None
-        from_base, from_mem = base.get(memory.norm(e).lower()), memory_.get(e)
+        from_base, hit = base.get(memory.norm(e).lower()), memory_.entry(e)
+        from_mem = hit['ar'] if hit else None
+        if hit and hit.get('ctx') and hit['ctx'] != f'{owner[k]}|{k}' and k not in overrides:
+            review.append((k, hit['ctx']))   # same English, another key or mod: reused, listed for a look
         if k in overrides:
             arabic[k], source[k] = overrides[k], 'override'
         elif shipped and not check_value(e, shipped):
@@ -222,8 +225,9 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         for _ in (1, 2):   # the second pass retries once what failed validation
             failed = []
             for batch in batches((k, en[k]) for k in todo):
+                batch_terms = memory.terms_for(batch.values(), terms)
                 try:
-                    got, u = translate(batch, memory.terms_for(batch.values(), terms))
+                    got, u = translate(batch, batch_terms)
                     translator.add_usage(usage, u)
                 except translator.TranslatorError as e:
                     log(f'translation batch failed: {e}')
@@ -231,8 +235,9 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
                     continue
                 for k in batch:
                     ar = clean(got.get(k, ''))
-                    if ar and not check_value(en[k], ar):
-                        memory_.put(en[k], ar, 'machine', model)
+                    if ar and ar != en[k].strip() and not check_value(en[k], ar):   # a copy of the source is no answer
+                        flags += [(k, f) for f in quality_flags(en[k], ar, batch_terms)]
+                        memory_.put(en[k], ar, 'machine', model, ctx=f'{owner[k]}|{k}')
                         for twin in same[memory.norm(en[k]).lower()]:
                             arabic[twin], source[twin] = ar, 'machine'
                         done += 1
@@ -245,7 +250,21 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         pending = [twin for k in todo for twin in same[memory.norm(en[k]).lower()]]
     for k in pending:
         source[k] = 'english'
-    return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage}
+    return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage,
+                           'review': review, 'flags': flags}
+
+
+def quality_flags(en, ar, terms):
+    """Warnings, not rejections (placeholders, tags and plurals are already enforced by check_value):
+    a glossary term the translation did not use, and an answer far longer than the English."""
+    out = []
+    low = en.lower()
+    for t, a in terms.items():
+        if re.search(rf'(?<![a-z]){re.escape(t)}(?![a-z])', low) and a not in ar:
+            out.append(f'مصطلح المسرد لم يُستخدم: {t} ← {a}')
+    if len(ar) > 3 * len(en) + 20:
+        out.append('الترجمة أطول بكثير من الأصل')
+    return out
 
 
 # ---------- per-mod state ----------
@@ -350,6 +369,11 @@ def report(mods, rows, findings, provider, states, last):
     left = sorted(k for k, s in rows['source'].items() if s == 'english')
     if left:
         lines += ['', '## ما زال بالإنجليزية', ''] + [f'- `{rows["owner"][k]}` `{k}`: {rows["en"][k][:80]}' for k in left]
+    if rows.get('review'):
+        lines += ['', '## مأخوذ من الذاكرة لسياق آخر (للمراجعة: قد يختلف التذكير والعدد)', '']
+        lines += [f'- `{rows["owner"][k]}` `{k}` ← من `{ctx}`' for k, ctx in rows['review'][:200]]
+    if rows.get('flags'):
+        lines += ['', '## تنبيهات الجودة', ''] + [f'- `{rows["owner"][k]}` `{k}`: {f}' for k, f in rows['flags'][:200]]
     if rows['conflicts']:
         lines += ['', '## المفتاح نفسه في أكثر من مود (يفوز آخر مود يُحمَّل)', '']
         lines += [f'- `{k}`: {a} ← {b}' for k, a, b in rows['conflicts']]
@@ -446,5 +470,9 @@ if __name__ == '__main__':
         print(json.dumps(status(), ensure_ascii=False))
     elif cmd == 'summary':
         print(json.dumps(_load_json(STATE / 'last_run.json', {}), ensure_ascii=False))
+    elif cmd == 'export-tmx' and len(sys.argv) > 2:
+        mem = memory.TranslationMemory(STATE / 'memory.json')
+        Path(sys.argv[2]).write_text(mem.to_tmx(), encoding='utf-8')
+        print(json.dumps({'tmx': sys.argv[2], 'units': len(mem)}))
     else:
-        sys.exit('usage: python -E -m tools.modpack build [--offline] | status | summary')
+        sys.exit('usage: python -E -m tools.modpack build [--offline] | status | summary | export-tmx <file.tmx>')

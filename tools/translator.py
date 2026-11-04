@@ -169,7 +169,8 @@ def _llm_user(strings, glossary):
 
 def new_usage():
     """Counted for every call: what the provider reports, so savings are measured, not guessed."""
-    return {'requests': 0, 'input_tokens': 0, 'output_tokens': 0, 'chars_in': 0, 'glossary_chars': 0}
+    return {'requests': 0, 'input_tokens': 0, 'output_tokens': 0, 'cached_input_tokens': 0, 'chars_in': 0,
+            'glossary_chars': 0}
 
 
 def add_usage(total, part):
@@ -193,6 +194,7 @@ def _chat_openai(cfg, key, user, usage):
     u = data.get('usage') or {}
     usage['input_tokens'] += u.get('prompt_tokens', 0)
     usage['output_tokens'] += u.get('completion_tokens', 0)
+    usage['cached_input_tokens'] += (u.get('prompt_tokens_details') or {}).get('cached_tokens', 0)   # billed lower
     return data['choices'][0]['message']['content'] or ''
 
 
@@ -203,6 +205,7 @@ def _chat_anthropic(cfg, key, user, usage):
     u = data.get('usage') or {}
     usage['input_tokens'] += u.get('input_tokens', 0) + u.get('cache_read_input_tokens', 0) + \
         u.get('cache_creation_input_tokens', 0)
+    usage['cached_input_tokens'] += u.get('cache_read_input_tokens', 0)   # billed lower
     usage['output_tokens'] += u.get('output_tokens', 0)
     if data.get('stop_reason') == 'refusal':
         raise TranslatorError('the model declined the request')

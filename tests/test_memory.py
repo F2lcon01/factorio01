@@ -15,6 +15,17 @@ def test_exact_then_case_insensitive_and_round_trip(tmp_path):
     assert not (tmp_path / 'm.tmp').exists()                    # atomic write leaves no temp file
 
 
+def test_tmx_export_is_valid_xml_with_both_languages(tmp_path):
+    import xml.etree.ElementTree as ET
+    tm = memory.TranslationMemory(tmp_path / 'm.json')
+    tm.put('Found __1__ <pipes> & more', 'وُجد __1__', 'machine', 'stub', ctx='a|s/k')
+    root = ET.fromstring(tm.to_tmx())
+    tu = root.find('body/tu')
+    assert [t.attrib['{http://www.w3.org/XML/1998/namespace}lang'] for t in tu.findall('tuv')] == ['en', 'ar']
+    assert tu.find('tuv/seg').text == 'Found __1__ <pipes> & more'
+    assert {p.attrib['type']: p.text for p in tu.findall('prop')}['x-ctx'] == 'a|s/k'
+
+
 def test_legacy_cache_import_keeps_only_entries_that_match_the_english(tmp_path):
     tm = memory.TranslationMemory(tmp_path / 'm.json')
     sha = lambda s: hashlib.sha1(s.encode()).hexdigest()

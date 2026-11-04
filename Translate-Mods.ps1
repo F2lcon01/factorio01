@@ -1,0 +1,315 @@
+﻿# أداة ترجمة المودات الإضافية (نافذة):
+#   - تعرض المودات المفعّلة وحالة كل مود: مترجم، جديد، تغيّر، ينتظر الترجمة
+#   - مفتاح API من أي مزوّد، يُحفظ مشفّراً لمستخدم Windows الحالي فقط
+#   - ترجمة وتثبيت مع شريط تقدّم، وملخص الاستهلاك والتوفير
+# التشغيل: انقر مرتين على Translate-Mods.cmd   (لا يحتاج صلاحيات المدير)
+# المحرك: tools\modpack.py (Python المشروع، أو Python المدمج في حزمة اللاعبين)
+# للاختبار والتوثيق: -Snapshot <png>   -PreviewBusy
+param(
+    [string]$UserAppData = $env:APPDATA,
+    [string]$Snapshot = '',
+    [switch]$PreviewBusy
+)
+$ErrorActionPreference = 'Stop'
+$module = Join-Path $PSScriptRoot 'FactorioArabic.psm1'
+if (-not (Test-Path $module)) { $module = Join-Path $PSScriptRoot 'tools\FactorioArabic.psm1' }
+Import-Module $module -Force
+Set-FAUserAppData $UserAppData
+
+$pack = 'arabic-mods-local'
+$stateDir = Get-FAStateDir
+$reportPath = if (Test-EmbeddedPython) { Join-Path $PSScriptRoot 'app\reports\modpack.md' } else { Join-Path (Get-FARoot) 'reports\modpack.md' }
+$work = Join-Path $env:TEMP 'fa-translator'
+New-Item -ItemType Directory -Force $work | Out-Null
+
+Add-Type -AssemblyName System.Windows.Forms, System.Drawing
+[Windows.Forms.Application]::EnableVisualStyles()
+$bg = [Drawing.Color]::FromArgb(36, 36, 36)
+$panel = [Drawing.Color]::FromArgb(49, 48, 49)
+$text = [Drawing.Color]::FromArgb(255, 230, 192)
+$orange = [Drawing.Color]::FromArgb(255, 156, 0)
+$muted = [Drawing.Color]::FromArgb(170, 170, 170)
+$stateColor = @{
+    translated = [Drawing.Color]::FromArgb(129, 199, 132)
+    new        = [Drawing.Color]::FromArgb(100, 181, 246)
+    changed    = [Drawing.Color]::FromArgb(255, 167, 38)
+    pending    = [Drawing.Color]::FromArgb(255, 213, 79)
+}
+
+$form = New-Object Windows.Forms.Form
+$form.Text = 'ترجمة المودات الإضافية'
+$form.RightToLeft = 'Yes'
+$form.RightToLeftLayout = $true
+$form.StartPosition = 'CenterScreen'
+$form.FormBorderStyle = 'FixedDialog'
+$form.MaximizeBox = $false
+$form.ClientSize = New-Object Drawing.Size(820, 650)
+$form.Font = New-Object Drawing.Font('Segoe UI', 10)
+$form.BackColor = $bg
+$form.ForeColor = $text
+
+function New-Label([string]$Text, [int]$X, [int]$Y, [int]$W, [int]$H, [float]$Size = 10, [bool]$Bold = $false) {
+    $l = New-Object Windows.Forms.Label
+    $l.Text = $Text
+    $l.Font = New-Object Drawing.Font('Segoe UI', $Size, $(if ($Bold) { [Drawing.FontStyle]::Bold } else { [Drawing.FontStyle]::Regular }))
+    $l.SetBounds($X, $Y, $W, $H)
+    $l
+}
+function New-Button([string]$Text, [int]$X, [int]$Y, [int]$W, [int]$H, [Drawing.Color]$Color) {
+    $b = New-Object Windows.Forms.Button
+    $b.Text = $Text
+    $b.Font = New-Object Drawing.Font('Segoe UI', 10, [Drawing.FontStyle]::Bold)
+    $b.SetBounds($X, $Y, $W, $H)
+    $b.FlatStyle = 'Flat'
+    $b.BackColor = $Color
+    $b.ForeColor = [Drawing.Color]::White
+    $b.Cursor = 'Hand'
+    $b
+}
+
+$title = New-Label 'ترجمة المودات الإضافية إلى العربية' 20 12 780 32 15 $true
+$title.ForeColor = $orange
+$subtitle = New-Label 'تُترجم نصوص كل مود تضيفه، وتُحفظ كل ترجمة في ذاكرة مشتركة فلا يُطلب النص نفسه مرتين.' 20 46 780 22 9.5
+$subtitle.ForeColor = $muted
+
+$list = New-Object Windows.Forms.ListView
+$list.View = 'Details'
+$list.FullRowSelect = $true
+$list.HeaderStyle = 'Nonclickable'
+$list.RightToLeftLayout = $true
+$list.BackColor = $panel
+$list.ForeColor = $text
+$list.BorderStyle = 'None'
+$list.SetBounds(20, 76, 780, 200)
+foreach ($c in @(@('المود', 250), @('الإصدار', 90), @('النصوص', 80), @('بالعربية', 90), @('تنتظر', 80), @('الحالة', 170))) {
+    [void]$list.Columns.Add($c[0], $c[1])
+}
+
+$keyBox = New-Object Windows.Forms.GroupBox
+$keyBox.Text = 'مفتاح API (أي مزوّد: OpenAI، Gemini، Claude، DeepL، OpenRouter، Groq، DeepSeek، Mistral...)'
+$keyBox.ForeColor = $text
+$keyBox.SetBounds(20, 286, 780, 92)
+$keyInput = New-Object Windows.Forms.TextBox
+$keyInput.UseSystemPasswordChar = $true
+$keyInput.RightToLeft = 'No'
+$keyInput.SetBounds(240, 26, 520, 26)
+$btnKey = New-Button 'حفظ وتحقق' 120 24 110 30 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnForget = New-Button 'نسيان' 20 24 90 30 ([Drawing.Color]::FromArgb(90, 60, 60))
+$keyState = New-Label '' 20 60 740 24 9.5
+$keyBox.Controls.AddRange(@($keyInput, $btnKey, $btnForget, $keyState))
+
+$btnTranslate = New-Button 'ترجمة وتثبيت' 600 392 200 44 ([Drawing.Color]::FromArgb(46, 125, 50))
+$btnTranslate.Font = New-Object Drawing.Font('Segoe UI', 12, [Drawing.FontStyle]::Bold)
+$btnRefresh = New-Button 'تحديث القائمة' 450 398 140 34 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnReport = New-Button 'فتح التقرير' 300 398 140 34 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnUndo = New-Button 'إلغاء التثبيت (تراجع)' 20 398 270 34 ([Drawing.Color]::FromArgb(90, 60, 60))
+
+$bar = New-Object Windows.Forms.ProgressBar
+$bar.SetBounds(20, 448, 780, 18)
+$bar.RightToLeftLayout = $true
+$barText = New-Label 'جاهز.' 20 470 780 22 9.5
+$barText.ForeColor = $muted
+
+$summary = New-Object Windows.Forms.TextBox
+$summary.Multiline = $true
+$summary.ReadOnly = $true
+$summary.BorderStyle = 'None'
+$summary.BackColor = $panel
+$summary.ForeColor = $text
+$summary.Font = New-Object Drawing.Font('Segoe UI', 9.5)
+$summary.SetBounds(20, 498, 780, 116)
+$footer = New-Label 'أغلق اللعبة قبل الترجمة. المفتاح يُحفظ مشفّراً لمستخدم Windows الحالي فقط، ولا يُكتب في أي ملف آخر.' 20 620 780 22 9
+$footer.ForeColor = $muted
+
+$form.Controls.AddRange(@($title, $subtitle, $list, $keyBox, $btnTranslate, $btnRefresh, $btnReport, $btnUndo, $bar, $barText, $summary, $footer))
+
+# ---------- data ----------
+function Read-Json([string]$Path) { if (Test-Path $Path) { Get-Content $Path -Raw -Encoding UTF8 | ConvertFrom-Json } else { $null } }
+
+# Windows shapes digits by context in right-to-left controls (47 -> Arabic-Indic, 2.2.6 reversed). The project rule is
+# Western digits: wrap numbers in a left-to-right embedding that starts with a left-to-right mark.
+function N($Value) { [string][char]0x202A + [char]0x200E + "$Value" + [char]0x202C }
+
+function Update-KeyState {
+    $cfg = Read-Json (Join-Path $stateDir 'translator.json')
+    if (Get-FATranslatorKey) {
+        $who = if ($cfg) { " (المزوّد: $($cfg.config.provider) / $($cfg.config.model))" } else { '' }
+        $keyState.Text = 'المفتاح: محفوظ ومشفّر' + $who
+        $keyState.ForeColor = $stateColor.translated
+    } else {
+        $keyState.Text = 'لا يوجد مفتاح: الترجمة تعمل بما في الذاكرة فقط، والنصوص الجديدة تبقى بالإنجليزية.'
+        $keyState.ForeColor = $stateColor.pending
+    }
+}
+
+function Update-Mods {
+    $list.Items.Clear()
+    $r = Invoke-FAPython @('-m', 'tools.modpack', 'status')
+    if ($r.Code -ne 0) { $barText.Text = 'تعذّرت قراءة المودات: ' + ($r.Output | Select-Object -Last 1); return }
+    $st = $r.Output[-1] | ConvertFrom-Json
+    foreach ($m in $st.states) {
+        $label = $m.state_ar
+        if ($m.state -eq 'changed') { $label += " ($(N $m.changed) نصاً)" }
+        $item = New-Object Windows.Forms.ListViewItem($m.title)
+        foreach ($v in @((N $m.version), (N $m.strings), (N $m.arabic), (N $m.pending), $label)) { [void]$item.SubItems.Add([string]$v) }
+        $item.UseItemStyleForSubItems = $false
+        $item.SubItems[5].ForeColor = $stateColor[$m.state]
+        [void]$list.Items.Add($item)
+    }
+    if (-not $st.states) { [void]$list.Items.Add((New-Object Windows.Forms.ListViewItem('لا توجد مودات إضافية مفعّلة'))) }
+}
+
+function Update-Summary {
+    $s = Read-Json (Join-Path $stateDir 'last_run.json')
+    if (-not $s) { $summary.Text = 'لم تُشغَّل الترجمة بعد.'; return }
+    $nl = [Environment]::NewLine
+    $summary.Text = "آخر تشغيل: $(N ($s.built_at -replace 'T', ' '))   المترجم: $(N $s.translator)" + $nl +
+        "النصوص: $(N $s.strings)   بالعربية: $(N $s.arabic)   ما زال بالإنجليزية: $(N $s.english_left)   ترجمات جديدة: $(N $s.translated_now)" + $nl +
+        "طلبات API: $(N $s.requests)   توكن داخل: $(N $s.input_tokens)   توكن خارج: $(N $s.output_tokens)" + $nl +
+        "من الذاكرة بلا أي طلب: $(N $s.memory_hits) نصاً   التوفير المقدّر: نحو $(N $s.tokens_saved_estimate) توكن ($(N $s.tokens_per_string) توكن للنص، مقيس)" + $nl +
+        "حصة المسرد من التوكن الداخل: نحو $(N $s.glossary_tokens_this_run) (يوحّد المصطلحات ولا يغني عن ترجمة الجملة)   حجم الذاكرة المشتركة: $(N $s.memory_size) نصاً"
+}
+
+function Show-Message([string]$Text) {
+    [void][Windows.Forms.MessageBox]::Show($form, $Text, 'ترجمة المودات', 'OK', 'Information', 'Button1',
+        [Windows.Forms.MessageBoxOptions]::RtlReading -bor [Windows.Forms.MessageBoxOptions]::RightAlign)
+}
+
+function Set-Busy([bool]$Busy) {
+    foreach ($b in @($btnTranslate, $btnRefresh, $btnKey, $btnForget, $btnUndo)) { $b.Enabled = -not $Busy }
+    $form.Cursor = $(if ($Busy) { 'WaitCursor' } else { 'Default' })
+}
+
+# ---------- background runs (the window stays responsive) ----------
+$script:job = $null
+$timer = New-Object Windows.Forms.Timer
+$timer.Interval = 300
+
+function Start-Run([string[]]$PyArgs, [string]$Key, [scriptblock]$OnDone) {
+    $out = Join-Path $work 'out.txt'; $err = Join-Path $work 'err.txt'; $prog = Join-Path $work 'progress.jsonl'
+    foreach ($f in @($out, $err, $prog)) { if (Test-Path $f) { [IO.File]::Delete($f) } }   # our own temp files
+    $env:FA_TRANSLATE_KEY = $Key
+    $env:FA_PROGRESS_FILE = $prog
+    try { $p = Start-FAPython $PyArgs $out $err }
+    finally {   # the child has its own copy of the environment: clear ours at once
+        foreach ($n in 'FA_TRANSLATE_KEY', 'FA_PROGRESS_FILE') { [Environment]::SetEnvironmentVariable($n, $null, 'Process') }
+    }
+    $script:job = @{ Process = $p; Out = $out; Err = $err; Progress = $prog; OnDone = $OnDone }
+    Set-Busy $true
+    $timer.Start()
+}
+
+$timer.Add_Tick({
+    $j = $script:job
+    if (-not $j) { $timer.Stop(); return }
+    if (Test-Path $j.Progress) {
+        $last = Get-Content $j.Progress -Encoding UTF8 -ErrorAction SilentlyContinue | Select-Object -Last 1
+        if ($last) {
+            $p = $last | ConvertFrom-Json
+            switch ($p.stage) {
+                'scan'      { $bar.Style = 'Marquee'; $barText.Text = 'قراءة المودات والذاكرة...' }
+                'translate' { $bar.Style = 'Continuous'; $bar.Maximum = [Math]::Max(1, $p.total); $bar.Value = [Math]::Min($p.done, $bar.Maximum)
+                              $barText.Text = "ترجمة النصوص الجديدة: $(N $p.done) من $(N $p.total)" }
+                'pack'      { $bar.Style = 'Marquee'; $barText.Text = 'بناء حزمة الترجمة...' }
+                'done'      { $bar.Style = 'Continuous'; $bar.Value = $bar.Maximum; $barText.Text = 'اكتمل.' }
+            }
+        }
+    }
+    if (-not $j.Process.HasExited) { return }
+    $timer.Stop()
+    $script:job = $null
+    $j.Process.WaitForExit()
+    $stdout = @(Get-Content $j.Out -Encoding UTF8 -ErrorAction SilentlyContinue)
+    $stderr = @(Get-Content $j.Err -Encoding UTF8 -ErrorAction SilentlyContinue)
+    Set-Busy $false
+    & $j.OnDone $j.Process.ExitCode $stdout $stderr
+})
+
+# ---------- actions ----------
+$btnKey.Add_Click({
+    $plain = $keyInput.Text.Trim()
+    if (-not $plain) { Show-Message 'الصق المفتاح في الخانة أولاً.'; return }
+    $secure = ConvertTo-SecureString $plain -AsPlainText -Force
+    $keyInput.Text = ''
+    $barText.Text = 'التحقق من المفتاح...'
+    $bar.Style = 'Marquee'
+    Start-Run @('-m', 'tools.translator', 'probe') $plain {
+        param($code, $out, $err)
+        $bar.Style = 'Continuous'
+        if ($code -eq 0) {
+            $cfg = $out[-1] | ConvertFrom-Json
+            [void](Save-FATranslatorKey $secure)
+            New-Item -ItemType Directory -Force $stateDir | Out-Null
+            $cache = @{ tag = ''; config = $cfg } | ConvertTo-Json
+            [IO.File]::WriteAllText((Join-Path $stateDir 'translator.json'), $cache, (New-Object Text.UTF8Encoding $false))
+            $barText.Text = "قُبل المفتاح: $($cfg.provider) / $($cfg.model)"
+        } else {
+            $barText.Text = 'رُفض المفتاح، ولم يُحفظ.'
+            Show-Message ("رُفض المفتاح ولم يُحفظ:`n" + (($err + $out) | Select-Object -Last 2) -join "`n")
+        }
+        Update-KeyState
+    }.GetNewClosure()
+    $plain = $null
+})
+
+$btnForget.Add_Click({
+    $ok = [Windows.Forms.MessageBox]::Show($form, 'نسيان المفتاح المحفوظ؟ ستحتاج إلى إدخاله من جديد للترجمة.', 'ترجمة المودات', 'YesNo', 'Question', 'Button2',
+        [Windows.Forms.MessageBoxOptions]::RtlReading -bor [Windows.Forms.MessageBoxOptions]::RightAlign)
+    if ($ok -eq 'Yes') { [void](Remove-FATranslatorKey); Update-KeyState }
+})
+
+$btnTranslate.Add_Click({
+    if (Test-GameRunning) { Show-Message 'أغلق اللعبة أولاً ثم أعد المحاولة.'; return }
+    $key = Get-FATranslatorKey
+    $args2 = @('-m', 'tools.modpack', 'build')
+    if (-not $key) { $args2 += '--offline' }
+    Start-Run $args2 $key {
+        param($code, $out, $err)
+        if ($code -ne 0) {
+            $barText.Text = 'فشل البناء.'
+            Show-Message ("فشلت الترجمة:`n" + (($err | Select-Object -Last 3) -join "`n"))
+            return
+        }
+        $r = $out[-1] | ConvertFrom-Json
+        try { $msg = Install-FAPack $r.pack_path } catch { Show-Message ('تعذّر التثبيت: ' + $_.Exception.Message); return }
+        Update-Mods; Update-Summary
+        Show-Message ("تم. $msg`nبالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests).")
+    }
+    $key = $null
+})
+
+$btnRefresh.Add_Click({ $form.Cursor = 'WaitCursor'; Update-Mods; Update-Summary; Update-KeyState; $form.Cursor = 'Default' })
+$btnReport.Add_Click({ if (Test-Path $reportPath) { Start-Process notepad.exe $reportPath } else { Show-Message 'لا يوجد تقرير بعد: شغّل الترجمة أولاً.' } })
+$btnUndo.Add_Click({
+    $ok = [Windows.Forms.MessageBox]::Show($form, 'تعطيل حزمة الترجمة ونقلها إلى mods-parked؟ لا يُحذف شيء، والذاكرة تبقى.', 'تراجع', 'YesNo', 'Question', 'Button2',
+        [Windows.Forms.MessageBoxOptions]::RtlReading -bor [Windows.Forms.MessageBoxOptions]::RightAlign)
+    if ($ok -ne 'Yes') { return }
+    try { Show-Message (Uninstall-FAPack $pack) } catch { Show-Message ('تعذّر: ' + $_.Exception.Message) }
+})
+
+$form.Add_FormClosing({ if ($script:job -and -not $script:job.Process.HasExited) { $script:job.Process.Kill() } })
+
+# ---------- start ----------
+$form.Cursor = 'WaitCursor'
+Update-KeyState
+Update-Mods
+Update-Summary
+$form.Cursor = 'Default'
+
+if ($PreviewBusy) {   # for the documentation screenshot of a run in progress
+    Set-Busy $true
+    $bar.Maximum = 42; $bar.Value = 18
+    $barText.Text = "ترجمة النصوص الجديدة: $(N 18) من $(N 42)"
+}
+
+if ($Snapshot) {   # for verification: draw the window into an image without showing it
+    $form.Opacity = 0
+    $form.Show()
+    $form.Refresh()
+    $bmp = New-Object Drawing.Bitmap($form.Width, $form.Height)
+    $form.DrawToBitmap($bmp, (New-Object Drawing.Rectangle(0, 0, $form.Width, $form.Height)))
+    $bmp.Save($Snapshot, [Drawing.Imaging.ImageFormat]::Png)
+    $form.Close()
+    return
+}
+[void]$form.ShowDialog()

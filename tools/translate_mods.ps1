@@ -1,7 +1,8 @@
-# Arabic for the other mods you install (generated pack 'arabic-mods-local', see tools\modpack.py).
-# Needs an API key from any provider the first time: asks for it once, checks it, then stores it encrypted.
+# Arabic for the other mods you install, from the command line (the window is Translate-Mods.ps1).
+# Generated pack 'arabic-mods-local', see tools\modpack.py. Needs an API key from any provider the first time:
+# asks for it once, checks it, then stores it encrypted.
 #   powershell -NoProfile -ExecutionPolicy Bypass -File tools\translate_mods.ps1               # translate + install
-#   ... -Offline         no API calls: overrides, cache, the mods' own Arabic and our existing translations only
+#   ... -Offline         no API calls: overrides, the mods' own Arabic and the translation memory only
 #   ... -ResetKey        forget the stored key, then ask for a new one
 #   ... -Uninstall       rollback: disable the pack and park it in mods-parked (nothing is deleted)
 #   ... -NonInteractive  never ask (used by tools\auto_update.ps1): without a stored key it runs offline
@@ -13,30 +14,24 @@
 param([switch]$Offline, [switch]$ResetKey, [switch]$Uninstall, [switch]$NonInteractive,
       [string]$Provider = '', [string]$BaseUrl = '', [string]$Model = '')
 $ErrorActionPreference = 'Stop'
-Import-Module (Join-Path $PSScriptRoot 'FactorioArabic.psm1') -Force
-$install = Join-Path $PSScriptRoot 'install.ps1'
-$keyFile = Join-Path $env:APPDATA 'Factorio\arabic-tools\translator-key.txt'
+$module = Join-Path $PSScriptRoot 'FactorioArabic.psm1'
+if (-not (Test-Path $module)) { $module = Join-Path $PSScriptRoot 'tools\FactorioArabic.psm1' }
+Import-Module $module -Force
 $pack = 'arabic-mods-local'
-$packVersion = '1.0.0'
 
 if (Test-GameRunning) { throw 'Factorio is running; close it first.' }
-if ($Uninstall) { & $install -Name $pack -Uninstall; return }
-if ($ResetKey -and (Test-Path $keyFile)) { [IO.File]::Delete($keyFile); Write-Output 'stored key forgotten' }
-
-function ConvertTo-Plain($secure) { [Net.NetworkCredential]::new('', $secure).Password }
+if ($Uninstall) { Uninstall-FAPack $pack; return }
+if ($ResetKey -and (Remove-FATranslatorKey)) { Write-Output 'stored key forgotten' }
 
 $key = ''
 $newKey = $null
 if (-not $Offline) {
-    if (Test-Path $keyFile) {
-        try { $key = ConvertTo-Plain (Get-Content $keyFile -Raw | ConvertTo-SecureString) }
-        catch { Write-Output 'stored key unreadable (another Windows user or machine?); asking again' }
-    }
+    $key = Get-FATranslatorKey
     if (-not $key -and -not $NonInteractive) {
         Write-Output 'Paste an API key from any provider: OpenAI, Google Gemini, Anthropic Claude, DeepL, OpenRouter,'
         Write-Output 'Groq, DeepSeek, Mistral, xAI... (input is hidden; press Enter with nothing to run offline)'
         $newKey = Read-Host 'API key' -AsSecureString
-        $key = (ConvertTo-Plain $newKey).Trim()
+        $key = ([Net.NetworkCredential]::new('', $newKey).Password).Trim()
     }
 }
 
@@ -51,11 +46,7 @@ try {
         if ($probe.Code -ne 0) { throw ('the key was not accepted: ' + ($probe.Output -join ' ')) }
         $cfg = $probe.Output[-1] | ConvertFrom-Json
         Write-Output "translator: $($cfg.provider) / $($cfg.model)"
-        if ($newKey) {   # stored only after a provider accepted it
-            New-Item -ItemType Directory -Force (Split-Path $keyFile -Parent) | Out-Null
-            [IO.File]::WriteAllText($keyFile, ($newKey | ConvertFrom-SecureString))
-            Write-Output "key stored for this Windows user (encrypted): $keyFile"
-        }
+        if ($newKey) { Write-Output ('key stored for this Windows user (encrypted): ' + (Save-FATranslatorKey $newKey)) }
     } else {
         Write-Output 'no API key: offline build (strings without a translation stay in English)'
     }
@@ -64,9 +55,10 @@ try {
     $r = Invoke-FAPython $pyArgs
     $r.Output | ForEach-Object { Write-Output $_ }
     if ($r.Code -ne 0) { throw 'pack build failed' }
+    $result = $r.Output[-1] | ConvertFrom-Json
 } finally {
     foreach ($n in $names) { [Environment]::SetEnvironmentVariable($n, $null, 'Process') }
     $key = $null
 }
-& $install -Name $pack -Version $packVersion
+Install-FAPack $result.pack_path
 Write-Output 'details: reports\modpack.md'

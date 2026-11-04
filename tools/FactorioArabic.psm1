@@ -5,6 +5,7 @@
 #   developer: <project>\tools\FactorioArabic.psm1  -> rebuilds the mod from source with Python (tools\autoupdate.py)
 #   player:    arabic-tools\FactorioArabic.psm1 (download/arabic-tools.zip from GitHub) -> no Python; repairs from the
 #              scenario-patch shipped inside the installed mod
+#   translator bundle (arabic-mods-translator.zip): player mode + python\ (embedded) + app\tools (the Python engine)
 $script:UserAppData = $env:APPDATA
 $script:ToolsDir = $PSScriptRoot
 $script:Root = Split-Path $PSScriptRoot -Parent
@@ -128,20 +129,104 @@ function Get-PortalRelease {
 }
 
 # ---------- scenario / tutorial texts ----------
-function Invoke-FAPython([string[]]$PyArgs) {
-    Push-Location $script:Root
-    $old = $ErrorActionPreference
-    $ErrorActionPreference = 'Continue'   # native stderr must not abort Windows PowerShell
+# ---------- Python: the project's own, or the embedded one shipped in arabic-mods-translator.zip ----------
+function Test-EmbeddedPython { Test-Path (Join-Path $script:ToolsDir 'python\python.exe') }
+
+function Get-FAPython {
+    # -> @{ Exe; Args (before -m); Cwd }. Embedded: python\python313._pth puts ..\app on sys.path.
+    if (Test-EmbeddedPython) {
+        return @{ Exe = (Join-Path $script:ToolsDir 'python\python.exe'); Args = @('-E', '-s'); Cwd = (Join-Path $script:ToolsDir 'app') }
+    }
+    $py = Get-Command python -ErrorAction SilentlyContinue
+    if (-not $py) { throw 'Python not found' }
+    @{ Exe = $py.Source; Args = @('-E'); Cwd = $script:Root }
+}
+
+function Get-FAStateDir {
+    # memory, manifest, usage: in the project for the developer; in the user's profile for players (survives updates)
+    if (Test-DevMode) { return Join-Path $script:Root 'work\modpack' }
+    Join-Path $script:UserAppData 'Factorio\arabic-tools\translator'
+}
+
+function Set-FAPythonEnv {
     $env:PYTHONIOENCODING = 'utf-8'
     $env:FACTORIO_DATA = Join-Path (Get-FactorioDir) 'data'
+    $env:FA_MODS_DIR = Get-ModsDir
+    $env:FA_STATE_DIR = Get-FAStateDir
+}
+
+function Invoke-FAPython([string[]]$PyArgs) {
+    $py = Get-FAPython
+    Push-Location $py.Cwd
+    $old = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'   # native stderr must not abort Windows PowerShell
+    Set-FAPythonEnv
     try {
-        $out = & python -E @PyArgs 2>&1 | ForEach-Object { "$_" }
+        $all = @($py.Args) + @($PyArgs)
+        $out = & $py.Exe @all 2>&1 | ForEach-Object { "$_" }
         $code = $LASTEXITCODE
     } finally {
         $ErrorActionPreference = $old
         Pop-Location
     }
     [pscustomobject]@{ Code = $code; Output = @($out) }
+}
+
+function Start-FAPython([string[]]$PyArgs, [string]$StdOut, [string]$StdErr) {
+    # Background run for the window: output goes to files the window polls; the child inherits $env (key included).
+    $py = Get-FAPython
+    Set-FAPythonEnv
+    $quoted = (@($py.Args) + @($PyArgs)) | ForEach-Object { if ($_ -match '\s') { '"' + $_ + '"' } else { $_ } }
+    Start-Process -FilePath $py.Exe -ArgumentList ($quoted -join ' ') -WorkingDirectory $py.Cwd -WindowStyle Hidden `
+        -RedirectStandardOutput $StdOut -RedirectStandardError $StdErr -PassThru
+}
+
+# ---------- the translator's API key: DPAPI, this Windows user only, never in the project ----------
+function Get-FAKeyFile { Join-Path $script:UserAppData 'Factorio\arabic-tools\translator-key.txt' }
+
+function Get-FATranslatorKey {
+    $f = Get-FAKeyFile
+    if (-not (Test-Path $f)) { return '' }
+    try { [Net.NetworkCredential]::new('', (Get-Content $f -Raw | ConvertTo-SecureString)).Password } catch { '' }
+}
+
+function Save-FATranslatorKey([securestring]$Key) {
+    $f = Get-FAKeyFile
+    New-Item -ItemType Directory -Force (Split-Path $f -Parent) | Out-Null
+    [IO.File]::WriteAllText($f, ($Key | ConvertFrom-SecureString))
+    $f
+}
+
+function Remove-FATranslatorKey {
+    $f = Get-FAKeyFile
+    if (Test-Path $f) { [IO.File]::Delete($f); return $true }   # our own file, removed on the user's request
+    $false
+}
+
+# ---------- a generated pack (arabic-mods-local): install / roll back, nothing deleted ----------
+function Install-FAPack([string]$Path) {
+    if (Test-GameRunning) { throw 'GAME_RUNNING' }
+    $leaf = Split-Path $Path -Leaf
+    $name = $leaf -replace '_\d+\.\d+\.\d+$', ''
+    Uninstall-FAPack $name -Enable | Out-Null
+    Copy-Item $Path (Join-Path (Get-ModsDir) $leaf) -Recurse
+    "installed $leaf"
+}
+
+function Uninstall-FAPack([string]$Name, [switch]$Enable) {
+    # Parks every installed copy in mods-parked (outside mods\) and sets the mod-list entry; -Enable when reinstalling.
+    if (Test-GameRunning) { throw 'GAME_RUNNING' }
+    $mods = Get-ModsDir
+    $parked = Join-Path (Split-Path $mods -Parent) 'mods-parked'
+    $stamp = (Get-Date).ToString('yyyyMMdd-HHmmss', [Globalization.CultureInfo]::InvariantCulture)
+    New-Item -ItemType Directory -Force $parked | Out-Null
+    $list = Get-ModListPath
+    Copy-Item $list (Join-Path $parked "mod-list.json.bak-$stamp")
+    Get-ChildItem $mods -Directory -Filter "${Name}_*" | ForEach-Object { Move-Item $_.FullName (Join-Path $parked "$($_.Name)-$stamp") }
+    $data = Get-Content $list -Raw | ConvertFrom-Json
+    $data.mods = @($data.mods | Where-Object { $_.name -ne $Name }) + [pscustomobject]@{ name = $Name; enabled = [bool]$Enable }
+    [IO.File]::WriteAllText($list, ($data | ConvertTo-Json -Depth 5), $script:Utf8)
+    "parked $Name in $parked"
 }
 
 function Get-PatchDir {

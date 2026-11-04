@@ -34,20 +34,39 @@ class TranslationMemory:
     def __len__(self):
         return len(self.entries)
 
-    def get(self, en: str):
+    def entry(self, en: str):
         e = self.entries.get(_id(en))
         if e is None:
             i = self._lower.get(norm(en).lower())
             e = self.entries.get(i) if i else None
+        return e
+
+    def get(self, en: str):
+        e = self.entry(en)
         return e['ar'] if e else None
 
-    def put(self, en: str, ar: str, src: str, model: str = ''):
+    def put(self, en: str, ar: str, src: str, model: str = '', ctx: str = ''):
+        """ctx = 'mod|section/key' it was translated for: reuse under another key is flagged for review (Arabic
+        gender and number can differ by context: the 100% vs 101% match of CAT tools)."""
         if not norm(en):
             return
         i = _id(en)
-        self.entries[i] = {'en': norm(en), 'ar': ar, 'src': src, 'model': model,
+        self.entries[i] = {'en': norm(en), 'ar': ar, 'src': src, 'model': model, 'ctx': ctx,
                            'ts': time.strftime('%Y-%m-%dT%H:%M:%S')}
         self._lower[norm(en).lower()] = i
+
+    def to_tmx(self) -> str:
+        """TMX 1.4b, for any CAT tool (OmegaT, memoQ, Trados)."""
+        from xml.sax.saxutils import escape, quoteattr
+        units = []
+        for e in sorted(self.entries.values(), key=lambda e: e['en'].lower()):
+            props = ''.join(f'<prop type="x-{k}">{escape(str(e[k]))}</prop>' for k in ('src', 'model', 'ctx') if e.get(k))
+            units.append(f'<tu creationdate={quoteattr(e["ts"].replace("-", "").replace(":", "") + "Z")}>{props}'
+                         f'<tuv xml:lang="en"><seg>{escape(e["en"])}</seg></tuv>'
+                         f'<tuv xml:lang="ar"><seg>{escape(e["ar"])}</seg></tuv></tu>')
+        return ('<?xml version="1.0" encoding="UTF-8"?>\n<tmx version="1.4"><header creationtool="factorio-arabic" '
+                'creationtoolversion="1" segtype="sentence" o-tmf="json" adminlang="en" srclang="en" datatype="plaintext"/>'
+                '<body>\n' + '\n'.join(units) + '\n</body></tmx>\n')
 
     def save(self):
         """Atomic: a crash while writing leaves the previous file intact."""

@@ -100,6 +100,19 @@ def test_second_run_on_the_same_mods_sends_nothing_and_another_mod_reuses_the_me
     assert len(calls) == 1 and arabic == {'b/z': 'اختر الوحدات'} and rows['source']['b/z'] == 'memory'
 
 
+def test_reuse_under_another_key_is_listed_for_review_and_quality_checks(tmp_path):
+    tm, calls = _tm(tmp_path), []
+    _resolve([_m('a', {'a/x': 'Heat pipe', 'a/y': 'Lay the pipe here', 'a/z': 'Echo'})], tmp_path, memory_=tm,
+             terms={'pipe': 'أنبوب'},
+             translate=_fake({'a/x': 'أنبوب حراري', 'a/y': 'مدّ الخطوط هنا', 'a/z': 'Echo'}, calls))
+    arabic, _, rows = _resolve([_m('b', {'b/w': 'Heat pipe'})], tmp_path, memory_=tm)
+    assert arabic == {'b/w': 'أنبوب حراري'} and rows['review'] == [('b/w', 'a|a/x')]
+    first = _resolve([_m('a', {'a/y': 'Lay the pipe here', 'a/z': 'Echo'})], tmp_path, terms={'pipe': 'أنبوب'},
+                     translate=_fake({'a/y': 'مدّ الخطوط هنا', 'a/z': 'Echo'}, []))[2]
+    assert first['source']['a/z'] == 'english'                 # an answer that copies the English is rejected
+    assert first['flags'] == [('a/y', 'مصطلح المسرد لم يُستخدم: pipe ← أنبوب')]
+
+
 def test_an_updated_mod_only_sends_its_changed_strings(tmp_path):
     tm, calls = _tm(tmp_path), []
     _resolve([_m('a', {'a/x': 'Keep me', 'a/y': 'Old text'})], tmp_path, memory_=tm,

@@ -98,7 +98,7 @@ $form.StartPosition = 'CenterScreen'
 $form.FormBorderStyle = 'FixedDialog'
 $form.MaximizeBox = $false
 $form.MinimizeBox = $false
-$form.ClientSize = New-Object Drawing.Size(460, 360)
+$form.ClientSize = New-Object Drawing.Size(460, 404)
 $form.Font = New-Object Drawing.Font('Segoe UI', 11)
 $form.BackColor = [Drawing.Color]::FromArgb(36, 36, 36)
 $form.ForeColor = [Drawing.Color]::FromArgb(255, 230, 192)
@@ -141,7 +141,9 @@ $sep.BackColor = [Drawing.Color]::FromArgb(80, 80, 80)
 $current = New-Label '' 212 26 11
 $btnAr = New-Button 'العربية' 250 244 180 56 ([Drawing.Color]::FromArgb(46, 125, 50))
 $btnEn = New-Button 'English' 30 244 180 56 ([Drawing.Color]::FromArgb(69, 90, 100))
-$footer = New-Label 'أغلق اللعبة قبل أي تغيير. يعمل بصلاحيات المدير.' 312 36 9
+$btnMods = New-Button 'ترجمة المودات الإضافية...' 30 312 400 36 ([Drawing.Color]::FromArgb(69, 90, 100))
+$btnMods.Font = New-Object Drawing.Font('Segoe UI', 11, [Drawing.FontStyle]::Bold)
+$footer = New-Label 'أغلق اللعبة قبل أي تغيير. يعمل بصلاحيات المدير.' 356 36 9
 $footer.ForeColor = [Drawing.Color]::FromArgb(160, 160, 160)
 
 function Update-Status {
@@ -189,7 +191,14 @@ $btnFix.Add_Click({
     }
 })
 
-$form.Controls.AddRange(@($title, $versions, $state, $details, $btnFix, $sep, $current, $btnAr, $btnEn, $footer))
+$btnMods.Add_Click({
+    # the translator does not need administrator rights: explorer.exe starts it as the signed-in user
+    $tool = Join-Path $PSScriptRoot 'Translate-Mods.cmd'
+    if (Test-Path $tool) { Start-Process explorer.exe ('"' + $tool + '"') }
+    else { Start-Process 'https://github.com/F2lcon01/factorio01/releases/latest' }
+})
+
+$form.Controls.AddRange(@($title, $versions, $state, $details, $btnFix, $sep, $current, $btnAr, $btnEn, $btnMods, $footer))
 Update-Status
 
 if ($Snapshot) {   # للتحقق: رسم النافذة في صورة دون إظهارها

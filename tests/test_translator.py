@@ -74,11 +74,12 @@ def test_openai_shape_falls_back_without_json_mode(monkeypatch):
 def test_anthropic_shape(monkeypatch):
     seen = []
     reply = {'content': [{'type': 'thinking', 'thinking': ''}, {'type': 'text', 'text': '{"t": {"a": "إلغاء"}}'}],
-             'stop_reason': 'end_turn', 'usage': {'input_tokens': 120, 'output_tokens': 15}}
+             'stop_reason': 'end_turn', 'usage': {'input_tokens': 100, 'output_tokens': 15, 'cache_read_input_tokens': 20}}
     monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen({('POST', '/v1/messages'): reply}, seen))
     cfg = {'kind': 'anthropic', 'base': 'https://api.anthropic.com/v1', 'model': 'claude-sonnet-5-5'}
     out, usage = translator.translate(cfg, 'sk-ant-k', {'a': 'Cancel'}, {'pipe': 'أنبوب'})
     assert out == {'a': 'إلغاء'} and usage['requests'] == 1 and usage['input_tokens'] == 120
+    assert usage['cached_input_tokens'] == 20
     assert usage['glossary_chars'] == len('{"pipe": "أنبوب"}')
     assert seen[0].get_header('X-api-key') == 'sk-ant-k'
     assert json.loads(json.loads(seen[0].data)['messages'][0]['content'])['glossary'] == {'pipe': 'أنبوب'}
