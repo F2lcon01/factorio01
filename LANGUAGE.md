@@ -87,6 +87,44 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\auto_update.ps1 -Unr
 
 ---
 
+## ترجمة المودات الإضافية تلقائياً
+
+أي مود تضيفه (مثل P.U.M.P.) تظهر نصوصه بالإنجليزية، لأن `arabic-complete` يترجم اللعبة الأساسية فقط، واللعبة تعرض
+الإنجليزية لكل نص لا تجد له ترجمة عربية. الأداة تولّد مود ترجمة محلياً اسمه `arabic-mods-local` لكل مودّاتك المفعّلة.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1             # يطلب المفتاح أول مرة ثم يترجم ويثبّت
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1 -Offline    # بلا API: ما يتوفر دون ترجمة آلية
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1 -ResetKey   # نسيان المفتاح وطلب مفتاح جديد
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1 -Uninstall  # التراجع: تعطيل الحزمة ونقلها (لا حذف)
+```
+
+**المفتاح:** تقبل الأداة مفتاح API من **أي مزوّد**، وتتعرّف عليه من شكله ثم تتحقق منه بطلب قائمة النماذج:
+OpenAI، وGoogle Gemini، وAnthropic Claude، وDeepL، وOpenRouter، وGroq، وDeepSeek، وMistral، وxAI، وTogether.
+ولخادم محلي متوافق مع OpenAI (Ollama أو LM Studio): `-BaseUrl http://localhost:11434/v1 -Model <اسم النموذج>`.
+يُحفظ المفتاح بعد قبوله مشفّراً لمستخدم Windows الحالي فقط (DPAPI) في
+`%APPDATA%\Factorio\arabic-tools\translator-key.txt`، ولا يُكتب في المشروع ولا يُطبع.
+
+**من أين تأتي كل ترجمة** (الأول المتاح):
+
+| المصدر | المعنى |
+|---|---|
+| تصحيح يدوي | `modpack_overrides.json`: `{"section/key": "النص العربي"}`، ويغلب كل شيء |
+| الـ cache | ترجمة سابقة للنص الإنجليزي نفسه، فلا يُدفع عنها مرة أخرى |
+| عربية المود نفسه | إن شحن المود ملفاً عربياً صالحاً: تُعدَّل اتجاهه وتُشكَّل حروفه |
+| اسم أو اختصار | مثل `P.U.M.P.`: يبقى كما هو |
+| ترجمتنا الحالية | النص الإنجليزي نفسه مترجم في الـ 7,600 نص (مثل Confirm ← تأكيد) |
+| الترجمة الآلية | عبر المفتاح، مع المسرد، وتُرفض أي ترجمة تكسر `__1__` أو الوسوم |
+| لا شيء | يبقى بالإنجليزية، ويُذكر في `reports\modpack.md` |
+
+**مع التحديث التلقائي:** `auto_update.ps1` يعيد بناء الحزمة متى تغيّرت مودّاتك أو إصداراتها، بالمفتاح المحفوظ،
+ودون أن يسأل.
+
+**حدود:** النصوص المكتوبة مباشرة داخل كود المود (ليست في ملفات اللغة) لا تصلها أي ترجمة، ويذكرها التقرير.
+الحزمة محلية فقط، فلا تُنشر نصوص مودات الآخرين.
+
+---
+
 ## حل المشكلات
 
 | المشكلة | الحل |
@@ -103,6 +141,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\auto_update.ps1 -Unr
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\auto_update.ps1 -Unregister
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\translate_mods.ps1 -Uninstall
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\install.ps1 -Uninstall
 python -E -m tools.scenarios restore
 powershell -NoProfile -ExecutionPolicy Bypass -STA -File .\Change-Language.ps1 -Language en

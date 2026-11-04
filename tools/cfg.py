@@ -6,8 +6,13 @@ SECTION_RE = re.compile(r'^\[([^\]]+)\]\s*$')
 
 
 def read_cfg(path) -> dict[str, str]:
+    return parse_cfg(Path(path).read_text(encoding='utf-8-sig'))
+
+
+def parse_cfg(text: str) -> dict[str, str]:
+    """Same as read_cfg, for text already in memory (locale files inside a mod's zip)."""
     out, sec = {}, ''
-    for line in Path(path).read_text(encoding='utf-8-sig').splitlines():
+    for line in text.lstrip('﻿').splitlines():
         if not line or line[0] in ';#':
             continue
         m = SECTION_RE.match(line)

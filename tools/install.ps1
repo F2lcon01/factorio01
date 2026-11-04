@@ -3,14 +3,15 @@
 # LocalCache and the game never sees them) — verified 2026-11-03.
 #   powershell -File tools\install.ps1 -Version 1.0.0
 #   powershell -File tools\install.ps1 -Uninstall
-param([string]$Version, [switch]$Uninstall)
+#   powershell -File tools\install.ps1 -Name arabic-mods-local -Version 1.0.0   # the pack from tools\translate_mods.ps1
+param([string]$Version, [switch]$Uninstall, [string]$Name = 'arabic-complete')
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
 $factorio = Join-Path $env:APPDATA 'Factorio'
 $mods = Join-Path $factorio 'mods'
 $parked = Join-Path $factorio 'mods-parked'   # outside mods\: the game would try to load any folder inside it
 $list = Join-Path $mods 'mod-list.json'
-$name = 'arabic-complete'
+$name = $Name
 $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
 
 if (Get-Process factorio -ErrorAction SilentlyContinue) { throw 'Factorio is running; close it first.' }
