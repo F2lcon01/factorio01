@@ -6,13 +6,16 @@
 #   ... -ResetKey        forget the stored key, then ask for a new one
 #   ... -Uninstall       rollback: disable the pack and park it in mods-parked (nothing is deleted)
 #   ... -NonInteractive  never ask (used by tools\auto_update.ps1): without a stored key it runs offline
+#   ... -KeepOriginal <mod>   keep that mod in the language it ships (its translations stay in the memory)
+#   ... -TranslateMod <mod>   translate it again (what the memory has costs no request)
 #   ... -Provider openai|anthropic|gemini|openrouter|groq|xai|deepseek|mistral|together|deepl|deepl-free
 #   ... -BaseUrl http://localhost:11434/v1   any OpenAI-compatible server (Ollama, LM Studio...)    -Model <id>
 # The key is stored for this Windows user only, encrypted with DPAPI, in
 # %APPDATA%\Factorio\arabic-tools\translator-key.txt (never in the project, never printed). Python receives it
 # through FA_TRANSLATE_KEY in its own process only. Windows PowerShell 5.1 and 7. ASCII only (see FactorioArabic.psm1).
 param([switch]$Offline, [switch]$ResetKey, [switch]$Uninstall, [switch]$NonInteractive,
-      [string]$Provider = '', [string]$BaseUrl = '', [string]$Model = '')
+      [string]$Provider = '', [string]$BaseUrl = '', [string]$Model = '',
+      [string]$KeepOriginal = '', [string]$TranslateMod = '')
 $ErrorActionPreference = 'Stop'
 $module = Join-Path $PSScriptRoot 'FactorioArabic.psm1'
 if (-not (Test-Path $module)) { $module = Join-Path $PSScriptRoot 'tools\FactorioArabic.psm1' }
@@ -22,6 +25,13 @@ $pack = 'arabic-mods-local'
 if (Test-GameRunning) { throw 'Factorio is running; close it first.' }
 if ($Uninstall) { Uninstall-FAPack $pack; return }
 if ($ResetKey -and (Remove-FATranslatorKey)) { Write-Output 'stored key forgotten' }
+foreach ($choice in @(@('original', $KeepOriginal), @('arabic', $TranslateMod))) {
+    if ($choice[1]) {
+        $c = Invoke-FAPython @('-m', 'tools.modpack', $choice[0], $choice[1])
+        if ($c.Code -ne 0) { throw ($c.Output -join ' ') }
+        Write-Output $c.Output[-1]
+    }
+}
 
 $key = ''
 $newKey = $null

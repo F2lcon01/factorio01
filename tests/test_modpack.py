@@ -113,6 +113,25 @@ def test_reuse_under_another_key_is_listed_for_review_and_quality_checks(tmp_pat
     assert first['flags'] == [('a/y', 'مصطلح المسرد لم يُستخدم: pipe ← أنبوب')]
 
 
+def test_a_mod_kept_original_sends_nothing_and_comes_back_from_the_memory(tmp_path):
+    tm, calls = _tm(tmp_path), []
+    mods = [_m('a', {'a/x': 'Alpha text'}), _m('b', {'b/y': 'Beta text'})]
+    answers = {'a/x': 'نص ألفا', 'b/y': 'نص بيتا'}
+    _resolve(mods, tmp_path, memory_=tm, translate=_fake(answers, calls))
+    assert len(calls) == 1
+    arabic, _, rows = _resolve(mods, tmp_path, memory_=tm, translate=_fake(answers, calls), keep={'a'})
+    assert arabic == {'b/y': 'نص بيتا'} and rows['source']['a/x'] == 'original' and len(calls) == 1
+    arabic, _, rows = _resolve(mods, tmp_path, memory_=tm, translate=_fake(answers, calls))   # ticked again
+    assert arabic == {'a/x': 'نص ألفا', 'b/y': 'نص بيتا'} and len(calls) == 1          # from the memory, no request
+
+
+def test_a_null_override_keeps_one_string_original(tmp_path):
+    calls = []
+    arabic, _, rows = _resolve([_m('a', {'a/x': 'Keep English', 'a/y': 'Translate me'})], tmp_path,
+                               overrides={'a/x': None}, translate=_fake({'a/y': 'ترجمني'}, calls))
+    assert arabic == {'a/y': 'ترجمني'} and rows['source']['a/x'] == 'original' and calls == [{'a/y': 'Translate me'}]
+
+
 def test_an_updated_mod_only_sends_its_changed_strings(tmp_path):
     tm, calls = _tm(tmp_path), []
     _resolve([_m('a', {'a/x': 'Keep me', 'a/y': 'Old text'})], tmp_path, memory_=tm,
@@ -156,6 +175,9 @@ def test_mod_states(tmp_path):
     assert {n: s['state'] for n, s in states.items()} == {'new': 'new', 'same': 'translated', 'upd': 'changed',
                                                          'wait': 'pending'}
     assert states['upd']['changed'] == 1 and states['wait']['pending'] == 1 and states['same']['state_ar'] == 'مترجم'
+    rows['source']['s/a'] = 'original'
+    kept = {s['name']: s for s in modpack.mod_states(mods, rows, manifest, keep={'same'})}['same']
+    assert kept['state'] == 'original' and kept['excluded'] and kept['arabic'] == 0 and kept['state_ar'] == 'بلغته الأصلية'
 
 
 def test_savings_are_computed_from_measured_usage():

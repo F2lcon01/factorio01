@@ -87,3 +87,19 @@ def test_second_build_sends_no_request_and_an_update_sends_only_the_changes(tmp_
     assert (tmp_path / 'dist' / 'arabic-mods-local_1.0.0' / 'locale' / 'ar' / 'alpha.cfg').exists()
     stages = [json.loads(l)['stage'] for l in (tmp_path / 'progress.jsonl').read_text().splitlines()]
     assert stages[0] == 'scan' and stages[-1] == 'done' and 'translate' in stages
+
+    # keep one mod in its original language, then switch it back: no request either way
+    pack_ar = tmp_path / 'dist' / 'arabic-mods-local_1.0.0' / 'locale' / 'ar'
+    n = len(_Provider.posts)
+    assert modpack.status()['changed'] is False
+    modpack.keep_original('alpha', True)
+    assert modpack.status()['changed'] is True                       # auto-update notices the choice
+    kept = modpack.build(log=lambda s: None)
+    assert kept['requests'] == 0 and not (pack_ar / 'alpha.cfg').exists() and (pack_ar / 'beta.cfg').exists()
+    info = json.loads((tmp_path / 'dist' / 'arabic-mods-local_1.0.0' / 'info.json').read_text(encoding='utf-8'))
+    assert '? alpha' not in info['dependencies']
+    assert {s['name']: s['state'] for s in modpack.status()['states']} == {'alpha': 'original', 'beta': 'translated'}
+    modpack.keep_original('alpha', False)
+    assert {s['name']: s['state'] for s in modpack.status()['states']}['alpha'] == 'new'
+    back = modpack.build(log=lambda s: None)
+    assert back['requests'] == 0 and (pack_ar / 'alpha.cfg').exists() and len(_Provider.posts) == n

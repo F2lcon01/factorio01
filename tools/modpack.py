@@ -12,6 +12,7 @@ State (FA_STATE_DIR, default work/modpack): memory.json, manifest.json, usage.js
 python -E -m tools.modpack build [--offline]   → dist/arabic-mods-local_1.0.0, reports/modpack.md, one JSON line
 python -E -m tools.modpack status              → fingerprint, changed, pending, and the state of every mod
 python -E -m tools.modpack summary             → the last run (strings, requests, tokens, memory hits, savings)
+python -E -m tools.modpack original <mod>      → keep that mod in its original language (arabic <mod> undoes it)
 FA_PROGRESS_FILE: JSON lines {"stage", "done", "total"} for the window's progress bar."""
 import hashlib, heapq, json, os, re, shutil, sys, time, unicodedata, zipfile
 from pathlib import Path
@@ -32,7 +33,8 @@ WORD_RE = re.compile('[ء-ي]{2,}')
 LUA_LITERAL_RE = re.compile(r'\b(caption|tooltip)\s*=\s*"([^"]*[A-Za-z]{3,}[^"]*)"')
 LUA_KEY_RE = re.compile(r'\{\s*"([a-z0-9_-]+)\.([A-Za-z0-9_.-]+)"')
 BATCH_STRINGS, BATCH_CHARS = 40, 4000
-STATES_AR = {'translated': 'مترجم', 'new': 'جديد', 'changed': 'تغيّر', 'pending': 'ينتظر الترجمة'}
+STATES_AR = {'translated': 'مترجم', 'new': 'جديد', 'changed': 'تغيّر', 'pending': 'ينتظر الترجمة',
+             'original': 'بلغته الأصلية'}
 
 
 def mods_dir():
@@ -178,6 +180,17 @@ def clean(ar):
     return normalize(BIDI_RE.sub('', ar)).strip()
 
 
+def excluded() -> set:
+    """Mods the player keeps in their original language (the window's checkboxes): not translated, not packed."""
+    return set(_load_json(STATE / 'excluded.json', []))
+
+
+def set_excluded(name: str, keep_original: bool) -> list:
+    names = excluded() | {name} if keep_original else excluded() - {name}
+    _save_json(STATE / 'excluded.json', sorted(names))
+    return sorted(names)
+
+
 def batches(items):
     batch, size = {}, 0
     for k, e in items:
@@ -190,13 +203,18 @@ def batches(items):
         yield batch
 
 
-def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', log=print):
+def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', log=print, keep=frozenset()):
     """→ (arabic {key: logical}, owner {key: mod}, rows). memory_ is a tools.memory.TranslationMemory; translate is
-    (batch {key: English}, terms) → ({key: Arabic}, usage). Machine results enter the shared memory."""
+    (batch {key: English}, terms) → ({key: Arabic}, usage). Machine results enter the shared memory.
+    keep: mods kept in their original language; an override of null keeps one string original. Either way nothing is
+    sent or written for them, and their stored translations stay in the memory for when they are switched back."""
     en, owner, mod_ar, conflicts = merge(mods)
     vocab = {w for v in base.values() for w in WORD_RE.findall(v)}
     arabic, source, pending, review, flags = {}, {}, [], [], []
     for k, e in en.items():
+        if owner[k] in keep or (k in overrides and overrides[k] is None):
+            source[k] = 'original'
+            continue
         shipped = orient(mod_ar[k], vocab) if k in mod_ar else None
         from_base, hit = base.get(memory.norm(e).lower()), memory_.entry(e)
         from_mem = hit['ar'] if hit else None
@@ -272,19 +290,20 @@ def mod_fingerprint(mod):
     return _sha(mod['version'] + '\n' + '\n'.join(f'{k}={v}' for k, v in sorted(mod['locale'].get('en', {}).items())))
 
 
-def mod_states(mods, rows, manifest):
+def mod_states(mods, rows, manifest, keep=frozenset()):
     out = []
     for m in mods:
         keys = [k for k, o in rows['owner'].items() if o == m['name']]
         src = [rows['source'][k] for k in keys]
         rec = manifest.get(m['name'])
         changed = [k for k in keys if not rec or rec.get('keys', {}).get(k) != _sha(rows['en'][k])]
-        pending = src.count('english')
-        state = 'new' if not rec else 'changed' if rec.get('fp') != mod_fingerprint(m) else \
-            'pending' if pending else 'translated'
+        pending, original = src.count('english'), src.count('original')
+        state = 'original' if m['name'] in keep else 'new' if not rec else \
+            'changed' if rec.get('fp') != mod_fingerprint(m) else 'pending' if pending else 'translated'
         out.append({'name': m['name'], 'title': m['title'], 'version': m['version'], 'strings': len(keys),
-                    'arabic': len(keys) - pending - src.count('brand'), 'brand': src.count('brand'),
-                    'pending': pending, 'changed': len(changed), 'state': state, 'state_ar': STATES_AR[state]})
+                    'arabic': len(keys) - pending - original - src.count('brand'), 'brand': src.count('brand'),
+                    'original': original, 'pending': pending, 'changed': len(changed), 'excluded': m['name'] in keep,
+                    'state': state, 'state_ar': STATES_AR[state]})
     return out
 
 
@@ -325,7 +344,7 @@ def lua_findings(mods, en_keys):
 
 
 def fingerprint(mods):
-    parts = sorted(f"{m['name']}@{m['version']}" for m in mods)
+    parts = sorted(f"{m['name']}@{m['version']}" for m in mods) + ['keep:' + ','.join(sorted(excluded()))]
     ov = overrides_path()
     if ov.exists():
         parts.append(_sha(ov.read_text(encoding='utf-8')))
@@ -346,8 +365,9 @@ def savings(rows, history):
 
 
 def report(mods, rows, findings, provider, states, last):
-    kinds = ['override', 'mod-arabic', 'memory-base', 'memory', 'machine', 'brand', 'english']
+    kinds = ['override', 'mod-arabic', 'memory-base', 'memory', 'machine', 'brand', 'original', 'english']
     names = {'override': 'يدوي', 'mod-arabic': 'عربية المود', 'memory-base': 'ذاكرة اللعبة', 'memory': 'الذاكرة المشتركة',
+             'original': 'أصلي (باختيارك)',
              'machine': 'ترجمة آلية جديدة', 'brand': 'اسم/اختصار', 'english': 'بالإنجليزية'}
     counts = {}
     for k, src in rows['source'].items():
@@ -417,17 +437,20 @@ def build(offline=False, log=print):
     mods, mem, base = _context(log=log)
     terms = memory.term_base(_load_json(ROOT / 'glossary.json', {}), memory.base_terms(mods_dir()))
     translate, provider = _translator(offline, log)
+    keep = excluded()
     arabic, owner, rows = resolve(mods, base=base, memory_=mem, overrides=_load_json(overrides_path(), {}),
-                                  terms=terms, translate=translate, model=provider, log=log)
+                                  terms=terms, translate=translate, model=provider, log=log, keep=keep)
     mem.save()
     progress('pack', 0, 1)
     pack = build_pack(mods, arabic, owner, rows['en'])
     manifest = _load_json(STATE / 'manifest.json', {})
     for m in mods:
+        if m['name'] in keep:
+            continue   # kept original: no record, so switching it back shows it as new until the next build
         manifest[m['name']] = {'version': m['version'], 'fp': mod_fingerprint(m), 'built_at': time.strftime('%Y-%m-%dT%H:%M:%S'),
                                'keys': {k: _sha(rows['en'][k]) for k, o in owner.items() if o == m['name']}}
     _save_json(STATE / 'manifest.json', manifest)
-    states = mod_states(mods, rows, manifest)   # after this build: translated, or pending what failed / had no key
+    states = mod_states(mods, rows, manifest, keep)   # after this build: translated, pending, or original
     u = rows['usage']
     translated = len({memory.norm(rows['en'][k]).lower() for k, s in rows['source'].items() if s == 'machine'})  # sent
     history = (_load_json(STATE / 'usage.json', []) + [{
@@ -449,12 +472,24 @@ def build(offline=False, log=print):
 def status():
     """No API call: an offline resolve tells, for each mod, what is already covered."""
     mods, mem, base = _context()
+    keep = excluded()
     _, _, rows = resolve(mods, base=base, memory_=mem, overrides=_load_json(overrides_path(), {}), terms={},
-                         log=lambda s: None)
+                         log=lambda s: None, keep=keep)
     saved = _load_json(STATE / 'state.json', {})
     fp = fingerprint(mods)
     return {'fingerprint': fp, 'changed': fp != saved.get('fingerprint'), 'pending': saved.get('pending', 0),
-            'mods': len(mods), 'states': mod_states(mods, rows, _load_json(STATE / 'manifest.json', {}))}
+            'mods': len(mods), 'states': mod_states(mods, rows, _load_json(STATE / 'manifest.json', {}), keep)}
+
+
+def keep_original(name: str, keep: bool) -> dict:
+    """The window's checkbox. Switching back to Arabic drops the mod's build record (it shows as new) and costs no
+    request for strings already in the memory; the pack changes on the next build."""
+    names = set_excluded(name, keep)
+    if not keep:
+        manifest = _load_json(STATE / 'manifest.json', {})
+        if manifest.pop(name, None) is not None:
+            _save_json(STATE / 'manifest.json', manifest)
+    return {'mod': name, 'original': keep, 'kept_original': names}
 
 
 if __name__ == '__main__':
@@ -474,5 +509,8 @@ if __name__ == '__main__':
         mem = memory.TranslationMemory(STATE / 'memory.json')
         Path(sys.argv[2]).write_text(mem.to_tmx(), encoding='utf-8')
         print(json.dumps({'tmx': sys.argv[2], 'units': len(mem)}))
+    elif cmd in ('original', 'arabic') and len(sys.argv) > 2:
+        print(json.dumps(keep_original(sys.argv[2], cmd == 'original'), ensure_ascii=False))
     else:
-        sys.exit('usage: python -E -m tools.modpack build [--offline] | status | summary | export-tmx <file.tmx>')
+        sys.exit('usage: python -E -m tools.modpack build [--offline] | status | summary | export-tmx <file.tmx> | '
+                 'original <mod> | arabic <mod>')

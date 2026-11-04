@@ -1,5 +1,6 @@
 ﻿# أداة ترجمة المودات الإضافية (نافذة):
-#   - تعرض المودات المفعّلة وحالة كل مود: مترجم، جديد، تغيّر، ينتظر الترجمة
+#   - تعرض المودات المفعّلة وحالة كل مود: مترجم، جديد، تغيّر، ينتظر الترجمة، بلغته الأصلية
+#   - خانة اختيار لكل مود: بلا علامة = يبقى بلغته الأصلية (ترجماته تبقى في الذاكرة لإعادته بلا طلبات)
 #   - مفتاح API من أي مزوّد، يُحفظ مشفّراً لمستخدم Windows الحالي فقط
 #   - ترجمة وتثبيت مع شريط تقدّم، وملخص الاستهلاك والتوفير
 # التشغيل: انقر مرتين على Translate-Mods.cmd   (لا يحتاج صلاحيات المدير)
@@ -34,6 +35,7 @@ $stateColor = @{
     new        = [Drawing.Color]::FromArgb(100, 181, 246)
     changed    = [Drawing.Color]::FromArgb(255, 167, 38)
     pending    = [Drawing.Color]::FromArgb(255, 213, 79)
+    original   = [Drawing.Color]::FromArgb(170, 170, 170)
 }
 
 $form = New-Object Windows.Forms.Form
@@ -69,11 +71,12 @@ function New-Button([string]$Text, [int]$X, [int]$Y, [int]$W, [int]$H, [Drawing.
 
 $title = New-Label 'ترجمة المودات الإضافية إلى العربية' 20 12 780 32 15 $true
 $title.ForeColor = $orange
-$subtitle = New-Label 'تُترجم نصوص كل مود تضيفه، وتُحفظ كل ترجمة في ذاكرة مشتركة فلا يُطلب النص نفسه مرتين.' 20 46 780 22 9.5
+$subtitle = New-Label 'تُترجم نصوص كل مود تضيفه، وتُحفظ كل ترجمة في ذاكرة مشتركة فلا يُطلب النص نفسه مرتين. أزل العلامة عن مود لإبقائه بلغته الأصلية.' 20 46 780 22 9.5
 $subtitle.ForeColor = $muted
 
 $list = New-Object Windows.Forms.ListView
 $list.View = 'Details'
+$list.CheckBoxes = $true   # ticked = Arabic; unticked = the language the mod ships (its translations stay in the memory)
 $list.FullRowSelect = $true
 $list.HeaderStyle = 'Nonclickable'
 $list.RightToLeftLayout = $true
@@ -142,21 +145,27 @@ function Update-KeyState {
     }
 }
 
+$script:loading = $false
 function Update-Mods {
-    $list.Items.Clear()
-    $r = Invoke-FAPython @('-m', 'tools.modpack', 'status')
-    if ($r.Code -ne 0) { $barText.Text = 'تعذّرت قراءة المودات: ' + ($r.Output | Select-Object -Last 1); return }
-    $st = $r.Output[-1] | ConvertFrom-Json
-    foreach ($m in $st.states) {
-        $label = $m.state_ar
-        if ($m.state -eq 'changed') { $label += " ($(N $m.changed) نصاً)" }
-        $item = New-Object Windows.Forms.ListViewItem($m.title)
-        foreach ($v in @((N $m.version), (N $m.strings), (N $m.arabic), (N $m.pending), $label)) { [void]$item.SubItems.Add([string]$v) }
-        $item.UseItemStyleForSubItems = $false
-        $item.SubItems[5].ForeColor = $stateColor[$m.state]
-        [void]$list.Items.Add($item)
-    }
-    if (-not $st.states) { [void]$list.Items.Add((New-Object Windows.Forms.ListViewItem('لا توجد مودات إضافية مفعّلة'))) }
+    $script:loading = $true   # filling the list must not fire the checkbox handler
+    try {
+        $list.Items.Clear()
+        $r = Invoke-FAPython @('-m', 'tools.modpack', 'status')
+        if ($r.Code -ne 0) { $barText.Text = 'تعذّرت قراءة المودات: ' + ($r.Output | Select-Object -Last 1); return }
+        $st = $r.Output[-1] | ConvertFrom-Json
+        foreach ($m in $st.states) {
+            $label = $m.state_ar
+            if ($m.state -eq 'changed') { $label += " ($(N $m.changed) نصاً)" }
+            $item = New-Object Windows.Forms.ListViewItem($m.title)
+            foreach ($v in @((N $m.version), (N $m.strings), (N $m.arabic), (N $m.pending), $label)) { [void]$item.SubItems.Add([string]$v) }
+            $item.UseItemStyleForSubItems = $false
+            $item.SubItems[5].ForeColor = $stateColor[$m.state]
+            $item.Tag = $m.name
+            $item.Checked = -not $m.excluded
+            [void]$list.Items.Add($item)
+        }
+        if (-not $st.states) { [void]$list.Items.Add((New-Object Windows.Forms.ListViewItem('لا توجد مودات إضافية مفعّلة'))) }
+    } finally { $script:loading = $false }
 }
 
 function Update-Summary {
@@ -278,6 +287,26 @@ $btnTranslate.Add_Click({
     $key = $null
 })
 
+$script:ready = $false   # WinForms raises ItemChecked for every item when the list's handle is created: not a click
+$form.Add_Shown({ $script:ready = $true })
+$list.Add_ItemChecked({
+    param($sender, $e)
+    if ($script:loading -or -not $script:ready -or -not $e.Item.Tag) { return }
+    $name = [string]$e.Item.Tag
+    $choice = 'arabic'
+    if (-not $e.Item.Checked) { $choice = 'original' }
+    $r = Invoke-FAPython @('-m', 'tools.modpack', $choice, $name)
+    if ($r.Code -ne 0) { $barText.Text = 'تعذّر حفظ الاختيار: ' + ($r.Output | Select-Object -Last 1); return }
+    if ($e.Item.Checked) {
+        $e.Item.SubItems[5].Text = 'عربي بعد «ترجمة وتثبيت»'
+        $e.Item.SubItems[5].ForeColor = $stateColor.new
+    } else {
+        $e.Item.SubItems[5].Text = 'أصلي بعد «ترجمة وتثبيت»'
+        $e.Item.SubItems[5].ForeColor = $muted
+    }
+    $barText.Text = 'اضغط «ترجمة وتثبيت» لتطبيق الاختيار. ما تُرجم سابقاً يعود من الذاكرة دون أي طلب.'
+})
+
 $btnRefresh.Add_Click({ $form.Cursor = 'WaitCursor'; Update-Mods; Update-Summary; Update-KeyState; $form.Cursor = 'Default' })
 $btnReport.Add_Click({ if (Test-Path $reportPath) { Start-Process notepad.exe $reportPath } else { Show-Message 'لا يوجد تقرير بعد: شغّل الترجمة أولاً.' } })
 $btnUndo.Add_Click({
@@ -305,6 +334,10 @@ if ($PreviewBusy) {   # for the documentation screenshot of a run in progress
 if ($Snapshot) {   # for verification: draw the window into an image without showing it
     $form.Opacity = 0
     $form.Show()
+    [Windows.Forms.Application]::DoEvents()   # lets Shown run, as it does in the real message loop
+    if ($env:FA_TEST_TOGGLE) {   # automated check of the checkbox handler: untick that mod as a click would
+        foreach ($it in $list.Items) { if ($it.Tag -eq $env:FA_TEST_TOGGLE) { $it.Checked = -not $it.Checked } }
+    }
     $form.Refresh()
     $bmp = New-Object Drawing.Bitmap($form.Width, $form.Height)
     $form.DrawToBitmap($bmp, (New-Object Drawing.Rectangle(0, 0, $form.Width, $form.Height)))
