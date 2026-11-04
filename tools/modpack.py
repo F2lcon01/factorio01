@@ -210,7 +210,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
     sent or written for them, and their stored translations stay in the memory for when they are switched back."""
     en, owner, mod_ar, conflicts = merge(mods)
     vocab = {w for v in base.values() for w in WORD_RE.findall(v)}
-    arabic, source, pending, review, flags = {}, {}, [], [], []
+    arabic, source, pending, review, flags, errors = {}, {}, [], [], [], []
     for k, e in en.items():
         if owner[k] in keep or (k in overrides and overrides[k] is None):
             source[k] = 'original'
@@ -249,6 +249,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
                     translator.add_usage(usage, u)
                 except translator.TranslatorError as e:
                     log(f'translation batch failed: {e}')
+                    errors.append(str(e))   # shown to the player: the strings stay English for this reason
                     failed += list(batch)
                     continue
                 for k in batch:
@@ -269,7 +270,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
     for k in pending:
         source[k] = 'english'
     return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage,
-                           'review': review, 'flags': flags}
+                           'review': review, 'flags': flags, 'errors': errors}
 
 
 def quality_flags(en, ar, terms):
@@ -409,15 +410,17 @@ def _translator(offline, log):
     if offline or not key:
         return None, 'none (offline)'
     saved = _load_json(STATE / 'translator.json', {})
-    tag = _sha(key)[:12] + '|' + '|'.join(os.environ.get(v, '') for v in
-                                          ('FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_BASE_URL', 'FA_TRANSLATE_MODEL'))
+    tag = 'v2|' + _sha(key)[:12] + '|' + '|'.join(os.environ.get(v, '') for v in   # v2: configs carry fallbacks
+                                                  ('FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_BASE_URL', 'FA_TRANSLATE_MODEL'))
     cfg = saved.get('config') if saved.get('tag') == tag else None
     if not cfg:
         cfg = translator.detect(key)   # raises TranslatorError: the caller reports it
         _save_json(STATE / 'translator.json', {'tag': tag, 'config': cfg})
     label = f"{cfg['provider']} / {cfg['model']}"
     log(f'translator: {label}')
-    return (lambda batch, terms: translator.translate(cfg, key, batch, terms)), label
+    run = lambda batch, terms: translator.translate(cfg, key, batch, terms)
+    run.cfg = cfg   # a fallback model may take over during the run: build() reports the one that ended it
+    return run, label
 
 
 def _context(offline=True, log=print):
@@ -441,6 +444,8 @@ def build(offline=False, log=print):
     arabic, owner, rows = resolve(mods, base=base, memory_=mem, overrides=_load_json(overrides_path(), {}),
                                   terms=terms, translate=translate, model=provider, log=log, keep=keep)
     mem.save()
+    if translate:
+        provider = f"{translate.cfg['provider']} / {translate.cfg['model']}"
     progress('pack', 0, 1)
     pack = build_pack(mods, arabic, owner, rows['en'])
     manifest = _load_json(STATE / 'manifest.json', {})
@@ -466,7 +471,8 @@ def build(offline=False, log=print):
     _save_json(STATE / 'state.json', {'fingerprint': fingerprint(mods), 'pending': pending, 'built_at': last['built_at']})
     progress('done', 1, 1)
     return {'pack': pack.name, 'pack_path': str(pack), 'mods': len(mods), 'strings': len(rows['en']),
-            'arabic': len(arabic), 'english_left': pending, 'requests': u['requests'], 'translator': provider}
+            'arabic': len(arabic), 'english_left': pending, 'requests': u['requests'], 'translator': provider,
+            'error': rows['errors'][-1] if rows['errors'] else ''}
 
 
 def status():

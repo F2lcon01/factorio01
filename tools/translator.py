@@ -2,7 +2,8 @@
 whatever API key the user gives. The key reaches this process only through FA_TRANSLATE_KEY (set by
 tools/translate_mods.ps1); it is never written by Python. The provider is detected from the key (prefix, then a
 probe of that one provider's model list), or chosen with FA_TRANSLATE_PROVIDER / FA_TRANSLATE_BASE_URL /
-FA_TRANSLATE_MODEL; a key whose format names no provider is never tried on several services. Three request shapes:
+FA_TRANSLATE_MODEL; a key whose format names no provider is never tried on several services. A model that is
+overloaded, out of quota or withdrawn hands over to the next preferred one (cfg['fallbacks']). Three request shapes:
   openai     POST {base}/chat/completions: OpenAI, Gemini, OpenRouter, Groq, DeepSeek, Mistral, xAI, Together,
              Hugging Face, Cerebras, Fireworks, NVIDIA, and local servers (Ollama, LM Studio: free, no key)
   anthropic  POST {base}/messages
@@ -16,8 +17,9 @@ PROVIDERS = {  # name: (kind, base_url, model preference: first regex that match
                   [r'^claude-sonnet-5-5$', r'^claude-sonnet', r'^claude-opus', r'^claude-haiku']),
     'openai': ('openai', 'https://api.openai.com/v1',
                [r'^gpt-5(\.\d+)?-mini$', r'^gpt-5(\.\d+)?$', r'^gpt-4\.1-mini$', r'^gpt-4o-mini$', r'^gpt-4o$']),
-    'gemini': ('openai', 'https://generativelanguage.googleapis.com/v1beta/openai',
-               [r'gemini-[\d.]+-flash$', r'gemini-[\d.]+-flash', r'gemini-[\d.]+-pro', r'gemini']),
+    'gemini': ('openai', 'https://generativelanguage.googleapis.com/v1beta/openai',   # lite: busy-hour fallback
+               [r'gemini-[\d.]+-flash$', r'gemini-[\d.]+-flash-lite$', r'gemini-flash-lite-latest$', r'gemini-[\d.]+-pro$',
+                r'gemini']),
     'openrouter': ('openai', 'https://openrouter.ai/api/v1',
                    [r'^anthropic/claude-sonnet', r'^openai/gpt-5(\.\d+)?-mini$', r'^google/gemini-[\d.]+-flash$']),
     'groq': ('openai', 'https://api.groq.com/openai/v1', [r'gpt-oss-120b', r'llama-3\.3-70b', r'llama']),
@@ -34,7 +36,8 @@ PROVIDERS = {  # name: (kind, base_url, model preference: first regex that match
 }
 # A key goes to one provider only: the one its format names, or the one the user picks. Keys that do not say whose
 # they are are not tried on several services in turn (each would see it; one even echoes its last characters).
-PREFIXES = [('sk-ant-', 'anthropic'), ('sk-or-', 'openrouter'), ('AIza', 'gemini'), ('gsk_', 'groq'), ('xai-', 'xai'),
+PREFIXES = [('sk-ant-', 'anthropic'), ('sk-or-', 'openrouter'), ('AIza', 'gemini'), ('AQ.', 'gemini'),   # AQ.: newer
+            ('gsk_', 'groq'), ('xai-', 'xai'),                                               # Google AI Studio keys
             ('hf_', 'huggingface'), ('csk-', 'cerebras'), ('fw_', 'fireworks'), ('nvapi-', 'nvidia'),
             ('tgp_', 'together'), ('sk-', 'openai')]   # 'sk-' is also DeepSeek, Moonshot, DashScope...: OpenAI first
 UNKNOWN_FORMAT = 'UNKNOWN_FORMAT'
@@ -54,36 +57,59 @@ Rules:
 
 
 class TranslatorError(Exception):
-    pass
+    def __init__(self, message, status=None, busy=False):
+        super().__init__(message)
+        self.status = status   # the HTTP status, when the provider answered
+        self.busy = busy       # overloaded, rate-limited or no reply in time: another model may answer
 
 
-def _request(url, *, headers, body=None, method=None, form=False):
+def _transient(status):
+    return status in (408, 409, 429) or status >= 500
+
+
+def _provider_message(raw):
+    """The provider's own message, not its whole JSON (Google wraps it in a list)."""
+    try:
+        j = json.loads(raw)
+    except ValueError:
+        j = raw
+    if isinstance(j, list) and j:
+        j = j[0]
+    err = j.get('error', j) if isinstance(j, dict) else j
+    msg = err.get('message', raw) if isinstance(err, dict) else err
+    return ' '.join(str(msg).split())[:160]
+
+
+def _request(url, *, headers, body=None, method=None, form=False, patient=True):
+    """patient=False (another model is waiting): two tries, and a timeout ends them at once."""
+    tries = 4 if patient else 2
     data = None
     if body is not None:
         data = (urllib.parse.urlencode(body, doseq=True) if form else json.dumps(body, ensure_ascii=False)).encode()
         headers = {**headers, 'Content-Type': 'application/x-www-form-urlencoded' if form else 'application/json'}
     req = urllib.request.Request(url, data=data, headers=headers, method=method or ('POST' if data else 'GET'))
-    for attempt in range(4):
+    last = None
+    for attempt in range(tries):
         try:
             with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as r:
                 return json.loads(r.read().decode('utf-8'))
         except urllib.error.HTTPError as e:
-            if e.code in (408, 409, 429) or e.code >= 500:   # transient: back off and retry
-                time.sleep(min(2 ** attempt * 2, 30))
-                continue
-            raw = e.read().decode('utf-8', 'replace')
-            try:   # the provider's own message, not its whole JSON
-                j = json.loads(raw)
-                err = j.get('error', j) if isinstance(j, dict) else j
-                raw = err.get('message', raw) if isinstance(err, dict) else str(err)
-            except ValueError:
-                pass
-            raise TranslatorError(f'HTTP {e.code}: {" ".join(str(raw).split())[:160]}') from None
+            msg = _provider_message(e.read().decode('utf-8', 'replace'))
+            if not _transient(e.code):
+                raise TranslatorError(f'HTTP {e.code}: {msg}', e.code) from None
+            last = TranslatorError(f'HTTP {e.code} (tried {tries} times): {msg}', e.code, busy=True)   # the real reason
         except urllib.error.URLError as e:
-            if attempt == 3:
-                raise TranslatorError(f'network: {e.reason}') from None
-            time.sleep(2 ** attempt * 2)
-    raise TranslatorError('gave up after retries')
+            slow = isinstance(e.reason, TimeoutError)
+            last = TranslatorError(f'timeout: no reply in {HTTP_TIMEOUT}s' if slow else f'network: {e.reason}', busy=slow)
+        except TimeoutError:   # a read timeout: urllib does not wrap it in URLError
+            last = TranslatorError(f'timeout: no reply in {HTTP_TIMEOUT}s', busy=True)
+            if not patient:
+                break
+        except ConnectionError as e:   # dropped mid-reply
+            last = TranslatorError(f'network: {e}')
+        if attempt < tries - 1:
+            time.sleep(min(2 ** attempt * 2, 30))   # transient: back off and retry
+    raise last
 
 
 def _auth(kind, key):
@@ -103,13 +129,25 @@ def list_models(kind, base, key):
     return [(m.get('id') or m.get('name') or '').removeprefix('models/') for m in items if isinstance(m, dict)]
 
 
-def pick_model(models, prefs):
+def _natural(model_id):   # 'gemini-3.10-flash' after 'gemini-3.9-flash'
+    return [int(x) if x.isdigit() else x for x in re.split(r'(\d+)', model_id)]
+
+
+def pick_models(models, prefs, n=4):
+    """Chat models by preference: the newest-looking id of each preference tier first, then the rest of each tier.
+    The first is used; the others stand in when it is overloaded, out of quota or withdrawn."""
     chat = [m for m in models if m and not NOT_CHAT.search(m)]
-    for p in prefs:
-        hits = sorted((m for m in chat if re.search(p, m)), reverse=True)   # newest-looking id first
-        if hits:
-            return hits[0]
-    return chat[0] if chat else None
+    tiers = [sorted((m for m in chat if re.search(p, m)), key=_natural, reverse=True) for p in prefs]
+    out = []
+    for m in [t[0] for t in tiers if t] + [m for t in tiers for m in t[1:]]:
+        if m not in out:
+            out.append(m)
+    return (out or chat)[:n]
+
+
+def pick_model(models, prefs):
+    best = pick_models(models, prefs, 1)
+    return best[0] if best else None
 
 
 def candidates(key):
@@ -125,7 +163,7 @@ def candidates(key):
 
 
 def detect(key, env=os.environ):
-    """→ {'provider', 'kind', 'base', 'model'}; one probe (the model list) of one provider."""
+    """→ {'provider', 'kind', 'base', 'model', 'fallbacks'}; one probe (the model list) of one provider."""
     forced, base, model = env.get('FA_TRANSLATE_PROVIDER', ''), env.get('FA_TRANSLATE_BASE_URL', ''), \
         env.get('FA_TRANSLATE_MODEL', '')
     if forced == 'deepl' and key.endswith(':fx'):
@@ -148,11 +186,11 @@ def detect(key, env=os.environ):
         except TranslatorError as e:
             errors.append(f'{name}: {e}')
             continue
-        chosen = model or pick_model(models, prefs) if kind != 'deepl' else 'deepl'
-        if not chosen:
+        ranked = ['deepl'] if kind == 'deepl' else [model] if model else pick_models(models, prefs)
+        if not ranked:
             errors.append(f'{name}: no chat model available')
             continue
-        return {'provider': name, 'kind': kind, 'base': b, 'model': chosen}
+        return {'provider': name, 'kind': kind, 'base': b, 'model': ranked[0], 'fallbacks': ranked[1:]}
     raise TranslatorError('key not accepted by: ' + '; '.join(errors))
 
 
@@ -202,18 +240,18 @@ def add_usage(total, part):
     return total
 
 
-def _chat_openai(cfg, key, user, usage):
+def _chat_openai(cfg, key, user, usage, patient=True):
     body = {'model': cfg['model'], 'messages': [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': user}],
             'response_format': {'type': 'json_object'}}
     usage['requests'] += 1
     try:
-        data = _request(f"{cfg['base']}/chat/completions", headers=_auth('openai', key), body=body)
+        data = _request(f"{cfg['base']}/chat/completions", headers=_auth('openai', key), body=body, patient=patient)
     except TranslatorError as e:
-        if not str(e).startswith('HTTP 400'):
+        if e.status != 400:
             raise
         body.pop('response_format')   # some servers do not support JSON mode: the prompt asks for JSON anyway
         usage['requests'] += 1
-        data = _request(f"{cfg['base']}/chat/completions", headers=_auth('openai', key), body=body)
+        data = _request(f"{cfg['base']}/chat/completions", headers=_auth('openai', key), body=body, patient=patient)
     u = data.get('usage') or {}
     usage['input_tokens'] += u.get('prompt_tokens', 0)
     usage['output_tokens'] += u.get('completion_tokens', 0)
@@ -221,10 +259,10 @@ def _chat_openai(cfg, key, user, usage):
     return data['choices'][0]['message']['content'] or ''
 
 
-def _chat_anthropic(cfg, key, user, usage):
+def _chat_anthropic(cfg, key, user, usage, patient=True):
     body = {'model': cfg['model'], 'max_tokens': 16000, 'system': SYSTEM, 'messages': [{'role': 'user', 'content': user}]}
     usage['requests'] += 1
-    data = _request(f"{cfg['base']}/messages", headers=_auth('anthropic', key), body=body)
+    data = _request(f"{cfg['base']}/messages", headers=_auth('anthropic', key), body=body, patient=patient)
     u = data.get('usage') or {}
     usage['input_tokens'] += u.get('input_tokens', 0) + u.get('cache_read_input_tokens', 0) + \
         u.get('cache_creation_input_tokens', 0)
@@ -264,6 +302,20 @@ def _deepl(cfg, key, strings, usage):
     return {i: unprotect(t['text'], toks) for i, (_, toks), t in zip(ids, prot, data['translations'])}
 
 
+def _chat(cfg, key, user, usage):
+    """One reply. A model that is overloaded, out of quota, silent or withdrawn (429, 5xx, timeout, 404) hands over to
+    the next of cfg['fallbacks'], for this run's later batches too (cfg is shared). A refused key (401/403) does not."""
+    chat = _chat_anthropic if cfg['kind'] == 'anthropic' else _chat_openai
+    while True:
+        spare = cfg.get('fallbacks') or []
+        try:
+            return chat(cfg, key, user, usage, patient=not spare)
+        except TranslatorError as e:
+            if not spare or not (e.busy or e.status == 404):
+                raise
+            cfg['model'] = spare.pop(0)
+
+
 def translate(cfg, key, strings, glossary=None):
     """strings {id: English} → ({id: Arabic (logical order)}, usage); ids the reply lacks are simply absent."""
     usage = new_usage()
@@ -274,7 +326,7 @@ def translate(cfg, key, strings, glossary=None):
     user = _llm_user(strings, glossary)
     usage['chars_in'] += len(SYSTEM) + len(user)
     usage['glossary_chars'] += len(json.dumps(glossary, ensure_ascii=False)) if glossary else 0
-    reply = _chat_anthropic(cfg, key, user, usage) if cfg['kind'] == 'anthropic' else _chat_openai(cfg, key, user, usage)
+    reply = _chat(cfg, key, user, usage)
     out = parse_json_object(reply)
     out = out.get('t', out) if isinstance(out, dict) else {}
     return {i: v for i, v in out.items() if i in strings and isinstance(v, str)}, usage

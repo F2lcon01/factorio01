@@ -26,7 +26,8 @@ def _fake_urlopen(routes, seen):
 @pytest.mark.parametrize('key,first', [('sk-ant-abc', 'anthropic'), ('sk-or-v1-x', 'openrouter'), ('AIzaXYZ', 'gemini'),
                                        ('gsk_1', 'groq'), ('xai-1', 'xai'), ('sk-proj-1', 'openai'), ('abc:fx', 'deepl-free'),
                                        ('12345678-1234-1234-1234-123456789abc', 'deepl'), ('hf_x', 'huggingface'),
-                                       ('csk-x', 'cerebras'), ('fw_x', 'fireworks'), ('nvapi-x', 'nvidia')])
+                                       ('csk-x', 'cerebras'), ('fw_x', 'fireworks'), ('nvapi-x', 'nvidia'),
+                                       ('AQ.Ab8RN6x', 'gemini')])   # the newer Google AI Studio key format
 def test_provider_candidates_from_the_key(key, first):
     assert translator.candidates(key)[0] == first
 
@@ -47,7 +48,8 @@ def test_a_chosen_provider_is_probed_and_a_chat_model_picked(monkeypatch):
     routes = {('GET', 'api.deepseek.com/v1/models'): {'data': [{'id': 'deepseek-embed'}, {'id': 'deepseek-chat'}]}}
     monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen(routes, seen))
     cfg = translator.detect('sk-unknown', env={'FA_TRANSLATE_PROVIDER': 'deepseek'})
-    assert cfg == {'provider': 'deepseek', 'kind': 'openai', 'base': 'https://api.deepseek.com/v1', 'model': 'deepseek-chat'}
+    assert cfg == {'provider': 'deepseek', 'kind': 'openai', 'base': 'https://api.deepseek.com/v1', 'model': 'deepseek-chat',
+                   'fallbacks': []}
     assert len(seen) == 1 and seen[0].get_header('Authorization') == 'Bearer sk-unknown'
 
 
@@ -141,6 +143,79 @@ def test_transient_errors_are_retried(monkeypatch):
         return _Resp(b'{"data": []}')
     monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
     assert translator.list_models('openai', 'https://x/v1', 'k') == [] and calls['n'] == 3
+
+
+GEMINI_LISTED = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-3-flash-preview', 'gemini-3.1-flash-lite',
+                 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-3.8-flash', 'gemini-flash-latest',
+                 'gemini-flash-lite-latest', 'gemini-embedding-001', 'gemini-3.5-pro']   # from a real listing, shortened
+
+
+def test_gemini_ranks_newest_flash_then_lite_fallbacks():
+    ranked = translator.pick_models(GEMINI_LISTED, translator.PROVIDERS['gemini'][2])
+    assert ranked == ['gemini-3.8-flash', 'gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3.5-pro']
+    assert translator.pick_models(['m-3.9', 'm-3.10'], [r'^m-'], 1) == ['m-3.10']   # numbers compare as numbers
+
+
+def _chat_reply(text):
+    return _Resp(json.dumps({'choices': [{'message': {'content': text}}], 'usage': {}}).encode())
+
+
+def test_an_overloaded_model_hands_over_to_the_next_one(monkeypatch):
+    models_sent = []
+    monkeypatch.setattr(translator.time, 'sleep', lambda s: None)
+
+    def urlopen(req, timeout=None):
+        model = json.loads(req.data)['model']
+        models_sent.append(model)
+        if model == 'busy':
+            body = b'[{"error": {"code": 503, "message": "This model is currently experiencing high demand.", "status": "UNAVAILABLE"}}]'
+            raise urllib.error.HTTPError(req.full_url, 503, 'unavailable', {}, io.BytesIO(body))
+        return _chat_reply('{"t": {"a": "لوح حديدي"}}')
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
+    cfg = {'kind': 'openai', 'base': 'https://x/v1', 'model': 'busy', 'fallbacks': ['lite']}
+    out, _ = translator.translate(cfg, 'k', {'a': 'Iron plate'})
+    assert out == {'a': 'لوح حديدي'} and models_sent == ['busy', 'busy', 'lite']   # 2 tries, then the fallback
+    translator.translate(cfg, 'k', {'a': 'Iron plate'})
+    assert cfg['model'] == 'lite' and models_sent[-1] == 'lite'                       # later batches keep it
+
+
+def test_a_silent_model_hands_over_at_once_and_a_lone_one_reports_the_timeout(monkeypatch):
+    models_sent = []
+    monkeypatch.setattr(translator.time, 'sleep', lambda s: None)
+
+    def urlopen(req, timeout=None):
+        models_sent.append(json.loads(req.data)['model'])
+        if models_sent[-1] == 'slow':
+            raise TimeoutError('The read operation timed out')   # what urllib lets through on a read timeout
+        return _chat_reply('{"t": {"a": "مضخة"}}')
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
+    cfg = {'kind': 'openai', 'base': 'https://x/v1', 'model': 'slow', 'fallbacks': ['lite']}
+    assert translator.translate(cfg, 'k', {'a': 'Pump'})[0] == {'a': 'مضخة'} and models_sent == ['slow', 'lite']
+    with pytest.raises(translator.TranslatorError, match=r'^timeout: no reply in \d+s$'):   # no crash, no fallback left
+        translator.translate({'kind': 'openai', 'base': 'https://x/v1', 'model': 'slow'}, 'k', {'a': 'Pump'})
+    assert models_sent[2:] == ['slow'] * 4
+
+
+def test_the_real_reason_survives_the_retries(monkeypatch):
+    monkeypatch.setattr(translator.time, 'sleep', lambda s: None)
+
+    def urlopen(req, timeout=None):
+        body = b'[{"error": {"message": "This model is currently experiencing high demand.", "status": "UNAVAILABLE"}}]'
+        raise urllib.error.HTTPError(req.full_url, 503, 'unavailable', {}, io.BytesIO(body))
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
+    with pytest.raises(translator.TranslatorError) as e:
+        translator.translate({'kind': 'openai', 'base': 'https://x/v1', 'model': 'm'}, 'k', {'a': 'x'})
+    assert e.value.status == 503
+    assert str(e.value) == 'HTTP 503 (tried 4 times): This model is currently experiencing high demand.'
+
+
+def test_a_refused_key_does_not_walk_the_fallbacks(monkeypatch):
+    seen = []
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen({}, seen))   # 401 everywhere
+    cfg = {'kind': 'openai', 'base': 'https://x/v1', 'model': 'm', 'fallbacks': ['n', 'o']}
+    with pytest.raises(translator.TranslatorError, match='^HTTP 401'):
+        translator.translate(cfg, 'k', {'a': 'x'})
+    assert len(seen) == 1 and cfg['model'] == 'm' and cfg['fallbacks'] == ['n', 'o']
 
 
 def test_parse_json_object_tolerates_prose_and_braces_in_strings():

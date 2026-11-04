@@ -270,19 +270,27 @@ $timer.Add_Tick({
 # ---------- actions ----------
 function Get-KeyProblem([string[]]$Lines) {
     # translator.py's error line -> a sentence a player can act on
-    $line = ($Lines | Where-Object { $_ -match 'translator:|TranslatorError|HTTP|network|UNKNOWN_FORMAT' } | Select-Object -Last 1)
+    $line = ($Lines | Where-Object { $_ -match 'translator:|TranslatorError|HTTP|network|timeout|UNKNOWN_FORMAT' } | Select-Object -Last 1)
     if (-not $line) { $line = ($Lines | Select-Object -Last 1) }
     if ($line -match 'UNKNOWN_FORMAT') {
         return 'شكل المفتاح لا يدل على مزوّده، فلم يُرسل إلى أي جهة. اختر المزوّد من القائمة ثم اضغط «حفظ وتحقق» مرة أخرى.'
     }
-    if ($line -match 'accepted by: ([\w-]+): HTTP (\d+):?\s*(.*)$') {
-        $who, $code, $msg = $Matches[1], $Matches[2], $Matches[3]
-        $hint = if ($code -in '401', '403') { 'المفتاح غير صالح لهذا المزوّد: تأكد منه، أو اختر المزوّد الصحيح من القائمة.' }
-                elseif ($code -eq '404') { 'العنوان غير موجود: تأكد من رابط الخادم.' } else { 'جرّب مرة أخرى لاحقاً.' }
-        return "رفض $who المفتاح (HTTP $code). $hint`n`nرسالة المزوّد: $msg"
+    if ($line -match 'HTTP (\d{3})[^:]*:\s*(.*)$') {
+        $code, $msg = $Matches[1], $Matches[2]
+        $who = 'المزوّد'
+        if ($line -match 'accepted by: ([\w-]+):') { $who = $Matches[1] }
+        $hint = switch -Regex ($code) {
+            '^40[13]$' { 'المفتاح غير صالح لهذا المزوّد: تأكد منه، أو اختر المزوّد الصحيح من القائمة.'; break }
+            '^404$'    { 'النموذج أو العنوان غير موجود: تأكد من رابط الخادم.'; break }
+            '^429$'    { 'تجاوزت حدّ الطلبات المسموح (الحد المجاني غالباً). انتظر دقيقة ثم أعد المحاولة.'; break }
+            '^5\d\d$'  { 'خوادم المزوّد مزدحمة الآن، والمفتاح ليس السبب. أعد المحاولة بعد دقائق.'; break }
+            default    { 'جرّب مرة أخرى لاحقاً.' }
+        }
+        return "ردّ $who برمز الخطأ HTTP $code. $hint`n`nرسالة المزوّد: $msg"
     }
+    if ($line -match 'timeout') { return 'لم يردّ المزوّد في الوقت المحدد (ضغط عنده غالباً، والمفتاح ليس السبب). أعد المحاولة بعد دقائق.' }
     if ($line -match 'network') { return 'تعذّر الاتصال بالمزوّد. تحقق من الإنترنت، أو من رابط الخادم المحلي إن اخترته.' }
-    "تعذّر التحقق من المفتاح:`n$line"
+    "التفاصيل:`n$line"
 }
 
 $btnKey.Add_Click({
@@ -337,7 +345,9 @@ $btnTranslate.Add_Click({
         $r = $out[-1] | ConvertFrom-Json
         try { $msg = Install-FAPack $r.pack_path } catch { Show-Message ('تعذّر التثبيت: ' + $_.Exception.Message); return }
         Update-Mods; Update-Summary
-        Show-Message ("تم. $msg`nبالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests).")
+        $note = ''   # batches that failed leave their strings English: say why instead of a silent "done"
+        if ($r.error) { $note = "`n`nتعذّرت ترجمة بعض النصوص فبقيت بالإنجليزية:`n" + (Get-KeyProblem @([string]$r.error)) }
+        Show-Message ("تم. $msg`nبالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests)." + $note)
     } ([string]$saved.provider) ([string]$saved.base_url)
     $key = $null
 })

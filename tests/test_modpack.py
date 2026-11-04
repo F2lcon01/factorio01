@@ -125,6 +125,14 @@ def test_a_mod_kept_original_sends_nothing_and_comes_back_from_the_memory(tmp_pa
     assert arabic == {'a/x': 'نص ألفا', 'b/y': 'نص بيتا'} and len(calls) == 1          # from the memory, no request
 
 
+def test_a_failed_batch_reports_why_its_strings_stay_english(tmp_path):
+    def busy(batch, terms):
+        raise translator.TranslatorError('HTTP 503 (tried 4 times): high demand', 503)
+    arabic, _, rows = _resolve([_m('a', {'a/x': 'Iron plate'})], tmp_path, translate=busy)
+    assert arabic == {} and rows['source']['a/x'] == 'english'
+    assert rows['errors'] == ['HTTP 503 (tried 4 times): high demand'] * 2   # first pass and its one retry
+
+
 def test_a_null_override_keeps_one_string_original(tmp_path):
     calls = []
     arabic, _, rows = _resolve([_m('a', {'a/x': 'Keep English', 'a/y': 'Translate me'})], tmp_path,
