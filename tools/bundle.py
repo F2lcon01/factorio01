@@ -47,3 +47,47 @@ def tool_zip(out: Path = TOOL_ZIP) -> Path:
 def executables(zip_path: Path) -> list:
     with zipfile.ZipFile(zip_path) as z:
         return [n for n in z.namelist() if n.lower().endswith(EXECUTABLE)]
+
+
+# ---------- the mods translator for players: a GitHub release asset, never tracked (about 13 MB) ----------
+TRANSLATOR_ZIP = ROOT / 'dist' / 'arabic-mods-translator.zip'
+TRANSLATOR_FILES = {**TOOL_FILES,
+                    'Translate-Mods.cmd': ROOT / 'Translate-Mods.cmd',
+                    'Translate-Mods.ps1': ROOT / 'Translate-Mods.ps1'}
+ENGINE = ['__init__', 'modpack', 'translator', 'memory', 'build', 'metrics', 'cfg', 'corrections', 'plurals', 'lint',
+          'paths', 'textfx']   # tools.modpack and everything it imports
+PTH = 'python313.zip\n.\n..\\app\nLib\\site-packages\n'   # embedded Python ignores PYTHONPATH: its ._pth is the path
+
+
+def translator_zip(out: Path = TRANSLATOR_ZIP) -> Path:
+    """Launcher + engine (app/tools) + embedded Python with arabic_reshaper and fontTools: no installation needed."""
+    from tools import vendor
+    files = vendor.ensure()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
+        for name, src in TRANSLATOR_FILES.items():
+            z.writestr(zipfile.ZipInfo(name, FIXED_TIME), src.read_bytes(), zipfile.ZIP_DEFLATED)
+        for m in ENGINE:
+            z.writestr(zipfile.ZipInfo(f'app/tools/{m}.py', FIXED_TIME), (ROOT / 'tools' / f'{m}.py').read_bytes(),
+                       zipfile.ZIP_DEFLATED)
+        z.writestr(zipfile.ZipInfo('app/glossary.json', FIXED_TIME), (ROOT / 'glossary.json').read_bytes(), zipfile.ZIP_DEFLATED)
+        with zipfile.ZipFile(files['python-3.13.14-embed-amd64.zip']) as py:
+            for info in py.infolist():
+                data = PTH.encode() if info.filename == 'python313._pth' else py.read(info)
+                z.writestr(zipfile.ZipInfo(f'python/{info.filename}', FIXED_TIME), data, zipfile.ZIP_DEFLATED)
+        for wheel in ('arabic_reshaper-3.0.1-py3-none-any.whl', 'fonttools-4.68.0-py3-none-any.whl'):
+            with zipfile.ZipFile(files[wheel]) as w:   # a pure-Python wheel is installed by unpacking it
+                for info in w.infolist():
+                    if not info.is_dir():
+                        z.writestr(zipfile.ZipInfo(f'python/Lib/site-packages/{info.filename}', FIXED_TIME),
+                                   w.read(info), zipfile.ZIP_DEFLATED)
+    return out
+
+
+if __name__ == '__main__':
+    import sys
+    if sys.argv[1:] == ['translator']:
+        p = translator_zip()
+        print(p, p.stat().st_size // 1024, 'KB')
+    else:
+        sys.exit('usage: python -E -m tools.bundle translator')
