@@ -15,6 +15,8 @@ python -E -m tools.modpack summary             → the last run (strings, reques
 python -E -m tools.modpack original <mod>      → keep that mod in its original language (arabic <mod> undoes it)
 FA_PROGRESS_FILE: JSON lines {"stage", "done", "total"} for the window's progress bar."""
 import hashlib, heapq, json, os, re, shutil, sys, time, unicodedata, zipfile
+from collections import deque
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
 from tools import memory, translator
 from tools.build import game_version, visual_value
@@ -34,7 +36,12 @@ BIDI_RE = re.compile('[‎‏‪-‮⁦-⁩]')
 WORD_RE = re.compile('[ء-ي]{2,}')
 LUA_LITERAL_RE = re.compile(r'\b(caption|tooltip)\s*=\s*"([^"]*[A-Za-z]{3,}[^"]*)"')
 LUA_KEY_RE = re.compile(r'\{\s*"([a-z0-9_-]+)\.([A-Za-z0-9_.-]+)"')
-BATCH_STRINGS, BATCH_CHARS = 40, 4000
+# Measured on 48 real mods: a request costs about 2.5 s however small, plus about 0.1 s per string, so 80 strings per
+# request send half as many requests as 40 for the same text (35 → 18). A batch the model cannot answer is split.
+BATCH_STRINGS, BATCH_CHARS, SPLIT_MIN = 80, 8000, 10
+WORKERS = 3   # batches in flight at once; fewer while the provider says it is busy, one for a local server
+RATE_COOLDOWN = 20   # seconds to wait after a requests-per-minute limit (429) before sending again, longer each time
+NUM_RE = re.compile(r'(?<![\w.])(?:mk|tier |level |t)?\d+(?![\w.])', re.I)   # 'Battery MK2', 'Pumpjack 3'
 STATES_AR = {'translated': 'مترجم', 'new': 'جديد', 'changed': 'تغيّر', 'pending': 'ينتظر الترجمة',
              'original': 'بلغته الأصلية', 'empty': 'لا نصوص فيه',
              # the game will not load these: nothing is sent for them
@@ -279,10 +286,35 @@ def batches(items):
         yield batch
 
 
+def name_template(text):
+    """A short name with exactly one number ('Vehicle battery MK3') → (template, number), else None. Its siblings
+    ('… MK1' to '… MK5') are translated once. Only keys of a name section use it (resolve): in an Arabic sentence the
+    words around a number change with it ('3 ألواح', '11 لوحاً'); in a name the number is only a label."""
+    if len(text.split()) > 5 or '__' in text or '[' in text:
+        return None
+    nums = NUM_RE.findall(text)
+    if len(nums) != 1:
+        return None
+    return NUM_RE.sub('#', memory.norm(text).lower()), nums[0]
+
+
+def from_template(rep_en, rep_ar, sib_en):
+    """The sibling's Arabic from its representative's answer: the representative's number, found exactly once in the
+    Arabic as the model keeps it (Latin MK2, Western digits), swapped for the sibling's. None when it is not there."""
+    rep, sib = name_template(rep_en), name_template(sib_en)
+    if not (rep and sib and rep[0] == sib[0]):
+        return None
+    hits = list(re.finditer(rf'(?<![\w.]){re.escape(rep[1])}(?![\w.])', rep_ar, re.I))
+    if len(hits) != 1:
+        return None
+    return rep_ar[:hits[0].start()] + sib[1] + rep_ar[hits[0].end():]
+
+
 def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', log=print, keep=frozenset(),
-            should_stop=None):
+            should_stop=None, workers=1):
     """→ (arabic {key: logical}, owner {key: mod}, rows). memory_ is a tools.memory.TranslationMemory; translate is
-    (batch {key: English}, terms) → ({key: Arabic}, usage). Machine results enter the shared memory.
+    (batch {key: English}, terms, lang) → ({key: Arabic}, usage). Machine results enter the shared memory.
+    workers: batches in flight at once (results are applied here, one at a time, in the calling thread).
     keep: mods kept in their original language; an override of null keeps one string original. Either way nothing is
     sent or written for them, and their stored translations stay in the memory for when they are switched back."""
     en, owner, mod_ar, conflicts, lang = merge(mods)
@@ -311,60 +343,129 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
             pending.append(k)
     usage = translator.new_usage()
     stopped = paused = False   # paused: the player asked (should_stop), checked between batches, never mid-batch
+    templated = []
     if pending and translate:
         same = {}   # the same English in several keys or mods is sent once, then applied to all of them
         for k in sorted(pending, key=lambda k: (owner[k], k)):
             same.setdefault(memory.norm(en[k]).lower(), []).append(k)
         todo = [keys[0] for keys in same.values()]
+        siblings = {}   # numbered names: one representative is sent, its siblings come from its answer
+        groups = {}
+        for k in todo:   # names only, by their locale section: a short sentence can look like a name
+            t = name_template(en[k]) if k.split('/', 1)[0] in memory.NAME_SECTIONS else None
+            if t:
+                groups.setdefault((lang.get(k, 'en'), t[0]), []).append(k)
+        for keys in groups.values():
+            if len(keys) > 1:
+                siblings[keys[0]] = keys[1:]
+        held = {k for ks in siblings.values() for k in ks}
         total, done, busy_in_a_row = len(todo), 0, 0
+        todo = [k for k in todo if k not in held]
         progress('translate', 0, total)
-        for _ in (1, 2):   # the second pass retries once what failed validation
-            failed = []
-            # one source language per batch, English first: the translator is told the language it reads
-            sources = sorted({lang.get(k, 'en') for k in todo}, key=lambda l: (l != 'en', l))
-            for src, batch in ((s, b) for s in sources for b in batches((k, en[k]) for k in todo
-                                                                         if lang.get(k, 'en') == s)):
-                if not stopped and should_stop and should_stop():
-                    stopped = paused = True
-                    log('paused by the player: the rest is translated on the next run')
-                if stopped:
-                    failed += list(batch)
-                    continue
-                batch_terms = memory.terms_for(batch.values(), terms) if src == 'en' else {}   # English glossary
-                try:
-                    got, u = translate(batch, batch_terms, src)
-                    translator.add_usage(usage, u)
-                except translator.TranslatorError as e:
-                    log(f'translation batch failed: {e}')
-                    errors.append(str(e))   # shown to the player: the strings stay English for this reason
-                    failed += list(batch)
-                    busy_in_a_row = busy_in_a_row + 1 if getattr(e, 'busy', False) else 0
-                    # every fallback model is busy or out of quota: the rest of this run would fail the same way.
-                    # Stop; what was translated is in the memory, and the next run continues from here.
-                    stopped = busy_in_a_row >= 2
-                    continue
-                busy_in_a_row = 0
-                for k in batch:
-                    ar = clean(got.get(k, ''))
-                    if ar and ar != en[k].strip() and not check_value(en[k], ar):   # a copy of the source is no answer
-                        flags += [(k, f) for f in quality_flags(en[k], ar, batch_terms)]
-                        memory_.put(en[k], ar, 'machine', model, ctx=f'{owner[k]}|{k}')
-                        for twin in same[memory.norm(en[k]).lower()]:
-                            arabic[twin], source[twin] = ar, 'machine'
-                        done += 1
-                    else:
-                        failed.append(k)
-                memory_.save()   # each answered batch is kept, even if the run is closed or stopped later
-                progress('translate', min(done, total), total)
-            todo = failed
-            if not todo or stopped:
-                break
+
+        def accept(k, ar, src_tag, terms_):
+            nonlocal done
+            flags.extend((k, f) for f in quality_flags(en[k], ar, terms_))
+            memory_.put(en[k], ar, src_tag, model, ctx=f'{owner[k]}|{k}')
+            for twin in same[memory.norm(en[k]).lower()]:
+                arabic[twin], source[twin] = ar, 'machine'
+            done += 1
+
+        limit, ok_in_a_row, limited, cool = max(1, workers), 0, 0, 0.0
+        ceiling = limit   # after a per-minute limit with n in flight, never more than n - 1 again this run
+
+        def rest_until(t):   # a cool-down that a pause still ends
+            while time.time() < t and not (should_stop and should_stop()):
+                time.sleep(min(0.5, max(0.0, t - time.time())))
+
+        with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+            for _ in (1, 2):   # the second pass retries once what failed validation
+                failed = []
+                # one source language per batch, English first: the translator is told the language it reads
+                sources = sorted({lang.get(k, 'en') for k in todo}, key=lambda l: (l != 'en', l))
+                queue = deque((s, b) for s in sources for b in batches((k, en[k]) for k in todo
+                                                                         if lang.get(k, 'en') == s))
+                running = {}
+                while queue or running:
+                    while queue and len(running) < limit and not stopped and time.time() >= cool:
+                        if should_stop and should_stop():
+                            stopped = paused = True
+                            log('paused by the player: the rest is translated on the next run')
+                            break
+                        src, batch = queue.popleft()
+                        bt = memory.terms_for(batch.values(), terms) if src == 'en' else {}   # English glossary
+                        running[pool.submit(translate, batch, bt, src)] = (src, batch, bt, limit)
+                    if not running:
+                        if queue and not stopped and time.time() < cool:
+                            rest_until(cool)
+                            continue
+                        break
+                    finished, _ = wait(running, return_when=FIRST_COMPLETED)
+                    for f in finished:
+                        src, batch, bt, sent_at = running.pop(f)
+                        try:
+                            got, u = f.result()
+                            translator.add_usage(usage, u)
+                        except translator.TranslatorError as e:
+                            log(f'translation batch failed: {e}')
+                            errors.append(str(e))   # shown to the player: the strings stay English for this reason
+                            if getattr(e, 'busy', False) and e.status == 429:
+                                # requests per minute (free tiers): measured, 4 at once on Gemini's free tier got 17
+                                # of these. One at a time, wait, send the same batch again. Three in a row while
+                                # already one at a time, after waiting: the day's quota is used up, so stop.
+                                ok_in_a_row = 0
+                                if sent_at > 1:
+                                    ceiling = min(ceiling, sent_at - 1)
+                                if sent_at > 1 or limited < 2:
+                                    limited += sent_at == 1
+                                    limit, cool = 1, time.time() + RATE_COOLDOWN * max(1, limited)
+                                    queue.appendleft((src, batch))
+                                else:
+                                    stopped = True
+                                    failed += list(batch)
+                            elif getattr(e, 'busy', False):
+                                # every model in the pool was busy (503, timeout) for this batch: send fewer at once.
+                                # Twice in a row means the provider cannot answer now: stop; what is done is kept.
+                                busy_in_a_row, ok_in_a_row, limit = busy_in_a_row + 1, 0, max(1, limit - 1)
+                                stopped = stopped or busy_in_a_row >= 2
+                                failed += list(batch)
+                            elif len(batch) >= 2 * SPLIT_MIN and e.status not in (401, 403, 404):
+                                items = list(batch.items())   # an unreadable or cut reply: two smaller tries
+                                queue.appendleft((src, dict(items[len(items) // 2:])))
+                                queue.appendleft((src, dict(items[:len(items) // 2])))
+                            else:
+                                failed += list(batch)
+                            continue
+                        busy_in_a_row, ok_in_a_row, limited = 0, ok_in_a_row + 1, 0
+                        if ok_in_a_row >= 4 and limit < ceiling:
+                            limit, ok_in_a_row = limit + 1, 0
+                        for k in batch:
+                            ar = clean(got.get(k, ''))
+                            if ar and ar != en[k].strip() and not check_value(en[k], ar):   # a copy is no answer
+                                accept(k, ar, 'machine', bt)
+                                for sib in siblings.pop(k, []):
+                                    sar = from_template(en[k], ar, en[sib])
+                                    if sar and not check_value(en[sib], clean(sar)):
+                                        accept(sib, clean(sar), 'template', bt)
+                                        templated.append((sib, k))
+                                    else:
+                                        failed.append(sib)   # translated on its own in the second pass
+                            else:
+                                failed.append(k)
+                                failed += siblings.pop(k, [])
+                        memory_.save()   # each answered batch is kept, even if the run is closed or stopped later
+                        progress('translate', min(done, total), total)
+                failed += [k for _, b in queue for k in b]   # not sent: stopped or paused
+                failed += [k for rep in [k for k in failed if k in siblings] for k in siblings.pop(rep)]
+                todo = failed
+                if not todo or stopped:
+                    break
         pending = [twin for k in todo for twin in same[memory.norm(en[k]).lower()]]
     for k in pending:
         source[k] = 'english'
     return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage,
                            'review': review, 'flags': flags, 'errors': errors, 'stopped': stopped, 'paused': paused,
-                           'lang': lang}
+                           'lang': lang, 'templated': templated}
 
 
 def quality_flags(en, ar, terms):
@@ -511,6 +612,9 @@ def report(mods, rows, findings, provider, states, last, skipped=()):
     left = sorted(k for k, s in rows['source'].items() if s == 'english')
     if left:
         lines += ['', '## ما زال بالإنجليزية', ''] + [f'- `{rows["owner"][k]}` `{k}`: {rows["en"][k][:80]}' for k in left]
+    if rows.get('templated'):
+        lines += ['', '## أسماء مرقّمة أُخذت من قالب (تُرجم أحدها، وبُدّل الرقم في البقية)', '']
+        lines += [f'- `{rows["owner"][k]}` {rows["en"][k]} ← من «{rows["en"][rep]}»' for k, rep in rows['templated'][:200]]
     if rows.get('review'):
         lines += ['', '## مأخوذ من الذاكرة لسياق آخر (للمراجعة: قد يختلف التذكير والعدد)', '']
         lines += [f'- `{rows["owner"][k]}` `{k}` ← من `{ctx}`' for k, ctx in rows['review'][:200]]
@@ -567,6 +671,15 @@ def end_run():
     run_mark().unlink(missing_ok=True)   # our own marker: a clean end (success, or an error already reported)
 
 
+def _workers(translate):
+    """Batches in flight: FA_TRANSLATE_WORKERS, else one for a local server (one GPU answers one at a time), else
+    WORKERS. resolve() lowers it on its own while the provider is busy."""
+    if os.environ.get('FA_TRANSLATE_WORKERS', '').isdigit():
+        return max(1, int(os.environ['FA_TRANSLATE_WORKERS']))
+    cfg = getattr(translate, 'cfg', None) or {}
+    return 1 if cfg.get('provider') == 'custom' else WORKERS
+
+
 def _stop_requested():
     """The window's «إيقاف مؤقت»: it creates FA_STOP_FILE; the build stops after the batch in flight, then packs."""
     p = os.environ.get('FA_STOP_FILE')
@@ -583,7 +696,7 @@ def build(offline=False, log=print):
     keep = excluded()
     arabic, owner, rows = resolve(mods, base=base, memory_=mem, overrides=_load_json(overrides_path(), {}),
                                   terms=terms, translate=translate, model=provider, log=log, keep=keep,
-                                  should_stop=_stop_requested)
+                                  should_stop=_stop_requested, workers=_workers(translate))
     mem.save()
     if translate:
         provider = f"{translate.cfg['provider']} / {translate.cfg['model']}"

@@ -55,6 +55,8 @@ def _env(tmp_path, mods, provider, monkeypatch):
         monkeypatch.setenv(k, str(v))
     for k in ('FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_MODEL', 'FA_PROGRESS_FILE'):
         monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv('FA_TRANSLATE_WORKERS', '1')          # these checks count batches in order
+    monkeypatch.setattr(modpack, 'BATCH_STRINGS', 40)
     monkeypatch.setattr(modpack, 'STATE', tmp_path / 'state')
     monkeypatch.setattr(modpack, 'DIST', tmp_path / 'dist')
     monkeypatch.setattr(modpack, 'REPORTS', tmp_path / 'reports')

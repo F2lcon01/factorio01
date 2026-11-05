@@ -12,5 +12,7 @@
     - Mods translator: Pause button (stops after the batch in flight, installs what is done) and Continue.
     - Mods translator: a run cut off by a sudden close, a crash or a power loss continues on its own when the
       tool is opened again; only the rest is sent.
+    - Mods translator: about 3 times faster on 48 real mods (365 s to 112 s). Batches run in parallel and adapt
+      to the provider's limits, a busy model no longer ends the run, and numbered names are translated once.
   Changes:
     - README-AR.txt: the new steps of both tools.

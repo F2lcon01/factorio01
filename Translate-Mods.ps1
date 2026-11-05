@@ -20,7 +20,9 @@ Set-FAUserAppData $UserAppData
 $pack = 'arabic-mods-local'
 $stateDir = Get-FAStateDir
 $reportPath = if (Test-EmbeddedPython) { Join-Path $PSScriptRoot 'app\reports\modpack.md' } else { Join-Path (Get-FARoot) 'reports\modpack.md' }
-$work = Join-Path $env:TEMP 'fa-translator'
+# one folder per window: two open windows (or a test) must not share the engine's output files or stop.flag,
+# or «إيقاف مؤقت» in one would pause the other
+$work = Join-Path $env:TEMP ('fa-translator\' + $PID)
 New-Item -ItemType Directory -Force $work | Out-Null
 
 Add-Type -AssemblyName System.Windows.Forms, System.Drawing
@@ -552,6 +554,9 @@ $btnUndo.Add_Click({
     try { Show-Message (Uninstall-FAPack $pack) } catch { Show-Message ('تعذّر: ' + $_.Exception.Message) }
 })
 
+$form.Add_FormClosed({   # this window's own temporary folder (engine output, progress, stop.flag)
+    try { if (-not ($script:job -and -not $script:job.Process.HasExited)) { [IO.Directory]::Delete($work, $true) } } catch { }
+})
 $form.Add_FormClosing({
     param($sender, $e)
     if (-not ($script:job -and -not $script:job.Process.HasExited)) { return }

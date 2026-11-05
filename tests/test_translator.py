@@ -238,6 +238,29 @@ def test_the_real_reason_survives_the_retries(monkeypatch):
     assert str(e.value) == 'HTTP 503 (tried 4 times): This model is currently experiencing high demand.'
 
 
+def test_busy_models_rotate_and_stay_while_a_withdrawn_one_leaves(monkeypatch):
+    # measured on Gemini: two busy flash-lite models, then gemini-2.5-pro (404 for new users) ended the run
+    sent, state = [], {'busy': True}
+    monkeypatch.setattr(translator.time, 'sleep', lambda s: None)
+
+    def urlopen(req, timeout=None):
+        model = json.loads(req.data)['model']
+        sent.append(model)
+        if model == 'dead':
+            raise urllib.error.HTTPError(req.full_url, 404, 'gone', {}, io.BytesIO(b'{"error": {"message": "no longer available"}}'))
+        if state['busy']:
+            raise urllib.error.HTTPError(req.full_url, 503, 'busy', {}, io.BytesIO(b'{"error": {"message": "high demand"}}'))
+        return _chat_reply('{"t": {"a": "نص"}}')
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
+    cfg = {'kind': 'openai', 'base': 'https://x/v1', 'model': 'a', 'fallbacks': ['b', 'dead']}
+    with pytest.raises(translator.TranslatorError) as e:
+        translator.translate(cfg, 'k', {'a': 'x'})
+    assert e.value.busy and sent == ['a', 'a', 'b', 'b', 'dead']       # each live model tried once for this batch
+    assert [cfg['model']] + cfg['fallbacks'] == ['a', 'b']               # busy ones kept, the withdrawn one gone
+    state['busy'] = False
+    assert translator.translate(cfg, 'k', {'a': 'x'})[0] == {'a': 'نص'} and sent[-1] == 'a'   # the run goes on
+
+
 def test_a_refused_key_does_not_walk_the_fallbacks(monkeypatch):
     seen = []
     monkeypatch.setattr(translator.urllib.request, 'urlopen', _fake_urlopen({}, seen))   # 401 everywhere

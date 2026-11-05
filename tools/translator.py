@@ -9,8 +9,10 @@ overloaded, out of quota or withdrawn hands over to the next preferred one (cfg[
   anthropic  POST {base}/messages
   deepl      POST {base}/translate (rich-text tokens protected as XML tags)
 Standard library only.  python -E -m tools.translator probe   → prints the detected provider and model"""
-import json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
+import json, os, re, sys, threading, time, urllib.error, urllib.parse, urllib.request
 from tools.lint import TOKEN_RE
+
+_POOL = threading.Lock()   # cfg's model pool is shared by the parallel batches of one run
 
 PROVIDERS = {  # name: (kind, base_url, model preference: first regex that matches an available model wins)
     'anthropic': ('anthropic', 'https://api.anthropic.com/v1',
@@ -257,8 +259,9 @@ def add_usage(total, part):
     return total
 
 
-def _chat_openai(cfg, key, user, usage, patient=True):
-    body = {'model': cfg['model'], 'messages': [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': user}],
+def _chat_openai(cfg, key, user, usage, patient=True, model=None):
+    body = {'model': model or cfg['model'], 'messages': [{'role': 'system', 'content': SYSTEM},
+                                                          {'role': 'user', 'content': user}],
             'response_format': {'type': 'json_object'}}
     usage['requests'] += 1
     try:
@@ -276,8 +279,9 @@ def _chat_openai(cfg, key, user, usage, patient=True):
     return data['choices'][0]['message']['content'] or ''
 
 
-def _chat_anthropic(cfg, key, user, usage, patient=True):
-    body = {'model': cfg['model'], 'max_tokens': 16000, 'system': SYSTEM, 'messages': [{'role': 'user', 'content': user}]}
+def _chat_anthropic(cfg, key, user, usage, patient=True, model=None):
+    body = {'model': model or cfg['model'], 'max_tokens': 16000, 'system': SYSTEM,
+            'messages': [{'role': 'user', 'content': user}]}
     usage['requests'] += 1
     data = _request(f"{cfg['base']}/messages", headers=_auth('anthropic', key), body=body, patient=patient)
     u = data.get('usage') or {}
@@ -321,17 +325,39 @@ def _deepl(cfg, key, strings, usage, source_lang='en'):
 
 
 def _chat(cfg, key, user, usage):
-    """One reply. A model that is overloaded, out of quota, silent or withdrawn (429, 5xx, timeout, 404) hands over to
-    the next of cfg['fallbacks'], for this run's later batches too (cfg is shared). A refused key (401/403) does not."""
+    """One reply from the run's model pool, cfg['model'] then cfg['fallbacks'] (shared by the run's batches):
+    - busy (429, 5xx, timeout): the next live model answers this batch, and the busy one goes to the back of the pool,
+      still in it: being busy passes. Dropping each busy model for good used to walk the run off a cliff onto a model
+      that no longer exists (measured: two 503s per model, then gemini-2.5-pro answered 404 and 78 strings stayed
+      English).
+    - 404 (withdrawn): that model leaves the pool for good.
+    - anything else (401/403 refused key, 400): raised at once.
+    A batch tries each live model once; then its last busy error is raised (the caller may stop the run)."""
     chat = _chat_anthropic if cfg['kind'] == 'anthropic' else _chat_openai
+    tried, busy = set(), None
     while True:
-        spare = cfg.get('fallbacks') or []
+        with _POOL:
+            pool = [cfg['model']] + list(cfg.get('fallbacks') or [])
+        live = [m for m in pool if m not in tried]
+        if not live:
+            raise busy
+        model = live[0]
         try:
-            return chat(cfg, key, user, usage, patient=not spare)
+            return chat(cfg, key, user, usage, patient=len(pool) == 1, model=model)
         except TranslatorError as e:
-            if not spare or not (e.busy or e.status == 404):
+            if not (e.busy or e.status == 404):
                 raise
-            cfg['model'] = spare.pop(0)
+            tried.add(model)
+            busy = e if e.busy else busy or e
+            with _POOL:
+                pool = [cfg['model']] + list(cfg.get('fallbacks') or [])
+                if e.status == 404:
+                    pool = [m for m in pool if m != model]
+                elif pool[0] == model and len(pool) > 1:
+                    pool = pool[1:] + [model]
+                if not pool:
+                    raise
+                cfg['model'], cfg['fallbacks'] = pool[0], pool[1:]
 
 
 def translate(cfg, key, strings, glossary=None, source_lang='en'):

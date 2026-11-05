@@ -1,4 +1,4 @@
-import json, zipfile
+import json, time, zipfile
 from tools import memory, modpack, translator
 from tools.textfx import to_visual
 
@@ -66,14 +66,15 @@ def test_scan_sees_mods_the_game_has_not_listed_yet_and_explains_the_ones_it_wil
     assert rows[4]['state_ar'] == 'لا يعمل مع إصدار لعبتك' and rows[4]['strings'] == 1
 
 
-def test_a_provider_at_its_limit_stops_the_run_and_keeps_what_was_done(tmp_path):
+def test_a_provider_at_its_limit_stops_the_run_and_keeps_what_was_done(tmp_path, monkeypatch):
+    monkeypatch.setattr(modpack, 'BATCH_STRINGS', 40)
     mods = [_m('a', {f'a/k{i}': f'Text number {i}' for i in range(200)})]   # 5 batches of 40
     calls = []
 
-    def limited(batch, terms, lang='en'):
+    def limited(batch, terms, lang='en'):   # every model of the pool busy (503 after its fallbacks)
         calls.append(len(batch))
         if len(calls) > 1:
-            raise translator.TranslatorError('HTTP 429 (tried 2 times): quota', 429, busy=True)
+            raise translator.TranslatorError('HTTP 503 (tried 2 times): high demand', 503, busy=True)
         return {k: 'نص مترجم رقم ' + k.split('k')[1] for k in batch}, translator.new_usage()
     tm = _tm(tmp_path)
     arabic, _, rows = _resolve(mods, tmp_path, memory_=tm, translate=limited)
@@ -103,6 +104,122 @@ def test_each_batch_holds_one_source_language_and_says_which(tmp_path):
     arabic, _, rows = _resolve(mods, tmp_path, translate=translate)
     assert seen == [('en', ['a/x']), ('pt-BR', ['b/y'])] and set(arabic) == {'a/x', 'b/y'}
     assert rows['lang'] == {'b/y': 'pt-BR'}
+
+
+def test_batches_run_in_parallel_and_each_answer_is_applied_and_saved(tmp_path):
+    import threading
+    live, peak, lock = [0], [0], threading.Lock()
+
+    def slow(batch, terms, lang='en'):
+        with lock:
+            live[0] += 1
+            peak[0] = max(peak[0], live[0])
+        time.sleep(0.15)
+        with lock:
+            live[0] -= 1
+        return {k: 'ترجمة ' + k for k in batch}, translator.new_usage()
+    mods = [_m('a', {f'a/k{i}': f'Sentence {i} of many' for i in range(600)})]   # 8 batches of 80
+    tm = _tm(tmp_path)
+    t0 = time.time()
+    arabic, _, rows = _resolve(mods, tmp_path, memory_=tm, translate=slow, workers=3)
+    assert len(arabic) == 600 and peak[0] == 3 and time.time() - t0 < 8 * 0.15   # less than one at a time
+    assert len(memory.TranslationMemory(tmp_path / 'memory.json')) == 600
+
+
+def test_a_busy_provider_gets_fewer_batches_at_once(tmp_path):
+    import threading
+    live, peak, calls, lock = [0], [], [0], threading.Lock()
+
+    def busy_once(batch, terms, lang='en'):
+        with lock:
+            calls[0] += 1
+            n = calls[0]
+            live[0] += 1
+            peak.append(live[0])
+        time.sleep(0.1)
+        with lock:
+            live[0] -= 1
+        if n == 1:
+            raise translator.TranslatorError('HTTP 503 (tried 2 times): busy', 503, busy=True)
+        return {k: 'ترجمة ' + k for k in batch}, translator.new_usage()
+    mods = [_m('a', {f'a/k{i}': f'Sentence {i} of many' for i in range(800)})]
+    arabic, _, rows = _resolve(mods, tmp_path, translate=busy_once, workers=3)
+    assert len(arabic) == 800 and not rows['stopped']            # one busy batch is retried, not the end of the run
+    assert peak[:3] == [1, 2, 3] and 2 in peak[3:6]              # after the busy answer, two at once, not three
+
+
+def test_a_per_minute_limit_waits_and_resends_instead_of_stopping(tmp_path, monkeypatch):
+    # measured: 4 at once on Gemini's free tier → 17 × HTTP 429, and the run used to stop with 162 strings English
+    monkeypatch.setattr(modpack, 'RATE_COOLDOWN', 0.01)
+    calls = []
+
+    def per_minute(batch, terms, lang='en'):
+        calls.append(len(batch))
+        if len(calls) <= 3:   # the first wave, all at once
+            raise translator.TranslatorError('HTTP 429 (tried 2 times): quota', 429, busy=True)
+        return {k: 'ترجمة ' + k for k in batch}, translator.new_usage()
+    mods = [_m('a', {f'a/k{i}': f'Sentence {i} of many' for i in range(800)})]   # 10 batches of 80
+    arabic, _, rows = _resolve(mods, tmp_path, translate=per_minute, workers=3)
+    assert len(arabic) == 800 and not rows['stopped'] and len(calls) == 13   # the 3 refused ones sent again
+
+
+def test_a_used_up_daily_quota_stops_after_waiting(tmp_path, monkeypatch):
+    monkeypatch.setattr(modpack, 'RATE_COOLDOWN', 0.01)
+    calls = []
+
+    def quota(batch, terms, lang='en'):
+        calls.append(len(batch))
+        raise translator.TranslatorError('HTTP 429 (tried 2 times): quota', 429, busy=True)
+    arabic, _, rows = _resolve([_m('a', {f'a/k{i}': f'Sentence {i} of many' for i in range(800)})], tmp_path,
+                               translate=quota, workers=3)
+    assert rows['stopped'] and arabic == {} and len(calls) == 6   # 3 at once, then 3 alone after waiting, then stop
+
+
+def test_a_pause_lets_the_batches_in_flight_finish_and_sends_no_more(tmp_path):
+    calls, done = [], []
+
+    def slow(batch, terms, lang='en'):
+        calls.append(len(batch))
+        time.sleep(0.05)
+        return {k: 'ترجمة ' + k for k in batch}, translator.new_usage()
+    tm = _tm(tmp_path)
+    original_save = tm.save
+    tm.save = lambda: (done.append(1), original_save())
+    arabic, _, rows = _resolve([_m('a', {f'a/k{i}': f'Sentence {i} of many' for i in range(800)})], tmp_path,
+                               memory_=tm, translate=slow, workers=3, should_stop=lambda: bool(done))
+    assert rows['paused'] and len(calls) == 3 and len(arabic) == 240   # the 3 in flight finished, none after
+
+
+def test_a_batch_the_model_cannot_answer_is_split_not_lost(tmp_path):
+    sizes = []
+
+    def chokes_on_big(batch, terms, lang='en'):
+        sizes.append(len(batch))
+        if len(batch) > 20:
+            raise translator.TranslatorError('reply has no JSON object')   # a cut, unreadable reply
+        return {k: 'ترجمة ' + k for k in batch}, translator.new_usage()
+    arabic, _, _ = _resolve([_m('a', {f'a/k{i}': f'Line {i} of text' for i in range(80)})], tmp_path,
+                            translate=chokes_on_big)
+    assert len(arabic) == 80 and sizes == [80, 40, 20, 20, 40, 20, 20]
+
+
+def test_numbered_names_are_sent_once_and_the_number_swapped(tmp_path):
+    sent = []
+
+    def model(batch, terms, lang='en'):
+        sent.extend(batch.values())
+        return {k: {'Vehicle battery MK1': 'بطارية مركبة MK1', 'Water Pumpjack 1': 'مضخة مياه'}.get(e, 'ترجمة ' + e)
+                for k, e in batch.items()}, translator.new_usage()
+    en = {f'equipment-name/b{i}': f'Vehicle battery MK{i}' for i in range(1, 6)}
+    en |= {f'entity-name/w{i}': f'Water Pumpjack {i}' for i in (1, 2)}
+    en |= {f'mod-setting-description/s{i}': f'Insert {i} more plates' for i in (3, 11)}   # sentences: never templated
+    arabic, _, rows = _resolve([_m('v', en)], tmp_path, translate=model)
+    assert arabic['equipment-name/b4'] == 'بطارية مركبة MK4' and arabic['equipment-name/b1'] == 'بطارية مركبة MK1'
+    assert sent.count('Vehicle battery MK1') == 1 and not any(e.startswith('Vehicle battery MK') and e != 'Vehicle battery MK1'
+                                                               for e in sent)   # MK2..MK5 never sent
+    assert 'Water Pumpjack 2' in sent              # its representative's Arabic has no '1': translated on its own
+    assert ('equipment-name/b3', 'equipment-name/b1') in rows['templated']
+    assert 'Insert 3 more plates' in sent and 'Insert 11 more plates' in sent   # '3 ألواح' but '11 لوحاً'
 
 
 def test_load_order_puts_dependencies_first_and_ignores_incompatible_markers():
