@@ -69,6 +69,8 @@ Groq، DeepSeek، Mistral، xAI). كل نص يُترجم يُحفظ في **ذا�
 - **عند حدّ المزوّد** تتوقف الأداة وتحفظ ما تُرجم، وتُكمل في التشغيل التالي من حيث توقفت.
 - **إيقاف مؤقت ومتابعة:** يتوقف بعد الدفعة الجارية ويثبّت ما تُرجم. **وإن أُغلقت الأداة فجأة** (أو انقطعت الكهرباء)
   تُكمل وحدها حين تفتحها، ولا تعيد ما تُرجم.
+- **أسرع بنحو 3 مرات:** الطلبات تُرسل متوازية، ويقلّ عددها تلقائياً عند الزحام أو حدّ الطلبات في الدقيقة، والأسماء
+  المرقّمة تُترجم مرة واحدة. على 48 مودًا: من 365 ثانية إلى 112.
 
 ### ما الذي في الترجمة
 
@@ -164,6 +166,7 @@ placeholders, tags and plural forms before it is used.
 - **Mods without English:** some mods ship only Portuguese, for example. Their texts are translated from that language instead of showing "Unknown key".
 - **At the provider's limit** the run stops and keeps what it translated. The next run continues from there.
 - **Pause and Continue:** a pause stops the run after the batch in flight and installs what is done. If the tool is closed suddenly, or the power goes off, it continues on its own the next time you open it, and nothing translated is sent again.
+- **About 3 times faster:** requests are sent in parallel and slow down on their own when the provider is busy or reaches its per-minute limit. Numbered names are translated once. On 48 mods, a run went from 365 s to 112 s.
 
 ### What is translated
 
