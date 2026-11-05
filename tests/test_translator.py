@@ -247,6 +247,25 @@ def test_a_refused_key_does_not_walk_the_fallbacks(monkeypatch):
     assert len(seen) == 1 and cfg['model'] == 'm' and cfg['fallbacks'] == ['n', 'o']
 
 
+def test_the_source_language_reaches_the_model_and_deepl(monkeypatch):
+    seen = []
+
+    def urlopen(req, timeout=None):
+        body = json.loads(req.data)
+        seen.append(body)
+        if 'text' in body:   # DeepL
+            return _Resp(json.dumps({'translations': [{'text': 'مدى', 'billed_characters': 7}]}).encode())
+        return _chat_reply('{"t": {"a": "مدى"}}')
+    monkeypatch.setattr(translator.urllib.request, 'urlopen', urlopen)
+    translator.translate({'kind': 'openai', 'base': 'https://x/v1', 'model': 'm'}, 'k', {'a': 'Alcance'}, source_lang='pt-BR')
+    assert json.loads(seen[0]['messages'][1]['content'])['source_language'] == 'pt-BR'
+    translator.translate({'kind': 'openai', 'base': 'https://x/v1', 'model': 'm'}, 'k', {'a': 'Range'})
+    assert 'source_language' not in json.loads(seen[1]['messages'][1]['content'])   # English: as before
+    translator.translate({'kind': 'deepl', 'base': 'https://api-free.deepl.com/v2'}, 'k:fx', {'a': 'Alcance'},
+                         source_lang='pt-BR')
+    assert seen[2]['source_lang'] == 'PT'
+
+
 def test_parse_json_object_tolerates_prose_and_braces_in_strings():
     assert translator.parse_json_object('Here: {"t": {"a": "x } y"}} done') == {'t': {'a': 'x } y'}}
     with pytest.raises(translator.TranslatorError):

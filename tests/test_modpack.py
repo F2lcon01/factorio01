@@ -70,7 +70,7 @@ def test_a_provider_at_its_limit_stops_the_run_and_keeps_what_was_done(tmp_path)
     mods = [_m('a', {f'a/k{i}': f'Text number {i}' for i in range(200)})]   # 5 batches of 40
     calls = []
 
-    def limited(batch, terms):
+    def limited(batch, terms, lang='en'):
         calls.append(len(batch))
         if len(calls) > 1:
             raise translator.TranslatorError('HTTP 429 (tried 2 times): quota', 429, busy=True)
@@ -80,6 +80,29 @@ def test_a_provider_at_its_limit_stops_the_run_and_keeps_what_was_done(tmp_path)
     assert len(calls) == 3 and rows['stopped'] is True              # 1 answered, 2 refused, the rest not tried
     assert len(arabic) == 40 and sum(s == 'english' for s in rows['source'].values()) == 160
     assert len(memory.TranslationMemory(tmp_path / 'memory.json')) == 40   # saved as it went, not only at the end
+
+
+def test_keys_a_mod_ships_without_english_are_taken_from_its_other_languages():
+    # roboports_mc ships pt-BR only: the game would show an Arabic player "Unknown key" for every setting
+    mod = {'name': 'm', 'title': 'm', 'version': '1', 'deps': [], 'lua': [],
+           'locale': {'pt-BR': {'s/a': 'Alcance', 's/b': 'Ativado'}, 'en': {'s/a': 'Range', 's/e': ''},
+                      'de': {'s/b': 'Aktiviert', 's/c': 'Nur Deutsch'}, 'ar': {'s/x': 'عربي'}}}
+    text, lang = modpack.source_locale(mod)
+    assert text == {'s/a': 'Range', 's/e': '', 's/b': 'Aktiviert', 's/c': 'Nur Deutsch'}   # English first, then de
+    assert lang == {'s/b': 'de', 's/c': 'de'}
+
+
+def test_each_batch_holds_one_source_language_and_says_which(tmp_path):
+    seen = []
+
+    def translate(batch, terms, lang='en'):
+        seen.append((lang, sorted(batch)))
+        return {k: 'ترجمة ' + k for k in batch}, translator.new_usage()
+    mods = [_m('a', {'a/x': 'English text'}),
+            {'name': 'b', 'title': 'b', 'version': '1', 'deps': [], 'lua': [], 'locale': {'pt-BR': {'b/y': 'Alcance'}}}]
+    arabic, _, rows = _resolve(mods, tmp_path, translate=translate)
+    assert seen == [('en', ['a/x']), ('pt-BR', ['b/y'])] and set(arabic) == {'a/x', 'b/y'}
+    assert rows['lang'] == {'b/y': 'pt-BR'}
 
 
 def test_load_order_puts_dependencies_first_and_ignores_incompatible_markers():
@@ -108,7 +131,7 @@ def _m(name, en, ar=None, deps=(), version='1'):
 
 
 def _fake(answers, calls):
-    def translate(batch, terms):
+    def translate(batch, terms, lang='en'):
         calls.append(dict(batch))
         u = translator.new_usage()
         u.update(requests=1, input_tokens=100, output_tokens=40, chars_in=400, glossary_chars=40)
@@ -174,7 +197,7 @@ def test_a_mod_kept_original_sends_nothing_and_comes_back_from_the_memory(tmp_pa
 
 
 def test_a_failed_batch_reports_why_its_strings_stay_english(tmp_path):
-    def busy(batch, terms):
+    def busy(batch, terms, lang='en'):
         raise translator.TranslatorError('HTTP 503 (tried 4 times): high demand', 503)
     arabic, _, rows = _resolve([_m('a', {'a/x': 'Iron plate'})], tmp_path, translate=busy)
     assert arabic == {} and rows['source']['a/x'] == 'english'
@@ -198,7 +221,7 @@ def test_an_updated_mod_only_sends_its_changed_strings(tmp_path):
 
 
 def test_last_loaded_mod_wins_a_shared_key():
-    en, owner, _, conflicts = modpack.merge([_m('a', {'s/k': 'Old text'}), _m('b', {'s/k': 'New text'})])
+    en, owner, _, conflicts, _ = modpack.merge([_m('a', {'s/k': 'Old text'}), _m('b', {'s/k': 'New text'})])
     assert en == {'s/k': 'New text'} and owner['s/k'] == 'b' and conflicts == [('s/k', 'a', 'b')]
 
 

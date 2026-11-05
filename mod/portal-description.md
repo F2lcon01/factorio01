@@ -43,6 +43,11 @@
 
 بعد كل تحديث للعبة شغّل الأداة مرة أخرى. تحفظ نسخة احتياطية قبل أي تغيير.
 
+- **رقم الإصدار ظاهر:** يظهر رقم الأداة في شريط العنوان، وتسأل الأداة GitHub وهذا الموقع عن آخر إصدار للأداة والمود، فتعرض
+  «✓ بآخر إصدار» أو «⬆ أحدث: …» رابطاً لصفحة التنزيل.
+- **شاشة «خطأ في تحميل التعديلات»** تظهر حين يتعطّل مود آخر، وتظهر فيها العربية مقلوبة. السبب أنها تظهر قبل تحميل أي مود،
+  فتقرأ عربية اللعبة الأصلية المقلوبة. **مود العربية لم يتعطّل.** زر «إصلاح» يجعل هذه الشاشة عربية سليمة أيضاً.
+
 ### ترجمة المودات الإضافية (أي مود تضيفه)
 
 ![أداة ترجمة المودات الإضافية]({{img:6-mods-translator}})
@@ -55,6 +60,13 @@ Groq، DeepSeek، Mistral، xAI). كل نص يُترجم يُحفظ في **ذا�
 
 **تنزيل:** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
 (نحو 12 ميغا، فيه Python مدمج) ← «استخراج الكل» ← `Translate-Mods.cmd` ← الصق المفتاح ← «ترجمة وتثبيت».
+
+- **مفتاح مجاني:** زر «احصل على مفتاح مجاني» يفتح صفحة المفاتيح في Google AI Studio (Gemini مختار مسبقاً)، أو في
+  OpenRouter. مع OpenRouter لا تستعمل الأداة إلا نماذجه المجانية فقط. والنموذج المزدحم يُستبدل ببديل تلقائياً.
+- **ترى كل مود في مجلد `mods`**، حتى ما نسخته قبل أن تشغّل اللعبة. المود الذي لن تحمّله اللعبة لا يُرسل منه شيء، ويظهر
+  سببه: «لا يعمل مع إصدار لعبتك»، أو «ينقصه: flib»، أو «معطّل».
+- **مود بلا إنجليزية** (بعض المودات تشحن البرتغالية وحدها مثلاً) تُترجم نصوصه من لغته، بدل أن تظهر «Unknown key».
+- **عند حدّ المزوّد** تتوقف الأداة وتحفظ ما تُرجم، وتُكمل في التشغيل التالي من حيث توقفت.
 
 ### ما الذي في الترجمة
 
@@ -129,6 +141,9 @@ it reads the patched tutorial texts from this mod, so they always match the inst
 
 Run the tool again after every game update. It backs up every file before changing it.
 
+- **Version shown:** the tool's version is in the title bar. The tool asks GitHub and this portal for the newest tool and mod releases, and shows "✓ up to date" or "⬆ newer: …" as a link to the download page.
+- **The "Error loading mods" screen** appears when another mod fails, and its Arabic looks reversed. That screen comes before any mod is loaded, so it uses the game's own reversed Arabic. **The Arabic mod is not broken.** Fix makes that screen readable too.
+
 ### Translator for your other mods
 
 Mods you add show their texts in English. The **mods translator** (Windows) builds a local locale mod,
@@ -141,6 +156,11 @@ placeholders, tags and plural forms before it is used.
 
 **Download:** [arabic-mods-translator.zip](https://github.com/F2lcon01/factorio01/releases/latest/download/arabic-mods-translator.zip)
 (about 12 MB, embedded Python, nothing to install) → Extract All → `Translate-Mods.cmd` → paste the key → Translate.
+
+- **Free key:** *Get a free key* opens the key page of Google AI Studio (Gemini is preselected) or OpenRouter. With OpenRouter, the tool uses free models only. A busy model hands over to a fallback on its own.
+- **Every mod in the `mods` folder is seen**, including mods copied in before the game has run. Mods the game will not load send nothing and show the reason: another game version, a missing required mod (for example flib), or disabled.
+- **Mods without English:** some mods ship only Portuguese, for example. Their texts are translated from that language instead of showing "Unknown key".
+- **At the provider's limit** the run stops and keeps what it translated. The next run continues from there.
 
 ### What is translated
 

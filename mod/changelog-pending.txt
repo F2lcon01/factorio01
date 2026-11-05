@@ -1,0 +1,13 @@
+  Features:
+    - Language tool (download from GitHub): shows its version and checks GitHub and this portal for newer
+      releases of the tool and of this mod.
+    - Language tool: the "Error loading mods" screen, shown before any mod is loaded, is readable now.
+      Fix copies this mod's shaped core texts over the game's own reversed ones and keeps the original.
+    - Mods translator: sees every mod in the mods folder, including mods the game has not listed yet.
+    - Mods translator: mods the game will not load (another game version, a missing required mod,
+      disabled) are listed with the reason, and nothing is sent for them.
+    - Mods translator: mods that ship no English are translated from the language they have.
+    - Mods translator: stops at the provider's limit, keeps what it translated, continues next time.
+    - Mods translator: free key button (Google Gemini; OpenRouter with free models only).
+  Changes:
+    - README-AR.txt: the new steps of both tools.

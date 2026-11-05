@@ -13,6 +13,14 @@
 لا. اللعبة تعطّل المود فقط إذا تغيّر الرقمان الأولان (مثلاً 2.1 ← 2.2). لكن Steam قد يعيد ملفات الدروس الأصلية بعد التحديث:
 شغّل الأداة واضغط **«إصلاح»** إن ظهر.
 
+**ظهرت شاشة «خطأ في تحميل التعديلات» بحروف مقلوبة. هل تعطّل مود العربية؟**
+لا. هذه الشاشة تظهر حين يكون في مجلدك مود قديم أو ينقصه مود آخر، وتظهر **قبل** أن تحمّل اللعبة أي مود، فتستعمل عربية
+اللعبة الأصلية المقلوبة. اضغط فيها **«إلغاء تفعيل التعديلات المحددة»** ثم **«إعادة التشغيل»**، فتعود العربية سليمة. وزر
+**«إصلاح»** في أداة اللغة يجعل هذه الشاشة نفسها عربية سليمة.
+
+**كيف أعرف أن عندي آخر إصدار؟**
+رقم الأداة في شريط عنوانها، وتحته سطر يقول «✓ الأداة والمود بآخر إصدار» أو «⬆ أحدث: …». اضغطه لتفتح صفحة التنزيل.
+
 **كيف أرجع إلى الإنجليزية؟**
 من الأداة: زر **English**. أو من **Settings ← Interface ← Language ← English**.
 
@@ -40,7 +48,15 @@
 
 **هل تكلّفني أداة ترجمة المودات مالاً؟**
 المزوّد يحاسبك على الطلبات بحسب مفتاحك. الأداة تقلّلها: النص يُرسل مرة واحدة ثم يُحفظ، والمود الذي لم يتغيّر لا يُرسل
-عنه شيء، وتعرض النافذة عدد الطلبات والتوكن بعد كل تشغيل.
+عنه شيء، وتعرض النافذة عدد الطلبات والتوكن بعد كل تشغيل. ومجاناً: زر «احصل على مفتاح مجاني» (Google Gemini، أو
+نماذج OpenRouter المجانية فقط).
+
+**مود في القائمة مكتوب بجانبه «لا نصوص فيه»؟**
+فعلاً ليس فيه نص يُترجم: مود يغيّر سلوك اللعبة أو مبانيها الموجودة دون أسماء جديدة. والمود الذي لا يشحن إلا لغة غير
+الإنجليزية تُترجم نصوصه من تلك اللغة.
+
+**مود مكتوب بجانبه «لا يعمل مع إصدار لعبتك» أو «ينقصه»؟**
+اللعبة لن تحمّله، فلا تُرسل نصوصه. حدّث المود، أو ثبّت المود الناقص (مثل flib)، ثم اضغط «تحديث القائمة».
 
 **أين أبلغ عن خطأ في الترجمة؟**
 افتح بلاغاً على [GitHub](https://github.com/F2lcon01/factorio01/issues) واكتب فيه النص الإنجليزي والترجمة العربية
@@ -62,6 +78,12 @@ fixed texts shipped inside this mod, after backing up the originals.
 **Will a game update break the mod?**
 No. The game only disables a mod when the first two version numbers change (for example 2.1 → 2.2). Steam may restore
 the original tutorial files after an update or a file verification: run the tool again and press **Fix** if it appears.
+
+**An "Error loading mods" screen shows reversed Arabic. Is the Arabic mod broken?**
+No. That screen appears when an old mod, or a mod missing a dependency, is in your folder. It comes before any mod is loaded, so it uses the game's own reversed Arabic. Press **Disable listed mods**, then **Restart**, and the Arabic is fine again. The language tool's **Fix** makes that screen readable too.
+
+**How do I know I have the newest version?**
+The tool's version is in its title bar. The line under it reads "✓ tool and mod up to date" or "⬆ newer: …"; click that line to open the download page.
 
 **How do I switch back to English?**
 In the tool, press **English**. Or in the game: **Settings → Interface → Language → English**.
@@ -92,6 +114,14 @@ Arabic again with no request.
 **Does the mods translator cost money?**
 Your provider bills the requests made with your key. The tool keeps them low: each string is sent once and stored, an
 unchanged mod sends nothing, and the window shows the requests and tokens after every run.
+
+To pay nothing, press **Get a free key**. It opens Google Gemini, or OpenRouter, where the tool uses free models only.
+
+**A mod says "no text".**
+It really has nothing to translate: it changes behaviour or existing buildings without new names. A mod that ships only a language other than English is translated from that language.
+
+**A mod says "does not work with your game version" or "needs …".**
+The game will not load it, so nothing is sent for it. Update the mod, or install the missing one (for example flib), then press **Refresh list**.
 
 **Where do I report a mistake in the translation?**
 Open an issue on [GitHub](https://github.com/F2lcon01/factorio01/issues) with the English text and the Arabic you

@@ -50,6 +50,7 @@ NOT_CHAT = re.compile(r'embed|tts|whisper|dall-e|image|audio|realtime|transcribe
 HTTP_TIMEOUT = 120
 SYSTEM = """You translate the user interface of the video game Factorio (and its mods) from English into Modern Standard Arabic.
 Input: a JSON object {"strings": {"<id>": "<English>"}}. Output: only a JSON object {"t": {"<id>": "<Arabic>"}} with every id.
+When the input also has "source_language" (for example pt-BR), the strings are in that language: translate from it.
 Rules:
 - Natural, concise game-UI Arabic. Keep the meaning; do not add or drop information.
 - Copy every placeholder and tag exactly as written, the same number of times: __1__, __2__, __ENTITY__iron-plate__,
@@ -235,8 +236,10 @@ def parse_json_object(text):
     raise TranslatorError('reply has no JSON object')
 
 
-def _llm_user(strings, glossary):
+def _llm_user(strings, glossary, source_lang='en'):
     msg = {'strings': strings}
+    if source_lang != 'en':
+        msg['source_language'] = source_lang   # a mod that ships no English for these keys
     if glossary:
         msg['glossary'] = glossary
     return json.dumps(msg, ensure_ascii=False)
@@ -302,12 +305,13 @@ def unprotect(text, tokens):
     return text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
 
 
-def _deepl(cfg, key, strings, usage):
+def _deepl(cfg, key, strings, usage, source_lang='en'):
     ids = [i for i, e in strings.items() if '__plural_for_parameter__' not in e]   # plural blocks: needs an LLM
     if not ids:
         return {}
     prot = [protect(strings[i]) for i in ids]
-    body = {'text': [p for p, _ in prot], 'source_lang': 'EN', 'target_lang': 'AR', 'tag_handling': 'xml',
+    body = {'text': [p for p, _ in prot], 'source_lang': source_lang.split('-')[0].upper(),   # pt-BR -> PT
+            'target_lang': 'AR', 'tag_handling': 'xml',
             'ignore_tags': ['x'], 'show_billed_characters': True}
     usage['requests'] += 1
     usage['chars_in'] += sum(len(p) for p, _ in prot)
@@ -330,14 +334,15 @@ def _chat(cfg, key, user, usage):
             cfg['model'] = spare.pop(0)
 
 
-def translate(cfg, key, strings, glossary=None):
-    """strings {id: English} → ({id: Arabic (logical order)}, usage); ids the reply lacks are simply absent."""
+def translate(cfg, key, strings, glossary=None, source_lang='en'):
+    """strings {id: source text} → ({id: Arabic (logical order)}, usage); ids the reply lacks are simply absent.
+    source_lang: the language of every string in this batch (English unless the mod ships none for them)."""
     usage = new_usage()
     if not strings:
         return {}, usage
     if cfg['kind'] == 'deepl':
-        return _deepl(cfg, key, strings, usage), usage
-    user = _llm_user(strings, glossary)
+        return _deepl(cfg, key, strings, usage, source_lang), usage
+    user = _llm_user(strings, glossary, source_lang)
     usage['chars_in'] += len(SYSTEM) + len(user)
     usage['glossary_chars'] += len(json.dumps(glossary, ensure_ascii=False)) if glossary else 0
     reply = _chat(cfg, key, user, usage)

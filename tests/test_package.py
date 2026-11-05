@@ -1,10 +1,20 @@
 import zipfile
-from tools.package import CHANGELOG_SEP, check_changelog, zip_dir
+from tools.package import CHANGELOG_SEP, PENDING, check_changelog, with_pending, zip_dir
 from tools.paths import ROOT
 
 
 def test_project_changelog_is_valid():
     assert check_changelog(ROOT / 'mod' / 'changelog.txt') == []
+
+
+def test_pending_notes_go_under_the_next_release_once_and_stay_valid(tmp_path):
+    log = (ROOT / 'mod' / 'changelog.txt').read_text(encoding='utf-8')
+    new = with_pending(log, PENDING.read_text(encoding='utf-8'), '9.9.9', '2026-12-01')
+    p = tmp_path / 'changelog.txt'
+    p.write_text(new, encoding='utf-8')
+    assert check_changelog(p) == [] and new.startswith(f'{CHANGELOG_SEP}\nVersion: 9.9.9\nDate: 2026-12-01\n')
+    assert with_pending(new, 'x', '9.9.9', 'd') == new          # that version already has its section
+    assert with_pending(log, '\n', '9.9.9', 'd') == log         # nothing pending: unchanged
 
 
 def test_changelog_checker_catches_bad_indent(tmp_path):

@@ -2,7 +2,7 @@
 python -E -m tools.package 1.0.0
 → mod/thumbnail.png (if missing), dist/arabic-complete_<v>.zip, dist/arabic-crowdin_<v>.zip, reports/crowdin-diff.csv,
   download/arabic-tools.zip (the language tool for GitHub; the mod portal rejects scripts inside a mod)"""
-import csv, re, sys, zipfile
+import csv, re, sys, time, zipfile
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from tools.build import build
@@ -43,6 +43,17 @@ def check_changelog(path):
     return errs
 
 
+PENDING = ROOT / 'mod' / 'changelog-pending.txt'
+
+
+def with_pending(changelog: str, pending: str, version: str, date: str) -> str:
+    """Notes written between mod releases (tool changes) go under the next release's own version: the portal's
+    Changelog tab only changes with a release, and the mod's number follows the game's, so it is not known before."""
+    if not pending.strip() or f'\nVersion: {version}\n' in changelog:
+        return changelog
+    return f'{CHANGELOG_SEP}\nVersion: {version}\nDate: {date}\n{pending.rstrip()}\n' + changelog
+
+
 def zip_dir(src: Path, out: Path):
     with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
         for f in sorted(src.rglob('*')):
@@ -75,7 +86,15 @@ def main(version):
     sys.stdout.reconfigure(encoding='utf-8')
     if not (ROOT / 'mod' / 'thumbnail.png').exists():
         print('thumbnail:', thumbnail())
-    errs = check_changelog(ROOT / 'mod' / 'changelog.txt')
+    log = ROOT / 'mod' / 'changelog.txt'
+    if PENDING.exists():
+        text = log.read_text(encoding='utf-8')
+        new = with_pending(text, PENDING.read_text(encoding='utf-8'), version, time.strftime('%Y-%m-%d'))
+        if new != text:
+            log.write_text(new, encoding='utf-8', newline='\n')
+            PENDING.write_text('', encoding='utf-8')   # emptied, kept: notes for the release after
+            print('changelog: pending notes moved under', version)
+    errs = check_changelog(log)
     if errs:
         sys.exit('changelog invalid: ' + '; '.join(errs))
     mod = build(version)

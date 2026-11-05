@@ -192,19 +192,46 @@ def load_order(mods: list[dict]) -> list[dict]:
     return out
 
 
+SOURCE_LANGS = ['en', 'en-GB', 'de', 'fr', 'es-ES', 'pt-BR', 'pt-PT', 'it', 'ru', 'pl', 'nl', 'cs', 'uk', 'tr',
+                'zh-CN', 'zh-TW', 'ja', 'ko']   # a key with no English is taken from the first of these the mod has
+
+
+def source_locale(mod):
+    """→ ({key: source text}, {key: language} for the keys that are not English). The game falls back to English
+    only, so a key a mod ships in Portuguese alone (pole_range_plus, roboports_mc, turbo_player) reaches an Arabic
+    player as 'Unknown key'. Such keys are translated from the language the mod has; the translator is told which.
+    English always wins, even an empty English value (the author meant it)."""
+    loc = mod['locale']
+    order = [l for l in SOURCE_LANGS if l in loc] + sorted(l for l in loc if l not in SOURCE_LANGS and l != 'ar')
+    text, lang = {}, {}
+    for l in order:
+        for k, v in loc[l].items():
+            if k not in text and (l == 'en' or v.strip()):
+                text[k] = v
+                if l != 'en':
+                    lang[k] = l
+    return text, lang
+
+
 def merge(mods):
-    """Winning English per key (last loaded wins), its owner, Arabic the mods ship, and key clashes."""
+    """Winning source text per key (last loaded wins): English, or another language the mod ships when it has no
+    English for that key; its owner, Arabic the mods ship, key clashes, and {key: language} for non-English sources."""
     base_keys = set().union(*(read_en(m).keys() for m in MODULES))
-    en, owner, mod_ar, conflicts = {}, {}, {}, []
+    en, owner, mod_ar, conflicts, lang = {}, {}, {}, [], {}
     for m in mods:
-        for k, e in m['locale'].get('en', {}).items():
+        text, langs = source_locale(m)
+        for k, e in text.items():
             if k in base_keys:
                 continue   # base-game key: arabic-complete already translates it
             if k in en and en[k] != e:
                 conflicts.append((k, owner[k], m['name']))
             en[k], owner[k] = e, m['name']
+            if k in langs:
+                lang[k] = langs[k]
+            else:
+                lang.pop(k, None)
         mod_ar.update(m['locale'].get('ar', {}))
-    return en, owner, mod_ar, conflicts
+    return en, owner, mod_ar, conflicts, lang
 
 
 # ---------- choosing the Arabic for each key ----------
@@ -257,7 +284,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
     (batch {key: English}, terms) → ({key: Arabic}, usage). Machine results enter the shared memory.
     keep: mods kept in their original language; an override of null keeps one string original. Either way nothing is
     sent or written for them, and their stored translations stay in the memory for when they are switched back."""
-    en, owner, mod_ar, conflicts = merge(mods)
+    en, owner, mod_ar, conflicts, lang = merge(mods)
     vocab = {w for v in base.values() for w in WORD_RE.findall(v)}
     arabic, source, pending, review, flags, errors = {}, {}, [], [], [], []
     for k, e in en.items():
@@ -292,13 +319,16 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         progress('translate', 0, total)
         for _ in (1, 2):   # the second pass retries once what failed validation
             failed = []
-            for batch in batches((k, en[k]) for k in todo):
+            # one source language per batch, English first: the translator is told the language it reads
+            sources = sorted({lang.get(k, 'en') for k in todo}, key=lambda l: (l != 'en', l))
+            for src, batch in ((s, b) for s in sources for b in batches((k, en[k]) for k in todo
+                                                                         if lang.get(k, 'en') == s)):
                 if stopped:
                     failed += list(batch)
                     continue
-                batch_terms = memory.terms_for(batch.values(), terms)
+                batch_terms = memory.terms_for(batch.values(), terms) if src == 'en' else {}   # English glossary
                 try:
-                    got, u = translate(batch, batch_terms)
+                    got, u = translate(batch, batch_terms, src)
                     translator.add_usage(usage, u)
                 except translator.TranslatorError as e:
                     log(f'translation batch failed: {e}')
@@ -329,7 +359,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
     for k in pending:
         source[k] = 'english'
     return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage,
-                           'review': review, 'flags': flags, 'errors': errors, 'stopped': stopped}
+                           'review': review, 'flags': flags, 'errors': errors, 'stopped': stopped, 'lang': lang}
 
 
 def quality_flags(en, ar, terms):
@@ -347,7 +377,7 @@ def quality_flags(en, ar, terms):
 
 # ---------- per-mod state ----------
 def mod_fingerprint(mod):
-    return _sha(mod['version'] + '\n' + '\n'.join(f'{k}={v}' for k, v in sorted(mod['locale'].get('en', {}).items())))
+    return _sha(mod['version'] + '\n' + '\n'.join(f'{k}={v}' for k, v in sorted(source_locale(mod)[0].items())))
 
 
 def mod_states(mods, rows, manifest, keep=frozenset()):
@@ -370,7 +400,7 @@ def mod_states(mods, rows, manifest, keep=frozenset()):
 def skipped_states(skipped):
     """Rows for the mods the game will not load: shown with the reason, nothing sent."""
     return [{'name': s['mod']['name'], 'title': s['mod']['title'], 'version': s['mod']['version'],
-             'strings': len(s['mod']['locale'].get('en', {})), 'arabic': 0, 'brand': 0, 'original': 0, 'pending': 0,
+             'strings': len(source_locale(s['mod'])[0]), 'arabic': 0, 'brand': 0, 'original': 0, 'pending': 0,
              'changed': 0, 'excluded': False, 'state': s['reason'], 'state_ar': STATES_AR[s['reason']],
              'detail': s['detail']} for s in skipped]
 
@@ -380,7 +410,7 @@ def build_pack(mods, arabic, owner, en, out_root=None) -> Path:
     pack = Path(out_root or DIST) / f'{PACK}_{PACK_VERSION}'
     if pack.exists():
         shutil.rmtree(pack)   # build output only
-    order = {m['name']: list(m['locale'].get('en', {})) for m in mods}
+    order = {m['name']: list(source_locale(m)[0]) for m in mods}
     by_owner = {}
     for k, ar in arabic.items():
         by_owner.setdefault(owner[k], {})[k] = visual_value(k, ar)
@@ -405,7 +435,7 @@ def lua_findings(mods, en_keys):
     """Texts no locale file can reach: hard-coded captions, and keys the code uses that no locale defines."""
     out = []
     for m in mods:
-        own_sections = {k.split('/', 1)[0] for k in m['locale'].get('en', {})}
+        own_sections = {k.split('/', 1)[0] for k in source_locale(m)[0]}
         for text in m['lua']:
             for kind, literal in LUA_LITERAL_RE.findall(text):
                 out.append((m['name'], f'hard-coded {kind}', literal))
@@ -456,6 +486,12 @@ def report(mods, rows, findings, provider, states, last, skipped=()):
         lines += ['', '## مودات لن تحمّلها اللعبة (لم يُرسل منها شيء)', '', '| المود | السبب |', '|---|---|']
         lines += [f"| {s['name']} {s['version']} | {s['state_ar']}{': ' + s['detail'] if s['detail'] else ''} |"
                   for s in skipped]
+    if rows.get('lang'):
+        by = {}
+        for k, l in rows['lang'].items():
+            by[(rows['owner'][k], l)] = by.get((rows['owner'][k], l), 0) + 1
+        lines += ['', '## نصوص لا إنجليزية لها في المود: مصدرها لغة أخرى فيه', '']
+        lines += [f'- `{n}`: {c} نصاً من `{l}`' for (n, l), c in sorted(by.items())]
     if rows.get('stopped'):
         lines += ['', '> توقّفت الترجمة عند حدّ المزوّد (زحام أو حدّ مجاني). ما تُرجم محفوظ في الذاكرة، والتشغيل التالي '
                       'يُكمل من حيث توقّف.']
@@ -496,7 +532,7 @@ def _translator(offline, log):
         _save_json(STATE / 'translator.json', {'tag': tag, 'config': cfg})
     label = f"{cfg['provider']} / {cfg['model']}"
     log(f'translator: {label}')
-    run = lambda batch, terms: translator.translate(cfg, key, batch, terms)
+    run = lambda batch, terms, lang='en': translator.translate(cfg, key, batch, terms, source_lang=lang)
     run.cfg = cfg   # a fallback model may take over during the run: build() reports the one that ended it
     return run, label
 
