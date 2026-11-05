@@ -279,7 +279,8 @@ def batches(items):
         yield batch
 
 
-def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', log=print, keep=frozenset()):
+def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', log=print, keep=frozenset(),
+            should_stop=None):
     """→ (arabic {key: logical}, owner {key: mod}, rows). memory_ is a tools.memory.TranslationMemory; translate is
     (batch {key: English}, terms) → ({key: Arabic}, usage). Machine results enter the shared memory.
     keep: mods kept in their original language; an override of null keeps one string original. Either way nothing is
@@ -309,7 +310,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         else:
             pending.append(k)
     usage = translator.new_usage()
-    stopped = False
+    stopped = paused = False   # paused: the player asked (should_stop), checked between batches, never mid-batch
     if pending and translate:
         same = {}   # the same English in several keys or mods is sent once, then applied to all of them
         for k in sorted(pending, key=lambda k: (owner[k], k)):
@@ -323,6 +324,9 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
             sources = sorted({lang.get(k, 'en') for k in todo}, key=lambda l: (l != 'en', l))
             for src, batch in ((s, b) for s in sources for b in batches((k, en[k]) for k in todo
                                                                          if lang.get(k, 'en') == s)):
+                if not stopped and should_stop and should_stop():
+                    stopped = paused = True
+                    log('paused by the player: the rest is translated on the next run')
                 if stopped:
                     failed += list(batch)
                     continue
@@ -359,7 +363,8 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
     for k in pending:
         source[k] = 'english'
     return arabic, owner, {'en': en, 'owner': owner, 'source': source, 'conflicts': conflicts, 'usage': usage,
-                           'review': review, 'flags': flags, 'errors': errors, 'stopped': stopped, 'lang': lang}
+                           'review': review, 'flags': flags, 'errors': errors, 'stopped': stopped, 'paused': paused,
+                           'lang': lang}
 
 
 def quality_flags(en, ar, terms):
@@ -492,7 +497,9 @@ def report(mods, rows, findings, provider, states, last, skipped=()):
             by[(rows['owner'][k], l)] = by.get((rows['owner'][k], l), 0) + 1
         lines += ['', '## نصوص لا إنجليزية لها في المود: مصدرها لغة أخرى فيه', '']
         lines += [f'- `{n}`: {c} نصاً من `{l}`' for (n, l), c in sorted(by.items())]
-    if rows.get('stopped'):
+    if rows.get('paused'):
+        lines += ['', '> أوقفتَ الترجمة مؤقتاً. ما تُرجم محفوظ ومثبّت، و«متابعة الترجمة» تُكمل الباقي فقط.']
+    elif rows.get('stopped'):
         lines += ['', '> توقّفت الترجمة عند حدّ المزوّد (زحام أو حدّ مجاني). ما تُرجم محفوظ في الذاكرة، والتشغيل التالي '
                       'يُكمل من حيث توقّف.']
     lines += ['', '## الاستهلاك والتوفير', '',
@@ -549,15 +556,34 @@ def _context(offline=True, log=print):
     return mods, mem, base, skipped
 
 
+def run_mark():
+    """STATE/run.json while a build runs: still there at the next start means the last run was cut off (window
+    closed, crash, power loss). Each answered batch is already in the memory, so running again resumes: what was
+    translated comes back with no request and only the rest is sent."""
+    return STATE / 'run.json'
+
+
+def end_run():
+    run_mark().unlink(missing_ok=True)   # our own marker: a clean end (success, or an error already reported)
+
+
+def _stop_requested():
+    """The window's «إيقاف مؤقت»: it creates FA_STOP_FILE; the build stops after the batch in flight, then packs."""
+    p = os.environ.get('FA_STOP_FILE')
+    return bool(p) and Path(p).exists()
+
+
 def build(offline=False, log=print):
     progress('scan', 0, 1)
     STATE.mkdir(parents=True, exist_ok=True)
+    _save_json(run_mark(), {'started_at': time.strftime('%Y-%m-%dT%H:%M:%S'), 'pid': os.getpid(), 'offline': offline})
     mods, mem, base, skipped = _context(log=log)
     terms = memory.term_base(_load_json(ROOT / 'glossary.json', {}), memory.base_terms(mods_dir()))
     translate, provider = _translator(offline, log)
     keep = excluded()
     arabic, owner, rows = resolve(mods, base=base, memory_=mem, overrides=_load_json(overrides_path(), {}),
-                                  terms=terms, translate=translate, model=provider, log=log, keep=keep)
+                                  terms=terms, translate=translate, model=provider, log=log, keep=keep,
+                                  should_stop=_stop_requested)
     mem.save()
     if translate:
         provider = f"{translate.cfg['provider']} / {translate.cfg['model']}"
@@ -579,15 +605,18 @@ def build(offline=False, log=print):
     pending = sum(s == 'english' for s in rows['source'].values())
     last = {'built_at': time.strftime('%Y-%m-%dT%H:%M:%S'), 'translator': provider, 'mods': len(mods),
             'strings': len(rows['en']), 'arabic': len(arabic), 'english_left': pending, 'translated_now': translated,
-            'memory_size': len(mem), **u, **savings(rows, history)}
+            'memory_size': len(mem), 'stopped': rows['stopped'], 'paused': rows['paused'], 'pack_path': str(pack),
+            **u, **savings(rows, history)}
     _save_json(STATE / 'last_run.json', last)
     report(mods, rows, lua_findings(mods, set(rows['en']) | set().union(*(read_en(m) for m in MODULES))), provider,
            states, last, skipped_states(skipped))
     _save_json(STATE / 'state.json', {'fingerprint': fingerprint(mods), 'pending': pending, 'built_at': last['built_at']})
+    end_run()
     progress('done', 1, 1)
     return {'pack': pack.name, 'pack_path': str(pack), 'mods': len(mods), 'strings': len(rows['en']),
             'arabic': len(arabic), 'english_left': pending, 'requests': u['requests'], 'translator': provider,
-            'error': rows['errors'][-1] if rows['errors'] else '', 'stopped': rows['stopped'], 'skipped': len(skipped)}
+            'error': rows['errors'][-1] if rows['errors'] else '', 'stopped': rows['stopped'], 'paused': rows['paused'],
+            'skipped': len(skipped), 'built_at': last['built_at']}
 
 
 def status():
@@ -599,7 +628,11 @@ def status():
                          log=lambda s: None, keep=keep)
     saved = _load_json(STATE / 'state.json', {})
     fp = fingerprint(mods)
+    last = _load_json(STATE / 'last_run.json', {})
     return {'fingerprint': fp, 'changed': fp != saved.get('fingerprint'), 'pending': saved.get('pending', 0),
+            'interrupted': _load_json(run_mark(), None),   # {started_at, pid, offline}: the window resumes it
+            'stopped': bool(last.get('stopped')), 'paused': bool(last.get('paused')),
+            'english_left': last.get('english_left', 0),
             'mods': len(mods), 'skipped': len(skipped),
             'unlisted': sum(not m.get('listed', True) for m in mods + [s['mod'] for s in skipped]),
             'states': mod_states(mods, rows, _load_json(STATE / 'manifest.json', {}), keep) + skipped_states(skipped)}
@@ -624,6 +657,7 @@ if __name__ == '__main__':
             print(json.dumps(build(offline='--offline' in sys.argv, log=lambda s: print(s, file=sys.stderr)),
                              ensure_ascii=False))
         except translator.TranslatorError as e:
+            end_run()   # reported to the player (a refused key, say): not a cut-off run to resume on every start
             sys.exit(f'translator: {e}')
     elif cmd == 'status':
         print(json.dumps(status(), ensure_ascii=False))

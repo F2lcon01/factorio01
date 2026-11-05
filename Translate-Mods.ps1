@@ -247,6 +247,7 @@ function Update-Mods {
         $r = Invoke-FAPython @('-m', 'tools.modpack', 'status')
         if ($r.Code -ne 0) { $barText.Text = 'تعذّرت قراءة المودات: ' + ($r.Output | Select-Object -Last 1); return }
         $st = $r.Output[-1] | ConvertFrom-Json
+        $script:st = $st
         foreach ($m in $st.states) {
             $label = $m.state_ar
             if ($m.state -eq 'changed') { $label += " ($(N $m.changed) نصاً)" }
@@ -268,6 +269,19 @@ function Update-Mods {
             $barText.Text = $line
         }
     } finally { $script:loading = $false }
+    Update-TranslateButton
+}
+
+$script:st = $null
+$script:building = $false
+function Update-TranslateButton {
+    # «متابعة الترجمة» after a pause or a provider limit, while strings are still English; «ترجمة وتثبيت» otherwise
+    $btnTranslate.BackColor = [Drawing.Color]::FromArgb(46, 125, 50)
+    $left = if ($script:st) { [int]$script:st.english_left } else { 0 }
+    if ($script:st -and ($script:st.paused -or $script:st.stopped) -and $left -gt 0) {
+        $btnTranslate.Text = 'متابعة الترجمة'
+        $barText.Text = "الترجمة السابقة لم تكتمل: بقي $(N $left) نصاً. «متابعة الترجمة» تُكمل الباقي فقط."
+    } else { $btnTranslate.Text = 'ترجمة وتثبيت' }
 }
 
 function Update-Summary {
@@ -300,17 +314,19 @@ $timer.Interval = 300
 
 function Start-Run([string[]]$PyArgs, [string]$Key, [scriptblock]$OnDone, [string]$Provider = '', [string]$BaseUrl = '') {
     $out = Join-Path $work 'out.txt'; $err = Join-Path $work 'err.txt'; $prog = Join-Path $work 'progress.jsonl'
-    foreach ($f in @($out, $err, $prog)) { if (Test-Path $f) { [IO.File]::Delete($f) } }   # our own temp files
-    $names = 'FA_TRANSLATE_KEY', 'FA_PROGRESS_FILE', 'FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_BASE_URL'
+    $stop = Join-Path $work 'stop.flag'   # «إيقاف مؤقت» creates it: the engine stops after the batch in flight
+    foreach ($f in @($out, $err, $prog, $stop)) { if (Test-Path $f) { [IO.File]::Delete($f) } }   # our own temp files
+    $names = 'FA_TRANSLATE_KEY', 'FA_PROGRESS_FILE', 'FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_BASE_URL', 'FA_STOP_FILE'
     $env:FA_TRANSLATE_KEY = $Key
     $env:FA_PROGRESS_FILE = $prog
+    $env:FA_STOP_FILE = $stop
     $env:FA_TRANSLATE_PROVIDER = $(if ($Provider -eq 'custom') { '' } else { $Provider })
     $env:FA_TRANSLATE_BASE_URL = $(if ($Provider -eq 'custom') { $BaseUrl } else { '' })
     try { $p = Start-FAPython $PyArgs $out $err }
     finally {   # the child has its own copy of the environment: clear ours at once
         foreach ($n in $names) { [Environment]::SetEnvironmentVariable($n, $null, 'Process') }
     }
-    $script:job = @{ Process = $p; Out = $out; Err = $err; Progress = $prog; OnDone = $OnDone }
+    $script:job = @{ Process = $p; Out = $out; Err = $err; Progress = $prog; Stop = $stop; OnDone = $OnDone }
     Set-Busy $true
     $timer.Start()
 }
@@ -403,32 +419,112 @@ $btnForget.Add_Click({
     if ($ok -eq 'Yes') { [void](Remove-FATranslatorKey); Update-KeyState }
 })
 
-$btnTranslate.Add_Click({
+function Start-Translate([switch]$Resume) {
     if (Test-GameRunning) { Show-Message 'أغلق اللعبة أولاً ثم أعد المحاولة.'; return }
     $key = Get-FATranslatorKey
     $saved = Get-FAProviderChoice
     $args2 = @('-m', 'tools.modpack', 'build')
     if (-not $key) { $args2 += '--offline' }
-    Start-Run $args2 $key {
+    $script:resumeHead = if ($Resume) { 'أُكملت الترجمة التي توقّفت فجأة. ' } else { '' }
+    Start-Run $args2 $key {   # no GetNewClosure here: inside one, $script: is the closure's own scope
         param($code, $out, $err)
+        $script:building = $false
         if ($code -ne 0) {
             $barText.Text = 'فشل البناء.'
+            Update-TranslateButton
             Show-Message ("فشلت الترجمة.`n`n" + (Get-KeyProblem $err))
             return
         }
         $r = $out[-1] | ConvertFrom-Json
-        try { $msg = Install-FAPack $r.pack_path } catch { Show-Message ('تعذّر التثبيت: ' + $_.Exception.Message); return }
+        try { $msg = Install-FAPack $r.pack_path } catch { Update-TranslateButton; Show-Message ('تعذّر التثبيت: ' + $_.Exception.Message); return }
+        Save-Installed $r.built_at
         Update-Mods; Update-Summary
+        $counts = "بالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests)."
+        if ($r.paused) {
+            Show-Message ("أُوقفت الترجمة مؤقتاً، وثُبّت ما تُرجم حتى الآن. $msg`n$counts`n`nاضغط «متابعة الترجمة» متى شئت، ولو بعد إغلاق الأداة: يُكمل الباقي فقط دون إعادة ما تُرجم.")
+            return
+        }
         $note = ''   # batches that failed leave their strings English: say why instead of a silent "done"
         if ($r.error) { $note = "`n`nتعذّرت ترجمة بعض النصوص فبقيت بالإنجليزية:`n" + (Get-KeyProblem @([string]$r.error)) }
-        if ($r.stopped) { $note += "`n`nتوقّفت الترجمة عند حدّ المزوّد. ما تُرجم محفوظ؛ اضغط «ترجمة وتثبيت» لاحقاً فيُكمل من حيث توقّف دون إعادة ما تُرجم." }
-        Show-Message ("تم. $msg`nبالعربية: $(N $r.arabic) من $(N $r.strings) نصاً، وما زال بالإنجليزية: $(N $r.english_left).`nطلبات API في هذا التشغيل: $(N $r.requests)." + $note)
+        if ($r.stopped) { $note += "`n`nتوقّفت الترجمة عند حدّ المزوّد. ما تُرجم محفوظ؛ اضغط «متابعة الترجمة» لاحقاً فيُكمل من حيث توقّف دون إعادة ما تُرجم." }
+        Show-Message ("$($script:resumeHead)تم. $msg`n$counts" + $note)
     } ([string]$saved.provider) ([string]$saved.base_url)
     $key = $null
+    # while it runs the same button pauses it (Set-Busy disabled every button)
+    $script:building = $true
+    $btnTranslate.Enabled = $true
+    $btnTranslate.Text = 'إيقاف مؤقت'
+    $btnTranslate.BackColor = [Drawing.Color]::FromArgb(230, 126, 34)
+}
+
+$btnTranslate.Add_Click({
+    if ($script:job -and $script:building) {   # «إيقاف مؤقت»: a clean stop, then the pack is installed
+        [IO.File]::WriteAllText($script:job.Stop, 'stop')
+        $btnTranslate.Enabled = $false
+        $btnTranslate.Text = 'يتوقف...'
+        $barText.Text = 'يتوقف بعد الدفعة الحالية، ثم يثبّت ما تُرجم حتى الآن...'
+        return
+    }
+    Start-Translate
 })
 
+# ---------- continuing after a sudden stop ----------
+function Save-Installed([string]$BuiltAt) {   # which build is in the game: a build never installed is caught on start
+    New-Item -ItemType Directory -Force $stateDir | Out-Null
+    [IO.File]::WriteAllText((Join-Path $stateDir 'installed.json'), (@{ built_at = $BuiltAt } | ConvertTo-Json), (New-Object Text.UTF8Encoding $false))
+}
+
+$script:orphan = $null
+$orphanTimer = New-Object Windows.Forms.Timer
+$orphanTimer.Interval = 1000
+$orphanTimer.Add_Tick({   # the engine of a window that died is still running: wait for it, then pick up its result
+    if (Get-Process -Id $script:orphan -ErrorAction SilentlyContinue) { return }
+    $orphanTimer.Stop(); $script:orphan = $null
+    Set-Busy $false
+    Update-Mods; Update-Summary
+    Invoke-ResumeCheck
+})
+
+function Invoke-ResumeCheck {
+    # 1) the last build was cut off (window closed, crash, power loss): continue it. What it translated is in the
+    #    memory, so only the rest is sent. 2) its engine still runs (the window itself died): wait, then install.
+    # 3) it finished but was never installed (the window died first): install it now. Never while the game is open.
+    $i = if ($script:st) { $script:st.interrupted } else { $null }
+    if ($i) {
+        $p = if ($i.pid) { Get-Process -Id ([int]$i.pid) -ErrorAction SilentlyContinue } else { $null }
+        if ($p -and $p.ProcessName -like 'python*') {
+            $barText.Text = 'ترجمة بدأت سابقاً ما زالت تعمل في الخلفية. تنتظر الأداة انتهاءها ثم تثبّت النتيجة...'
+            Set-Busy $true
+            $script:orphan = [int]$i.pid
+            $orphanTimer.Start()
+            return
+        }
+        if (Test-GameRunning) {
+            $btnTranslate.Text = 'متابعة الترجمة'
+            $barText.Text = 'توقّفت الترجمة السابقة قبل أن تكتمل. أغلق اللعبة ثم اضغط «متابعة الترجمة».'
+            return
+        }
+        $barText.Text = 'توقّفت الترجمة السابقة فجأة: تُكمل الآن من حيث توقّفت، وما تُرجم محفوظ...'
+        Start-Translate -Resume
+        return
+    }
+    $last = Read-Json (Join-Path $stateDir 'last_run.json')
+    $inst = Read-Json (Join-Path $stateDir 'installed.json')
+    if ($last -and $last.pack_path -and (Test-Path $last.pack_path) -and -not ($inst -and $inst.built_at -eq $last.built_at)) {
+        if (Test-GameRunning) { $barText.Text = 'ترجمة اكتملت ولم تُثبَّت بعد. أغلق اللعبة ثم اضغط «ترجمة وتثبيت».'; return }
+        try {
+            [void](Install-FAPack $last.pack_path)
+            Save-Installed $last.built_at
+            $barText.Text = "ثُبّتت ترجمة اكتملت في المرة السابقة ولم تُثبَّت: بالعربية $(N $last.arabic) من $(N $last.strings)."
+        } catch { $barText.Text = 'تعذّر تثبيت ترجمة المرة السابقة: ' + $_.Exception.Message }
+    }
+}
+
 $script:ready = $false   # WinForms raises ItemChecked for every item when the list's handle is created: not a click
-$form.Add_Shown({ $script:ready = $true })
+$form.Add_Shown({   # a verification snapshot never installs on its own: FA_TEST_RESUME opts in
+    $script:ready = $true
+    if (-not $Snapshot -or $env:FA_TEST_RESUME) { Invoke-ResumeCheck }
+})
 $list.Add_ItemChecked({
     param($sender, $e)
     if ($script:loading -or -not $script:ready -or -not $e.Item.Tag) { return }
@@ -456,7 +552,18 @@ $btnUndo.Add_Click({
     try { Show-Message (Uninstall-FAPack $pack) } catch { Show-Message ('تعذّر: ' + $_.Exception.Message) }
 })
 
-$form.Add_FormClosing({ if ($script:job -and -not $script:job.Process.HasExited) { $script:job.Process.Kill() } })
+$form.Add_FormClosing({
+    param($sender, $e)
+    if (-not ($script:job -and -not $script:job.Process.HasExited)) { return }
+    if ($script:building -and -not $Snapshot) {
+        $ok = [Windows.Forms.MessageBox]::Show($form,
+            "الترجمة جارية. الإغلاق يوقفها الآن، وما تُرجم محفوظ، وتُكمل تلقائياً حين تفتح الأداة مرة أخرى.`n`nلتثبيت ما تُرجم قبل الإغلاق: اضغط «لا» ثم «إيقاف مؤقت».`n`nإغلاق الآن؟",
+            'ترجمة المودات', 'YesNo', 'Question', 'Button2',
+            [Windows.Forms.MessageBoxOptions]::RtlReading -bor [Windows.Forms.MessageBoxOptions]::RightAlign)
+        if ($ok -ne 'Yes') { $e.Cancel = $true; return }
+    }
+    $script:job.Process.Kill()   # the run mark stays: the next start resumes
+})
 
 # ---------- start ----------
 $form.Cursor = 'WaitCursor'
@@ -490,11 +597,21 @@ if ($Snapshot) {   # for verification: draw the window into an image without sho
     $clicks = @()
     if ($env:FA_TEST_KEY) { $clicks += 'key' }
     if ($env:FA_TEST_TRANSLATE) { $clicks += 'translate' }
+    $deadline = (Get-Date).AddMinutes(6)   # a resume (or a wait for an orphan engine) started by Shown runs first
+    while (($script:job -or $script:orphan) -and (Get-Date) -lt $deadline) { [Windows.Forms.Application]::DoEvents(); Start-Sleep -Milliseconds 100 }
+    if ($script:resumeHead) { Write-Output "[resume] bar: $($barText.Text)" }
+    # FA_TEST_PAUSE_AFTER=n: press «إيقاف مؤقت» once n strings are translated (automated check of the pause)
     foreach ($c in $clicks) {
         if ($c -eq 'key') { $keyInput.Text = $env:FA_TEST_KEY; $btnKey.PerformClick() } else { $btnTranslate.PerformClick() }
         $deadline = (Get-Date).AddMinutes(6)
-        while ($script:job -and (Get-Date) -lt $deadline) { [Windows.Forms.Application]::DoEvents(); Start-Sleep -Milliseconds 100 }
-        Write-Output "[$c] bar: $($barText.Text)"
+        $paused = $false
+        while ($script:job -and (Get-Date) -lt $deadline) {
+            [Windows.Forms.Application]::DoEvents(); Start-Sleep -Milliseconds 100
+            if ($c -eq 'translate' -and $env:FA_TEST_PAUSE_AFTER -and -not $paused -and $bar.Value -ge [int]$env:FA_TEST_PAUSE_AFTER) {
+                $btnTranslate.PerformClick(); $paused = $true
+            }
+        }
+        Write-Output "[$c] bar: $($barText.Text) | button: $($btnTranslate.Text)"
     }
     foreach ($m in $script:messages) { Write-Output "MESSAGE: $m" }
     $form.Refresh()

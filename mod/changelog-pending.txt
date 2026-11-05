@@ -9,5 +9,8 @@
     - Mods translator: mods that ship no English are translated from the language they have.
     - Mods translator: stops at the provider's limit, keeps what it translated, continues next time.
     - Mods translator: free key button (Google Gemini; OpenRouter with free models only).
+    - Mods translator: Pause button (stops after the batch in flight, installs what is done) and Continue.
+    - Mods translator: a run cut off by a sudden close, a crash or a power loss continues on its own when the
+      tool is opened again; only the rest is sent.
   Changes:
     - README-AR.txt: the new steps of both tools.

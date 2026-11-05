@@ -148,6 +148,10 @@
 > وإن بلغ المزوّد حدّه أثناء ترجمة مودات كثيرة، تتوقف الأداة وتحفظ ما تُرجم. أعد الضغط على «ترجمة وتثبيت» لاحقاً
 > فتُكمل من حيث توقفت.
 >
+> **إيقاف مؤقت وإكمال:** أثناء الترجمة يصبح الزر **«إيقاف مؤقت»**. تتوقف الأداة بعد الدفعة الجارية، وتثبّت ما تُرجم
+> حتى تلك اللحظة، ثم يصير الزر **«متابعة الترجمة»**، ولو بعد إغلاق الأداة. **وإن أُغلقت فجأة** (إغلاق النافذة، أو
+> تعطّل، أو انقطاع كهرباء)، تُكمل وحدها حين تفتحها: ما تُرجم محفوظ بعد كل دفعة، ولا يُرسل إلا الباقي.
+>
 > **مود بلا إنجليزية** (مثل مود يشحن البرتغالية وحدها): اللعبة لا ترجع إلا إلى الإنجليزية، فتعرض «Unknown key».
 > لذلك تُترجم نصوصه من لغته، ولكل لغة دفعاتها، ويُبلَّغ المترجم بلغة المصدر. و«لا نصوص فيه» تعني أنه فعلاً بلا نص.
 
@@ -219,6 +223,8 @@ request and an updated mod only sends its new strings (measured: first run 2 req
 keep it in its original language; tick it again and it comes back from the memory with no request.
 
 Both tools show their version in the title bar. Each time a window opens, it asks GitHub and the mod portal whether the tool or the mod has a newer release.
+
+While a run is in progress, the button becomes **Pause**. The run stops after the batch in flight and installs what it has translated, and **Continue** finishes the rest later. If the tool is closed suddenly (window closed, crash, power loss), it continues on its own the next time you open it. Each answered batch is saved, so only the rest is sent.
 
 The translator reads every mod in the `mods` folder, including mods copied in before the game has run. Some mods will not load in the game: they target another game version, lack a required mod, or are disabled. These are listed with the reason, and none of their strings is sent. When the provider reaches its limit, the run stops and keeps what it translated. The next run continues from there.
 

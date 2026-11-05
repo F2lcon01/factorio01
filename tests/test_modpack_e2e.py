@@ -49,6 +49,70 @@ def _mod(root, name, version, en_cfg):
     (d / 'locale' / 'en' / 'strings.cfg').write_text(en_cfg, encoding='utf-8')
 
 
+def _env(tmp_path, mods, provider, monkeypatch):
+    for k, v in {'FA_MODS_DIR': mods, 'FA_TRANSLATE_KEY': 'stub', 'FA_TRANSLATE_BASE_URL': provider,
+                 'FA_OVERRIDES': tmp_path / 'none.json', 'FA_STOP_FILE': tmp_path / 'stop.flag'}.items():
+        monkeypatch.setenv(k, str(v))
+    for k in ('FA_TRANSLATE_PROVIDER', 'FA_TRANSLATE_MODEL', 'FA_PROGRESS_FILE'):
+        monkeypatch.delenv(k, raising=False)
+    monkeypatch.setattr(modpack, 'STATE', tmp_path / 'state')
+    monkeypatch.setattr(modpack, 'DIST', tmp_path / 'dist')
+    monkeypatch.setattr(modpack, 'REPORTS', tmp_path / 'reports')
+
+
+def _sent(posts):
+    return [s for p in posts for s in json.loads(p['messages'][1]['content'])['strings'].values()]
+
+
+def test_a_cut_off_build_resumes_with_the_rest_only_and_a_pause_stops_between_batches(tmp_path, provider, monkeypatch):
+    mods = tmp_path / 'mods'
+    mods.mkdir()
+    (mods / 'mod-list.json').write_text(json.dumps({'mods': [{'name': 'big', 'enabled': True}]}))
+    _mod(mods, 'big', '1.0.0', '[big]\n' + ''.join(f'k{i}=Sentence number {i} of the test\n' for i in range(100)))
+    _env(tmp_path, mods, provider, monkeypatch)
+    real, calls = modpack.translator.translate, {'n': 0}
+
+    def closed_on_the_second_batch(*a, **kw):   # like the window being closed: nothing after it runs
+        calls['n'] += 1
+        if calls['n'] == 2:
+            raise SystemExit('killed')
+        return real(*a, **kw)
+    monkeypatch.setattr(modpack.translator, 'translate', closed_on_the_second_batch)
+    with pytest.raises(SystemExit):
+        modpack.build(log=lambda s: None)
+    first = _sent(_Provider.posts)
+    assert len(first) == 40 and modpack.status()['interrupted'] is not None   # the next start knows to resume
+
+    monkeypatch.setattr(modpack.translator, 'translate', real)
+    n = len(_Provider.posts)
+    done = modpack.build(log=lambda s: None)
+    rest = _sent(_Provider.posts[n:])
+    assert len(rest) == 60 and not set(rest) & set(first)                     # only what the cut-off run left
+    assert done['english_left'] == 0 and modpack.status()['interrupted'] is None
+
+    # «إيقاف مؤقت»: the window creates FA_STOP_FILE; the build stops after the batch in flight and still packs
+    _mod(mods, 'big', '1.1.0', '[big]\n' + ''.join(f'n{i}=Another sentence {i} here\n' for i in range(100)))
+    stop = tmp_path / 'stop.flag'
+
+    def pause_after_the_first(*a, **kw):
+        out = real(*a, **kw)
+        stop.write_text('stop')
+        return out
+    monkeypatch.setattr(modpack.translator, 'translate', pause_after_the_first)
+    n = len(_Provider.posts)
+    paused = modpack.build(log=lambda s: None)
+    assert paused['paused'] is True and len(_Provider.posts) - n == 1 and paused['english_left'] == 60
+    st = modpack.status()
+    assert st['paused'] is True and st['english_left'] == 60 and st['interrupted'] is None   # a clean stop
+    assert (tmp_path / 'dist' / 'arabic-mods-local_1.0.0' / 'locale' / 'ar' / 'big.cfg').exists()   # 40 installed now
+
+    stop.unlink()
+    monkeypatch.setattr(modpack.translator, 'translate', real)
+    n = len(_Provider.posts)
+    resumed = modpack.build(log=lambda s: None)
+    assert len(_sent(_Provider.posts[n:])) == 60 and resumed['english_left'] == 0 and not modpack.status()['paused']
+
+
 def test_second_build_sends_no_request_and_an_update_sends_only_the_changes(tmp_path, provider, monkeypatch):
     mods = tmp_path / 'mods'
     mods.mkdir()

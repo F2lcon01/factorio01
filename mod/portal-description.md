@@ -67,6 +67,8 @@ Groq، DeepSeek، Mistral، xAI). كل نص يُترجم يُحفظ في **ذا�
   سببه: «لا يعمل مع إصدار لعبتك»، أو «ينقصه: flib»، أو «معطّل».
 - **مود بلا إنجليزية** (بعض المودات تشحن البرتغالية وحدها مثلاً) تُترجم نصوصه من لغته، بدل أن تظهر «Unknown key».
 - **عند حدّ المزوّد** تتوقف الأداة وتحفظ ما تُرجم، وتُكمل في التشغيل التالي من حيث توقفت.
+- **إيقاف مؤقت ومتابعة:** يتوقف بعد الدفعة الجارية ويثبّت ما تُرجم. **وإن أُغلقت الأداة فجأة** (أو انقطعت الكهرباء)
+  تُكمل وحدها حين تفتحها، ولا تعيد ما تُرجم.
 
 ### ما الذي في الترجمة
 
@@ -161,6 +163,7 @@ placeholders, tags and plural forms before it is used.
 - **Every mod in the `mods` folder is seen**, including mods copied in before the game has run. Mods the game will not load send nothing and show the reason: another game version, a missing required mod (for example flib), or disabled.
 - **Mods without English:** some mods ship only Portuguese, for example. Their texts are translated from that language instead of showing "Unknown key".
 - **At the provider's limit** the run stops and keeps what it translated. The next run continues from there.
+- **Pause and Continue:** a pause stops the run after the batch in flight and installs what is done. If the tool is closed suddenly, or the power goes off, it continues on its own the next time you open it, and nothing translated is sent again.
 
 ### What is translated
 
