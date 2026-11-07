@@ -222,6 +222,16 @@ def test_numbered_names_are_sent_once_and_the_number_swapped(tmp_path):
     assert 'Insert 3 more plates' in sent and 'Insert 11 more plates' in sent   # '3 ألواح' but '11 لوحاً'
 
 
+def test_an_english_plural_glued_to_a_placeholder_is_dropped_from_arabic(tmp_path):
+    # SpidertronPatrols: '__1__s with toolbelt equipment…' came back '__1__s مع معدات…' (shown 's<name>' once shaped)
+    assert modpack.clean('__1__s مع معدات حزام الأدوات') == '__1__ مع معدات حزام الأدوات'
+    assert modpack.clean('Spidertron __1__s') == 'Spidertron __1__s'          # not Arabic: left alone
+    tm = _tm(tmp_path)
+    tm.put('__1__s cannot be docked', '__1__s لا يمكن رسوها', 'machine')      # stored by an older version
+    arabic, _, _ = _resolve([_m('a', {'a/x': '__1__s cannot be docked'})], tmp_path, memory_=tm)
+    assert arabic == {'a/x': '__1__ لا يمكن رسوها'}
+
+
 def test_load_order_puts_dependencies_first_and_ignores_incompatible_markers():
     mods = [{'name': n, 'deps': d} for n, d in
             [('zeta', []), ('alpha', ['? zeta >= 1.0']), ('beta', ['! zeta', '~ alpha']), ('gamma', ['(?) beta'])]]

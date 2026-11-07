@@ -15,7 +15,7 @@ $script:ModName = 'arabic-complete'
 $script:PortalApi = 'https://mods.factorio.com/api/mods/arabic-complete'
 # The language tool and the mods translator ship together (arabic-tools.zip, arabic-mods-translator.zip): one number,
 # released as the GitHub tag translator-<version>. The mod keeps its own number, which follows the game's.
-$script:ToolsVersion = '1.6.0'
+$script:ToolsVersion = '1.6.1'
 $script:ReleasesApi = 'https://api.github.com/repos/F2lcon01/factorio01/releases?per_page=30'
 $script:ReleasesPage = 'https://github.com/F2lcon01/factorio01/releases/latest'
 $script:ModPage = 'https://mods.factorio.com/mod/arabic-complete'

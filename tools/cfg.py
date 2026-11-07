@@ -25,15 +25,17 @@ def parse_cfg(text: str) -> dict[str, str]:
 
 
 def write_cfg(path, values: dict[str, str], order: list[str]) -> None:
-    lines, sec = [], None
+    """Each section once, in first-appearance order (root keys first, before any header). The game refuses a locale
+    file whose section repeats ('Duplicate key "string-mod-setting" in property tree at ROOT' → the whole mod fails
+    to load): a mod's keys come from several files (FactorySearch has [string-mod-setting] in two), so `order` can
+    leave a section and come back to it."""
+    sections = {}
     for full in order:
-        if full not in values:
-            continue
-        s, k = full.split('/', 1)
-        if s != sec:
-            if s:
-                lines.append(f'[{s}]')
-            sec = s
-        lines.append(f'{k}={values[full]}')
+        if full in values:
+            s, k = full.split('/', 1)
+            sections.setdefault(s, []).append(f'{k}={values[full]}')
+    lines = sections.pop('', [])
+    for s, entries in sections.items():
+        lines += [f'[{s}]'] + entries
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text('\n'.join(lines) + '\n', encoding='utf-8', newline='\n')  # LF like the game's files

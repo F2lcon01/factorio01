@@ -259,8 +259,14 @@ def is_brand(en):
     return not re.search(r'[a-z]{2,}', TOKEN_RE.sub('', en))
 
 
+GLUED_S_RE = re.compile(r'(__\d+__)s(?![A-Za-z])')   # '__1__s': an English plural kept by the model
+
+
 def clean(ar):
-    return normalize(BIDI_RE.sub('', ar)).strip()
+    """Normal text; and a Latin plural 's' glued to a placeholder dropped from Arabic ('__1__s' would show as
+    's<name>' once shaped: SpidertronPatrols, 2 strings measured)."""
+    t = normalize(BIDI_RE.sub('', ar)).strip()
+    return GLUED_S_RE.sub(r'\1', t) if WORD_RE.search(t) else t
 
 
 def excluded() -> set:
@@ -338,7 +344,7 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         elif from_base and not check_value(e, from_base):
             arabic[k], source[k] = from_base, 'memory-base'
         elif from_mem and not check_value(e, from_mem):
-            arabic[k], source[k] = from_mem, 'memory'
+            arabic[k], source[k] = clean(from_mem), 'memory'   # stored before a cleaning rule existed, too
         else:
             pending.append(k)
     usage = translator.new_usage()
