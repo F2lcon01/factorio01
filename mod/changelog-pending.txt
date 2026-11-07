@@ -14,5 +14,9 @@
       tool is opened again; only the rest is sent.
     - Mods translator: about 3 times faster on 48 real mods (365 s to 112 s). Batches run in parallel and adapt
       to the provider's limits, a busy model no longer ends the run, and numbered names are translated once.
+  Bugfixes:
+    - Mods translator: a mod whose texts are spread over several locale files no longer makes the game refuse
+      the whole translation pack (a section written twice).
+    - Mods translator: composite names such as "Electric mining drill 2" (Bob's mods) read right to left.
   Changes:
     - README-AR.txt: the new steps of both tools.
