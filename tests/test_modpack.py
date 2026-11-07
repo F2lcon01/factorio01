@@ -222,6 +222,18 @@ def test_numbered_names_are_sent_once_and_the_number_swapped(tmp_path):
     assert 'Insert 3 more plates' in sent and 'Insert 11 more plates' in sent   # '3 ألواح' but '11 لوحاً'
 
 
+def test_a_composite_name_reads_right_to_left_and_costs_no_request(tmp_path):
+    # seen in the game (Bob's mods, 31 names): '__ENTITY__electric-mining-drill__ 2' showed «2 حفار التنقيب الكهربائي»
+    calls = []
+    en = {'entity-name/drill-2': '__ENTITY__electric-mining-drill__ 2', 'entity-name/plain': '__ENTITY__boiler__',
+          'item-name/pump': 'P.U.M.P.', 'mod-setting-name/fmt': '__1__: __2__'}
+    arabic, _, rows = _resolve([_m('b', en)], tmp_path, translate=_fake({}, calls))
+    assert arabic == {'entity-name/drill-2': '2 __ENTITY__electric-mining-drill__'}   # name last = read first
+    assert all(rows['source'][k] == 'brand' for k in en) and calls == []               # no request, same counts
+    assert modpack.composite_rtl('__ITEM__iron-plate__ MK2') == 'MK2 __ITEM__iron-plate__'
+    assert modpack.composite_rtl('__1__ × __2__') is None                              # parameters, not names
+
+
 def test_an_english_plural_glued_to_a_placeholder_is_dropped_from_arabic(tmp_path):
     # SpidertronPatrols: '__1__s with toolbelt equipment…' came back '__1__s مع معدات…' (shown 's<name>' once shaped)
     assert modpack.clean('__1__s مع معدات حزام الأدوات') == '__1__ مع معدات حزام الأدوات'

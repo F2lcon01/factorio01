@@ -259,6 +259,22 @@ def is_brand(en):
     return not re.search(r'[a-z]{2,}', TOKEN_RE.sub('', en))
 
 
+# A token the game fills with a localised NAME (Arabic once arabic-complete is on), unlike __1__ or __CONTROL__x__
+NAME_TOKEN_RE = re.compile(r'(__(?:ENTITY|ITEM|TILE|FLUID|RECIPE|TECHNOLOGY|EQUIPMENT|SPACE_LOCATION|ITEM_GROUP|'
+                           r'QUALITY)__[\w.-]+__)')
+
+
+def composite_rtl(en):
+    """A composite name ('__ENTITY__electric-mining-drill__ 2': a name token + a number or tag) in right-to-left
+    order, or None. Untranslated, the game draws the English template left to right, so the number comes first in
+    Arabic reading ('2 حفار التنقيب الكهربائي', seen in the game: Bob's mods, 31 names). Its parts reversed
+    ('2 __ENTITY__…__') read name first, number last. Nothing to translate, so no request; tools/textfx.py leaves a
+    line with no Arabic letter as it is, so this order is what ships."""
+    if not (NAME_TOKEN_RE.search(en) and NAME_TOKEN_RE.sub('', en).strip()):
+        return None
+    return ' '.join(reversed([p.strip() for p in NAME_TOKEN_RE.split(en) if p.strip()]))
+
+
 GLUED_S_RE = re.compile(r'(__\d+__)s(?![A-Za-z])')   # '__1__s': an English plural kept by the model
 
 
@@ -340,7 +356,10 @@ def resolve(mods, *, base, memory_, overrides, terms, translate=None, model='', 
         elif shipped and not check_value(e, shipped):
             arabic[k], source[k] = shipped, 'mod-arabic'
         elif is_brand(e):
-            source[k] = 'brand'   # the game shows the English, which is the right text here
+            source[k] = 'brand'   # the game shows the English, which is the right text here...
+            rtl = composite_rtl(e)
+            if rtl:
+                arabic[k] = rtl   # ...except a composite name, whose parts must read right to left
         elif from_base and not check_value(e, from_base):
             arabic[k], source[k] = from_base, 'memory-base'
         elif from_mem and not check_value(e, from_mem):
